@@ -1,4 +1,4 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
 import { QuestionService} from './question.service';
@@ -11,8 +11,9 @@ import { Question } from './question';
 })
 export class RadioButtonComponent implements OnInit {
 
+  @Input() qu: Question;
+  //qu: Question;
   questions: Question[];
-  xyzzy:string;
 
   constructor(
     private _router: Router
@@ -21,15 +22,8 @@ export class RadioButtonComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._questionService.getQuestions()
-      .then(questions => this.questions = questions.slice(1,3));
-      
-      this.xyzzy = "plugh";
-      
-      // this.question = new Question();
-      // this.question.pageId = 44;
-      // this.question.question_text = "sdfsdfsdf";
-      //this.question.page_id
+    this.questions = this._questionService.getQuestions();
+    this.qu = this.questions[0];
   }
 
   // gotoDetail(hero: Hero) {

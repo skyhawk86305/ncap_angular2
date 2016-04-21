@@ -6,12 +6,10 @@ import { QUESTIONS } from './mock-questions';
 @Injectable()
 export class QuestionService {
   getQuestions() {
-    return Promise.resolve(QUESTIONS);
+    return QUESTIONS;
   }
 
   getQuestion(pageId: number) {
-    return Promise.resolve(QUESTIONS).then(
-      questions => questions.filter(i => i.pageId === pageId)
-    );
+    return QUESTIONS.filter(i => i.pageId === pageId);
   }
 }
