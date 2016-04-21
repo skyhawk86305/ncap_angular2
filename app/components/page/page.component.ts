@@ -30,8 +30,15 @@ export class PageComponent implements OnInit {
         console.log("qu count is " + this.questions.length);
     }
 
-    // gotoDetail(hero: Hero) {
-    //   let link = ['HeroDetail', { id: hero.id }];
-    //   this._router.navigate(link);
-    //}
+    next() {
+        console.log('Clicked next');
+    }
+
+    back() {
+        console.log('Clicked back');
+    }
+
+    exit() {
+        console.log('Clicked exit');
+    }
 }
