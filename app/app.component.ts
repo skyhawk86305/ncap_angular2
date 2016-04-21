@@ -2,6 +2,7 @@ import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
 import { RadioButtonComponent } from './components/radiobutton/radiobutton.component';
+import { PageComponent } from './components/page/page.component';
 import { QuestionService} from './seedData/question.service';
 
 @Component({
@@ -21,7 +22,8 @@ import { QuestionService} from './seedData/question.service';
   {
     path: '/',
     name: 'Home',
-    component: RadioButtonComponent,
+    //component: RadioButtonComponent,
+    component: PageComponent,
     useAsDefault: true
   }
   // ,
