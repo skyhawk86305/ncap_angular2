@@ -1,0 +1,31 @@
+<div class="home">
+    <h1>National Collaborative Autism Project</h1>
+    <div class="jumbotron">
+        <p class="lead">
+            The National Collaborative Autism Project will help researchers learn how exposure to pollutants in the environment and social stressors may be linked to autism spectrum disorder (ASD). Our goal is to help figure out why ASD rates are increasing. This
+            survey will help us collect data on people affected with ASD and on those who are not affected. You must be 18 or older to take the survey. This project is led by Dr. Marie Lynn Miranda at Rice University's National Center for Geospatial Medicine.
+            This project is funded by the National Institute of Mental Health, part of the National Institutes of Health.
+        </p>
+
+    </div>
+
+    <div class="homeButtons">
+        <div class="btn-group btn-path" (click)="appData.subjectType = 'child'">
+            <a href ui-sref="child" class="btn btn-sm btn-primary" (click)="next('child')"> <i class="fa fa-user"> If you are a parent or guardian taking the survey for a child, click here.</i>
+            </a>
+        </div>
+        <div class="btn-group btn-path" (click)="appData.subjectType = 'child'">
+            <a href ui-sref="child" class="btn btn-sm btn-primary" (click)="next('adult')"><i class="fa fa-user" > If you are a legally authorized representative taking the survey for another adult, click here.</i>
+            </a>
+        </div>
+
+        <div class="btn-group btn-path" (click)="appData.subjectType = 'self'">
+            <a href ui-sref="child" class="btn btn-sm btn-primary" (click)="next('self')"> <i class="fa fa-user"> If you are an adult taking the survey on behalf of yourself, click here.</i>
+            </a>
+        </div>
+    </div>
+
+    <!--<div class="fundingInfo">-->
+    <!--<span>This project is led by Dr.Marie Lynn Miranda at Rice University's National Center for Geospatial Medicine. This project is funded by the National Institute of Mental Health, part of the National Institutes of Health.</span>-->
+    <!--</div>-->
+</div>

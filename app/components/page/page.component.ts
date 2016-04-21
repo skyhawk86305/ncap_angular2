@@ -5,12 +5,13 @@ import { QuestionService} from '../../seedData/question.service';
 import { Question } from '../../seedData/question';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
     selector: 'page',
     templateUrl: 'app/components/page/page.html',
     //,  styleUrls: ['app/example/dashboard.component.css']
-    directives: [NgSwitchQuestionComponent]
+    directives: [NgSwitchQuestionComponent, HomeComponent]
 })
 export class PageComponent implements OnInit {
 

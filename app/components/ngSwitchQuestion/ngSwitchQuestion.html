@@ -1,5 +1,7 @@
 <!--switch question control-->
-<!--ng-switch2 - {{question.answer_type}}-->
+<!--{{question.answer_type}}-->
 
-
-<radio-buttons [question]="question"></radio-buttons>
+  <div [ngSwitch]="question.answer_type">
+      <span *ngSwitchWhen="'Home'"><home></home></span>
+      <span *ngSwitchWhen="'RadioButtons'"><radio-buttons [question]="question"></radio-buttons></span>
+    </div>

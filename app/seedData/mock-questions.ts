@@ -2,6 +2,16 @@ import { Question } from './question';
 
 export var QUESTIONS: Question[] = [
   {
+    "pageId": 0,
+    "answer_type_id": 1,
+    "answer_type": "Home",
+    "validation_type": "REQUIRED",
+    "question_text": "",
+    "answer_lookup_id": -1,
+    "answer_lookup": "",
+    "tracking_key": "xyzzy"
+  },
+  {
     "pageId": 1,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",

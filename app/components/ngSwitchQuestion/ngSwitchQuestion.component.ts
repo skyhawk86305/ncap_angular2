@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
 import { RadioButtonComponent  } from '../radiobutton/radiobutton.component';
+import { HomeComponent } from '../home/home.component';
 
 import { Question } from '../../seedData/question';
 
@@ -9,7 +10,7 @@ import { Question } from '../../seedData/question';
     selector: 'ng-switch-question',
     templateUrl: 'app/components/ngSwitchQuestion/ngSwitchQuestion.html',
     //,  styleUrls: ['app/example/dashboard.component.css']
-    directives: [RadioButtonComponent]
+    directives: [HomeComponent, RadioButtonComponent]
 })
 export class NgSwitchQuestionComponent implements OnInit {
 
