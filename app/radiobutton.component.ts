@@ -1,8 +1,8 @@
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-//import { Hero } from './hero';
-//import { HeroService } from './hero.service';
+import { QuestionService} from './question.service';
+import { Question } from './question';
 
 @Component({
   selector: 'radio-buttons',
@@ -11,17 +11,25 @@ import { Router } from 'angular2/router';
 })
 export class RadioButtonComponent implements OnInit {
 
-  //heroes: Hero[] = [];
+  questions: Question[];
+  xyzzy:string;
 
   constructor(
     private _router: Router
-//    ,    private _heroService: HeroService
-    ) {
+    , private _questionService: QuestionService
+  ) {
   }
 
   ngOnInit() {
-    // this._heroService.getHeroes()
-    //   .then(heroes => this.heroes = heroes.slice(1,5));
+    this._questionService.getQuestions()
+      .then(questions => this.questions = questions.slice(1,3));
+      
+      this.xyzzy = "plugh";
+      
+      // this.question = new Question();
+      // this.question.pageId = 44;
+      // this.question.question_text = "sdfsdfsdf";
+      //this.question.page_id
   }
 
   // gotoDetail(hero: Hero) {
