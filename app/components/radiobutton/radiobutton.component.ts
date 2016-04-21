@@ -4,7 +4,6 @@ import { Router } from 'angular2/router';
 import { QuestionService} from '../../seedData/question.service';
 import { Question } from '../../seedData/question';
 
-
 import { DomainOption } from '../../seedData/domainOption';
 import { DomainOptions } from '../../seedData/domainOptions';
 
