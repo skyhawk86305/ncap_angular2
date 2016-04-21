@@ -4,10 +4,13 @@ import { Router } from 'angular2/router';
 import { QuestionService} from '../../seedData/question.service';
 import { Question } from '../../seedData/question';
 
+import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
+
 @Component({
     selector: 'page',
-    templateUrl: 'app/components/page/page.html'
+    templateUrl: 'app/components/page/page.html',
     //,  styleUrls: ['app/example/dashboard.component.css']
+    directives: [NgSwitchQuestionComponent]
 })
 export class PageComponent implements OnInit {
 
