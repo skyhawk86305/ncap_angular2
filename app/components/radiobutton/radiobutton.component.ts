@@ -27,8 +27,8 @@ export class RadioButtonComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.questions = this._questionService.getQuestions();
-    this.question = this.questions[2];
+    // this.questions = this._questionService.getQuestions();
+    // this.question = this.questions[2];
 
     let domainOptions = new DomainOptions(); //xyzzy - move to a singleton
 
