@@ -1,8 +1,8 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { RadioButtonComponent } from './radiobutton.component';
-import { QuestionService} from './question.service';
+import { RadioButtonComponent } from './components/radiobutton/radiobutton.component';
+import { QuestionService} from './seedData/question.service';
 
 @Component({
   selector: 'my-app',

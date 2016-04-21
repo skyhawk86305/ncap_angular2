@@ -1,16 +1,16 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { QuestionService} from './question.service';
-import { Question } from './question';
+import { QuestionService} from '../../seedData/question.service';
+import { Question } from '../../seedData/question';
 
 
-import { DomainOption } from './domainOption';
-import { DomainOptions } from './domainOptions';
+import { DomainOption } from '../../seedData/domainOption';
+import { DomainOptions } from '../../seedData/domainOptions';
 
 @Component({
   selector: 'radio-buttons',
-  templateUrl: 'app/radioButtons.html'
+  templateUrl: 'app/components/radiobutton/radioButtons.html'
   //,  styleUrls: ['app/example/dashboard.component.css']
 })
 export class RadioButtonComponent implements OnInit {
