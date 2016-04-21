@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <!-- #docregion head -->
-    <!-- #docregion base-href -->
-  <head>
-    <base href="/">
-    <!-- #enddocregion base-href -->
-    <title>Angular 2 Tour of Heroes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- #docregion head -->
+<!-- #docregion base-href -->
 
-    <!-- #enddocregion head -->
-    <!-- #docregion css -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- #enddocregion css -->
-    <!-- #docregion head -->
-    <!-- IE required polyfills, in this exact order -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+<head>
+  <base href="/">
+  <!-- #enddocregion base-href -->
+  <title>Angular 2 Tour of Heroes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <!-- #docregion router -->
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <!-- #enddocregion router -->
-
-    <!-- NCAP -->
-
-
-
-    <script>
-      System.config({packages: {app: {format: 'register', defaultExtension: 'js'}}});
-      //System.import('app/example/main')
-      System.import('app/main')
-            .then(null, console.error.bind(console));
-    </script>
-  </head>
   <!-- #enddocregion head -->
+  <!-- #docregion css -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <my-app>Loading...</my-app>
-  </body>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="styles.css">-->
+  <link href="ncap.css" rel="stylesheet">
+
+  <!-- #enddocregion css -->
+  <!-- #docregion head -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <!-- #docregion router -->
+  <script src="node_modules/angular2/bundles/router.dev.js"></script>
+  <!-- #enddocregion router -->
+
+  <!-- NCAP -->
+
+
+
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    //System.import('app/example/main')
+    System.import('app/main')
+      .then(null, console.error.bind(console));
+  </script>
+</head>
+<!-- #enddocregion head -->
+
+<body>
+  <my-app>Loading...</my-app>
+</body>
+
 </html>
