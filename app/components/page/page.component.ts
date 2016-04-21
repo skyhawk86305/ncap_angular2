@@ -1,12 +1,8 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-// import { QuestionService} from '../../seedData/question.service';
-// import { Question } from '../../seedData/question';
-
-
-// import { DomainOption } from '../../seedData/domainOption';
-// import { DomainOptions } from '../../seedData/domainOptions';
+import { QuestionService} from '../../seedData/question.service';
+import { Question } from '../../seedData/question';
 
 @Component({
     selector: 'page',
@@ -16,19 +12,18 @@ import { Router } from 'angular2/router';
 export class PageComponent implements OnInit {
 
     //   @Input() question: Question;
-    //   //qu: Question;
-    //   questions: Question[];
-    //   options: DomainOption[];
+    questions: Question[];
+    renderButtons: boolean = true;
 
     constructor(
         private _router: Router
-        //    , private _questionService: QuestionService
-        //, private _questionService: QuestionService
+        , private _questionService: QuestionService
     ) {
     }
 
     ngOnInit() {
-
+        this.questions = this._questionService.getQuestions();
+        console.log("qu count is " + this.questions.length);
     }
 
     // gotoDetail(hero: Hero) {
