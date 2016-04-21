@@ -4,6 +4,9 @@ import { Router } from 'angular2/router';
 import { QuestionService} from './question.service';
 import { Question } from './question';
 
+import { DomainOption } from './domainOption';
+import { DOMAGE5 } from './mock-domAge5'
+
 @Component({
   selector: 'radio-buttons',
   templateUrl: 'app/radioButtons.html'
@@ -11,9 +14,10 @@ import { Question } from './question';
 })
 export class RadioButtonComponent implements OnInit {
 
-  @Input() qu: Question;
+  @Input() question: Question;
   //qu: Question;
   questions: Question[];
+  options: DomainOption[];
 
   constructor(
     private _router: Router
@@ -23,7 +27,8 @@ export class RadioButtonComponent implements OnInit {
 
   ngOnInit() {
     this.questions = this._questionService.getQuestions();
-    this.qu = this.questions[0];
+    this.question = this.questions[0];
+    this.options = DOMAGE5;
   }
 
   // gotoDetail(hero: Hero) {

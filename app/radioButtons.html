@@ -1,27 +1,26 @@
-{{qu.question_text}}
-
 <div>
+    <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
+        <span class="ng-scope">{{question.pageId}} - {{question.question_text}}</span>
+    </div>
+</div>
+
+<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
+
+    <div class="form-group ng-scope" >
+        <div class="radio-group radio" *ngFor="#item of options" >
+            <input type="radio" name="xyzzy_use_page_and_question_number" value="{{item.ID}}" > {{item.displayed_value}}
+        </div>
+    </div>
+    
+</div>
+
+
+<!--<div>
   <h2>My Heroes</h2>
   <ul class="heroes">
     <li *ngFor="#question of questions" >
       <span class="badge">{{question.question_text}}</span>
     </li>
   </ul>
-</div>
-
-
-
-<!--<div>
-    <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
-        <span class="ng-scope">{{question.page_id}} - {{question.question_text}}</span>
-    </div>
 </div>-->
 
-<!--<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
-
-    <div class="form-group ng-scope" >
-        <div class="radio-group radio" *ngFor="#item of questions" >
-            <input type="radio" name="xyzzy_use_page_and_question_number" value="{{item.ID}}" > {{item.displayed_value}}
-        </div>
-    </div>
-</div>-->
