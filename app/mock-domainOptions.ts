@@ -1,7 +1,6 @@
 import { DomainOption } from './domainOption';
 
-export var DOMAGE5: DomainOption[] =                 
-[
+export var DOMAGEOPTIONS: DomainOption[] =                 [
                     {
                         "id": 1,
                         "sort_order": 1,
