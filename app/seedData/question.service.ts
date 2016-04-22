@@ -9,7 +9,7 @@ export class QuestionService {
     return QUESTIONS;
   }
 
-  getQuestion(pageId: number) {
+  getQuestionsForPage(pageId: number) {
     return QUESTIONS.filter(i => i.pageId === pageId);
   }
 }

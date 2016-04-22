@@ -29,7 +29,7 @@ import { QuestionService} from './seedData/question.service';
   }
   ,
   {
-    path: '/:pageId',
+    path: '/page/:pageId',
     name: 'Home',
     component: PageComponent
   },
