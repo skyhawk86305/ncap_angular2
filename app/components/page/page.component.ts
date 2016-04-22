@@ -36,7 +36,9 @@ export class PageComponent implements OnInit {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId)
+        {
             this.pageId = requestedPageId;
+        }
 
         this.getQuestionsToRender();
     }
@@ -44,7 +46,7 @@ export class PageComponent implements OnInit {
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
         this.questions = this._questionService.getQuestionsForPage(this.pageId);
-        console.log("qu count is " + this.questions.length);
+        console.log('qu count is ' + this.questions.length);
     }
 
     next() {

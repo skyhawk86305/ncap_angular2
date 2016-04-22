@@ -5,7 +5,9 @@ import { RadioButtonComponent } from './components/radiobutton/radiobutton.compo
 import { PageComponent } from './components/page/page.component';
 import { AllPagesComponent } from './components/allPages/allPages.component';
 
+import { SharedService } from '../app/services/shared.service';
 import { QuestionService} from '../app/services/question.service';
+
 
 @Component({
   selector: 'the-app',
@@ -15,8 +17,9 @@ import { QuestionService} from '../app/services/question.service';
   //styleUrls: ['app/example/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
-    ROUTER_PROVIDERS
-    , QuestionService
+    ROUTER_PROVIDERS,
+    SharedService,
+    QuestionService
   ]
 })
 @RouteConfig([

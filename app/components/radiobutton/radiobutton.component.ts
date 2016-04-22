@@ -7,6 +7,8 @@ import { Question } from       '../../../app/types/question';
 import { DomainOption } from   '../../../app/types/domainOption';
 import { DomainOptions } from  '../../../app/types//domainOptions';
 
+import { SharedService } from '../../../app/services/shared.service';
+
 @Component({
   selector: 'radio-buttons',
   templateUrl: 'app/components/radiobutton/radioButtons.html'
@@ -15,14 +17,13 @@ import { DomainOptions } from  '../../../app/types//domainOptions';
 export class RadioButtonComponent implements OnInit {
 
   @Input() question: Question;
-  //qu: Question;
   questions: Question[];
   options: DomainOption[];
 
   constructor(
-    private _router: Router
-    , private _questionService: QuestionService
-    //, private _questionService: QuestionService
+    private _router: Router,
+    private _questionService: QuestionService,
+    private _sharedService: SharedService
   ) {
   }
 
@@ -30,7 +31,10 @@ export class RadioButtonComponent implements OnInit {
     // this.questions = this._questionService.getQuestions();
     // this.question = this.questions[2];
 
-    let domainOptions = new DomainOptions(); //xyzzy - move to a singleton
+    //let domainOptions = new DomainOptions(); //xyzzy - move to a singleton
+    //domainOptions.populateWithData();
+
+    let domainOptions = this._sharedService.getDomainOptions();
 
     switch (this.question.answer_lookup) {
       case "DOM_ETHNICITY":
