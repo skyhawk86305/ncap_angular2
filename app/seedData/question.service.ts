@@ -10,6 +10,6 @@ export class QuestionService {
   }
 
   getQuestionsForPage(page_Id: number) {
-    return QUESTIONS.filter(i => i.page_Id === page_Id);
+    return QUESTIONS.filter(i => i.page_id === page_Id);
   }
 }

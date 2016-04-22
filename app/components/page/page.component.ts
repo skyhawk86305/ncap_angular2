@@ -20,7 +20,7 @@ export class PageComponent implements OnInit {
     questions: Question[];
     renderButtons: boolean = true;
 
-    pageID: number = 1;
+    pageId: number = 1;
 
     constructor(
         private _router: Router,
@@ -33,26 +33,26 @@ export class PageComponent implements OnInit {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId)
-            this.pageID = requestedPageId;
+            this.pageId = requestedPageId;
 
         this.getQuestionsToRender();
     }
 
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
-        this.questions = this._questionService.getQuestionsForPage(this.pageID);
+        this.questions = this._questionService.getQuestionsForPage(this.pageId);
         console.log("qu count is " + this.questions.length);
     }
 
     next() {
         console.log('Clicked next');
-        this.pageID++;
+        this.pageId++;
         this.getQuestionsToRender();
     }
 
     back() {
         console.log('Clicked back');
-        this.pageID--;
+        this.pageId--;
         this.getQuestionsToRender();
     }
 

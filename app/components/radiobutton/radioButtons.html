@@ -1,6 +1,6 @@
 <div>
     <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
-        <span class="ng-scope">{{question.pageId}} - {{question.question_text}}</span>
+        <span class="ng-scope">{{question.page_id}}.{{question.sort_order}} - {{question.question_text}}</span>
     </div>
 </div>
 
@@ -8,7 +8,7 @@
 
     <div class="form-group ng-scope" >
         <div class="radio-group radio" *ngFor="#item of options; #idx = index" >
-            <input type="radio" name="{{idx}}xyzzy_use_page_and_question_number" value="{{item.ID}}" > {{item.displayed_value}}
+            <input type="radio" name="{{question.sort_order}}" value="{{item.ID}}" > {{item.displayed_value}}
         </div>
     </div>
     
