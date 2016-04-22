@@ -5,7 +5,7 @@ import { DomainOptions } from  '../../../app/types/domainOptions';
 
 @Injectable()
 export class SharedService {
-    domainOptions: DomainOptions;
+    private _domainOptions: DomainOptions;
 
   constructor() {
       this.init();
@@ -13,12 +13,12 @@ export class SharedService {
 
     init() {
         // Should only fire once since Services are Singletons in Angular2
-        this.domainOptions = new DomainOptions();
-        this.domainOptions.populateWithData();
+        this._domainOptions = new DomainOptions();
+        this._domainOptions.populateWithData();
     }
 
      getDomainOptions() {
-         return this.domainOptions;
+         return this._domainOptions;
      }
 
 

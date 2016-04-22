@@ -28,14 +28,8 @@ export class RadioButtonComponent implements OnInit {
   }
 
   ngOnInit() {
-    let domainOptions:DomainOptions = this._sharedService.getDomainOptions();
+    let domainOptions: DomainOptions = this._sharedService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
   }
 
-}
-
-  // gotoDetail(hero: Hero) {
-  //   let link = ['HeroDetail', { id: hero.id }];
-  //   this._router.navigate(link);
-  //}
 }
