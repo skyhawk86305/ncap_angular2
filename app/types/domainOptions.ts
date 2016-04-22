@@ -23,4 +23,43 @@ export class DomainOptions {
     this.yesNoDkNaQ1 = SEEDDATA.YES_NO_DK_NA_Q1;
     this.yesNoDkPnta = SEEDDATA.YES_NO_DK_PNTA;
   }
+
+  getDomainOption(typePassedIn: string) {
+    let result: DomainOption[];
+
+    switch (typePassedIn) {
+      case 'DOM_ETHNICITY':
+        result = this.ethnicity;
+        break;
+      case 'DOM_VERBAL_SKILL':
+        result = this.verbalSkill;
+        break;
+      case 'DOM_YES_NO':
+        result = this.yesNo;
+        break;
+      case 'DOM_SEX':
+        result = this.sex;
+        break;
+      case 'DOM_YES_NO_DK_PNTA':
+        result = this.yesNoDkPnta;
+        break;
+      case 'DOM_YES_NO_DK_NA_Q_1':
+        result = this.yesNoDkNaQ1;
+        break;
+      case 'DOM_EDU_LEVEL':
+        result = this.eduLevel;
+        break;
+      case 'DOM_AGE_5':
+        result = this.age5;
+        break;
+      case 'DOM_FREQ_2':
+        result = this.freq2;
+        break;
+      default:
+        // xyzzy log too
+        throw new Error('Not yet supported :' + typePassedIn);
+    }
+
+    return result;
+  }
 }

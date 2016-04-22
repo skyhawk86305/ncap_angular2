@@ -1,21 +1,23 @@
-import { OnInit } from 'angular2/core';
 import { Injectable } from 'angular2/core';
 
 import { QUESTIONS } from '../../app/seed-data/json-questions';
 import { DomainOptions } from  '../../../app/types/domainOptions';
 
 @Injectable()
-export class SharedService implements OnInit {
+export class SharedService {
     domainOptions: DomainOptions;
 
-    ngOnInit() {
+  constructor() {
+      this.init();
+  }
+
+    init() {
+        // Should only fire once since Services are Singletons in Angular2
         this.domainOptions = new DomainOptions();
         this.domainOptions.populateWithData();
     }
 
      getDomainOptions() {
-        this.domainOptions = new DomainOptions();
-        this.domainOptions.populateWithData();
          return this.domainOptions;
      }
 
