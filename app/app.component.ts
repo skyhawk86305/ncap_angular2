@@ -3,12 +3,13 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 
 import { RadioButtonComponent } from './components/radiobutton/radiobutton.component';
 import { PageComponent } from './components/page/page.component';
+import { AllPagesComponent } from './components/allPages/allPages.component';
+
 import { QuestionService} from './seedData/question.service';
 
 @Component({
-  selector: 'my-app',
+  selector: 'the-app',
   template: `
-    <h1>{{title}}</h1>
     <router-outlet></router-outlet>
   `,
   //styleUrls: ['app/example/app.component.css'],
@@ -26,18 +27,17 @@ import { QuestionService} from './seedData/question.service';
     component: PageComponent,
     useAsDefault: true
   }
-  // ,
-  // {
-  //   path: '/detail/:id',
-  //   name: 'HeroDetail',
-  //   component: HeroDetailComponent
-  // },
-  // {
-  //   path: '/heroes',
-  //   name: 'Heroes',
-  //   component: HeroesComponent
-  //}
+  ,
+  {
+    path: '/:pageId',
+    name: 'Home',
+    component: PageComponent
+  },
+  {
+    path: '/all',
+    name: 'Home',
+    component: AllPagesComponent
+  }
 ])
 export class AppComponent {
-  title = 'NCAP Survey';
 }
