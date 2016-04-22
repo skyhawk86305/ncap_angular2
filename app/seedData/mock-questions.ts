@@ -2,7 +2,7 @@ import { Question } from './question';
 
 export var QUESTIONS: Question[] = [
   {
-    "pageId": 0,
+    "page_Id": 0,
     "answer_type_id": 1,
     "answer_type": "Home",
     "validation_type": "REQUIRED",
@@ -12,7 +12,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "xyzzy"
   },
   {
-    "pageId": 1,
+    "page_Id": 1,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUIRED",
@@ -22,7 +22,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "asd_yes_no"
   },
   {
-    "pageId": 1,
+    "page_Id": 1,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -32,7 +32,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "sex_at_birth"
   },
   {
-    "pageId": 1,
+    "page_Id": 1,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -43,7 +43,7 @@ export var QUESTIONS: Question[] = [
   }
   ,
   {
-    "pageId": 2,
+    "page_Id": 2,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -53,7 +53,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "middleName_confirm"
   },
   {
-    "pageId": 2,
+    "page_Id": 2,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -63,7 +63,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "middleNameMother_confirm"
   },
   {
-    "pageId": 2,
+    "page_Id": 2,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -73,7 +73,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "WalkByOneself"
   },
   {
-    "pageId": 3,
+    "page_Id": 3,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -83,7 +83,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "VerbalSkill"
   },
   {
-    "pageId": 3,
+    "page_Id": 3,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -93,7 +93,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "edu_level_mother"
   },
   {
-    "pageId": 3,
+    "page_Id": 3,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -103,7 +103,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "breastfed"
   },
   {
-    "pageId": 4,
+    "page_Id": 4,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -113,7 +113,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "breastfed_duration"
   },
   {
-    "pageId": 4,
+    "page_Id": 4,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -123,7 +123,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "tobacco_use_mother"
   },
   {
-    "pageId": 5,
+    "page_Id": 5,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -133,7 +133,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "Second_hand_smoke_freq_mother"
   },
   {
-    "pageId": 6,
+    "page_Id": 6,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -143,7 +143,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "seafood_freq_mother"
   },
   {
-    "pageId": 7,
+    "page_Id": 7,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -153,7 +153,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "prescr_drugs_mother"
   },
   {
-    "pageId": 8,
+    "page_Id": 8,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -193,7 +193,7 @@ export var QUESTIONS: Question[] = [
   //     "tracking_key": "home_fragrance_freq_mother"
   // },
   {
-    "pageId": 12,
+    "page_Id": 12,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -203,7 +203,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "edu_level_father"
   },
   {
-    "pageId": 13,
+    "page_Id": 13,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -213,7 +213,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "tobacco_use_father"
   },
   {
-    "pageId": 14,
+    "page_Id": 14,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -223,7 +223,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "Second_hand_smoke_freq_father"
   },
   {
-    "pageId": 15,
+    "page_Id": 15,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -233,7 +233,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "seafood_freq_father"
   },
   {
-    "pageId": 16,
+    "page_Id": 16,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -243,7 +243,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "prescr_drugs_father"
   },
   {
-    "pageId": 17,
+    "page_Id": 17,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",
@@ -253,7 +253,7 @@ export var QUESTIONS: Question[] = [
     "tracking_key": "OTC_drugs_father"
   },
   {
-    "pageId": 18,
+    "page_Id": 18,
     "answer_type_id": 1,
     "answer_type": "RadioButtons",
     "validation_type": "REQUESTED",

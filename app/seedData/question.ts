@@ -1,5 +1,5 @@
 export class Question {
-  pageId: number;
+  page_Id: number;
   answer_type_id: number;
   answer_type: string;
   validation_type: string;
