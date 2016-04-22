@@ -7,8 +7,8 @@
 <div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
     <div class="form-group ng-scope" >
-        <div class="radio-group radio" *ngFor="#item of options" >
-            <input type="radio" name="xyzzy_use_page_and_question_number" value="{{item.ID}}" > {{item.displayed_value}}
+        <div class="radio-group radio" *ngFor="#item of options; #idx = index" >
+            <input type="radio" name="{{idx}}xyzzy_use_page_and_question_number" value="{{item.ID}}" > {{item.displayed_value}}
         </div>
     </div>
     

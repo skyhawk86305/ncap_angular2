@@ -30,14 +30,15 @@ export class PageComponent implements OnInit {
     }
 
     ngOnInit() {
+        // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId)
             this.pageID = requestedPageId;
 
-        this.getQuestions();
+        this.getQuestionsToRender();
     }
 
-    getQuestions() {
+    getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
         this.questions = this._questionService.getQuestionsForPage(this.pageID);
         console.log("qu count is " + this.questions.length);
@@ -46,13 +47,13 @@ export class PageComponent implements OnInit {
     next() {
         console.log('Clicked next');
         this.pageID++;
-        this.getQuestions();
+        this.getQuestionsToRender();
     }
 
     back() {
         console.log('Clicked back');
         this.pageID--;
-        this.getQuestions();
+        this.getQuestionsToRender();
     }
 
     exit() {
