@@ -1,8 +1,8 @@
 import { Injectable } from 'angular2/core';
 
 import { QUESTIONS } from '../../app/seed-data/json-questions';
-import { DomainOptions } from  '../../../app/types/domainOptions';
-import { Question } from       '../../../app/types/question';
+import { DomainOptions } from  '../../app/types/domain-options';
+import { Question } from       '../../app/types/question';
 
 @Injectable()
 export class SharedService {

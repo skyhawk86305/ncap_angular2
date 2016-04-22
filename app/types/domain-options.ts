@@ -1,5 +1,5 @@
-import { DomainOption } from './domainOption';
-import * as SEEDDATA  from '../../../app/seed-data/json-domainOptions';
+import { DomainOption } from './domain-option';
+import * as SEEDDATA  from '../../app/seed-data/json-domain-options';
 
 export class DomainOptions {
   age5: DomainOption[];

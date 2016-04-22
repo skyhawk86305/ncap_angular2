@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { DomainOption } from   '../../../app/types/domainOption';
-import { DomainOptions } from  '../../../app/types//domainOptions';
+import { DomainOption } from   '../../../app/types/domain-option';
+import { DomainOptions } from  '../../../app/types/domain-options';
 import { Question } from       '../../../app/types/question';
 
 import { SharedService } from '../../../app/services/shared.service';

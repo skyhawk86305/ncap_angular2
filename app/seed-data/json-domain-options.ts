@@ -1,4 +1,4 @@
-import { DomainOption } from '../../app/types/domainOption';
+import { DomainOption } from '../../app/types/domain-option';
 
 export var AGE_5: DomainOption[] =
     [
