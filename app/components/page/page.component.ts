@@ -1,12 +1,10 @@
-import { Component, Input, OnInit } from 'angular2/core';
+import { Component,  OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 import { RouteParams } from 'angular2/router';
 
-import { QuestionService} from '../../../app/services/question.service';
-//import { QuestionService} from 'question.service';
-//import { QuestionService} from 'app/services/question.service';
-
 import { Question } from  '../../../app/types/question';
+
+import { SharedService } from '../../../app/services/shared.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
@@ -19,7 +17,6 @@ import { HomeComponent } from '../home/home.component';
 })
 export class PageComponent implements OnInit {
 
-    //   @Input() question: Question;
     questions: Question[];
     renderButtons: boolean = true;
 
@@ -27,7 +24,7 @@ export class PageComponent implements OnInit {
 
     constructor(
         private _router: Router,
-        private _questionService: QuestionService,
+        private _sharedService: SharedService,
         private _routeParams: RouteParams
     ) {
     }
@@ -35,8 +32,7 @@ export class PageComponent implements OnInit {
     ngOnInit() {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
-        if (requestedPageId)
-        {
+        if (requestedPageId) {
             this.pageId = requestedPageId;
         }
 
@@ -45,7 +41,7 @@ export class PageComponent implements OnInit {
 
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
-        this.questions = this._questionService.getQuestionsForPage(this.pageId);
+        this.questions = this._sharedService.getQuestionsForPage(this.pageId);
         console.log('qu count is ' + this.questions.length);
     }
 

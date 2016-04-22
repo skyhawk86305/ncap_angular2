@@ -6,7 +6,6 @@ import { PageComponent } from './components/page/page.component';
 import { AllPagesComponent } from './components/allPages/allPages.component';
 
 import { SharedService } from '../app/services/shared.service';
-import { QuestionService} from '../app/services/question.service';
 
 
 @Component({
@@ -18,8 +17,7 @@ import { QuestionService} from '../app/services/question.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    SharedService,
-    QuestionService
+    SharedService
   ]
 })
 @RouteConfig([

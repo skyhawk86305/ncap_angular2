@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { QuestionService} from '../../../app/services/question.service';
 import { Question } from  '../../../app/types/question';
+
+import { SharedService } from '../../../app/services/shared.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
@@ -20,12 +21,12 @@ export class AllPagesComponent implements OnInit {
     renderButtons: boolean = true;
 
     constructor(
-        private _router: Router
-        , private _questionService: QuestionService
+        private _router: Router,
+        private _sharedService: SharedService
     ) {
     }
 
     ngOnInit() {
-        this.questions = this._questionService.getQuestions();
+        this.questions = this._sharedService.getQuestions();
     }
 }
