@@ -1,4 +1,4 @@
-import { Question } from './question';
+import { Question } from '../../app/types/question';
 
 export var QUESTIONS: Question[] = [
 

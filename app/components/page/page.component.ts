@@ -2,8 +2,11 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 import { RouteParams } from 'angular2/router';
 
-import { QuestionService} from '../../seedData/question.service';
-import { Question } from '../../seedData/question';
+import { QuestionService} from '../../../app/services/question.service';
+//import { QuestionService} from 'question.service';
+//import { QuestionService} from 'app/services/question.service';
+
+import { Question } from  '../../../app/types/question';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';

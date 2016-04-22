@@ -4,7 +4,7 @@ import { Router } from 'angular2/router';
 import { RadioButtonComponent  } from '../radiobutton/radiobutton.component';
 import { HomeComponent } from '../home/home.component';
 
-import { Question } from '../../seedData/question';
+import { Question } from  '../../../app/types/question';
 
 @Component({
     selector: 'ng-switch-question',

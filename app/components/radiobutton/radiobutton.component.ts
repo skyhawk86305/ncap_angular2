@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { QuestionService} from '../../seedData/question.service';
-import { Question } from '../../seedData/question';
+import { QuestionService} from '../../../app/services/question.service';
+import { Question } from       '../../../app/types/question';
 
-import { DomainOption } from '../../seedData/domainOption';
-import { DomainOptions } from '../../seedData/domainOptions';
+import { DomainOption } from   '../../../app/types/domainOption';
+import { DomainOptions } from  '../../../app/types//domainOptions';
 
 @Component({
   selector: 'radio-buttons',

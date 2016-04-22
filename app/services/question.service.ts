@@ -1,7 +1,7 @@
 import { Injectable } from 'angular2/core';
 
-import { Question } from './question';
-import { QUESTIONS } from './mock-questions';
+import { Question } from  '../../app/types/question';
+import { QUESTIONS } from '../../app/seedData/json-questions';
 
 @Injectable()
 export class QuestionService {

@@ -5,7 +5,7 @@ import { RadioButtonComponent } from './components/radiobutton/radiobutton.compo
 import { PageComponent } from './components/page/page.component';
 import { AllPagesComponent } from './components/allPages/allPages.component';
 
-import { QuestionService} from './seedData/question.service';
+import { QuestionService} from '../app/services/question.service';
 
 @Component({
   selector: 'the-app',
