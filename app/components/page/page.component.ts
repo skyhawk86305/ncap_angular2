@@ -9,12 +9,13 @@ import { SharedService } from '../../../app/services/shared.service';
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
+import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 
 @Component({
     selector: 'page',
     templateUrl: 'app/components/page/page.html',
     //,  styleUrls: ['app/example/dashboard.component.css']
-    directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent]
+    directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent, DiagnosticComponent]
 })
 export class PageComponent implements OnInit {
 

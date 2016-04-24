@@ -15,8 +15,10 @@ import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
+import { UserInput } from  '../../../app/types/user-input';
+
 @Component({
-    selector: 'diagnostic',
+    selector: 'diag',
     templateUrl: 'app/components/diagnostic/diagnostic.html',
     //,  styleUrls: ['app/example/dashboard.component.css']
     directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent]
@@ -25,7 +27,7 @@ export class DiagnosticComponent implements OnInit {
 
     questions: Question[];
     renderButtons: boolean = true;
-    userInputMap: { [key: string]: string; };
+    userInputMap: UserInput[];
 
     pageId: number = 1;
 

@@ -7,6 +7,7 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { SharedService } from '../../../app/services/shared.service';
+import { ApplicationStateService } from '../../../app/services/application.state.service';
 
 @Component({
   selector: 'radio-buttons',
@@ -22,7 +23,8 @@ export class RadioButtonComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _sharedService: SharedService
+    private _sharedService: SharedService,
+    private _applicationStateService: ApplicationStateService
   ) {
   }
 
@@ -44,7 +46,13 @@ export class RadioButtonComponent implements OnInit {
       this.questionToolTipId = +workingText;
 
     }
-
   }
+
+  click(trackingKey: string, value: string) {
+    console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
+    
+    this._applicationStateService.addUserInput(trackingKey, value);
+  }
+
 
 }

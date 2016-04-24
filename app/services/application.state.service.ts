@@ -14,6 +14,7 @@ export class ApplicationStateService {
     }
 
     initialize() {
+        debugger;
         this._currentPage = 1;
 
         this._UserInput = new Array<UserInput>();
@@ -44,5 +45,16 @@ export class ApplicationStateService {
     getUserInput() {
         return this._UserInput;
     }
+
+    addUserInput(trackingKey: string, value: string) {
+        debugger;
+        
+        let newItem: UserInput = new UserInput();
+        newItem.trackingKey = trackingKey;
+        newItem.entered_value = value;
+
+        this._UserInput.push(newItem);
+    }
+
 
 }
