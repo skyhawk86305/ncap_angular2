@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
 import { SharedService } from '../../../app/services/shared.service';
+import { Tooltip } from       '../../../app/types/tooltip';
 
 @Component({
   selector: 'tooltip',
@@ -21,8 +22,8 @@ export class TooltipComponent implements OnInit {
   }
 
   ngOnInit() {
-    //this.tooltipId = 42;
-    this.tooltipText = 'plugh ' + this.toolTipId;
+    let tooltip: Tooltip = this._sharedService.getTooltipForId(this.toolTipId);
+    this.tooltipText = tooltip.definition;
   }
 
 }
