@@ -26,6 +26,17 @@ export class RadioButtonComponent implements OnInit {
   ngOnInit() {
     let domainOptions: DomainOptions = this._sharedService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
+
+    //xyzzy Temporarily remove all references to tooltip
+    //this.question.question_text = this.question.question_text.replace(/<tooltip.*>/i, '');
+
+    //xyzzy WIP - convert tooltip tags to **TT
+    this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '**TT');
+    this.question.question_text = this.question.question_text.replace(/".>/i, '');
+
+
+    //<tooltip id="7"/>
+
   }
 
 }
