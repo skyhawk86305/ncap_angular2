@@ -46,15 +46,16 @@ export class ApplicationStateService {
         return this._UserInput;
     }
 
-    addUserInput(trackingKey: string, value: string) {
-        debugger;
-        
-        let newItem: UserInput = new UserInput();
-        newItem.trackingKey = trackingKey;
-        newItem.entered_value = value;
+    addUserInput(trackingKey: string, enteredValue: string) {
+        // Is this item already in the array?
+        let userInputEntry: UserInput = this._UserInput.find(i => i.trackingKey === trackingKey);
+        if (!userInputEntry) {
+            userInputEntry = new UserInput();
+            userInputEntry.trackingKey = trackingKey;
+            this._UserInput.push(userInputEntry);
+        }
 
-        this._UserInput.push(newItem);
+        userInputEntry.entered_value = enteredValue;
     }
-
 
 }
