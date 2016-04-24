@@ -32,26 +32,18 @@ export class RadioButtonComponent implements OnInit {
 
     // Does the question contain a tooltip?
     if (this.question.question_text.indexOf('<tooltip') >= 0) {
-      //xyzzy WIP - convert tooltip tags to **TT
+
+      //xyzzy WIP - convert tooltip tags to --TT
       this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '--TT');
       this.question.question_text = this.question.question_text.replace(/".>/i, '--');
 
       let position = this.question.question_text.indexOf('--TT');
       let workingText = this.question.question_text.substring(position + 4);
-      //remove **
+
       workingText = workingText.replace(/--.*/, '');
       this.questionToolTipId = +workingText;
 
     }
-
-
-
-    //xyzzy Temporarily remove all references to tooltip
-    //this.question.question_text = this.question.question_text.replace(/<tooltip.*>/i, '');
-
-
-
-    //<tooltip id="7"/>
 
   }
 

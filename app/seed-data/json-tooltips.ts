@@ -33,11 +33,11 @@ export var TOOLTIPS: Tooltip[] =
     "term": "American Indian or Alaska Native",
     "definition": "'A person having origins in any of the original peoples of North and South America (including Central America)"
   },
-  // {
-  //   "id": 7,
-  //   "term": 0,
-  //   "definition": 0
-  // },
+  {
+    "id": 7,
+    "term": 'TBD',
+    "definition": 'TBD'
+  },
   {
     "id": 8,
     "term": "Coal tar",
