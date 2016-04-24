@@ -1,4 +1,7 @@
 Diagnostic Information
-<BR><BR>
-
-{{summary}}
+<BR>
+<BR>
+User Input:<BR>
+<div class="radio-group radio" *ngFor="#item of userInputMap; #idx = index">
+    <li>{{item.trackingKey}} = {{item.entered_value}}</li>
+</div>

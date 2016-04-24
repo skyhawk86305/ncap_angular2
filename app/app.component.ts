@@ -7,7 +7,7 @@ import { AllPagesComponent } from './components/allPages/allPages.component';
 import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 
 import { SharedService } from '../app/services/shared.service';
-
+import { ApplicationStateService } from '../app/services/application.state.service';
 
 @Component({
   selector: 'the-app',
@@ -18,7 +18,8 @@ import { SharedService } from '../app/services/shared.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    SharedService
+    SharedService,
+    ApplicationStateService
   ]
 })
 @RouteConfig([

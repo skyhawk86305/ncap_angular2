@@ -1,10 +1,15 @@
+// /// <reference path="../../../typings/main.d.ts" />
+
 import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 import { RouteParams } from 'angular2/router';
 
+//import * as prettyjson from 'prettyjson';
+
 import { Question } from  '../../../app/types/question';
 
 import { SharedService } from '../../../app/services/shared.service';
+import { ApplicationStateService } from '../../../app/services/application.state.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
@@ -20,18 +25,20 @@ export class DiagnosticComponent implements OnInit {
 
     questions: Question[];
     renderButtons: boolean = true;
-    summary: string;
+    userInputMap: { [key: string]: string; };
 
     pageId: number = 1;
 
     constructor(
         private _router: Router,
         private _sharedService: SharedService,
+        private _applicationStateService: ApplicationStateService,
         private _routeParams: RouteParams
     ) {
     }
 
     ngOnInit() {
-        this.summary = JSON.stringify(this._sharedService)
+        //        let text = prettyjson.render(this._applicationStateService);
+        this.userInputMap = this._applicationStateService.getUserInput();
     }
 }

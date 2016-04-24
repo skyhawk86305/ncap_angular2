@@ -1,13 +1,13 @@
 import { Injectable } from 'angular2/core';
 
-
+import { UserInput } from  '../../app/types/user-input';
 
 @Injectable()
 export class ApplicationStateService {
 
     private _currentPage: number;
     private _totalPages: number;
-    private _UserInputMap: { [key: string]: string; } = {};
+    private _UserInput: UserInput[];
 
     constructor() {
         this.initialize();
@@ -16,8 +16,18 @@ export class ApplicationStateService {
     initialize() {
         this._currentPage = 1;
 
-        this._UserInputMap['test1'] = '1test';
-        this._UserInputMap['test2'] = '2test';
+        this._UserInput = new Array<UserInput>();
+
+        let dummy: UserInput = new UserInput();
+        dummy.trackingKey = 'test1';
+        dummy.entered_value = '1test';
+
+        this._UserInput.push(dummy);
+        dummy = new UserInput();
+        dummy.trackingKey = 'test2';
+        dummy.entered_value = '2test';
+        this._UserInput.push(dummy);
+
     }
 
     getCurrentPage() {
@@ -32,7 +42,7 @@ export class ApplicationStateService {
     }
 
     getUserInput() {
-        return this._UserInputMap;
+        return this._UserInput;
     }
 
 }
