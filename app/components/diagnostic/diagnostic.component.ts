@@ -1,0 +1,37 @@
+import { Component, OnInit } from 'angular2/core';
+import { Router } from 'angular2/router';
+import { RouteParams } from 'angular2/router';
+
+import { Question } from  '../../../app/types/question';
+
+import { SharedService } from '../../../app/services/shared.service';
+
+import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
+import { HomeComponent } from '../home/home.component';
+import { TooltipComponent } from '../tooltip/tooltip.component';
+
+@Component({
+    selector: 'diagnostic',
+    templateUrl: 'app/components/diagnostic/diagnostic.html',
+    //,  styleUrls: ['app/example/dashboard.component.css']
+    directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent]
+})
+export class DiagnosticComponent implements OnInit {
+
+    questions: Question[];
+    renderButtons: boolean = true;
+    summary: string;
+
+    pageId: number = 1;
+
+    constructor(
+        private _router: Router,
+        private _sharedService: SharedService,
+        private _routeParams: RouteParams
+    ) {
+    }
+
+    ngOnInit() {
+        this.summary = JSON.stringify(this._sharedService)
+    }
+}

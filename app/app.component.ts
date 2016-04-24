@@ -4,6 +4,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 //import { RadioButtonComponent } from './components/radiobutton/radiobutton.component';
 import { PageComponent } from './components/page/page.component';
 import { AllPagesComponent } from './components/allPages/allPages.component';
+import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 
 import { SharedService } from '../app/services/shared.service';
 
@@ -38,6 +39,11 @@ import { SharedService } from '../app/services/shared.service';
     path: '/all',
     name: 'Home',
     component: AllPagesComponent
+  },
+  {
+    path: '/diag',
+    name: 'Diag',
+    component: DiagnosticComponent
   }
 ])
 export class AppComponent {

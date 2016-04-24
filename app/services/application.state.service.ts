@@ -1,9 +1,13 @@
 import { Injectable } from 'angular2/core';
 
+
+
 @Injectable()
 export class ApplicationStateService {
+
     private _currentPage: number;
     private _totalPages: number;
+    private _UserInputMap: { [key: string]: string; } = {};
 
     constructor() {
         this.initialize();
@@ -12,7 +16,8 @@ export class ApplicationStateService {
     initialize() {
         this._currentPage = 1;
 
-
+        this._UserInputMap['test1'] = '1test';
+        this._UserInputMap['test2'] = '2test';
     }
 
     getCurrentPage() {
@@ -24,6 +29,10 @@ export class ApplicationStateService {
         percentage = Math.round(percentage);
 
         return percentage;
+    }
+
+    getUserInput() {
+        return this._UserInputMap;
     }
 
 }
