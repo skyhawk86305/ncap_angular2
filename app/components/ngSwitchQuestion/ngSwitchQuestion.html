@@ -1,7 +1,9 @@
 <!--switch question control-->
 <!--{{question.answer_type}}-->
 
-  <div [ngSwitch]="question.answer_type">
-      <span *ngSwitchWhen="'Home'"><home></home></span>
-      <span *ngSwitchWhen="'RadioButtons'"><radio-buttons [question]="question"></radio-buttons></span>
-    </div>
+<div [ngSwitch]="question.answer_type">
+  <span *ngSwitchWhen="'Home'"><home></home></span>
+  <span *ngSwitchWhen="'RadioButtons'"><radio-buttons [question]="question"></radio-buttons></span>
+  <span *ngSwitchWhen="'Date_MonthDayYear'"><date-month-day-year [question]="question"></date-month-day-year></span>
+
+</div>

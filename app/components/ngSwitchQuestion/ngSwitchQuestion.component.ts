@@ -3,6 +3,7 @@ import { Router } from 'angular2/router';
 
 import { RadioButtonComponent  } from '../radiobutton/radiobutton.component';
 import { HomeComponent } from '../home/home.component';
+import { DayMonthYearComponent } from '../dateMonthDayYear/dateMonthDayYear.component';
 
 import { Question } from  '../../../app/types/question';
 
@@ -10,7 +11,7 @@ import { Question } from  '../../../app/types/question';
     selector: 'ng-switch-question',
     templateUrl: 'app/components/ngSwitchQuestion/ngSwitchQuestion.html',
     //,  styleUrls: ['app/example/dashboard.component.css']
-    directives: [HomeComponent, RadioButtonComponent]
+    directives: [HomeComponent, RadioButtonComponent, DayMonthYearComponent]
 })
 export class NgSwitchQuestionComponent implements OnInit {
 
