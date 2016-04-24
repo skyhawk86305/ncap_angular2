@@ -14,21 +14,21 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        debugger;
+        //debugger;
         this._currentPage = 1;
 
         this._UserInput = new Array<UserInput>();
 
-        let dummy: UserInput = new UserInput();
-        dummy.trackingKey = 'test1';
-        dummy.entered_value = '1test';
+        // Temp test data
+        // let dummy: UserInput = new UserInput();
+        // dummy.trackingKey = 'test1';
+        // dummy.entered_value = '1test';
 
-        this._UserInput.push(dummy);
-        dummy = new UserInput();
-        dummy.trackingKey = 'test2';
-        dummy.entered_value = '2test';
-        this._UserInput.push(dummy);
-
+        // this._UserInput.push(dummy);
+        // dummy = new UserInput();
+        // dummy.trackingKey = 'test2';
+        // dummy.entered_value = '2test';
+        // this._UserInput.push(dummy);
     }
 
     getCurrentPage() {
