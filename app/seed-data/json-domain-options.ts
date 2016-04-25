@@ -276,3 +276,25 @@ export var YES_NO_DK_PNTA: DomainOption[] =
             'stored_value': 'Prefer not to answer'
         }
     ];
+
+export var DOM_RESPONDENT_TYPE: DomainOption[] =
+    [
+        {
+            'id': 1,
+            'sort_order': 1,
+            'displayed_value': 'If you are a parent or guardian taking the survey for a child, click here.',
+            'stored_value': 'parent'
+        },
+        {
+            'id': 2,
+            'sort_order': 2,
+            'displayed_value': 'If you are a legally authorized representative taking the survey for another adult, click here.',
+            'stored_value': 'legalrep'
+        },
+        {
+            'id': 3,
+            'sort_order': 3,
+            'displayed_value': 'If you are an adult taking the survey on behalf of yourself, click here.',
+            'stored_value': 'selfreport'
+        }
+    ];

@@ -42,7 +42,7 @@ export class RadioButtonComponent implements OnInit {
   click(trackingKey: string, value: string) {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
 
-    this._applicationStateService.addUserInput(trackingKey, value);
+    this._applicationStateService.setUserInput(trackingKey, value);
   }
 
   private addTooltipIfNecessary() {

@@ -17,8 +17,8 @@ export class ApplicationStateService {
 
     initialize() {
         this._currentPageNumber = 1;
-        // this._UserInput = new Array<UserInput>();
-        this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
+        this._UserInput = new Array<UserInput>();
+        //this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
     }
 
     getCurrentPageNumber() {
@@ -46,7 +46,7 @@ export class ApplicationStateService {
         return item;
     }
 
-    addUserInput(trackingKey: string, enteredValue: string) {
+    setUserInput(trackingKey: string, enteredValue: string) {
         // Is this item already in the array?
         let userInputEntry: UserInput = this._UserInput.find(i => i.trackingKey === trackingKey);
         if (!userInputEntry) {

@@ -6,10 +6,10 @@ import { SharedService } from '../../../app/services/shared.service';
 import { Question } from       '../../../app/types/question';
 
 @Component({
-    selector: 'home',
-    templateUrl: 'app/components/home/home.html'
+    selector: 'consent',
+    templateUrl: 'app/components/consent/consent.html'
 })
-export class HomeComponent implements OnInit {
+export class ConsentComponent implements OnInit {
 
   @Input() question: Question;
 
@@ -24,20 +24,4 @@ export class HomeComponent implements OnInit {
         //xyzzy
     }
 
-    childclicked() {
-        this.setTrackingValueAndMovePage('legalrep');
-    }
-
-    adultClicked() {
-        this.setTrackingValueAndMovePage('parent');
-    }
-
-    selfClicked() {
-        this.setTrackingValueAndMovePage('selfreport');
-    }
-
-    private setTrackingValueAndMovePage(selectedOption: string) {
-        this._applicationStateService.setUserInput('subjectType', selectedOption);
-        this._applicationStateService.next();
-    }
 }

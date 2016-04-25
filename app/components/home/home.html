@@ -10,17 +10,17 @@
     </div>
 
     <div class="homeButtons">
-        <div class="btn-group btn-path" (click)="appData.subjectType = 'child'">
-            <a href ui-sref="child" class="btn btn-sm btn-primary" (click)="next('child')"> <i class="fa fa-user"> If you are a parent or guardian taking the survey for a child, click here.</i>
+        <div class="btn-group btn-path" (click)="childclicked()">
+            <a href='#' ui-sref="child" class="btn btn-sm btn-primary"> <i class="fa fa-user"> If you are a parent or guardian taking the survey for a child, click here.</i>
             </a>
         </div>
-        <div class="btn-group btn-path" (click)="appData.subjectType = 'child'">
-            <a href ui-sref="child" class="btn btn-sm btn-primary" (click)="next('adult')"><i class="fa fa-user" > If you are a legally authorized representative taking the survey for another adult, click here.</i>
+        <div class="btn-group btn-path" (click)="adultClicked()">
+            <a href='#' ui-sref="child" class="btn btn-sm btn-primary"><i class="fa fa-user" > If you are a legally authorized representative taking the survey for another adult, click here.</i>
             </a>
         </div>
 
-        <div class="btn-group btn-path" (click)="appData.subjectType = 'self'">
-            <a href ui-sref="child" class="btn btn-sm btn-primary" (click)="next('self')"> <i class="fa fa-user"> If you are an adult taking the survey on behalf of yourself, click here.</i>
+        <div class="btn-group btn-path" (click)="selfClicked()">
+            <a href='#' ui-sref="child" class="btn btn-sm btn-primary"> <i class="fa fa-user"> If you are an adult taking the survey on behalf of yourself, click here.</i>
             </a>
         </div>
     </div>

@@ -16,7 +16,7 @@ import { ApplicationStateService } from '../../../app/services/application.state
 @Component({
     selector: 'page',
     templateUrl: 'app/components/page/page.html',
-    //,  styleUrls: ['app/example/dashboard.component.css']
+    // ,  styleUrls: ['app/example/dashboard.component.css']
     directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent, DiagnosticComponent]
 })
 export class PageComponent implements OnInit {

@@ -7,6 +7,30 @@ export var QUESTIONS: Question[] =
       "page_id": 1,
       "sort_order": 1,
       "answer_type_id": 1,
+      "answer_type": "Home",
+      "validation_type": "REQUIRED",
+      "question_text": "N/A",
+      "answer_lookup_id": -1,
+      "answer_lookup": "DOM_RESPONDENT_TYPE",
+      "tracking_key": "subject_type"
+    },
+    {
+      "question_id": 1010,
+      "page_id": 2,
+      "sort_order": 1,
+      "answer_type_id": 1,
+      "answer_type": "Consent",
+      "validation_type": "REQUIRED",
+      "question_text": "N/A",
+      "answer_lookup_id": -1,
+      "answer_lookup": "DOM_YES_NO",
+      "tracking_key": "initial_consent"
+    },
+    {
+      "question_id": 1020,
+      "page_id": 3,
+      "sort_order": 1,
+      "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": "REQUIRED",
       "question_text": "Has the child ever been diagnosed with ASD <tooltip id=\"1\"/>, which includes Asperger syndrome, childhood disintegrative disorder, and pervasive developmental disorders not otherwise specified (PDD-NOS)?",
@@ -15,20 +39,20 @@ export var QUESTIONS: Question[] =
       "tracking_key": "asd_yes_no"
     },
     {
-      "question_id": 1010,
-      "page_id": 1,
+      "question_id": 1030,
+      "page_id": 3,
       "sort_order": 2,
       "answer_type_id": 0,
       "answer_type": "Date_MonthDayYear",
       "validation_type": "REQUIRED",
       "question_text": "What is the child's date of birth? (mm/dd/yyyy):",
-      "answer_lookup_id": 0,
-      "answer_lookup": '',
+      "answer_lookup_id": -1,
+      "answer_lookup": "NONE",
       "tracking_key": "proband_DOB"
     },
     {
-      "question_id": 1020,
-      "page_id": 1,
+      "question_id": 1040,
+      "page_id": 3,
       "sort_order": 3,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -39,8 +63,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "sex_at_birth"
     },
     {
-      "question_id": 1030,
-      "page_id": 2,
+      "question_id": 1050,
+      "page_id": 4,
       "sort_order": 3,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -51,8 +75,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "ethnicity"
     },
     {
-      "question_id": 1040,
-      "page_id": 2,
+      "question_id": 1060,
+      "page_id": 4,
       "sort_order": 4,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -63,8 +87,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "middleName_confirm"
     },
     {
-      "question_id": 1050,
-      "page_id": 2,
+      "question_id": 1070,
+      "page_id": 4,
       "sort_order": 5,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -75,8 +99,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "middleNameMother_confirm"
     },
     {
-      "question_id": 1060,
-      "page_id": 2,
+      "question_id": 1080,
+      "page_id": 4,
       "sort_order": 6,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -87,8 +111,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "WalkByOneself"
     },
     {
-      "question_id": 1070,
-      "page_id": 3,
+      "question_id": 1090,
+      "page_id": 5,
       "sort_order": 7,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -99,8 +123,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "VerbalSkill"
     },
     {
-      "question_id": 1080,
-      "page_id": 3,
+      "question_id": 1100,
+      "page_id": 5,
       "sort_order": 8,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -111,8 +135,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "edu_level_mother"
     },
     {
-      "question_id": 1090,
-      "page_id": 3,
+      "question_id": 1110,
+      "page_id": 5,
       "sort_order": 9,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -123,8 +147,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "breastfed"
     },
     {
-      "question_id": 1100,
-      "page_id": 4,
+      "question_id": 1120,
+      "page_id": 6,
       "sort_order": 10,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -135,8 +159,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "breastfed_duration"
     },
     {
-      "question_id": 1110,
-      "page_id": 4,
+      "question_id": 1130,
+      "page_id": 6,
       "sort_order": 11,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -147,8 +171,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "tobacco_use_mother"
     },
     {
-      "question_id": 1120,
-      "page_id": 5,
+      "question_id": 1140,
+      "page_id": 7,
       "sort_order": 12,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -159,8 +183,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "Second_hand_smoke_freq_mother"
     },
     {
-      "question_id": 1130,
-      "page_id": 6,
+      "question_id": 1150,
+      "page_id": 8,
       "sort_order": 13,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -171,8 +195,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "seafood_freq_mother"
     },
     {
-      "question_id": 1140,
-      "page_id": 7,
+      "question_id": 1160,
+      "page_id": 9,
       "sort_order": 14,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -183,8 +207,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "prescr_drugs_mother"
     },
     {
-      "question_id": 1150,
-      "page_id": 8,
+      "question_id": 1170,
+      "page_id": 10,
       "sort_order": 15,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -195,8 +219,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "OTC_drugs_mother"
     },
     {
-      "question_id": 1160,
-      "page_id": 9,
+      "question_id": 1180,
+      "page_id": 11,
       "sort_order": 16,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -207,8 +231,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "residence_number_mother"
     },
     {
-      "question_id": 1170,
-      "page_id": 10,
+      "question_id": 1190,
+      "page_id": 12,
       "sort_order": 17,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -219,8 +243,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "residence_pre_78_mother"
     },
     {
-      "question_id": 1180,
-      "page_id": 11,
+      "question_id": 1200,
+      "page_id": 13,
       "sort_order": 18,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -231,8 +255,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "home_fragrance_freq_mother"
     },
     {
-      "question_id": 1190,
-      "page_id": 12,
+      "question_id": 1210,
+      "page_id": 14,
       "sort_order": 19,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -243,8 +267,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "edu_level_father"
     },
     {
-      "question_id": 1200,
-      "page_id": 13,
+      "question_id": 1220,
+      "page_id": 15,
       "sort_order": 20,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -255,8 +279,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "tobacco_use_father"
     },
     {
-      "question_id": 1210,
-      "page_id": 14,
+      "question_id": 1230,
+      "page_id": 16,
       "sort_order": 21,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -267,8 +291,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "Second_hand_smoke_freq_father"
     },
     {
-      "question_id": 1220,
-      "page_id": 15,
+      "question_id": 1240,
+      "page_id": 17,
       "sort_order": 22,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -279,8 +303,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "seafood_freq_father"
     },
     {
-      "question_id": 1230,
-      "page_id": 16,
+      "question_id": 1250,
+      "page_id": 18,
       "sort_order": 23,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -291,8 +315,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "prescr_drugs_father"
     },
     {
-      "question_id": 1240,
-      "page_id": 17,
+      "question_id": 1260,
+      "page_id": 19,
       "sort_order": 24,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -303,8 +327,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "OTC_drugs_father"
     },
     {
-      "question_id": 1250,
-      "page_id": 18,
+      "question_id": 1270,
+      "page_id": 20,
       "sort_order": 25,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -315,8 +339,8 @@ export var QUESTIONS: Question[] =
       "tracking_key": "Second_hand_smoke_freq_child"
     },
     {
-      "question_id": 1260,
-      "page_id": 19,
+      "question_id": 1280,
+      "page_id": 21,
       "sort_order": 26,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -327,32 +351,32 @@ export var QUESTIONS: Question[] =
       "tracking_key": "has_sibling"
     },
     {
-      "question_id": 1270,
-      "page_id": 20,
+      "question_id": 1290,
+      "page_id": 22,
       "sort_order": 27,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": "REQUESTED",
-      "question_text": "How many of the child\\'s siblings have received a diagnosis of ASD, which includes Asperger syndrome, childhood disintegrative disorder, and pervasive developmental disorder not otherwise specified (PDD-NOS)?",
+      "question_text": "How many of the child's siblings have received a diagnosis of ASD, which includes Asperger syndrome, childhood disintegrative disorder, and pervasive developmental disorder not otherwise specified (PDD-NOS)?",
       "answer_lookup_id": 19,
       "answer_lookup": "DOM_NUMBER_2",
       "tracking_key": "nb_sibling_with_ASD"
     },
     {
-      "question_id": 1280,
-      "page_id": 21,
+      "question_id": 1300,
+      "page_id": 23,
       "sort_order": 28,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": "REQUESTED",
-      "question_text": "How many of the child\\'s siblings have NOT received a diagnosis of ASD?",
+      "question_text": "How many of the child's siblings have NOT received a diagnosis of ASD?",
       "answer_lookup_id": 19,
       "answer_lookup": "DOM_NUMBER_2",
       "tracking_key": "nb_sibling_without_ASD"
     },
     {
-      "question_id": 1290,
-      "page_id": 22,
+      "question_id": 1310,
+      "page_id": 24,
       "sort_order": 29,
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
@@ -362,4 +386,5 @@ export var QUESTIONS: Question[] =
       "answer_lookup": "DOM_RECONTACT",
       "tracking_key": "recontact"
     }
-  ];
+  ]
+  ;
