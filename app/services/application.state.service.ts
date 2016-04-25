@@ -14,21 +14,8 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        //debugger;
         this._currentPage = 1;
-
         this._UserInput = new Array<UserInput>();
-
-        // Temp test data
-        // let dummy: UserInput = new UserInput();
-        // dummy.trackingKey = 'test1';
-        // dummy.entered_value = '1test';
-
-        // this._UserInput.push(dummy);
-        // dummy = new UserInput();
-        // dummy.trackingKey = 'test2';
-        // dummy.entered_value = '2test';
-        // this._UserInput.push(dummy);
     }
 
     getCurrentPage() {
@@ -61,7 +48,7 @@ export class ApplicationStateService {
             this._UserInput.push(userInputEntry);
         }
 
-        userInputEntry.entered_value = enteredValue;
+        userInputEntry.storedValue = enteredValue;
     }
 
 }

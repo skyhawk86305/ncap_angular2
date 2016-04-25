@@ -33,30 +33,10 @@ export class RadioButtonComponent implements OnInit {
   ngOnInit() {
     let domainOptions: DomainOptions = this._sharedService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
-    
-    // Does the question contain a tooltip?
-    if (this.question.question_text.indexOf('<tooltip') >= 0) {
 
-      //xyzzy WIP - convert tooltip tags to --TT
-      this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '--TT');
-      this.question.question_text = this.question.question_text.replace(/".>/i, '--');
+    this.addTooltipIfNecessary();
 
-      let position = this.question.question_text.indexOf('--TT');
-      let workingText = this.question.question_text.substring(position + 4);
-
-      workingText = workingText.replace(/--.*/, '');
-      this.questionToolTipId = +workingText;
-
-    }
-
-    // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.question.tracking_key);
-    if (previousUserInput) {
-      this.previouslySelectedStoredValue = previousUserInput.entered_value;
-    }
-    //this._applicationStateService
-
-
+    this.syncToPreviouslyEnteredData();
   }
 
   click(trackingKey: string, value: string) {
@@ -65,5 +45,28 @@ export class RadioButtonComponent implements OnInit {
     this._applicationStateService.addUserInput(trackingKey, value);
   }
 
+  private addTooltipIfNecessary() {
+    // Does the question contain a tooltip?
+    if (this.question.question_text.indexOf('<tooltip') >= 0) {
+
+      // xyzzy WIP - convert tooltip tags to --TT
+      this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '--TT');
+      this.question.question_text = this.question.question_text.replace(/".>/i, '--');
+
+      let position = this.question.question_text.indexOf('--TT');
+      let workingText = this.question.question_text.substring(position + 4);
+
+      workingText = workingText.replace(/--.*/, '');
+      this.questionToolTipId = +workingText;
+    }
+  }
+
+  private syncToPreviouslyEnteredData() {
+    // Is there previous entered User Input we need to sync to?
+    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.question.tracking_key);
+    if (previousUserInput) {
+      this.previouslySelectedStoredValue = previousUserInput.storedValue;
+    }
+  }
 
 }
