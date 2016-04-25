@@ -36,9 +36,7 @@ export class PageComponent implements OnInit {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId) {
-            debugger;
-            // xyzzy
-            //this.pageId = requestedPageId;
+            this._applicationStateService.setPageNumber(requestedPageId);
         }
 
         this.getQuestionsToRender();

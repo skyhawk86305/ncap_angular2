@@ -25,6 +25,10 @@ export class ApplicationStateService {
         return this._currentPageNumber;
     }
 
+    setPageNumber(pageNumber: number) {
+        this._currentPageNumber = pageNumber;
+    }
+
     getPercentageComplete() {
         let percentage: number = this._currentPageNumber * this._totalPages * 100;
         percentage = Math.round(percentage);
