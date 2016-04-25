@@ -8,6 +8,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { SharedService } from '../../../app/services/shared.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
+import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
   selector: 'radio-buttons',
@@ -20,6 +21,7 @@ export class RadioButtonComponent implements OnInit {
   @Input() question: Question;
   options: DomainOption[];
   questionToolTipId: number = -1;
+  previouslySelectedStoredValue: string;
 
   constructor(
     private _router: Router,
@@ -31,7 +33,7 @@ export class RadioButtonComponent implements OnInit {
   ngOnInit() {
     let domainOptions: DomainOptions = this._sharedService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
-
+    
     // Does the question contain a tooltip?
     if (this.question.question_text.indexOf('<tooltip') >= 0) {
 
@@ -46,11 +48,20 @@ export class RadioButtonComponent implements OnInit {
       this.questionToolTipId = +workingText;
 
     }
+
+    // Is there previous entered User Input we need to sync to?
+    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.question.tracking_key);
+    if (previousUserInput) {
+      this.previouslySelectedStoredValue = previousUserInput.entered_value;
+    }
+    //this._applicationStateService
+
+
   }
 
   click(trackingKey: string, value: string) {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
-    
+
     this._applicationStateService.addUserInput(trackingKey, value);
   }
 

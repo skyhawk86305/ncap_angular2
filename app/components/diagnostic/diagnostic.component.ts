@@ -41,6 +41,6 @@ export class DiagnosticComponent implements OnInit {
 
     ngOnInit() {
         //        let text = prettyjson.render(this._applicationStateService);
-        this.userInputMap = this._applicationStateService.getUserInput();
+        this.userInputMap = this._applicationStateService.getAllUserInput();
     }
 }

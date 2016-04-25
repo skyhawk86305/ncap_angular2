@@ -42,8 +42,14 @@ export class ApplicationStateService {
         return percentage;
     }
 
-    getUserInput() {
+    getAllUserInput() {
         return this._UserInput;
+    }
+
+    getUserInput(trackingKey: string) {
+        let item: UserInput = this._UserInput.find(i => i.trackingKey === trackingKey);
+
+        return item;
     }
 
     addUserInput(trackingKey: string, enteredValue: string) {
