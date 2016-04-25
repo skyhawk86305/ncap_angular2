@@ -4,7 +4,7 @@ import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 import { RouteParams } from 'angular2/router';
 
-//import * as prettyjson from 'prettyjson';
+// import * as prettyjson from 'prettyjson';
 
 import { Question } from  '../../../app/types/question';
 
@@ -20,7 +20,7 @@ import { UserInput } from  '../../../app/types/user-input';
 @Component({
     selector: 'diag',
     templateUrl: 'app/components/diagnostic/diagnostic.html',
-    //,  styleUrls: ['app/example/dashboard.component.css']
+    // ,  styleUrls: ['app/example/dashboard.component.css']
     directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent]
 })
 export class DiagnosticComponent implements OnInit {
@@ -28,8 +28,9 @@ export class DiagnosticComponent implements OnInit {
     questions: Question[];
     renderButtons: boolean = true;
     userInputMap: UserInput[];
+    userInputMapJson: string;
 
-    pageId: number = 1;
+    applicationStateService: ApplicationStateService;
 
     constructor(
         private _router: Router,
@@ -42,5 +43,8 @@ export class DiagnosticComponent implements OnInit {
     ngOnInit() {
         //        let text = prettyjson.render(this._applicationStateService);
         this.userInputMap = this._applicationStateService.getAllUserInput();
+        this.userInputMapJson = JSON.stringify(this.userInputMap);
+        this.applicationStateService = this._applicationStateService;
     }
 }
+

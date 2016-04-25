@@ -5,7 +5,7 @@ import { UserInput } from  '../../app/types/user-input';
 @Injectable()
 export class ApplicationStateService {
 
-    private _currentPage: number;
+    private _currentPageNumber: number;
     private _totalPages: number;
     private _UserInput: UserInput[];
 
@@ -14,16 +14,78 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        this._currentPage = 1;
-        this._UserInput = new Array<UserInput>();
+        this._currentPageNumber = 1;
+        //this._UserInput = new Array<UserInput>();
+        this._UserInput = [
+            {
+                'trackingKey': 'sex_at_birth',
+                'storedValue': 'Male'
+            },
+            {
+                'trackingKey': 'asd_yes_no',
+                'storedValue': 'Yes'
+            },
+            {
+                'trackingKey': 'middleNameMother_confirm',
+                'storedValue': 'No'
+            },
+            {
+                'trackingKey': 'middleName_confirm',
+                'storedValue': 'Yes'
+            },
+            {
+                'trackingKey': 'ethnicity',
+                'storedValue': 'Prefer not to answer'
+            },
+            {
+                'trackingKey': 'WalkByOneself',
+                'storedValue': 'Don\'t know'
+            },
+            {
+                'trackingKey': 'VerbalSkill',
+                'storedValue': 'Speaks in 2 words combinations'
+            },
+            {
+                'trackingKey': 'edu_level_mother',
+                'storedValue': 'High school graduate (or equivalent)'
+            },
+            {
+                'trackingKey': 'breastfed',
+                'storedValue': 'No'
+            },
+            {
+                'trackingKey': 'tobacco_use_mother',
+                'storedValue': 'No'
+            },
+            {
+                'trackingKey': 'breastfed_duration',
+                'storedValue': '7-12 months'
+            },
+            {
+                'trackingKey': 'Second_hand_smoke_freq_mother',
+                'storedValue': '1+ times per day'
+            },
+            {
+                'trackingKey': 'seafood_freq_mother',
+                'storedValue': 'Don\'t know'
+            },
+            {
+                'trackingKey': 'prescr_drugs_mother',
+                'storedValue': 'Don\'t know'
+            },
+            {
+                'trackingKey': 'OTC_drugs_mother',
+                'storedValue': 'No'
+            }
+        ];
     }
 
-    getCurrentPage() {
-        return this._currentPage;
+    getCurrentPageNumber() {
+        return this._currentPageNumber;
     }
 
     getPercentageComplete() {
-        let percentage: number = this._currentPage * this._totalPages * 100;
+        let percentage: number = this._currentPageNumber * this._totalPages * 100;
         percentage = Math.round(percentage);
 
         return percentage;
@@ -49,6 +111,14 @@ export class ApplicationStateService {
         }
 
         userInputEntry.storedValue = enteredValue;
+    }
+
+    next() {
+        this._currentPageNumber++;
+    }
+
+    back() {
+        this._currentPageNumber--;
     }
 
 }

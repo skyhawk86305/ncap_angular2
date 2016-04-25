@@ -1,4 +1,4 @@
-import { Component,  OnInit } from 'angular2/core';
+import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 import { RouteParams } from 'angular2/router';
 
@@ -10,6 +10,8 @@ import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
+import { ApplicationStateService } from '../../../app/services/application.state.service';
+
 
 @Component({
     selector: 'page',
@@ -22,10 +24,9 @@ export class PageComponent implements OnInit {
     questions: Question[];
     renderButtons: boolean = true;
 
-    pageId: number = 1;
-
     constructor(
         private _router: Router,
+        private _applicationStateService: ApplicationStateService,
         private _sharedService: SharedService,
         private _routeParams: RouteParams
     ) {
@@ -35,7 +36,9 @@ export class PageComponent implements OnInit {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId) {
-            this.pageId = requestedPageId;
+            debugger;
+            // xyzzy
+            //this.pageId = requestedPageId;
         }
 
         this.getQuestionsToRender();
@@ -43,19 +46,20 @@ export class PageComponent implements OnInit {
 
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
-        this.questions = this._sharedService.getQuestionsForPage(this.pageId);
+        let pageId = this._applicationStateService.getCurrentPageNumber();
+        this.questions = this._sharedService.getQuestionsForPage(pageId);
         console.log('qu count is ' + this.questions.length);
     }
 
     next() {
         console.log('Clicked next');
-        this.pageId++;
+        this._applicationStateService.next();
         this.getQuestionsToRender();
     }
 
     back() {
         console.log('Clicked back');
-        this.pageId--;
+        this._applicationStateService.back();
         this.getQuestionsToRender();
     }
 

@@ -1,7 +1,7 @@
-Diagnostic Information
+Current page: {{applicationStateService.getCurrentPageNumber()}}
 <BR>
-<BR>
-User Input:<BR>
-<div class="radio-group radio" *ngFor="#item of userInputMap; #idx = index">
+<!--<div class="radio-group radio" *ngFor="#item of userInputMap; #idx = index">
     <li>{{item.trackingKey}} = {{item.storedValue}}</li>
-</div>
+</div>-->
+User Input: {{ userInputMap | json }}
+<BR>
