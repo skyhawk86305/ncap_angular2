@@ -6,7 +6,7 @@ import { PageComponent } from './components/page/page.component';
 import { AllPagesComponent } from './components/allPages/allPages.component';
 import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 
-import { SharedService } from '../app/services/shared.service';
+import { SeedDataService } from '../app/services/seed.data.service';
 import { ApplicationStateService } from '../app/services/application.state.service';
 
 @Component({
@@ -18,7 +18,7 @@ import { ApplicationStateService } from '../app/services/application.state.servi
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    SharedService,
+    SeedDataService,
     ApplicationStateService
   ]
 })

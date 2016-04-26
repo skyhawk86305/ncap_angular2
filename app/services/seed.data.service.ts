@@ -7,7 +7,7 @@ import { Tooltip } from       '../../app/types/tooltip';
 import { TOOLTIPS } from '../../app/seed-data/json-tooltips';
 
 @Injectable()
-export class SharedService {
+export class SeedDataService {
     private _domainOptions: DomainOptions;
     private _questions: Question[];
     private _tooltips: Tooltip[];

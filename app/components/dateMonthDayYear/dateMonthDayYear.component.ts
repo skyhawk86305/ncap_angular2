@@ -5,7 +5,7 @@ import { DomainOption } from   '../../../app/types/domain-option';
 import { DomainOptions } from  '../../../app/types/domain-options';
 import { Question } from       '../../../app/types/question';
 
-import { SharedService } from '../../../app/services/shared.service';
+import { SeedDataService } from '../../../app/services/seed.data.service';
 
 @Component({
   selector: 'date-month-day-year',
@@ -19,7 +19,7 @@ export class DayMonthYearComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _sharedService: SharedService
+    private _sharedService: SeedDataService
   ) {
   }
 

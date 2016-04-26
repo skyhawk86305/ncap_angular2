@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
 import { ApplicationStateService } from '../../../app/services/application.state.service';
-import { SharedService } from '../../../app/services/shared.service';
+import { SeedDataService } from '../../../app/services/seed.data.service';
 import { Question } from       '../../../app/types/question';
 import { UserInput } from  '../../../app/types/user-input';
 
@@ -18,7 +18,7 @@ export class ConsentComponent implements OnInit {
     constructor(
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
-        private _sharedService: SharedService
+        private _sharedService: SeedDataService
     ) {
     }
 

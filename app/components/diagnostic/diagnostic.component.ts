@@ -8,7 +8,7 @@ import { RouteParams } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
 
-import { SharedService } from '../../../app/services/shared.service';
+import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
@@ -34,7 +34,7 @@ export class DiagnosticComponent implements OnInit {
 
     constructor(
         private _router: Router,
-        private _sharedService: SharedService,
+        private _sharedService: SeedDataService,
         private _applicationStateService: ApplicationStateService,
         private _routeParams: RouteParams
     ) {

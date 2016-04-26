@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { SharedService } from '../../../app/services/shared.service';
+import { SeedDataService } from '../../../app/services/seed.data.service';
 import { Tooltip } from       '../../../app/types/tooltip';
 
 @Component({
@@ -17,7 +17,7 @@ export class TooltipComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _sharedService: SharedService
+    private _sharedService: SeedDataService
   ) {
   }
 

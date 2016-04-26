@@ -4,7 +4,7 @@ import { RouteParams } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
 
-import { SharedService } from '../../../app/services/shared.service';
+import { SeedDataService } from '../../../app/services/seed.data.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
@@ -28,7 +28,7 @@ export class PageComponent implements OnInit {
     constructor(
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
-        private _sharedService: SharedService,
+        private _sharedService: SeedDataService,
         private _routeParams: RouteParams
     ) {
     }
