@@ -4,4 +4,5 @@ export class MatrixElement {
     answer_category: string;
     text: string;
     tracking_id: string;
+    validation_type: string;
 }

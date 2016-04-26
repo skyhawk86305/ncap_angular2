@@ -390,14 +390,27 @@ export var QUESTIONS: Question[] =
     {
       "question_id": 2000,
       "page_id": 25,
-      "sort_order": 30,
-      "answer_type_id": 1, //xyzzy
+      "sort_order": 1,
+      "answer_type_id": 1,
+      "answer_type": "MatrixRadioButtons",
+      "validation_type": "N/A",
+      "question_text": "Did the child display the following developmental milestones?",
+      "answer_lookup_id": 31,
+      "answer_lookup": "DOM_YES_NO_DK_NA",
+      "tracking_key": "N/A"
+    }
+    ,
+    {
+      "question_id": 2010,
+      "page_id": 26,
+      "sort_order": 1,
+      "answer_type_id": 1,
       "answer_type": "MatrixRadioButtons_TextboxLastRow",
-      "validation_type": "REQUIRED", //xyzzy
-      "question_text": "Did the child have any of the following behaviors or symptoms? Answer as appropriate for the age of your child.",
-      "answer_lookup_id": 31, //xyzzy
-      "answer_lookup": "DOM_YES_NO_DK_NA", //xyzzy
-      "tracking_key": "N/A" //xyzzy
+      "validation_type": "N/A",
+      "question_text": "Did the child have any of the following behaviors or symptoms during any stage of development?",
+      "answer_lookup_id": 31,
+      "answer_lookup": "DOM_YES_NO_DK_NA",
+      "tracking_key": "N/A"
     }
   ]
   ;
