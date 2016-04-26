@@ -386,5 +386,18 @@ export var QUESTIONS: Question[] =
       "answer_lookup": "DOM_RECONTACT",
       "tracking_key": "recontact"
     }
+    ,
+    {
+      "question_id": 2000,
+      "page_id": 25,
+      "sort_order": 30,
+      "answer_type_id": 1, //xyzzy
+      "answer_type": "MatrixRadioButtons_TextboxLastRow",
+      "validation_type": "REQUIRED", //xyzzy
+      "question_text": "Did the child have any of the following behaviors or symptoms? Answer as appropriate for the age of your child.",
+      "answer_lookup_id": 31, //xyzzy
+      "answer_lookup": "DOM_YES_NO_DK_NA", //xyzzy
+      "tracking_key": "N/A" //xyzzy
+    }
   ]
   ;
