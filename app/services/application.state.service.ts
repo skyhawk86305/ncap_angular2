@@ -19,7 +19,7 @@ export class ApplicationStateService {
 
     initialize() {
         this._currentPageNumber = 4;
-        //this._UserInput = new Array<UserInput>();
+        // this._UserInput = new Array<UserInput>();
         this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
     }
 
@@ -75,9 +75,9 @@ export class ApplicationStateService {
     }
 }
 
-//export interface CallbackType { (): void; }
-    //private _observerCallbacks: CallbackType[];
-        //this._observerCallbacks = new Array<CallbackType>();
+// export interface CallbackType { (): void; }
+    // private _observerCallbacks: CallbackType[];
+        // this._observerCallbacks = new Array<CallbackType>();
     // Code to implement Observe Callbacks - all comonents intersted in notificatrion will register with this code
     // Components that with to SUBCRIBE call this
     // registerObserverCallback(callback: () => void) {
