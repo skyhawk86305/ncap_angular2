@@ -18,7 +18,7 @@ export class ConsentComponent implements OnInit {
     constructor(
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
-        private _sharedService: SeedDataService
+        private _seedDataService: SeedDataService
     ) {
     }
 

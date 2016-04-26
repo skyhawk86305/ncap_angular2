@@ -17,12 +17,12 @@ export class TooltipComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _sharedService: SeedDataService
+    private _seedDataService: SeedDataService
   ) {
   }
 
   ngOnInit() {
-    let tooltip: Tooltip = this._sharedService.getTooltipForId(this.toolTipId);
+    let tooltip: Tooltip = this._seedDataService.getTooltipForId(this.toolTipId);
     this.tooltipText = tooltip.definition;
   }
 

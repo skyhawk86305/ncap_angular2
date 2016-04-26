@@ -28,7 +28,7 @@ export class PageComponent implements OnInit {
     constructor(
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
-        private _sharedService: SeedDataService,
+        private _seedDataService: SeedDataService,
         private _routeParams: RouteParams
     ) {
     }
@@ -50,7 +50,7 @@ export class PageComponent implements OnInit {
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
         let pageId = this._applicationStateService.getCurrentPageNumber();
-        this.questions = this._sharedService.getQuestionsForPage(pageId);
+        this.questions = this._seedDataService.getQuestionsForPage(pageId);
         console.log('qu count is ' + this.questions.length);
     }
 

@@ -22,11 +22,11 @@ export class AllPagesComponent implements OnInit {
 
     constructor(
         private _router: Router,
-        private _sharedService: SeedDataService
+        private _seedDataService: SeedDataService
     ) {
     }
 
     ngOnInit() {
-        this.questions = this._sharedService.getQuestions();
+        this.questions = this._seedDataService.getQuestions();
     }
 }

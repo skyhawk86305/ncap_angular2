@@ -25,13 +25,13 @@ export class RadioButtonComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _sharedService: SeedDataService,
+    private _seedDataService: SeedDataService,
     private _applicationStateService: ApplicationStateService
   ) {
   }
 
   ngOnInit() {
-    let domainOptions: DomainOptions = this._sharedService.getDomainOptions();
+    let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 
     this.addTooltipIfNecessary();

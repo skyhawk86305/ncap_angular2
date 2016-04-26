@@ -34,7 +34,7 @@ export class DiagnosticComponent implements OnInit {
 
     constructor(
         private _router: Router,
-        private _sharedService: SeedDataService,
+        private _seedDataService: SeedDataService,
         private _applicationStateService: ApplicationStateService,
         private _routeParams: RouteParams
     ) {

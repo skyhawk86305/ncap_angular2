@@ -19,12 +19,12 @@ export class DayMonthYearComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _sharedService: SeedDataService
+    private _seedDataService: SeedDataService
   ) {
   }
 
   ngOnInit() {
-    //let domainOptions: DomainOptions = this._sharedService.getDomainOptions();
+    //let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
     //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 
     //xyzzy Temporarily remove all references to tooltip
