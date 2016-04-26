@@ -10,8 +10,8 @@ import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
-import { ApplicationStateService } from '../../../app/services/application.state.service';
 
+import { ApplicationStateService } from '../../../app/services/application.state.service';
 
 @Component({
     selector: 'page',
@@ -23,6 +23,7 @@ export class PageComponent implements OnInit {
 
     questions: Question[];
     renderButtons: boolean = true;
+    that: PageComponent;
 
     constructor(
         private _router: Router,
@@ -40,6 +41,10 @@ export class PageComponent implements OnInit {
         }
 
         this.getQuestionsToRender();
+
+        this._applicationStateService.registerPageComponent(this);
+
+        this.that = this;
     }
 
     getQuestionsToRender() {
@@ -65,3 +70,11 @@ export class PageComponent implements OnInit {
         console.log('Clicked exit');
     }
 }
+
+//import { CallbackType } from '../../../app/services/application.state.service';
+        //this._applicationStateService.registerObserverCallback(this.sharedModelChanged);
+
+    // sharedModelChanged() {
+    //     console.log('callback fired');
+    //     this.getQuestionsToRender();
+    // ;

@@ -1,14 +1,16 @@
 import { Injectable } from 'angular2/core';
 
 import { UserInput } from  '../../app/types/user-input';
-
 import { USERINPUT_SCENARIO1 } from  '../../app/seed-data-for-debugging/json-user-input-senario1';
+
+import { PageComponent } from  '../../app/components/page/page.component';
 
 @Injectable()
 export class ApplicationStateService {
 
     private _currentPageNumber: number;
     private _totalPages: number;
+    private _pageComponent: PageComponent;
     private _UserInput: UserInput[];
 
     constructor() {
@@ -16,10 +18,14 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        this._currentPageNumber = 3;
+        this._currentPageNumber = 1;
         this._UserInput = new Array<UserInput>();
         //this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
     }
+
+    registerPageComponent(pageComponent: PageComponent) {
+        this._pageComponent = pageComponent;
+    };
 
     getCurrentPageNumber() {
         return this._currentPageNumber;
@@ -60,10 +66,27 @@ export class ApplicationStateService {
 
     next() {
         this._currentPageNumber++;
+        this._pageComponent.getQuestionsToRender();
     }
 
     back() {
         this._currentPageNumber--;
+        this._pageComponent.getQuestionsToRender();
     }
-
 }
+
+//export interface CallbackType { (): void; }
+    //private _observerCallbacks: CallbackType[];
+        //this._observerCallbacks = new Array<CallbackType>();
+    // Code to implement Observe Callbacks - all comonents intersted in notificatrion will register with this code
+    // Components that with to SUBCRIBE call this
+    // registerObserverCallback(callback: () => void) {
+    //     this._observerCallbacks.push(callback);
+    // };
+
+    // Components that wish to PUSH notifications call this
+    // notifyObservers() {
+    //     for (let curCallback of this._observerCallbacks) {
+    //         curCallback();
+    //     }
+    // };

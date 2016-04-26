@@ -1,1 +1,87 @@
-== Consent WIP ==
+<div id="contentConsent" class="center-block"><h1>Consent to Pretesting for the<br>
+  National Collaborative Autism Project Survey</h1>
+
+    <h2>Introduction</h2>
+    <p>This project explores how the environment and social stressors may affect autism spectrum disorder.
+        This project is led by Dr. Marie Lynn Miranda at Rice University. This project is funded by the
+        National Institute of Mental Health. We are collecting information using a survey.
+        You will help us pretest the survey. You must be 18 or older to participate in this pretest.
+        Please read this consent form carefully.</p>
+
+    <h2>How the Pretest Works</h2>
+    <p>A researcher will sit with you as you answer questions. You will be asked to read the questions and talk out
+        loud about what the questions mean to you. Please take your time. <span class="emphasize">You may skip any question</span>. The researcher will
+        take notes on what the questions mean to you, but will not answer questions about the survey. After you finish,
+        the researcher may ask you follow up questions about the survey. <span class="emphasize">You do not have to respond to researcher questions</span>.
+        The pretest will take about an hour. We will use the feedback you provide to improve the survey.
+        We need you to provide your honest feedback.</p>
+
+    <h2>Benefits</h2>
+    <p>You will not benefit directly from helping to build the survey. We hope that this project will improve understanding of autism. </p>
+
+    <h2>Compensation</h2>
+    <p>We will pay you $25 for your participation. You will receive the $25 even if you do not complete the pretesting.</p>
+
+    <h2>Risks</h2>
+    <p>There is no risk to you from answering questions in this survey.</p>
+
+    <h2>Cost</h2>
+    <p>There is no cost to you to participate in this survey.</p>
+
+    <h2>Confidentiality</h2>
+    <p>We will protect your privacy. Your survey answers will not be linked to your personal information.
+        After the pretest, we will look at your responses to help us improve the survey.
+        We will not use your answers for any other reason. </p>
+    <h2>Your Choice to Participate</h2>
+    <p>Participating in this pretest is completely voluntary. Even if you decide to participate now,
+        you may change your mind later. You may stop at any time. You may choose to skip questions.</p>
+
+    <h2>Problems, Questions, or Concerns</h2>
+    <p>If you have questions, ask the researcher before starting the pretest. If you have questions, complaints,
+        or suggestions after the pretest, please contact Dr. Marie Lynn Miranda.</p>
+    <p class="indent">Attn: Dr. Marie Lynn Miranda
+        <br>Rice University - BRC
+        <br>6100 Main Street, MS-460
+        <br>Houston, Texas 77005
+        <br>Phone: 713-348-8263
+    </p>
+    <p>For questions about your rights as a research participant, to discuss problems or concerns related to the research,
+        or to obtain more information, contact Melinda Cotten, Director of Office of Research Compliance, at Rice University.
+        Email: <a href="mailto:cotten@rice.edu">cotten@rice.edu</a> or Telephone: 713-348-6200.</p>
+
+    <h2>Statement of Consent</h2>
+    <p>"The purpose of this study, procedures to be followed, risks and benefits have been explained to me.
+        I understand that I can contact Marie Lynn Miranda to discuss problems, concerns, or questions, or
+        to obtain more information. I understand that I may withdraw myself at any time.
+        I have read this consent form and agree to participate."</p>
+
+    <div class="text-center">
+        <div class="form-group">
+            <div class="consentButtons">
+                <i class="fa fa-print"></i>
+                <a onclick="window.print();">Print or save a copy for my records.</a>
+            </div>
+            <div class="consentButtons">
+                <label class="checkbox-inline agree">
+                    <input type="checkbox" name="hasConsent" id="hasConsentY" [(ngModel)]="hasConsent">
+                    I agree. Proceed to survey.
+                </label>
+            </div>
+            <div class="consentButtons">
+                <button ui-sref="survey.personal" class="btn btn-primary btn-lg" (click)="next()"
+                        [disabled]="!hasConsent">
+                    Next <i class="fa fa-arrow-circle-right"></i>
+                </button>
+            </div>
+            <div class="consentButtons">
+                <a name="hasConsent" id="hasConsentN" (click)="exit()" confirm-ok="OK - Exit Now" confirm-cancel="Return to Survey"
+                   confirm-title="Exit Survey"
+                   confirm="If you exit the survey now you will not be able to return and finish it later.  We will not keep any information you have entered so far.  Are you sure you want to exit?">
+                    <i class="fa fa-arrow-circle-left"></i>
+                        I do not agree. <br>
+                        Exit survey.
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

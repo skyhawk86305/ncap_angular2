@@ -11,7 +11,8 @@ import { Question } from       '../../../app/types/question';
 })
 export class ConsentComponent implements OnInit {
 
-  @Input() question: Question;
+    @Input() question: Question;
+    hasConsent: boolean = false;
 
     constructor(
         private _router: Router,
@@ -22,6 +23,17 @@ export class ConsentComponent implements OnInit {
 
     ngOnInit() {
         //xyzzy
+    }
+
+    next() {
+        console.log('Clicked next');
+        this._applicationStateService.setUserInput('initial_consent', 'Y');
+        this._applicationStateService.next();
+    }
+
+    exit() {
+        // xyzzy
+        console.log('Clicked exit');
     }
 
 }
