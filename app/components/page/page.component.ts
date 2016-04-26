@@ -71,8 +71,8 @@ export class PageComponent implements OnInit {
     }
 }
 
-//import { CallbackType } from '../../../app/services/application.state.service';
-        //this._applicationStateService.registerObserverCallback(this.sharedModelChanged);
+// import { CallbackType } from '../../../app/services/application.state.service';
+        // this._applicationStateService.registerObserverCallback(this.sharedModelChanged);
 
     // sharedModelChanged() {
     //     console.log('callback fired');

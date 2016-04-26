@@ -12,7 +12,7 @@ export var QUESTIONS: Question[] =
       "question_text": "N/A",
       "answer_lookup_id": -1,
       "answer_lookup": "DOM_RESPONDENT_TYPE",
-      "tracking_key": "subject_type"
+      "tracking_key": "respondent_type"
     },
     {
       "question_id": 1010,

@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
     }
 
     private setTrackingValueAndMovePage(selectedOption: string) {
-        this._applicationStateService.setUserInput('subjectType', selectedOption);
+        this._applicationStateService.setUserInput('respondent_type', selectedOption);
         this._applicationStateService.next();
     }
 }
