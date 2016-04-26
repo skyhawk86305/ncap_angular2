@@ -20,7 +20,6 @@ import { UserInput } from  '../../../app/types/user-input';
 @Component({
     selector: 'diag',
     templateUrl: 'app/components/diagnostic/diagnostic.html',
-    // ,  styleUrls: ['app/example/dashboard.component.css']
     directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent]
 })
 export class DiagnosticComponent implements OnInit {

@@ -10,7 +10,6 @@ import { SeedDataService } from '../../../app/services/seed.data.service';
 @Component({
   selector: 'date-month-day-year',
   templateUrl: 'app/components/dateMonthDayYear/dateMonthDayYear.html'
-  //,  styleUrls: ['app/example/dashboard.component.css']
 })
 export class DayMonthYearComponent implements OnInit {
 

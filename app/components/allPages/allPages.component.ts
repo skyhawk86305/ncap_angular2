@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from 'angular2/core';
+import { Component, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
@@ -11,7 +11,6 @@ import { HomeComponent } from '../home/home.component';
 @Component({
     selector: 'page',
     templateUrl: 'app/components/allPages/allPages.html',
-    //,  styleUrls: ['app/example/dashboard.component.css']
     directives: [NgSwitchQuestionComponent, HomeComponent]
 })
 export class AllPagesComponent implements OnInit {

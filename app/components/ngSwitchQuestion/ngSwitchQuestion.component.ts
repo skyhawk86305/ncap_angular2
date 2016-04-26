@@ -11,7 +11,6 @@ import { Question } from  '../../../app/types/question';
 @Component({
     selector: 'ng-switch-question',
     templateUrl: 'app/components/ngSwitchQuestion/ngSwitchQuestion.html',
-    //,  styleUrls: ['app/example/dashboard.component.css']
     directives: [HomeComponent, RadioButtonComponent, DayMonthYearComponent, ConsentComponent]
 })
 export class NgSwitchQuestionComponent implements OnInit {
