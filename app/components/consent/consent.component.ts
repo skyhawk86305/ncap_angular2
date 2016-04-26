@@ -4,6 +4,7 @@ import { Router } from 'angular2/router';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { SharedService } from '../../../app/services/shared.service';
 import { Question } from       '../../../app/types/question';
+import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
     selector: 'consent',
@@ -22,7 +23,10 @@ export class ConsentComponent implements OnInit {
     }
 
     ngOnInit() {
-        //xyzzy
+        let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.question.tracking_key);
+        if (previousUserInput) {
+            this.hasConsent = (previousUserInput.storedValue === 'Y');
+        }
     }
 
     next() {

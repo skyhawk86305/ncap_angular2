@@ -2,6 +2,8 @@ import { UserInput } from  '../../app/types/user-input';
 
 export var USERINPUT_SCENARIO1: UserInput[] =
     [
+        { 'trackingKey': 'subjectType', 'storedValue': 'legalrep' }, 
+        { 'trackingKey': 'initial_consent', 'storedValue': 'Y' },
         {
             'trackingKey': 'sex_at_birth',
             'storedValue': 'Male'

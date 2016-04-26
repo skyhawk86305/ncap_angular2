@@ -18,9 +18,9 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        this._currentPageNumber = 1;
-        this._UserInput = new Array<UserInput>();
-        //this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
+        this._currentPageNumber = 4;
+        //this._UserInput = new Array<UserInput>();
+        this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
     }
 
     registerPageComponent(pageComponent: PageComponent) {
