@@ -1,0 +1,30 @@
+<!--<div style="padding-left: 2em;">&nbsp;</div>-->
+<div class="leftPadding1">
+
+    <table>
+        <thead style="padding-left: 1em;border-bottom:1pt solid black;">
+            <th class="mat_q_th">
+                <label style="text-align: left;display: block;">
+                            {{options.data.question}}  
+                        </label>
+            </th>
+            <th class="mat_c_th" ng-repeat="o in options.data.choices" class=""> {{o.name}}</th>
+        </thead>
+        <tr class="border_bottom" ng-repeat="s in options.data.statements" question="{{::s.key}}" ng-class-odd="'matrix-odd'">
+            <td class="mat_q"><span bind-html-compile="s.name"></span></td>
+            <td class="mat_c" ng-repeat="o in options.data.choices" class="matrix" th="{{o.name}}">
+                <!--<input type="radio" name="{{s.key}}" ng-model="model[s.key]">-->
+                <input ng-if="(options.data.choiceType==undefined) ||(options.data.choiceType=='radio') " type="{{options.data.choiceType||'radio'}}" name="{{formId+'_'+ options.type+'_'+s.key+'_'+  $index}}" ncap-model="{{::s.key}}" ng-model="model[s.key]" ctl-changed="{{s.key}}"
+                    ng-value="o.value">
+                <input ng-if="(options.data.choiceType=='checkbox') " name="{{::s.model}}" type="{{options.data.choiceType||'radio'}}" ncap-model="{{::s.key}}" ctl-changed="{{::s.key}}" ng-model="model[s.key]">
+            </td>
+        </tr>
+        <tr class="border_bottom" ng-if="(options.data.other)">
+            <td class="mat_q" colspan="{{options.data.choices.length+1}}">
+                {{ options.data.other[0].q }}
+                <input class="form-control" type="text" width="10" placeholder="{{options.data.other[0].placeholder}}" ctl-changed="{{::options.data.other[0].key}}" ncap-model="{{::options.data.other[0].key}}" ng-model="model[options.data.other[0].key]" />
+            </td>
+        </tr>
+    </table>
+    <div>
+        
