@@ -13,7 +13,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
         },
         {
             'question_id': 2000,
-            'sort_order': 1,
+            'sort_order': 2,
             'answer_category': 'RadioButtons',
             'text': 'Spoke single words by 16 months',
             'tracking_id': 'single_word_16mo',
@@ -21,7 +21,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
         },
         {
             'question_id': 2000,
-            'sort_order': 1,
+            'sort_order': 3,
             'answer_category': 'RadioButtons',
             'text': 'Spoke two-word phrases by age 2',
             'tracking_id': 'two_words_2yr',

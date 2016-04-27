@@ -1,9 +1,13 @@
 <td class='mat_q'>{{matrixRadioButtons.text}}</td>
 <td class="mat_c ng-scope" *ngFor="#item of options; #idx = index">
-    <input type="radio" name="{{matrixRadioButtons.question_id}}{{matrixRadioButtons.sort_order}}" 
+    <input type="radio" 
+    name="{{matrixRadioButtons.question_id}}{{matrixRadioButtons.sort_order}}"  
     value="{{item.ID}}" 
-    >
+    (click)="click(matrixRadioButtons.tracking_id, item.stored_value)" 
+    [checked]="previouslySelectedStoredValue === item.stored_value" >
 </td>
+
+
 
     <!--(click)='click(question.tracking_key, item.stored_value)' 
     [checked]="previouslySelectedStoredValue === item.stored_value"-->

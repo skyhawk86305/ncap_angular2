@@ -22,7 +22,7 @@ export class MatrixRadioButtonsComponent implements OnInit {
   @Input() matrixRadioButtons: MatrixElement;
   @Input('question') question: Question;
   options: DomainOption[];
-
+  previouslySelectedStoredValue: string;
 
   constructor(
     private _seedDataService: SeedDataService,
@@ -33,11 +33,23 @@ export class MatrixRadioButtonsComponent implements OnInit {
   ngOnInit() {
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup 
     let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
-    
-    //this.matrixRadioButtons.question_id
-    
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
+
+    this.syncToPreviouslyEnteredData();
   }
 
+  private syncToPreviouslyEnteredData() {
+    // Is there previous entered User Input we need to sync to?
+    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.matrixRadioButtons.tracking_id);
+    if (previousUserInput) {
+      this.previouslySelectedStoredValue = previousUserInput.storedValue;
+    }
+  }
+
+  click(trackingKey: string, value: string) {
+    console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
+
+    this._applicationStateService.setUserInput(trackingKey, value);
+  }
 
 }
