@@ -15,10 +15,24 @@
                     <th *ngFor="#curOption of options">{{curOption.displayed_value}}</th>
                 </tr>
             </thead>
+            <tr>
+                <td>A long piece of text, blah</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+            </tr>
 
-            <div *ngFor="#curMatrixElement of matrixElements">
-                {{curMatrixElement.text}}<!--{{curMatrixElement.sort_order}} - {{curMatrixElement.answer_category}} - -->
-            </div>
+            <!--<tr *ngFor="#curMatrixElement of matrixElements">
+                <td>test</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+            </tr>-->
+
+            <tr *ngFor="#curMatrixElement of matrixElements" [matrixRadioButtons]="curMatrixElement">
+
         </table>
     </div>
 
