@@ -1,11 +1,33 @@
- {{question.question_text}}
-
-<BR>
-<BR>
-
-<div *ngFor="#curMatrixElement of matrixElements" >
-    {{curMatrixElement.sort_order}} - {{curMatrixElement.answer_category}} - {{curMatrixElement.text}}  
+<div>
+    <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
+        <span class="ng-scope">{{question.page_id}}.{{question.sort_order}} - {{question.question_text}}</span>
+        <tooltip *ngIf="questionToolTipId>0" [toolTipId]="questionToolTipId"></tooltip>
+    </div>
 </div>
+
+<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
+
+    <div class="form-group ng-scope">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th *ngFor="#curOption of options">{{curOption.displayed_value}}</th>
+                </tr>
+            </thead>
+
+            <div *ngFor="#curMatrixElement of matrixElements">
+                {{curMatrixElement.text}}<!--{{curMatrixElement.sort_order}} - {{curMatrixElement.answer_category}} - -->
+            </div>
+        </table>
+    </div>
+
+</div>
+
+
+<!--<div class="radio-group radio" *ngFor="#item of options; #idx = index">
+    <input type="radio" name="{{question.sort_order}}" value="{{item.ID}}" (click)='click(question.tracking_key, item.stored_value)' [checked]="previouslySelectedStoredValue === item.stored_value"> {{item.displayed_value}}
+</div>-->
 
 
 <!--<div class="leftPadding1">

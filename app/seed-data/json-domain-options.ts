@@ -249,6 +249,34 @@ export var YES_NO_DK_NA_Q1: DomainOption[] =
         }
     ];
 
+export var YES_NO_DK_NA: DomainOption[] =
+[
+  {
+    'id': 1,
+    'sort_order': 1,
+    'displayed_value': 'Yes',
+    'stored_value': 'Yes'
+  },
+  {
+    'id': 2,
+    'sort_order': 2,
+    'displayed_value': 'No',
+    'stored_value': 'No'
+  },
+  {
+    'id': 3,
+    'sort_order': 3,
+    'displayed_value': 'Dont know',
+    'stored_value': 'Dont know'
+  },
+  {
+    'id': 4,
+    'sort_order': 4,
+    'displayed_value': 'Not Applicable',
+    'stored_value': 'Not Applicable'
+  }
+];
+
 export var YES_NO_DK_PNTA: DomainOption[] =
     [
         {

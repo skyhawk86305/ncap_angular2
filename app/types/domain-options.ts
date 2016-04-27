@@ -11,6 +11,7 @@ export class DomainOptions {
   yesNo: DomainOption[];
   yesNoDkNaQ1: DomainOption[];
   yesNoDkPnta: DomainOption[];
+  yesNoDkNa: DomainOption[];
 
   populateWithData() {
     this.age5 = SEEDDATA.AGE_5;
@@ -22,6 +23,7 @@ export class DomainOptions {
     this.yesNo = SEEDDATA.YES_NO;
     this.yesNoDkNaQ1 = SEEDDATA.YES_NO_DK_NA_Q1;
     this.yesNoDkPnta = SEEDDATA.YES_NO_DK_PNTA;
+    this.yesNoDkNa = SEEDDATA.YES_NO_DK_NA;
   }
 
   getDomainOption(typePassedIn: string) {
@@ -45,6 +47,9 @@ export class DomainOptions {
         break;
       case 'DOM_YES_NO_DK_NA_Q_1':
         result = this.yesNoDkNaQ1;
+        break;
+      case 'DOM_YES_NO_DK_NA':
+        result = this.yesNoDkNa;
         break;
       case 'DOM_EDU_LEVEL':
         result = this.eduLevel;
