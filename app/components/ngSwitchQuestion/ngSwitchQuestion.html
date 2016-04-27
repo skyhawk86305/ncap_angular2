@@ -7,6 +7,7 @@
   <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons        [question]="question"></radio-buttons></span>
   <span *ngSwitchWhen="'Date_MonthDayYear'">                  <date-month-day-year  [question]="question"></date-month-day-year></span>
   <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix               [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix               [question]="question"></matrix></span>
 
   <span *ngSwitchDefault>**Usupported answer_type: {{question.answer_type}} **</span>
 </div>
