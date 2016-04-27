@@ -20,6 +20,9 @@ export class MatrixRadioButtonsComponent implements OnInit {
 
   //@Input() ColumnHeadings: string[];
   @Input() matrixRadioButtons: MatrixElement;
+  @Input('question') question: Question;
+  options: DomainOption[];
+
 
   constructor(
     private _seedDataService: SeedDataService,
@@ -28,6 +31,12 @@ export class MatrixRadioButtonsComponent implements OnInit {
   }
 
   ngOnInit() {
+    // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup 
+    let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
+    
+    //this.matrixRadioButtons.question_id
+    
+    this.options = domainOptions.getDomainOption(this.question.answer_lookup);
   }
 
 
