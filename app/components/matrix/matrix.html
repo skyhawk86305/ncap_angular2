@@ -9,13 +9,13 @@
 
     <div class="form-group ng-scope">
         <table>
-            <thead>
+            <thead style="padding-left: 1em;border-bottom:1pt solid black;">
                 <tr>
                     <th></th>
-                    <th *ngFor="#curOption of options">{{curOption.displayed_value}}</th>
+                    <th class='mat_c_th' *ngFor="#curOption of options">{{curOption.displayed_value}}</th>
                 </tr>
             </thead>
-             <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" [matrixRadioButtons]="curMatrixElement"[question]="question" [class.matrix-odd]="odd" >
+             <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" [matrixRadioButtons]="curMatrixElement"[question]="question" [class.matrix-odd]="odd" class='border_bottom ng-scope'>
 
         </table>
     </div>
