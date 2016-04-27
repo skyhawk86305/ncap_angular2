@@ -1,19 +1,26 @@
-<!-->{{matrixElement.answer_category}}<-->
+<!-->{{matrixElement.answer_category}}-->
 
 <td *ngIf="matrixElement.answer_category === 'RadioButtons'" class='mat_q'>{{matrixElement.text}}</td>
 
 <td class="mat_c ng-scope" *ngFor="#item of options; #idx = index">
-    <input type="radio" name="{{matrixElement.question_id}}{{matrixElement.sort_order}}" 
-    value="{{item.id}}" 
-    (click)="click(matrixElement.tracking_id, item.stored_value)" 
-    [checked]="previouslySelectedStoredValue === item.stored_value">
+    <input type="radio" name="{{matrixElement.question_id}}{{matrixElement.sort_order}}" value="{{item.id}}" (click)="click(matrixElement.tracking_id, item.stored_value)" [checked]="previouslySelectedStoredValue === item.stored_value">
 </td>
 
+<td *ngIf="matrixElement.answer_category === 'Textbox_in_Matrix'" class='mat_q' colspan="5">
+    {{matrixElement.text}} <input class="form-control" type="text" width="10" placeholder="(Please indicate)" 
+    [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_id)">
+</td>
 
-<td *ngIf="matrixElement.answer_category === 'Textbox_in_Matrix'" class='mat_q'>{{matrixElement.text}}</td>
-<td *ngIf="matrixElement.answer_category === 'Textbox_in_Matrix'" class='mat_q' colspan="4"></td>
+<!--(click)="textChanged(matrixElement.tracking_id)"-->
 
+
+<!--<tr class="border_bottom ng-scope" ng-if="(options.data.other)">
+        <td class="mat_q ng-binding" colspan="5">          Other 
+        </td>
+      </tr>-->
 
 
 <!--(click)='click(question.tracking_key, item.stored_value)' 
     [checked]="previouslySelectedStoredValue === item.stored_value"-->
+    
+    
