@@ -42,14 +42,16 @@ export class PageComponent implements OnInit {
         this.getQuestionsToRender();
 
         this._applicationStateService.registerPageComponent(this);
-
-        this.that = this;
     }
 
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
         let pageId = this._applicationStateService.getCurrentPageNumber();
         this.questions = this._seedDataService.getQuestionsForPage(pageId);
+
+        // xyzzy hack, improve later
+        this.renderButtons = pageId > 2;
+
         console.log('qu count is ' + this.questions.length);
     }
 
