@@ -55,7 +55,7 @@ export class SeedDataService {
     }
 
     // == Matrix Elements ==
-    getMatrixElementForPage(question_id: number) {
+    getMatrixElementForQuestionId(question_id: number) {
         return this._matrixElements.filter(i => i.question_id === question_id);
     }
 }

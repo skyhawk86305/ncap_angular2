@@ -4,6 +4,7 @@ import { DomainOption } from   '../../../app/types/domain-option';
 import { DomainOptions } from  '../../../app/types/domain-options';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
+import { MatrixElement } from '../../../app/types/matrix-element';
 
 import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
@@ -21,6 +22,7 @@ export class MatrixComponent implements OnInit {
   options: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;
+  matrixElements: MatrixElement[];
 
   constructor(
     private _seedDataService: SeedDataService,
@@ -29,6 +31,9 @@ export class MatrixComponent implements OnInit {
   }
 
   ngOnInit() {
+    let curQuestionId = this.question.question_id;
+    this.matrixElements = this._seedDataService.getMatrixElementForQuestionId(curQuestionId);
+    
     //let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
     //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 

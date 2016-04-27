@@ -1,10 +1,11 @@
  {{question.question_text}}
 
+<BR>
+<BR>
 
-
-<!--Loop for all questions, letting ng-switch delegate the rendering-->
-<!--<div *ngFor="#curQuestionData of question" class="container ng-scope" style="max-width: 80%;margin: auto;">
-</div>-->
+<div *ngFor="#curMatrixElement of matrixElements" >
+    {{curMatrixElement.sort_order}} - {{curMatrixElement.answer_category}} - {{curMatrixElement.text}}  
+</div>
 
 
 <!--<div class="leftPadding1">
