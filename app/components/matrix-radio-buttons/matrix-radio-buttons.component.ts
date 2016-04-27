@@ -11,7 +11,7 @@ import { ApplicationStateService } from '../../../app/services/application.state
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
-  selector: '[matrixRadioButtons]',
+  selector: '[matrixElement]',
   templateUrl: 'app/components/matrix-radio-buttons/matrix-radio-buttons.html',
   directives: [TooltipComponent]
 
@@ -19,7 +19,7 @@ import { UserInput } from  '../../../app/types/user-input';
 export class MatrixRadioButtonsComponent implements OnInit {
 
   //@Input() ColumnHeadings: string[];
-  @Input() matrixRadioButtons: MatrixElement;
+  @Input() matrixElement: MatrixElement;
   @Input('question') question: Question;
   options: DomainOption[];
   previouslySelectedStoredValue: string;
@@ -38,18 +38,18 @@ export class MatrixRadioButtonsComponent implements OnInit {
     this.syncToPreviouslyEnteredData();
   }
 
-  private syncToPreviouslyEnteredData() {
-    // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.matrixRadioButtons.tracking_id);
-    if (previousUserInput) {
-      this.previouslySelectedStoredValue = previousUserInput.storedValue;
-    }
-  }
-
   click(trackingKey: string, value: string) {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
 
     this._applicationStateService.setUserInput(trackingKey, value);
+  }
+
+  private syncToPreviouslyEnteredData() {
+    // Is there previous entered User Input we need to sync to?
+    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.matrixElement.tracking_id);
+    if (previousUserInput) {
+      this.previouslySelectedStoredValue = previousUserInput.storedValue;
+    }
   }
 
 }

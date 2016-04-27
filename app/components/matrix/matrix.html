@@ -15,8 +15,8 @@
                     <th class='mat_c_th' *ngFor="#curOption of options">{{curOption.displayed_value}}</th>
                 </tr>
             </thead>
-             <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" [matrixRadioButtons]="curMatrixElement"[question]="question" [class.matrix-odd]="odd" class='border_bottom ng-scope'>
-
+             <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" 
+             [matrixElement]="curMatrixElement" [question]="question" [class.matrix-odd]="odd" class='border_bottom ng-scope'>
         </table>
     </div>
 

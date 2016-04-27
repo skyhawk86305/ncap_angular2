@@ -9,7 +9,7 @@
 
     <div class="form-group ng-scope">
         <div class="radio-group radio" *ngFor="#item of options; #idx = index">
-            <input type="radio" name="{{question.sort_order}}" value="{{item.ID}}" 
+            <input type="radio" name="{{question.sort_order}}" value="{{item.id}}" 
             (click)='click(question.tracking_key, item.stored_value)' [checked]="previouslySelectedStoredValue === item.stored_value"> {{item.displayed_value}}
         </div>
     </div>
