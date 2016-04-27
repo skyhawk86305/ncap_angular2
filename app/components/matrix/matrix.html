@@ -1,5 +1,13 @@
-<!--<div style="padding-left: 2em;">&nbsp;</div>-->
-<div class="leftPadding1">
+ {{question.question_text}}
+
+
+
+<!--Loop for all questions, letting ng-switch delegate the rendering-->
+<!--<div *ngFor="#curQuestionData of question" class="container ng-scope" style="max-width: 80%;margin: auto;">
+</div>-->
+
+
+<!--<div class="leftPadding1">
 
     <table>
         <thead style="padding-left: 1em;border-bottom:1pt solid black;">
@@ -13,7 +21,6 @@
         <tr class="border_bottom" ng-repeat="s in options.data.statements" question="{{::s.key}}" ng-class-odd="'matrix-odd'">
             <td class="mat_q"><span bind-html-compile="s.name"></span></td>
             <td class="mat_c" ng-repeat="o in options.data.choices" class="matrix" th="{{o.name}}">
-                <!--<input type="radio" name="{{s.key}}" ng-model="model[s.key]">-->
                 <input ng-if="(options.data.choiceType==undefined) ||(options.data.choiceType=='radio') " type="{{options.data.choiceType||'radio'}}" name="{{formId+'_'+ options.type+'_'+s.key+'_'+  $index}}" ncap-model="{{::s.key}}" ng-model="model[s.key]" ctl-changed="{{s.key}}"
                     ng-value="o.value">
                 <input ng-if="(options.data.choiceType=='checkbox') " name="{{::s.model}}" type="{{options.data.choiceType||'radio'}}" ncap-model="{{::s.key}}" ctl-changed="{{::s.key}}" ng-model="model[s.key]">
@@ -27,4 +34,4 @@
         </tr>
     </table>
     <div>
-        
+        -->
