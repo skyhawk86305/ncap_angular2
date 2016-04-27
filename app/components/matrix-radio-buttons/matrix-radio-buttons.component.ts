@@ -31,9 +31,13 @@ export class MatrixRadioButtonsComponent implements OnInit {
   }
 
   ngOnInit() {
-    // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup 
-    let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
-    this.options = domainOptions.getDomainOption(this.question.answer_lookup);
+    // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
+    if (this.matrixElement.answer_category === 'RadioButtons') {
+      let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
+      this.options = domainOptions.getDomainOption(this.question.answer_lookup);
+    } else {
+      this.options = new Array<DomainOption>();
+    }
 
     this.syncToPreviouslyEnteredData();
   }

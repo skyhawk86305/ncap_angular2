@@ -1,18 +1,19 @@
-<!--{{matrixElement.answer_category}}-->
+<!-->{{matrixElement.answer_category}}<-->
 
-<td *ngIf="matrixElement.answer_category === 'RadioButtons'" class='mat_q'>{{matrixElement?.text}}</td>
+<td *ngIf="matrixElement.answer_category === 'RadioButtons'" class='mat_q'>{{matrixElement.text}}</td>
 
 <td class="mat_c ng-scope" *ngFor="#item of options; #idx = index">
-    <input type="radio" 
-    name="{{matrixElement.question_id}}{{matrixElement.sort_order}}"  
+    <input type="radio" name="{{matrixElement.question_id}}{{matrixElement.sort_order}}" 
     value="{{item.id}}" 
     (click)="click(matrixElement.tracking_id, item.stored_value)" 
-    [checked]="previouslySelectedStoredValue === item.stored_value" >
+    [checked]="previouslySelectedStoredValue === item.stored_value">
 </td>
 
 
+<td *ngIf="matrixElement.answer_category === 'Textbox_in_Matrix'" class='mat_q'>{{matrixElement.text}}</td>
+<td *ngIf="matrixElement.answer_category === 'Textbox_in_Matrix'" class='mat_q' colspan="4"></td>
 
-    <!--(click)='click(question.tracking_key, item.stored_value)' 
+
+
+<!--(click)='click(question.tracking_key, item.stored_value)' 
     [checked]="previouslySelectedStoredValue === item.stored_value"-->
-
-
