@@ -11,19 +11,20 @@
 <!--Buttons-->
 <div *ngIf="renderButtons" align="center" class="navigation-buttons ng-scope">
 
-  <button type="button" class="btn btn-warning btn-lg ng-isolate-scope" (click)="exit()" confirm-ok="OK - Exit Now" confirm-cancel="Return to Survey" confirm-title="Exit Survey" confirm="If you exit the survey now you will not be able to return and finish it later.  We will not keep any information you have entered so far.  Are you sure you want to exit?"
+  <button type="button" class="btn btn-warning btn-lg ng-isolate-scope" style="outline:none" (click)="exit()" confirm-ok="OK - Exit Now" confirm-cancel="Return to Survey" confirm-title="Exit Survey" confirm="If you exit the survey now you will not be able to return and finish it later.  We will not keep any information you have entered so far.  Are you sure you want to exit?"
     nga11y-modal-closer="">
       <i class="fa fa-times"></i> Exit Survey 
       </button>
 
-  <button type="button" class="btn btn-primary btn-lg" (click)="back()" nga11y-modal-closer=""><i class="fa fa-arrow-circle-left"></i> Back
+  <button type="button" class="btn btn-primary btn-lg" style="outline:none" (click)="back()" nga11y-modal-closer=""><i class="fa fa-arrow-circle-left"></i> Back
   </button>
 
-  <button type="button" nga11y-modal-closer="" class="btn btn-primary btn-lg ng-binding" (click)="next()">
+  <button type="button" nga11y-modal-closer="" style="outline:none" class="btn btn-primary btn-lg ng-binding" (click)="next()">
       <i class="fa fa-arrow-circle-right" ng-class="{'fa-arrow-circle-right':vm.currPage!==vm.breakArr.length, 'fa-paper-plane-o':vm.currPage===vm.breakArr.length}"></i> Next
       </button>
 
 </div>
 
-<BR><BR>
+<BR>
+<BR>
 <diag></diag>

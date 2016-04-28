@@ -63,12 +63,12 @@
             </div>
             <div class="consentButtons">
                 <label class="checkbox-inline agree">
-                    <input type="checkbox" name="hasConsent" id="hasConsentY" [(ngModel)]="hasConsent">
+                    <input type="checkbox" name="hasConsent" id="hasConsentY" style="outline:none" [(ngModel)]="hasConsent">
                     I agree. Proceed to survey.
                 </label>
             </div>
             <div class="consentButtons">
-                <button ui-sref="survey.personal" class="btn btn-primary btn-lg" (click)="next()"
+                <button ui-sref="survey.personal" class="btn btn-primary btn-lg" style="outline:none"(click)="next()"
                         [disabled]="!hasConsent">
                     Next <i class="fa fa-arrow-circle-right"></i>
                 </button>
