@@ -22,7 +22,7 @@ export class MatrixRowComponent implements OnInit {
   @Input() matrixElement: MatrixElement;
   @Input('question') question: Question;
   options: DomainOption[];
-  previouslySelectedStoredValue: string;
+  previouslySelectedRadioButton: number;
   textInput: string;
 
   constructor(
@@ -40,13 +40,12 @@ export class MatrixRowComponent implements OnInit {
       this.options = domainOptions.getDomainOption(this.question.answer_lookup);
     } else {
       this.options = new Array<DomainOption>();
-      this.textInput = this.previouslySelectedStoredValue;
     }
   }
 
-  click(trackingKey: string, value: string) {
-    console.log('Clicked ' + trackingKey + ' with value ' + value);
-    this._applicationStateService.setUserInput(trackingKey, value);
+  radioButtonClick(trackingKey: string, id: number) {
+    console.log('Clicked ' + trackingKey + ' with value ' + id);
+    this._applicationStateService.setUserInput(trackingKey, id.toString());
   }
 
   textChanged(trackingKey: string) {
@@ -54,12 +53,21 @@ export class MatrixRowComponent implements OnInit {
     this._applicationStateService.setUserInput(trackingKey, this.textInput);
   }
 
-
   private syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
     let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.matrixElement.tracking_id);
+
     if (previousUserInput) {
-      this.previouslySelectedStoredValue = previousUserInput.storedValue;
+      switch (this.matrixElement.answer_category) {
+        case 'RadioButtons':
+          this.previouslySelectedRadioButton = +previousUserInput.storedValue;
+          break;
+        case 'Textbox_in_Matrix':
+          this.textInput = previousUserInput.storedValue;
+          break;
+        default:
+          throw new Error('Not yet supported :' + this.matrixElement.answer_category);
+      }
     }
   }
 
