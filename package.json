@@ -1,5 +1,5 @@
 {
-  "name": "angular2-tour-of-heroes",
+  "name": "ncap-survey",
   "version": "0.0.1",
   "scripts": {
     "postinstall": "typings install",
