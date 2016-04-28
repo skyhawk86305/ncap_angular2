@@ -26,14 +26,17 @@ export class HomeComponent implements OnInit {
 
     childclicked() {
         this.setTrackingValueAndMovePage('legalrep');
+        return false; // tell the href in the anchor tag not to fire
     }
 
     adultClicked() {
         this.setTrackingValueAndMovePage('parent');
+        return false; // tell the href in the anchor tag not to fire
     }
 
     selfClicked() {
         this.setTrackingValueAndMovePage('selfreport');
+        return false; // tell the href in the anchor tag not to fire
     }
 
     private setTrackingValueAndMovePage(selectedOption: string) {
