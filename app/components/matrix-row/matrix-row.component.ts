@@ -12,11 +12,11 @@ import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
   selector: '[matrixElement]',
-  templateUrl: 'app/components/matrix-radio-buttons/matrix-radio-buttons.html',
+  templateUrl: 'app/components/matrix-row/matrix-row.html',
   directives: [TooltipComponent]
 
 })
-export class MatrixRadioButtonsComponent implements OnInit {
+export class MatrixRowComponent implements OnInit {
 
   //@Input() ColumnHeadings: string[];
   @Input() matrixElement: MatrixElement;

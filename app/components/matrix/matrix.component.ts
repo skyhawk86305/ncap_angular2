@@ -6,8 +6,7 @@ import { Question } from       '../../../app/types/question';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { MatrixRadioButtonsComponent } from '../matrix-radio-buttons/matrix-radio-buttons.component';
-import { MatrixTextBoxComponent } from '../matrix-text-box/matrix-text-box.component';
+import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 
 import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
@@ -16,7 +15,7 @@ import { UserInput } from  '../../../app/types/user-input';
 @Component({
   selector: 'matrix',
   templateUrl: 'app/components/matrix/matrix.html',
-  directives: [TooltipComponent, MatrixRadioButtonsComponent, MatrixTextBoxComponent]
+  directives: [TooltipComponent, MatrixRowComponent]
 })
 export class MatrixComponent implements OnInit {
 
