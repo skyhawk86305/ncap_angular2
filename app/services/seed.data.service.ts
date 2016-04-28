@@ -9,7 +9,7 @@ import { Tooltip } from       '../../app/types/tooltip';
 import { TOOLTIPS } from '../../app/seed-data/json-tooltips';
 
 import { MatrixElement } from '../../app/types/matrix-element';
-import { MATRIXELEMENTS } from '../../app/seed-data/json-matrix-elements';
+import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements-json';
 
 @Injectable()
 export class SeedDataService {
@@ -31,7 +31,7 @@ export class SeedDataService {
 
         this._tooltips = TOOLTIPS;
 
-        this._matrixElements = MATRIXELEMENTS;
+        this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
     }
 
     // == Domain Options ==
@@ -57,7 +57,7 @@ export class SeedDataService {
     getMatrixElementForQuestionId(question_id: number) {
         return this._matrixElements.filter(i => i.question_id === question_id);
     }
-    
+
     //     getMatrixElement(id: number) {
     //     return this._matrixElements.filter(i => i.id === id);
     // }

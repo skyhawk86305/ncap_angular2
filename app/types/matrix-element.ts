@@ -7,4 +7,6 @@ export class MatrixElement {
     text: string;
     tracking_id: string;
     validation_type: ValidationType;
+    // Below not populated from JSON file
+    validation_result: string;
 }
