@@ -20,6 +20,7 @@ import { UserInput } from  '../../../app/types/user-input';
 export class MatrixComponent implements OnInit {
 
   @Input() question: Question;
+  @Input() showValidation: boolean = true;
   options: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;
@@ -58,6 +59,29 @@ export class MatrixComponent implements OnInit {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
 
     this._applicationStateService.setUserInput(trackingKey, value);
+  }
+
+  calculateValidatiodCSS(curMatrixElement: MatrixElement) {
+    let cssClass = '';
+
+    if (this.showValidation) {
+      let userInput: UserInput = this._applicationStateService.getUserInput(curMatrixElement.tracking_id);
+      let storedValue = userInput ? userInput.storedValue : '';
+      let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
+
+      if (!fieldPopulated) {
+        switch (curMatrixElement.validation_type) {
+          case 'REQUESTED':
+            cssClass = 'ncap-requested';
+            break;
+          case 'REQUIRED':
+            cssClass = 'ncap-required';
+            break;
+        }
+      }
+    }
+
+    return cssClass;
   }
 
   //   private addTooltipIfNecessary() {

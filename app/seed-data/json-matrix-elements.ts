@@ -42,7 +42,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Loss of language or social skills',
             'tracking_id': 'loss_lang_soc_skills',
-            'validation_type': 'REQUESTED'
+            'validation_type': 'REQUIRED'
         },
         {
             'question_id': 2010,
@@ -50,7 +50,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Poor eye contact',
             'tracking_id': 'poor_eye_contact',
-            'validation_type': 'REQUESTED'
+            'validation_type': 'OPTIONAL'
         },
         {
             'question_id': 2010,
