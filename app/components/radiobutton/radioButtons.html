@@ -1,5 +1,5 @@
 <div>
-    <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
+    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
         <span class="ng-scope">{{question.page_id}}.{{question.sort_order}} - {{question.question_text}}</span>
         <tooltip *ngIf="questionToolTipId>0" [toolTipId]="questionToolTipId"></tooltip>
     </div>
@@ -8,9 +8,8 @@
 <div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
     <div class="form-group ng-scope">
-        <div class="radio-group radio" *ngFor="#item of options; #idx = index">
-            <input type="radio" style="outline:none" name="{{question.sort_order}}" value="{{item.id}}" 
-            (click)='click(question.tracking_key, item.stored_value)' [checked]="previouslySelectedStoredValue === item.stored_value"> {{item.displayed_value}}
+        <div class="radio-group radio" *ngFor="#item of options; #idx = index" (click)='click(question.tracking_key, item.id)'>
+            <input type="radio" style="outline:none" name="{{question.sort_order}}" value="{{item.id}}" [checked]="+previouslySelectedStoredValue === item.id"> {{item.displayed_value}}
         </div>
     </div>
 

@@ -21,7 +21,7 @@ export class RadioButtonComponent implements OnInit {
   @Input() question: Question;
   options: DomainOption[];
   questionToolTipId: number = -1;
-  previouslySelectedStoredValue: string;
+  previouslySelectedStoredValue: number;
 
   constructor(
     private _router: Router,
@@ -36,13 +36,13 @@ export class RadioButtonComponent implements OnInit {
 
     this.addTooltipIfNecessary();
 
-    this.syncToPreviouslyEnteredData();
+    this._syncToPreviouslyEnteredData();
   }
 
-  click(trackingKey: string, value: string) {
-    console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
-
-    this._applicationStateService.setUserInput(trackingKey, value);
+  click(trackingKey: string, id: number) {
+    console.log('Clicked ' + trackingKey + ' with id ' + id);
+    this._applicationStateService.setUserInput(trackingKey, id.toString());
+    this._syncToPreviouslyEnteredData();
   }
 
   private addTooltipIfNecessary() {
@@ -61,11 +61,11 @@ export class RadioButtonComponent implements OnInit {
     }
   }
 
-  private syncToPreviouslyEnteredData() {
+  private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
     let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.question.tracking_key);
     if (previousUserInput) {
-      this.previouslySelectedStoredValue = previousUserInput.storedValue;
+      this.previouslySelectedStoredValue = +previousUserInput.storedValue;
     }
   }
 
