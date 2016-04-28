@@ -8,7 +8,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Babbling or pointing by age 1',
             'tracking_id': 'babble_point_1yr',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
 
         },
         {
@@ -17,7 +17,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Spoke single words by 16 months',
             'tracking_id': 'single_word_16mo',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2000,
@@ -25,7 +25,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Spoke two-word phrases by age 2',
             'tracking_id': 'two_words_2yr',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         // next Qu
         {
@@ -34,7 +34,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'No response to name',
             'tracking_id': 'no_response_to_name',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -42,7 +42,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Loss of language or social skills',
             'tracking_id': 'loss_lang_soc_skills',
-            'validation_type': 'REQUIRED'
+            'validation_type': 2
         },
         {
             'question_id': 2010,
@@ -50,7 +50,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Poor eye contact',
             'tracking_id': 'poor_eye_contact',
-            'validation_type': 'OPTIONAL'
+            'validation_type': 0
         },
         {
             'question_id': 2010,
@@ -58,7 +58,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Excessive lining up of toys or objects',
             'tracking_id': 'excess_line_up_objects',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -66,7 +66,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'No smiling or social responsiveness',
             'tracking_id': 'no_smile_soc_resp',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -74,7 +74,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Trouble making friends with peers',
             'tracking_id': 'trouble_making_friends',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -82,7 +82,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Trouble starting or maintaining a conversation with others',
             'tracking_id': 'trouble_start_maintain_convo',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
 
         {
@@ -91,7 +91,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Absence or trouble with imaginative or social play',
             'tracking_id': 'troube_imag_soc_play',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -99,7 +99,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Repetitive or unusual use of language',
             'tracking_id': 'repetitive_unusual_lang',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -107,7 +107,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Restricted patterns of interest that are unusual in intensity or focus',
             'tracking_id': 'restricted_interests',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -115,7 +115,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Preoccupation with certain objects or subjects',
             'tracking_id': 'preoccup_obj_sub',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         },
         {
             'question_id': 2010,
@@ -123,7 +123,7 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'RadioButtons',
             'text': 'Trouble adjusting to changes in specific routines or rituals',
             'tracking_id': 'trouble_adjust_changes',
-            'validation_type': 'REQUESTED'
+            'validation_type': 1
         }
         ,
         {
@@ -132,6 +132,6 @@ export var MATRIXELEMENTS: MatrixElement[] =
             'answer_category': 'Textbox_in_Matrix',
             'text': 'Other',
             'tracking_id': 'other_verbal_social_problem',
-            'validation_type': 'OPTIONAL'
+            'validation_type': 0
         }]
     ;

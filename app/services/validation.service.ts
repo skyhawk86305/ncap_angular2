@@ -3,8 +3,9 @@ import { Injectable } from 'angular2/core';
 import { UserInput } from  '../../app/types/user-input';
 
 import { MatrixElement } from '../../app/types/matrix-element';
-import { MATRIXELEMENTS } from '../../app/seed-data/json-matrix-elements';
+//import { MATRIXELEMENTS } from '../../app/seed-data/json-matrix-elements';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
+import { ValidationType } from '../../app/types/enums/validation-type.enum';
 
 import { ApplicationStateService } from '../../app/services/application.state.service';
 import { SeedDataService } from '../../app/services/seed.data.service';
@@ -38,7 +39,7 @@ export class ValidationService {
     validateMatrixRow(matrixElement: MatrixElement): ValidationResult {
         let result: ValidationResult;
 
-        if (matrixElement.validation_type = 'OPTIONAL') {
+        if (matrixElement.validation_type === ValidationType.optional) {
             result = ValidationResult.ok;
         } else {
             let userInput: UserInput = this._applicationStateService.getUserInput(matrixElement.tracking_id);
@@ -47,7 +48,7 @@ export class ValidationService {
             if (populated) {
                 result = ValidationResult.ok;
             } else {
-                result = (matrixElement.validation_type === 'REQUESTED') ?
+                result = (matrixElement.validation_type === ValidationType.requested) ?
                     ValidationResult.RequestedMissing : ValidationResult.RequiredMissing;
             }
         }

@@ -58,8 +58,8 @@ export class SeedDataService {
         return this._matrixElements.filter(i => i.question_id === question_id);
     }
     
-        getMatrixElement(id: number) {
-        return this._matrixElements.filter(i => i.id === id);
-    }
+    //     getMatrixElement(id: number) {
+    //     return this._matrixElements.filter(i => i.id === id);
+    // }
 
 }

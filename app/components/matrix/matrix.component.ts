@@ -11,6 +11,7 @@ import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { UserInput } from  '../../../app/types/user-input';
+import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 
 @Component({
   selector: 'matrix',
@@ -71,10 +72,10 @@ export class MatrixComponent implements OnInit {
 
       if (!fieldPopulated) {
         switch (curMatrixElement.validation_type) {
-          case 'REQUESTED':
+          case ValidationType.requested:
             cssClass = 'ncap-requested';
             break;
-          case 'REQUIRED':
+          case ValidationType.required:
             cssClass = 'ncap-required';
             break;
         }
