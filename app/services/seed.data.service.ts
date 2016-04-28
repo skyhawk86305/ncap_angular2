@@ -11,7 +11,6 @@ import { TOOLTIPS } from '../../app/seed-data/json-tooltips';
 import { MatrixElement } from '../../app/types/matrix-element';
 import { MATRIXELEMENTS } from '../../app/seed-data/json-matrix-elements';
 
-
 @Injectable()
 export class SeedDataService {
     private _domainOptions: DomainOptions;
@@ -58,4 +57,9 @@ export class SeedDataService {
     getMatrixElementForQuestionId(question_id: number) {
         return this._matrixElements.filter(i => i.question_id === question_id);
     }
+    
+        getMatrixElement(id: number) {
+        return this._matrixElements.filter(i => i.id === id);
+    }
+
 }
