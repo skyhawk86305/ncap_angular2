@@ -6,10 +6,10 @@ import { Question } from       '../../app/types/question';
 import { QUESTIONS } from '../../app/seed-data/json-questions';
 
 import { Tooltip } from       '../../app/types/tooltip';
-import { TOOLTIPS } from '../../app/seed-data/json-tooltips';
+import { TOOLTIPS_JSON } from '../../app/seed-data/tooltips.json';
 
 import { MatrixElement } from '../../app/types/matrix-element';
-import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements-json';
+import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
 @Injectable()
 export class SeedDataService {
@@ -29,8 +29,7 @@ export class SeedDataService {
 
         this._questions = QUESTIONS;
 
-        this._tooltips = TOOLTIPS;
-
+        this._tooltips = JSON.parse(TOOLTIPS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
     }
 
