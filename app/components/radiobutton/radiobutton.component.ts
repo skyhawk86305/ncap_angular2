@@ -8,6 +8,8 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
+import { UserInputService } from '../../../app/services/user.input.service';
+
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
@@ -26,7 +28,8 @@ export class RadioButtonComponent implements OnInit {
   constructor(
     private _router: Router,
     private _seedDataService: SeedDataService,
-    private _applicationStateService: ApplicationStateService
+    private _applicationStateService: ApplicationStateService,
+    private _userInputService: UserInputService
   ) {
   }
 
@@ -41,7 +44,7 @@ export class RadioButtonComponent implements OnInit {
 
   click(trackingKey: string, id: number) {
     console.log('Clicked ' + trackingKey + ' with id ' + id);
-    this._applicationStateService.setUserInput(trackingKey, id.toString());
+    this._userInputService.setUserInput(trackingKey, id.toString());
     this._syncToPreviouslyEnteredData();
   }
 
@@ -63,7 +66,7 @@ export class RadioButtonComponent implements OnInit {
 
   private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.question.tracking_key);
+    let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
     if (previousUserInput) {
       this.previouslySelectedStoredValue = +previousUserInput.storedValue;
     }

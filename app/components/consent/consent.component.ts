@@ -3,6 +3,8 @@ import { Router } from 'angular2/router';
 
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { SeedDataService } from '../../../app/services/seed.data.service';
+import { UserInputService } from '../../../app/services/user.input.service';
+
 import { Question } from       '../../../app/types/question';
 import { UserInput } from  '../../../app/types/user-input';
 
@@ -18,12 +20,13 @@ export class ConsentComponent implements OnInit {
     constructor(
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
+        private _userInputService: UserInputService,
         private _seedDataService: SeedDataService
     ) {
     }
 
     ngOnInit() {
-        let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.question.tracking_key);
+        let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
         if (previousUserInput) {
             this.hasConsent = (previousUserInput.storedValue === 'Y');
         }
@@ -31,7 +34,7 @@ export class ConsentComponent implements OnInit {
 
     next() {
         console.log('Clicked next');
-        this._applicationStateService.setUserInput('initial_consent', 'Y');
+        this._userInputService.setUserInput('initial_consent', 'Y');
         this._applicationStateService.next();
     }
 

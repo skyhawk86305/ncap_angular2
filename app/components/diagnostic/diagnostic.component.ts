@@ -10,6 +10,7 @@ import { Question } from  '../../../app/types/question';
 
 import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
+import { UserInputService } from '../../../app/services/user.input.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
@@ -35,13 +36,14 @@ export class DiagnosticComponent implements OnInit {
         private _router: Router,
         private _seedDataService: SeedDataService,
         private _applicationStateService: ApplicationStateService,
+        private _userInputService: UserInputService,
         private _routeParams: RouteParams
     ) {
     }
 
     ngOnInit() {
         //        let text = prettyjson.render(this._applicationStateService);
-        this.userInputMap = this._applicationStateService.getAllUserInput();
+        this.userInputMap = this._userInputService.getAllUserInput();
         this.userInputMapJson = JSON.stringify(this.userInputMap);
         this.applicationStateService = this._applicationStateService;
     }

@@ -1,27 +1,22 @@
-import { Component, Input, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
+import { Component, Input } from 'angular2/core';
 
 import { ApplicationStateService } from '../../../app/services/application.state.service';
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { UserInputService } from '../../../app/services/user.input.service';
+
 import { Question } from       '../../../app/types/question';
 
 @Component({
     selector: 'home',
     templateUrl: 'app/components/home/home.html'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   @Input() question: Question;
 
     constructor(
-        private _router: Router,
         private _applicationStateService: ApplicationStateService,
-        private _seedDataService: SeedDataService
+        private _userInputService: UserInputService
     ) {
-    }
-
-    ngOnInit() {
-        //xyzzy
     }
 
     childclicked() {
@@ -40,7 +35,7 @@ export class HomeComponent implements OnInit {
     }
 
     private setTrackingValueAndMovePage(selectedOption: string) {
-        this._applicationStateService.setUserInput('respondent_type', selectedOption);
+        this._userInputService.setUserInput('respondent_type', selectedOption);
         this._applicationStateService.next();
     }
 }

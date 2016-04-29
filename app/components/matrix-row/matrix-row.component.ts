@@ -8,6 +8,8 @@ import { MatrixElement } from '../../../app/types/matrix-element';
 
 import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
+import { UserInputService } from '../../../app/services/user.input.service';
+
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
@@ -27,7 +29,8 @@ export class MatrixRowComponent implements OnInit {
 
   constructor(
     private _seedDataService: SeedDataService,
-    private _applicationStateService: ApplicationStateService
+    private _applicationStateService: ApplicationStateService,
+    private _userInputService: UserInputService
   ) {
   }
 
@@ -45,17 +48,17 @@ export class MatrixRowComponent implements OnInit {
 
   radioButtonClick(trackingKey: string, id: number) {
     console.log('Clicked ' + trackingKey + ' with value ' + id);
-    this._applicationStateService.setUserInput(trackingKey, id.toString());
+    this._userInputService.setUserInput(trackingKey, id.toString());
   }
 
   textChanged(trackingKey: string) {
     console.log('Changed ' + trackingKey + ' with value ' + this.textInput);
-    this._applicationStateService.setUserInput(trackingKey, this.textInput);
+    this._userInputService.setUserInput(trackingKey, this.textInput);
   }
 
   private syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.matrixElement.tracking_key);
+    let previousUserInput: UserInput = this._userInputService.getUserInput(this.matrixElement.tracking_key);
 
     if (previousUserInput) {
       switch (this.matrixElement.answer_category) {

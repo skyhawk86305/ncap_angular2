@@ -10,6 +10,8 @@ import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 
 import { SeedDataService } from '../../../app/services/seed.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
+import { UserInputService } from '../../../app/services/user.input.service';
+
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 
@@ -30,7 +32,8 @@ export class MatrixComponent implements OnInit {
 
   constructor(
     private _seedDataService: SeedDataService,
-    private _applicationStateService: ApplicationStateService
+    private _applicationStateService: ApplicationStateService,
+    private _userInputService: UserInputService
   ) {
   }
 
@@ -59,14 +62,14 @@ export class MatrixComponent implements OnInit {
   click(trackingKey: string, value: string) {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
 
-    this._applicationStateService.setUserInput(trackingKey, value);
+    this._userInputService.setUserInput(trackingKey, value);
   }
 
   calculateValidatiodCSS(curMatrixElement: MatrixElement) {
     let cssClass = '';
 
     if (this.showValidation) {
-      let userInput: UserInput = this._applicationStateService.getUserInput(curMatrixElement.tracking_key);
+      let userInput: UserInput = this._userInputService.getUserInput(curMatrixElement.tracking_key);
       let storedValue = userInput ? userInput.storedValue : '';
       let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
 
