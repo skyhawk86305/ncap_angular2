@@ -13,7 +13,7 @@ import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 
-// import { ValidationService } from './validation.service';
+import { ValidationService } from './validation.service';
 
 @Injectable()
 export class SeedDataService {
@@ -22,8 +22,9 @@ export class SeedDataService {
     private _tooltips: Tooltip[];
     private _matrixElements: MatrixElement[];
 
-    constructor(){
-        // (private _validationService: ValidationService) {
+    constructor(
+        private _validationService: ValidationService
+    ) {
         this.init();
     }
 
@@ -33,10 +34,6 @@ export class SeedDataService {
         this._domainOptions.populateWithData();
 
         this._questions = JSON.parse(QUESTIONS_JSON);
-        // console.log(this._questions[3].validation_result);
-        // this._validationService.validateQuestion(this._questions[3]);
-        // console.log(this._questions[3].validation_result);
-
         this._tooltips = JSON.parse(TOOLTIPS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
     }

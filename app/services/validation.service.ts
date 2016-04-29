@@ -53,7 +53,6 @@ export class ValidationService {
         question.validation_result = result;
     }
 
-
     validateMatrixElement(matrixElement: MatrixElement) {
         let result: ValidationResult;
 

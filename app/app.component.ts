@@ -8,6 +8,7 @@ import { DiagnosticComponent } from './components/diagnostic/diagnostic.componen
 import { ApplicationStateService } from '../app/services/application.state.service';
 import { SeedDataService } from '../app/services/seed.data.service';
 import { UserInputService } from '../app/services/user.input.service';
+import { ValidationService } from '../app/services/validation.service';
 
 @Component({
   selector: 'the-app',
@@ -19,7 +20,8 @@ import { UserInputService } from '../app/services/user.input.service';
     ROUTER_PROVIDERS,
     SeedDataService,
     ApplicationStateService,
-    UserInputService
+    UserInputService,
+    ValidationService
   ]
 })
 @RouteConfig([
