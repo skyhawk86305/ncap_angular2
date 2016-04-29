@@ -43,10 +43,6 @@ export class PageComponent implements OnInit {
 
         this.getQuestionsToRender();
 
-        // console.log(this.questions[0].validation_result);
-        // this._validationService.validateQuestion(this.questions[0]);
-        // console.log(this.questions[0].validation_result);
-
         this._applicationStateService.registerPageComponent(this);
     }
 
@@ -57,6 +53,10 @@ export class PageComponent implements OnInit {
 
         // xyzzy hack, improve later
         this.renderButtons = pageId > 2;
+
+        for (let curQuestion of this.questions) {
+            this._validationService.validateQuestion(curQuestion);
+        }
 
         console.log('qu count is ' + this.questions.length);
     }

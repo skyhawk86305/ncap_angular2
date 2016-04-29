@@ -17,8 +17,6 @@ import { LoadJsonDataService } from '../../app/services/load.json.data.service';
 export class ValidationService {
 
     constructor(
-        private _applicationStateService: ApplicationStateService,
-        private _loadJsonDataService: LoadJsonDataService,
         private _userInputService: UserInputService
     ) {
     }
@@ -73,5 +71,3 @@ export class ValidationService {
         matrixElement.validation_result = result;
     }
 }
-
-

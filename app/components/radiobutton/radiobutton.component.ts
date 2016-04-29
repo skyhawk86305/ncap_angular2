@@ -12,6 +12,8 @@ import { UserInputService } from '../../../app/services/user.input.service';
 
 import { UserInput } from  '../../../app/types/user-input';
 
+import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+
 @Component({
   selector: 'radio-buttons',
   templateUrl: 'app/components/radiobutton/radioButtons.html',
@@ -24,6 +26,9 @@ export class RadioButtonComponent implements OnInit {
   options: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: number;
+
+  // Permit view to use the enumeration type
+  ValidationResult = ValidationResult;
 
   constructor(
     private _router: Router,
@@ -46,6 +51,9 @@ export class RadioButtonComponent implements OnInit {
     console.log('Clicked ' + trackingKey + ' with id ' + id);
     this._userInputService.setUserInput(trackingKey, id.toString());
     this._syncToPreviouslyEnteredData();
+    
+    // Ask Page Control to re-validate for everything on the page
+    this._applicationStateService.requestPagecontrolRevalidate();
   }
 
   private addTooltipIfNecessary() {

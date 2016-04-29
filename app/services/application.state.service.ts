@@ -20,7 +20,7 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        this._currentPageNumber = 25;
+        this._currentPageNumber = 3;
     }
 
     registerPageComponent(pageComponent: PageComponent) {
@@ -49,6 +49,11 @@ export class ApplicationStateService {
 
     back() {
         this._currentPageNumber--;
+        this._pageComponent.getQuestionsToRender();
+    }
+
+    requestPagecontrolRevalidate() {
+        // xyzzy this may not be particualr efficient. Maybe tune later?
         this._pageComponent.getQuestionsToRender();
     }
 }
