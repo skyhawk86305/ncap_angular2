@@ -3,6 +3,7 @@ import { Router } from 'angular2/router';
 import { RouteParams } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
+import { ValidationResult } from  '../../../app/types/enums/validation-result.enum';
 
 import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 
@@ -54,23 +55,41 @@ export class PageComponent implements OnInit {
         // xyzzy hack, improve later
         this.renderButtons = pageId > 2;
 
+        console.log('qu count is ' + this.questions.length);
+    }
+
+    runValidationOnCurrentQuestions(): ValidationResult {
+        let aggregateResult: ValidationResult = ValidationResult.ok;
+
         for (let curQuestion of this.questions) {
             this._validationService.validateQuestion(curQuestion);
+
+            if (curQuestion.validation_result > aggregateResult) {
+                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on teh int values of the enum
+            }
         }
 
-        console.log('qu count is ' + this.questions.length);
+        return aggregateResult;
     }
 
     next() {
         console.log('Clicked next');
-        this._applicationStateService.next();
-        this.getQuestionsToRender();
+
+        let aggregateResult: ValidationResult = this.runValidationOnCurrentQuestions();
+
+        if (aggregateResult === ValidationResult.ok) {
+            this._applicationStateService.next();
+        } else {
+            for (let curQuestion of this.questions) {
+                curQuestion.show_validation = true;
+            }
+        }
+
     }
 
     back() {
         console.log('Clicked back');
         this._applicationStateService.back();
-        this.getQuestionsToRender();
     }
 
     exit() {

@@ -42,7 +42,7 @@ export class ValidationService {
                 result = ValidationResult.ok;
             } else {
                 result = (question.validation_type === ValidationType.requested) ?
-                    ValidationResult.RequestedMissing : ValidationResult.RequiredMissing;
+                    ValidationResult.requested : ValidationResult.required;
             }
         }
 
@@ -64,7 +64,7 @@ export class ValidationService {
                 result = ValidationResult.ok;
             } else {
                 result = (matrixElement.validation_type === ValidationType.requested) ?
-                    ValidationResult.RequestedMissing : ValidationResult.RequiredMissing;
+                    ValidationResult.requested : ValidationResult.required;
             }
         }
 

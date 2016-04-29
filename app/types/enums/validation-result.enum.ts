@@ -1,5 +1,5 @@
 export enum ValidationResult {
     ok = 0,
-    RequestedMissing = 1,
-    RequiredMissing = 2
+    requested = 1,
+    required = 2
 }

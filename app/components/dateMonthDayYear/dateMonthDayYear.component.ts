@@ -1,24 +1,21 @@
-import { Component, Input, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
+import { Component, Input } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { DomainOptions } from  '../../../app/types/domain-options';
 import { Question } from       '../../../app/types/question';
 
-import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
+import { UserInputService } from '../../../app/services/user.input.service';
 
 @Component({
   selector: 'date-month-day-year',
   templateUrl: 'app/components/dateMonthDayYear/dateMonthDayYear.html'
 })
-export class DayMonthYearComponent implements OnInit {
+export class DayMonthYearComponent {
 
   @Input() question: Question;
   options: DomainOption[];
 
   constructor(
-    private _router: Router,
-    private _loadJsonDataService: LoadJsonDataService
+    private _userInputService: UserInputService
   ) {
   }
 
@@ -33,6 +30,8 @@ export class DayMonthYearComponent implements OnInit {
     this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '**TT');
     this.question.question_text = this.question.question_text.replace(/".>/i, '');
 
+// xyzzy Hack to pas validation until this control is built out
+    this._userInputService.setUserInput(this.question.tracking_key, 'xyzzy');
 
     //<tooltip id="7"/>
 
