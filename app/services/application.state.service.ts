@@ -1,10 +1,8 @@
 import { Injectable } from 'angular2/core';
 
-import { UserInput } from  '../../app/types/user-input';
-
 import { UserInputService } from '../../app/services/user.input.service';
 
-import { PageComponent } from  '../../app/components/page/page.component';
+import { PageControllerComponent } from  '../../app/components/page.controller/page.controller.component';
 
 @Injectable()
 export class ApplicationStateService {
@@ -13,7 +11,7 @@ export class ApplicationStateService {
 
     private _currentPageNumber: number;
     private _totalPages: number;
-    private _pageComponent: PageComponent;
+    private _pageControllerComponent: PageControllerComponent;
 
     constructor(
         private _userInputService: UserInputService
@@ -25,8 +23,8 @@ export class ApplicationStateService {
         this._currentPageNumber = 3;
     }
 
-    registerPageComponent(pageComponent: PageComponent) {
-        this._pageComponent = pageComponent;
+    registerPageControllerComponent(pageControllerComponent: PageControllerComponent) {
+        this._pageControllerComponent = pageControllerComponent;
     };
 
     getCurrentPageNumber() {
@@ -46,17 +44,17 @@ export class ApplicationStateService {
 
     next() {
         this._currentPageNumber++;
-        this._pageComponent.getQuestionsToRender();
+        this._pageControllerComponent.getQuestionsToRender();
     }
 
     back() {
         this._currentPageNumber--;
-        this._pageComponent.getQuestionsToRender();
+        this._pageControllerComponent.getQuestionsToRender();
     }
 
     requestPagecontrolRevalidate() {
         // xyzzy this may not be particualr efficient. Maybe tune later?
-        this._pageComponent.runValidationOnCurrentQuestions();
+        this._pageControllerComponent.runValidationOnCurrentQuestions();
     }
 }
 

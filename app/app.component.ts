@@ -1,7 +1,7 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { PageComponent } from './components/page/page.component';
+import { PageControllerComponent } from './components/page.controller/page.controller.component';
 import { AllPagesComponent } from './components/allPages/allPages.component';
 import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 
@@ -28,14 +28,14 @@ import { ValidationService } from '../app/services/validation.service';
   {
     path: '/',
     name: 'Home',
-    component: PageComponent,
+    component: PageControllerComponent,
     useAsDefault: true
   }
   ,
   {
     path: '/page/:pageId',
     name: 'Home',
-    component: PageComponent
+    component: PageControllerComponent
   },
   {
     path: '/all',

@@ -17,14 +17,14 @@ import { ValidationService } from '../../../app/services/validation.service';
 
 @Component({
     selector: 'page',
-    templateUrl: 'app/components/page/page.html',
+    templateUrl: 'app/components/page.controller/page.controller.html',
     directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent, DiagnosticComponent]
 })
-export class PageComponent implements OnInit {
+export class PageControllerComponent implements OnInit {
 
     questions: Question[];
     renderButtons: boolean = true;
-    that: PageComponent;
+    that: PageControllerComponent;
 
     constructor(
         private _router: Router,
@@ -44,7 +44,7 @@ export class PageComponent implements OnInit {
 
         this.getQuestionsToRender();
 
-        this._applicationStateService.registerPageComponent(this);
+        this._applicationStateService.registerPageControllerComponent(this);
     }
 
     getQuestionsToRender() {
