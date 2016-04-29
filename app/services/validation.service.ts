@@ -3,6 +3,8 @@ import { Injectable } from 'angular2/core';
 import { UserInput } from  '../../app/types/user-input';
 
 import { MatrixElement } from '../../app/types/matrix-element';
+import { Question } from '../../app/types/question';
+
 //import { MATRIXELEMENTS } from '../../app/seed-data/json-matrix-elements';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
@@ -16,7 +18,6 @@ export class ValidationService {
     constructor(
         private _applicationStateService: ApplicationStateService,
         private _seedDataService: SeedDataService
-
     ) {
     }
 
@@ -28,15 +29,30 @@ export class ValidationService {
         return result;
     }
 
-    validateQuestion(questionId: number): boolean {
-        let result = false;
+    validateQuestion(question: Question) {
+        let result: ValidationResult;
 
-        // If a matrix question iterate through all rows
+        if (question.validation_type === ValidationType.optional) {
+            result = ValidationResult.ok;
+        } else {
+            let userInput: UserInput = this._applicationStateService.getUserInput(question.tracking_key);
+            let storedValue = userInput ? userInput.storedValue : '';
+            let populated = storedValue !== null && storedValue.length > 0;
+            if (populated) {
+                result = ValidationResult.ok;
+            } else {
+                result = (question.validation_type === ValidationType.requested) ?
+                    ValidationResult.RequestedMissing : ValidationResult.RequiredMissing;
+            }
+        }
 
-        return result;
+        // xyzzy5 cater for Matrix types 
+
+        question.validation_result = result;
     }
 
-    validateMatrixRow(matrixElement: MatrixElement): ValidationResult {
+
+    validateMatrixElement(matrixElement: MatrixElement) {
         let result: ValidationResult;
 
         if (matrixElement.validation_type === ValidationType.optional) {
@@ -53,8 +69,8 @@ export class ValidationService {
             }
         }
 
-        return result;
+        matrixElement.validation_result = result;
     }
-
-
 }
+
+
