@@ -8,7 +8,7 @@ import { RouteParams } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { UserInputService } from '../../../app/services/user.input.service';
 
@@ -34,7 +34,7 @@ export class DiagnosticComponent implements OnInit {
 
     constructor(
         private _router: Router,
-        private _seedDataService: SeedDataService,
+        private _loadJsonDataService: LoadJsonDataService,
         private _applicationStateService: ApplicationStateService,
         private _userInputService: UserInputService,
         private _routeParams: RouteParams

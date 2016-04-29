@@ -5,7 +5,7 @@ import { DomainOption } from   '../../../app/types/domain-option';
 import { DomainOptions } from  '../../../app/types/domain-options';
 import { Question } from       '../../../app/types/question';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 
 @Component({
   selector: 'date-month-day-year',
@@ -18,12 +18,12 @@ export class DayMonthYearComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _seedDataService: SeedDataService
+    private _loadJsonDataService: LoadJsonDataService
   ) {
   }
 
   ngOnInit() {
-    //let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
+    //let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 
     //xyzzy Temporarily remove all references to tooltip

@@ -3,7 +3,7 @@ import { Router } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
@@ -21,11 +21,11 @@ export class AllPagesComponent implements OnInit {
 
     constructor(
         private _router: Router,
-        private _seedDataService: SeedDataService
+        private _loadJsonDataService: LoadJsonDataService
     ) {
     }
 
     ngOnInit() {
-        this.questions = this._seedDataService.getQuestions();
+        this.questions = this._loadJsonDataService.getQuestions();
     }
 }

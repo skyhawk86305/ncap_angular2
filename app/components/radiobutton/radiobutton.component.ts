@@ -6,7 +6,7 @@ import { DomainOptions } from  '../../../app/types/domain-options';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { UserInputService } from '../../../app/services/user.input.service';
 
@@ -27,14 +27,14 @@ export class RadioButtonComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _seedDataService: SeedDataService,
+    private _loadJsonDataService: LoadJsonDataService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
   }
 
   ngOnInit() {
-    let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
+    let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 
     this.addTooltipIfNecessary();

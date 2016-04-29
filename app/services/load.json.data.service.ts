@@ -16,7 +16,7 @@ import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationService } from './validation.service';
 
 @Injectable()
-export class SeedDataService {
+export class LoadJsonDataService {
     private _domainOptions: DomainOptions;
     private _questions: Question[];
     private _tooltips: Tooltip[];

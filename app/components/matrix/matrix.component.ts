@@ -8,7 +8,7 @@ import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { UserInputService } from '../../../app/services/user.input.service';
 
@@ -31,7 +31,7 @@ export class MatrixComponent implements OnInit {
   columnHeadings: string[];
 
   constructor(
-    private _seedDataService: SeedDataService,
+    private _loadJsonDataService: LoadJsonDataService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
@@ -39,9 +39,9 @@ export class MatrixComponent implements OnInit {
 
   ngOnInit() {
     let curQuestionId = this.question.question_id;
-    this.matrixElements = this._seedDataService.getMatrixElementForQuestionId(curQuestionId);
+    this.matrixElements = this._loadJsonDataService.getMatrixElementForQuestionId(curQuestionId);
 
-    let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
+    let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 
     //this.question.answer_type;
@@ -51,7 +51,7 @@ export class MatrixComponent implements OnInit {
     //columnHeadings
 
 
-    //let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
+    //let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 
     //this.addTooltipIfNecessary();

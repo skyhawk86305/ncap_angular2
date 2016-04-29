@@ -6,7 +6,7 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { UserInputService } from '../../../app/services/user.input.service';
 
@@ -28,7 +28,7 @@ export class MatrixRowComponent implements OnInit {
   textInput: string;
 
   constructor(
-    private _seedDataService: SeedDataService,
+    private _loadJsonDataService: LoadJsonDataService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
@@ -39,7 +39,7 @@ export class MatrixRowComponent implements OnInit {
 
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     if (this.matrixElement.answer_category === 'RadioButtons') {
-      let domainOptions: DomainOptions = this._seedDataService.getDomainOptions();
+      let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
       this.options = domainOptions.getDomainOption(this.question.answer_lookup);
     } else {
       this.options = new Array<DomainOption>();

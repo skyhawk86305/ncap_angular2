@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
 import { ApplicationStateService } from '../../../app/services/application.state.service';
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 import { UserInputService } from '../../../app/services/user.input.service';
 
 import { Question } from       '../../../app/types/question';
@@ -21,7 +21,7 @@ export class ConsentComponent implements OnInit {
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
         private _userInputService: UserInputService,
-        private _seedDataService: SeedDataService
+        private _loadJsonDataService: LoadJsonDataService
     ) {
     }
 

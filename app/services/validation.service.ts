@@ -11,14 +11,14 @@ import { ValidationType } from '../../app/types/enums/validation-type.enum';
 
 import { ApplicationStateService } from '../../app/services/application.state.service';
 import { UserInputService } from '../../app/services/user.input.service';
-import { SeedDataService } from '../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../app/services/load.json.data.service';
 
 @Injectable()
 export class ValidationService {
 
     constructor(
         private _applicationStateService: ApplicationStateService,
-        private _seedDataService: SeedDataService,
+        private _loadJsonDataService: LoadJsonDataService,
         private _userInputService: UserInputService
     ) {
     }

@@ -4,7 +4,7 @@ import { RouteParams } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 
 import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
 import { HomeComponent } from '../home/home.component';
@@ -28,7 +28,7 @@ export class PageComponent implements OnInit {
     constructor(
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
-        private _seedDataService: SeedDataService,
+        private _loadJsonDataService: LoadJsonDataService,
         private _validationService: ValidationService,
         private _routeParams: RouteParams
     ) {
@@ -53,7 +53,7 @@ export class PageComponent implements OnInit {
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
         let pageId = this._applicationStateService.getCurrentPageNumber();
-        this.questions = this._seedDataService.getQuestionsForPage(pageId);
+        this.questions = this._loadJsonDataService.getQuestionsForPage(pageId);
 
         // xyzzy hack, improve later
         this.renderButtons = pageId > 2;

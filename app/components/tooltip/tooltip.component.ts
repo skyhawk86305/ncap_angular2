@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Router } from 'angular2/router';
 
-import { SeedDataService } from '../../../app/services/seed.data.service';
+import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 import { Tooltip } from       '../../../app/types/tooltip';
 
 @Component({
@@ -17,12 +17,12 @@ export class TooltipComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _seedDataService: SeedDataService
+    private _loadJsonDataService: LoadJsonDataService
   ) {
   }
 
   ngOnInit() {
-    let tooltip: Tooltip = this._seedDataService.getTooltipForId(this.toolTipId);
+    let tooltip: Tooltip = this._loadJsonDataService.getTooltipForId(this.toolTipId);
     this.tooltipText = tooltip.definition;
   }
 

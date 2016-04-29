@@ -6,7 +6,7 @@ import { AllPagesComponent } from './components/allPages/allPages.component';
 import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 
 import { ApplicationStateService } from '../app/services/application.state.service';
-import { SeedDataService } from '../app/services/seed.data.service';
+import { LoadJsonDataService } from '../app/services/load.json.data.service';
 import { UserInputService } from '../app/services/user.input.service';
 import { ValidationService } from '../app/services/validation.service';
 
@@ -18,7 +18,7 @@ import { ValidationService } from '../app/services/validation.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    SeedDataService,
+    LoadJsonDataService,
     ApplicationStateService,
     UserInputService,
     ValidationService
