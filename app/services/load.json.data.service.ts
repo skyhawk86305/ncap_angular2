@@ -1,17 +1,13 @@
 import { Injectable } from 'angular2/core';
 
 import { DomainOptions } from  '../../app/types/domain-options';
-
-import { Question } from       '../../app/types/question';
-import { QUESTIONS_JSON } from '../../app/seed-data/questions.json';
-
-import { Tooltip } from       '../../app/types/tooltip';
-import { TOOLTIPS_JSON } from '../../app/seed-data/tooltips.json';
-
 import { MatrixElement } from '../../app/types/matrix-element';
-import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
+import { Question } from       '../../app/types/question';
+import { Tooltip } from       '../../app/types/tooltip';
 
-import { ValidationResult } from '../../app/types/enums/validation-result.enum';
+import { QUESTIONS_JSON } from '../../app/seed-data/questions.json';
+import { TOOLTIPS_JSON } from '../../app/seed-data/tooltips.json';
+import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
 import { ValidationService } from './validation.service';
 
@@ -38,12 +34,10 @@ export class LoadJsonDataService {
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
     }
 
-    // == Domain Options ==
     getDomainOptions() {
         return this._domainOptions;
     }
 
-    // == Questions ==
     getQuestions() {
         return this._questions;
     }
@@ -52,13 +46,11 @@ export class LoadJsonDataService {
         return this._questions.filter(i => i.page_id === page_Id);
     }
 
-    // == Tooltips ==
     getTooltipForId(id: number) {
         return this._tooltips.find(i => i.id === id);
     }
 
-    // == Matrix Elements ==
-    getMatrixElementForQuestionId(question_id: number) {
+    getMatrixElementsForQuestionId(question_id: number): MatrixElement[] {
         return this._matrixElements.filter(i => i.question_id === question_id);
     }
 

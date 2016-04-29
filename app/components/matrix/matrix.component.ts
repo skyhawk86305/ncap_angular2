@@ -39,7 +39,7 @@ export class MatrixComponent implements OnInit {
 
   ngOnInit() {
     let curQuestionId = this.question.question_id;
-    this.matrixElements = this._loadJsonDataService.getMatrixElementForQuestionId(curQuestionId);
+    this.matrixElements = this._loadJsonDataService.getMatrixElementsForQuestionId(curQuestionId);
 
     let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);

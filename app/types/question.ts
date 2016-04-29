@@ -12,6 +12,7 @@ export class Question {
   answer_lookup_id: number;
   answer_lookup: string;
   tracking_key: string;
+
   // Below not populated from JSON file
   validation_result: ValidationResult;
   show_validation: boolean;

@@ -1,17 +1,13 @@
 import { Injectable } from 'angular2/core';
 
-import { UserInput } from  '../../app/types/user-input';
-
 import { MatrixElement } from '../../app/types/matrix-element';
 import { Question } from '../../app/types/question';
+import { UserInput } from  '../../app/types/user-input';
 
-//import { MATRIXELEMENTS } from '../../app/seed-data/json-matrix-elements';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 
-import { ApplicationStateService } from '../../app/services/application.state.service';
 import { UserInputService } from '../../app/services/user.input.service';
-import { LoadJsonDataService } from '../../app/services/load.json.data.service';
 
 @Injectable()
 export class ValidationService {
@@ -21,10 +17,11 @@ export class ValidationService {
     ) {
     }
 
-    validatePage(pageId: number): boolean {
-        let result = false;
+    validatePage(pageId: number): ValidationResult {
+        let result: ValidationResult;
 
         // Find questions and interate through
+        // xyzzy5
 
         return result;
     }

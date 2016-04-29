@@ -53,7 +53,7 @@ export class ApplicationStateService {
     }
 
     requestPagecontrolRevalidate() {
-        // xyzzy this may not be particualr efficient. Maybe tune later?
+        // xyzzy This may not be efficient. Maybe tune later?
         this._pageControllerComponent.runValidationOnCurrentQuestions();
     }
 }

@@ -8,6 +8,7 @@ export class MatrixElement {
     text: string;
     tracking_key: string;
     validation_type: ValidationType;
+
     // Below not populated from JSON file
     validation_result: ValidationResult;
 }

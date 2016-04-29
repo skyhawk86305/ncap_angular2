@@ -30,16 +30,20 @@ import { ValidationService } from '../app/services/validation.service';
     name: 'Home',
     component: PageControllerComponent,
     useAsDefault: true
-  }
-  ,
+  },
   {
     path: '/page/:pageId',
-    name: 'Home',
+    name: 'SpecificPage2',
+    component: PageControllerComponent
+  },
+  {
+    path: '/:pageId',
+    name: 'SpecificPage1',
     component: PageControllerComponent
   },
   {
     path: '/all',
-    name: 'Home',
+    name: 'All',
     component: AllPagesComponent
   },
   {
