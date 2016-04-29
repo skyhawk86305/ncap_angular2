@@ -77,14 +77,25 @@ export class PageComponent implements OnInit {
 
         let aggregateResult: ValidationResult = this.runValidationOnCurrentQuestions();
 
-        if (aggregateResult === ValidationResult.ok) {
-            this._applicationStateService.next();
-        } else {
+        // Requested Validation is only asked for up to three times 
+        if (aggregateResult === ValidationResult.requested) {
+            if (this._applicationStateService.shownRequestedValidation >= 3) {
+                aggregateResult = ValidationResult.ok;
+            }
+            this._applicationStateService.shownRequestedValidation++;
+        }
+
+        // If validation should be show update show_validation property in the questions
+        if (aggregateResult !== ValidationResult.ok) {
             for (let curQuestion of this.questions) {
                 curQuestion.show_validation = true;
             }
         }
 
+        // If validation was ok, then let go to the next page
+        if (aggregateResult === ValidationResult.ok) {
+            this._applicationStateService.next();
+        }
     }
 
     back() {

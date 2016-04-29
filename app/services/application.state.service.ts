@@ -9,6 +9,8 @@ import { PageComponent } from  '../../app/components/page/page.component';
 @Injectable()
 export class ApplicationStateService {
 
+    shownRequestedValidation: number = 0;
+
     private _currentPageNumber: number;
     private _totalPages: number;
     private _pageComponent: PageComponent;
