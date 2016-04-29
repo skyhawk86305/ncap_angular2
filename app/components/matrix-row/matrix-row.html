@@ -5,12 +5,12 @@
 <!-- render options for this element -->
 <td class="mat_c ng-scope" *ngFor="#item of options; #idx = index">
     <input type="radio" style="outline:none" name="{{matrixElement.question_id}}{{matrixElement.sort_order}}" 
-    value="{{item.id}}" (click)="radioButtonClick(matrixElement.tracking_id, item.id)" 
+    value="{{item.id}}" (click)="radioButtonClick(matrixElement.tracking_key , item.id)" 
     [checked]="previouslySelectedRadioButton == item.id">
 </td>
 
 <!-- render textbox  -->
 <td *ngIf="matrixElement.answer_category === 'Textbox_in_Matrix'" class='mat_q' colspan="5">
     {{matrixElement.text}} <input class="form-control" type="text" width="10" placeholder="(Please indicate)" 
-    [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_id)">
+    [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_key )">
 </td>

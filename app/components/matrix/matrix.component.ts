@@ -66,7 +66,7 @@ export class MatrixComponent implements OnInit {
     let cssClass = '';
 
     if (this.showValidation) {
-      let userInput: UserInput = this._applicationStateService.getUserInput(curMatrixElement.tracking_id);
+      let userInput: UserInput = this._applicationStateService.getUserInput(curMatrixElement.tracking_key);
       let storedValue = userInput ? userInput.storedValue : '';
       let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
 

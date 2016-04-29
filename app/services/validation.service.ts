@@ -42,7 +42,7 @@ export class ValidationService {
         if (matrixElement.validation_type === ValidationType.optional) {
             result = ValidationResult.ok;
         } else {
-            let userInput: UserInput = this._applicationStateService.getUserInput(matrixElement.tracking_id);
+            let userInput: UserInput = this._applicationStateService.getUserInput(matrixElement.tracking_key);
             let storedValue = userInput ? userInput.storedValue : '';
             let populated = storedValue !== null && storedValue.length > 0;
             if (populated) {

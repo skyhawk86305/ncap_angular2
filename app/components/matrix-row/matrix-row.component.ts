@@ -55,7 +55,7 @@ export class MatrixRowComponent implements OnInit {
 
   private syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.matrixElement.tracking_id);
+    let previousUserInput: UserInput = this._applicationStateService.getUserInput(this.matrixElement.tracking_key);
 
     if (previousUserInput) {
       switch (this.matrixElement.answer_category) {
