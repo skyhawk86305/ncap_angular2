@@ -3,7 +3,7 @@ import { Injectable } from 'angular2/core';
 import { DomainOptions } from  '../../app/types/domain-options';
 
 import { Question } from       '../../app/types/question';
-import { QUESTIONS } from '../../app/seed-data/json-questions';
+import { QUESTIONS_JSON } from '../../app/seed-data/questions.json';
 
 import { Tooltip } from       '../../app/types/tooltip';
 import { TOOLTIPS_JSON } from '../../app/seed-data/tooltips.json';
@@ -27,8 +27,7 @@ export class SeedDataService {
         this._domainOptions = new DomainOptions();
         this._domainOptions.populateWithData();
 
-        this._questions = QUESTIONS;
-
+        this._questions = JSON.parse(QUESTIONS_JSON);
         this._tooltips = JSON.parse(TOOLTIPS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
     }

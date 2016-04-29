@@ -1,6 +1,5 @@
-import { Question } from '../../app/types/question';
-
-export var QUESTIONS: Question[] =
+export var QUESTIONS_JSON =
+  `
   [
     {
       "question_id": 1000,
@@ -13,7 +12,8 @@ export var QUESTIONS: Question[] =
       "answer_lookup_id": -1,
       "answer_lookup": "DOM_RESPONDENT_TYPE",
       "tracking_key": "respondent_type"
-    },
+    }
+      ,
     {
       "question_id": 1010,
       "page_id": 2,
@@ -25,7 +25,8 @@ export var QUESTIONS: Question[] =
       "answer_lookup_id": -1,
       "answer_lookup": "DOM_YES_NO",
       "tracking_key": "initial_consent"
-    },
+    }
+    ,
     {
       "question_id": 1020,
       "page_id": 3,
@@ -33,11 +34,12 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 2,
-      "question_text": "Has the child ever been diagnosed with ASD <tooltip id=\"1\"/>, which includes Asperger syndrome, childhood disintegrative disorder, and pervasive developmental disorders not otherwise specified (PDD-NOS)?",
+      "question_text": "Has the child ever been diagnosed with ASD <tooltip id='1'/>, which includes Asperger syndrome, childhood disintegrative disorder, and pervasive developmental disorders not otherwise specified (PDD-NOS)?",
       "answer_lookup_id": 29,
       "answer_lookup": "DOM_YES_NO",
       "tracking_key": "asd_yes_no"
-    },
+    }
+  ,
     {
       "question_id": 1030,
       "page_id": 3,
@@ -69,7 +71,7 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "What is the child's ethnicity  <tooltip id=\"7\"/> ?",
+      "question_text": "What is the child's ethnicity  <tooltip id='7'/> ?",
       "answer_lookup_id": 11,
       "answer_lookup": "DOM_ETHNICITY",
       "tracking_key": "ethnicity"
@@ -85,7 +87,8 @@ export var QUESTIONS: Question[] =
       "answer_lookup_id": 29,
       "answer_lookup": "DOM_YES_NO",
       "tracking_key": "middleName_confirm"
-    },
+    }
+          ,
     {
       "question_id": 1070,
       "page_id": 4,
@@ -109,7 +112,8 @@ export var QUESTIONS: Question[] =
       "answer_lookup_id": 33,
       "answer_lookup": "DOM_YES_NO_DK_NA_Q_1",
       "tracking_key": "WalkByOneself"
-    },
+    }
+    ,
     {
       "question_id": 1090,
       "page_id": 5,
@@ -133,7 +137,8 @@ export var QUESTIONS: Question[] =
       "answer_lookup_id": 10,
       "answer_lookup": "DOM_EDU_LEVEL",
       "tracking_key": "edu_level_mother"
-    },
+    }
+    ,
     {
       "question_id": 1110,
       "page_id": 5,
@@ -157,7 +162,8 @@ export var QUESTIONS: Question[] =
       "answer_lookup_id": 6,
       "answer_lookup": "DOM_AGE_5",
       "tracking_key": "breastfed_duration"
-    },
+    }
+    ,
     {
       "question_id": 1130,
       "page_id": 6,
@@ -165,11 +171,12 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "Did the mother use tobacco products during the three months prior to pregnancy through the first year of the child\\'s life?",
+      "question_text": "Did the mother use tobacco products during the three months prior to pregnancy through the first year of the child's life?",
       "answer_lookup_id": 32,
       "answer_lookup": "DOM_YES_NO_DK_PNTA",
       "tracking_key": "tobacco_use_mother"
-    },
+    }
+            ,
     {
       "question_id": 1140,
       "page_id": 7,
@@ -177,11 +184,12 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "How often was the mother exposed to second-hand smoke during the three months prior to pregnancy through the first year of the child\\'s life?",
+      "question_text": "How often was the mother exposed to second-hand smoke during the three months prior to pregnancy through the first year of the child's life?",
       "answer_lookup_id": 14,
       "answer_lookup": "DOM_FREQ_2",
       "tracking_key": "Second_hand_smoke_freq_mother"
-    },
+    }
+    ,
     {
       "question_id": 1150,
       "page_id": 8,
@@ -189,11 +197,13 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "How often did the mother eat fish, shellfish, or other seafood during the three months prior to pregnancy through the first year of the child\\'s life?",
+      "question_text": "How often did the mother eat fish, shellfish, or other seafood during the three months prior to pregnancy through the first year of the child's life?",
       "answer_lookup_id": 14,
       "answer_lookup": "DOM_FREQ_2",
       "tracking_key": "seafood_freq_mother"
-    },
+    }               
+
+                  ,
     {
       "question_id": 1160,
       "page_id": 9,
@@ -201,7 +211,7 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "Did the mother take any prescription medicine during the three months prior to pregnancy through the first year of the child\\'s life?",
+      "question_text": "Did the mother take any prescription medicine during the three months prior to pregnancy through the first year of the child's life?",
       "answer_lookup_id": 32,
       "answer_lookup": "DOM_YES_NO_DK_PNTA",
       "tracking_key": "prescr_drugs_mother"
@@ -213,7 +223,7 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "Did the mother take any over-the-counter medicine during the three months prior to pregnancy through the first year of the child\\'s life?",
+      "question_text": "Did the mother take any over-the-counter medicine during the three months prior to pregnancy through the first year of the child's life?",
       "answer_lookup_id": 32,
       "answer_lookup": "DOM_YES_NO_DK_PNTA",
       "tracking_key": "OTC_drugs_mother"
@@ -225,7 +235,7 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "How many residences did the mother live in during the three months prior to pregnancy through the first year of the child\\'s life?",
+      "question_text": "How many residences did the mother live in during the three months prior to pregnancy through the first year of the child's life?",
       "answer_lookup_id": 18,
       "answer_lookup": "DOM_NUMBER_1",
       "tracking_key": "residence_number_mother"
@@ -237,7 +247,7 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "Was any residence where the mother lived during the three months prior to pregnancy through the first year of the child\\'s life built before 1978?",
+      "question_text": "Was any residence where the mother lived during the three months prior to pregnancy through the first year of the child's life built before 1978?",
       "answer_lookup_id": 30,
       "answer_lookup": "DOM_YES_NO_DK",
       "tracking_key": "residence_pre_78_mother"
@@ -249,7 +259,7 @@ export var QUESTIONS: Question[] =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "How often were air fresheners, candles, sprays or similar products used inside the mother\\'s home during the three months prior to pregnancy through the first year of the child\\'s life?",
+      "question_text": "How often were air fresheners, candles, sprays or similar products used inside the mother's home during the three months prior to pregnancy through the first year of the child's life?",
       "answer_lookup_id": 15,
       "answer_lookup": "DOM_FREQ_3",
       "tracking_key": "home_fragrance_freq_mother"
@@ -412,5 +422,4 @@ export var QUESTIONS: Question[] =
       "answer_lookup": "DOM_YES_NO_DK_NA",
       "tracking_key": "N/A"
     }
-  ]
-  ;
+  ]`;
