@@ -12,6 +12,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 
 import { ApplicationStateService } from '../../../app/services/application.state.service';
+import { ValidationService } from '../../../app/services/validation.service';
 
 @Component({
     selector: 'page',
@@ -28,6 +29,7 @@ export class PageComponent implements OnInit {
         private _router: Router,
         private _applicationStateService: ApplicationStateService,
         private _seedDataService: SeedDataService,
+        private _validationService: ValidationService,
         private _routeParams: RouteParams
     ) {
     }
@@ -40,6 +42,10 @@ export class PageComponent implements OnInit {
         }
 
         this.getQuestionsToRender();
+
+        // console.log(this.questions[0].validation_result);
+        // this._validationService.validateQuestion(this.questions[0]);
+        // console.log(this.questions[0].validation_result);
 
         this._applicationStateService.registerPageComponent(this);
     }
