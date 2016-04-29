@@ -1,8 +1,8 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { PageControllerComponent } from './components/page.controller/page.controller.component';
-import { AllPagesComponent } from './components/allPages/allPages.component';
+import { PageControllerComponent } from './components/page-controller/page-controller.component';
+import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 
 import { ApplicationStateService } from '../app/services/application.state.service';

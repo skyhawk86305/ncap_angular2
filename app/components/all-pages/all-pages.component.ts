@@ -5,12 +5,12 @@ import { Question } from  '../../../app/types/question';
 
 import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 
-import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
+import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
 
 @Component({
     selector: 'page',
-    templateUrl: 'app/components/allPages/allPages.html',
+    templateUrl: 'app/components/all-pages/all-pages.html',
     directives: [NgSwitchQuestionComponent, HomeComponent]
 })
 export class AllPagesComponent implements OnInit {

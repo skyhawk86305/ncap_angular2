@@ -12,7 +12,7 @@ import { LoadJsonDataService } from '../../../app/services/load.json.data.servic
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { UserInputService } from '../../../app/services/user.input.service';
 
-import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
+import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 

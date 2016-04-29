@@ -7,7 +7,7 @@ import { UserInputService } from '../../../app/services/user.input.service';
 
 @Component({
   selector: 'date-month-day-year',
-  templateUrl: 'app/components/dateMonthDayYear/dateMonthDayYear.html'
+  templateUrl: 'app/components/date/date.html'
 })
 export class DayMonthYearComponent {
 

@@ -7,7 +7,7 @@ import { ValidationResult } from  '../../../app/types/enums/validation-result.en
 
 import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
 
-import { NgSwitchQuestionComponent } from '../ngSwitchQuestion/ngSwitchQuestion.component';
+import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
@@ -17,7 +17,7 @@ import { ValidationService } from '../../../app/services/validation.service';
 
 @Component({
     selector: 'page',
-    templateUrl: 'app/components/page.controller/page.controller.html',
+    templateUrl: 'app/components/page-controller/page-controller.html',
     directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent, DiagnosticComponent]
 })
 export class PageControllerComponent implements OnInit {

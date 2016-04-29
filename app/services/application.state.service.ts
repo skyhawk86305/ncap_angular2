@@ -2,7 +2,7 @@ import { Injectable } from 'angular2/core';
 
 import { UserInputService } from '../../app/services/user.input.service';
 
-import { PageControllerComponent } from  '../../app/components/page.controller/page.controller.component';
+import { PageControllerComponent } from  '../../app/components/page-controller/page-controller.component';
 
 @Injectable()
 export class ApplicationStateService {
