@@ -50,7 +50,7 @@ export class PageControllerComponent implements OnInit {
         let pageId = this._applicationStateService.getCurrentPageNumber();
         this.questions = this._loadJsonDataService.getQuestionsForPage(pageId);
 
-        // xyzzy hack, improve later
+        // Todo: hack, improve later
         this.renderButtons = pageId > 2;
 
         console.log('qu count is ' + this.questions.length);

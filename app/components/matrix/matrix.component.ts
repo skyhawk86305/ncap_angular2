@@ -43,20 +43,6 @@ export class MatrixComponent implements OnInit {
 
     let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     this.options = domainOptions.getDomainOption(this.question.answer_lookup);
-
-    //this.question.answer_type;
-
-    // xyzzy Assume first item contains the DOm type + derive column heading from it
-    //this.matrixElements[0]..answer_category;
-    //columnHeadings
-
-
-    //let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-    //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
-
-    //this.addTooltipIfNecessary();
-
-    //this.syncToPreviouslyEnteredData();
   }
 
   click(trackingKey: string, value: string) {

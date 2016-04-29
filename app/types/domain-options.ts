@@ -61,7 +61,7 @@ export class DomainOptions {
         result = this.freq2;
         break;
       default:
-        // xyzzy log too
+        // Todo log too
         throw new Error('Not yet supported :' + typePassedIn);
     }
 

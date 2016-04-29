@@ -49,7 +49,7 @@ export class RadioButtonComponent implements OnInit {
     console.log('Clicked ' + trackingKey + ' with id ' + id);
     this._userInputService.setUserInput(trackingKey, id.toString());
     this._syncToPreviouslyEnteredData();
-    
+
     // Ask Page Control to re-validate for everything on the page
     this._applicationStateService.requestPagecontrolRevalidate();
   }

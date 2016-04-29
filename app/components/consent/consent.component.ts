@@ -37,7 +37,7 @@ export class ConsentComponent implements OnInit {
     }
 
     exit() {
-        // xyzzy
+        // Todo
         console.log('Clicked exit');
     }
 
