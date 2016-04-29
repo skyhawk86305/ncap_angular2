@@ -1,8 +1,6 @@
 // /// <reference path="../../../typings/main.d.ts" />
 
 import { Component, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
-import { RouteParams } from 'angular2/router';
 
 // import * as prettyjson from 'prettyjson';
 
@@ -33,11 +31,9 @@ export class DiagnosticComponent implements OnInit {
     applicationStateService: ApplicationStateService;
 
     constructor(
-        private _router: Router,
         private _loadJsonDataService: LoadJsonDataService,
         private _applicationStateService: ApplicationStateService,
-        private _userInputService: UserInputService,
-        private _routeParams: RouteParams
+        private _userInputService: UserInputService
     ) {
     }
 

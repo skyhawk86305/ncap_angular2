@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
 
 import { DomainOption } from   '../../../app/types/domain-option';
 import { DomainOptions } from  '../../../app/types/domain-options';
@@ -31,7 +30,6 @@ export class RadioButtonComponent implements OnInit {
   ValidationResult = ValidationResult;
 
   constructor(
-    private _router: Router,
     private _loadJsonDataService: LoadJsonDataService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService

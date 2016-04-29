@@ -1,5 +1,4 @@
 import { Component, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
 
@@ -20,7 +19,6 @@ export class AllPagesComponent implements OnInit {
     renderButtons: boolean = true;
 
     constructor(
-        private _router: Router,
         private _loadJsonDataService: LoadJsonDataService
     ) {
     }

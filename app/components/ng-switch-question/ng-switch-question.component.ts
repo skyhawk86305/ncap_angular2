@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
+import { Component, Input } from 'angular2/core';
 
 import { HomeComponent } from '../home/home.component';
 import { ConsentComponent } from '../consent/consent.component';
@@ -14,15 +13,8 @@ import { Question } from  '../../../app/types/question';
     templateUrl: 'app/components/ng-switch-question/ng-switch-question.html',
     directives: [HomeComponent, RadioButtonComponent, DayMonthYearComponent, ConsentComponent, MatrixComponent]
 })
-export class NgSwitchQuestionComponent implements OnInit {
+export class NgSwitchQuestionComponent {
 
     @Input() question: Question;
-
-    constructor(
-        private _router: Router
-    ) {
-    }
-
-    ngOnInit() {
-    }
+    
 }

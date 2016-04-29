@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
 
 import { ApplicationStateService } from '../../../app/services/application.state.service';
 import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
@@ -18,7 +17,6 @@ export class ConsentComponent implements OnInit {
     hasConsent: boolean = false;
 
     constructor(
-        private _router: Router,
         private _applicationStateService: ApplicationStateService,
         private _userInputService: UserInputService,
         private _loadJsonDataService: LoadJsonDataService

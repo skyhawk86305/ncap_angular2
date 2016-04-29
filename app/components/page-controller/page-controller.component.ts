@@ -1,5 +1,4 @@
 import { Component, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
 import { RouteParams } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
@@ -27,7 +26,6 @@ export class PageControllerComponent implements OnInit {
     that: PageControllerComponent;
 
     constructor(
-        private _router: Router,
         private _applicationStateService: ApplicationStateService,
         private _loadJsonDataService: LoadJsonDataService,
         private _validationService: ValidationService,
