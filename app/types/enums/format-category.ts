@@ -1,4 +1,4 @@
-export enum foca {
+export enum FormatCategory {
     Hi_Lvl_Intro = 1,
     Section_Title = 2,
     PreQ_Intro = 3,
