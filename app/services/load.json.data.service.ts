@@ -10,13 +10,8 @@ import { QUESTIONS_JSON } from '../../app/seed-data/questions.json';
 import { TOOLTIPS_JSON } from '../../app/seed-data/tooltips.json';
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
-import { SurveyPageSre } from '../types/database-data/survey-page-sre';
-import { Subu } from '../types/database-data/subu';
-import { Sre } from '../types/database-data/sre';
+import { AllDataBaseData } from '../types/database-data/all-database-data';
 import { Tooltip } from '../types/database-data/tooltip';
-import { DisplayCondition } from '../types/database-data/display-condition';
-import { Domain } from '../types/database-data/domain';
-import { Reference } from '../types/database-data/reference';
 
 import { ValidationService } from './validation.service';
 
@@ -25,13 +20,7 @@ export class LoadJsonDataService {
     allDataLoaded = false;
     BASE_PATH = 'app/seed-data/raw-json/';
 
-    display_conditions: DisplayCondition[];
-    domains: Domain[];
-    references: Reference[];
-    sre: Sre[];
-    subu: Subu[];
-    survey_page_sre: SurveyPageSre[];
-    tooltips: Tooltip[];
+    allDataBaseData: AllDataBaseData;
 
     tooltipsPromise: Promise<Tooltip[]>;
     tootltipsPromiseStarted = false;
@@ -59,8 +48,8 @@ export class LoadJsonDataService {
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
 
         // xyzzy5
-        //this.readJsonFilesObservableForkJoin();
         this.readJsonFilesPromiseAll();
+        //this.readJsonFilesObservableForkJoin();
     }
 
     getTooltips(): Promise<Tooltip[]> {
@@ -72,20 +61,15 @@ export class LoadJsonDataService {
                 .toPromise()
                 .then(
                 data => {
-                    that.tooltips = data;
-                    console.log('Tooltips' + that.tooltips[1].definition);
-                    return that.tooltips;
+                    that.allDataBaseData = new AllDataBaseData();
+                    that.allDataBaseData.tooltips = data;
+                    console.log('Tooltips' + that.allDataBaseData.tooltips[1].definition);
+                    return that.allDataBaseData.tooltips;
                 });
         }
 
         return this.tooltipsPromise;
     }
-
-    // return Promise.resolve(this.allDataLoaded).then(
-    //   heroes => heroes.filter(hero => hero.id === id)[0]
-    // );
-
-
 
     getDomainOptions() {
         return this._domainOptions;
@@ -125,21 +109,22 @@ export class LoadJsonDataService {
         ).subscribe(
             data => {
                 let i = 0;
-                that.display_conditions = data[i++];
-                that.domains = data[i++];
-                that.references = data[i++];
-                that.sre = data[i++];
-                that.subu = data[i++];
-                that.survey_page_sre = data[i++];
-                that.tooltips = data[i++];
+                that.allDataBaseData = new AllDataBaseData();
+                that.allDataBaseData.displayConditions = data[i++];
+                that.allDataBaseData.domains = data[i++];
+                that.allDataBaseData.references = data[i++];
+                that.allDataBaseData.sres = data[i++];
+                that.allDataBaseData.subus = data[i++];
+                that.allDataBaseData.surveyPageSres = data[i++];
+                that.allDataBaseData.tooltips = data[i++];
 
-                console.log(that.survey_page_sre[6].seq_pag_id);
-                console.log(that.subu[6].subu_sort_order);
-                console.log(that.sre[6].sre_anca_id);
-                console.log(that.tooltips[1].definition);
-                console.log(that.display_conditions[1].relation);
-                console.log(that.domains[3].value);
-                console.log(that.references[3].reference_txt);
+                console.log(that.allDataBaseData.surveyPageSres[6].seq_pag_id);
+                console.log(that.allDataBaseData.subus[6].subu_sort_order);
+                console.log(that.allDataBaseData.sres[6].sre_anca_id);
+                console.log(that.allDataBaseData.tooltips[1].definition);
+                console.log(that.allDataBaseData.displayConditions[1].relation);
+                console.log(that.allDataBaseData.domains[3].value);
+                console.log(that.allDataBaseData.references[3].reference_txt);
             },
             err => console.error(err)
             );
@@ -160,24 +145,26 @@ export class LoadJsonDataService {
         Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7])
             .then(
             data => {
-                console.log('xyzzy: ' + data.length);
+                //console.log('xyzzy: ' + data.length);
                 let i = 0;
                 let dataCast: any[] = data;
-                that.display_conditions = dataCast[i++];
-                that.domains = dataCast[i++];
-                that.references = dataCast[i++];
-                that.sre = dataCast[i++];
-                that.subu = dataCast[i++];
-                that.survey_page_sre = dataCast[i++];
-                that.tooltips = dataCast[i++];
+                
+                that.allDataBaseData = new AllDataBaseData();
+                that.allDataBaseData.displayConditions = dataCast[i++];
+                that.allDataBaseData.domains = dataCast[i++];
+                that.allDataBaseData.references = dataCast[i++];
+                that.allDataBaseData.sres = dataCast[i++];
+                that.allDataBaseData.subus = dataCast[i++];
+                that.allDataBaseData.surveyPageSres = dataCast[i++];
+                that.allDataBaseData.tooltips = dataCast[i++];
 
-                console.log(that.survey_page_sre[6].seq_pag_id);
-                console.log(that.subu[6].subu_sort_order);
-                console.log(that.sre[6].sre_anca_id);
-                console.log(that.tooltips[1].definition);
-                console.log(that.display_conditions[1].relation);
-                console.log(that.domains[3].value);
-                console.log(that.references[3].reference_txt);
+                console.log(that.allDataBaseData.surveyPageSres[6].seq_pag_id);
+                console.log(that.allDataBaseData.subus[6].subu_sort_order);
+                console.log(that.allDataBaseData.sres[6].sre_anca_id);
+                console.log(that.allDataBaseData.tooltips[1].definition);
+                console.log(that.allDataBaseData.displayConditions[1].relation);
+                console.log(that.allDataBaseData.domains[3].value);
+                console.log(that.allDataBaseData.references[3].reference_txt);
                 this.allDataLoaded = true;
             });
     }

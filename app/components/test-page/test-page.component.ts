@@ -31,13 +31,13 @@ export class TestPageComponent implements OnInit {
     ngOnInit() {
         return this._loadJsonDataService.getTooltips().then(data => {
             console.log("In test-page ngOnInit tooltips count v1: " + data.length);
-            console.log("In test-page ngOnInit tooltips count v2: " + this._loadJsonDataService.tooltips.length);
+//            console.log("In test-page ngOnInit tooltips count v2: " + this._loadJsonDataService.tooltips.length);
         }
         );
     }
 
     click() {
-        console.log(this._loadJsonDataService.tooltips[0].definition);
+        console.log(this._loadJsonDataService.allDataBaseData.tooltips[0].definition);
     }
 
 }
