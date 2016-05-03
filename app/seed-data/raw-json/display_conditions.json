@@ -1,0 +1,492 @@
+[
+    {
+        "ID": 1,
+        "CONDITION_GROUP": 1,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 2700,
+        "RELATION": "IS NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "middleName == \"\""
+    },
+    {
+        "ID": 2,
+        "CONDITION_GROUP": 2,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 3400,
+        "RELATION": "IS NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "middleNameMother == \"\""
+    },
+    {
+        "ID": 3,
+        "CONDITION_GROUP": 3,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 700,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "asd_yes_no == \"Yes\""
+    },
+    {
+        "ID": 4,
+        "CONDITION_GROUP": 4,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 4200,
+        "RELATION": "CONTAINS",
+        "DOM_SUB_ID_RHS": 4,
+        "COMMENTS": "\"Who diagnosed the child with ASD\" contains \"Other\""
+    },
+    {
+        "ID": 5,
+        "CONDITION_GROUP": 5,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 6400,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "LoseSpeech == \"Yes\""
+    },
+    {
+        "ID": 6,
+        "CONDITION_GROUP": 6,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 6600,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "SlowStopSpeech == \"Yes\""
+    },
+    {
+        "ID": 7,
+        "CONDITION_GROUP": 7,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 6800,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "LoseMotor == \"Yes\""
+    },
+    {
+        "ID": 8,
+        "CONDITION_GROUP": 8,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 7000,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "SlowStopMotor == \"Yes\""
+    },
+    {
+        "ID": 9,
+        "CONDITION_GROUP": 9,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 7200,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "LoseSocial == \"Yes\""
+    },
+    {
+        "ID": 10,
+        "CONDITION_GROUP": 10,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 7400,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "SlowStopSocial == \"Yes\""
+    },
+    {
+        "ID": 11,
+        "CONDITION_GROUP": 11,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 7600,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "LoseDailyLiving == \"Yes\""
+    },
+    {
+        "ID": 12,
+        "CONDITION_GROUP": 12,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 7800,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "SlowStopDailyLiving == \"Yes\""
+    },
+    {
+        "ID": 13,
+        "CONDITION_GROUP": 13,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 8000,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "WalkByOneself == \"Yes\""
+    },
+    {
+        "ID": 14,
+        "CONDITION_GROUP": 14,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 8200,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "VerbalSkill != \"\""
+    },
+    {
+        "ID": 15,
+        "CONDITION_GROUP": 14,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 8200,
+        "RELATION": "NOT EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "VerbalSkill != \"Does not use any words\" "
+    },
+    {
+        "ID": 16,
+        "CONDITION_GROUP": 14,
+        "OBJ_ORDER": 3,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 8200,
+        "RELATION": "NOT EQUAL",
+        "DOM_SUB_ID_RHS": 6,
+        "COMMENTS": "VerbalSkill != \"Prefer not to answer\" "
+    },
+    {
+        "ID": 17,
+        "CONDITION_GROUP": 15,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 8200,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 4,
+        "COMMENTS": "VerbalSkill = \"Speaks in 2 words combinations"
+    },
+    {
+        "ID": 18,
+        "CONDITION_GROUP": 15,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "OR",
+        "SRE_UID_LHS": 8200,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 5,
+        "COMMENTS": "VerbalSkill = \"Speaks in 3 or more word combinations\""
+    },
+    {
+        "ID": 19,
+        "CONDITION_GROUP": 16,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 3600,
+        "RELATION": "IS NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "mother_DOB is null"
+    },
+    {
+        "ID": 20,
+        "CONDITION_GROUP": 17,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 14700,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "breastfed == \"Yes\""
+    },
+    {
+        "ID": 21,
+        "CONDITION_GROUP": 18,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 18400,
+        "RELATION": "CONTAINS",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "water_source_mother CONTAINS \"Public water supply\""
+    },
+    {
+        "ID": 22,
+        "CONDITION_GROUP": 19,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 23800,
+        "RELATION": "GREATER THAN",
+        "DOM_SUB_ID_RHS": 1,
+        "COMMENTS": "Number of siblings > 0"
+    },
+    {
+        "ID": 23,
+        "CONDITION_GROUP": 20,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 24,
+        "CONDITION_GROUP": 21,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24600,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_main_number != \"\""
+    },
+    {
+        "ID": 25,
+        "CONDITION_GROUP": 22,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 26,
+        "CONDITION_GROUP": 22,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 24600,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_main_number != \"\""
+    },
+    {
+        "ID": 27,
+        "CONDITION_GROUP": 22,
+        "OBJ_ORDER": 3,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 24600,
+        "RELATION": "CUSTOM_FUNCTION_1",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_main_number does not contain exactly 10 digits"
+    },
+    {
+        "ID": 28,
+        "CONDITION_GROUP": 23,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24900,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt1_number != \"\""
+    },
+    {
+        "ID": 29,
+        "CONDITION_GROUP": 24,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 30,
+        "CONDITION_GROUP": 24,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 24900,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt1_number != \"\""
+    },
+    {
+        "ID": 31,
+        "CONDITION_GROUP": 24,
+        "OBJ_ORDER": 3,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 24900,
+        "RELATION": "CUSTOM_FUNCTION_1",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt1_number does not contain exactly 10 digits"
+    },
+    {
+        "ID": 32,
+        "CONDITION_GROUP": 25,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 33,
+        "CONDITION_GROUP": 25,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 24900,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt1_number != \"\""
+    },
+    {
+        "ID": 34,
+        "CONDITION_GROUP": 26,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 25200,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt2_number != \"\""
+    },
+    {
+        "ID": 35,
+        "CONDITION_GROUP": 27,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 36,
+        "CONDITION_GROUP": 27,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25200,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt2_number != \"\""
+    },
+    {
+        "ID": 37,
+        "CONDITION_GROUP": 27,
+        "OBJ_ORDER": 3,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25200,
+        "RELATION": "CUSTOM_FUNCTION_1",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt2_number does not contain exactly 10 digits"
+    },
+    {
+        "ID": 38,
+        "CONDITION_GROUP": 28,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 39,
+        "CONDITION_GROUP": 28,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25200,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt2_number != \"\""
+    },
+    {
+        "ID": 40,
+        "CONDITION_GROUP": 29,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 25500,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt3_number != \"\""
+    },
+    {
+        "ID": 41,
+        "CONDITION_GROUP": 30,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 42,
+        "CONDITION_GROUP": 30,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25500,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt3_number != \"\""
+    },
+    {
+        "ID": 43,
+        "CONDITION_GROUP": 30,
+        "OBJ_ORDER": 3,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25500,
+        "RELATION": "CUSTOM_FUNCTION_1",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt3_number does not contain exactly 10 digits"
+    },
+    {
+        "ID": 44,
+        "CONDITION_GROUP": 31,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 45,
+        "CONDITION_GROUP": 31,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25500,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt3_number != \"\""
+    },
+    {
+        "ID": 46,
+        "CONDITION_GROUP": 32,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 25800,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt4_number != \"\""
+    },
+    {
+        "ID": 47,
+        "CONDITION_GROUP": 33,
+        "OBJ_ORDER": 1,
+        "LOGICAL_OPERATOR": null,
+        "SRE_UID_LHS": 24300,
+        "RELATION": "EQUAL",
+        "DOM_SUB_ID_RHS": 2,
+        "COMMENTS": "recontact == \"Yes\""
+    },
+    {
+        "ID": 48,
+        "CONDITION_GROUP": 33,
+        "OBJ_ORDER": 2,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25800,
+        "RELATION": "IS NOT NULL",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt4_number != \"\""
+    },
+    {
+        "ID": 49,
+        "CONDITION_GROUP": 33,
+        "OBJ_ORDER": 3,
+        "LOGICAL_OPERATOR": "AND",
+        "SRE_UID_LHS": 25800,
+        "RELATION": "CUSTOM_FUNCTION_1",
+        "DOM_SUB_ID_RHS": null,
+        "COMMENTS": "phone_alt4_number does not contain exactly 10 digits"
+    }
+]

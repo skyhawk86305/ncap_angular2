@@ -1,0 +1,919 @@
+[
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 1200,
+        "SUBU_SRE_UID": 1300,
+        "SEQ_SUBU_GROUP": 1,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 1200,
+        "SUBU_SRE_UID": 1400,
+        "SEQ_SUBU_GROUP": 1,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4200,
+        "SUBU_SRE_UID": 4300,
+        "SEQ_SUBU_GROUP": 2,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4600,
+        "SUBU_SRE_UID": 4700,
+        "SEQ_SUBU_GROUP": 3,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4600,
+        "SUBU_SRE_UID": 4800,
+        "SEQ_SUBU_GROUP": 3,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4600,
+        "SUBU_SRE_UID": 4900,
+        "SEQ_SUBU_GROUP": 3,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 6400,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 6600,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 6800,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 7000,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 7200,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 7400,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 7600,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 6300,
+        "SUBU_SRE_UID": 7800,
+        "SEQ_SUBU_GROUP": 4,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 8500,
+        "SUBU_SRE_UID": 8600,
+        "SEQ_SUBU_GROUP": 13,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 8500,
+        "SUBU_SRE_UID": 8700,
+        "SEQ_SUBU_GROUP": 13,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 8500,
+        "SUBU_SRE_UID": 8800,
+        "SEQ_SUBU_GROUP": 13,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 8500,
+        "SUBU_SRE_UID": 8900,
+        "SEQ_SUBU_GROUP": 13,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9000,
+        "SUBU_SRE_UID": 9100,
+        "SEQ_SUBU_GROUP": 14,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9000,
+        "SUBU_SRE_UID": 9200,
+        "SEQ_SUBU_GROUP": 14,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9000,
+        "SUBU_SRE_UID": 9300,
+        "SEQ_SUBU_GROUP": 14,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9000,
+        "SUBU_SRE_UID": 9400,
+        "SEQ_SUBU_GROUP": 14,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9000,
+        "SUBU_SRE_UID": 9500,
+        "SEQ_SUBU_GROUP": 14,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9000,
+        "SUBU_SRE_UID": 9600,
+        "SEQ_SUBU_GROUP": 14,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9000,
+        "SUBU_SRE_UID": 9700,
+        "SEQ_SUBU_GROUP": 14,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9800,
+        "SUBU_SRE_UID": 9900,
+        "SEQ_SUBU_GROUP": 15,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9800,
+        "SUBU_SRE_UID": 10000,
+        "SEQ_SUBU_GROUP": 15,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9800,
+        "SUBU_SRE_UID": 10100,
+        "SEQ_SUBU_GROUP": 15,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9800,
+        "SUBU_SRE_UID": 10200,
+        "SEQ_SUBU_GROUP": 15,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9800,
+        "SUBU_SRE_UID": 10300,
+        "SEQ_SUBU_GROUP": 15,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9800,
+        "SUBU_SRE_UID": 10400,
+        "SEQ_SUBU_GROUP": 15,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 9800,
+        "SUBU_SRE_UID": 10600,
+        "SEQ_SUBU_GROUP": 15,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5000,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5100,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5200,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5300,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5400,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5500,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5600,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5700,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5800,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 9
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 5900,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 10
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 6000,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 11
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 6100,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 12
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 4950,
+        "SUBU_SRE_UID": 6200,
+        "SEQ_SUBU_GROUP": 16,
+        "SUBU_SORT_ORDER": 13
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 10900,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11000,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11100,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11200,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11300,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11400,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11500,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11600,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 10800,
+        "SUBU_SRE_UID": 11700,
+        "SEQ_SUBU_GROUP": 17,
+        "SUBU_SORT_ORDER": 9
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 11800,
+        "SUBU_SRE_UID": 11900,
+        "SEQ_SUBU_GROUP": 18,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 11800,
+        "SUBU_SRE_UID": 12000,
+        "SEQ_SUBU_GROUP": 18,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 11800,
+        "SUBU_SRE_UID": 12100,
+        "SEQ_SUBU_GROUP": 18,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 11800,
+        "SUBU_SRE_UID": 12200,
+        "SEQ_SUBU_GROUP": 18,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 11800,
+        "SUBU_SRE_UID": 12300,
+        "SEQ_SUBU_GROUP": 18,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 11800,
+        "SUBU_SRE_UID": 12400,
+        "SEQ_SUBU_GROUP": 18,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 12600,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 12700,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 12800,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 12900,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 13000,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 13100,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 13200,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 12500,
+        "SUBU_SRE_UID": 13300,
+        "SEQ_SUBU_GROUP": 19,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 13400,
+        "SUBU_SRE_UID": 13500,
+        "SEQ_SUBU_GROUP": 20,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 13400,
+        "SUBU_SRE_UID": 13600,
+        "SEQ_SUBU_GROUP": 20,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 13400,
+        "SUBU_SRE_UID": 13700,
+        "SEQ_SUBU_GROUP": 20,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 13400,
+        "SUBU_SRE_UID": 13800,
+        "SEQ_SUBU_GROUP": 20,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 13400,
+        "SUBU_SRE_UID": 13900,
+        "SEQ_SUBU_GROUP": 20,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 13400,
+        "SUBU_SRE_UID": 14000,
+        "SEQ_SUBU_GROUP": 20,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 15600,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 15700,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 15800,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 15900,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 16000,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 16100,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 16200,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 16250,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 16300,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 9
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 16400,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 10
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 15500,
+        "SUBU_SRE_UID": 16500,
+        "SEQ_SUBU_GROUP": 21,
+        "SUBU_SORT_ORDER": 11
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16600,
+        "SUBU_SRE_UID": 16700,
+        "SEQ_SUBU_GROUP": 22,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 16900,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17000,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17100,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17200,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17300,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17400,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17500,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17600,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17700,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 9
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17800,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 10
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 17900,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 11
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 18000,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 12
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 16800,
+        "SUBU_SRE_UID": 18100,
+        "SEQ_SUBU_GROUP": 23,
+        "SUBU_SORT_ORDER": 13
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 18700,
+        "SUBU_SRE_UID": 18800,
+        "SEQ_SUBU_GROUP": 24,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 18700,
+        "SUBU_SRE_UID": 18900,
+        "SEQ_SUBU_GROUP": 24,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 18700,
+        "SUBU_SRE_UID": 19000,
+        "SEQ_SUBU_GROUP": 24,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 18700,
+        "SUBU_SRE_UID": 19100,
+        "SEQ_SUBU_GROUP": 24,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 19200,
+        "SUBU_SRE_UID": 19300,
+        "SEQ_SUBU_GROUP": 25,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 19200,
+        "SUBU_SRE_UID": 19400,
+        "SEQ_SUBU_GROUP": 25,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 19200,
+        "SUBU_SRE_UID": 19500,
+        "SEQ_SUBU_GROUP": 25,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 20700,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 20800,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 20900,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21000,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21100,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21200,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21300,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21350,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21400,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 9
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21500,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 10
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 20600,
+        "SUBU_SRE_UID": 21600,
+        "SEQ_SUBU_GROUP": 26,
+        "SUBU_SORT_ORDER": 11
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 21800,
+        "SUBU_SRE_UID": 21900,
+        "SEQ_SUBU_GROUP": 27,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22100,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 1
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22200,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 2
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22300,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 3
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22400,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 4
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22500,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 5
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22600,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 6
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22700,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 7
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22800,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 8
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 22900,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 9
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 23000,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 10
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 23100,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 11
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 23200,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 12
+    },
+    {
+        "SURVEY_ID": 1,
+        "SEQ_SRE_UID": 22000,
+        "SUBU_SRE_UID": 23300,
+        "SEQ_SUBU_GROUP": 28,
+        "SUBU_SORT_ORDER": 13
+    }
+]

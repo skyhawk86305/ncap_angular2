@@ -1,130 +1,128 @@
-{
-    "anca": [
-        {
-            "ID": 1,
-            "SHORT_DESCRIPTION": "RadioButtons",
-            "LONG_DESCRIPTION": "Radio buttons (no textbox)",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": "May be interpreted differently on some blocks"
-        },
-        {
-            "ID": 2,
-            "SHORT_DESCRIPTION": "RadioButtons_TextboxLastEntry",
-            "LONG_DESCRIPTION": "Radio buttons with a textbox for the last entry",
-            "REQUIRES_SUB_UID": "Y",
-            "COMMENTS": null
-        },
-        {
-            "ID": 3,
-            "SHORT_DESCRIPTION": "Checkboxes",
-            "LONG_DESCRIPTION": "Checkboxes (no textbox)",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": null
-        },
-        {
-            "ID": 4,
-            "SHORT_DESCRIPTION": "Checkboxes_TextboxLastEntry",
-            "LONG_DESCRIPTION": "Checkboxes with a textbox associated to the last entry (last checkbox).  Usually, the textbox is only shown if the last checkbox is selected.",
-            "REQUIRES_SUB_UID": "Y",
-            "COMMENTS": "Usually used for \"Other\"."
-        },
-        {
-            "ID": 5,
-            "SHORT_DESCRIPTION": "Checkboxes_ConditionalTextbox2",
-            "LONG_DESCRIPTION": "Checkboxes with a conditional question with textbox in the 2nd answer option",
-            "REQUIRES_SUB_UID": "Y",
-            "COMMENTS": "So far, only used for water source question"
-        },
-        {
-            "ID": 6,
-            "SHORT_DESCRIPTION": "Textbox",
-            "LONG_DESCRIPTION": "Textbox",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": "Textbox"
-        },
-        {
-            "ID": 7,
-            "SHORT_DESCRIPTION": "DropDown",
-            "LONG_DESCRIPTION": "Drop-down list box for mutually exclusive answers",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": "Drop-down box"
-        },
-        {
-            "ID": 8,
-            "SHORT_DESCRIPTION": "No_Answer",
-            "LONG_DESCRIPTION": "SRE.UID does not require any direct answer.",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": null
-        },
-        {
-            "ID": 9,
-            "SHORT_DESCRIPTION": "Date_MonthDayYear",
-            "LONG_DESCRIPTION": "Date (month, day, and year)",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": "Entered using the Calendar widget"
-        },
-        {
-            "ID": 10,
-            "SHORT_DESCRIPTION": "MatrixRadioButtons",
-            "LONG_DESCRIPTION": "Matrix of radio buttons only",
-            "REQUIRES_SUB_UID": "Y",
-            "COMMENTS": null
-        },
-        {
-            "ID": 11,
-            "SHORT_DESCRIPTION": "MatrixRadioButtons_DropDownLastCol",
-            "LONG_DESCRIPTION": "Matrix of radio buttons with a drop-down box in the last column",
-            "REQUIRES_SUB_UID": "Y",
-            "COMMENTS": null
-        },
-        {
-            "ID": 12,
-            "SHORT_DESCRIPTION": "MatrixRadioButtons_TextboxLastRow",
-            "LONG_DESCRIPTION": "Matrix of radio buttons with the last row having a textbox",
-            "REQUIRES_SUB_UID": "Y",
-            "COMMENTS": null
-        },
-        {
-            "ID": 13,
-            "SHORT_DESCRIPTION": "RadioButtons_in_Matrix_DropDownLastCol",
-            "LONG_DESCRIPTION": "Radio buttons in a matrix where the last column is a drop-down box",
-            "REQUIRES_SUB_UID": "Y",
-            "COMMENTS": null
-        },
-        {
-            "ID": 14,
-            "SHORT_DESCRIPTION": "Textbox_in_Matrix",
-            "LONG_DESCRIPTION": "Textbox within a matrix",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": "For now, only possible when the parent of this element has ANCA.ID=12"
-        },
-        {
-            "ID": 15,
-            "SHORT_DESCRIPTION": "RadioButons_in_Matrix",
-            "LONG_DESCRIPTION": "Radio buttons within a matrix",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": null
-        },
-        {
-            "ID": 16,
-            "SHORT_DESCRIPTION": "Calculated",
-            "LONG_DESCRIPTION": "Value calculated or copied from subsequent questions/elements",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": "Example:  The expected answer for the height is the height in inches (float) calculated from the values written in the Ft and In textboxes"
-        },
-        {
-            "ID": 17,
-            "SHORT_DESCRIPTION": "Address",
-            "LONG_DESCRIPTION": "Address structure",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": null
-        },
-        {
-            "ID": 18,
-            "SHORT_DESCRIPTION": "Immediate_Selection",
-            "LONG_DESCRIPTION": "Similar to radio buttons, but used to select mutually exclusive answers and immediately go to the next page without having to click on any next button.",
-            "REQUIRES_SUB_UID": "N",
-            "COMMENTS": "E.g.:  This answer category applies to the three buttons the respondent use to select their type (parent of minor proband, legally authorized representative of adult proband,or self-reporting adult proband).  It also applies to the Add Address buttons."
-        }
-    ]
-}
+[
+    {
+        "ID": 1,
+        "SHORT_DESCRIPTION": "RadioButtons",
+        "LONG_DESCRIPTION": "Radio buttons (no textbox)",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": "May be interpreted differently on some blocks"
+    },
+    {
+        "ID": 2,
+        "SHORT_DESCRIPTION": "RadioButtons_TextboxLastEntry",
+        "LONG_DESCRIPTION": "Radio buttons with a textbox for the last entry",
+        "REQUIRES_SUB_UID": "Y",
+        "COMMENTS": null
+    },
+    {
+        "ID": 3,
+        "SHORT_DESCRIPTION": "Checkboxes",
+        "LONG_DESCRIPTION": "Checkboxes (no textbox)",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": null
+    },
+    {
+        "ID": 4,
+        "SHORT_DESCRIPTION": "Checkboxes_TextboxLastEntry",
+        "LONG_DESCRIPTION": "Checkboxes with a textbox associated to the last entry (last checkbox).  Usually, the textbox is only shown if the last checkbox is selected.",
+        "REQUIRES_SUB_UID": "Y",
+        "COMMENTS": "Usually used for \"Other\"."
+    },
+    {
+        "ID": 5,
+        "SHORT_DESCRIPTION": "Checkboxes_ConditionalTextbox2",
+        "LONG_DESCRIPTION": "Checkboxes with a conditional question with textbox in the 2nd answer option",
+        "REQUIRES_SUB_UID": "Y",
+        "COMMENTS": "So far, only used for water source question"
+    },
+    {
+        "ID": 6,
+        "SHORT_DESCRIPTION": "Textbox",
+        "LONG_DESCRIPTION": "Textbox",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": "Textbox"
+    },
+    {
+        "ID": 7,
+        "SHORT_DESCRIPTION": "DropDown",
+        "LONG_DESCRIPTION": "Drop-down list box for mutually exclusive answers",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": "Drop-down box"
+    },
+    {
+        "ID": 8,
+        "SHORT_DESCRIPTION": "No_Answer",
+        "LONG_DESCRIPTION": "SRE.UID does not require any direct answer.",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": null
+    },
+    {
+        "ID": 9,
+        "SHORT_DESCRIPTION": "Date_MonthDayYear",
+        "LONG_DESCRIPTION": "Date (month, day, and year)",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": "Entered using the Calendar widget"
+    },
+    {
+        "ID": 10,
+        "SHORT_DESCRIPTION": "MatrixRadioButtons",
+        "LONG_DESCRIPTION": "Matrix of radio buttons only",
+        "REQUIRES_SUB_UID": "Y",
+        "COMMENTS": null
+    },
+    {
+        "ID": 11,
+        "SHORT_DESCRIPTION": "MatrixRadioButtons_DropDownLastCol",
+        "LONG_DESCRIPTION": "Matrix of radio buttons with a drop-down box in the last column",
+        "REQUIRES_SUB_UID": "Y",
+        "COMMENTS": null
+    },
+    {
+        "ID": 12,
+        "SHORT_DESCRIPTION": "MatrixRadioButtons_TextboxLastRow",
+        "LONG_DESCRIPTION": "Matrix of radio buttons with the last row having a textbox",
+        "REQUIRES_SUB_UID": "Y",
+        "COMMENTS": null
+    },
+    {
+        "ID": 13,
+        "SHORT_DESCRIPTION": "RadioButtons_in_Matrix_DropDownLastCol",
+        "LONG_DESCRIPTION": "Radio buttons in a matrix where the last column is a drop-down box",
+        "REQUIRES_SUB_UID": "Y",
+        "COMMENTS": null
+    },
+    {
+        "ID": 14,
+        "SHORT_DESCRIPTION": "Textbox_in_Matrix",
+        "LONG_DESCRIPTION": "Textbox within a matrix",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": "For now, only possible when the parent of this element has ANCA.ID=12"
+    },
+    {
+        "ID": 15,
+        "SHORT_DESCRIPTION": "RadioButons_in_Matrix",
+        "LONG_DESCRIPTION": "Radio buttons within a matrix",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": null
+    },
+    {
+        "ID": 16,
+        "SHORT_DESCRIPTION": "Calculated",
+        "LONG_DESCRIPTION": "Value calculated or copied from subsequent questions/elements",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": "Example:  The expected answer for the height is the height in inches (float) calculated from the values written in the Ft and In textboxes"
+    },
+    {
+        "ID": 17,
+        "SHORT_DESCRIPTION": "Address",
+        "LONG_DESCRIPTION": "Address structure",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": null
+    },
+    {
+        "ID": 18,
+        "SHORT_DESCRIPTION": "Immediate_Selection",
+        "LONG_DESCRIPTION": "Similar to radio buttons, but used to select mutually exclusive answers and immediately go to the next page without having to click on any next button.",
+        "REQUIRES_SUB_UID": "N",
+        "COMMENTS": "E.g.:  This answer category applies to the three buttons the respondent use to select their type (parent of minor proband, legally authorized representative of adult proband,or self-reporting adult proband).  It also applies to the Add Address buttons."
+    }
+]

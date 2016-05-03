@@ -1,0 +1,110 @@
+[
+    {
+        "ID": 1,
+        "SHORT_DESCRIPTION": "Hi_Lvl_Intro",
+        "LONG_DESCRIPTION": "High-level introductory text",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 2,
+        "SHORT_DESCRIPTION": "Section_Title",
+        "LONG_DESCRIPTION": "Section title",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 3,
+        "SHORT_DESCRIPTION": "PreQ_Intro",
+        "LONG_DESCRIPTION": "Introductory text before a question or a group of questions",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 4,
+        "SHORT_DESCRIPTION": "Lvl_1_Q",
+        "LONG_DESCRIPTION": "Level 1 \"question\"",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 5,
+        "SHORT_DESCRIPTION": "MatrixRowHead",
+        "LONG_DESCRIPTION": "Row heading (label) in a matrix of radio buttons (including row where a textbox or drop-down list box may appear)",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 6,
+        "SHORT_DESCRIPTION": "DropDownLabel",
+        "LONG_DESCRIPTION": "Label or caption for a drop-down list",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 7,
+        "SHORT_DESCRIPTION": "TxtBoxLabel",
+        "LONG_DESCRIPTION": "Label or caption for a textbox. Located above the textbox except in the Address input block, where it is located to the left of the textbox",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 8,
+        "SHORT_DESCRIPTION": "CalendarLabel1",
+        "LONG_DESCRIPTION": "Label or caption for a calendar widget  (mm/dd/yyyy)",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 9,
+        "SHORT_DESCRIPTION": "MonthYearLabel",
+        "LONG_DESCRIPTION": "Label used for \"FROM\" and \"TO\" in the Address Input pop-up",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 10,
+        "SHORT_DESCRIPTION": "SubQ_TxtBoxLabel",
+        "LONG_DESCRIPTION": "Textbox that is a conditional sub-question of another element",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 11,
+        "SHORT_DESCRIPTION": "Matrix_LastCol_Drop",
+        "LONG_DESCRIPTION": "Used as a stand-in for a drop-down list box that is found in the last column of a matrix",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 12,
+        "SHORT_DESCRIPTION": "Normal",
+        "LONG_DESCRIPTION": "Normal text",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 13,
+        "SHORT_DESCRIPTION": "CheckboxLabelRight",
+        "LONG_DESCRIPTION": "Label or caption for a single checkbox located to the right the checkbox",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 14,
+        "SHORT_DESCRIPTION": "HugeCharsOnPage",
+        "LONG_DESCRIPTION": "Huge characters on a page used to introduce an important shift in the reference time period.",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 15,
+        "SHORT_DESCRIPTION": "Further_Instructions",
+        "LONG_DESCRIPTION": "Further instructions below a question, possibly in grey.",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 16,
+        "SHORT_DESCRIPTION": "Dummy",
+        "LONG_DESCRIPTION": "Dummy format category.  No displayed text.  Used to reference a variable.",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 17,
+        "SHORT_DESCRIPTION": "Picture",
+        "LONG_DESCRIPTION": "URL to a static picture",
+        "CCS_CLASS": null
+    },
+    {
+        "ID": 18,
+        "SHORT_DESCRIPTION": "TxtBoxLabel_w_units",
+        "LONG_DESCRIPTION": "Label or caption for a textbox. Located above the textbox.  Unit of measure shown to the right of the textbox",
+        "CCS_CLASS": null
+    }
+]
