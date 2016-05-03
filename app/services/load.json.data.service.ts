@@ -32,6 +32,10 @@ export class LoadJsonDataService {
         this._questions = JSON.parse(QUESTIONS_JSON);
         this._tooltips = JSON.parse(TOOLTIPS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
+        
+        // xyzzy5
+        // Create an observable for each file
+        
 
     }
 
