@@ -22,6 +22,9 @@ import { ValidationService } from './validation.service';
 
 @Injectable()
 export class LoadJsonDataService {
+    allDataLoaded = false;
+    BASE_PATH = 'app/seed-data/raw-json/';
+
     display_conditions: DisplayCondition[];
     domains: Domain[];
     references: Reference[];
@@ -30,10 +33,14 @@ export class LoadJsonDataService {
     survey_page_sre: SurveyPageSre[];
     tooltips: Tooltip[];
 
+    tooltipsPromise: Promise<Tooltip[]>;
+    tootltipsPromiseStarted = false;
+
     private _domainOptions: DomainOptions;
     private _questions: Question[];
     private _tooltips: Tooltip[];
     private _matrixElements: MatrixElement[];
+
 
     constructor(
         private http: Http,
@@ -52,8 +59,33 @@ export class LoadJsonDataService {
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
 
         // xyzzy5
-        this.readJsonFiles();
+        //this.readJsonFilesObservableForkJoin();
+        this.readJsonFilesPromiseAll();
     }
+
+    getTooltips(): Promise<Tooltip[]> {
+        let that = this;
+
+        if (!this.tooltipsPromise) {
+            this.tooltipsPromise = this.http.get(this.BASE_PATH + 'tooltips.json')
+                .map((res: Response) => res.json())
+                .toPromise()
+                .then(
+                data => {
+                    that.tooltips = data;
+                    console.log('Tooltips' + that.tooltips[1].definition);
+                    return that.tooltips;
+                });
+        }
+
+        return this.tooltipsPromise;
+    }
+
+    // return Promise.resolve(this.allDataLoaded).then(
+    //   heroes => heroes.filter(hero => hero.id === id)[0]
+    // );
+
+
 
     getDomainOptions() {
         return this._domainOptions;
@@ -79,24 +111,17 @@ export class LoadJsonDataService {
     //     return this._matrixElements.filter(i => i.id === id);
     // }
 
-    readJsonFiles() {
+    readJsonFilesObservableForkJoin() {
         let that = this;
-        const BASE_PATH = 'app/seed-data/raw-json/';
-        // let temp = this.http.get(BASE_PATH + 'original_survey_metadata.json');
-        // // Call map on the response observable to get the parsed people object
-        // temp.map(res => res.json())
-        //   // Subscribe to the observable to get the parsed people object and attach it to the
-        //   // component
-        //   .subscribe(data => { this.data = data; console.log(data); });
 
         Observable.forkJoin(
-            this.http.get(BASE_PATH + 'display_conditions.json').map((res: Response) => res.json()),
-            this.http.get(BASE_PATH + 'domains.json').map((res: Response) => res.json()),
-            this.http.get(BASE_PATH + 'references.json').map((res: Response) => res.json()),
-            this.http.get(BASE_PATH + 'sre.json').map((res: Response) => res.json()),
-            this.http.get(BASE_PATH + 'subu.json').map((res: Response) => res.json()),
-            this.http.get(BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()),
-            this.http.get(BASE_PATH + 'tooltips.json').map((res: Response) => res.json())
+            this.http.get(this.BASE_PATH + 'display_conditions.json').map((res: Response) => res.json()),
+            this.http.get(this.BASE_PATH + 'domains.json').map((res: Response) => res.json()),
+            this.http.get(this.BASE_PATH + 'references.json').map((res: Response) => res.json()),
+            this.http.get(this.BASE_PATH + 'sre.json').map((res: Response) => res.json()),
+            this.http.get(this.BASE_PATH + 'subu.json').map((res: Response) => res.json()),
+            this.http.get(this.BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()),
+            this.http.get(this.BASE_PATH + 'tooltips.json').map((res: Response) => res.json())
         ).subscribe(
             data => {
                 let i = 0;
@@ -118,5 +143,42 @@ export class LoadJsonDataService {
             },
             err => console.error(err)
             );
+    }
+
+    readJsonFilesPromiseAll() {
+        let that = this;
+        const BASE_PATH = 'app/seed-data/raw-json/';
+
+        let promise1 = this.http.get(BASE_PATH + 'display_conditions.json').map((res: Response) => res.json()).toPromise();
+        let promise2 = this.http.get(BASE_PATH + 'domains.json').map((res: Response) => res.json()).toPromise();
+        let promise3 = this.http.get(BASE_PATH + 'references.json').map((res: Response) => res.json()).toPromise();
+        let promise4 = this.http.get(BASE_PATH + 'sre.json').map((res: Response) => res.json()).toPromise();
+        let promise5 = this.http.get(BASE_PATH + 'subu.json').map((res: Response) => res.json()).toPromise();
+        let promise6 = this.http.get(BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()).toPromise();
+        let promise7 = this.http.get(BASE_PATH + 'tooltips.json').map((res: Response) => res.json()).toPromise();
+
+        Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7])
+            .then(
+            data => {
+                console.log('xyzzy: ' + data.length);
+                let i = 0;
+                let dataCast: any[] = data;
+                that.display_conditions = dataCast[i++];
+                that.domains = dataCast[i++];
+                that.references = dataCast[i++];
+                that.sre = dataCast[i++];
+                that.subu = dataCast[i++];
+                that.survey_page_sre = dataCast[i++];
+                that.tooltips = dataCast[i++];
+
+                console.log(that.survey_page_sre[6].seq_pag_id);
+                console.log(that.subu[6].subu_sort_order);
+                console.log(that.sre[6].sre_anca_id);
+                console.log(that.tooltips[1].definition);
+                console.log(that.display_conditions[1].relation);
+                console.log(that.domains[3].value);
+                console.log(that.references[3].reference_txt);
+                this.allDataLoaded = true;
+            });
     }
 }

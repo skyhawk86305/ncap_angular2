@@ -1,5 +1,8 @@
 import { Component, OnInit} from 'angular2/core';
 import {Http, HTTP_PROVIDERS} from 'angular2/http';
+
+import { Tooltip } from '../../types/database-data/tooltip';
+
 // import {Observable} from 'rxjs/Rx';
 // import {Response} from 'angular2/http';
 
@@ -26,10 +29,14 @@ export class TestPageComponent implements OnInit {
     }
 
     ngOnInit() {
+        return this._loadJsonDataService.getTooltips().then(data => {
+            console.log("In test-page ngOnInit tooltips count v1: " + data.length);
+            console.log("In test-page ngOnInit tooltips count v2: " + this._loadJsonDataService.tooltips.length);
+        }
+        );
     }
-    
-    click()
-    {
+
+    click() {
         console.log(this._loadJsonDataService.tooltips[0].definition);
     }
 
