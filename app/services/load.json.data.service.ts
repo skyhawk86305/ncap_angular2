@@ -23,7 +23,7 @@ export class LoadJsonDataService {
     allDataBaseData: AllDataBaseData;
 
     tooltipsPromise: Promise<Tooltip[]>;
-    tootltipsPromiseStarted = false;
+    allDataBaseDataPromise: Promise<AllDataBaseData>;
 
     private _domainOptions: DomainOptions;
     private _questions: Question[];
@@ -130,7 +130,15 @@ export class LoadJsonDataService {
             );
     }
 
-    readJsonFilesPromiseAll() {
+    getAllDataXyzzy(): Promise<AllDataBaseData> {
+        if (!this.allDataBaseDataPromise) {
+            this.allDataBaseDataPromise = this.readJsonFilesPromiseAll();
+        }
+
+        return this.allDataBaseDataPromise;
+    }
+
+    readJsonFilesPromiseAll(): Promise<AllDataBaseData> {
         let that = this;
         const BASE_PATH = 'app/seed-data/raw-json/';
 
@@ -142,13 +150,13 @@ export class LoadJsonDataService {
         let promise6 = this.http.get(BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()).toPromise();
         let promise7 = this.http.get(BASE_PATH + 'tooltips.json').map((res: Response) => res.json()).toPromise();
 
-        Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7])
+        return Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7])
             .then(
             data => {
                 //console.log('xyzzy: ' + data.length);
                 let i = 0;
                 let dataCast: any[] = data;
-                
+
                 that.allDataBaseData = new AllDataBaseData();
                 that.allDataBaseData.displayConditions = dataCast[i++];
                 that.allDataBaseData.domains = dataCast[i++];
@@ -166,6 +174,8 @@ export class LoadJsonDataService {
                 console.log(that.allDataBaseData.domains[3].value);
                 console.log(that.allDataBaseData.references[3].reference_txt);
                 this.allDataLoaded = true;
+
+                return that.allDataBaseData;
             });
     }
 }

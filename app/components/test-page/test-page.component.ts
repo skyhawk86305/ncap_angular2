@@ -29,11 +29,18 @@ export class TestPageComponent implements OnInit {
     }
 
     ngOnInit() {
-        return this._loadJsonDataService.getTooltips().then(data => {
-            console.log("In test-page ngOnInit tooltips count v1: " + data.length);
-//            console.log("In test-page ngOnInit tooltips count v2: " + this._loadJsonDataService.tooltips.length);
+        // this._loadJsonDataService.getTooltips().then(data => {
+        //     console.log("In test-page ngOnInit tooltips count v1: " + data.length);
+        //     //            console.log("In test-page ngOnInit tooltips count v2: " + this._loadJsonDataService.tooltips.length);
+        // }
+        // );
+
+        this._loadJsonDataService.getAllDataXyzzy().then(data => {
+            //console.log("In test-page ngOnInit tooltips count v1: " + data.length);
+            console.log("In test-page ngOnInit tooltips count v4: " + this._loadJsonDataService.allDataBaseData.tooltips.length);
         }
         );
+
     }
 
     click() {
