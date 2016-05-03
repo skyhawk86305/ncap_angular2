@@ -7,6 +7,7 @@ import { SurveyPageSre } from '../../types/database-data/survey-page-sre';
 import { Subu } from '../../types/database-data/subu';
 import { Sre } from '../../types/database-data/sre';
 import { Tooltip } from '../../types/database-data/tooltip';
+import { DisplayCondition } from '../../types/database-data/display-condition';
 
 @Component({
   selector: 'http-app',
@@ -14,7 +15,7 @@ import { Tooltip } from '../../types/database-data/tooltip';
   templateUrl: 'app/components/test-page/test-page.html'
 })
 export class TestPageComponent implements OnInit {
-  display_conditions: any;
+  display_conditions: DisplayCondition[];
   domains: any;
   references: any;
   sre: Sre[];
@@ -85,6 +86,7 @@ export class TestPageComponent implements OnInit {
         console.log(that.subu[6].subu_sort_order);
         console.log(that.sre[6].sre_anca_id);
         console.log(that.tooltips[1].definition);
+        console.log(that.display_conditions[1].relation);
         // console.log(that.tooltips);
       },
       err => console.error(err)
