@@ -4,6 +4,8 @@ import {Observable} from 'rxjs/Rx';
 import {Response} from 'angular2/http';
 
 import { SurveyPageSre } from '../../types/database-data/survey-page-sre';
+import { Subu } from '../../types/database-data/subu';
+import { Sre } from '../../types/database-data/sre';
 
 @Component({
   selector: 'http-app',
@@ -17,8 +19,8 @@ export class TestPageComponent implements OnInit {
   foca: any;
   //original_survey_metadata: any;
   references: any;
-  sre: any;
-  subu: any;
+  sre: Sre[];
+  subu: Subu[];
   survey_metadata: any;
   survey_page_sre: SurveyPageSre[];
   tooltips: any;
@@ -41,25 +43,25 @@ export class TestPageComponent implements OnInit {
     //   .subscribe(data => { this.data = data; console.log(data); });
 
     Observable.forkJoin(
-      //this.http.get(BASE_PATH + 'anca.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'display_conditions.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'domains.json').map((res: Response) => res.json()),
-      this.http.get(BASE_PATH + 'foca.json').map((res: Response) => res.json()),
-      //this.http.get(BASE_PATH + 'original_survey_metadata.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'references.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'sre.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'subu.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'survey_metadata.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'tooltips.json').map((res: Response) => res.json())
+
+      // this.http.get(BASE_PATH + 'foca.json').map((res: Response) => res.json()),
+      //this.http.get(BASE_PATH + 'anca.json').map((res: Response) => res.json()),
+      //this.http.get(BASE_PATH + 'original_survey_metadata.json').map((res: Response) => res.json()),
+
     ).subscribe(
       data => {
         let i = 0;
-        //this.anca = data[0];
+
         this.display_conditions = data[i++];
         this.domains = data[i++];
-        this.foca = data[i++];
-        //this.original_survey_metadata = data[4];
         this.references = data[i++];
         this.sre = data[i++];
         this.subu = data[i++];
@@ -77,6 +79,8 @@ export class TestPageComponent implements OnInit {
         // console.log(this.subu);
         // console.log(this.survey_metadata);
         console.log(this.survey_page_sre[6].SEQ_PAG_ID);
+        console.log(this.subu[6].SUBU_SORT_ORDER);
+        console.log(this.sre[6].SRE_ANCA_ID);
         // console.log(this.tooltips);
       },
       err => console.error(err)
