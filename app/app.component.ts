@@ -4,6 +4,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { PageControllerComponent } from './components/page-controller/page-controller.component';
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
+import { TestPageComponent } from './components/test-page/test-page.component';
 
 import { ApplicationStateService } from '../app/services/application.state.service';
 import { LoadJsonDataService } from '../app/services/load.json.data.service';
@@ -50,6 +51,11 @@ import { ValidationService } from '../app/services/validation.service';
     path: '/diag',
     name: 'Diag',
     component: DiagnosticComponent
+  },
+  {
+    path: '/test',
+    name: 'TestPage',
+    component: TestPageComponent
   }
 ])
 export class AppComponent {

@@ -9,8 +9,6 @@ import { QUESTIONS_JSON } from '../../app/seed-data/questions.json';
 import { TOOLTIPS_JSON } from '../../app/seed-data/tooltips.json';
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
-import { SURVEY_DATA_JSON } from '../../app/seed-data/survey_metadata.json';
-
 import { ValidationService } from './validation.service';
 
 @Injectable()
@@ -34,9 +32,7 @@ export class LoadJsonDataService {
         this._questions = JSON.parse(QUESTIONS_JSON);
         this._tooltips = JSON.parse(TOOLTIPS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
-        
-        // xyzzy var rawData = JSON.parse(SURVEY_DATA_JSON);
-        
+
     }
 
     getDomainOptions() {
