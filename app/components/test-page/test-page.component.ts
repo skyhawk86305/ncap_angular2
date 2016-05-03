@@ -8,6 +8,9 @@ import { Subu } from '../../types/database-data/subu';
 import { Sre } from '../../types/database-data/sre';
 import { Tooltip } from '../../types/database-data/tooltip';
 import { DisplayCondition } from '../../types/database-data/display-condition';
+import { Domain } from '../../types/database-data/domain';
+import { Reference } from '../../types/database-data/reference';
+
 
 @Component({
   selector: 'http-app',
@@ -16,11 +19,10 @@ import { DisplayCondition } from '../../types/database-data/display-condition';
 })
 export class TestPageComponent implements OnInit {
   display_conditions: DisplayCondition[];
-  domains: any;
-  references: any;
+  domains: Domain[];
+  references: Reference[];
   sre: Sre[];
   subu: Subu[];
-  survey_metadata: any;
   survey_page_sre: SurveyPageSre[];
   tooltips: Tooltip[];
 
@@ -52,7 +54,6 @@ export class TestPageComponent implements OnInit {
       this.http.get(BASE_PATH + 'references.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'sre.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'subu.json').map((res: Response) => res.json()),
-      this.http.get(BASE_PATH + 'survey_metadata.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()),
       this.http.get(BASE_PATH + 'tooltips.json').map((res: Response) => res.json())
 
@@ -69,7 +70,6 @@ export class TestPageComponent implements OnInit {
         that.references = data[i++];
         that.sre = data[i++];
         that.subu = data[i++];
-        that.survey_metadata = data[i++];
         that.survey_page_sre = data[i++];
         that.tooltips = data[i++];
 
@@ -81,12 +81,13 @@ export class TestPageComponent implements OnInit {
         // console.log(that.references);
         // console.log(that.sre);
         // console.log(that.subu);
-        // console.log(that.survey_metadata);
         console.log(that.survey_page_sre[6].seq_pag_id);
         console.log(that.subu[6].subu_sort_order);
         console.log(that.sre[6].sre_anca_id);
         console.log(that.tooltips[1].definition);
         console.log(that.display_conditions[1].relation);
+        console.log(that.domains[3].value);
+        console.log(that.references[3].reference_txt);
         // console.log(that.tooltips);
       },
       err => console.error(err)
