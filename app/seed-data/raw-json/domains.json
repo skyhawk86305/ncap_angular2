@@ -1,2949 +1,2949 @@
 [
     {
-        "ID": 43,
-        "DOMAIN_TYPE": "DOM_ADIN_UNSURE_FOREIGN",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Unsure of address during this time period"
+        "id": 43,
+        "domain_type": "DOM_ADIN_UNSURE_FOREIGN",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Unsure of address during this time period"
     },
     {
-        "ID": 43,
-        "DOMAIN_TYPE": "DOM_ADIN_UNSURE_FOREIGN",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Lived outside of the 50 US states and the District of Columbia during this time period"
+        "id": 43,
+        "domain_type": "DOM_ADIN_UNSURE_FOREIGN",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Lived outside of the 50 US states and the District of Columbia during this time period"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Less than 12 months"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Less than 12 months"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "12-17 months"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 2,
+        "name": 2,
+        "value": "12-17 months"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "18-23 months"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 3,
+        "name": 3,
+        "value": "18-23 months"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "2 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 4,
+        "name": 4,
+        "value": "2 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "3 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 5,
+        "name": 5,
+        "value": "3 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "4 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 6,
+        "name": 6,
+        "value": "4 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "5 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 7,
+        "name": 7,
+        "value": "5 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "6 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 8,
+        "name": 8,
+        "value": "6 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "7 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 9,
+        "name": 9,
+        "value": "7 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "8 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 10,
+        "name": 10,
+        "value": "8 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "9 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 11,
+        "name": 11,
+        "value": "9 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "10-12 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 12,
+        "name": 12,
+        "value": "10-12 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "13-15 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 13,
+        "name": 13,
+        "value": "13-15 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 14,
-        "NAME": 14,
-        "VALUE": "16-17 years"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 14,
+        "name": 14,
+        "value": "16-17 years"
     },
     {
-        "ID": 1,
-        "DOMAIN_TYPE": "DOM_AGE_1",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "Don\\'t know"
+        "id": 1,
+        "domain_type": "DOM_AGE_1",
+        "sort_order": 15,
+        "name": 15,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Less than 12 months"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Less than 12 months"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "12-17 months"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 2,
+        "name": 2,
+        "value": "12-17 months"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "18-23 months"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 3,
+        "name": 3,
+        "value": "18-23 months"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "2 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 4,
+        "name": 4,
+        "value": "2 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "3 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 5,
+        "name": 5,
+        "value": "3 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "4 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 6,
+        "name": 6,
+        "value": "4 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "5 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 7,
+        "name": 7,
+        "value": "5 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "6 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 8,
+        "name": 8,
+        "value": "6 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "7 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 9,
+        "name": 9,
+        "value": "7 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "8 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 10,
+        "name": 10,
+        "value": "8 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "9 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 11,
+        "name": 11,
+        "value": "9 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "10-12 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 12,
+        "name": 12,
+        "value": "10-12 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "13-15 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 13,
+        "name": 13,
+        "value": "13-15 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 14,
-        "NAME": 14,
-        "VALUE": "16-17 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 14,
+        "name": 14,
+        "value": "16-17 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "More than 18 years"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 15,
+        "name": 15,
+        "value": "More than 18 years"
     },
     {
-        "ID": 2,
-        "DOMAIN_TYPE": "DOM_AGE_1_A",
-        "SORT_ORDER": 16,
-        "NAME": 16,
-        "VALUE": "Don\\'t know"
+        "id": 2,
+        "domain_type": "DOM_AGE_1_A",
+        "sort_order": 16,
+        "name": 16,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Less than 6 months"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Less than 6 months"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "6-11 months"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 2,
+        "name": 2,
+        "value": "6-11 months"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "12-17 months"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 3,
+        "name": 3,
+        "value": "12-17 months"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "18-23 months"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 4,
+        "name": 4,
+        "value": "18-23 months"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "2 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 5,
+        "name": 5,
+        "value": "2 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "3 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 6,
+        "name": 6,
+        "value": "3 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "4 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 7,
+        "name": 7,
+        "value": "4 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "5 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 8,
+        "name": 8,
+        "value": "5 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "6 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 9,
+        "name": 9,
+        "value": "6 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "7 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 10,
+        "name": 10,
+        "value": "7 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "8 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 11,
+        "name": 11,
+        "value": "8 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "9 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 12,
+        "name": 12,
+        "value": "9 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "10-12 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 13,
+        "name": 13,
+        "value": "10-12 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 14,
-        "NAME": 14,
-        "VALUE": "13-15 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 14,
+        "name": 14,
+        "value": "13-15 years"
     },
     {
-        "ID": 3,
-        "DOMAIN_TYPE": "DOM_AGE_2",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "16-17 years"
+        "id": 3,
+        "domain_type": "DOM_AGE_2",
+        "sort_order": 15,
+        "name": 15,
+        "value": "16-17 years"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Less than 12 months"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Less than 12 months"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "12-17 months"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 2,
+        "name": 2,
+        "value": "12-17 months"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "18-23 months"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 3,
+        "name": 3,
+        "value": "18-23 months"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "2 years"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 4,
+        "name": 4,
+        "value": "2 years"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "3 years"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 5,
+        "name": 5,
+        "value": "3 years"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "4-6 years"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 6,
+        "name": 6,
+        "value": "4-6 years"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "7 years or older"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 7,
+        "name": 7,
+        "value": "7 years or older"
     },
     {
-        "ID": 4,
-        "DOMAIN_TYPE": "DOM_AGE_3",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "Don\\'t know"
+        "id": 4,
+        "domain_type": "DOM_AGE_3",
+        "sort_order": 8,
+        "name": 8,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "12"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 1,
+        "name": 1,
+        "value": "12"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "13"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 2,
+        "name": 2,
+        "value": "13"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "14"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 3,
+        "name": 3,
+        "value": "14"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "15"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 4,
+        "name": 4,
+        "value": "15"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "16"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 5,
+        "name": 5,
+        "value": "16"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "17"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 6,
+        "name": 6,
+        "value": "17"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "18"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 7,
+        "name": 7,
+        "value": "18"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "19"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 8,
+        "name": 8,
+        "value": "19"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "20"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 9,
+        "name": 9,
+        "value": "20"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "21"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 10,
+        "name": 10,
+        "value": "21"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "22"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 11,
+        "name": 11,
+        "value": "22"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "23"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 12,
+        "name": 12,
+        "value": "23"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "24"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 13,
+        "name": 13,
+        "value": "24"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 14,
-        "NAME": 14,
-        "VALUE": "25"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 14,
+        "name": 14,
+        "value": "25"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "26"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 15,
+        "name": 15,
+        "value": "26"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 16,
-        "NAME": 16,
-        "VALUE": "27"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 16,
+        "name": 16,
+        "value": "27"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 17,
-        "NAME": 17,
-        "VALUE": "28"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 17,
+        "name": 17,
+        "value": "28"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 18,
-        "NAME": 18,
-        "VALUE": "29"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 18,
+        "name": 18,
+        "value": "29"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 19,
-        "NAME": 19,
-        "VALUE": "30"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 19,
+        "name": 19,
+        "value": "30"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 20,
-        "NAME": 20,
-        "VALUE": "31"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 20,
+        "name": 20,
+        "value": "31"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 21,
-        "NAME": 21,
-        "VALUE": "32"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 21,
+        "name": 21,
+        "value": "32"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 22,
-        "NAME": 22,
-        "VALUE": "33"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 22,
+        "name": 22,
+        "value": "33"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 23,
-        "NAME": 23,
-        "VALUE": "34"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 23,
+        "name": 23,
+        "value": "34"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 24,
-        "NAME": 24,
-        "VALUE": "35"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 24,
+        "name": 24,
+        "value": "35"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 25,
-        "NAME": 25,
-        "VALUE": "36"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 25,
+        "name": 25,
+        "value": "36"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 26,
-        "NAME": 26,
-        "VALUE": "37"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 26,
+        "name": 26,
+        "value": "37"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 27,
-        "NAME": 27,
-        "VALUE": "38"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 27,
+        "name": 27,
+        "value": "38"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 28,
-        "NAME": 28,
-        "VALUE": "39"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 28,
+        "name": 28,
+        "value": "39"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 29,
-        "NAME": 29,
-        "VALUE": "40"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 29,
+        "name": 29,
+        "value": "40"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 30,
-        "NAME": 30,
-        "VALUE": "41"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 30,
+        "name": 30,
+        "value": "41"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 31,
-        "NAME": 31,
-        "VALUE": "42"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 31,
+        "name": 31,
+        "value": "42"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 32,
-        "NAME": 32,
-        "VALUE": "43"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 32,
+        "name": 32,
+        "value": "43"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 33,
-        "NAME": 33,
-        "VALUE": "44"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 33,
+        "name": 33,
+        "value": "44"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 34,
-        "NAME": 34,
-        "VALUE": "45"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 34,
+        "name": 34,
+        "value": "45"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 35,
-        "NAME": 35,
-        "VALUE": "46"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 35,
+        "name": 35,
+        "value": "46"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 36,
-        "NAME": 36,
-        "VALUE": "47"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 36,
+        "name": 36,
+        "value": "47"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 37,
-        "NAME": 37,
-        "VALUE": "48"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 37,
+        "name": 37,
+        "value": "48"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 38,
-        "NAME": 38,
-        "VALUE": "49"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 38,
+        "name": 38,
+        "value": "49"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 39,
-        "NAME": 39,
-        "VALUE": "50"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 39,
+        "name": 39,
+        "value": "50"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 40,
-        "NAME": 40,
-        "VALUE": "51"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 40,
+        "name": 40,
+        "value": "51"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 41,
-        "NAME": 41,
-        "VALUE": "52"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 41,
+        "name": 41,
+        "value": "52"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 42,
-        "NAME": 42,
-        "VALUE": "53"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 42,
+        "name": 42,
+        "value": "53"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 43,
-        "NAME": 43,
-        "VALUE": "54"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 43,
+        "name": 43,
+        "value": "54"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 44,
-        "NAME": 44,
-        "VALUE": "55"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 44,
+        "name": 44,
+        "value": "55"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 45,
-        "NAME": 45,
-        "VALUE": "Over 55"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 45,
+        "name": 45,
+        "value": "Over 55"
     },
     {
-        "ID": 5,
-        "DOMAIN_TYPE": "DOM_AGE_4",
-        "SORT_ORDER": 46,
-        "NAME": 46,
-        "VALUE": "Don\\'t know"
+        "id": 5,
+        "domain_type": "DOM_AGE_4",
+        "sort_order": 46,
+        "name": 46,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 6,
-        "DOMAIN_TYPE": "DOM_AGE_5",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "0-3 months"
+        "id": 6,
+        "domain_type": "DOM_AGE_5",
+        "sort_order": 1,
+        "name": 1,
+        "value": "0-3 months"
     },
     {
-        "ID": 6,
-        "DOMAIN_TYPE": "DOM_AGE_5",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "4-6 months"
+        "id": 6,
+        "domain_type": "DOM_AGE_5",
+        "sort_order": 2,
+        "name": 2,
+        "value": "4-6 months"
     },
     {
-        "ID": 6,
-        "DOMAIN_TYPE": "DOM_AGE_5",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "7-12 months"
+        "id": 6,
+        "domain_type": "DOM_AGE_5",
+        "sort_order": 3,
+        "name": 3,
+        "value": "7-12 months"
     },
     {
-        "ID": 6,
-        "DOMAIN_TYPE": "DOM_AGE_5",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "More than 12 months"
+        "id": 6,
+        "domain_type": "DOM_AGE_5",
+        "sort_order": 4,
+        "name": 4,
+        "value": "More than 12 months"
     },
     {
-        "ID": 6,
-        "DOMAIN_TYPE": "DOM_AGE_5",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "Don\\'t know"
+        "id": 6,
+        "domain_type": "DOM_AGE_5",
+        "sort_order": 5,
+        "name": 5,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Less than 12 months"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Less than 12 months"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "12-17 months"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 2,
+        "name": 2,
+        "value": "12-17 months"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "18-23 months"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 3,
+        "name": 3,
+        "value": "18-23 months"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "2 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 4,
+        "name": 4,
+        "value": "2 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "3 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 5,
+        "name": 5,
+        "value": "3 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "4 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 6,
+        "name": 6,
+        "value": "4 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "5 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 7,
+        "name": 7,
+        "value": "5 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "6 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 8,
+        "name": 8,
+        "value": "6 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "7 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 9,
+        "name": 9,
+        "value": "7 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "8 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 10,
+        "name": 10,
+        "value": "8 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "9 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 11,
+        "name": 11,
+        "value": "9 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "10-12 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 12,
+        "name": 12,
+        "value": "10-12 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "13-15 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 13,
+        "name": 13,
+        "value": "13-15 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 14,
-        "NAME": 14,
-        "VALUE": "16-17 years"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 14,
+        "name": 14,
+        "value": "16-17 years"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "Don\\'t know"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 15,
+        "name": 15,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 7,
-        "DOMAIN_TYPE": "DOM_AGE_6",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "No concern before ASD diagnosis was given"
+        "id": 7,
+        "domain_type": "DOM_AGE_6",
+        "sort_order": 15,
+        "name": 15,
+        "value": "No concern before ASD diagnosis was given"
     },
     {
-        "ID": 8,
-        "DOMAIN_TYPE": "DOM_ASD_DIAG_SRC",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Professional in a health care setting"
+        "id": 8,
+        "domain_type": "DOM_ASD_DIAG_SRC",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Professional in a health care setting"
     },
     {
-        "ID": 8,
-        "DOMAIN_TYPE": "DOM_ASD_DIAG_SRC",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Professional in an educational setting"
+        "id": 8,
+        "domain_type": "DOM_ASD_DIAG_SRC",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Professional in an educational setting"
     },
     {
-        "ID": 8,
-        "DOMAIN_TYPE": "DOM_ASD_DIAG_SRC",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Don\\'t know"
+        "id": 8,
+        "domain_type": "DOM_ASD_DIAG_SRC",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 8,
-        "DOMAIN_TYPE": "DOM_ASD_DIAG_SRC",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Other"
+        "id": 8,
+        "domain_type": "DOM_ASD_DIAG_SRC",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Other"
     },
     {
-        "ID": 9,
-        "DOMAIN_TYPE": "DOM_DUMMY_RES",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Dummy"
+        "id": 9,
+        "domain_type": "DOM_DUMMY_RES",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Dummy"
     },
     {
-        "ID": 39,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_LEGALREP",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Write code for Today minus 99 years"
+        "id": 39,
+        "domain_type": "DOM_D_MOTHER_DOB_LEGALREP",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Write code for Today minus 99 years"
     },
     {
-        "ID": 39,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_LEGALREP",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Write code for Today minus 10 years"
+        "id": 39,
+        "domain_type": "DOM_D_MOTHER_DOB_LEGALREP",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Write code for Today minus 10 years"
     },
     {
-        "ID": 39,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_LEGALREP",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Write code for Today minus 20 years"
+        "id": 39,
+        "domain_type": "DOM_D_MOTHER_DOB_LEGALREP",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Write code for Today minus 20 years"
     },
     {
-        "ID": 38,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_PARENT",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Write code for Today minus 99 years"
+        "id": 38,
+        "domain_type": "DOM_D_MOTHER_DOB_PARENT",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Write code for Today minus 99 years"
     },
     {
-        "ID": 38,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_PARENT",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Write code for Today minus 10 years"
+        "id": 38,
+        "domain_type": "DOM_D_MOTHER_DOB_PARENT",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Write code for Today minus 10 years"
     },
     {
-        "ID": 38,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_PARENT",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Write code for Today minus 20 years"
+        "id": 38,
+        "domain_type": "DOM_D_MOTHER_DOB_PARENT",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Write code for Today minus 20 years"
     },
     {
-        "ID": 40,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_SELFREPORT",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Write code for Today minus 99 years"
+        "id": 40,
+        "domain_type": "DOM_D_MOTHER_DOB_SELFREPORT",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Write code for Today minus 99 years"
     },
     {
-        "ID": 40,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_SELFREPORT",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Write code for Today minus 10 years"
+        "id": 40,
+        "domain_type": "DOM_D_MOTHER_DOB_SELFREPORT",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Write code for Today minus 10 years"
     },
     {
-        "ID": 40,
-        "DOMAIN_TYPE": "DOM_D_MOTHER_DOB_SELFREPORT",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Write code for Today minus 20 years"
+        "id": 40,
+        "domain_type": "DOM_D_MOTHER_DOB_SELFREPORT",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Write code for Today minus 20 years"
     },
     {
-        "ID": 36,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_LEGALREP",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Write code for Today minus 99 years"
+        "id": 36,
+        "domain_type": "DOM_D_PROBAND_DOB_LEGALREP",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Write code for Today minus 99 years"
     },
     {
-        "ID": 36,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_LEGALREP",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Write code for Today minus 18 years"
+        "id": 36,
+        "domain_type": "DOM_D_PROBAND_DOB_LEGALREP",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Write code for Today minus 18 years"
     },
     {
-        "ID": 36,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_LEGALREP",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Write code for Today minus 18 years"
+        "id": 36,
+        "domain_type": "DOM_D_PROBAND_DOB_LEGALREP",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Write code for Today minus 18 years"
     },
     {
-        "ID": 35,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_PARENT",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Write code for Today minus 17 years"
+        "id": 35,
+        "domain_type": "DOM_D_PROBAND_DOB_PARENT",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Write code for Today minus 17 years"
     },
     {
-        "ID": 35,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_PARENT",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Write code for Today minus 17 years"
+        "id": 35,
+        "domain_type": "DOM_D_PROBAND_DOB_PARENT",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Write code for Today minus 17 years"
     },
     {
-        "ID": 35,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_PARENT",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Write code for Today minus 17 years"
+        "id": 35,
+        "domain_type": "DOM_D_PROBAND_DOB_PARENT",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Write code for Today minus 17 years"
     },
     {
-        "ID": 37,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_SELFREPORT",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Write code for Today minus 99 years"
+        "id": 37,
+        "domain_type": "DOM_D_PROBAND_DOB_SELFREPORT",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Write code for Today minus 99 years"
     },
     {
-        "ID": 37,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_SELFREPORT",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Write code for Today minus 18 years"
+        "id": 37,
+        "domain_type": "DOM_D_PROBAND_DOB_SELFREPORT",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Write code for Today minus 18 years"
     },
     {
-        "ID": 37,
-        "DOMAIN_TYPE": "DOM_D_PROBAND_DOB_SELFREPORT",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Write code for Today minus 18 years"
+        "id": 37,
+        "domain_type": "DOM_D_PROBAND_DOB_SELFREPORT",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Write code for Today minus 18 years"
     },
     {
-        "ID": 42,
-        "DOMAIN_TYPE": "DOM_D_RES_YEAR",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Write code for earliest_year(residence_person)"
+        "id": 42,
+        "domain_type": "DOM_D_RES_YEAR",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Write code for earliest_year(residence_person)"
     },
     {
-        "ID": 42,
-        "DOMAIN_TYPE": "DOM_D_RES_YEAR",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Write code for Date().getFullYear()"
+        "id": 42,
+        "domain_type": "DOM_D_RES_YEAR",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Write code for Date().getFullYear()"
     },
     {
-        "ID": 42,
-        "DOMAIN_TYPE": "DOM_D_RES_YEAR",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": null
+        "id": 42,
+        "domain_type": "DOM_D_RES_YEAR",
+        "sort_order": 3,
+        "name": 3,
+        "value": null
     },
     {
-        "ID": 10,
-        "DOMAIN_TYPE": "DOM_EDU_LEVEL",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Less than high school (did not receive a high school diploma or equivalent)"
+        "id": 10,
+        "domain_type": "DOM_EDU_LEVEL",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Less than high school (did not receive a high school diploma or equivalent)"
     },
     {
-        "ID": 10,
-        "DOMAIN_TYPE": "DOM_EDU_LEVEL",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "High school graduate (or equivalent)"
+        "id": 10,
+        "domain_type": "DOM_EDU_LEVEL",
+        "sort_order": 2,
+        "name": 2,
+        "value": "High school graduate (or equivalent)"
     },
     {
-        "ID": 10,
-        "DOMAIN_TYPE": "DOM_EDU_LEVEL",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Some college (1-4 years, no degree)"
+        "id": 10,
+        "domain_type": "DOM_EDU_LEVEL",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Some college (1-4 years, no degree)"
     },
     {
-        "ID": 10,
-        "DOMAIN_TYPE": "DOM_EDU_LEVEL",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Associate\\'s degree (including occupational or academic degrees)"
+        "id": 10,
+        "domain_type": "DOM_EDU_LEVEL",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Associate\\'s degree (including occupational or academic degrees)"
     },
     {
-        "ID": 10,
-        "DOMAIN_TYPE": "DOM_EDU_LEVEL",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "Bachelor\\'s degree (BA, BS, AB, etc.)"
+        "id": 10,
+        "domain_type": "DOM_EDU_LEVEL",
+        "sort_order": 5,
+        "name": 5,
+        "value": "Bachelor\\'s degree (BA, BS, AB, etc.)"
     },
     {
-        "ID": 10,
-        "DOMAIN_TYPE": "DOM_EDU_LEVEL",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Master\\'s degree, professional school degree, or doctorate degree (MA, MS, MSW, MENG, MD, DDC, JD, PhD, ScD, EdD, etc.)"
+        "id": 10,
+        "domain_type": "DOM_EDU_LEVEL",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Master\\'s degree, professional school degree, or doctorate degree (MA, MS, MSW, MENG, MD, DDC, JD, PhD, ScD, EdD, etc.)"
     },
     {
-        "ID": 10,
-        "DOMAIN_TYPE": "DOM_EDU_LEVEL",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "Don\\'t know"
+        "id": 10,
+        "domain_type": "DOM_EDU_LEVEL",
+        "sort_order": 7,
+        "name": 7,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 11,
-        "DOMAIN_TYPE": "DOM_ETHNICITY",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Hispanic or Latino"
+        "id": 11,
+        "domain_type": "DOM_ETHNICITY",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Hispanic or Latino"
     },
     {
-        "ID": 11,
-        "DOMAIN_TYPE": "DOM_ETHNICITY",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Not Hispanic or Latino"
+        "id": 11,
+        "domain_type": "DOM_ETHNICITY",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Not Hispanic or Latino"
     },
     {
-        "ID": 11,
-        "DOMAIN_TYPE": "DOM_ETHNICITY",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Prefer not to answer"
+        "id": 11,
+        "domain_type": "DOM_ETHNICITY",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Prefer not to answer"
     },
     {
-        "ID": 13,
-        "DOMAIN_TYPE": "DOM_FREQ_1",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Always"
+        "id": 13,
+        "domain_type": "DOM_FREQ_1",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Always"
     },
     {
-        "ID": 13,
-        "DOMAIN_TYPE": "DOM_FREQ_1",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Often"
+        "id": 13,
+        "domain_type": "DOM_FREQ_1",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Often"
     },
     {
-        "ID": 13,
-        "DOMAIN_TYPE": "DOM_FREQ_1",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Sometimes"
+        "id": 13,
+        "domain_type": "DOM_FREQ_1",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Sometimes"
     },
     {
-        "ID": 13,
-        "DOMAIN_TYPE": "DOM_FREQ_1",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Rarely"
+        "id": 13,
+        "domain_type": "DOM_FREQ_1",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Rarely"
     },
     {
-        "ID": 13,
-        "DOMAIN_TYPE": "DOM_FREQ_1",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "Never"
+        "id": 13,
+        "domain_type": "DOM_FREQ_1",
+        "sort_order": 5,
+        "name": 5,
+        "value": "Never"
     },
     {
-        "ID": 13,
-        "DOMAIN_TYPE": "DOM_FREQ_1",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Don\\'t know"
+        "id": 13,
+        "domain_type": "DOM_FREQ_1",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 14,
-        "DOMAIN_TYPE": "DOM_FREQ_2",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Never"
+        "id": 14,
+        "domain_type": "DOM_FREQ_2",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Never"
     },
     {
-        "ID": 14,
-        "DOMAIN_TYPE": "DOM_FREQ_2",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Less than once per week"
+        "id": 14,
+        "domain_type": "DOM_FREQ_2",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Less than once per week"
     },
     {
-        "ID": 14,
-        "DOMAIN_TYPE": "DOM_FREQ_2",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "1-6 times per week"
+        "id": 14,
+        "domain_type": "DOM_FREQ_2",
+        "sort_order": 3,
+        "name": 3,
+        "value": "1-6 times per week"
     },
     {
-        "ID": 14,
-        "DOMAIN_TYPE": "DOM_FREQ_2",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "1+ times per day"
+        "id": 14,
+        "domain_type": "DOM_FREQ_2",
+        "sort_order": 4,
+        "name": 4,
+        "value": "1+ times per day"
     },
     {
-        "ID": 14,
-        "DOMAIN_TYPE": "DOM_FREQ_2",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "Don\\'t know"
+        "id": 14,
+        "domain_type": "DOM_FREQ_2",
+        "sort_order": 5,
+        "name": 5,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 14,
-        "DOMAIN_TYPE": "DOM_FREQ_2",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Prefer not to answer"
+        "id": 14,
+        "domain_type": "DOM_FREQ_2",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Prefer not to answer"
     },
     {
-        "ID": 15,
-        "DOMAIN_TYPE": "DOM_FREQ_3",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Never"
+        "id": 15,
+        "domain_type": "DOM_FREQ_3",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Never"
     },
     {
-        "ID": 15,
-        "DOMAIN_TYPE": "DOM_FREQ_3",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Less than once per week"
+        "id": 15,
+        "domain_type": "DOM_FREQ_3",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Less than once per week"
     },
     {
-        "ID": 15,
-        "DOMAIN_TYPE": "DOM_FREQ_3",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "1-6 times per week"
+        "id": 15,
+        "domain_type": "DOM_FREQ_3",
+        "sort_order": 3,
+        "name": 3,
+        "value": "1-6 times per week"
     },
     {
-        "ID": 15,
-        "DOMAIN_TYPE": "DOM_FREQ_3",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "1-2 times per day"
+        "id": 15,
+        "domain_type": "DOM_FREQ_3",
+        "sort_order": 4,
+        "name": 4,
+        "value": "1-2 times per day"
     },
     {
-        "ID": 15,
-        "DOMAIN_TYPE": "DOM_FREQ_3",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "3 or more times per day"
+        "id": 15,
+        "domain_type": "DOM_FREQ_3",
+        "sort_order": 5,
+        "name": 5,
+        "value": "3 or more times per day"
     },
     {
-        "ID": 15,
-        "DOMAIN_TYPE": "DOM_FREQ_3",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Don\\'t know"
+        "id": 15,
+        "domain_type": "DOM_FREQ_3",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 15,
-        "DOMAIN_TYPE": "DOM_FREQ_3",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "Prefer not to answer"
+        "id": 15,
+        "domain_type": "DOM_FREQ_3",
+        "sort_order": 7,
+        "name": 7,
+        "value": "Prefer not to answer"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 3,
-        "NAME": 1,
-        "VALUE": "2"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 3,
+        "name": 1,
+        "value": "2"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 4,
-        "NAME": 2,
-        "VALUE": "3"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 4,
+        "name": 2,
+        "value": "3"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 5,
-        "NAME": 3,
-        "VALUE": "4"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 5,
+        "name": 3,
+        "value": "4"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 6,
-        "NAME": 4,
-        "VALUE": "5"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 6,
+        "name": 4,
+        "value": "5"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 7,
-        "NAME": 5,
-        "VALUE": "6"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 7,
+        "name": 5,
+        "value": "6"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 8,
-        "NAME": 6,
-        "VALUE": "7"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 8,
+        "name": 6,
+        "value": "7"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 9,
-        "NAME": 7,
-        "VALUE": "8"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 9,
+        "name": 7,
+        "value": "8"
     },
     {
-        "ID": 16,
-        "DOMAIN_TYPE": "DOM_HEIGHT_FT",
-        "SORT_ORDER": 10,
-        "NAME": 8,
-        "VALUE": "9"
+        "id": 16,
+        "domain_type": "DOM_HEIGHT_FT",
+        "sort_order": 10,
+        "name": 8,
+        "value": "9"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "0"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 1,
+        "name": 1,
+        "value": "0"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "1"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 2,
+        "name": 2,
+        "value": "1"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "2"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 3,
+        "name": 3,
+        "value": "2"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "3"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 4,
+        "name": 4,
+        "value": "3"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "4"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 5,
+        "name": 5,
+        "value": "4"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "5"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 6,
+        "name": 6,
+        "value": "5"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "6"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 7,
+        "name": 7,
+        "value": "6"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "7"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 8,
+        "name": 8,
+        "value": "7"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "8"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 9,
+        "name": 9,
+        "value": "8"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "9"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 10,
+        "name": 10,
+        "value": "9"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "10"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 11,
+        "name": 11,
+        "value": "10"
     },
     {
-        "ID": 17,
-        "DOMAIN_TYPE": "DOM_HEIGHT_IN",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "11"
+        "id": 17,
+        "domain_type": "DOM_HEIGHT_IN",
+        "sort_order": 12,
+        "name": 12,
+        "value": "11"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "January"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 1,
+        "name": 1,
+        "value": "January"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "February"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 2,
+        "name": 2,
+        "value": "February"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "March"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 3,
+        "name": 3,
+        "value": "March"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "April"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 4,
+        "name": 4,
+        "value": "April"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "May"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 5,
+        "name": 5,
+        "value": "May"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "June"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 6,
+        "name": 6,
+        "value": "June"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "July"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 7,
+        "name": 7,
+        "value": "July"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "August"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 8,
+        "name": 8,
+        "value": "August"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "September"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 9,
+        "name": 9,
+        "value": "September"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "October"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 10,
+        "name": 10,
+        "value": "October"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "November"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 11,
+        "name": 11,
+        "value": "November"
     },
     {
-        "ID": 41,
-        "DOMAIN_TYPE": "DOM_MONTH",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "December"
+        "id": 41,
+        "domain_type": "DOM_MONTH",
+        "sort_order": 12,
+        "name": 12,
+        "value": "December"
     },
     {
-        "ID": 18,
-        "DOMAIN_TYPE": "DOM_NUMBER_1",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "1"
+        "id": 18,
+        "domain_type": "DOM_NUMBER_1",
+        "sort_order": 1,
+        "name": 1,
+        "value": "1"
     },
     {
-        "ID": 18,
-        "DOMAIN_TYPE": "DOM_NUMBER_1",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "2"
+        "id": 18,
+        "domain_type": "DOM_NUMBER_1",
+        "sort_order": 2,
+        "name": 2,
+        "value": "2"
     },
     {
-        "ID": 18,
-        "DOMAIN_TYPE": "DOM_NUMBER_1",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "3"
+        "id": 18,
+        "domain_type": "DOM_NUMBER_1",
+        "sort_order": 3,
+        "name": 3,
+        "value": "3"
     },
     {
-        "ID": 18,
-        "DOMAIN_TYPE": "DOM_NUMBER_1",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "4"
+        "id": 18,
+        "domain_type": "DOM_NUMBER_1",
+        "sort_order": 4,
+        "name": 4,
+        "value": "4"
     },
     {
-        "ID": 18,
-        "DOMAIN_TYPE": "DOM_NUMBER_1",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "5+"
+        "id": 18,
+        "domain_type": "DOM_NUMBER_1",
+        "sort_order": 5,
+        "name": 5,
+        "value": "5+"
     },
     {
-        "ID": 18,
-        "DOMAIN_TYPE": "DOM_NUMBER_1",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Don\\'t know"
+        "id": 18,
+        "domain_type": "DOM_NUMBER_1",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 19,
-        "DOMAIN_TYPE": "DOM_NUMBER_2",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "0"
+        "id": 19,
+        "domain_type": "DOM_NUMBER_2",
+        "sort_order": 1,
+        "name": 1,
+        "value": "0"
     },
     {
-        "ID": 19,
-        "DOMAIN_TYPE": "DOM_NUMBER_2",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "1"
+        "id": 19,
+        "domain_type": "DOM_NUMBER_2",
+        "sort_order": 2,
+        "name": 2,
+        "value": "1"
     },
     {
-        "ID": 19,
-        "DOMAIN_TYPE": "DOM_NUMBER_2",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "2"
+        "id": 19,
+        "domain_type": "DOM_NUMBER_2",
+        "sort_order": 3,
+        "name": 3,
+        "value": "2"
     },
     {
-        "ID": 19,
-        "DOMAIN_TYPE": "DOM_NUMBER_2",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "3"
+        "id": 19,
+        "domain_type": "DOM_NUMBER_2",
+        "sort_order": 4,
+        "name": 4,
+        "value": "3"
     },
     {
-        "ID": 19,
-        "DOMAIN_TYPE": "DOM_NUMBER_2",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "4+"
+        "id": 19,
+        "domain_type": "DOM_NUMBER_2",
+        "sort_order": 5,
+        "name": 5,
+        "value": "4+"
     },
     {
-        "ID": 19,
-        "DOMAIN_TYPE": "DOM_NUMBER_2",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Don\\'t know"
+        "id": 19,
+        "domain_type": "DOM_NUMBER_2",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "0"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 1,
+        "name": 1,
+        "value": "0"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "1"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 2,
+        "name": 2,
+        "value": "1"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "2"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 3,
+        "name": 3,
+        "value": "2"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "3"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 4,
+        "name": 4,
+        "value": "3"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "4"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 5,
+        "name": 5,
+        "value": "4"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "5"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 6,
+        "name": 6,
+        "value": "5"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "6"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 7,
+        "name": 7,
+        "value": "6"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "7"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 8,
+        "name": 8,
+        "value": "7"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "8"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 9,
+        "name": 9,
+        "value": "8"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "9"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 10,
+        "name": 10,
+        "value": "9"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "10"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 11,
+        "name": 11,
+        "value": "10"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "11"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 12,
+        "name": 12,
+        "value": "11"
     },
     {
-        "ID": 45,
-        "DOMAIN_TYPE": "DOM_NUMBER_SIBLINGS",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "12"
+        "id": 45,
+        "domain_type": "DOM_NUMBER_SIBLINGS",
+        "sort_order": 13,
+        "name": 13,
+        "value": "12"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Work in an office environment"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Work in an office environment"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Retail/sales/cashier"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Retail/sales/cashier"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Food preparation/food server/waiter or waitress"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Food preparation/food server/waiter or waitress"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Health care worker/doctor/nurse"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Health care worker/doctor/nurse"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "Janitor/housekeeper"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 5,
+        "name": 5,
+        "value": "Janitor/housekeeper"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Warehouse/stockroom"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Warehouse/stockroom"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "Manufacturing/factory"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 7,
+        "name": 7,
+        "value": "Manufacturing/factory"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "Repair services/mechanic/plumber"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 8,
+        "name": 8,
+        "value": "Repair services/mechanic/plumber"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "Miner "
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 9,
+        "name": 9,
+        "value": "Miner "
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "Welder "
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 10,
+        "name": 10,
+        "value": "Welder "
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "Teacher/teacher\\'s aid"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 11,
+        "name": 11,
+        "value": "Teacher/teacher\\'s aid"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "Student"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 12,
+        "name": 12,
+        "value": "Student"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "Construction"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 13,
+        "name": 13,
+        "value": "Construction"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 14,
-        "NAME": 14,
-        "VALUE": "Laboratory technician/scientist"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 14,
+        "name": 14,
+        "value": "Laboratory technician/scientist"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "Public safety (police, firefighter, security guard)"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 15,
+        "name": 15,
+        "value": "Public safety (police, firefighter, security guard)"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 16,
-        "NAME": 16,
-        "VALUE": "Agriculture/farming"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 16,
+        "name": 16,
+        "value": "Agriculture/farming"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 17,
-        "NAME": 17,
-        "VALUE": "Stay-at-home parent"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 17,
+        "name": 17,
+        "value": "Stay-at-home parent"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 18,
-        "NAME": 18,
-        "VALUE": "Unemployed"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 18,
+        "name": 18,
+        "value": "Unemployed"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 19,
-        "NAME": 19,
-        "VALUE": "Unknown"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 19,
+        "name": 19,
+        "value": "Unknown"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 20,
-        "NAME": 20,
-        "VALUE": "Prefer not to answer"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 20,
+        "name": 20,
+        "value": "Prefer not to answer"
     },
     {
-        "ID": 20,
-        "DOMAIN_TYPE": "DOM_OCCUPATION",
-        "SORT_ORDER": 21,
-        "NAME": 21,
-        "VALUE": "Other (Please indicate)"
+        "id": 20,
+        "domain_type": "DOM_OCCUPATION",
+        "sort_order": 21,
+        "name": 21,
+        "value": "Other (Please indicate)"
     },
     {
-        "ID": 21,
-        "DOMAIN_TYPE": "DOM_RACE",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "American Indian or Alaska Native <tooltip id=\"6\"/>"
+        "id": 21,
+        "domain_type": "DOM_RACE",
+        "sort_order": 1,
+        "name": 1,
+        "value": "American Indian or Alaska Native <tooltip id=\"6\"/>"
     },
     {
-        "ID": 21,
-        "DOMAIN_TYPE": "DOM_RACE",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Asian <tooltip id=\"4\"/>"
+        "id": 21,
+        "domain_type": "DOM_RACE",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Asian <tooltip id=\"4\"/>"
     },
     {
-        "ID": 21,
-        "DOMAIN_TYPE": "DOM_RACE",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Black or African American <tooltip id=\"3\"/>"
+        "id": 21,
+        "domain_type": "DOM_RACE",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Black or African American <tooltip id=\"3\"/>"
     },
     {
-        "ID": 21,
-        "DOMAIN_TYPE": "DOM_RACE",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Native Hawaiian or Other Pacific Islander <tooltip id=\"5\"/>"
+        "id": 21,
+        "domain_type": "DOM_RACE",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Native Hawaiian or Other Pacific Islander <tooltip id=\"5\"/>"
     },
     {
-        "ID": 21,
-        "DOMAIN_TYPE": "DOM_RACE",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "White <tooltip id=\"2\"/>"
+        "id": 21,
+        "domain_type": "DOM_RACE",
+        "sort_order": 5,
+        "name": 5,
+        "value": "White <tooltip id=\"2\"/>"
     },
     {
-        "ID": 21,
-        "DOMAIN_TYPE": "DOM_RACE",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Prefer not to answer"
+        "id": 21,
+        "domain_type": "DOM_RACE",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Prefer not to answer"
     },
     {
-        "ID": 22,
-        "DOMAIN_TYPE": "DOM_RECONTACT",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Please do not contact me again."
+        "id": 22,
+        "domain_type": "DOM_RECONTACT",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Please do not contact me again."
     },
     {
-        "ID": 22,
-        "DOMAIN_TYPE": "DOM_RECONTACT",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "You can contact me again."
+        "id": 22,
+        "domain_type": "DOM_RECONTACT",
+        "sort_order": 2,
+        "name": 2,
+        "value": "You can contact me again."
     },
     {
-        "ID": 12,
-        "DOMAIN_TYPE": "DOM_RESIDENCE_PERSON",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "proband"
+        "id": 12,
+        "domain_type": "DOM_RESIDENCE_PERSON",
+        "sort_order": 1,
+        "name": 1,
+        "value": "proband"
     },
     {
-        "ID": 12,
-        "DOMAIN_TYPE": "DOM_RESIDENCE_PERSON",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "mother"
+        "id": 12,
+        "domain_type": "DOM_RESIDENCE_PERSON",
+        "sort_order": 2,
+        "name": 2,
+        "value": "mother"
     },
     {
-        "ID": 12,
-        "DOMAIN_TYPE": "DOM_RESIDENCE_PERSON",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "father"
+        "id": 12,
+        "domain_type": "DOM_RESIDENCE_PERSON",
+        "sort_order": 3,
+        "name": 3,
+        "value": "father"
     },
     {
-        "ID": 25,
-        "DOMAIN_TYPE": "DOM_RESPONDENT_TYPE",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "If you are a parent or guardian taking the survey for a child, click here."
+        "id": 25,
+        "domain_type": "DOM_RESPONDENT_TYPE",
+        "sort_order": 1,
+        "name": 1,
+        "value": "If you are a parent or guardian taking the survey for a child, click here."
     },
     {
-        "ID": 25,
-        "DOMAIN_TYPE": "DOM_RESPONDENT_TYPE",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "If you are a legally authorized representative taking the survey for another adult, click here."
+        "id": 25,
+        "domain_type": "DOM_RESPONDENT_TYPE",
+        "sort_order": 2,
+        "name": 2,
+        "value": "If you are a legally authorized representative taking the survey for another adult, click here."
     },
     {
-        "ID": 25,
-        "DOMAIN_TYPE": "DOM_RESPONDENT_TYPE",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "If you are an adult taking the survey on behalf of yourself, click here."
+        "id": 25,
+        "domain_type": "DOM_RESPONDENT_TYPE",
+        "sort_order": 3,
+        "name": 3,
+        "value": "If you are an adult taking the survey on behalf of yourself, click here."
     },
     {
-        "ID": 23,
-        "DOMAIN_TYPE": "DOM_SEX",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Male"
+        "id": 23,
+        "domain_type": "DOM_SEX",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Male"
     },
     {
-        "ID": 23,
-        "DOMAIN_TYPE": "DOM_SEX",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Female"
+        "id": 23,
+        "domain_type": "DOM_SEX",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Female"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "AL"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 1,
+        "name": 1,
+        "value": "AL"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "AK"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 2,
+        "name": 2,
+        "value": "AK"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "AZ"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 3,
+        "name": 3,
+        "value": "AZ"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "AR"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 4,
+        "name": 4,
+        "value": "AR"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "CA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 5,
+        "name": 5,
+        "value": "CA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "CO"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 6,
+        "name": 6,
+        "value": "CO"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "CT"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 7,
+        "name": 7,
+        "value": "CT"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "DE"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 8,
+        "name": 8,
+        "value": "DE"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "DC"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 9,
+        "name": 9,
+        "value": "DC"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "FL"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 10,
+        "name": 10,
+        "value": "FL"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "GA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 11,
+        "name": 11,
+        "value": "GA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "HI"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 12,
+        "name": 12,
+        "value": "HI"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 13,
-        "NAME": 13,
-        "VALUE": "ID"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 13,
+        "name": 13,
+        "value": "ID"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 14,
-        "NAME": 14,
-        "VALUE": "IL"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 14,
+        "name": 14,
+        "value": "IL"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 15,
-        "NAME": 15,
-        "VALUE": "IN"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 15,
+        "name": 15,
+        "value": "IN"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 16,
-        "NAME": 16,
-        "VALUE": "IA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 16,
+        "name": 16,
+        "value": "IA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 17,
-        "NAME": 17,
-        "VALUE": "KS"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 17,
+        "name": 17,
+        "value": "KS"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 18,
-        "NAME": 18,
-        "VALUE": "KY"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 18,
+        "name": 18,
+        "value": "KY"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 19,
-        "NAME": 19,
-        "VALUE": "LA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 19,
+        "name": 19,
+        "value": "LA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 20,
-        "NAME": 20,
-        "VALUE": "ME"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 20,
+        "name": 20,
+        "value": "ME"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 21,
-        "NAME": 21,
-        "VALUE": "MD"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 21,
+        "name": 21,
+        "value": "MD"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 22,
-        "NAME": 22,
-        "VALUE": "MA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 22,
+        "name": 22,
+        "value": "MA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 23,
-        "NAME": 23,
-        "VALUE": "MI"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 23,
+        "name": 23,
+        "value": "MI"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 24,
-        "NAME": 24,
-        "VALUE": "MN"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 24,
+        "name": 24,
+        "value": "MN"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 25,
-        "NAME": 25,
-        "VALUE": "MS"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 25,
+        "name": 25,
+        "value": "MS"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 26,
-        "NAME": 26,
-        "VALUE": "MO"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 26,
+        "name": 26,
+        "value": "MO"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 27,
-        "NAME": 27,
-        "VALUE": "MT"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 27,
+        "name": 27,
+        "value": "MT"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 28,
-        "NAME": 28,
-        "VALUE": "NE"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 28,
+        "name": 28,
+        "value": "NE"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 29,
-        "NAME": 29,
-        "VALUE": "NV"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 29,
+        "name": 29,
+        "value": "NV"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 30,
-        "NAME": 30,
-        "VALUE": "NH"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 30,
+        "name": 30,
+        "value": "NH"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 31,
-        "NAME": 31,
-        "VALUE": "NJ"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 31,
+        "name": 31,
+        "value": "NJ"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 32,
-        "NAME": 32,
-        "VALUE": "NM"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 32,
+        "name": 32,
+        "value": "NM"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 33,
-        "NAME": 33,
-        "VALUE": "NY"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 33,
+        "name": 33,
+        "value": "NY"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 34,
-        "NAME": 34,
-        "VALUE": "NC"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 34,
+        "name": 34,
+        "value": "NC"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 35,
-        "NAME": 35,
-        "VALUE": "ND"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 35,
+        "name": 35,
+        "value": "ND"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 36,
-        "NAME": 36,
-        "VALUE": "OH"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 36,
+        "name": 36,
+        "value": "OH"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 37,
-        "NAME": 37,
-        "VALUE": "OK"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 37,
+        "name": 37,
+        "value": "OK"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 38,
-        "NAME": 38,
-        "VALUE": "OR"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 38,
+        "name": 38,
+        "value": "OR"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 39,
-        "NAME": 39,
-        "VALUE": "PA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 39,
+        "name": 39,
+        "value": "PA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 40,
-        "NAME": 40,
-        "VALUE": "RI"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 40,
+        "name": 40,
+        "value": "RI"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 41,
-        "NAME": 41,
-        "VALUE": "SC"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 41,
+        "name": 41,
+        "value": "SC"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 42,
-        "NAME": 42,
-        "VALUE": "SD"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 42,
+        "name": 42,
+        "value": "SD"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 43,
-        "NAME": 43,
-        "VALUE": "TN"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 43,
+        "name": 43,
+        "value": "TN"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 44,
-        "NAME": 44,
-        "VALUE": "TX"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 44,
+        "name": 44,
+        "value": "TX"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 45,
-        "NAME": 45,
-        "VALUE": "UT"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 45,
+        "name": 45,
+        "value": "UT"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 46,
-        "NAME": 46,
-        "VALUE": "VT"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 46,
+        "name": 46,
+        "value": "VT"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 47,
-        "NAME": 47,
-        "VALUE": "VA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 47,
+        "name": 47,
+        "value": "VA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 48,
-        "NAME": 48,
-        "VALUE": "WA"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 48,
+        "name": 48,
+        "value": "WA"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 49,
-        "NAME": 49,
-        "VALUE": "WV"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 49,
+        "name": 49,
+        "value": "WV"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 50,
-        "NAME": 50,
-        "VALUE": "WI"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 50,
+        "name": 50,
+        "value": "WI"
     },
     {
-        "ID": 24,
-        "DOMAIN_TYPE": "DOM_STATE",
-        "SORT_ORDER": 51,
-        "NAME": 51,
-        "VALUE": "WY"
+        "id": 24,
+        "domain_type": "DOM_STATE",
+        "sort_order": 51,
+        "name": 51,
+        "value": "WY"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 1,
-        "NAME": 52,
-        "VALUE": "Not born in the 50 US states or DC"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 1,
+        "name": 52,
+        "value": "Not born in the 50 US states or DC"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 2,
-        "NAME": 1,
-        "VALUE": "AL"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 2,
+        "name": 1,
+        "value": "AL"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 3,
-        "NAME": 2,
-        "VALUE": "AK"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 3,
+        "name": 2,
+        "value": "AK"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 4,
-        "NAME": 3,
-        "VALUE": "AZ"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 4,
+        "name": 3,
+        "value": "AZ"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 5,
-        "NAME": 4,
-        "VALUE": "AR"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 5,
+        "name": 4,
+        "value": "AR"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 6,
-        "NAME": 5,
-        "VALUE": "CA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 6,
+        "name": 5,
+        "value": "CA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 7,
-        "NAME": 6,
-        "VALUE": "CO"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 7,
+        "name": 6,
+        "value": "CO"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 8,
-        "NAME": 7,
-        "VALUE": "CT"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 8,
+        "name": 7,
+        "value": "CT"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 9,
-        "NAME": 8,
-        "VALUE": "DE"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 9,
+        "name": 8,
+        "value": "DE"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 10,
-        "NAME": 9,
-        "VALUE": "DC"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 10,
+        "name": 9,
+        "value": "DC"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 11,
-        "NAME": 10,
-        "VALUE": "FL"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 11,
+        "name": 10,
+        "value": "FL"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 12,
-        "NAME": 11,
-        "VALUE": "GA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 12,
+        "name": 11,
+        "value": "GA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 13,
-        "NAME": 12,
-        "VALUE": "HI"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 13,
+        "name": 12,
+        "value": "HI"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 14,
-        "NAME": 13,
-        "VALUE": "ID"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 14,
+        "name": 13,
+        "value": "ID"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 15,
-        "NAME": 14,
-        "VALUE": "IL"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 15,
+        "name": 14,
+        "value": "IL"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 16,
-        "NAME": 15,
-        "VALUE": "IN"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 16,
+        "name": 15,
+        "value": "IN"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 17,
-        "NAME": 16,
-        "VALUE": "IA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 17,
+        "name": 16,
+        "value": "IA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 18,
-        "NAME": 17,
-        "VALUE": "KS"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 18,
+        "name": 17,
+        "value": "KS"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 19,
-        "NAME": 18,
-        "VALUE": "KY"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 19,
+        "name": 18,
+        "value": "KY"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 20,
-        "NAME": 19,
-        "VALUE": "LA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 20,
+        "name": 19,
+        "value": "LA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 21,
-        "NAME": 20,
-        "VALUE": "ME"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 21,
+        "name": 20,
+        "value": "ME"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 22,
-        "NAME": 21,
-        "VALUE": "MD"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 22,
+        "name": 21,
+        "value": "MD"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 23,
-        "NAME": 22,
-        "VALUE": "MA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 23,
+        "name": 22,
+        "value": "MA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 24,
-        "NAME": 23,
-        "VALUE": "MI"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 24,
+        "name": 23,
+        "value": "MI"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 25,
-        "NAME": 24,
-        "VALUE": "MN"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 25,
+        "name": 24,
+        "value": "MN"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 26,
-        "NAME": 25,
-        "VALUE": "MS"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 26,
+        "name": 25,
+        "value": "MS"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 27,
-        "NAME": 26,
-        "VALUE": "MO"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 27,
+        "name": 26,
+        "value": "MO"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 28,
-        "NAME": 27,
-        "VALUE": "MT"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 28,
+        "name": 27,
+        "value": "MT"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 29,
-        "NAME": 28,
-        "VALUE": "NE"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 29,
+        "name": 28,
+        "value": "NE"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 30,
-        "NAME": 29,
-        "VALUE": "NV"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 30,
+        "name": 29,
+        "value": "NV"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 31,
-        "NAME": 30,
-        "VALUE": "NH"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 31,
+        "name": 30,
+        "value": "NH"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 32,
-        "NAME": 31,
-        "VALUE": "NJ"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 32,
+        "name": 31,
+        "value": "NJ"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 33,
-        "NAME": 32,
-        "VALUE": "NM"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 33,
+        "name": 32,
+        "value": "NM"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 34,
-        "NAME": 33,
-        "VALUE": "NY"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 34,
+        "name": 33,
+        "value": "NY"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 35,
-        "NAME": 34,
-        "VALUE": "NC"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 35,
+        "name": 34,
+        "value": "NC"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 36,
-        "NAME": 35,
-        "VALUE": "ND"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 36,
+        "name": 35,
+        "value": "ND"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 37,
-        "NAME": 36,
-        "VALUE": "OH"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 37,
+        "name": 36,
+        "value": "OH"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 38,
-        "NAME": 37,
-        "VALUE": "OK"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 38,
+        "name": 37,
+        "value": "OK"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 39,
-        "NAME": 38,
-        "VALUE": "OR"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 39,
+        "name": 38,
+        "value": "OR"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 40,
-        "NAME": 39,
-        "VALUE": "PA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 40,
+        "name": 39,
+        "value": "PA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 41,
-        "NAME": 40,
-        "VALUE": "RI"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 41,
+        "name": 40,
+        "value": "RI"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 42,
-        "NAME": 41,
-        "VALUE": "SC"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 42,
+        "name": 41,
+        "value": "SC"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 43,
-        "NAME": 42,
-        "VALUE": "SD"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 43,
+        "name": 42,
+        "value": "SD"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 44,
-        "NAME": 43,
-        "VALUE": "TN"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 44,
+        "name": 43,
+        "value": "TN"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 45,
-        "NAME": 44,
-        "VALUE": "TX"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 45,
+        "name": 44,
+        "value": "TX"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 46,
-        "NAME": 45,
-        "VALUE": "UT"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 46,
+        "name": 45,
+        "value": "UT"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 47,
-        "NAME": 46,
-        "VALUE": "VT"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 47,
+        "name": 46,
+        "value": "VT"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 48,
-        "NAME": 47,
-        "VALUE": "VA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 48,
+        "name": 47,
+        "value": "VA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 49,
-        "NAME": 48,
-        "VALUE": "WA"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 49,
+        "name": 48,
+        "value": "WA"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 50,
-        "NAME": 49,
-        "VALUE": "WV"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 50,
+        "name": 49,
+        "value": "WV"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 51,
-        "NAME": 50,
-        "VALUE": "WI"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 51,
+        "name": 50,
+        "value": "WI"
     },
     {
-        "ID": 44,
-        "DOMAIN_TYPE": "DOM_STATE_MOTHER",
-        "SORT_ORDER": 52,
-        "NAME": 51,
-        "VALUE": "WY"
+        "id": 44,
+        "domain_type": "DOM_STATE_MOTHER",
+        "sort_order": 52,
+        "name": 51,
+        "value": "WY"
     },
     {
-        "ID": 26,
-        "DOMAIN_TYPE": "DOM_VERBAL_SKILL",
-        "SORT_ORDER": 1,
-        "NAME": 5,
-        "VALUE": "Speaks in 3 or more word combinations"
+        "id": 26,
+        "domain_type": "DOM_VERBAL_SKILL",
+        "sort_order": 1,
+        "name": 5,
+        "value": "Speaks in 3 or more word combinations"
     },
     {
-        "ID": 26,
-        "DOMAIN_TYPE": "DOM_VERBAL_SKILL",
-        "SORT_ORDER": 2,
-        "NAME": 4,
-        "VALUE": "Speaks in 2 words combinations"
+        "id": 26,
+        "domain_type": "DOM_VERBAL_SKILL",
+        "sort_order": 2,
+        "name": 4,
+        "value": "Speaks in 2 words combinations"
     },
     {
-        "ID": 26,
-        "DOMAIN_TYPE": "DOM_VERBAL_SKILL",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Uses more than 10 single words"
+        "id": 26,
+        "domain_type": "DOM_VERBAL_SKILL",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Uses more than 10 single words"
     },
     {
-        "ID": 26,
-        "DOMAIN_TYPE": "DOM_VERBAL_SKILL",
-        "SORT_ORDER": 4,
-        "NAME": 2,
-        "VALUE": "Uses 1-10 single words"
+        "id": 26,
+        "domain_type": "DOM_VERBAL_SKILL",
+        "sort_order": 4,
+        "name": 2,
+        "value": "Uses 1-10 single words"
     },
     {
-        "ID": 26,
-        "DOMAIN_TYPE": "DOM_VERBAL_SKILL",
-        "SORT_ORDER": 5,
-        "NAME": 1,
-        "VALUE": "Does not use any words"
+        "id": 26,
+        "domain_type": "DOM_VERBAL_SKILL",
+        "sort_order": 5,
+        "name": 1,
+        "value": "Does not use any words"
     },
     {
-        "ID": 26,
-        "DOMAIN_TYPE": "DOM_VERBAL_SKILL",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "Prefer not to answer"
+        "id": 26,
+        "domain_type": "DOM_VERBAL_SKILL",
+        "sort_order": 6,
+        "name": 6,
+        "value": "Prefer not to answer"
     },
     {
-        "ID": 27,
-        "DOMAIN_TYPE": "DOM_WATER_SOURCE",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Private well"
+        "id": 27,
+        "domain_type": "DOM_WATER_SOURCE",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Private well"
     },
     {
-        "ID": 27,
-        "DOMAIN_TYPE": "DOM_WATER_SOURCE",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "Public water supply"
+        "id": 27,
+        "domain_type": "DOM_WATER_SOURCE",
+        "sort_order": 2,
+        "name": 2,
+        "value": "Public water supply"
     },
     {
-        "ID": 27,
-        "DOMAIN_TYPE": "DOM_WATER_SOURCE",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Bottled water"
+        "id": 27,
+        "domain_type": "DOM_WATER_SOURCE",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Bottled water"
     },
     {
-        "ID": 27,
-        "DOMAIN_TYPE": "DOM_WATER_SOURCE",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Don\\'t know"
+        "id": 27,
+        "domain_type": "DOM_WATER_SOURCE",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "24 weeks or less"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 1,
+        "name": 1,
+        "value": "24 weeks or less"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "25-26 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 2,
+        "name": 2,
+        "value": "25-26 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "27-28 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 3,
+        "name": 3,
+        "value": "27-28 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "29-30 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 4,
+        "name": 4,
+        "value": "29-30 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "31-32 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 5,
+        "name": 5,
+        "value": "31-32 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 6,
-        "NAME": 6,
-        "VALUE": "33-34 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 6,
+        "name": 6,
+        "value": "33-34 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 7,
-        "NAME": 7,
-        "VALUE": "35-36 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 7,
+        "name": 7,
+        "value": "35-36 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 8,
-        "NAME": 8,
-        "VALUE": "37-38 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 8,
+        "name": 8,
+        "value": "37-38 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 9,
-        "NAME": 9,
-        "VALUE": "39-40 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 9,
+        "name": 9,
+        "value": "39-40 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 10,
-        "NAME": 10,
-        "VALUE": "41-42 weeks"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 10,
+        "name": 10,
+        "value": "41-42 weeks"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 11,
-        "NAME": 11,
-        "VALUE": "43 weeks or more"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 11,
+        "name": 11,
+        "value": "43 weeks or more"
     },
     {
-        "ID": 28,
-        "DOMAIN_TYPE": "DOM_WEEKS_PREGNANT",
-        "SORT_ORDER": 12,
-        "NAME": 12,
-        "VALUE": "Don\\'t know"
+        "id": 28,
+        "domain_type": "DOM_WEEKS_PREGNANT",
+        "sort_order": 12,
+        "name": 12,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 46,
-        "DOMAIN_TYPE": "DOM_WEIGHT_RANGE",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "lbs"
+        "id": 46,
+        "domain_type": "DOM_WEIGHT_RANGE",
+        "sort_order": 1,
+        "name": 1,
+        "value": "lbs"
     },
     {
-        "ID": 46,
-        "DOMAIN_TYPE": "DOM_WEIGHT_RANGE",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "0"
+        "id": 46,
+        "domain_type": "DOM_WEIGHT_RANGE",
+        "sort_order": 2,
+        "name": 2,
+        "value": "0"
     },
     {
-        "ID": 46,
-        "DOMAIN_TYPE": "DOM_WEIGHT_RANGE",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "999"
+        "id": 46,
+        "domain_type": "DOM_WEIGHT_RANGE",
+        "sort_order": 3,
+        "name": 3,
+        "value": "999"
     },
     {
-        "ID": 29,
-        "DOMAIN_TYPE": "DOM_YES_NO",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Yes"
+        "id": 29,
+        "domain_type": "DOM_YES_NO",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Yes"
     },
     {
-        "ID": 29,
-        "DOMAIN_TYPE": "DOM_YES_NO",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "No"
+        "id": 29,
+        "domain_type": "DOM_YES_NO",
+        "sort_order": 2,
+        "name": 2,
+        "value": "No"
     },
     {
-        "ID": 30,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Yes"
+        "id": 30,
+        "domain_type": "DOM_YES_NO_DK",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Yes"
     },
     {
-        "ID": 30,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "No"
+        "id": 30,
+        "domain_type": "DOM_YES_NO_DK",
+        "sort_order": 2,
+        "name": 2,
+        "value": "No"
     },
     {
-        "ID": 30,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Don\\'t know"
+        "id": 30,
+        "domain_type": "DOM_YES_NO_DK",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 31,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Yes"
+        "id": 31,
+        "domain_type": "DOM_YES_NO_DK_NA",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Yes"
     },
     {
-        "ID": 31,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "No"
+        "id": 31,
+        "domain_type": "DOM_YES_NO_DK_NA",
+        "sort_order": 2,
+        "name": 2,
+        "value": "No"
     },
     {
-        "ID": 31,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Don\\'t know"
+        "id": 31,
+        "domain_type": "DOM_YES_NO_DK_NA",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 31,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Not Applicable"
+        "id": 31,
+        "domain_type": "DOM_YES_NO_DK_NA",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Not Applicable"
     },
     {
-        "ID": 33,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA_Q_1",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Yes"
+        "id": 33,
+        "domain_type": "DOM_YES_NO_DK_NA_Q_1",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Yes"
     },
     {
-        "ID": 33,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA_Q_1",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "No"
+        "id": 33,
+        "domain_type": "DOM_YES_NO_DK_NA_Q_1",
+        "sort_order": 2,
+        "name": 2,
+        "value": "No"
     },
     {
-        "ID": 33,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA_Q_1",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Don\\'t know"
+        "id": 33,
+        "domain_type": "DOM_YES_NO_DK_NA_Q_1",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 33,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA_Q_1",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Never had these skills"
+        "id": 33,
+        "domain_type": "DOM_YES_NO_DK_NA_Q_1",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Never had these skills"
     },
     {
-        "ID": 33,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_NA_Q_1",
-        "SORT_ORDER": 5,
-        "NAME": 5,
-        "VALUE": "If yes, what was the child\\'s age when you first noticed this change in their development?"
+        "id": 33,
+        "domain_type": "DOM_YES_NO_DK_NA_Q_1",
+        "sort_order": 5,
+        "name": 5,
+        "value": "If yes, what was the child\\'s age when you first noticed this change in their development?"
     },
     {
-        "ID": 32,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_PNTA",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Yes"
+        "id": 32,
+        "domain_type": "DOM_YES_NO_DK_PNTA",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Yes"
     },
     {
-        "ID": 32,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_PNTA",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "No"
+        "id": 32,
+        "domain_type": "DOM_YES_NO_DK_PNTA",
+        "sort_order": 2,
+        "name": 2,
+        "value": "No"
     },
     {
-        "ID": 32,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_PNTA",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Don\\'t know"
+        "id": 32,
+        "domain_type": "DOM_YES_NO_DK_PNTA",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Don\\'t know"
     },
     {
-        "ID": 32,
-        "DOMAIN_TYPE": "DOM_YES_NO_DK_PNTA",
-        "SORT_ORDER": 4,
-        "NAME": 4,
-        "VALUE": "Prefer not to answer"
+        "id": 32,
+        "domain_type": "DOM_YES_NO_DK_PNTA",
+        "sort_order": 4,
+        "name": 4,
+        "value": "Prefer not to answer"
     },
     {
-        "ID": 34,
-        "DOMAIN_TYPE": "DOM_YES_NO_PNTA",
-        "SORT_ORDER": 1,
-        "NAME": 1,
-        "VALUE": "Yes"
+        "id": 34,
+        "domain_type": "DOM_YES_NO_PNTA",
+        "sort_order": 1,
+        "name": 1,
+        "value": "Yes"
     },
     {
-        "ID": 34,
-        "DOMAIN_TYPE": "DOM_YES_NO_PNTA",
-        "SORT_ORDER": 2,
-        "NAME": 2,
-        "VALUE": "No"
+        "id": 34,
+        "domain_type": "DOM_YES_NO_PNTA",
+        "sort_order": 2,
+        "name": 2,
+        "value": "No"
     },
     {
-        "ID": 34,
-        "DOMAIN_TYPE": "DOM_YES_NO_PNTA",
-        "SORT_ORDER": 3,
-        "NAME": 3,
-        "VALUE": "Prefer not to answer"
+        "id": 34,
+        "domain_type": "DOM_YES_NO_PNTA",
+        "sort_order": 3,
+        "name": 3,
+        "value": "Prefer not to answer"
     }
 ]

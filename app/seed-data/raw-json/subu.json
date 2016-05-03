@@ -1,919 +1,919 @@
 [
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 1200,
-        "SUBU_SRE_UID": 1300,
-        "SEQ_SUBU_GROUP": 1,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 1200,
+        "subu_sre_uid": 1300,
+        "seq_subu_group": 1,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 1200,
-        "SUBU_SRE_UID": 1400,
-        "SEQ_SUBU_GROUP": 1,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 1200,
+        "subu_sre_uid": 1400,
+        "seq_subu_group": 1,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4200,
-        "SUBU_SRE_UID": 4300,
-        "SEQ_SUBU_GROUP": 2,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 4200,
+        "subu_sre_uid": 4300,
+        "seq_subu_group": 2,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4600,
-        "SUBU_SRE_UID": 4700,
-        "SEQ_SUBU_GROUP": 3,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 4600,
+        "subu_sre_uid": 4700,
+        "seq_subu_group": 3,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4600,
-        "SUBU_SRE_UID": 4800,
-        "SEQ_SUBU_GROUP": 3,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 4600,
+        "subu_sre_uid": 4800,
+        "seq_subu_group": 3,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4600,
-        "SUBU_SRE_UID": 4900,
-        "SEQ_SUBU_GROUP": 3,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 4600,
+        "subu_sre_uid": 4900,
+        "seq_subu_group": 3,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 6400,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 6400,
+        "seq_subu_group": 4,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 6600,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 6600,
+        "seq_subu_group": 4,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 6800,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 6800,
+        "seq_subu_group": 4,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 7000,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 7000,
+        "seq_subu_group": 4,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 7200,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 7200,
+        "seq_subu_group": 4,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 7400,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 7400,
+        "seq_subu_group": 4,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 7600,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 7600,
+        "seq_subu_group": 4,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 6300,
-        "SUBU_SRE_UID": 7800,
-        "SEQ_SUBU_GROUP": 4,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 6300,
+        "subu_sre_uid": 7800,
+        "seq_subu_group": 4,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 8500,
-        "SUBU_SRE_UID": 8600,
-        "SEQ_SUBU_GROUP": 13,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 8500,
+        "subu_sre_uid": 8600,
+        "seq_subu_group": 13,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 8500,
-        "SUBU_SRE_UID": 8700,
-        "SEQ_SUBU_GROUP": 13,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 8500,
+        "subu_sre_uid": 8700,
+        "seq_subu_group": 13,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 8500,
-        "SUBU_SRE_UID": 8800,
-        "SEQ_SUBU_GROUP": 13,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 8500,
+        "subu_sre_uid": 8800,
+        "seq_subu_group": 13,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 8500,
-        "SUBU_SRE_UID": 8900,
-        "SEQ_SUBU_GROUP": 13,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 8500,
+        "subu_sre_uid": 8900,
+        "seq_subu_group": 13,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9000,
-        "SUBU_SRE_UID": 9100,
-        "SEQ_SUBU_GROUP": 14,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 9000,
+        "subu_sre_uid": 9100,
+        "seq_subu_group": 14,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9000,
-        "SUBU_SRE_UID": 9200,
-        "SEQ_SUBU_GROUP": 14,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 9000,
+        "subu_sre_uid": 9200,
+        "seq_subu_group": 14,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9000,
-        "SUBU_SRE_UID": 9300,
-        "SEQ_SUBU_GROUP": 14,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 9000,
+        "subu_sre_uid": 9300,
+        "seq_subu_group": 14,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9000,
-        "SUBU_SRE_UID": 9400,
-        "SEQ_SUBU_GROUP": 14,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 9000,
+        "subu_sre_uid": 9400,
+        "seq_subu_group": 14,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9000,
-        "SUBU_SRE_UID": 9500,
-        "SEQ_SUBU_GROUP": 14,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 9000,
+        "subu_sre_uid": 9500,
+        "seq_subu_group": 14,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9000,
-        "SUBU_SRE_UID": 9600,
-        "SEQ_SUBU_GROUP": 14,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 9000,
+        "subu_sre_uid": 9600,
+        "seq_subu_group": 14,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9000,
-        "SUBU_SRE_UID": 9700,
-        "SEQ_SUBU_GROUP": 14,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 9000,
+        "subu_sre_uid": 9700,
+        "seq_subu_group": 14,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9800,
-        "SUBU_SRE_UID": 9900,
-        "SEQ_SUBU_GROUP": 15,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 9800,
+        "subu_sre_uid": 9900,
+        "seq_subu_group": 15,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9800,
-        "SUBU_SRE_UID": 10000,
-        "SEQ_SUBU_GROUP": 15,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 9800,
+        "subu_sre_uid": 10000,
+        "seq_subu_group": 15,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9800,
-        "SUBU_SRE_UID": 10100,
-        "SEQ_SUBU_GROUP": 15,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 9800,
+        "subu_sre_uid": 10100,
+        "seq_subu_group": 15,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9800,
-        "SUBU_SRE_UID": 10200,
-        "SEQ_SUBU_GROUP": 15,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 9800,
+        "subu_sre_uid": 10200,
+        "seq_subu_group": 15,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9800,
-        "SUBU_SRE_UID": 10300,
-        "SEQ_SUBU_GROUP": 15,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 9800,
+        "subu_sre_uid": 10300,
+        "seq_subu_group": 15,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9800,
-        "SUBU_SRE_UID": 10400,
-        "SEQ_SUBU_GROUP": 15,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 9800,
+        "subu_sre_uid": 10400,
+        "seq_subu_group": 15,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 9800,
-        "SUBU_SRE_UID": 10600,
-        "SEQ_SUBU_GROUP": 15,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 9800,
+        "subu_sre_uid": 10600,
+        "seq_subu_group": 15,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5000,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5000,
+        "seq_subu_group": 16,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5100,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5100,
+        "seq_subu_group": 16,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5200,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5200,
+        "seq_subu_group": 16,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5300,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5300,
+        "seq_subu_group": 16,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5400,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5400,
+        "seq_subu_group": 16,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5500,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5500,
+        "seq_subu_group": 16,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5600,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5600,
+        "seq_subu_group": 16,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5700,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5700,
+        "seq_subu_group": 16,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5800,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 9
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5800,
+        "seq_subu_group": 16,
+        "subu_sort_order": 9
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 5900,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 10
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 5900,
+        "seq_subu_group": 16,
+        "subu_sort_order": 10
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 6000,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 11
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 6000,
+        "seq_subu_group": 16,
+        "subu_sort_order": 11
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 6100,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 12
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 6100,
+        "seq_subu_group": 16,
+        "subu_sort_order": 12
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 4950,
-        "SUBU_SRE_UID": 6200,
-        "SEQ_SUBU_GROUP": 16,
-        "SUBU_SORT_ORDER": 13
+        "survey_id": 1,
+        "seq_sre_uid": 4950,
+        "subu_sre_uid": 6200,
+        "seq_subu_group": 16,
+        "subu_sort_order": 13
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 10900,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 10900,
+        "seq_subu_group": 17,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11000,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11000,
+        "seq_subu_group": 17,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11100,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11100,
+        "seq_subu_group": 17,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11200,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11200,
+        "seq_subu_group": 17,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11300,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11300,
+        "seq_subu_group": 17,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11400,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11400,
+        "seq_subu_group": 17,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11500,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11500,
+        "seq_subu_group": 17,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11600,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11600,
+        "seq_subu_group": 17,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 10800,
-        "SUBU_SRE_UID": 11700,
-        "SEQ_SUBU_GROUP": 17,
-        "SUBU_SORT_ORDER": 9
+        "survey_id": 1,
+        "seq_sre_uid": 10800,
+        "subu_sre_uid": 11700,
+        "seq_subu_group": 17,
+        "subu_sort_order": 9
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 11800,
-        "SUBU_SRE_UID": 11900,
-        "SEQ_SUBU_GROUP": 18,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 11800,
+        "subu_sre_uid": 11900,
+        "seq_subu_group": 18,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 11800,
-        "SUBU_SRE_UID": 12000,
-        "SEQ_SUBU_GROUP": 18,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 11800,
+        "subu_sre_uid": 12000,
+        "seq_subu_group": 18,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 11800,
-        "SUBU_SRE_UID": 12100,
-        "SEQ_SUBU_GROUP": 18,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 11800,
+        "subu_sre_uid": 12100,
+        "seq_subu_group": 18,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 11800,
-        "SUBU_SRE_UID": 12200,
-        "SEQ_SUBU_GROUP": 18,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 11800,
+        "subu_sre_uid": 12200,
+        "seq_subu_group": 18,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 11800,
-        "SUBU_SRE_UID": 12300,
-        "SEQ_SUBU_GROUP": 18,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 11800,
+        "subu_sre_uid": 12300,
+        "seq_subu_group": 18,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 11800,
-        "SUBU_SRE_UID": 12400,
-        "SEQ_SUBU_GROUP": 18,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 11800,
+        "subu_sre_uid": 12400,
+        "seq_subu_group": 18,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 12600,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 12600,
+        "seq_subu_group": 19,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 12700,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 12700,
+        "seq_subu_group": 19,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 12800,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 12800,
+        "seq_subu_group": 19,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 12900,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 12900,
+        "seq_subu_group": 19,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 13000,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 13000,
+        "seq_subu_group": 19,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 13100,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 13100,
+        "seq_subu_group": 19,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 13200,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 13200,
+        "seq_subu_group": 19,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 12500,
-        "SUBU_SRE_UID": 13300,
-        "SEQ_SUBU_GROUP": 19,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 12500,
+        "subu_sre_uid": 13300,
+        "seq_subu_group": 19,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 13400,
-        "SUBU_SRE_UID": 13500,
-        "SEQ_SUBU_GROUP": 20,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 13400,
+        "subu_sre_uid": 13500,
+        "seq_subu_group": 20,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 13400,
-        "SUBU_SRE_UID": 13600,
-        "SEQ_SUBU_GROUP": 20,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 13400,
+        "subu_sre_uid": 13600,
+        "seq_subu_group": 20,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 13400,
-        "SUBU_SRE_UID": 13700,
-        "SEQ_SUBU_GROUP": 20,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 13400,
+        "subu_sre_uid": 13700,
+        "seq_subu_group": 20,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 13400,
-        "SUBU_SRE_UID": 13800,
-        "SEQ_SUBU_GROUP": 20,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 13400,
+        "subu_sre_uid": 13800,
+        "seq_subu_group": 20,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 13400,
-        "SUBU_SRE_UID": 13900,
-        "SEQ_SUBU_GROUP": 20,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 13400,
+        "subu_sre_uid": 13900,
+        "seq_subu_group": 20,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 13400,
-        "SUBU_SRE_UID": 14000,
-        "SEQ_SUBU_GROUP": 20,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 13400,
+        "subu_sre_uid": 14000,
+        "seq_subu_group": 20,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 15600,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 15600,
+        "seq_subu_group": 21,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 15700,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 15700,
+        "seq_subu_group": 21,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 15800,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 15800,
+        "seq_subu_group": 21,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 15900,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 15900,
+        "seq_subu_group": 21,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 16000,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 16000,
+        "seq_subu_group": 21,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 16100,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 16100,
+        "seq_subu_group": 21,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 16200,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 16200,
+        "seq_subu_group": 21,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 16250,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 16250,
+        "seq_subu_group": 21,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 16300,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 9
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 16300,
+        "seq_subu_group": 21,
+        "subu_sort_order": 9
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 16400,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 10
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 16400,
+        "seq_subu_group": 21,
+        "subu_sort_order": 10
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 15500,
-        "SUBU_SRE_UID": 16500,
-        "SEQ_SUBU_GROUP": 21,
-        "SUBU_SORT_ORDER": 11
+        "survey_id": 1,
+        "seq_sre_uid": 15500,
+        "subu_sre_uid": 16500,
+        "seq_subu_group": 21,
+        "subu_sort_order": 11
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16600,
-        "SUBU_SRE_UID": 16700,
-        "SEQ_SUBU_GROUP": 22,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 16600,
+        "subu_sre_uid": 16700,
+        "seq_subu_group": 22,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 16900,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 16900,
+        "seq_subu_group": 23,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17000,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17000,
+        "seq_subu_group": 23,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17100,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17100,
+        "seq_subu_group": 23,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17200,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17200,
+        "seq_subu_group": 23,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17300,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17300,
+        "seq_subu_group": 23,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17400,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17400,
+        "seq_subu_group": 23,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17500,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17500,
+        "seq_subu_group": 23,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17600,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17600,
+        "seq_subu_group": 23,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17700,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 9
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17700,
+        "seq_subu_group": 23,
+        "subu_sort_order": 9
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17800,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 10
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17800,
+        "seq_subu_group": 23,
+        "subu_sort_order": 10
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 17900,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 11
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 17900,
+        "seq_subu_group": 23,
+        "subu_sort_order": 11
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 18000,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 12
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 18000,
+        "seq_subu_group": 23,
+        "subu_sort_order": 12
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 16800,
-        "SUBU_SRE_UID": 18100,
-        "SEQ_SUBU_GROUP": 23,
-        "SUBU_SORT_ORDER": 13
+        "survey_id": 1,
+        "seq_sre_uid": 16800,
+        "subu_sre_uid": 18100,
+        "seq_subu_group": 23,
+        "subu_sort_order": 13
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 18700,
-        "SUBU_SRE_UID": 18800,
-        "SEQ_SUBU_GROUP": 24,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 18700,
+        "subu_sre_uid": 18800,
+        "seq_subu_group": 24,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 18700,
-        "SUBU_SRE_UID": 18900,
-        "SEQ_SUBU_GROUP": 24,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 18700,
+        "subu_sre_uid": 18900,
+        "seq_subu_group": 24,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 18700,
-        "SUBU_SRE_UID": 19000,
-        "SEQ_SUBU_GROUP": 24,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 18700,
+        "subu_sre_uid": 19000,
+        "seq_subu_group": 24,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 18700,
-        "SUBU_SRE_UID": 19100,
-        "SEQ_SUBU_GROUP": 24,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 18700,
+        "subu_sre_uid": 19100,
+        "seq_subu_group": 24,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 19200,
-        "SUBU_SRE_UID": 19300,
-        "SEQ_SUBU_GROUP": 25,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 19200,
+        "subu_sre_uid": 19300,
+        "seq_subu_group": 25,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 19200,
-        "SUBU_SRE_UID": 19400,
-        "SEQ_SUBU_GROUP": 25,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 19200,
+        "subu_sre_uid": 19400,
+        "seq_subu_group": 25,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 19200,
-        "SUBU_SRE_UID": 19500,
-        "SEQ_SUBU_GROUP": 25,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 19200,
+        "subu_sre_uid": 19500,
+        "seq_subu_group": 25,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 20700,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 20700,
+        "seq_subu_group": 26,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 20800,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 20800,
+        "seq_subu_group": 26,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 20900,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 20900,
+        "seq_subu_group": 26,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21000,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21000,
+        "seq_subu_group": 26,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21100,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21100,
+        "seq_subu_group": 26,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21200,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21200,
+        "seq_subu_group": 26,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21300,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21300,
+        "seq_subu_group": 26,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21350,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21350,
+        "seq_subu_group": 26,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21400,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 9
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21400,
+        "seq_subu_group": 26,
+        "subu_sort_order": 9
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21500,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 10
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21500,
+        "seq_subu_group": 26,
+        "subu_sort_order": 10
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 20600,
-        "SUBU_SRE_UID": 21600,
-        "SEQ_SUBU_GROUP": 26,
-        "SUBU_SORT_ORDER": 11
+        "survey_id": 1,
+        "seq_sre_uid": 20600,
+        "subu_sre_uid": 21600,
+        "seq_subu_group": 26,
+        "subu_sort_order": 11
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 21800,
-        "SUBU_SRE_UID": 21900,
-        "SEQ_SUBU_GROUP": 27,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 21800,
+        "subu_sre_uid": 21900,
+        "seq_subu_group": 27,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22100,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 1
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22100,
+        "seq_subu_group": 28,
+        "subu_sort_order": 1
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22200,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 2
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22200,
+        "seq_subu_group": 28,
+        "subu_sort_order": 2
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22300,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 3
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22300,
+        "seq_subu_group": 28,
+        "subu_sort_order": 3
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22400,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 4
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22400,
+        "seq_subu_group": 28,
+        "subu_sort_order": 4
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22500,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 5
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22500,
+        "seq_subu_group": 28,
+        "subu_sort_order": 5
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22600,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 6
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22600,
+        "seq_subu_group": 28,
+        "subu_sort_order": 6
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22700,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 7
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22700,
+        "seq_subu_group": 28,
+        "subu_sort_order": 7
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22800,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 8
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22800,
+        "seq_subu_group": 28,
+        "subu_sort_order": 8
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 22900,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 9
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 22900,
+        "seq_subu_group": 28,
+        "subu_sort_order": 9
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 23000,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 10
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 23000,
+        "seq_subu_group": 28,
+        "subu_sort_order": 10
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 23100,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 11
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 23100,
+        "seq_subu_group": 28,
+        "subu_sort_order": 11
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 23200,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 12
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 23200,
+        "seq_subu_group": 28,
+        "subu_sort_order": 12
     },
     {
-        "SURVEY_ID": 1,
-        "SEQ_SRE_UID": 22000,
-        "SUBU_SRE_UID": 23300,
-        "SEQ_SUBU_GROUP": 28,
-        "SUBU_SORT_ORDER": 13
+        "survey_id": 1,
+        "seq_sre_uid": 22000,
+        "subu_sre_uid": 23300,
+        "seq_subu_group": 28,
+        "subu_sort_order": 13
     }
 ]
