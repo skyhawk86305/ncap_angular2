@@ -2,9 +2,9 @@
 // import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 export class Subu {
-    SURVEY_ID: number;
-    SEQ_SRE_UID: number;
-    SUBU_SRE_UID: number;
-    SEQ_SUBU_GROUP: number;
-    SUBU_SORT_ORDER: number;
+    survey_id: number;
+    seq_sre_uid: number;
+    subu_sre_uid: number;
+    seq_subu_group: number;
+    subu_sort_order: number;
 }

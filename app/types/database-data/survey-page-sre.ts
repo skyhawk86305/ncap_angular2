@@ -2,13 +2,13 @@ import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 export class SurveyPageSre {
-    SURVEY_ID: number;
-    SEQ_ID: number;
-    SEQ_PAG_ID: number;
-    SRE_SORT_ORDER: number;
-    SEQ_SRE_UID: number;
-    SEQ_SUBU_GROUP: number;
-    PAGE_SORT_ORDER: number;
+    survey_id: number;
+    seq_id: number;
+    seq_pag_id: number;
+    sre_sort_order: number;
+    seq_sre_uid: number;
+    seq_subu_group: number;
+    page_sort_order: number;
 
     //  validation_type: ValidationType;
 

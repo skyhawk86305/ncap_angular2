@@ -81,10 +81,10 @@ export class TestPageComponent implements OnInit {
         // console.log(that.sre);
         // console.log(that.subu);
         // console.log(that.survey_metadata);
-        console.log(that.survey_page_sre[6].SEQ_PAG_ID);
-        console.log(that.subu[6].SUBU_SORT_ORDER);
-        console.log(that.sre[6].SRE_ANCA_ID);
-        console.log(that.tooltips[1].DEFINITION);
+        console.log(that.survey_page_sre[6].seq_pag_id);
+        console.log(that.subu[6].subu_sort_order);
+        console.log(that.sre[6].sre_anca_id);
+        console.log(that.tooltips[1].definition);
         // console.log(that.tooltips);
       },
       err => console.error(err)

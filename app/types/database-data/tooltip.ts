@@ -3,10 +3,10 @@
 
 export class Tooltip {
     constructor(
-        public ID: number,
-        public TERM?: string,
-        public DEFINITION?: string,
-        public TTIP_REF_ID?: number
+        public id: number,
+        public term?: string,
+        public definition?: string,
+        public ttip_ref_id?: number
     ) { }
 }
 
