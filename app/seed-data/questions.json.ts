@@ -71,7 +71,7 @@ export var QUESTIONS_JSON =
       "answer_type_id": 1,
       "answer_type": "RadioButtons",
       "validation_type": 1,
-      "question_text": "What is the child's ethnicity  <tooltip id='7'/> ?",
+      "question_text": "What is the child's ethnicity  <tooltip id='8'/> ?",
       "answer_lookup_id": 11,
       "answer_lookup": "DOM_ETHNICITY",
       "tracking_key": "ethnicity"

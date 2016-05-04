@@ -37,14 +37,14 @@ export class TestPageComponent implements OnInit {
 
         this._loadJsonDataService.readJsonFilesPromiseAll().then(data => {
             //console.log("In test-page ngOnInit tooltips count v1: " + data.length);
-            console.log("In test-page ngOnInit tooltips count v4: " + this._loadJsonDataService.allDataBaseData.tooltips.length);
+            console.log("In test-page ngOnInit tooltips count v4: " + data.tooltips.length);
         }
         );
 
     }
 
     click() {
-        console.log(this._loadJsonDataService.allDataBaseData.tooltips[0].definition);
+        console.log(this._loadJsonDataService.readJsonFilesPromiseAll().then(data => { data.tooltips[0].definition }));
     }
 
 }

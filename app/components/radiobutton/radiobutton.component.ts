@@ -56,7 +56,7 @@ export class RadioButtonComponent implements OnInit {
 
   private addTooltipIfNecessary() {
     // Does the question contain a tooltip?
-    if (this.question.question_text.indexOf('<tooltip') >= 0) {
+    if (this.question.question_text.indexOf('<tooltip') >= 0 || this.question.question_text.indexOf('--TT') >= 0) {
 
       // xyzzy WIP - convert tooltip tags to --TT
       //this.question.question_text = this.question.question_text.replace('Has the child ever been diagnosed with ASD.*=\'/i', '--TT');

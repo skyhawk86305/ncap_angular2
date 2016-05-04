@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
 import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
-import { Tooltip } from       '../../../app/types/tooltip';
 
 @Component({
   selector: 'tooltip',
@@ -20,8 +19,10 @@ export class TooltipComponent implements OnInit {
   }
 
   ngOnInit() {
-    let tooltip: Tooltip = this._loadJsonDataService.getTooltipForId(this.toolTipId);
-    this.tooltipText = tooltip.definition;
+    this._loadJsonDataService.getTooltipForId(this.toolTipId).then(data => {
+      this.tooltipText = data.definition;
+    }
+    );
   }
 
 }

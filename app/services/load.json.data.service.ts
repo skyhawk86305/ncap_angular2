@@ -19,12 +19,11 @@ export class LoadJsonDataService {
     BASE_PATH = 'app/seed-data/raw-json/';
 
     allDataBaseDataPromise: Promise<AllDataBaseData>;
-    allDataBaseData: AllDataBaseData;
     allDataLoaded = false; // xyzzy - probalby don't need this? Maybe van use allDataBaseDataPromise?
+    //private allDataBaseData: AllDataBaseData;
 
     private _domainOptions: DomainOptions;
     private _questions: Question[];
-    private _tooltips: Tooltip[];
     private _matrixElements: MatrixElement[];
 
     constructor(
@@ -40,7 +39,6 @@ export class LoadJsonDataService {
         this._domainOptions.populateWithData();
 
         this._questions = JSON.parse(QUESTIONS_JSON);
-        this._tooltips = JSON.parse(TOOLTIPS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
 
         // xyzzy Revist this loading logic
@@ -50,35 +48,40 @@ export class LoadJsonDataService {
     }
 
     readJsonFilesPromiseAll(): Promise<AllDataBaseData> {
-        let that = this;
-        const BASE_PATH = 'app/seed-data/raw-json/';
+        if (!this.allDataBaseDataPromise) {
+            let that = this;
+            const BASE_PATH = 'app/seed-data/raw-json/';
 
-        let promise1 = this.http.get(BASE_PATH + 'display_conditions.json').map((res: Response) => res.json()).toPromise();
-        let promise2 = this.http.get(BASE_PATH + 'domains.json').map((res: Response) => res.json()).toPromise();
-        let promise3 = this.http.get(BASE_PATH + 'references.json').map((res: Response) => res.json()).toPromise();
-        let promise4 = this.http.get(BASE_PATH + 'sre.json').map((res: Response) => res.json()).toPromise();
-        let promise5 = this.http.get(BASE_PATH + 'subu.json').map((res: Response) => res.json()).toPromise();
-        let promise6 = this.http.get(BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()).toPromise();
-        let promise7 = this.http.get(BASE_PATH + 'tooltips.json').map((res: Response) => res.json()).toPromise();
+            let promise1 = this.http.get(BASE_PATH + 'display_conditions.json').map((res: Response) => res.json()).toPromise();
+            let promise2 = this.http.get(BASE_PATH + 'domains.json').map((res: Response) => res.json()).toPromise();
+            let promise3 = this.http.get(BASE_PATH + 'references.json').map((res: Response) => res.json()).toPromise();
+            let promise4 = this.http.get(BASE_PATH + 'sre.json').map((res: Response) => res.json()).toPromise();
+            let promise5 = this.http.get(BASE_PATH + 'subu.json').map((res: Response) => res.json()).toPromise();
+            let promise6 = this.http.get(BASE_PATH + 'survey_page_sre.json').map((res: Response) => res.json()).toPromise();
+            let promise7 = this.http.get(BASE_PATH + 'tooltips.json').map((res: Response) => res.json()).toPromise();
 
-        return Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7])
-            .then(
-            data => {
-                let i = 0;
-                let dataCast: any[] = data;
+            this.allDataBaseDataPromise = Promise.all([promise1, promise2, promise3, promise4, promise5, promise6, promise7])
+                .then(
+                data => {
+                    let i = 0;
+                    let dataCast: any[] = data;
 
-                that.allDataBaseData = new AllDataBaseData();
-                that.allDataBaseData.displayConditions = dataCast[i++];
-                that.allDataBaseData.domains = dataCast[i++];
-                that.allDataBaseData.references = dataCast[i++];
-                that.allDataBaseData.sres = dataCast[i++];
-                that.allDataBaseData.subus = dataCast[i++];
-                that.allDataBaseData.surveyPageSres = dataCast[i++];
-                that.allDataBaseData.tooltips = dataCast[i++];
-                this.allDataLoaded = true;
+                    let allDataBaseData: AllDataBaseData = new AllDataBaseData();
+                    allDataBaseData = new AllDataBaseData();
+                    allDataBaseData.displayConditions = dataCast[i++];
+                    allDataBaseData.domains = dataCast[i++];
+                    allDataBaseData.references = dataCast[i++];
+                    allDataBaseData.sres = dataCast[i++];
+                    allDataBaseData.subus = dataCast[i++];
+                    allDataBaseData.surveyPageSres = dataCast[i++];
+                    allDataBaseData.tooltips = dataCast[i++];
+                    that.allDataLoaded = true;
 
-                return that.allDataBaseData;
-            });
+                    return allDataBaseData;
+                });
+        }
+
+        return this.allDataBaseDataPromise;
     }
 
     getDomainOptions() {
@@ -94,7 +97,9 @@ export class LoadJsonDataService {
     }
 
     getTooltipForId(id: number) {
-        return this._tooltips.find(i => i.id === id);
+        return this.readJsonFilesPromiseAll().then(
+            data => data.tooltips.find(i => i.id === id)
+            );
     }
 
     getMatrixElementsForQuestionId(question_id: number): MatrixElement[] {
