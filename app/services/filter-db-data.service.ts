@@ -8,7 +8,7 @@ import { AllDataBaseData } from '../types/database-data/all-database-data';
 export class FilterDbDataService {
 
     constructor(
-        private _userInputService: UserInputService
+        private _loadJsonDataService: LoadJsonDataService
     ) {
         this.initialize();
     }
