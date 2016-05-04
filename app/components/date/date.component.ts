@@ -27,8 +27,13 @@ export class DayMonthYearComponent {
     //this.question.question_text = this.question.question_text.replace(/<tooltip.*>/i, '');
 
     // Todo WIP - convert tooltip tags to **TT
-    this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '**TT');
+    // this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '**TT');
+    this.question.question_text = this.question.question_text.replace('tooltip', '**TT');
     this.question.question_text = this.question.question_text.replace(/".>/i, '');
+
+    this.question.question_text = this.question.question_text.replace('tooltip', '**TT');
+    this.question.question_text = this.question.question_text.replace(/".>/i, '');
+
 
     // xyzzy Hack to pass validation until this control is built out
     this._userInputService.setUserInput(this.question.tracking_key, 'dummy_data');

@@ -35,7 +35,7 @@ export class TestPageComponent implements OnInit {
         // }
         // );
 
-        this._loadJsonDataService.getAllDataXyzzy().then(data => {
+        this._loadJsonDataService.readJsonFilesPromiseAll().then(data => {
             //console.log("In test-page ngOnInit tooltips count v1: " + data.length);
             console.log("In test-page ngOnInit tooltips count v4: " + this._loadJsonDataService.allDataBaseData.tooltips.length);
         }

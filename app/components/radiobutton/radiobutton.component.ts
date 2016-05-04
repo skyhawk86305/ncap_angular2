@@ -59,8 +59,10 @@ export class RadioButtonComponent implements OnInit {
     if (this.question.question_text.indexOf('<tooltip') >= 0) {
 
       // xyzzy WIP - convert tooltip tags to --TT
-      this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '--TT');
-      this.question.question_text = this.question.question_text.replace(/".>/i, '--');
+      //this.question.question_text = this.question.question_text.replace('Has the child ever been diagnosed with ASD.*=\'/i', '--TT');
+      //this.question.question_text = this.question.question_text.replace('/\'.>/i', '--');
+
+      this.question.question_text = this.question.question_text.replace('<tooltip id=\'', '--TT').replace('\'/>', '--');
 
       let position = this.question.question_text.indexOf('--TT');
       let workingText = this.question.question_text.substring(position + 4);
