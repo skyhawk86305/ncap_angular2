@@ -14,7 +14,7 @@ import { Tooltip } from '../../types/database-data/tooltip';
 // import { Domain } from '../../types/database-data/domain';
 // import { Reference } from '../../types/database-data/reference';
 
-import { LoadJsonDataService } from '../../services/load.json.data.service';
+import { LoadJsonDataService } from '../../services/load-json-data.service';
 
 @Component({
     selector: 'http-app',

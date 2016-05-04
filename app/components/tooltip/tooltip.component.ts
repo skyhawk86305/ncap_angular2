@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
-import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
+import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 
 @Component({
   selector: 'tooltip',

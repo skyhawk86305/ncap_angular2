@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
-import { ApplicationStateService } from '../../../app/services/application.state.service';
-import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
-import { UserInputService } from '../../../app/services/user.input.service';
+import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { UserInputService } from '../../../app/services/user-input.service';
 
 import { Question } from       '../../../app/types/question';
 import { UserInput } from  '../../../app/types/user-input';

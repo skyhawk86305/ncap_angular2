@@ -6,9 +6,9 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
-import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
-import { ApplicationStateService } from '../../../app/services/application.state.service';
-import { UserInputService } from '../../../app/services/user.input.service';
+import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { UserInputService } from '../../../app/services/user-input.service';
 
 import { UserInput } from  '../../../app/types/user-input';
 

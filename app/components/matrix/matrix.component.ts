@@ -8,9 +8,9 @@ import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 
-import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
-import { ApplicationStateService } from '../../../app/services/application.state.service';
-import { UserInputService } from '../../../app/services/user.input.service';
+import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { UserInputService } from '../../../app/services/user-input.service';
 
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';

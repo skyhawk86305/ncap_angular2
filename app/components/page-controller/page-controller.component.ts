@@ -4,14 +4,14 @@ import { RouteParams } from 'angular2/router';
 import { Question } from  '../../../app/types/question';
 import { ValidationResult } from  '../../../app/types/enums/validation-result.enum';
 
-import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
+import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 
-import { ApplicationStateService } from '../../../app/services/application.state.service';
+import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { ValidationService } from '../../../app/services/validation.service';
 
 @Component({
@@ -106,7 +106,7 @@ export class PageControllerComponent implements OnInit {
     }
 }
 
-// import { CallbackType } from '../../../app/services/application.state.service';
+// import { CallbackType } from '../../../app/services/application-state.service';
         // this._applicationStateService.registerObserverCallback(this.sharedModelChanged);
 
     // sharedModelChanged() {

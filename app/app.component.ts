@@ -6,9 +6,9 @@ import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 
-import { ApplicationStateService } from '../app/services/application.state.service';
-import { LoadJsonDataService } from '../app/services/load.json.data.service';
-import { UserInputService } from '../app/services/user.input.service';
+import { ApplicationStateService } from '../app/services/application-state.service';
+import { LoadJsonDataService } from '../app/services/load-json-data.service';
+import { UserInputService } from '../app/services/user-input.service';
 import { ValidationService } from '../app/services/validation.service';
 
 @Component({

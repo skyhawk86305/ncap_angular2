@@ -6,9 +6,9 @@ import { Component, OnInit } from 'angular2/core';
 
 import { Question } from  '../../../app/types/question';
 
-import { LoadJsonDataService } from '../../../app/services/load.json.data.service';
-import { ApplicationStateService } from '../../../app/services/application.state.service';
-import { UserInputService } from '../../../app/services/user.input.service';
+import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { UserInputService } from '../../../app/services/user-input.service';
 
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
