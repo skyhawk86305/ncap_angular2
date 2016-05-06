@@ -11,6 +11,9 @@ import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
 import { Sre } from '../../../app/types/database-data/sre';
 import { SurveyPageSre } from '../../../app/types/database-data/survey-page-sre';
 
+import { AnswerCategory } from '../../../app/types/enums/answer-category';
+import { FormatCategory } from '../../../app/types/enums/format-category';
+
 import _ from 'lodash';
 
 class Slim {
@@ -63,7 +66,10 @@ export class TestPageComponent implements OnInit {
 
                 if (surveyRenderingElement) {
                     let displayValue = surveyRenderingElement.txt_parent_lang1 ? surveyRenderingElement.txt_legalrep_lang1 : surveyRenderingElement.tracking_key;
-                    console.log(curPage.seq_pag_id + '.' + curQuestion.sre_sort_order + ' ' + displayValue);
+                    console.log(curPage.seq_pag_id + '.' + curQuestion.sre_sort_order + ' ' +
+                    AnswerCategory[surveyRenderingElement.sre_anca_id] + ' ' +
+                    FormatCategory[surveyRenderingElement.sre_foca_id] + ' ' +
+                    displayValue + ' ' );
                 } else {
                     // log this
                     console.log("*** No SRE found for obj_uid " + curQuestion.seq_sre_uid);
