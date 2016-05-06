@@ -2,12 +2,10 @@
 // import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 export class Tooltip {
-    constructor(
-        public id: number,
-        public term?: string,
-        public definition?: string,
-        public ttip_ref_id?: number
-    ) { }
+  id: number;
+  term: string;
+  definition: string;
+  ttip_ref_id: number;  
 }
 
 // class Test {

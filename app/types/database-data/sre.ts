@@ -22,6 +22,6 @@ export class Sre {
     parent_sre_varu_id: number;
     legalrep_sre_varu_id: number;
     selfreport_sre_varu_id: number;
-    error_msg_lang1: number;
+    error_msg_lang1: string;
     bypass_var: string;
 }
