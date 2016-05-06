@@ -1,4 +1,4 @@
-import {SurveyPageSre} from "../types/database-data/survey_page_sre";
+import {SurveyPageSre} from "../types/database-data/survey-page-sre";
 export var surveyPageSre:SurveyPageSre[] = [
     {
         "survey_id": 1,

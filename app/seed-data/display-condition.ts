@@ -1,4 +1,4 @@
-import {DisplayCondition} from "../types/database-data/display_condition";
+import {DisplayCondition} from "../types/database-data/display-condition";
 export var displayCondition:DisplayCondition[] = [
     {
         "id": 1,
