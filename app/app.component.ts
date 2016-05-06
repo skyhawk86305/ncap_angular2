@@ -56,7 +56,13 @@ import { ValidationService } from '../app/services/validation.service';
     path: '/test',
     name: 'TestPage',
     component: TestPageComponent
+  },
+  {
+    path: '/test-page',
+    name: 'TestPage',
+    component: TestPageComponent
   }
+
 ])
 export class AppComponent {
 }
