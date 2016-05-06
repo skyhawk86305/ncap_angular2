@@ -5,6 +5,8 @@ import { tooltip } from '../../../app/seed-data/tooltip';
 import { sre } from '../../../app/seed-data/sre';
 import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
 
+import _ from 'lodash';
+
 @Component({
     selector: 'test-page',
     viewProviders: [HTTP_PROVIDERS],
@@ -21,9 +23,19 @@ export class TestPageComponent implements OnInit {
 
     ngOnInit() {
         //this.responseData = JSON.stringify(tooltip);
-        this.responseData = JSON.stringify(sre);
+        //this.responseData = JSON.stringify(surveyPageSre);
 
-        console.log(tooltip);
+        // find unique page numbers
+
+
+        var foca_monad = _.chain(sre).map(r => { return r.sre_foca_id; }).uniq();
+        var foca_uniq_array = foca_monad.value();
+        this.responseData = foca_uniq_array.toString();
+
+
+
+
+        console.log(foca_uniq_array.toString());
     }
 
     click() {
