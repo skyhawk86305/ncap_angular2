@@ -13,6 +13,6 @@ export class SurveyPageSre {
     //  validation_type: ValidationType;
 
     // Below not populated from JSON file
-    validation_result: ValidationResult;
-    show_validation: boolean;
+    // validation_result: ValidationResult;
+    // show_validation: boolean;
 }
