@@ -1,7 +1,8 @@
-import { Component, OnInit} from 'angular2/core';
-import {Http, HTTP_PROVIDERS} from 'angular2/http';
+// ///<reference path="../../../typings/main/definitions/lodash/index.d.ts"/>
 
-import { tooltip } from '../../../app/seed-data/tooltip';
+import { Component, OnInit} from 'angular2/core';
+import { HTTP_PROVIDERS} from 'angular2/http';
+
 import { sre } from '../../../app/seed-data/sre';
 import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
 
@@ -26,11 +27,6 @@ class Slim {
 export class TestPageComponent implements OnInit {
 
     responseData: string;
-
-    constructor(
-        private _http: Http
-    ) {
-    }
 
     ngOnInit() {
         // // find unique page numbers
