@@ -1,5 +1,3 @@
-// ///<reference path="../../../typings/main/definitions/lodash/index.d.ts"/>
-
 import { Component, OnInit} from 'angular2/core';
 import { HTTP_PROVIDERS} from 'angular2/http';
 

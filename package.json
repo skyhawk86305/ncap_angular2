@@ -21,5 +21,10 @@
   "devDependencies": {
     "concurrently": "2.0.0",
     "lite-server": "2.2.0"
+  },
+  "_globalDepenciesYouMustManuallyInstall": {
+    "typescript": "sudo npm install -g typescript",
+    "typings": "sudo npm install -g typings",
+    "tslint": "sudo npm install -g tslint"
   }
 }
