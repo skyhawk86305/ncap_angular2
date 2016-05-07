@@ -24,46 +24,38 @@ class Slim {
 })
 export class TestPageComponent implements OnInit {
 
-    responseData: string;
+    responseData: string[] = new Array<string>();
 
     ngOnInit() {
-        // // find unique page numbers
-        // var foca_monad = _.chain(sre).map(r => { return r.sre_foca_id; }).uniq();
-        // var foca_uniq_array = foca_monad.value();
-        // this.responseData = foca_uniq_array.toString();
-
-
         // find unique page numbers + order by page id
-        let uniquePageNumbersInOrder = _.orderBy(surveyPageSre, 'page_sort_order');
-        uniquePageNumbersInOrder = _.sortedUniqBy(uniquePageNumbersInOrder, 'page_sort_order');
+        let sortedUniquePages = _.orderBy(surveyPageSre, 'page_sort_order');
+        sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
 
-        let sortedSre: Sre[] = _.orderBy(sre, 'sre_sort_order');
+        let sortedSurveyRenderingElements: Sre[] = _.orderBy(sre, 'sre_sort_order');
 
         // Loop through pages, showing question number + text
-        for (let curPage of uniquePageNumbersInOrder as SurveyPageSre[]) {
+        for (let curPage of sortedUniquePages as SurveyPageSre[]) {
 
-            // Get all entries for this page
-            let questions = _.filter(surveyPageSre, { page_sort_order: curPage.page_sort_order });
+            // Get all elements for this page (these elements link to Sre for the rest of the data)
+            let curPageElements = _.filter(surveyPageSre, { page_sort_order: curPage.page_sort_order });
 
-            for (let curQuestion of questions as SurveyPageSre[]) {
-                let surveyRenderingElement: Sre = _.find(sortedSre, { obj_uid: curQuestion.seq_sre_uid });
-
-                //let questionsOnPage = _.filter(sortedSre, (item) => { item.obj_uid === curPage.seq_sre_uid });
-                //questionsOnPage = _.orderBy(surveyPageSre, 'sre_sort_order');
-
-                //tracking_key
-                //sre_foca_id
-                //sre_anca_id
+            for (let curElement of curPageElements as SurveyPageSre[]) {
+                let surveyRenderingElement: Sre = _.find(sortedSurveyRenderingElements, { obj_uid: curElement.seq_sre_uid });
 
                 if (surveyRenderingElement) {
-                    let displayValue = surveyRenderingElement.txt_parent_lang1 ? surveyRenderingElement.txt_legalrep_lang1 : surveyRenderingElement.tracking_key;
-                    console.log(curPage.seq_pag_id + '.' + curQuestion.sre_sort_order + ' ' +
-                    AnswerCategory[surveyRenderingElement.sre_anca_id] + ' ' +
-                    FormatCategory[surveyRenderingElement.sre_foca_id] + ' ' +
-                    displayValue + ' ' );
+                    let displayValue = (surveyRenderingElement.txt_parent_lang1 ?
+                        surveyRenderingElement.txt_legalrep_lang1 : surveyRenderingElement.tracking_key);
+                    let summary: string = curPage.seq_pag_id + '.' + curElement.sre_sort_order + ' ' +
+                        AnswerCategory[surveyRenderingElement.sre_anca_id] + ' ' +
+                        FormatCategory[surveyRenderingElement.sre_foca_id] + ' ' +
+                        displayValue + ' ';
+                    this.responseData.push(summary);
+                    console.log(summary);
                 } else {
                     // log this
-                    console.log("*** No SRE found for obj_uid " + curQuestion.seq_sre_uid);
+                    let summary: string = "*** No SRE found for obj_uid " + curElement.seq_sre_uid;
+                    this.responseData.push(summary);
+                    console.log(summary);
                 }
 
             }
@@ -74,3 +66,10 @@ export class TestPageComponent implements OnInit {
     }
 
 }
+
+
+// xyzzy Look at thiscode from Henry later - it's likely a better solution
+// // find unique page numbers
+// var foca_monad = _.chain(sre).map(r => { return r.sre_foca_id; }).uniq();
+// var foca_uniq_array = foca_monad.value();
+// this.responseData = foca_uniq_array.toString();
