@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { DomainOptions } from  '../../../app/types/domain-options';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
@@ -31,14 +31,14 @@ export class RadioButtonComponent implements OnInit {
 
   constructor(
     protected _applicationStateService: ApplicationStateService,
+    private _loadDomainOptionsService: LoadDomainOptionsService,
     private _loadJsonDataService: LoadJsonDataService,
     private _userInputService: UserInputService
   ) {
   }
 
   ngOnInit() {
-    let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-    this.options = domainOptions.getDomainOption(this.question.parent_sre_dona_id);
+    this.options = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
 
     this.addTooltipIfNecessary();
 

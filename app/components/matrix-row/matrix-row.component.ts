@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { DomainOptions } from  '../../../app/types/domain-options';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
@@ -20,7 +20,6 @@ import { UserInput } from  '../../../app/types/user-input';
 })
 export class MatrixRowComponent implements OnInit {
 
-  //@Input() ColumnHeadings: string[];
   @Input() matrixElement: MatrixElement;
   @Input('question') question: QuestionNew;
   options: DomainOption[];
@@ -29,6 +28,7 @@ export class MatrixRowComponent implements OnInit {
 
   constructor(
     private _loadJsonDataService: LoadJsonDataService,
+    private _loadDomainOptionsService: LoadDomainOptionsService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
@@ -39,8 +39,7 @@ export class MatrixRowComponent implements OnInit {
 
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     if (this.matrixElement.answer_category === 'RadioButtons') {
-      let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-      this.options = domainOptions.getDomainOption(this.question.parent_sre_dona_id);
+      this.options = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
     } else {
       this.options = new Array<DomainOption>();
     }

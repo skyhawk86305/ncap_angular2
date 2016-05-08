@@ -7,10 +7,6 @@ import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
 import { Sre } from '../../../app/types/database-data/sre';
 import { SurveyPageSre } from '../../../app/types/database-data/survey-page-sre';
 
-import { AnswerCategory } from '../../../app/types/enums/answer-category';
-import { FormatCategory } from '../../../app/types/enums/format-category';
-
-import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 
 import _ from 'lodash';

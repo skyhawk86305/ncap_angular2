@@ -1,7 +1,6 @@
 import { Injectable } from 'angular2/core';
 import {Http} from 'angular2/http';
 
-import { DomainOptions } from  '../../app/types/domain-options';
 import { MatrixElement } from '../../app/types/matrix-element';
 import { QuestionNew } from       '../../app/types/question-new';
 
@@ -29,7 +28,6 @@ import _ from 'lodash';
 export class LoadJsonDataService {
     BASE_PATH = 'app/seed-data/raw-json/';
 
-    private _domainOptions: DomainOptions;
     private _questionsNew: QuestionNew[] = new Array<QuestionNew>();
     private _matrixElements: MatrixElement[];
 
@@ -43,8 +41,6 @@ export class LoadJsonDataService {
 
     init() {
         // Old code
-        this._domainOptions = new DomainOptions();
-        this._domainOptions.populateWithData();
         //this._questions = JSON.parse(QUESTIONS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
 
@@ -169,10 +165,6 @@ export class LoadJsonDataService {
 
 
 
-    }
-
-    getDomainOptions() {
-        return this._domainOptions;
     }
 
     getAllQuestions() {

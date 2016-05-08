@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { DomainOptions } from  '../../../app/types/domain-options';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
@@ -37,9 +36,6 @@ export class CheckboxesComponent implements OnInit {
   }
 
   ngOnInit() {
-    let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-    // xyzzy5 this.options = domainOptions.getDomainOption(this.question.parent_sre_dona_id);
-
     this._syncToPreviouslyEnteredData();
   }
 

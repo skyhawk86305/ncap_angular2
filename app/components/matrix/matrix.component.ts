@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { DomainOptions } from  '../../../app/types/domain-options';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
@@ -9,6 +8,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
@@ -32,6 +32,7 @@ export class MatrixComponent implements OnInit {
 
   constructor(
     private _loadJsonDataService: LoadJsonDataService,
+    private _loadDomainOptionsService: LoadDomainOptionsService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
@@ -41,8 +42,7 @@ export class MatrixComponent implements OnInit {
     let curQuestionId = this.question.question_id;
     this.matrixElements = this._loadJsonDataService.getMatrixElementsForQuestionId(curQuestionId);
 
-    let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-    this.options = domainOptions.getDomainOption(this.question.parent_sre_dona_id);
+    this.options = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
   }
 
   click(trackingKey: string, value: string) {
