@@ -4,13 +4,10 @@ import {Http} from 'angular2/http';
 import { MatrixElement } from '../../app/types/matrix-element';
 import { QuestionNew } from       '../../app/types/question-new';
 
-import { QUESTIONS_JSON } from '../../app/seed-data/questions.json';
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
 import { AnswerCategory } from '../../app/types/enums/answer-category';
 import { FormatCategory } from '../../app/types/enums/format-category';
-
-//import { AllDataBaseData } from '../types/database-data/all-database-data';
 
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { ValidationService } from './validation.service';
@@ -41,7 +38,6 @@ export class LoadJsonDataService {
 
     init() {
         // Old code
-        //this._questions = JSON.parse(QUESTIONS_JSON);
         this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
 
         // New code -using data from Database

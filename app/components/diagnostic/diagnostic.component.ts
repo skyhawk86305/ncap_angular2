@@ -4,7 +4,7 @@ import { Component, OnInit } from 'angular2/core';
 
 // import * as prettyjson from 'prettyjson';
 
-import { Question } from  '../../../app/types/question';
+import { QuestionNew } from  '../../../app/types/question-new';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
@@ -23,7 +23,7 @@ import { UserInput } from  '../../../app/types/user-input';
 })
 export class DiagnosticComponent implements OnInit {
 
-    questions: Question[];
+    questions: QuestionNew[];
     renderButtons: boolean = true;
     userInputMap: UserInput[];
     userInputMapJson: string;
