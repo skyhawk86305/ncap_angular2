@@ -9,10 +9,10 @@ import { UserInput } from  '../../../app/types/user-input';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 
 @Component({
-  selector: 'date-month-day-year',
+  selector: 'date',
   templateUrl: 'app/components/date/date.html'
 })
-export class DayMonthYearComponent {
+export class DateComponent {
 
   @Input() question: QuestionNew;
   options: DomainOption[];

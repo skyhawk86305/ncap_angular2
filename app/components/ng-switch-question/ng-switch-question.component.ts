@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 
 import { HomeComponent } from '../home/home.component';
 import { ConsentComponent } from '../consent/consent.component';
-import { DayMonthYearComponent } from '../date/date.component';
+import { DateComponent } from '../date/date.component';
 import { RadioButtonComponent } from '../radiobutton/radiobutton.component';
 import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
@@ -15,7 +15,7 @@ import { FormatCategory } from '../../../app/types/enums/format-category';
 @Component({
     selector: 'ng-switch-question',
     templateUrl: 'app/components/ng-switch-question/ng-switch-question.html',
-    directives: [HomeComponent, RadioButtonComponent, DayMonthYearComponent,
+    directives: [HomeComponent, RadioButtonComponent, DateComponent,
         ConsentComponent, MatrixComponent, SectionTitleComponent,
         PreQuestionIntroComponent]
 })

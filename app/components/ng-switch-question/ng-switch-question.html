@@ -12,12 +12,12 @@
 
 
 <div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
-  <span *ngSwitchWhen="'Home'">                               <home              [question]="question"></home></span>
-  <span *ngSwitchWhen="'Consent'">                            <consent              [question]="question"></consent></span>
-  <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons        [question]="question"></radio-buttons></span>
-  <span *ngSwitchWhen="'Date_MonthDayYear'">                  <date-month-day-year  [question]="question"></date-month-day-year></span>
-  <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix               [question]="question"></matrix></span>
-  <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix               [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'Home'">                               <home             [question]="question"></home></span>
+  <span *ngSwitchWhen="'Consent'">                            <consent          [question]="question"></consent></span>
+  <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons    [question]="question"></radio-buttons></span>
+  <span *ngSwitchWhen="'Date_MonthDayYear'">                  <date             [question]="question"></date></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix           [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix           [question]="question"></matrix></span>
   <span *ngSwitchWhen="'Skip'"></span>
 
   <span *ngSwitchWhen="'Section_Title'">WIP for Section_Title</span>
