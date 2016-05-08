@@ -14,7 +14,7 @@ export class UserInputService {
 
     initialize() {
         this._UserInput = new Array<UserInput>();
-        this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
+        //this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
     }
 
     getAllUserInput() {

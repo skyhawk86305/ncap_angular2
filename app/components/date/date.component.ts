@@ -7,6 +7,7 @@ import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
 
 import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 @Component({
   selector: 'date',
@@ -18,6 +19,9 @@ export class DateComponent {
   options: DomainOption[];
   previouslySelectedStoredValue: string;
 
+  // Permit view to use the enumeration type
+  ValidationResult = ValidationResult;
+
   constructor(
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
@@ -27,9 +31,9 @@ export class DateComponent {
   ngOnInit() {
     this._syncToPreviouslyEnteredData();
 
-    if (!this.previouslySelectedStoredValue) {
-      this.previouslySelectedStoredValue = '2016-04-05'; //xyzzy5 default as Db logic dictates
-    }
+    // if (!this.previouslySelectedStoredValue) {
+    //   this.previouslySelectedStoredValue = '2016-04-05'; //xyzzy5 default as Db logic dictates
+    // }
 
     //let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
