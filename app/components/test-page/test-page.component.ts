@@ -11,8 +11,7 @@ import { AnswerCategory } from '../../../app/types/enums/answer-category';
 import { FormatCategory } from '../../../app/types/enums/format-category';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
-
-import { DomainOptionsNew } from '../../../app/types/domain-options-new';
+import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 
 import _ from 'lodash';
 
@@ -34,17 +33,15 @@ export class TestPageComponent implements OnInit {
     sortedUniquePages: SurveyPageSre[];
 
     constructor(
-        private _loadJsonDataService: LoadJsonDataService
+        //private _loadJsonDataService: LoadJsonDataService
+        private _loadDomainOptionsService: LoadDomainOptionsService
     ) {
     }
 
     ngOnInit() {
-        this.sortedSurveyRenderingElements = this._loadJsonDataService.getAllQuestions();
-        
-        let domainOptionsNew = new DomainOptionsNew();
-        domainOptionsNew.populateWithData();
-        
+        var test = this._loadDomainOptionsService.getDomainOptions(15);
 
+        console.log(JSON.stringify(test));
     }
 
     click() {

@@ -10,6 +10,7 @@ import { ApplicationStateService } from '../app/services/application-state.servi
 import { LoadJsonDataService } from '../app/services/load-json-data.service';
 import { UserInputService } from '../app/services/user-input.service';
 import { ValidationService } from '../app/services/validation.service';
+import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
 
 @Component({
   selector: 'the-app',
@@ -23,7 +24,8 @@ import { ValidationService } from '../app/services/validation.service';
     LoadJsonDataService,
     ApplicationStateService,
     UserInputService,
-    ValidationService
+    ValidationService,
+    LoadDomainOptionsService
   ]
 })
 @RouteConfig([
