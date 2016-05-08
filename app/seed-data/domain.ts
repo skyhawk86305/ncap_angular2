@@ -1,4 +1,5 @@
 import {Domain} from "../types/database-data/domain";
+
 export var domain:Domain[] = [
     {
         "id": 43,
