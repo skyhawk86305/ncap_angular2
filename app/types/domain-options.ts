@@ -25,50 +25,6 @@ export class DomainOptions {
     this.yesNoDkPnta = SEEDDATA.YES_NO_DK_PNTA;
     this.yesNoDkNa = SEEDDATA.YES_NO_DK_NA;
   }
-
-  xyzzy_getDomainOption(typePassedIn: string) {
-    let result: DomainOption[];
-
-    switch (typePassedIn) {
-      case 'DOM_ETHNICITY':
-        result = this.ethnicity;
-        break;
-      case 'DOM_VERBAL_SKILL':
-        result = this.verbalSkill;
-        break;
-      case 'DOM_YES_NO':
-        result = this.yesNo;
-        break;
-      case 'DOM_SEX':
-        result = this.sex;
-        break;
-      case 'DOM_YES_NO_DK_PNTA':
-        result = this.yesNoDkPnta;
-        break;
-      case 'DOM_YES_NO_DK_NA_Q_1':
-        result = this.yesNoDkNaQ1;
-        break;
-      case 'DOM_YES_NO_DK_NA':
-        result = this.yesNoDkNa;
-        break;
-      case 'DOM_EDU_LEVEL':
-        result = this.eduLevel;
-        break;
-      case 'DOM_AGE_5':
-        result = this.age5;
-        break;
-      case 'DOM_FREQ_2':
-        result = this.freq2;
-        break;
-      default:
-        // Todo log too
-        let message = 'Not yet supported :' + typePassedIn;
-        console.log(message);
-        throw new Error(message);
-    }
-
-    return result;
-  }
   
   getDomainOption(typePassedIn: number) {
     let result: DomainOption[];
@@ -106,12 +62,57 @@ export class DomainOptions {
         break;
       default:
         // Todo log too
-        let message = 'Not yet supported :' + typePassedIn;
+        let message = 'This Domain Option is not yet supported :' + typePassedIn;
         console.log(message);
         throw new Error(message);
     }
 
     return result;
   }
-  
+
 }
+
+
+  // xyzzy_getDomainOption(typePassedIn: string) {
+  //   let result: DomainOption[];
+
+  //   switch (typePassedIn) {
+  //     case 'DOM_ETHNICITY':
+  //       result = this.ethnicity;
+  //       break;
+  //     case 'DOM_VERBAL_SKILL':
+  //       result = this.verbalSkill;
+  //       break;
+  //     case 'DOM_YES_NO':
+  //       result = this.yesNo;
+  //       break;
+  //     case 'DOM_SEX':
+  //       result = this.sex;
+  //       break;
+  //     case 'DOM_YES_NO_DK_PNTA':
+  //       result = this.yesNoDkPnta;
+  //       break;
+  //     case 'DOM_YES_NO_DK_NA_Q_1':
+  //       result = this.yesNoDkNaQ1;
+  //       break;
+  //     case 'DOM_YES_NO_DK_NA':
+  //       result = this.yesNoDkNa;
+  //       break;
+  //     case 'DOM_EDU_LEVEL':
+  //       result = this.eduLevel;
+  //       break;
+  //     case 'DOM_AGE_5':
+  //       result = this.age5;
+  //       break;
+  //     case 'DOM_FREQ_2':
+  //       result = this.freq2;
+  //       break;
+  //     default:
+  //       // Todo log too
+  //       let message = 'Not yet supported :' + typePassedIn;
+  //       console.log(message);
+  //       throw new Error(message);
+  //   }
+
+  //   return result;
+  // }
