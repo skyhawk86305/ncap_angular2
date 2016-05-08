@@ -125,6 +125,28 @@ export class LoadJsonDataService {
                             question.validation_type = ValidationType.notApplicable;
                     }
 
+                    // xyzzy5 Detect Residental Block
+                    if (question.question_text.indexOf('Where did the child live from birth through') > -1) {
+                        question.sre_anca_id = AnswerCategory.ResidentialBlock;
+                    }
+                    if (question.question_text.indexOf('Please include all addresses during this 1-year period, along with dates of residence') > -1) {
+                        question.sre_anca_id = AnswerCategory.Skip;
+                    }
+                    if (question.question_text.indexOf('Where did the child\'s biological mother live for') > -1) {
+                        question.sre_anca_id = AnswerCategory.Skip;
+                    }
+                    if (question.question_text.indexOf('Please include all addresses during this 2-year period') > -1) {
+                        question.sre_anca_id = AnswerCategory.Skip;
+                    }
+                    if (question.question_text.indexOf('Where did the child\'s biological father live for') > -1) {
+                        question.sre_anca_id = AnswerCategory.Skip;
+                    }
+                    
+                    if (question.question_text.indexOf('This row is to be deleted') > -1) {
+                        question.sre_anca_id = AnswerCategory.Skip;
+                    }
+
+
                     this._questionsNew.push(question);
 
                     // let displayValue = (surveyRenderingElement.txt_parent_lang1 ?

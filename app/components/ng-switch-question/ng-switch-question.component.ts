@@ -7,6 +7,7 @@ import { RadioButtonComponent } from '../radiobutton/radiobutton.component';
 import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
+import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
 
 import { QuestionNew } from  '../../../app/types/question-new';
 import { AnswerCategory } from '../../../app/types/enums/answer-category';
@@ -17,7 +18,7 @@ import { FormatCategory } from '../../../app/types/enums/format-category';
     templateUrl: 'app/components/ng-switch-question/ng-switch-question.html',
     directives: [HomeComponent, RadioButtonComponent, DateComponent,
         ConsentComponent, MatrixComponent, SectionTitleComponent,
-        PreQuestionIntroComponent]
+        PreQuestionIntroComponent, ResidentalBlockComponent]
 })
 export class NgSwitchQuestionComponent implements OnInit {
 

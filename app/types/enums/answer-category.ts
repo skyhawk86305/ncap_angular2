@@ -21,5 +21,6 @@ export enum AnswerCategory {
     // xyzzzy Added so we can render existing data
     Home = 30,
     Consent = 31,
-    Skip = 32
+    Skip = 32,
+    ResidentialBlock = 33
 }
