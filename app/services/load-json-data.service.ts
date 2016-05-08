@@ -3,7 +3,6 @@ import {Http} from 'angular2/http';
 
 import { DomainOptions } from  '../../app/types/domain-options';
 import { MatrixElement } from '../../app/types/matrix-element';
-import { Question } from       '../../app/types/question';
 import { QuestionNew } from       '../../app/types/question-new';
 
 import { QUESTIONS_JSON } from '../../app/seed-data/questions.json';
@@ -30,7 +29,6 @@ export class LoadJsonDataService {
     BASE_PATH = 'app/seed-data/raw-json/';
 
     private _domainOptions: DomainOptions;
-    private _questions: Question[];
     private _questionsNew: QuestionNew[] = new Array<QuestionNew>();
     private _matrixElements: MatrixElement[];
 
@@ -98,17 +96,15 @@ export class LoadJsonDataService {
                     // xyzzy Temp hacks to get this data rendering
 
                     //question.sre_foca_id =
-                    if (question.page_id === 1 ) {
+                    if (question.page_id === 1) {
                         question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Home : AnswerCategory.Ignore;
                     }
                     if (question.page_id === 2) {
                         question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Consent : AnswerCategory.Ignore;
                     }
 
+                    question.question_text = surveyRenderingElement.txt_parent_lang1;
                     question.question_id = pageNumber++;
-
-
-
 
                     this._questionsNew.push(question);
 
@@ -139,15 +135,12 @@ export class LoadJsonDataService {
     }
 
     getAllQuestions() {
-        return this._questions;
-    }
-
-    getAllDatabaseQuestionsData() {
         return this._questionsNew;
     }
 
     getQuestionsForPage(page_Id: number) {
-        return this._questions.filter(i => i.page_id === page_Id);
+        //return this._questions.filter(i => i.page_id === page_Id);
+        return this._questionsNew.filter(i => i.page_id === page_Id);
     }
 
     // getTooltipForId(id: number) {

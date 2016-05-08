@@ -26,7 +26,7 @@ export class DomainOptions {
     this.yesNoDkNa = SEEDDATA.YES_NO_DK_NA;
   }
 
-  getDomainOption(typePassedIn: string) {
+  xyzzy_getDomainOption(typePassedIn: string) {
     let result: DomainOption[];
 
     switch (typePassedIn) {
@@ -62,9 +62,56 @@ export class DomainOptions {
         break;
       default:
         // Todo log too
-        throw new Error('Not yet supported :' + typePassedIn);
+        let message = 'Not yet supported :' + typePassedIn;
+        console.log(message);
+        throw new Error(message);
     }
 
     return result;
   }
+  
+  getDomainOption(typePassedIn: number) {
+    let result: DomainOption[];
+
+    switch (typePassedIn) {
+      case 11:
+        result = this.ethnicity;
+        break;
+      case 26:
+        result = this.verbalSkill;
+        break;
+      case 29:
+        result = this.yesNo;
+        break;
+      case 23:
+        result = this.sex;
+        break;
+      case 32:
+        result = this.yesNoDkPnta;
+        break;
+      case 33:
+        result = this.yesNoDkNaQ1;
+        break;
+      case 31:
+        result = this.yesNoDkNa;
+        break;
+      case 10:
+        result = this.eduLevel;
+        break;
+      case 6:
+        result = this.age5;
+        break;
+      case 14:
+        result = this.freq2;
+        break;
+      default:
+        // Todo log too
+        let message = 'Not yet supported :' + typePassedIn;
+        console.log(message);
+        throw new Error(message);
+    }
+
+    return result;
+  }
+  
 }

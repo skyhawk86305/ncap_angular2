@@ -1,6 +1,8 @@
 <!--switch question control-->
 <!--{{question.answer_type}}-->
 
+{{question.page_id}}.{{question.question_id}} - {{FormatCategory[question.sre_foca_id]}} - {{AnswerCategory[question.sre_anca_id]}}
+
 <div [ngSwitch]=AnswerCategory[question.sre_anca_id]>
   <span *ngSwitchWhen="'Home'">                               <home              [question]="question"></home></span>
   <span *ngSwitchWhen="'Consent'">                            <consent              [question]="question"></consent></span>
@@ -9,13 +11,16 @@
   <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix               [question]="question"></matrix></span>
   <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix               [question]="question"></matrix></span>
 
-  <span *ngSwitchWhen="Section_Title">WIP for Section_Title</span>
-  <span *ngSwitchWhen="PreQ_Intro">WIP for PreQ_Intro</span>
-
+  <span *ngSwitchWhen="'Section_Title'">WIP for Section_Title</span>
+  <span *ngSwitchWhen="'PreQ_Intro'">WIP for PreQ_Intro</span>
+  <span *ngSwitchWhen="'No_Answer'">WIP for No_Answer</span>
+  
   <span *ngSwitchDefault>
     {{question.page_id}}.{{question.question_id}}. {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
     </span>
 </div>
+
+<!--<div [ngSwitch]=AnswerCategory[question.sre_anca_id]>-->
 
 
     <!--**Unsupported answerCategory: {{question.answerCategory}} **-->

@@ -42,7 +42,7 @@ export class MatrixComponent implements OnInit {
     this.matrixElements = this._loadJsonDataService.getMatrixElementsForQuestionId(curQuestionId);
 
     let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-    this.options = domainOptions.getDomainOption(this.question.answer_lookup);
+    this.options = domainOptions.getDomainOption(this.question.parent_sre_dona_id);
   }
 
   click(trackingKey: string, value: string) {

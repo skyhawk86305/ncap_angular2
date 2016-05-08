@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 
-import { Question } from  '../../../app/types/question';
+import { QuestionNew } from  '../../../app/types/question-new';
 import { ValidationResult } from  '../../../app/types/enums/validation-result.enum';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
@@ -21,7 +21,7 @@ import { ValidationService } from '../../../app/services/validation.service';
 })
 export class PageControllerComponent implements OnInit {
 
-    questions: Question[];
+    questions: QuestionNew[];
     renderButtons: boolean = true;
     that: PageControllerComponent;
 

@@ -44,7 +44,7 @@ export class TestPageComponent implements OnInit {
 
         //        let { sortedUniquePages, sortedSurveyRenderingElements } = this._loadJsonDataService.getAllDatabaseQuestionsData(); 
 
-        this.sortedSurveyRenderingElements = this._loadJsonDataService.getAllDatabaseQuestionsData();
+        this.sortedSurveyRenderingElements = this._loadJsonDataService.getAllQuestions();
 
         // // Loop through pages, showing question number + text
         // for (let curPage of sortedUniquePages as SurveyPageSre[]) {

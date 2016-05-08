@@ -34,8 +34,8 @@ export class QuestionNew {
   answer_type: string;
   validation_type: ValidationType;
   question_text: string;
-  answer_lookup_id: number;
-  answer_lookup: string;
+  //answer_lookup_id: number;
+  //answer_lookup: string;
 
   // Below not populated from JSON file
   validation_result: ValidationResult;

@@ -26,6 +26,6 @@ export class AllPagesComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.questions = this._loadJsonDataService.getAllDatabaseQuestionsData();
+        this.questions = this._loadJsonDataService.getAllQuestions();
     }
 }

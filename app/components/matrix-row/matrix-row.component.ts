@@ -40,7 +40,7 @@ export class MatrixRowComponent implements OnInit {
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     if (this.matrixElement.answer_category === 'RadioButtons') {
       let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-      this.options = domainOptions.getDomainOption(this.question.answer_lookup);
+      this.options = domainOptions.getDomainOption(this.question.parent_sre_dona_id);
     } else {
       this.options = new Array<DomainOption>();
     }

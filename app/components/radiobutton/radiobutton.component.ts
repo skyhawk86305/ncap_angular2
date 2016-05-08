@@ -38,7 +38,7 @@ export class RadioButtonComponent implements OnInit {
 
   ngOnInit() {
     let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-    this.options = domainOptions.getDomainOption(this.question.answer_lookup);
+    this.options = domainOptions.getDomainOption(this.question.parent_sre_dona_id);
 
     this.addTooltipIfNecessary();
 
