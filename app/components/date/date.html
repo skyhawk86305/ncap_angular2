@@ -5,11 +5,13 @@
     </div>
 </div>
 
-<input type="date" [(ngModel)]="previouslySelectedStoredValue"/>
+<input type="date" [ngModel]="previouslySelectedStoredValue" (ngModelChange)="click(question.tracking_key, $event)"/>
+
+ <!--(change)='click(question.tracking_key, $event)'-->
+<!--(ngModelChange)="onChange($event)-->
 
 <BR>
 <BR>
-{{previouslySelectedStoredValue}}
 
 <!--<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 

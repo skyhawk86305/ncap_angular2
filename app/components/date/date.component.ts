@@ -6,6 +6,7 @@ import { QuestionNew } from       '../../../app/types/question-new';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
 
+import { ApplicationStateService } from '../../../app/services/application-state.service';
 
 @Component({
   selector: 'date-month-day-year',
@@ -18,6 +19,7 @@ export class DayMonthYearComponent {
   previouslySelectedStoredValue: string;
 
   constructor(
+    private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
   }
@@ -25,12 +27,8 @@ export class DayMonthYearComponent {
   ngOnInit() {
     this._syncToPreviouslyEnteredData();
 
-
-    // xyzzy Hack to pass validation until this control is built out
-    //this._userInputService.setUserInput(this.question.tracking_key, 'dummy_data');
-
     if (!this.previouslySelectedStoredValue) {
-      this.previouslySelectedStoredValue = '04/05/2016';
+      this.previouslySelectedStoredValue = '2016-04-05'; //xyzzy5 default as Db logic dictates
     }
 
     //let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
@@ -48,14 +46,15 @@ export class DayMonthYearComponent {
     this.question.question_text = this.question.question_text.replace(/".>/i, '');
   }
 
-  // click(trackingKey: string, id: number) {
-  //   console.log('Clicked ' + trackingKey + ' with id ' + id);
-  //   this._userInputService.setUserInput(trackingKey, id.toString());
-  //   this._syncToPreviouslyEnteredData();
+  click(trackingKey: string, value: string) {
+    // console.log('Clicked ' + trackingKey);
+    // console.log('Value: ' + value);
+    this._userInputService.setUserInput(trackingKey, value);
+    this._syncToPreviouslyEnteredData();
 
-  //   // Ask Page Control to re-validate for everything on the page
-  //   this._applicationStateService.requestPagecontrolRevalidate();
-  // }
+    // Ask Page Control to re-validate for everything on the page
+    this._applicationStateService.requestPagecontrolRevalidate();
+  }
 
 
   private _syncToPreviouslyEnteredData() {
