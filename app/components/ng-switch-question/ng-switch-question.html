@@ -1,9 +1,17 @@
-<!--switch question control-->
-<!--{{question.answer_type}}-->
+<!--{{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{question.validation_type}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}-->
 
-{{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{question.validation_type}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
+<div *ngIf="AnswerCategory[question.sre_anca_id] === 'No_Answer'" [ngSwitch]=FormatCategory[question.sre_foca_id]>
+  <span *ngSwitchWhen="'Section_Title'">                      <section-title              [question]="question"></section-title></span>
+  <span *ngSwitchWhen="'PreQ_Intro'">                         <pre-question-intro         [question]="question"></pre-question-intro></span>
 
-<div [ngSwitch]=AnswerCategory[question.sre_anca_id]>
+  <span *ngSwitchDefault>
+    **Unsupported** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
+    </span>
+</div>
+
+
+
+<div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
   <span *ngSwitchWhen="'Home'">                               <home              [question]="question"></home></span>
   <span *ngSwitchWhen="'Consent'">                            <consent              [question]="question"></consent></span>
   <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons        [question]="question"></radio-buttons></span>
@@ -14,9 +22,9 @@
   <span *ngSwitchWhen="'Section_Title'">WIP for Section_Title</span>
   <span *ngSwitchWhen="'PreQ_Intro'">WIP for PreQ_Intro</span>
   <span *ngSwitchWhen="'No_Answer'">WIP for No_Answer</span>
-  
+
   <span *ngSwitchDefault>
-    {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
+    **Unsupported** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
     </span>
 </div>
 
