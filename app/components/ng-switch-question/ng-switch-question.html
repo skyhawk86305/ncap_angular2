@@ -1,7 +1,7 @@
 <!--switch question control-->
 <!--{{question.answer_type}}-->
 
-{{question.page_id}}.{{question.question_id}} - {{FormatCategory[question.sre_foca_id]}} - {{AnswerCategory[question.sre_anca_id]}}
+{{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{question.validation_type}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
 
 <div [ngSwitch]=AnswerCategory[question.sre_anca_id]>
   <span *ngSwitchWhen="'Home'">                               <home              [question]="question"></home></span>
@@ -16,11 +16,9 @@
   <span *ngSwitchWhen="'No_Answer'">WIP for No_Answer</span>
   
   <span *ngSwitchDefault>
-    {{question.page_id}}.{{question.question_id}}. {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
+    {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.txt_parent_lang1}}
     </span>
 </div>
 
 <!--<div [ngSwitch]=AnswerCategory[question.sre_anca_id]>-->
-
-
-    <!--**Unsupported answerCategory: {{question.answerCategory}} **-->
+<!--**Unsupported answerCategory: {{question.answerCategory}} **-->

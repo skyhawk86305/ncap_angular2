@@ -93,7 +93,11 @@ export class PageControllerComponent implements OnInit {
         // If validation was ok, then let go to the next page
         if (aggregateResult === ValidationResult.ok) {
             this._applicationStateService.next();
+        } else
+        {
+            console.log('Aggregate validation is ' + ValidationResult[aggregateResult]);
         }
+        
     }
 
     back() {

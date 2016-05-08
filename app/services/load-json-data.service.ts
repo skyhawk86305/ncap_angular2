@@ -13,6 +13,7 @@ import { FormatCategory } from '../../app/types/enums/format-category';
 
 //import { AllDataBaseData } from '../types/database-data/all-database-data';
 
+import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { ValidationService } from './validation.service';
 
 // The data
@@ -105,6 +106,20 @@ export class LoadJsonDataService {
 
                     question.question_text = surveyRenderingElement.txt_parent_lang1;
                     question.question_id = pageNumber++;
+
+                    switch (surveyRenderingElement.bypass_property) {
+                        case 'REQUIRED':
+                            question.validation_type = ValidationType.required;
+                            break;
+                        case 'REQUESTED':
+                            question.validation_type = ValidationType.requested;
+                            break;
+                        case 'OPTIONAL':
+                            question.validation_type = ValidationType.optional;
+                            break;
+                        default:
+                            question.validation_type = ValidationType.notApplicable;
+                    }
 
                     this._questionsNew.push(question);
 

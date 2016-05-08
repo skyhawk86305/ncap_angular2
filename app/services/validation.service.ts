@@ -29,7 +29,7 @@ export class ValidationService {
     validateQuestion(question: QuestionNew) {
         let result: ValidationResult;
 
-        if (question.validation_type === ValidationType.optional) {
+        if (question.validation_type === ValidationType.optional || question.validation_type === ValidationType.notApplicable) {
             result = ValidationResult.ok;
         } else {
             let userInput: UserInput = this._userInputService.getUserInput(question.tracking_key);
