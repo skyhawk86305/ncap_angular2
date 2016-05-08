@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
 import { DomainOptions } from  '../../../app/types/domain-options';
-import { Question } from       '../../../app/types/question';
+import { QuestionNew } from       '../../../app/types/question-new';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
 import { TooltipComponent } from '../tooltip/tooltip.component';
@@ -22,7 +22,7 @@ import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 })
 export class MatrixComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: QuestionNew;
   @Input() showValidation: boolean = true;
   options: DomainOption[];
   questionToolTipId: number = -1;

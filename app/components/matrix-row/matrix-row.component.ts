@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
 import { DomainOptions } from  '../../../app/types/domain-options';
-import { Question } from       '../../../app/types/question';
+import { QuestionNew } from       '../../../app/types/question-new';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
@@ -22,7 +22,7 @@ export class MatrixRowComponent implements OnInit {
 
   //@Input() ColumnHeadings: string[];
   @Input() matrixElement: MatrixElement;
-  @Input('question') question: Question;
+  @Input('question') question: QuestionNew;
   options: DomainOption[];
   previouslySelectedRadioButton: number;
   textInput: string;

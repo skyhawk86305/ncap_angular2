@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { Question } from       '../../../app/types/question';
+import { QuestionNew } from       '../../../app/types/question-new';
 
 import { UserInputService } from '../../../app/services/user-input.service';
 
@@ -11,7 +11,7 @@ import { UserInputService } from '../../../app/services/user-input.service';
 })
 export class DayMonthYearComponent {
 
-  @Input() question: Question;
+  @Input() question: QuestionNew;
   options: DomainOption[];
 
   constructor(

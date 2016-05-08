@@ -28,4 +28,15 @@ export class Sre {
     selfreport_sre_varu_id: number;
     error_msg_lang1: string;
     bypass_var: string;
+
+    //answerCategory: string; // = this.getAnswerCategory();
+
+    // Not imported from DB
+    // getAnswerCategory(): string {
+    //     let result: string = AnswerCategory[this.sre_anca_id];
+    //     console.log(result);
+
+    //     return result;
+    // }
+
 }

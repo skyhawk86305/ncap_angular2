@@ -1,11 +1,14 @@
 import { Component, OnInit } from 'angular2/core';
 
-import { Question } from  '../../../app/types/question';
+//import { Question } from  '../../../app/types/question';
+import { QuestionNew } from  '../../../app/types/question-new';
+import { AnswerCategory } from '../../../app/types/enums/answer-category';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
+
 
 @Component({
     selector: 'page',
@@ -14,8 +17,7 @@ import { HomeComponent } from '../home/home.component';
 })
 export class AllPagesComponent implements OnInit {
 
-    //   @Input() question: Question;
-    questions: Question[];
+    questions: QuestionNew[];
     renderButtons: boolean = true;
 
     constructor(
@@ -24,6 +26,6 @@ export class AllPagesComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.questions = this._loadJsonDataService.getQuestions();
+        this.questions = this._loadJsonDataService.getAllDatabaseQuestionsData();
     }
 }

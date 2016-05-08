@@ -16,5 +16,10 @@ export enum AnswerCategory {
     RadioButons_in_Matrix = 15,
     Calculated = 16,
     Address = 17,
-    Immediate_Selection = 18
+    Immediate_Selection = 18,
+
+    // xyzzzy Added so we can render existing data
+    Home = 30,
+    Consent = 31,
+    Ignore = 32
 }

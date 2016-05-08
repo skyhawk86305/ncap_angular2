@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
 import { DomainOptions } from  '../../../app/types/domain-options';
-import { Question } from       '../../../app/types/question';
+import { QuestionNew } from       '../../../app/types/question-new';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
@@ -21,7 +21,7 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 })
 export class RadioButtonComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: QuestionNew;
   options: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: number;
