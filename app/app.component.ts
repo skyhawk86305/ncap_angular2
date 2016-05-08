@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
 import { PageControllerComponent } from './components/page-controller/page-controller.component';
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
@@ -19,6 +19,7 @@ import { ValidationService } from '../app/services/validation.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
+    Route,
     LoadJsonDataService,
     ApplicationStateService,
     UserInputService,
@@ -48,9 +49,9 @@ import { ValidationService } from '../app/services/validation.service';
     component: AllPagesComponent
   },
   {
-    path: '/diag',
+    path: '/diag/:diagMode',
     name: 'Diag',
-    component: DiagnosticComponent
+    component: PageControllerComponent
   },
   {
     path: '/test',

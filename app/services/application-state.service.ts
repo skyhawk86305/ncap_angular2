@@ -13,6 +13,8 @@ export class ApplicationStateService {
     private _totalPages: number;
     private _pageControllerComponent: PageControllerComponent;
 
+    public diagMode: boolean = false;
+    
     constructor(
         private _userInputService: UserInputService
     ) {

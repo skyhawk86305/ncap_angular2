@@ -26,7 +26,7 @@ export class PageControllerComponent implements OnInit {
     that: PageControllerComponent;
 
     constructor(
-        private _applicationStateService: ApplicationStateService,
+        protected _applicationStateService: ApplicationStateService,
         private _loadJsonDataService: LoadJsonDataService,
         private _validationService: ValidationService,
         private _routeParams: RouteParams
@@ -39,6 +39,9 @@ export class PageControllerComponent implements OnInit {
         if (requestedPageId) {
             this._applicationStateService.setPageNumber(requestedPageId);
         }
+
+        let diagmode: string = this._routeParams.get('diagMode');
+        this._applicationStateService.diagMode = (diagmode === 'true');
 
         this.getQuestionsToRender();
 
@@ -93,11 +96,10 @@ export class PageControllerComponent implements OnInit {
         // If validation was ok, then let go to the next page
         if (aggregateResult === ValidationResult.ok) {
             this._applicationStateService.next();
-        } else
-        {
+        } else {
             console.log('Aggregate validation is ' + ValidationResult[aggregateResult]);
         }
-        
+
     }
 
     back() {

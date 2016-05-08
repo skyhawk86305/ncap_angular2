@@ -30,8 +30,8 @@ export class RadioButtonComponent implements OnInit {
   ValidationResult = ValidationResult;
 
   constructor(
+    protected _applicationStateService: ApplicationStateService,
     private _loadJsonDataService: LoadJsonDataService,
-    private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
   }
