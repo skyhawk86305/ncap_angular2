@@ -4,6 +4,8 @@ import { DomainOption } from   '../../../app/types/domain-option';
 import { QuestionNew } from       '../../../app/types/question-new';
 
 import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInput } from  '../../../app/types/user-input';
+
 
 @Component({
   selector: 'date-month-day-year',
@@ -13,6 +15,7 @@ export class DayMonthYearComponent {
 
   @Input() question: QuestionNew;
   options: DomainOption[];
+  previouslySelectedStoredValue: string;
 
   constructor(
     private _userInputService: UserInputService
@@ -20,6 +23,16 @@ export class DayMonthYearComponent {
   }
 
   ngOnInit() {
+    this._syncToPreviouslyEnteredData();
+
+
+    // xyzzy Hack to pass validation until this control is built out
+    //this._userInputService.setUserInput(this.question.tracking_key, 'dummy_data');
+
+    if (!this.previouslySelectedStoredValue) {
+      this.previouslySelectedStoredValue = '04/05/2016';
+    }
+
     //let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
     //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
 
@@ -33,13 +46,24 @@ export class DayMonthYearComponent {
 
     this.question.question_text = this.question.question_text.replace('tooltip', '**TT');
     this.question.question_text = this.question.question_text.replace(/".>/i, '');
+  }
+
+  // click(trackingKey: string, id: number) {
+  //   console.log('Clicked ' + trackingKey + ' with id ' + id);
+  //   this._userInputService.setUserInput(trackingKey, id.toString());
+  //   this._syncToPreviouslyEnteredData();
+
+  //   // Ask Page Control to re-validate for everything on the page
+  //   this._applicationStateService.requestPagecontrolRevalidate();
+  // }
 
 
-    // xyzzy Hack to pass validation until this control is built out
-    this._userInputService.setUserInput(this.question.tracking_key, 'dummy_data');
-
-    //<tooltip id="7"/>
-
+  private _syncToPreviouslyEnteredData() {
+    // Is there previous entered User Input we need to sync to?
+    let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
+    if (previousUserInput) {
+      this.previouslySelectedStoredValue = previousUserInput.storedValue;
+    }
   }
 
 }

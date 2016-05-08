@@ -17,16 +17,34 @@ import { FormatCategory } from '../../../app/types/enums/format-category';
     templateUrl: 'app/components/ng-switch-question/ng-switch-question.html',
     directives: [HomeComponent, RadioButtonComponent, DayMonthYearComponent,
         ConsentComponent, MatrixComponent, SectionTitleComponent,
-        PreQuestionIntroComponent ]
+        PreQuestionIntroComponent]
 })
 export class NgSwitchQuestionComponent implements OnInit {
 
     @Input() question: QuestionNew;
+
+    renderingAnswerComponent: boolean = false;
 
     // Permit view to use the enumeration types
     AnswerCategory = AnswerCategory;
     FormatCategory = FormatCategory;
 
     ngOnInit() {
+        switch (this.question.sre_anca_id) {
+            case AnswerCategory.Consent, AnswerCategory.RadioButtons, AnswerCategory.Date_MonthDayYear,
+                AnswerCategory.MatrixRadioButtons, AnswerCategory.MatrixRadioButtons_TextboxLastRow:
+                this.renderingAnswerComponent = true;
+                break;
+        }
+
+        if (this.question.sre_anca_id === AnswerCategory.Home && this.question.sort_order > 1) {
+            this.question.sre_anca_id = AnswerCategory.Skip;
+        }
+
+        if (this.question.sre_anca_id === AnswerCategory.Consent && this.question.sort_order > 1) {
+            this.question.sre_anca_id = AnswerCategory.Skip;
+        }
+
+
     }
 }

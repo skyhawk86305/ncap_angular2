@@ -62,9 +62,11 @@ export class LoadJsonDataService {
             // Get all elements for this page (these elements link to Sre for the rest of the data)
             let curPageElements = _.filter(surveyPageSre, { page_sort_order: curPage.page_sort_order });
             let pageNumber = 1; // xyzzy5
+            let elementNumber = 1; // xyzzy5
 
             for (let curElement of curPageElements as SurveyPageSre[]) {
                 let surveyRenderingElement: Sre = _.find(sortedSurveyRenderingElements, { obj_uid: curElement.seq_sre_uid });
+
 
                 if (surveyRenderingElement) {
                     let question: QuestionNew = new QuestionNew();
@@ -98,14 +100,15 @@ export class LoadJsonDataService {
 
                     //question.sre_foca_id =
                     if (question.page_id === 1) {
-                        question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Home : AnswerCategory.Ignore;
+                        question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Home : AnswerCategory.Skip;
                     }
                     if (question.page_id === 2) {
-                        question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Consent : AnswerCategory.Ignore;
+                        question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Consent : AnswerCategory.Skip;
                     }
 
                     question.question_text = surveyRenderingElement.txt_parent_lang1;
                     question.question_text = question.question_text.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
+                    question.sort_order = elementNumber++;
                     question.question_id = pageNumber++;
 
                     switch (surveyRenderingElement.bypass_property) {

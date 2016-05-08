@@ -1,13 +1,15 @@
 <div>
     <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
         <span class="ng-scope">{{question.page_id}}.{{question.sort_order}} - {{question.question_text}}</span>
+        
     </div>
 </div>
 
-Work in progress
+<input type="date" [(ngModel)]="previouslySelectedStoredValue"/>
 
 <BR>
 <BR>
+{{previouslySelectedStoredValue}}
 
 <!--<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
