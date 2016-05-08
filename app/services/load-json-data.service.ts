@@ -105,6 +105,7 @@ export class LoadJsonDataService {
                     }
 
                     question.question_text = surveyRenderingElement.txt_parent_lang1;
+                    question.question_text = question.question_text.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
                     question.question_id = pageNumber++;
 
                     switch (surveyRenderingElement.bypass_property) {
