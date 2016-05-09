@@ -23,7 +23,7 @@ export class CheckboxesComponent implements OnInit {
   @Input() question: QuestionNew;
   domainOptions: DomainOption[];
   questionToolTipId: number = -1;
-  previouslySelectedStoredValue: number;
+  previouslySelectedStoredValue: number[];
 
   // Permit view to use the enumeration type
   ValidationResult = ValidationResult;
@@ -51,12 +51,32 @@ export class CheckboxesComponent implements OnInit {
     this._applicationStateService.requestPagecontrolRevalidate();
   }
 
+  isSelected(id: number): boolean {
+    this.previouslySelectedStoredValue = [2, 4];
+    let result = false;
+    for (let item of this.previouslySelectedStoredValue) {
+      console.log('item is ' + item);
+      if (item === +id) {
+        result = true;
+      }
+    }
+    //let result: number = this.previouslySelectedStoredValue.find((i) => i.valueOf() === id);
+    console.log('find ' + id + ' result ' + result);
+    return result;
+  }
+
   private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
-    if (previousUserInput) {
-      this.previouslySelectedStoredValue = +previousUserInput.storedValue;
-    }
+    // let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
+    // if (previousUserInput) {
+    //   this.previouslySelectedStoredValue = +previousUserInput.storedValue;
+    // }
+
+    //xyzzy
+    this.previouslySelectedStoredValue = [2, 4];
+
+    //this.previouslySelectedStoredValue.indexOf(2) > -1
+
   }
 
 }

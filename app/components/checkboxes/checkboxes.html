@@ -9,15 +9,15 @@
 </div>
 
 <!-- Checkboxes -->
-Checkboxes WIP2
+Checkboxes WIP2 {{previouslySelectedStoredValue.indexOf(2) > -1}}
 
 
 <!-- Radio buttons -->
 <div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
     <div class="form-group ng-scope">
-        <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index" (click)='click(question.tracking_key, item.id)'>
-            <input type="checkbox" id="{{item.id}}" [checked]=false> {{item.displayed_value}}
+        <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index">
+            <input type="checkbox" id="{{item.id}}" [checked]='isSelected(item.stored_value)' (click)='click(question.tracking_key, item.stored_value)'> {{item.displayed_value}}{{item.stored_value}} 
         </div>
     </div>
 
