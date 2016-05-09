@@ -12,7 +12,6 @@ import { UserInputService } from '../../../app/services/user-input.service';
 export class SectionTitleComponent {
 
   @Input() question: QuestionNew;
-  options: DomainOption[];
 
   constructor(
     private _userInputService: UserInputService

@@ -16,7 +16,6 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 export class ResidentalBlockComponent {
 
   @Input() question: QuestionNew;
-  options: DomainOption[];
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type

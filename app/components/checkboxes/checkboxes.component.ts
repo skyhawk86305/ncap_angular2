@@ -7,6 +7,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
+import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 
 import { UserInput } from  '../../../app/types/user-input';
 
@@ -16,12 +17,11 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
   selector: 'checkboxes',
   templateUrl: 'app/components/checkboxes/checkboxes.html',
   directives: [TooltipComponent]
-
 })
 export class CheckboxesComponent implements OnInit {
 
   @Input() question: QuestionNew;
-  options: DomainOption[];
+  domainOptions: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: number;
 
@@ -30,12 +30,15 @@ export class CheckboxesComponent implements OnInit {
 
   constructor(
     protected _applicationStateService: ApplicationStateService,
+    private _loadDomainOptionsService: LoadDomainOptionsService,
     private _loadJsonDataService: LoadJsonDataService,
     private _userInputService: UserInputService
   ) {
   }
 
   ngOnInit() {
+    this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+
     this._syncToPreviouslyEnteredData();
   }
 

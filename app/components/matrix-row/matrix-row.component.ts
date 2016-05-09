@@ -22,7 +22,7 @@ export class MatrixRowComponent implements OnInit {
 
   @Input() matrixElement: MatrixElement;
   @Input('question') question: QuestionNew;
-  options: DomainOption[];
+  domainOptions: DomainOption[];
   previouslySelectedRadioButton: number;
   textInput: string;
 
@@ -39,9 +39,9 @@ export class MatrixRowComponent implements OnInit {
 
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     if (this.matrixElement.answer_category === 'RadioButtons') {
-      this.options = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+      this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
     } else {
-      this.options = new Array<DomainOption>();
+      this.domainOptions = new Array<DomainOption>();
     }
   }
 

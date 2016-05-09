@@ -1,23 +1,35 @@
 <!-- Question text -->
 <div>
-    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" 
-    [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" 
-    [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required" >
+    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required">
         <span class="ng-scope">
-            <span *ngIf="_applicationStateService.diagMode">{{question.page_id}}.{{question.sort_order}} - </span>
-            {{question.question_text}}</span>
+            <span *ngIf="_applicationStateService.diagMode">{{question.page_id}}.{{question.sort_order}} - </span> {{question.question_text}}
+        </span>
         <tooltip *ngIf="questionToolTipId>0" [toolTipId]="questionToolTipId"></tooltip>
     </div>
 </div>
 
 <!-- Checkboxes -->
-Checkboxes WIP
-<!--<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
+Checkboxes WIP2
+
+
+<!-- Radio buttons -->
+<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
     <div class="form-group ng-scope">
-        <div class="radio-group radio" *ngFor="#item of options; #idx = index" (click)='click(question.tracking_key, item.id)'>
-            <input type="radio" style="outline:none" name="{{question.sort_order}}" value="{{item.id}}" [checked]="+previouslySelectedStoredValue === item.id"> {{item.displayed_value}}
+        <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index" (click)='click(question.tracking_key, item.id)'>
+            <input type="checkbox" id="{{item.id}}" [checked]=false> {{item.displayed_value}}
         </div>
     </div>
 
-</div>-->
+</div>
+
+<!-- <input type="radio" style="outline:none" name="{{question.sort_order}}" value="{{item.id}}" [checked]="+previouslySelectedStoredValue === item.id"> -->
+
+<!--(change)="onChange(ca.id,cv.checked)">
+         {{ca.class_name}},{{cv.checked}} <br>            -->
+
+<!--<span *ngFor="#ca of classArray; #i=index">                                         
+   <input type="checkbox"  id="{{ca.id}}" #cv [checked]=false                                       
+    (change)="onChange(ca.id,cv.checked)">
+         {{ca.class_name}},{{cv.checked}} <br>
+ </span>-->

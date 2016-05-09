@@ -22,7 +22,7 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 export class RadioButtonComponent implements OnInit {
 
   @Input() question: QuestionNew;
-  options: DomainOption[];
+  domainOptions: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: number;
 
@@ -38,7 +38,7 @@ export class RadioButtonComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.options = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+    this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
 
     this.addTooltipIfNecessary();
 

@@ -22,7 +22,7 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        this._currentPageNumber = 3;
+        this._currentPageNumber = 4;
     }
 
     registerPageControllerComponent(pageControllerComponent: PageControllerComponent) {

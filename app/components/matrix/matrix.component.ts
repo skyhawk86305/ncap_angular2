@@ -24,7 +24,7 @@ export class MatrixComponent implements OnInit {
 
   @Input() question: QuestionNew;
   @Input() showValidation: boolean = true;
-  options: DomainOption[];
+  domainOptions: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;
   matrixElements: MatrixElement[];
@@ -42,7 +42,7 @@ export class MatrixComponent implements OnInit {
     let curQuestionId = this.question.question_id;
     this.matrixElements = this._loadJsonDataService.getMatrixElementsForQuestionId(curQuestionId);
 
-    this.options = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+    this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
   }
 
   click(trackingKey: string, value: string) {

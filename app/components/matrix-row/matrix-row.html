@@ -3,7 +3,7 @@
 <td *ngIf="matrixElement.answer_category === 'RadioButtons'" class='mat_q'>{{matrixElement.text}}</td>
 
 <!-- render options for this element -->
-<td class="mat_c ng-scope" *ngFor="#item of options; #idx = index">
+<td class="mat_c ng-scope" *ngFor="#item of domainOptions; #idx = index">
     <input type="radio" style="outline:none" name="{{matrixElement.question_id}}{{matrixElement.sort_order}}" 
     value="{{item.id}}" (click)="radioButtonClick(matrixElement.tracking_key , item.id)" 
     [checked]="previouslySelectedRadioButton == item.id">

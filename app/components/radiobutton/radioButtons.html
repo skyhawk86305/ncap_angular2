@@ -14,7 +14,7 @@
 <div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
     <div class="form-group ng-scope">
-        <div class="radio-group radio" *ngFor="#item of options; #idx = index" (click)='click(question.tracking_key, item.id)'>
+        <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index" (click)='click(question.tracking_key, item.id)'>
             <input type="radio" style="outline:none" name="{{question.sort_order}}" value="{{item.id}}" [checked]="+previouslySelectedStoredValue === item.id"> {{item.displayed_value}}
         </div>
     </div>
