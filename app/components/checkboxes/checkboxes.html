@@ -9,27 +9,12 @@
 </div>
 
 <!-- Checkboxes -->
-Checkboxes WIP2 {{previouslySelectedStoredValue.indexOf(2) > -1}}
-
-
-<!-- Radio buttons -->
-<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
+<div class="ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
     <div class="form-group ng-scope">
-        <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index">
-            <input type="checkbox" id="{{item.id}}" [checked]='isSelected(item.stored_value)' (click)='click(question.tracking_key, item.stored_value)'> {{item.displayed_value}}{{item.stored_value}} 
+        <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index" (click)='toggleStoredValue(question.tracking_key, item.stored_value)' >
+            <input type="checkbox" id="{{item.id}}" [checked]='isSelected(+item.stored_value)'> {{item.displayed_value}} 
         </div>
     </div>
 
 </div>
-
-<!-- <input type="radio" style="outline:none" name="{{question.sort_order}}" value="{{item.id}}" [checked]="+previouslySelectedStoredValue === item.id"> -->
-
-<!--(change)="onChange(ca.id,cv.checked)">
-         {{ca.class_name}},{{cv.checked}} <br>            -->
-
-<!--<span *ngFor="#ca of classArray; #i=index">                                         
-   <input type="checkbox"  id="{{ca.id}}" #cv [checked]=false                                       
-    (change)="onChange(ca.id,cv.checked)">
-         {{ca.class_name}},{{cv.checked}} <br>
- </span>-->

@@ -22,8 +22,7 @@ export class CheckboxesComponent implements OnInit {
 
   @Input() question: QuestionNew;
   domainOptions: DomainOption[];
-  questionToolTipId: number = -1;
-  previouslySelectedStoredValue: number[];
+  previouslySelectedStoredValue: number[] = new Array<number>();
 
   // Permit view to use the enumeration type
   ValidationResult = ValidationResult;
@@ -42,41 +41,43 @@ export class CheckboxesComponent implements OnInit {
     this._syncToPreviouslyEnteredData();
   }
 
-  click(trackingKey: string, id: number) {
-    console.log('Clicked ' + trackingKey + ' with id ' + id);
-    this._userInputService.setUserInput(trackingKey, id.toString());
+  // Called from html. Uesd to toggle chceckboxes
+  toggleStoredValue(trackingKey: string, id: number) {
+    id = +id; // Cover possiblity a string came from html
+
+    // Add/Remove the clicked id fromTo/From array
+    if (this.previouslySelectedStoredValue.indexOf(+id) > -1) {
+      this.previouslySelectedStoredValue = this.previouslySelectedStoredValue.filter((i) => i !== id);
+    } else {
+      this.previouslySelectedStoredValue.push(+id);
+    }
+
+    // Store selected values in UserInputService
+    let arrayAsString: string = this.previouslySelectedStoredValue.join(',');
+    this._userInputService.setUserInput(trackingKey, arrayAsString);
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
     this._applicationStateService.requestPagecontrolRevalidate();
   }
 
+  // Called from htm. Used to determine is a checkbox is selected
   isSelected(id: number): boolean {
-    this.previouslySelectedStoredValue = [2, 4];
-    let result = false;
-    for (let item of this.previouslySelectedStoredValue) {
-      console.log('item is ' + item);
-      if (item === +id) {
-        result = true;
-      }
-    }
-    //let result: number = this.previouslySelectedStoredValue.find((i) => i.valueOf() === id);
-    console.log('find ' + id + ' result ' + result);
+    id = +id; // Cover possiblity a string came from html
+
+    let result: boolean = this.previouslySelectedStoredValue.indexOf(id) > -1;
     return result;
   }
 
   private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    // let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
-    // if (previousUserInput) {
-    //   this.previouslySelectedStoredValue = +previousUserInput.storedValue;
-    // }
-
-    //xyzzy
-    this.previouslySelectedStoredValue = [2, 4];
-
-    //this.previouslySelectedStoredValue.indexOf(2) > -1
-
+    let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
+    if (previousUserInput) {
+      // Split the string into an array
+      let splitArray: string[] = previousUserInput.storedValue.split(',');
+      // Convert the array of stirngs into an array of numbers
+      this.previouslySelectedStoredValue = splitArray.map((i) => { return +i; });
+    }
   }
 
 }
