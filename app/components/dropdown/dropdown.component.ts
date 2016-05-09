@@ -1,0 +1,55 @@
+import { Component, Input, OnInit } from 'angular2/core';
+import { DomainOption } from   '../../../app/types/domain-option';
+import { QuestionNew } from       '../../../app/types/question-new';
+import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
+import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInput } from  '../../../app/types/user-input';
+import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { TooltipComponent } from '../tooltip/tooltip.component';
+
+@Component({
+  selector: 'dropdown',
+  templateUrl: 'app/components/dropdown/dropdown.html',
+  directives: [TooltipComponent]
+})
+export class DropdownComponent implements OnInit {
+
+  @Input() question: QuestionNew;
+  domainOptions: DomainOption[];
+  previouslySelectedStoredValue: string;
+
+  // Permit view to use the enumeration type
+  ValidationResult = ValidationResult;
+
+  constructor(
+    private _applicationStateService: ApplicationStateService,
+    private _loadDomainOptionsService: LoadDomainOptionsService,
+    private _userInputService: UserInputService
+  ) {
+  }
+
+  ngOnInit() {
+    this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+    this._syncToPreviouslyEnteredData();
+  }
+
+  modelChange(trackingKey: string, value: string) {
+    console.log('Clicked ' + trackingKey);
+    console.log('Value: ' + value);
+    this._userInputService.setUserInput(trackingKey, value);
+    this._syncToPreviouslyEnteredData();
+
+    // Ask Page Control to re-validate for everything on the page
+    this._applicationStateService.requestPagecontrolRevalidate();
+  }
+
+  private _syncToPreviouslyEnteredData() {
+    // Is there previous entered User Input we need to sync to?
+    let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
+    if (previousUserInput) {
+      this.previouslySelectedStoredValue = previousUserInput.storedValue;
+    }
+  }
+
+}
