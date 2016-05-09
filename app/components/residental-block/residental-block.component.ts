@@ -27,19 +27,14 @@ export class ResidentalBlockComponent {
   ) {
   }
 
-  ngOnInit() {
-    this._syncToPreviouslyEnteredData();
-    if (!this.previouslySelectedStoredValue) {
-      this._userInputService.setUserInput(this.question.tracking_key, 'Residental block is WIP');
-    }
-  }
-
-  private _syncToPreviouslyEnteredData() {
-    // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
-    if (previousUserInput) {
-      this.previouslySelectedStoredValue = previousUserInput.storedValue;
-    }
+  //ngAfterContentChecked() {
+  //ngAfterViewInit() {
+  //ngOnDestroy() {
+  //ngAfterContentInit() {
+  //ngAfterViewChecked() {
+  ngAfterContentInit() {
+    // Hack to stop the weird error showing in Diagnostics mode
+    setTimeout(() => this._userInputService.setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
   }
 
 }
