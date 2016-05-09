@@ -46,7 +46,7 @@ export class RadioButtonComponent implements OnInit {
   }
 
   click(trackingKey: string, id: number) {
-    console.log('Clicked ' + trackingKey + ' with id ' + id);
+    //console.log('Clicked ' + trackingKey + ' with id ' + id);
     this._userInputService.setUserInput(trackingKey, id.toString());
     this._syncToPreviouslyEnteredData();
 
