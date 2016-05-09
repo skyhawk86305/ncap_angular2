@@ -4,6 +4,7 @@ import { HomeComponent } from '../home/home.component';
 import { ConsentComponent } from '../consent/consent.component';
 import { CheckboxesComponent } from '../checkboxes/checkboxes.component';
 import { DateComponent } from '../date/date.component';
+import { TextboxComponent } from '../textbox/textbox.component';
 import { RadioButtonComponent } from '../radiobutton/radiobutton.component';
 import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
@@ -18,7 +19,7 @@ import { FormatCategory } from '../../../app/types/enums/format-category';
     selector: 'ng-switch-question',
     templateUrl: 'app/components/ng-switch-question/ng-switch-question.html',
     directives: [HomeComponent, RadioButtonComponent, CheckboxesComponent,
-        DateComponent,
+        DateComponent, TextboxComponent,
         ConsentComponent, MatrixComponent, SectionTitleComponent,
         PreQuestionIntroComponent, ResidentalBlockComponent]
 })

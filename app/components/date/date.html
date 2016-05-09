@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<input type="date" [ngModel]="previouslySelectedStoredValue" (ngModelChange)="click(question.tracking_key, $event)" />
+<input type="date" [ngModel]="previouslySelectedStoredValue" (ngModelChange)="modelChange(question.tracking_key, $event)" />
 
 <BR>
 <BR>
