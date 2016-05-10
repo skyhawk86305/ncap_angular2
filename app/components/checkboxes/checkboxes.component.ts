@@ -12,7 +12,7 @@ import { LoadDomainOptionsService } from '../../../app/services/load-domain-opti
 import { UserInput } from  '../../../app/types/user-input';
 
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
-import { AnswerCategory } from '../../../app/types/enums/answer-category';
+import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 
 @Component({
   selector: 'checkboxes',

@@ -13,8 +13,8 @@ import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-in
 import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
 
 import { QuestionNew } from  '../../../app/types/question-new';
-import { AnswerCategory } from '../../../app/types/enums/answer-category';
-import { FormatCategory } from '../../../app/types/enums/format-category';
+import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
+import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 
 @Component({
     selector: 'ng-switch-question',

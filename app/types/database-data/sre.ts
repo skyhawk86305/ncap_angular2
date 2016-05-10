@@ -1,7 +1,7 @@
 // 
 // import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
-import { AnswerCategory } from '../../../app/types/enums/answer-category';
-import { FormatCategory } from '../../../app/types/enums/format-category';
+import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
+import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 
 //bypass_property is import { ValidationType } from '../../../app/types/enums/validation-type.enum'; 
 

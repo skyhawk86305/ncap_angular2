@@ -6,8 +6,8 @@ import { QuestionNew } from       '../../app/types/question-new';
 
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
-import { AnswerCategory } from '../../app/types/enums/answer-category';
-import { FormatCategory } from '../../app/types/enums/format-category';
+import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
+import { FormatCategory } from '../../app/types/enums/format-category.enum';
 
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { ValidationService } from './validation.service';
