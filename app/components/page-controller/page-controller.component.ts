@@ -111,11 +111,3 @@ export class PageControllerComponent implements OnInit {
         console.log('Clicked exit');
     }
 }
-
-// import { CallbackType } from '../../../app/services/application-state.service';
-        // this._applicationStateService.registerObserverCallback(this.sharedModelChanged);
-
-    // sharedModelChanged() {
-    //     console.log('callback fired');
-    //     this.getQuestionsToRender();
-    // ;

@@ -1,16 +1,17 @@
-<!-->{{matrixElement.answer_category}}-->
+<!--{{AnswerCategory[matrixElement.answer_category]}}-->
+<!--{{matrixElement.sort_order}}-->
 
-<td *ngIf="matrixElement.answer_category === 'RadioButtons'" class='mat_q'>{{matrixElement.text}}</td>
+<td *ngIf="matrixElement.answer_category === AnswerCategory.RadioButtons" class='mat_q'>{{matrixElement.text}}</td>
 
 <!-- render options for this element -->
 <td class="mat_c ng-scope" *ngFor="#item of domainOptions; #idx = index">
-    <input type="radio" style="outline:none" name="{{matrixElement.question_id}}{{matrixElement.sort_order}}" 
-    value="{{item.id}}" (click)="radioButtonClick(matrixElement.tracking_key , item.id)" 
-    [checked]="previouslySelectedRadioButton == item.id">
+    <input type="radio" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" 
+    value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)" 
+    [checked]="previouslySelectedRadioButton == item.stored_value">
 </td>
 
 <!-- render textbox  -->
-<td *ngIf="matrixElement.answer_category === 'Textbox_in_Matrix'" class='mat_q' colspan="5">
+<td *ngIf="matrixElement.answer_category === AnswerCategory.Textbox_in_Matrix" class='mat_q' colspan="5">
     {{matrixElement.text}} <input class="form-control" type="text" width="10" placeholder="(Please indicate)" 
     [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_key )">
 </td>

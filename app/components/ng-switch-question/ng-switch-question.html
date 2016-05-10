@@ -20,8 +20,9 @@
   <span *ngSwitchWhen="'Textbox'">                            <textbox          [question]="question"></textbox></span>
   <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons    [question]="question"></radio-buttons></span>
   <span *ngSwitchWhen="'Date_MonthDayYear'">                  <date             [question]="question"></date></span>
-  <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix           [question]="question"></matrix></span>
   <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix           [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix           [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons_DropDownLastCol'"> <matrix           [question]="question"></matrix></span>
   <span *ngSwitchWhen="'ResidentialBlock'">                   <residental-block [question]="question"></residental-block></span>
 
   <span *ngSwitchWhen="'Skip'"></span>

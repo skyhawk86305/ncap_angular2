@@ -11,6 +11,7 @@ import { ApplicationStateService } from '../../../app/services/application-state
 import { UserInputService } from '../../../app/services/user-input.service';
 
 import { UserInput } from  '../../../app/types/user-input';
+import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
 
 @Component({
   selector: '[matrixElement]',
@@ -22,9 +23,12 @@ export class MatrixRowComponent implements OnInit {
 
   @Input() matrixElement: MatrixElement;
   @Input('question') question: Question;
-  domainOptions: DomainOption[];
+  domainOptions: DomainOption[] = new Array<DomainOption>();
   previouslySelectedRadioButton: number;
   textInput: string;
+
+  // Permit view to use the enumeration type
+  AnswerCategory = AnswerCategory;
 
   constructor(
     private _loadJsonDataService: LoadJsonDataService,
@@ -38,10 +42,9 @@ export class MatrixRowComponent implements OnInit {
     this.syncToPreviouslyEnteredData();
 
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
-    if (this.matrixElement.answer_category === 'RadioButtons') {
+    //console.log('get domain for ' + AnswerCategory[this.matrixElement.answer_category]);
+    if (this.matrixElement.answer_category !== AnswerCategory.Textbox_in_Matrix) {
       this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
-    } else {
-      this.domainOptions = new Array<DomainOption>();
     }
   }
 
@@ -61,10 +64,10 @@ export class MatrixRowComponent implements OnInit {
 
     if (previousUserInput) {
       switch (this.matrixElement.answer_category) {
-        case 'RadioButtons':
+        case AnswerCategory.RadioButons_in_Matrix:
           this.previouslySelectedRadioButton = +previousUserInput.storedValue;
           break;
-        case 'Textbox_in_Matrix':
+        case AnswerCategory.Textbox_in_Matrix:
           this.textInput = previousUserInput.storedValue;
           break;
         default:

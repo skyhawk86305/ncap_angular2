@@ -11,6 +11,7 @@ import { LoadJsonDataService } from '../app/services/load-json-data.service';
 import { UserInputService } from '../app/services/user-input.service';
 import { ValidationService } from '../app/services/validation.service';
 import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
+import { MatrixDbDataService } from '../app/services/matrix-db-data.service';
 
 @Component({
   selector: 'the-app',
@@ -25,7 +26,8 @@ import { LoadDomainOptionsService } from '../app/services/load-domain-options.se
     ApplicationStateService,
     UserInputService,
     ValidationService,
-    LoadDomainOptionsService
+    LoadDomainOptionsService,
+    MatrixDbDataService
   ]
 })
 @RouteConfig([

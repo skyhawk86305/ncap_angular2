@@ -180,7 +180,8 @@ export class LoadJsonDataService {
     //         );
     // }
 
-    getMatrixElementsForQuestionId(question_id: number): MatrixElement[] {
-        return this._matrixElements.filter(i => i.question_id === question_id);
+    getMatrixElementsForQuestionId_OldVersion(question_id: number): MatrixElement[] {
+        return this._matrixElements.filter(i => i.seq_sre_uid === question_id);
     }
+    
 }
