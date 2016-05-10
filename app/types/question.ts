@@ -38,5 +38,5 @@ export class Question {
   // Below not populated from JSON file
   validation_result: ValidationResult;
   show_validation: boolean;
-  toolTipId: number; // xyzzy Temp varialbe to get Tooltips partially working 
+  toolTipId: number; // xyzzy Temp property to get Tooltips partially working 
 }

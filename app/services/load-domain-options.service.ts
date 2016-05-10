@@ -11,6 +11,20 @@ export class LoadDomainOptionsService {
 
     private allDomainOptions: Array<DomainOption[]> = new Array<DomainOption[]>();
 
+    static addTooltipIfNecessary(domainOption: DomainOption) {
+        // Does the question contain a tooltip?
+        if (domainOption.displayed_value.indexOf('--TT') >= 0) {
+            let position = domainOption.displayed_value.indexOf('--TT');
+            let workingText = domainOption.displayed_value.substring(position + 4);
+
+            workingText = workingText.replace(/--.*/, '');
+            domainOption.toolTipId = +workingText;
+
+            // Remove --TT5-- etc from question text    
+            domainOption.displayed_value = domainOption.displayed_value.replace(/--TT.*--/g, '');
+        }
+    }
+
     constructor(
     ) {
         // Should only fire once since Services are Singletons in Angular2
@@ -38,6 +52,9 @@ export class LoadDomainOptionsService {
                 if (newDomainOption.displayed_value) {
                     newDomainOption.displayed_value = newDomainOption.displayed_value.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
                     newDomainOption.displayed_value = newDomainOption.displayed_value.replace('<tooltip id="', '--TT').replace('"/>', '--'); // xyzzy
+
+                    LoadDomainOptionsService.addTooltipIfNecessary(newDomainOption);
+
                 }
                 newDomainOption.sort_order = curEntry.sort_order;
                 newDomainOption.stored_value = curEntry.name.toString(); //xyzzy
