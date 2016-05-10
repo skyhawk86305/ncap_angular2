@@ -7,14 +7,13 @@ import { PageControllerComponent } from  '../../app/components/page-controller/p
 @Injectable()
 export class ApplicationStateService {
 
+    public diagMode: boolean = false;
     shownRequestedValidation: number = 0;
 
     private _currentPageNumber: number;
     private _totalPages: number;
     private _pageControllerComponent: PageControllerComponent;
 
-    public diagMode: boolean = false;
-    
     constructor(
         private _userInputService: UserInputService
     ) {
@@ -22,7 +21,7 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        this._currentPageNumber = 4;
+        this._currentPageNumber = 3;
     }
 
     registerPageControllerComponent(pageControllerComponent: PageControllerComponent) {

@@ -100,6 +100,9 @@ export class LoadJsonDataService {
 
                     question.question_text = surveyRenderingElement.txt_parent_lang1;
                     question.question_text = question.question_text.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
+
+                    question.question_text = question.question_text.replace('<tooltip id="', '--TT').replace('"/>', '--');
+
                     question.sort_order = elementNumber++;
                     question.question_id = pageNumber++;
 
@@ -133,7 +136,7 @@ export class LoadJsonDataService {
                     if (question.question_text.indexOf('Where did the child\'s biological father live for') > -1) {
                         question.sre_anca_id = AnswerCategory.Skip;
                     }
-                    
+
                     if (question.question_text.indexOf('This row is to be deleted') > -1) {
                         question.sre_anca_id = AnswerCategory.Skip;
                     }

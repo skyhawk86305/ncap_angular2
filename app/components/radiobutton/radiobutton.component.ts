@@ -62,7 +62,7 @@ export class RadioButtonComponent implements OnInit {
       //this.question.question_text = this.question.question_text.replace('Has the child ever been diagnosed with ASD.*=\'/i', '--TT');
       //this.question.question_text = this.question.question_text.replace('/\'.>/i', '--');
 
-      this.question.question_text = this.question.question_text.replace('<tooltip id=\'', '--TT').replace('\'/>', '--');
+      // this.question.question_text = this.question.question_text.replace('<tooltip id="', '--TT').replace('"/>', '--');
 
       let position = this.question.question_text.indexOf('--TT');
       let workingText = this.question.question_text.substring(position + 4);
