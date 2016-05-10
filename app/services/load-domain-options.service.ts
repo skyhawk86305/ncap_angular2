@@ -37,7 +37,7 @@ export class LoadDomainOptionsService {
                 newDomainOption.displayed_value = curEntry.value;
                 if (newDomainOption.displayed_value) {
                     newDomainOption.displayed_value = newDomainOption.displayed_value.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
-                    newDomainOption.displayed_value = newDomainOption.displayed_value.replace('<tooltip id="', '--TT').replace('"/>', '--');
+                    newDomainOption.displayed_value = newDomainOption.displayed_value.replace('<tooltip id="', '--TT').replace('"/>', '--'); // xyzzy
                 }
                 newDomainOption.sort_order = curEntry.sort_order;
                 newDomainOption.stored_value = curEntry.name.toString(); //xyzzy

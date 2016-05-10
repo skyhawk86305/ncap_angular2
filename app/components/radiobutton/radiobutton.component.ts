@@ -56,19 +56,15 @@ export class RadioButtonComponent implements OnInit {
 
   private addTooltipIfNecessary() {
     // Does the question contain a tooltip?
-    if (this.question.question_text.indexOf('<tooltip') >= 0 || this.question.question_text.indexOf('--TT') >= 0) {
-
-      // xyzzy WIP - convert tooltip tags to --TT
-      //this.question.question_text = this.question.question_text.replace('Has the child ever been diagnosed with ASD.*=\'/i', '--TT');
-      //this.question.question_text = this.question.question_text.replace('/\'.>/i', '--');
-
-      // this.question.question_text = this.question.question_text.replace('<tooltip id="', '--TT').replace('"/>', '--');
-
+    if (this.question.question_text.indexOf('--TT') >= 0) {
       let position = this.question.question_text.indexOf('--TT');
       let workingText = this.question.question_text.substring(position + 4);
 
       workingText = workingText.replace(/--.*/, '');
       this.questionToolTipId = +workingText;
+
+      // Remove --TT5-- etc from question text    
+      this.question.question_text = this.question.question_text.replace(/--TT.*--/g, '');
     }
   }
 
