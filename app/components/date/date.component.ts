@@ -52,7 +52,7 @@ export class DateComponent {
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
-    this._applicationStateService.requestPagecontrolRevalidate();
+    this._applicationStateService.requestPageControlRevalidate();
   }
 
   private _syncToPreviouslyEnteredData() {

@@ -54,7 +54,7 @@ export class ApplicationStateService {
         this._pageControllerComponent.getQuestionsToRender();
     }
 
-    requestPagecontrolRevalidate() {
+    requestPageControlRevalidate() {
         // xyzzy This may not be efficient. Maybe tune later?
         this._pageControllerComponent.runValidationOnCurrentQuestions();
     }
