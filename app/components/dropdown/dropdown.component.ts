@@ -30,13 +30,12 @@ export class DropdownComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
     this._syncToPreviouslyEnteredData();
   }
 
   modelChange(trackingKey: string, value: string) {
-    console.log('Clicked ' + trackingKey);
-    console.log('Value: ' + value);
+    // console.log('Clicked ' + trackingKey);
+    // console.log('Value: >' + value + '<');
     this._userInputService.setUserInput(trackingKey, value);
     this._syncToPreviouslyEnteredData();
 
@@ -44,11 +43,30 @@ export class DropdownComponent implements OnInit {
     this._applicationStateService.requestPagecontrolRevalidate();
   }
 
+  private _getDomainOptions(id: number, addPleaseSelect: boolean): DomainOption[] {
+    let result = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+
+    if (addPleaseSelect) {
+      // Copy the array as we are going to modify it
+      result = result.slice(0);
+      // Add 'Please select' as the first option
+      let pleaseSelecteDomainOption: DomainOption = new DomainOption();
+      pleaseSelecteDomainOption.displayed_value = '---Please select---';
+      pleaseSelecteDomainOption.stored_value = '';
+      result.unshift(pleaseSelecteDomainOption);
+    }
+
+    return result;
+  }
+
   private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
     let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
     if (previousUserInput) {
       this.previouslySelectedStoredValue = previousUserInput.storedValue;
+      this.domainOptions = this._getDomainOptions(this.question.parent_sre_dona_id, false);
+    } else {
+      this.domainOptions = this._getDomainOptions(this.question.parent_sre_dona_id, true);
     }
   }
 

@@ -8,10 +8,7 @@
     </div>
 </div>
 
-Drop Down WIP
-
-
-<select (change)="modelChange(question.tracking_key, $event.target.value)">
+<select class="form-control" (change)="modelChange(question.tracking_key, $event.target.value)">
       <option *ngFor="#item of domainOptions" [value]="item.stored_value">{{item.displayed_value}} </option>
     </select>
 
