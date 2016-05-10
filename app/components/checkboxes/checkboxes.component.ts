@@ -12,6 +12,7 @@ import { LoadDomainOptionsService } from '../../../app/services/load-domain-opti
 import { UserInput } from  '../../../app/types/user-input';
 
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { AnswerCategory } from '../../../app/types/enums/answer-category';
 
 @Component({
   selector: 'checkboxes',
@@ -37,6 +38,11 @@ export class CheckboxesComponent implements OnInit {
 
   ngOnInit() {
     this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+
+    let mode: boolean = this.question.sre_anca_id === AnswerCategory.Checkboxes_TextboxLastEntry;
+    if (mode) {
+      console.log('Checkboxes_TextboxLastEntry');
+    }
 
     this._syncToPreviouslyEnteredData();
   }
