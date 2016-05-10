@@ -3,7 +3,7 @@ import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../app/types/enums/format-category.enum';
 
-export class QuestionNew {
+export class Question {
   obj_uid: number;
   block: string;
   parent_sre_disp_id: number;
@@ -34,28 +34,9 @@ export class QuestionNew {
   answer_type: string;
   validation_type: ValidationType;
   question_text: string;
-  //answer_lookup_id: number;
-  //answer_lookup: string;
 
   // Below not populated from JSON file
   validation_result: ValidationResult;
   show_validation: boolean;
   toolTipId: number; // xyzzy Temp varialbe to get Tooltips partially working 
 }
-
-// 
-// import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
-
-//bypass_property is import { ValidationType } from '../../../app/types/enums/validation-type.enum'; 
-
-
-    //answerCategory: string; // = this.getAnswerCategory();
-
-    // Not imported from DB
-    // getAnswerCategory(): string {
-    //     let result: string = AnswerCategory[this.sre_anca_id];
-    //     console.log(result);
-
-    //     return result;
-    // }
-

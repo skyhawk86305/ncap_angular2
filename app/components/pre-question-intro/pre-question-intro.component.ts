@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 
 import { UserInputService } from '../../../app/services/user-input.service';
 
@@ -11,7 +11,7 @@ import { UserInputService } from '../../../app/services/user-input.service';
 })
 export class PreQuestionIntroComponent {
 
-  @Input() question: QuestionNew;
+  @Input() question: Question;
 
   constructor(
     private _userInputService: UserInputService

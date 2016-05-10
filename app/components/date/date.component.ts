@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
@@ -13,7 +13,7 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 })
 export class DateComponent {
 
-  @Input() question: QuestionNew;
+  @Input() question: Question;
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type

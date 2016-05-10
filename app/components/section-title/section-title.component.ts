@@ -1,5 +1,5 @@
 import { Component, Input } from 'angular2/core';
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 import { UserInputService } from '../../../app/services/user-input.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { UserInputService } from '../../../app/services/user-input.service';
 })
 export class SectionTitleComponent {
 
-  @Input() question: QuestionNew;
+  @Input() question: Question;
 
   constructor(
     private _userInputService: UserInputService

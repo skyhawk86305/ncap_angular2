@@ -12,7 +12,7 @@ import { SectionTitleComponent } from '../section-title/section-title.component'
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
 import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
 
-import { QuestionNew } from  '../../../app/types/question-new';
+import { Question } from  '../../../app/types/question';
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 
@@ -26,7 +26,7 @@ import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 })
 export class NgSwitchQuestionComponent implements OnInit {
 
-    @Input() question: QuestionNew;
+    @Input() question: Question;
 
     renderingAnswerComponent: boolean = false;
 

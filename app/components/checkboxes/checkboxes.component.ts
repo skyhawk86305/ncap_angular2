@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { ApplicationStateService } from '../../../app/services/application-state.service';
@@ -22,7 +22,7 @@ import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 })
 export class CheckboxesComponent implements OnInit {
 
-  @Input() question: QuestionNew;
+  @Input() question: Question;
   domainOptions: DomainOption[];
   showOtherTextBoxForStoredValue: number = -1;
   ValidationResult = ValidationResult; // Permit html to use the enumeration type

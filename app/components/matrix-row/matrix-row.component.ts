@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
@@ -21,7 +21,7 @@ import { UserInput } from  '../../../app/types/user-input';
 export class MatrixRowComponent implements OnInit {
 
   @Input() matrixElement: MatrixElement;
-  @Input('question') question: QuestionNew;
+  @Input('question') question: Question;
   domainOptions: DomainOption[];
   previouslySelectedRadioButton: number;
   textInput: string;

@@ -1,7 +1,7 @@
 import { Injectable } from 'angular2/core';
 
 import { MatrixElement } from '../../app/types/matrix-element';
-import { QuestionNew } from '../../app/types/question-new';
+import { Question } from '../../app/types/question';
 import { UserInput } from  '../../app/types/user-input';
 
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
@@ -26,7 +26,7 @@ export class ValidationService {
         return result;
     }
 
-    validateQuestion(question: QuestionNew) {
+    validateQuestion(question: Question) {
         let result: ValidationResult;
 
         if (question.validation_type === ValidationType.optional || question.validation_type === ValidationType.notApplicable) {

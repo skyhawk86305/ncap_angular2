@@ -2,7 +2,7 @@ import { Injectable } from 'angular2/core';
 import {Http} from 'angular2/http';
 
 import { MatrixElement } from '../../app/types/matrix-element';
-import { QuestionNew } from       '../../app/types/question-new';
+import { Question } from       '../../app/types/question';
 
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
@@ -25,7 +25,7 @@ import _ from 'lodash';
 export class LoadJsonDataService {
     BASE_PATH = 'app/seed-data/raw-json/';
 
-    private _questionsNew: QuestionNew[] = new Array<QuestionNew>();
+    private _questionsNew: Question[] = new Array<Question>();
     private _matrixElements: MatrixElement[];
 
     constructor(
@@ -61,7 +61,7 @@ export class LoadJsonDataService {
 
 
                 if (surveyRenderingElement) {
-                    let question: QuestionNew = new QuestionNew();
+                    let question: Question = new Question();
 
                     question.obj_uid = surveyRenderingElement.obj_uid;
                     question.block = surveyRenderingElement.block;

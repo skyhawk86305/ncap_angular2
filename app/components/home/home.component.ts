@@ -3,7 +3,7 @@ import { Component, Input } from 'angular2/core';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 
 @Component({
     selector: 'home',
@@ -11,7 +11,7 @@ import { QuestionNew } from       '../../../app/types/question-new';
 })
 export class HomeComponent {
 
-    @Input() question: QuestionNew;
+    @Input() question: Question;
 
     constructor(
         private _applicationStateService: ApplicationStateService,

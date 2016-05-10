@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 
 //import { Question } from  '../../../app/types/question';
-import { QuestionNew } from  '../../../app/types/question-new';
+import { Question } from  '../../../app/types/question';
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
@@ -17,7 +17,7 @@ import { HomeComponent } from '../home/home.component';
 })
 export class AllPagesComponent implements OnInit {
 
-    questions: QuestionNew[];
+    questions: Question[];
     renderButtons: boolean = true;
 
     constructor(

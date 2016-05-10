@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
 
 import { DomainOption } from   '../../../app/types/domain-option';
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
@@ -15,7 +15,7 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 })
 export class ResidentalBlockComponent {
 
-  @Input() question: QuestionNew;
+  @Input() question: Question;
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
@@ -14,7 +14,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 })
 export class TextboxComponent implements OnInit {
 
-  @Input() question: QuestionNew;
+  @Input() question: Question;
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type

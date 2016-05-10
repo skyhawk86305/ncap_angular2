@@ -4,7 +4,7 @@ import { ApplicationStateService } from '../../../app/services/application-state
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
-import { QuestionNew } from       '../../../app/types/question-new';
+import { Question } from       '../../../app/types/question';
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
@@ -13,7 +13,7 @@ import { UserInput } from  '../../../app/types/user-input';
 })
 export class ConsentComponent implements OnInit {
 
-    @Input() question: QuestionNew;
+    @Input() question: Question;
     hasConsent: boolean = false;
 
     constructor(
