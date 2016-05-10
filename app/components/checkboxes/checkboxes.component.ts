@@ -58,7 +58,7 @@ export class CheckboxesComponent implements OnInit {
       this._userInputCheckedBoxes.push(+id);
     }
 
-    this._saveUserInput()
+    this._saveUserInput();
     this._loadUserInput();
 
     // Ask Page Control to re-validate for everything on the page
@@ -75,7 +75,6 @@ export class CheckboxesComponent implements OnInit {
 
   // Called from html
   otherChanged(value: string) {
-    console.log('otherChanged: ' + value);
     this.userInputOther = value;
     this._saveUserInput();
     this._loadUserInput();

@@ -16,7 +16,7 @@
             <span (click)='toggleCheckbox(item.stored_value)'>
                 <input type="checkbox" id="{{item.stored_value}}" [checked]='isCheckboxSelected(+item.stored_value)'> {{item.displayed_value}}
             </span>
-
+            <!-- Optional Other TextBox -->
             <span *ngIf='item.stored_value == showOtherTextBoxForStoredValue && isCheckboxSelected(showOtherTextBoxForStoredValue)'>
                 <input class='form-control' type="text" placeholder='(Please Indicate)' [ngModel]='userInputOther' (ngModelChange)='otherChanged($event)'/>
             </span>
