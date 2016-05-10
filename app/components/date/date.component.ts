@@ -1,4 +1,6 @@
 import { Component, Input } from 'angular2/core';
+import { ComponentHelperClass } from  '../component-helper-class';
+
 import { QuestionNew } from       '../../../app/types/question-new';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
@@ -24,30 +26,12 @@ export class DateComponent {
   }
 
   ngOnInit() {
+    ComponentHelperClass.addTooltipIfNecessary(this.question);
+
     this._syncToPreviouslyEnteredData();
-
-    // if (!this.previouslySelectedStoredValue) {
-    //   this.previouslySelectedStoredValue = '2016-04-05'; //xyzzy5 default as Db logic dictates
-    // }
-
-    //let domainOptions: DomainOptions = this._loadJsonDataService.getDomainOptions();
-    //this.options = domainOptions.getDomainOption(this.question.answer_lookup);
-
-    // Temporarily remove all references to tooltip
-    //this.question.question_text = this.question.question_text.replace(/<tooltip.*>/i, '');
-
-    // Todo WIP - convert tooltip tags to **TT
-    // this.question.question_text = this.question.question_text.replace(/<tooltip.*="/i, '**TT');
-    this.question.question_text = this.question.question_text.replace('tooltip', '**TT');
-    this.question.question_text = this.question.question_text.replace(/".>/i, '');
-
-    this.question.question_text = this.question.question_text.replace('tooltip', '**TT');
-    this.question.question_text = this.question.question_text.replace(/".>/i, '');
   }
 
   modelChange(trackingKey: string, value: string) {
-    // console.log('Clicked ' + trackingKey);
-    // console.log('Value: ' + value);
     this._userInputService.setUserInput(trackingKey, value);
     this._syncToPreviouslyEnteredData();
 

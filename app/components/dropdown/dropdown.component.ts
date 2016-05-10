@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from 'angular2/core';
+import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
@@ -30,6 +31,7 @@ export class DropdownComponent implements OnInit {
   }
 
   ngOnInit() {
+    ComponentHelperClass.addTooltipIfNecessary(this.question);
     this._syncToPreviouslyEnteredData();
   }
 

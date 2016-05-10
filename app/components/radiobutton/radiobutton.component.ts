@@ -1,16 +1,13 @@
 import { Component, Input, OnInit } from 'angular2/core';
-
+import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
-
 import { UserInput } from  '../../../app/types/user-input';
-
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 @Component({
@@ -40,7 +37,7 @@ export class RadioButtonComponent implements OnInit {
   ngOnInit() {
     this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
 
-    this.addTooltipIfNecessary();
+    ComponentHelperClass.addTooltipIfNecessary(this.question);
 
     this._syncToPreviouslyEnteredData();
   }
@@ -52,20 +49,6 @@ export class RadioButtonComponent implements OnInit {
 
     // Ask Page Control to re-validate for everything on the page
     this._applicationStateService.requestPageControlRevalidate();
-  }
-
-  private addTooltipIfNecessary() {
-    // Does the question contain a tooltip?
-    if (this.question.question_text.indexOf('--TT') >= 0) {
-      let position = this.question.question_text.indexOf('--TT');
-      let workingText = this.question.question_text.substring(position + 4);
-
-      workingText = workingText.replace(/--.*/, '');
-      this.questionToolTipId = +workingText;
-
-      // Remove --TT5-- etc from question text    
-      this.question.question_text = this.question.question_text.replace(/--TT.*--/g, '');
-    }
   }
 
   private _syncToPreviouslyEnteredData() {

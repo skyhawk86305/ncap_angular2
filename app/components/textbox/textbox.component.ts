@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from 'angular2/core';
+import { ComponentHelperClass } from  '../component-helper-class';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
@@ -26,6 +27,7 @@ export class TextboxComponent implements OnInit {
   }
 
   ngOnInit() {
+    ComponentHelperClass.addTooltipIfNecessary(this.question);
     this._syncToPreviouslyEnteredData();
   }
 

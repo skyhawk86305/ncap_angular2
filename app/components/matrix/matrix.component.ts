@@ -1,17 +1,14 @@
 import { Component, Input, OnInit } from 'angular2/core';
-
+import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { MatrixElement } from '../../../app/types/matrix-element';
-
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
-
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
-
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 
@@ -39,6 +36,8 @@ export class MatrixComponent implements OnInit {
   }
 
   ngOnInit() {
+    ComponentHelperClass.addTooltipIfNecessary(this.question);
+
     let curQuestionId = this.question.question_id;
     this.matrixElements = this._loadJsonDataService.getMatrixElementsForQuestionId(curQuestionId);
 

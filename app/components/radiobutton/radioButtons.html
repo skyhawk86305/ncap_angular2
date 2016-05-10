@@ -6,7 +6,7 @@
         <span class="ng-scope">
             <span *ngIf="_applicationStateService.diagMode">{{question.page_id}}.{{question.sort_order}} - </span>
             {{question.question_text}}</span>
-        <tooltip *ngIf="questionToolTipId>0" [toolTipId]="questionToolTipId"></tooltip>
+        <tooltip *ngIf="question.toolTipId>0" [toolTipId]="question.toolTipId"></tooltip>
     </div>
 </div>
 

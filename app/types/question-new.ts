@@ -40,6 +40,7 @@ export class QuestionNew {
   // Below not populated from JSON file
   validation_result: ValidationResult;
   show_validation: boolean;
+  toolTipId: number; // xyzzy Temp varialbe to get Tooltips partially working 
 }
 
 // 

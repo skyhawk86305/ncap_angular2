@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
+import { ComponentHelperClass } from  '../component-helper-class';
+
 import { DomainOption } from   '../../../app/types/domain-option';
 import { QuestionNew } from       '../../../app/types/question-new';
 import { TooltipComponent } from '../tooltip/tooltip.component';
@@ -37,6 +39,8 @@ export class CheckboxesComponent implements OnInit {
 
   ngOnInit() {
     this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+
+    ComponentHelperClass.addTooltipIfNecessary(this.question);
 
     if (this.question.sre_anca_id === AnswerCategory.Checkboxes_TextboxLastEntry) {
       this.showOtherTextBoxForStoredValue = 4; // xyzzy Hardcoded the value for Other
