@@ -5,6 +5,7 @@ import { Question } from       '../../../app/types/question';
 import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
+import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
 import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
@@ -12,11 +13,12 @@ import { MatrixDbDataService } from '../../../app/services/matrix-db-data.servic
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
+import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
 
 @Component({
   selector: 'matrix',
   templateUrl: 'app/components/matrix/matrix.html',
-  directives: [TooltipComponent, MatrixRowComponent]
+  directives: [TooltipComponent, MatrixRowComponent, MatrixElement2Component]
 })
 export class MatrixComponent implements OnInit {
 
@@ -27,6 +29,10 @@ export class MatrixComponent implements OnInit {
   previouslySelectedStoredValue: string;
   matrixElements: MatrixElement[];
   columnHeadings: string[];
+  xyzzy: AnswerCategory;
+
+  // Permit view to use the enumeration type
+  AnswerCategory = AnswerCategory;
 
   constructor(
     private _loadJsonDataService: LoadJsonDataService,
@@ -42,6 +48,7 @@ export class MatrixComponent implements OnInit {
 
     this.matrixElements = this._matrixDbDataService.getMatrixElementsForSreUid(this.question.obj_uid);
     this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+    this.xyzzy = this.matrixElements[0].answer_category;
   }
 
   click(trackingKey: string, value: string) {

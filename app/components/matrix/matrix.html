@@ -1,3 +1,5 @@
+{{xyzzy}}
+
 <div>
     <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
         <span class="ng-scope">{{question.page_id}}.{{question.sort_order}} - {{question.question_text}}</span>
@@ -7,7 +9,22 @@
 
 <div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 
-    <div class="form-group ng-scope">
+    <div *ngIf='xyzzy==1' class="form-group ng-scope">
+        <table>
+            <thead style="padding-left: 1em;border-bottom:1pt solid black;">
+                <tr>
+                    <th></th>
+                    <th class='mat_c_th' *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</th>
+                </tr>
+            </thead>
+             <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" 
+             [matrixElement]="curMatrixElement" [question]="question" [class.matrix-odd]="odd"  
+             class='{{calculateValidatiodCSS(curMatrixElement)}}'
+             class='border_bottom ng-scope' >
+        </table>
+    </div>
+
+    <div *ngIf='xyzzy==13' class="form-group ng-scope">
         <table>
             <thead style="padding-left: 1em;border-bottom:1pt solid black;">
                 <tr>

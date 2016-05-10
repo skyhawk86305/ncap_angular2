@@ -14,12 +14,12 @@ import { UserInput } from  '../../../app/types/user-input';
 import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
 
 @Component({
-  selector: '[matrixElement]',
-  templateUrl: 'app/components/matrix-row/matrix-row.html',
+  selector: '[matrixElement2]',
+  templateUrl: 'app/components/matrixElement2/matrixElement2.html',
   directives: [TooltipComponent]
 
 })
-export class MatrixRowComponent implements OnInit {
+export class MatrixElement2Component implements OnInit {
 
   @Input() matrixElement: MatrixElement;
   @Input('question') question: Question;
