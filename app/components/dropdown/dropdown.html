@@ -9,21 +9,5 @@
 </div>
 
 <select class="form-control" (change)="modelChange(question.tracking_key, $event.target.value)">
-      <option *ngFor="#item of domainOptions" [value]="item.stored_value">{{item.displayed_value}} </option>
-    </select>
-
-<!--<input class='form-control ng-invalid-number-validator' type="text" name="{{question.tracking_key}}" 
-placeholder="{{question.def_disp_value}}"
-[ngModel]="previouslySelectedStoredValue" (ngModelChange)="modelChange(question.tracking_key, $event)" />-->
-
-
-<!-- Radio buttons -->
-<!--<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
-
-    <div class="form-group ng-scope">
-        <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index" (click)='click(question.tracking_key, item.stored_value)'>
-            <input type="radio" style="outline:none" name="{{question.page_id}}.{{question.sort_order}}" value="{{item.stored_value}}" [checked]='previouslySelectedStoredValue == item.stored_value'> {{item.displayed_value}} 
-        </div>
-    </div>
-
-</div>-->
+      <option *ngFor="#item of domainOptions" [value]="item.stored_value">{{item.displayed_value}}</option>
+</select>
