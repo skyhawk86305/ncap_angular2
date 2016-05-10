@@ -35,6 +35,9 @@ export class LoadDomainOptionsService {
                 let newDomainOption = new DomainOption();
                 newDomainOption.id = curUniqueDomain.id;
                 newDomainOption.displayed_value = curEntry.value;
+                if (newDomainOption.displayed_value) {
+                    newDomainOption.displayed_value = newDomainOption.displayed_value.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
+                }
                 newDomainOption.sort_order = curEntry.sort_order;
                 newDomainOption.stored_value = curEntry.name.toString(); //xyzzy
                 newDomainOptions.push(newDomainOption);
