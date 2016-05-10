@@ -1,7 +1,6 @@
 import { Injectable } from 'angular2/core';
 
 import { UserInput } from  '../../app/types/user-input';
-import { USERINPUT_SCENARIO1 } from  '../../app/seed-data-for-debugging/json-user-input-senario1';
 
 @Injectable()
 export class UserInputService {
@@ -14,7 +13,6 @@ export class UserInputService {
 
     initialize() {
         this._UserInput = new Array<UserInput>();
-        //this._UserInput = USERINPUT_SCENARIO1; // Default User Input data to a known state
     }
 
     getAllUserInput() {
@@ -37,5 +35,10 @@ export class UserInputService {
         }
 
         userInputEntry.storedValue = enteredValue;
+    }
+
+    // Used to set User Input data to a known state
+    defaultUserInput(data: UserInput[]) {
+        this._UserInput = data;
     }
 }

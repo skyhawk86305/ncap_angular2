@@ -1,8 +1,7 @@
 import { Injectable } from 'angular2/core';
-
 import { UserInputService } from '../../app/services/user-input.service';
-
 import { PageControllerComponent } from  '../../app/components/page-controller/page-controller.component';
+import { USERINPUT_SCENARIO1 } from  '../../app/seed-data-for-debugging/json-user-input-senario1';
 
 @Injectable()
 export class ApplicationStateService {
@@ -10,7 +9,7 @@ export class ApplicationStateService {
     public diagMode: boolean = false;
     shownRequestedValidation: number = 0;
 
-    private _currentPageNumber: number;
+    private _currentPageNumber: number = 1;
     private _totalPages: number;
     private _pageControllerComponent: PageControllerComponent;
 
@@ -21,7 +20,8 @@ export class ApplicationStateService {
     }
 
     initialize() {
-        this._currentPageNumber = 3;
+        // this._currentPageNumber = 10;
+        // this._userInputService.defaultUserInput(USERINPUT_SCENARIO1);
     }
 
     registerPageControllerComponent(pageControllerComponent: PageControllerComponent) {
