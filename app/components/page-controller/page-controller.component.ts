@@ -37,6 +37,9 @@ export class PageControllerComponent implements OnInit {
     }
 
     ngOnInit() {
+        // xyzzy Move to a Scenario service
+        console.log("** in ngOnInit for pageController");
+
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId) {
@@ -46,7 +49,6 @@ export class PageControllerComponent implements OnInit {
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId) {
-            // xyzzy Move to a Scenariop service
             this._userInputService.defaultUserInput(USERINPUT_SCENARIO1);
             this._applicationStateService.setPageNumber(3);
         }

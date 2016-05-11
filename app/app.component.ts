@@ -3,7 +3,6 @@ import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular
 
 import { PageControllerComponent } from './components/page-controller/page-controller.component';
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
-import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 
 import { ApplicationStateService } from '../app/services/application-state.service';

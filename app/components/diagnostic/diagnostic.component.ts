@@ -13,7 +13,7 @@ export class DiagnosticComponent implements OnInit {
     data: UserInput[];
 
     constructor(
-        private _applicationStateService: ApplicationStateService,
+        protected _applicationStateService: ApplicationStateService,
         private _userInputService: UserInputService
     ) {
     }
