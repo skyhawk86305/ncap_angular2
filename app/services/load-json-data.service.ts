@@ -9,6 +9,7 @@ import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../app/types/enums/format-category.enum';
 
+import { ApplicationStateService } from '../../app/services/application-state.service';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { ValidationService } from './validation.service';
 
@@ -30,6 +31,7 @@ export class LoadJsonDataService {
 
     constructor(
         private http: Http,
+        protected _applicationStateService: ApplicationStateService,
         private _validationService: ValidationService
     ) {
         // Should only fire once since Services are Singletons in Angular2
@@ -45,6 +47,8 @@ export class LoadJsonDataService {
         let sortedUniquePages = _.orderBy(surveyPageSre, 'page_sort_order');
         sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
         let sortedSurveyRenderingElements = _.orderBy(sre, 'sre_sort_order');
+
+        this._applicationStateService.setTotalPages(sortedUniquePages.length);
 
         // Combine into one Question class for the app to use
 
@@ -183,5 +187,5 @@ export class LoadJsonDataService {
     getMatrixElementsForQuestionId_OldVersion(question_id: number): MatrixElement[] {
         return this._matrixElements.filter(i => i.seq_sre_uid === question_id);
     }
-    
+
 }
