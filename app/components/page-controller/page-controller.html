@@ -1,7 +1,6 @@
-
-
-<div class="progress ng-isolate-scope container ng-scope">
-  <div class="progress-bar" role="progressbar" aria-valuenow="_applicationStateService.getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+<!-- Progress Bar -->
+<div *ngIf="_applicationStateService.getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
+  <div class="progress-bar" role="progressbar" aria-valuenow="_applicationStateService.getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [style]="'width: ' + _applicationStateService.getPercentageComplete() + '%;'">
     {{ _applicationStateService.getPercentageComplete() }}% (pg {{ _applicationStateService.getCurrentPageNumber() }})
   </div>
 </div>
