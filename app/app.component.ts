@@ -1,66 +1,87 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { Component } from '@angular/core';
+import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
-import { PageControllerComponent } from './components/page-controller/page-controller.component';
-import { AllPagesComponent } from './components/all-pages/all-pages.component';
+// import { PageControllerComponent } from './components/page-controller/page-controller.component';
+// import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 
-import { ApplicationStateService } from '../app/services/application-state.service';
-import { SeedDataService } from '../app/services/seed-data.service';
-import { UserInputService } from '../app/services/user-input.service';
-import { ValidationService } from '../app/services/validation.service';
-import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
-import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service';
+// import { ApplicationStateService } from '../app/services/application-state.service';
+// import { SeedDataService } from '../app/services/seed-data.service';
+// import { UserInputService } from '../app/services/user-input.service';
+// import { ValidationService } from '../app/services/validation.service';
+// import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
+// import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service';
+
+//import {Component} from '@angular/core';
 
 @Component({
-  selector: 'the-app',
-  template: `
-    <router-outlet></router-outlet>
-  `,
-  directives: [ROUTER_DIRECTIVES],
-  providers: [
-    ROUTER_PROVIDERS,
-    Route,
-    SeedDataService,
-    ApplicationStateService,
-    UserInputService,
-    ValidationService,
-    LoadDomainOptionsService,
-    SeedDataMatrixService
-  ]
+    selector: 'the-app',
+    template: '<router-outlet></router-outlet>',
+    directives: [ROUTER_DIRECTIVES],
+   providers: [
+     ROUTER_PROVIDERS,
+     Route
+     //,
+//     SeedDataService,
+//     ApplicationStateService,
+//     UserInputService,
+//     ValidationService,
+//     LoadDomainOptionsService,
+//     SeedDataMatrixService
+   ]
 })
-@RouteConfig([
-  {
-    path: '/',
-    name: 'Home',
-    component: PageControllerComponent,
-    useAsDefault: true
-  },
-  {
-    path: '/all',
-    name: 'All',
-    component: AllPagesComponent
-  },
+//export class AppComponent { }
+
+// @Component({
+//   selector: 'the-app',
+//   template: `
+//     <router-outlet></router-outlet>
+//   `,
+//   directives: [ROUTER_DIRECTIVES],
+//   providers: [
+//     ROUTER_PROVIDERS,
+//     Route,
+//     SeedDataService,
+//     ApplicationStateService,
+//     UserInputService,
+//     ValidationService,
+//     LoadDomainOptionsService,
+//     SeedDataMatrixService
+//   ]
+// })
+ @RouteConfig([
+//   {
+//     path: '/',
+//     name: 'Home',
+//     component: PageControllerComponent,
+//     useAsDefault: true
+//   },
+//   {
+//     path: '/all',
+//     name: 'All',
+//     component: AllPagesComponent
+//   },
   {
     path: '/test',
     name: 'TestPage',
     component: TestPageComponent
-  },
-  {
-    path: '/test-page',
-    name: 'TestPage',
-    component: TestPageComponent
-  },
-  {
-    path: '/:pageId',
-    name: 'SpecificPage1',
-    component: PageControllerComponent
-  },
-  {
-    path: '/scenario/:scenarioId',
-    name: 'Scenario',
-    component: PageControllerComponent
   }
-])
-export class AppComponent {
-}
+//,
+//   {
+//     path: '/test-page',
+//     name: 'TestPage',
+//     component: TestPageComponent
+//   },
+//   {
+//     path: '/:pageId',
+//     name: 'SpecificPage1',
+//     component: PageControllerComponent
+//   },
+//   {
+//     path: '/scenario/:scenarioId',
+//     name: 'Scenario',
+//     component: PageControllerComponent
+//   }
+ ])
+ export class AppComponent {
+ }

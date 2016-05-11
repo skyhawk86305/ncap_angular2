@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from 'angular2/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { HomeComponent } from '../home/home.component';
 import { ConsentComponent } from '../consent/consent.component';

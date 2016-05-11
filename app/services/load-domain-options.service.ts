@@ -1,4 +1,4 @@
-import { Injectable } from 'angular2/core';
+import { Injectable } from '@angular/core';
 
 import { DomainOption } from  '../../app/types/domain-option';
 import { domain } from '../../app/seed-data/domain';

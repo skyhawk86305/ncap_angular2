@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from 'angular2/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { SeedDataService } from '../../../app/services/seed-data.service';

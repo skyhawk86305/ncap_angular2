@@ -1,4 +1,4 @@
-import { Component, Input } from 'angular2/core';
+import { Component, Input } from '@angular/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 
 import { Question } from       '../../../app/types/question';

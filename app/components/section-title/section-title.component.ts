@@ -1,4 +1,4 @@
-import { Component, Input } from 'angular2/core';
+import { Component, Input } from '@angular/core';
 import { Question } from       '../../../app/types/question';
 import { UserInputService } from '../../../app/services/user-input.service';
 
