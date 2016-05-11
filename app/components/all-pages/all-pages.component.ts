@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from 'angular2/core';
 
 //import { Question } from  '../../../app/types/question';
 import { Question } from  '../../../app/types/question';

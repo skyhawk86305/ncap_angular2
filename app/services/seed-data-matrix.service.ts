@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from 'angular2/core';
 
 import { Question } from       '../../app/types/question';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';

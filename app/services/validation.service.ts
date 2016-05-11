@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from 'angular2/core';
 
 import { MatrixElement } from '../../app/types/matrix-element';
 import { Question } from '../../app/types/question';

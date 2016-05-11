@@ -1,47 +1,47 @@
-import { Component, OnInit} from '@angular/core';
-import { HTTP_PROVIDERS} from '@angular/http';
+import { Component, OnInit} from 'angular2/core';
+import { HTTP_PROVIDERS} from 'angular2/http';
 
-// import { sre } from '../../../app/seed-data/sre';
-// import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
+import { sre } from '../../../app/seed-data/sre';
+import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
 
-// import { Sre } from '../../../app/types/database-data/sre';
-// import { SurveyPageSre } from '../../../app/types/database-data/survey-page-sre';
+import { Sre } from '../../../app/types/database-data/sre';
+import { SurveyPageSre } from '../../../app/types/database-data/survey-page-sre';
 
-// import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
+import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 
-//import _ from 'lodash';
+import _ from 'lodash';
 
-// class Slim {
-//     seq_pag_id: number;
-//     page_sort_order: number;
-// }
+class Slim {
+    seq_pag_id: number;
+    page_sort_order: number;
+}
 
 @Component({
     selector: 'test-page',
     viewProviders: [HTTP_PROVIDERS],
     templateUrl: 'app/components/test-page/test-page.html'
 })
-export class TestPageComponent { //} implements OnInit {
+export class TestPageComponent implements OnInit {
 
-    // responseData: string[] = new Array<string>();
+    responseData: string[] = new Array<string>();
 
-    // sortedSurveyRenderingElements: Sre[];
-    // sortedUniquePages: SurveyPageSre[];
+    sortedSurveyRenderingElements: Sre[];
+    sortedUniquePages: SurveyPageSre[];
 
-    // constructor(
-    //     //private _loadJsonDataService: SeedDataService
-    //     //private _loadDomainOptionsService: LoadDomainOptionsService
-    // ) {
-    // }
+    constructor(
+        //private _loadJsonDataService: SeedDataService
+        private _loadDomainOptionsService: LoadDomainOptionsService
+    ) {
+    }
 
-    // ngOnInit() {
-    //     var test = this._loadDomainOptionsService.getDomainOptions(15);
+    ngOnInit() {
+        var test = this._loadDomainOptionsService.getDomainOptions(15);
 
-    //     console.log(JSON.stringify(test));
-    // }
+        console.log(JSON.stringify(test));
+    }
 
-    // click() {
-    // }
+    click() {
+    }
 
 }
 

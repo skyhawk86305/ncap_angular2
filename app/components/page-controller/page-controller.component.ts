@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RouteParams } from '@angular/router-deprecated';
+import { Component, OnInit } from 'angular2/core';
+import { RouteParams } from 'angular2/router';
 
 import { Question } from  '../../../app/types/question';
 import { ValidationResult } from  '../../../app/types/enums/validation-result.enum';
