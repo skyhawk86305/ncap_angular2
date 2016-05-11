@@ -44,11 +44,14 @@ export class PageControllerComponent implements OnInit {
         }
 
         // Is a scenarioID in the URL?
-        let scenarioID = +this._routeParams.get('scenarioID');
-        if (scenarioID) {
+        let scenarioId = +this._routeParams.get('scenarioId');
+        if (scenarioId) {
             // xyzzy Move to a Scenariop service
             this._userInputService.defaultUserInput(USERINPUT_SCENARIO1);
             this._applicationStateService.setPageNumber(3);
+        }
+
+        if (this._routeParams.get('diag')) {
             // enable Diag mode
             this._applicationStateService.diagMode = true;
         }
