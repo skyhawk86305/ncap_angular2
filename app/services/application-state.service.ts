@@ -9,7 +9,7 @@ export class ApplicationStateService {
     public diagMode: boolean = false;
     shownRequestedValidation: number = 0;
 
-    private _currentPageNumber: number = 1;
+    currentPageNumber: number = 1;
     private _totalPages: number;
     private _pageControllerComponent: PageControllerComponent;
 
@@ -29,27 +29,30 @@ export class ApplicationStateService {
     };
 
     getCurrentPageNumber() {
-        return this._currentPageNumber;
+        return this.currentPageNumber;
     }
 
     setPageNumber(pageNumber: number) {
-        this._currentPageNumber = pageNumber;
+        this.currentPageNumber = pageNumber;
     }
 
     getPercentageComplete() {
-        let percentage: number = this._currentPageNumber * this._totalPages * 100;
+        let percentage: number = this.currentPageNumber * this._totalPages * 100;
         percentage = Math.round(percentage);
 
         return percentage;
     }
 
     next() {
-        this._currentPageNumber++;
+        this.currentPageNumber++;
+        // console.log('Page number is now ' + this.currentPageNumber);
+        // console.log('Page number is now ' + this.getCurrentPageNumber());
+
         this._pageControllerComponent.getQuestionsToRender();
     }
 
     back() {
-        this._currentPageNumber--;
+        this.currentPageNumber--;
         this._pageControllerComponent.getQuestionsToRender();
     }
 

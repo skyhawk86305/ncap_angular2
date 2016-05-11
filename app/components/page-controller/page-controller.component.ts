@@ -87,7 +87,7 @@ export class PageControllerComponent implements OnInit {
     }
 
     next() {
-        console.log('Clicked next');
+        console.log('Clicked next on pageController');
 
         let aggregateResult: ValidationResult = this.runValidationOnCurrentQuestions();
 
