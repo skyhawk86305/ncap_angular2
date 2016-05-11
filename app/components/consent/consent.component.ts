@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
 import { ApplicationStateService } from '../../../app/services/application-state.service';
-import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { SeedDataService } from '../../../app/services/seed-data.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
 import { Question } from       '../../../app/types/question';
@@ -19,7 +19,7 @@ export class ConsentComponent implements OnInit {
     constructor(
         private _applicationStateService: ApplicationStateService,
         private _userInputService: UserInputService,
-        private _loadJsonDataService: LoadJsonDataService
+        private _loadJsonDataService: SeedDataService
     ) {
     }
 

@@ -7,7 +7,6 @@ import { Question } from       '../../app/types/question';
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
-import { FormatCategory } from '../../app/types/enums/format-category.enum';
 
 import { ApplicationStateService } from '../../app/services/application-state.service';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
@@ -23,7 +22,7 @@ import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
 import _ from 'lodash';
 
 @Injectable()
-export class LoadJsonDataService {
+export class SeedDataService {
     BASE_PATH = 'app/seed-data/raw-json/';
 
     private _questionsNew: Question[] = new Array<Question>();

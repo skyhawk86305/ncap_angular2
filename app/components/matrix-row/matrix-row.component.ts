@@ -5,7 +5,7 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
 
-import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
 import { UserInputService } from '../../../app/services/user-input.service';
@@ -31,7 +31,7 @@ export class MatrixRowComponent implements OnInit {
   AnswerCategory = AnswerCategory;
 
   constructor(
-    private _loadJsonDataService: LoadJsonDataService,
+    private _loadJsonDataService: SeedDataService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService

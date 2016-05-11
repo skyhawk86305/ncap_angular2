@@ -31,7 +31,7 @@ export class LoadDomainOptionsService {
         this.populateWithData();
     }
 
-    public getDomainOptions(id: number) {
+    public getDomainOptions(id: number): DomainOption[] {
         return this.allDomainOptions[id];
     }
 

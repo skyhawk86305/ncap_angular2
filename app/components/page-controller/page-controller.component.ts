@@ -4,7 +4,7 @@ import { RouteParams } from 'angular2/router';
 import { Question } from  '../../../app/types/question';
 import { ValidationResult } from  '../../../app/types/enums/validation-result.enum';
 
-import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { SeedDataService } from '../../../app/services/seed-data.service';
 
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
@@ -29,7 +29,7 @@ export class PageControllerComponent implements OnInit {
 
     constructor(
         protected _applicationStateService: ApplicationStateService,
-        private _loadJsonDataService: LoadJsonDataService,
+        private _loadJsonDataService: SeedDataService,
         private _validationService: ValidationService,
         private _userInputService: UserInputService,
         private _routeParams: RouteParams

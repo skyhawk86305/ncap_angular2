@@ -29,7 +29,7 @@ export class TestPageComponent implements OnInit {
     sortedUniquePages: SurveyPageSre[];
 
     constructor(
-        //private _loadJsonDataService: LoadJsonDataService
+        //private _loadJsonDataService: SeedDataService
         private _loadDomainOptionsService: LoadDomainOptionsService
     ) {
     }

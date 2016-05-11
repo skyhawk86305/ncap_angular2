@@ -5,7 +5,7 @@ import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 
 import { MatrixElement } from '../../app/types/matrix-element';
-import { LoadJsonDataService } from '../../app/services/load-json-data.service';
+import { SeedDataService } from '../../app/services/seed-data.service';
 
 // The data
 import { sre } from '../../app/seed-data/sre';
@@ -19,10 +19,10 @@ import _ from 'lodash';
 
 
 @Injectable()
-export class MatrixDbDataService {
+export class SeedDataMatrixService {
 
     constructor(
-        private _loadJsonDataService: LoadJsonDataService
+        private _loadJsonDataService: SeedDataService
     ) {
     }
 

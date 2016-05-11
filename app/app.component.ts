@@ -6,11 +6,11 @@ import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 
 import { ApplicationStateService } from '../app/services/application-state.service';
-import { LoadJsonDataService } from '../app/services/load-json-data.service';
+import { SeedDataService } from '../app/services/seed-data.service';
 import { UserInputService } from '../app/services/user-input.service';
 import { ValidationService } from '../app/services/validation.service';
 import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
-import { MatrixDbDataService } from '../app/services/matrix-db-data.service';
+import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service';
 
 @Component({
   selector: 'the-app',
@@ -21,12 +21,12 @@ import { MatrixDbDataService } from '../app/services/matrix-db-data.service';
   providers: [
     ROUTER_PROVIDERS,
     Route,
-    LoadJsonDataService,
+    SeedDataService,
     ApplicationStateService,
     UserInputService,
     ValidationService,
     LoadDomainOptionsService,
-    MatrixDbDataService
+    SeedDataMatrixService
   ]
 })
 @RouteConfig([

@@ -6,10 +6,10 @@ import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
-import { LoadJsonDataService } from '../../../app/services/load-json-data.service';
+import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationStateService } from '../../../app/services/application-state.service';
-import { MatrixDbDataService } from '../../../app/services/matrix-db-data.service';
+import { SeedDataMatrixService } from '../../../app/services/seed-data-matrix.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
@@ -35,9 +35,9 @@ export class MatrixComponent implements OnInit {
   AnswerCategory = AnswerCategory;
 
   constructor(
-    private _loadJsonDataService: LoadJsonDataService,
+    private _loadJsonDataService: SeedDataService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
-    private _matrixDbDataService: MatrixDbDataService,
+    private _matrixDbDataService: SeedDataMatrixService,
     private _applicationStateService: ApplicationStateService,
     private _userInputService: UserInputService
   ) {
