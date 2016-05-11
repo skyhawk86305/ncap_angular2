@@ -12,7 +12,9 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 
 import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { UserInputService } from '../../../app/services/user-input.service';
 import { ValidationService } from '../../../app/services/validation.service';
+import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
 
 @Component({
     selector: 'page',
@@ -29,6 +31,7 @@ export class PageControllerComponent implements OnInit {
         protected _applicationStateService: ApplicationStateService,
         private _loadJsonDataService: LoadJsonDataService,
         private _validationService: ValidationService,
+        private _userInputService: UserInputService,
         private _routeParams: RouteParams
     ) {
     }
@@ -40,8 +43,15 @@ export class PageControllerComponent implements OnInit {
             this._applicationStateService.setPageNumber(requestedPageId);
         }
 
-        let diagmode: string = this._routeParams.get('diagMode');
-        this._applicationStateService.diagMode = (diagmode === 'true');
+        // Is a scenarioID in the URL?
+        let scenarioID = +this._routeParams.get('scenarioID');
+        if (scenarioID) {
+            // xyzzy Move to a Scenariop service
+            this._userInputService.defaultUserInput(USERINPUT_SCENARIO1);
+            this._applicationStateService.setPageNumber(3);
+            // enable Diag mode
+            this._applicationStateService.diagMode = true;
+        }
 
         this.getQuestionsToRender();
 

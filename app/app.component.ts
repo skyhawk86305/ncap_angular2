@@ -38,24 +38,9 @@ import { MatrixDbDataService } from '../app/services/matrix-db-data.service';
     useAsDefault: true
   },
   {
-    path: '/page/:pageId',
-    name: 'SpecificPage2',
-    component: PageControllerComponent
-  },
-  {
-    path: '/:pageId',
-    name: 'SpecificPage1',
-    component: PageControllerComponent
-  },
-  {
     path: '/all',
     name: 'All',
     component: AllPagesComponent
-  },
-  {
-    path: '/diag/:diagMode',
-    name: 'Diag',
-    component: PageControllerComponent
   },
   {
     path: '/test',
@@ -66,8 +51,17 @@ import { MatrixDbDataService } from '../app/services/matrix-db-data.service';
     path: '/test-page',
     name: 'TestPage',
     component: TestPageComponent
+  },
+  {
+    path: '/:pageId',
+    name: 'SpecificPage1',
+    component: PageControllerComponent
+  },
+  {
+    path: '/scenario/:scenarioId',
+    name: 'Scenario',
+    component: PageControllerComponent
   }
-
 ])
 export class AppComponent {
 }
