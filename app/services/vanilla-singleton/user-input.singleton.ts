@@ -5,15 +5,15 @@ export class UserInputSingleton {
     private static _instance: UserInputSingleton = new UserInputSingleton();
     private _UserInput: UserInput[] = new Array<UserInput>();
 
+    public static getInstance(): UserInputSingleton {
+        return UserInputSingleton._instance;
+    }
+
     constructor() {
         if (UserInputSingleton._instance) {
             throw new Error('Error: Instantiation failed: Use SingletonDemo.getInstance() instead of new.');
         }
         UserInputSingleton._instance = this;
-    }
-
-    public static getInstance(): UserInputSingleton {
-        return UserInputSingleton._instance;
     }
 
     getAllUserInput() {

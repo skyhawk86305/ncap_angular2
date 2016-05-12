@@ -9,7 +9,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
-import { ValidationService } from '../../../app/services/validation.service';
+import { ValidationSingleton } from '../../../app/services/vanilla-singleton/validation.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
 
 @Component({
@@ -26,7 +26,6 @@ export class QuestionContainerComponent implements OnInit {
     constructor(
         protected _applicationStateService: ApplicationControllerService,
         private _loadJsonDataService: SeedDataService,
-        private _validationService: ValidationService,
         private _routeParams: RouteParams
     ) {
     }
@@ -73,7 +72,7 @@ export class QuestionContainerComponent implements OnInit {
         let aggregateResult: ValidationResult = ValidationResult.ok;
 
         for (let curQuestion of this.questions) {
-            this._validationService.validateQuestion(curQuestion);
+            ValidationSingleton.getInstance().validateQuestion(curQuestion);
 
             if (curQuestion.validation_result > aggregateResult) {
                 aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on teh int values of the enum

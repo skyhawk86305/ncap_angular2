@@ -1,17 +1,23 @@
-import { Injectable } from 'angular2/core';
-import { MatrixElement } from '../../app/types/matrix-element';
-import { Question } from '../../app/types/question';
-import { UserInput } from  '../../app/types/user-input';
-import { ValidationResult } from '../../app/types/enums/validation-result.enum';
-import { ValidationType } from '../../app/types/enums/validation-type.enum';
-import { UserInputSingleton } from '../../app/services/vanilla-singleton/user-input.singleton';
+import { MatrixElement } from '../../../app/types/matrix-element';
+import { Question } from '../../../app/types/question';
+import { UserInput } from  '../../../app/types/user-input';
+import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { ValidationType } from '../../../app/types/enums/validation-type.enum';
+import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 
-@Injectable()
-export class ValidationService {
+export class ValidationSingleton {
 
-    constructor(
-        
-    ) {
+    private static _instance: ValidationSingleton = new ValidationSingleton();
+
+    public static getInstance(): ValidationSingleton {
+        return ValidationSingleton._instance;
+    }
+
+    constructor() {
+        if (ValidationSingleton._instance) {
+            throw new Error('Error: Instantiation failed: Use SingletonDemo.getInstance() instead of new.');
+        }
+        ValidationSingleton._instance = this;
     }
 
     validatePage(pageId: number): ValidationResult {
@@ -64,4 +70,5 @@ export class ValidationService {
 
         matrixElement.validation_result = result;
     }
+
 }
