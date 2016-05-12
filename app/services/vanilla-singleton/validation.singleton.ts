@@ -20,6 +20,20 @@ export class ValidationSingleton {
         ValidationSingleton._instance = this;
     }
 
+    validateQuestionArray(questions: Question[] ): ValidationResult {
+        let aggregateResult: ValidationResult = ValidationResult.ok;
+
+        for (let curQuestion of questions) {
+            ValidationSingleton.getInstance().validateQuestion(curQuestion);
+
+            if (curQuestion.validation_result > aggregateResult) {
+                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on teh int values of the enum
+            }
+        }
+
+        return aggregateResult;
+    }
+
     validatePage(pageId: number): ValidationResult {
         let result: ValidationResult;
 

@@ -68,24 +68,11 @@ export class QuestionContainerComponent implements OnInit {
         console.log('qu count is ' + this.questions.length);
     }
 
-    runValidationOnCurrentQuestions(): ValidationResult {
-        let aggregateResult: ValidationResult = ValidationResult.ok;
-
-        for (let curQuestion of this.questions) {
-            ValidationSingleton.getInstance().validateQuestion(curQuestion);
-
-            if (curQuestion.validation_result > aggregateResult) {
-                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on teh int values of the enum
-            }
-        }
-
-        return aggregateResult;
-    }
-
     next() {
         console.log('Clicked next on pageController');
 
-        let aggregateResult: ValidationResult = this.runValidationOnCurrentQuestions();
+        let aggregateResult: ValidationResult = ValidationSingleton.getInstance()
+            .validateQuestionArray(this.questions);
 
         // Requested Validation is only asked for up to three times 
         if (aggregateResult === ValidationResult.requested) {
