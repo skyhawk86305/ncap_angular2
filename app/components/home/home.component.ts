@@ -1,6 +1,6 @@
 import { Component, Input } from 'angular2/core';
 
-import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
 import { Question } from       '../../../app/types/question';
@@ -14,7 +14,7 @@ export class HomeComponent {
     @Input() question: Question;
 
     constructor(
-        private _applicationStateService: ApplicationStateService,
+        private _applicationStateService: ApplicationControllerService,
         private _userInputService: UserInputService
     ) {
     }

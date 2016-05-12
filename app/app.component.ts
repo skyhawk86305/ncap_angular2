@@ -5,7 +5,7 @@ import { PageControllerComponent } from './components/page-controller/page-contr
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 
-import { ApplicationStateService } from '../app/services/application-state.service';
+import { ApplicationControllerService } from '../app/services/application-controller.service';
 import { SeedDataService } from '../app/services/seed-data.service';
 import { UserInputService } from '../app/services/user-input.service';
 import { ValidationService } from '../app/services/validation.service';
@@ -22,7 +22,7 @@ import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service'
     ROUTER_PROVIDERS,
     Route,
     SeedDataService,
-    ApplicationStateService,
+    ApplicationControllerService,
     UserInputService,
     ValidationService,
     LoadDomainOptionsService,

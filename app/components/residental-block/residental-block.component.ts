@@ -6,7 +6,7 @@ import { Question } from       '../../../app/types/question';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
 
-import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 @Component({
@@ -22,7 +22,7 @@ export class ResidentalBlockComponent {
   ValidationResult = ValidationResult;
 
   constructor(
-    private _applicationStateService: ApplicationStateService,
+    private _applicationStateService: ApplicationControllerService,
     private _userInputService: UserInputService
   ) {
   }

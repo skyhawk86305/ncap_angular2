@@ -4,7 +4,7 @@ import { MatrixElement } from '../../app/types/matrix-element';
 import { Question } from       '../../app/types/question';
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
-import { ApplicationStateService } from '../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../app/services/application-controller.service';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { ValidationService } from './validation.service';
 // The data
@@ -24,7 +24,7 @@ export class SeedDataService {
 
     constructor(
         private http: Http,
-        protected _applicationStateService: ApplicationStateService,
+        protected _applicationStateService: ApplicationControllerService,
         private _validationService: ValidationService
     ) {
         // Should only fire once since Services are Singletons in Angular2

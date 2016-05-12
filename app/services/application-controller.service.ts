@@ -3,7 +3,7 @@ import { UserInputService } from '../../app/services/user-input.service';
 import { PageControllerComponent } from  '../../app/components/page-controller/page-controller.component';
 
 @Injectable()
-export class ApplicationStateService {
+export class ApplicationControllerService {
 
     public diagMode: boolean = false;
     shownRequestedValidation: number = 0;
@@ -17,10 +17,29 @@ export class ApplicationStateService {
     ) {
     }
 
+    // Navigation
+    next() {
+        this._currentPageNumber++;
+
+        this._pageControllerComponent.getQuestionsToRender();
+    }
+
+    back() {
+        this._currentPageNumber--;
+        this._pageControllerComponent.getQuestionsToRender();
+    }
+
+    // Methods to notify the Page Controller of changes
     registerPageControllerComponent(pageControllerComponent: PageControllerComponent) {
         this._pageControllerComponent = pageControllerComponent;
     };
 
+    requestPageControlRevalidate() {
+        // xyzzy This may not be efficient. Maybe tune later?
+        this._pageControllerComponent.runValidationOnCurrentQuestions();
+    }
+
+    // Current page, percentage compelte etc
     getCurrentPageNumber() {
         return this._currentPageNumber;
     }
@@ -39,21 +58,5 @@ export class ApplicationStateService {
         percentage = Math.round(percentage);
 
         return percentage;
-    }
-
-    next() {
-        this._currentPageNumber++;
-
-        this._pageControllerComponent.getQuestionsToRender();
-    }
-
-    back() {
-        this._currentPageNumber--;
-        this._pageControllerComponent.getQuestionsToRender();
-    }
-
-    requestPageControlRevalidate() {
-        // xyzzy This may not be efficient. Maybe tune later?
-        this._pageControllerComponent.runValidationOnCurrentQuestions();
     }
 }

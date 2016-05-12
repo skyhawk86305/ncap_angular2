@@ -1,17 +1,13 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
-
 import { Question } from  '../../../app/types/question';
 import { ValidationResult } from  '../../../app/types/enums/validation-result.enum';
-
 import { SeedDataService } from '../../../app/services/seed-data.service';
-
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
-
-import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { ValidationService } from '../../../app/services/validation.service';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
@@ -28,7 +24,7 @@ export class PageControllerComponent implements OnInit {
     that: PageControllerComponent;
 
     constructor(
-        protected _applicationStateService: ApplicationStateService,
+        protected _applicationStateService: ApplicationControllerService,
         private _loadJsonDataService: SeedDataService,
         private _validationService: ValidationService,
         private _userInputService: UserInputService,

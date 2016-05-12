@@ -1,6 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
 
-import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
 
@@ -13,7 +13,7 @@ export class DiagnosticComponent implements OnInit {
     data: UserInput[];
 
     constructor(
-        protected _applicationStateService: ApplicationStateService,
+        protected _applicationStateService: ApplicationControllerService,
         private _userInputService: UserInputService
     ) {
     }

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
-import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
@@ -24,7 +24,7 @@ export class DropdownComponent implements OnInit {
   ValidationResult = ValidationResult;
 
   constructor(
-    private _applicationStateService: ApplicationStateService,
+    private _applicationStateService: ApplicationControllerService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
     private _userInputService: UserInputService
   ) {

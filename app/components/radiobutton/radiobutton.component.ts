@@ -5,7 +5,7 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
-import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
@@ -27,7 +27,7 @@ export class RadioButtonComponent implements OnInit {
   ValidationResult = ValidationResult;
 
   constructor(
-    protected _applicationStateService: ApplicationStateService,
+    protected _applicationStateService: ApplicationControllerService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
     private _loadJsonDataService: SeedDataService,
     private _userInputService: UserInputService

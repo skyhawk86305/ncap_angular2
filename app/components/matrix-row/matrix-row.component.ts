@@ -7,7 +7,7 @@ import { MatrixElement } from '../../../app/types/matrix-element';
 
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
-import { ApplicationStateService } from '../../../app/services/application-state.service';
+import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputService } from '../../../app/services/user-input.service';
 
 import { UserInput } from  '../../../app/types/user-input';
@@ -33,7 +33,7 @@ export class MatrixRowComponent implements OnInit {
   constructor(
     private _loadJsonDataService: SeedDataService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
-    private _applicationStateService: ApplicationStateService,
+    private _applicationStateService: ApplicationControllerService,
     private _userInputService: UserInputService
   ) {
   }
