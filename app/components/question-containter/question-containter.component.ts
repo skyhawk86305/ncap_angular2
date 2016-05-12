@@ -68,6 +68,7 @@ export class QuestionContainerComponent implements OnInit {
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
         let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
+        console.log("fff pageId " + pageId);
         this.questions = this._loadJsonDataService.getQuestionsForPage(pageId);
 
         // Todo: hack, improve later
@@ -79,7 +80,7 @@ export class QuestionContainerComponent implements OnInit {
     next() {
         console.log('Clicked next on pageController');
 
-        let aggregateResult = this.runValidationOnCurrentQuestions()
+        let aggregateResult = this.runValidationOnCurrentQuestions();
 
         // Requested Validation is only asked for up to three times 
         if (aggregateResult === ValidationResult.requested) {

@@ -26,7 +26,6 @@ export class NavigationSingleton {
     // Navigation
     next() {
         this._currentPageNumber++;
-
         this._QuestionContainerComponent.getQuestionsToRender();
     }
 

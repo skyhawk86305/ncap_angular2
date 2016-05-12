@@ -8,6 +8,7 @@ import { UserInput } from  '../../../app/types/user-input';
     templateUrl: 'app/components/diagnostic/diagnostic.html'
 })
 export class DiagnosticComponent implements OnInit {
+    public NavigationSingleton = NavigationSingleton;
     currentPage: number;
     data: UserInput[];
 
