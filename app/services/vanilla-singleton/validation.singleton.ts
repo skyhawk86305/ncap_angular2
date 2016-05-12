@@ -15,12 +15,12 @@ export class ValidationSingleton {
 
     constructor() {
         if (ValidationSingleton._instance) {
-            throw new Error('Error: Instantiation failed: Use SingletonDemo.getInstance() instead of new.');
+            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
         }
         ValidationSingleton._instance = this;
     }
 
-    validateQuestionArray(questions: Question[] ): ValidationResult {
+    validateQuestionArray(questions: Question[]): ValidationResult {
         let aggregateResult: ValidationResult = ValidationResult.ok;
 
         for (let curQuestion of questions) {

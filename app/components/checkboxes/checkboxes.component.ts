@@ -1,17 +1,13 @@
 import { Component, Input, OnInit } from 'angular2/core';
-
 import { ComponentHelperClass } from  '../component-helper-class';
-
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
-
 import { UserInput } from  '../../../app/types/user-input';
-
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 
@@ -23,6 +19,7 @@ import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 export class CheckboxesComponent implements OnInit {
 
   @Input() question: Question;
+  public NavigationSingleton = NavigationSingleton;
   domainOptions: DomainOption[];
   showOtherTextBoxForStoredValue: number = -1;
   ValidationResult = ValidationResult; // Permit html to use the enumeration type
@@ -65,7 +62,7 @@ export class CheckboxesComponent implements OnInit {
     this._loadUserInput();
 
     // Ask Page Control to re-validate for everything on the page
-    this._applicationStateService.requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().requestPageControlRevalidate();
   }
 
   // Called from html
@@ -83,7 +80,7 @@ export class CheckboxesComponent implements OnInit {
     this._loadUserInput();
 
     // Ask Page Control to re-validate for everything on the page
-    this._applicationStateService.requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().requestPageControlRevalidate();
   }
 
   private _loadUserInput() {

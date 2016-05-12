@@ -11,7 +11,7 @@ export class UserInputSingleton {
 
     constructor() {
         if (UserInputSingleton._instance) {
-            throw new Error('Error: Instantiation failed: Use SingletonDemo.getInstance() instead of new.');
+            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
         }
         UserInputSingleton._instance = this;
     }

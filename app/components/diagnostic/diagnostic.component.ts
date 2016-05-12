@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
-
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
@@ -19,7 +19,6 @@ export class DiagnosticComponent implements OnInit {
 
     ngOnInit() {
         this.data = UserInputSingleton.instanceOf().getAllUserInput();
-        this.currentPage = this._applicationStateService.getCurrentPageNumber();
+        this.currentPage = NavigationSingleton.instanceOf().getCurrentPageNumber();
     }
 }
-

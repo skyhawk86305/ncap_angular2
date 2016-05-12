@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { Question } from       '../../../app/types/question';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
@@ -15,6 +16,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 export class TextboxComponent implements OnInit {
 
   @Input() question: Question;
+  public NavigationSingleton = NavigationSingleton;
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type
@@ -37,7 +39,7 @@ export class TextboxComponent implements OnInit {
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
-    this._applicationStateService.requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().requestPageControlRevalidate();
   }
 
   private _syncToPreviouslyEnteredData() {

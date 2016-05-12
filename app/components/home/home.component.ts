@@ -1,8 +1,7 @@
 import { Component, Input } from 'angular2/core';
-
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
-
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { Question } from       '../../../app/types/question';
 
 @Component({
@@ -35,6 +34,7 @@ export class HomeComponent {
 
     private setTrackingValueAndMovePage(selectedOption: string) {
         UserInputSingleton.instanceOf().setUserInput('respondent_type', selectedOption);
-        this._applicationStateService.next();
+
+        NavigationSingleton.instanceOf().next();
     }
 }

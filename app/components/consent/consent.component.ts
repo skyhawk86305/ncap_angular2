@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from 'angular2/core';
-
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
-
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { Question } from       '../../../app/types/question';
 import { UserInput } from  '../../../app/types/user-input';
 
@@ -32,7 +31,7 @@ export class ConsentComponent implements OnInit {
     next() {
         console.log('Clicked next');
         UserInputSingleton.instanceOf().setUserInput('initial_consent', 'Y');
-        this._applicationStateService.next();
+        NavigationSingleton.instanceOf().next();
     }
 
     exit() {

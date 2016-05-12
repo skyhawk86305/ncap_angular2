@@ -4,7 +4,7 @@
     [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" 
     [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required" >
         <span class="ng-scope">
-            <span *ngIf="_applicationStateService.diagMode">{{question.page_id}}.{{question.sort_order}} - </span>
+            <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sort_order}} - </span>
             {{question.question_text}}</span>
         <tooltip *ngIf="question.toolTipId>0" [toolTipId]="question.toolTipId"></tooltip>
     </div>

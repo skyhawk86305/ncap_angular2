@@ -6,6 +6,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
@@ -19,6 +20,8 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 export class RadioButtonComponent implements OnInit {
 
   @Input() question: Question;
+  public NavigationSingleton = NavigationSingleton;
+
   domainOptions: DomainOption[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: number;
@@ -47,7 +50,7 @@ export class RadioButtonComponent implements OnInit {
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
-    this._applicationStateService.requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().requestPageControlRevalidate();
   }
 
   private _syncToPreviouslyEnteredData() {

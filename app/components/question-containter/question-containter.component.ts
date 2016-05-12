@@ -1,14 +1,15 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
-import { Question } from  '../../../app/types/question';
 import { ValidationResult } from  '../../../app/types/enums/validation-result.enum';
-import { SeedDataService } from '../../../app/services/seed-data.service';
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
+import { Question } from  '../../../app/types/question';
+import { SeedDataService } from '../../../app/services/seed-data.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { ValidationSingleton } from '../../../app/services/vanilla-singleton/validation.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
 
@@ -22,6 +23,8 @@ export class QuestionContainerComponent implements OnInit {
     questions: Question[];
     renderButtons: boolean = true;
     that: QuestionContainerComponent;
+
+    public NavigationSingleton = NavigationSingleton;
 
     constructor(
         protected _applicationStateService: ApplicationControllerService,
@@ -37,24 +40,24 @@ export class QuestionContainerComponent implements OnInit {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId) {
-            this._applicationStateService.setPageNumber(requestedPageId);
+            NavigationSingleton.instanceOf().setPageNumber(requestedPageId);
         }
 
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO1);
-            this._applicationStateService.setPageNumber(3);
+            NavigationSingleton.instanceOf().setPageNumber(3);
         }
 
         if (this._routeParams.get('diag')) {
             // enable Diag mode
-            this._applicationStateService.diagMode = true;
+            NavigationSingleton.instanceOf().diagMode = true;
         }
 
         this.getQuestionsToRender();
 
-        this._applicationStateService.registerQuestionContainerComponent(this);
+        NavigationSingleton.instanceOf().registerQuestionContainerComponent(this);
     }
 
     // xyzzy5 - try to remove dependance on this method + trigger when necssary from a Singleton
@@ -66,7 +69,7 @@ export class QuestionContainerComponent implements OnInit {
 
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
-        let pageId = this._applicationStateService.getCurrentPageNumber();
+        let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
         this.questions = this._loadJsonDataService.getQuestionsForPage(pageId);
 
         // Todo: hack, improve later
@@ -82,10 +85,10 @@ export class QuestionContainerComponent implements OnInit {
 
         // Requested Validation is only asked for up to three times 
         if (aggregateResult === ValidationResult.requested) {
-            if (this._applicationStateService.shownRequestedValidation >= 3) {
+            if (NavigationSingleton.instanceOf().shownRequestedValidation >= 3) {
                 aggregateResult = ValidationResult.ok;
             }
-            this._applicationStateService.shownRequestedValidation++;
+            NavigationSingleton.instanceOf().shownRequestedValidation++;
         }
 
         // If validation should be show update show_validation property in the questions
@@ -97,7 +100,7 @@ export class QuestionContainerComponent implements OnInit {
 
         // If validation was ok, then let go to the next page
         if (aggregateResult === ValidationResult.ok) {
-            this._applicationStateService.next();
+            NavigationSingleton.instanceOf().next();
         } else {
             console.log('Aggregate validation is ' + ValidationResult[aggregateResult]);
         }
@@ -106,7 +109,7 @@ export class QuestionContainerComponent implements OnInit {
 
     back() {
         console.log('Clicked back');
-        this._applicationStateService.back();
+        NavigationSingleton.instanceOf().back();
     }
 
     exit() {

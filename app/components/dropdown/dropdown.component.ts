@@ -5,6 +5,7 @@ import { Question } from       '../../../app/types/question';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 import { TooltipComponent } from '../tooltip/tooltip.component';
@@ -17,6 +18,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 export class DropdownComponent implements OnInit {
 
   @Input() question: Question;
+  public NavigationSingleton = NavigationSingleton;
   domainOptions: DomainOption[];
   previouslySelectedStoredValue: string;
 
@@ -41,7 +43,7 @@ export class DropdownComponent implements OnInit {
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
-    this._applicationStateService.requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().requestPageControlRevalidate();
   }
 
   private _getDomainOptions(id: number, addPleaseSelect: boolean): DomainOption[] {

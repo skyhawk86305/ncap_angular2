@@ -12,6 +12,7 @@ import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
 // Types to hold the data
 import { Sre } from '../../app/types/database-data/sre';
 import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
+import { NavigationSingleton } from '../../app/services/vanilla-singleton/navigation.singleton';
 import _ from 'lodash';
 
 @Injectable()
@@ -39,7 +40,7 @@ export class SeedDataService {
         sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
         let sortedSurveyRenderingElements = _.orderBy(sre, 'sre_sort_order');
 
-        this._applicationStateService.setTotalPages(sortedUniquePages.length);
+        NavigationSingleton.instanceOf().setTotalPages(sortedUniquePages.length);
 
         // Combine into one Question class for the app to use
 
