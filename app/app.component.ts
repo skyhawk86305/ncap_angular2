@@ -1,13 +1,9 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-
 import { QuestionContainerComponent } from './components/question-containter/question-containter.component';
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
-
-import { ApplicationControllerService } from '../app/services/application-controller.service';
 import { SeedDataService } from '../app/services/seed-data.service';
-import { ValidationSingleton } from '../app/services/vanilla-singleton/validation.singleton';
 import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
 import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service';
 
@@ -21,7 +17,6 @@ import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service'
     ROUTER_PROVIDERS,
     Route,
     SeedDataService,
-    ApplicationControllerService,
     LoadDomainOptionsService,
     SeedDataMatrixService
   ]

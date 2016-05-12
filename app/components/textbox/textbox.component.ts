@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { Question } from       '../../../app/types/question';
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
@@ -21,11 +20,6 @@ export class TextboxComponent implements OnInit {
 
   // Permit view to use the enumeration type
   ValidationResult = ValidationResult;
-
-  constructor(
-    private _applicationStateService: ApplicationControllerService
-  ) {
-  }
 
   ngOnInit() {
     ComponentHelperClass.addTooltipIfNecessary(this.question);

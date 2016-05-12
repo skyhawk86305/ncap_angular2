@@ -8,7 +8,6 @@ import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { SeedDataMatrixService } from '../../../app/services/seed-data-matrix.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
@@ -37,8 +36,7 @@ export class MatrixComponent implements OnInit {
   constructor(
     private _loadJsonDataService: SeedDataService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
-    private _matrixDbDataService: SeedDataMatrixService,
-    private _applicationStateService: ApplicationControllerService
+    private _matrixDbDataService: SeedDataMatrixService
   ) {
   }
 

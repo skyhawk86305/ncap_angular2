@@ -1,5 +1,4 @@
 import { Component, Input } from 'angular2/core';
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { Question } from       '../../../app/types/question';
@@ -12,10 +11,6 @@ export class HomeComponent {
 
     @Input() question: Question;
 
-    constructor(
-        private _applicationStateService: ApplicationControllerService
-    ) {
-    }
 
     childclicked() {
         this.setTrackingValueAndMovePage('legalrep');

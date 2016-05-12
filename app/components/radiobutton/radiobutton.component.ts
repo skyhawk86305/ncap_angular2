@@ -5,7 +5,6 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
@@ -30,7 +29,6 @@ export class RadioButtonComponent implements OnInit {
   ValidationResult = ValidationResult;
 
   constructor(
-    protected _applicationStateService: ApplicationControllerService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
     private _loadJsonDataService: SeedDataService
   ) {

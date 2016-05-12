@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
@@ -16,7 +15,6 @@ export class ConsentComponent implements OnInit {
     hasConsent: boolean = false;
 
     constructor(
-        private _applicationStateService: ApplicationControllerService,
         private _loadJsonDataService: SeedDataService
     ) {
     }

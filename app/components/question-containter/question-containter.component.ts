@@ -5,7 +5,6 @@ import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-quest
 import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { Question } from  '../../../app/types/question';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
@@ -27,7 +26,6 @@ export class QuestionContainerComponent implements OnInit {
     public NavigationSingleton = NavigationSingleton;
 
     constructor(
-        protected _applicationStateService: ApplicationControllerService,
         private _loadJsonDataService: SeedDataService,
         private _routeParams: RouteParams
     ) {

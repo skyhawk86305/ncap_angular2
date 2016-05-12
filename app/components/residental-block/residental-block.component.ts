@@ -1,12 +1,6 @@
 import { Component, Input } from 'angular2/core';
-
-import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
-
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
-import { UserInput } from  '../../../app/types/user-input';
-
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 @Component({
@@ -20,11 +14,6 @@ export class ResidentalBlockComponent {
 
   // Permit view to use the enumeration type
   ValidationResult = ValidationResult;
-
-  constructor(
-    private _applicationStateService: ApplicationControllerService
-  ) {
-  }
 
   //ngAfterContentChecked() {
   //ngAfterViewInit() {

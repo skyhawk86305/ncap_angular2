@@ -3,7 +3,6 @@ import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
@@ -28,7 +27,6 @@ export class CheckboxesComponent implements OnInit {
   private _userInputCheckedBoxes: number[] = new Array<number>();
 
   constructor(
-    protected _applicationStateService: ApplicationControllerService,
     private _loadDomainOptionsService: LoadDomainOptionsService
   ) {
   }
