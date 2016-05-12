@@ -1,7 +1,7 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { PageControllerComponent } from './components/page-controller/page-controller.component';
+import { QuestionContainerComponent } from './components/question-containter/question-containter.component';
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
 
@@ -33,7 +33,7 @@ import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service'
   {
     path: '/',
     name: 'Home',
-    component: PageControllerComponent,
+    component: QuestionContainerComponent,
     useAsDefault: true
   },
   {
@@ -54,12 +54,12 @@ import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service'
   {
     path: '/:pageId',
     name: 'SpecificPage1',
-    component: PageControllerComponent
+    component: QuestionContainerComponent
   },
   {
     path: '/scenario/:scenarioId',
     name: 'Scenario',
-    component: PageControllerComponent
+    component: QuestionContainerComponent
   }
 ])
 export class AppComponent {

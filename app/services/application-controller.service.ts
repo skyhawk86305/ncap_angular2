@@ -1,6 +1,6 @@
 import { Injectable } from 'angular2/core';
 import { UserInputService } from '../../app/services/user-input.service';
-import { PageControllerComponent } from  '../../app/components/page-controller/page-controller.component';
+import { QuestionContainerComponent } from  '../../app/components/question-containter/question-containter.component';
 
 @Injectable()
 export class ApplicationControllerService {
@@ -10,7 +10,7 @@ export class ApplicationControllerService {
 
     private _currentPageNumber: number = 1;
     private _totalPages: number = 40; // xyzzy5
-    private _pageControllerComponent: PageControllerComponent;
+    private _QuestionContainerComponent: QuestionContainerComponent;
 
     constructor(
         private _userInputService: UserInputService
@@ -21,22 +21,22 @@ export class ApplicationControllerService {
     next() {
         this._currentPageNumber++;
 
-        this._pageControllerComponent.getQuestionsToRender();
+        this._QuestionContainerComponent.getQuestionsToRender();
     }
 
     back() {
         this._currentPageNumber--;
-        this._pageControllerComponent.getQuestionsToRender();
+        this._QuestionContainerComponent.getQuestionsToRender();
     }
 
     // Methods to notify the Page Controller of changes
-    registerPageControllerComponent(pageControllerComponent: PageControllerComponent) {
-        this._pageControllerComponent = pageControllerComponent;
+    registerQuestionContainerComponent(QuestionContainerComponent: QuestionContainerComponent) {
+        this._QuestionContainerComponent = QuestionContainerComponent;
     };
 
     requestPageControlRevalidate() {
         // xyzzy This may not be efficient. Maybe tune later?
-        this._pageControllerComponent.runValidationOnCurrentQuestions();
+        this._QuestionContainerComponent.runValidationOnCurrentQuestions();
     }
 
     // Current page, percentage compelte etc

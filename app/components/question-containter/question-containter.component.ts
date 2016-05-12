@@ -14,14 +14,14 @@ import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-
 
 @Component({
     selector: 'page',
-    templateUrl: 'app/components/page-controller/page-controller.html',
+    templateUrl: 'app/components/question-containter/question-containter.html',
     directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent, DiagnosticComponent]
 })
-export class PageControllerComponent implements OnInit {
+export class QuestionContainerComponent implements OnInit {
 
     questions: Question[];
     renderButtons: boolean = true;
-    that: PageControllerComponent;
+    that: QuestionContainerComponent;
 
     constructor(
         protected _applicationStateService: ApplicationControllerService,
@@ -56,7 +56,7 @@ export class PageControllerComponent implements OnInit {
 
         this.getQuestionsToRender();
 
-        this._applicationStateService.registerPageControllerComponent(this);
+        this._applicationStateService.registerQuestionContainerComponent(this);
     }
 
     getQuestionsToRender() {
