@@ -7,7 +7,6 @@ import { TestPageComponent } from './components/test-page/test-page.component';
 
 import { ApplicationControllerService } from '../app/services/application-controller.service';
 import { SeedDataService } from '../app/services/seed-data.service';
-import { UserInputService } from '../app/services/user-input.service';
 import { ValidationService } from '../app/services/validation.service';
 import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
 import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service';
@@ -23,7 +22,6 @@ import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service'
     Route,
     SeedDataService,
     ApplicationControllerService,
-    UserInputService,
     ValidationService,
     LoadDomainOptionsService,
     SeedDataMatrixService

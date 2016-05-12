@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInputSingleton } from '../../../app/services/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
@@ -13,13 +13,12 @@ export class DiagnosticComponent implements OnInit {
     data: UserInput[];
 
     constructor(
-        protected _applicationStateService: ApplicationControllerService,
-        private _userInputService: UserInputService
+        protected _applicationStateService: ApplicationControllerService
     ) {
     }
 
     ngOnInit() {
-        this.data = this._userInputService.getAllUserInput();
+        this.data = UserInputSingleton.getInstance().getAllUserInput();
         this.currentPage = this._applicationStateService.getCurrentPageNumber();
     }
 }

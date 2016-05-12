@@ -3,7 +3,7 @@ import { Component, Input } from 'angular2/core';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 
-import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInputSingleton } from '../../../app/services/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
@@ -22,8 +22,7 @@ export class ResidentalBlockComponent {
   ValidationResult = ValidationResult;
 
   constructor(
-    private _applicationStateService: ApplicationControllerService,
-    private _userInputService: UserInputService
+    private _applicationStateService: ApplicationControllerService
   ) {
   }
 
@@ -34,7 +33,7 @@ export class ResidentalBlockComponent {
   //ngAfterViewChecked() {
   ngAfterContentInit() {
     // Hack to stop the weird error showing in Diagnostics mode
-    setTimeout(() => this._userInputService.setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
+    setTimeout(() => UserInputSingleton.getInstance().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
   }
 
 }

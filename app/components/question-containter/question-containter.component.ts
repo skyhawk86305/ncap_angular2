@@ -8,7 +8,7 @@ import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInputSingleton } from '../../../app/services/user-input.singleton';
 import { ValidationService } from '../../../app/services/validation.service';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
 
@@ -27,7 +27,6 @@ export class QuestionContainerComponent implements OnInit {
         protected _applicationStateService: ApplicationControllerService,
         private _loadJsonDataService: SeedDataService,
         private _validationService: ValidationService,
-        private _userInputService: UserInputService,
         private _routeParams: RouteParams
     ) {
     }
@@ -45,7 +44,7 @@ export class QuestionContainerComponent implements OnInit {
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId) {
-            this._userInputService.defaultUserInput(USERINPUT_SCENARIO1);
+            UserInputSingleton.getInstance().defaultUserInput(USERINPUT_SCENARIO1);
             this._applicationStateService.setPageNumber(3);
         }
 

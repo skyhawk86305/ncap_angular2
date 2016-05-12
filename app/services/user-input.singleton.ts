@@ -1,17 +1,19 @@
-import { Injectable } from 'angular2/core';
 import { UserInput } from  '../../app/types/user-input';
 
-@Injectable()
-export class UserInputService {
+export class UserInputSingleton {
 
-    private _UserInput: UserInput[];
+    private static _instance: UserInputSingleton = new UserInputSingleton();
+    private _UserInput: UserInput[] = new Array<UserInput>();
 
     constructor() {
-        this.initialize();
+        if (UserInputSingleton._instance) {
+            throw new Error('Error: Instantiation failed: Use SingletonDemo.getInstance() instead of new.');
+        }
+        UserInputSingleton._instance = this;
     }
 
-    initialize() {
-        this._UserInput = new Array<UserInput>();
+    public static getInstance(): UserInputSingleton {
+        return UserInputSingleton._instance;
     }
 
     getAllUserInput() {
@@ -41,3 +43,5 @@ export class UserInputService {
         this._UserInput = data;
     }
 }
+
+

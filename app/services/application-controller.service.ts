@@ -1,5 +1,5 @@
 import { Injectable } from 'angular2/core';
-import { UserInputService } from '../../app/services/user-input.service';
+import { UserInputSingleton } from '../../app/services/user-input.singleton';
 import { QuestionContainerComponent } from  '../../app/components/question-containter/question-containter.component';
 
 @Injectable()
@@ -13,7 +13,7 @@ export class ApplicationControllerService {
     private _QuestionContainerComponent: QuestionContainerComponent;
 
     constructor(
-        private _userInputService: UserInputService
+        
     ) {
     }
 

@@ -10,7 +10,7 @@ import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { SeedDataMatrixService } from '../../../app/services/seed-data-matrix.service';
-import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInputSingleton } from '../../../app/services/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
@@ -38,8 +38,7 @@ export class MatrixComponent implements OnInit {
     private _loadJsonDataService: SeedDataService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
     private _matrixDbDataService: SeedDataMatrixService,
-    private _applicationStateService: ApplicationControllerService,
-    private _userInputService: UserInputService
+    private _applicationStateService: ApplicationControllerService
   ) {
   }
 
@@ -54,14 +53,14 @@ export class MatrixComponent implements OnInit {
   click(trackingKey: string, value: string) {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
 
-    this._userInputService.setUserInput(trackingKey, value);
+    UserInputSingleton.getInstance().setUserInput(trackingKey, value);
   }
 
   calculateValidatiodCSS(curMatrixElement: MatrixElement) {
     let cssClass = '';
 
     if (this.showValidation) {
-      let userInput: UserInput = this._userInputService.getUserInput(curMatrixElement.tracking_key);
+      let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(curMatrixElement.tracking_key);
       let storedValue = userInput ? userInput.storedValue : '';
       let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
 

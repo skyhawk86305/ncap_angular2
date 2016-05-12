@@ -4,13 +4,13 @@ import { Question } from '../../app/types/question';
 import { UserInput } from  '../../app/types/user-input';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
-import { UserInputService } from '../../app/services/user-input.service';
+import { UserInputSingleton } from '../../app/services/user-input.singleton';
 
 @Injectable()
 export class ValidationService {
 
     constructor(
-        private _userInputService: UserInputService
+        
     ) {
     }
 
@@ -29,7 +29,7 @@ export class ValidationService {
         if (question.validation_type === ValidationType.optional || question.validation_type === ValidationType.notApplicable) {
             result = ValidationResult.ok;
         } else {
-            let userInput: UserInput = this._userInputService.getUserInput(question.tracking_key);
+            let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(question.tracking_key);
             let storedValue = userInput ? userInput.storedValue : '';
             let populated = storedValue !== null && storedValue.length > 0;
             if (populated) {
@@ -51,7 +51,7 @@ export class ValidationService {
         if (matrixElement.validation_type === ValidationType.optional) {
             result = ValidationResult.ok;
         } else {
-            let userInput: UserInput = this._userInputService.getUserInput(matrixElement.tracking_key);
+            let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(matrixElement.tracking_key);
             let storedValue = userInput ? userInput.storedValue : '';
             let populated = storedValue !== null && storedValue.length > 0;
             if (populated) {

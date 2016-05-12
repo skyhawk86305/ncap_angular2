@@ -7,7 +7,7 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInputSingleton } from '../../../app/services/user-input.singleton';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 
 import { UserInput } from  '../../../app/types/user-input';
@@ -32,8 +32,7 @@ export class CheckboxesComponent implements OnInit {
 
   constructor(
     protected _applicationStateService: ApplicationControllerService,
-    private _loadDomainOptionsService: LoadDomainOptionsService,
-    private _userInputService: UserInputService
+    private _loadDomainOptionsService: LoadDomainOptionsService
   ) {
   }
 
@@ -89,7 +88,7 @@ export class CheckboxesComponent implements OnInit {
 
   private _loadUserInput() {
     // Is there previous entered User Input we need to load
-    let userInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
+    let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(this.question.tracking_key);
     if (userInput) {
       let serializedUserInput = userInput.storedValue;
       // Split the string into an array
@@ -108,14 +107,14 @@ export class CheckboxesComponent implements OnInit {
   private _saveUserInput() {
     let arrayOfUserInput: string[] = this._userInputCheckedBoxes.map((i) => { return i.toString(); }); // Convert to an array of strings
 
-    // Store selected values in UserInputService
+    // Store selected values in UserInputSingleton
     if (this.userInputOther) {
       arrayOfUserInput.push('other:');
       arrayOfUserInput.push(this.userInputOther);
     }
 
     // Save using the User Input Service
-    this._userInputService.setUserInput(this.question.tracking_key, arrayOfUserInput.join(','));
+    UserInputSingleton.getInstance().setUserInput(this.question.tracking_key, arrayOfUserInput.join(','));
   }
 
 }

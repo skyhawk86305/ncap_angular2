@@ -1,6 +1,6 @@
 import { Component, Input } from 'angular2/core';
 import { Question } from       '../../../app/types/question';
-import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInputSingleton } from '../../../app/services/user-input.singleton';
 
 @Component({
   selector: 'section-title',
@@ -11,7 +11,7 @@ export class SectionTitleComponent {
   @Input() question: Question;
 
   constructor(
-    private _userInputService: UserInputService
+    
   ) {
   }
 

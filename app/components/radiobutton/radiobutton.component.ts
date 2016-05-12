@@ -6,7 +6,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputService } from '../../../app/services/user-input.service';
+import { UserInputSingleton } from '../../../app/services/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
@@ -29,8 +29,7 @@ export class RadioButtonComponent implements OnInit {
   constructor(
     protected _applicationStateService: ApplicationControllerService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
-    private _loadJsonDataService: SeedDataService,
-    private _userInputService: UserInputService
+    private _loadJsonDataService: SeedDataService
   ) {
   }
 
@@ -44,7 +43,7 @@ export class RadioButtonComponent implements OnInit {
 
   click(trackingKey: string, id: number) {
     //console.log('Clicked ' + trackingKey + ' with id ' + id);
-    this._userInputService.setUserInput(trackingKey, id.toString());
+    UserInputSingleton.getInstance().setUserInput(trackingKey, id.toString());
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
@@ -53,7 +52,7 @@ export class RadioButtonComponent implements OnInit {
 
   private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = this._userInputService.getUserInput(this.question.tracking_key);
+    let previousUserInput: UserInput = UserInputSingleton.getInstance().getUserInput(this.question.tracking_key);
     if (previousUserInput) {
       this.previouslySelectedStoredValue = +previousUserInput.storedValue;
     }
