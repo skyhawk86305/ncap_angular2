@@ -1,12 +1,7 @@
 import { Injectable } from 'angular2/core';
-
-import { Question } from       '../../app/types/question';
-import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
-
 import { MatrixElement } from '../../app/types/matrix-element';
 import { SeedDataService } from '../../app/services/seed-data.service';
-
 // The data
 import { sre } from '../../app/seed-data/sre';
 import { subu } from '../../app/seed-data/subu';
@@ -14,9 +9,6 @@ import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
 // Types to hold the data
 import { Sre } from '../../app/types/database-data/sre';
 import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
-
-import _ from 'lodash';
-
 
 @Injectable()
 export class SeedDataMatrixService {

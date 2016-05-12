@@ -1,8 +1,6 @@
 import { Injectable } from 'angular2/core';
-
 import { DomainOption } from  '../../app/types/domain-option';
 import { domain } from '../../app/seed-data/domain';
-
 import _ from 'lodash';
 
 @Injectable()

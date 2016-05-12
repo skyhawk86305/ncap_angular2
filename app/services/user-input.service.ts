@@ -1,5 +1,4 @@
 import { Injectable } from 'angular2/core';
-
 import { UserInput } from  '../../app/types/user-input';
 
 @Injectable()

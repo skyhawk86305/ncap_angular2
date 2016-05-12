@@ -1,31 +1,25 @@
 import { Injectable } from 'angular2/core';
 import {Http} from 'angular2/http';
-
 import { MatrixElement } from '../../app/types/matrix-element';
 import { Question } from       '../../app/types/question';
-
 import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
-
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
-
 import { ApplicationStateService } from '../../app/services/application-state.service';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { ValidationService } from './validation.service';
-
 // The data
 import { sre } from '../../app/seed-data/sre';
 import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
 // Types to hold the data
 import { Sre } from '../../app/types/database-data/sre';
 import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
-
 import _ from 'lodash';
 
 @Injectable()
 export class SeedDataService {
     BASE_PATH = 'app/seed-data/raw-json/';
 
-    private _questionsNew: Question[] = new Array<Question>();
+    private _questions: Question[] = new Array<Question>();
     private _matrixElements: MatrixElement[];
 
     constructor(
@@ -144,20 +138,10 @@ export class SeedDataService {
                     }
 
 
-                    this._questionsNew.push(question);
+                    this._questions.push(question);
 
-                    // let displayValue = (surveyRenderingElement.txt_parent_lang1 ?
-                    //     surveyRenderingElement.txt_parent_lang1 : surveyRenderingElement.tracking_key);
-                    // let summary: string = curPage.seq_pag_id + '.' + curElement.sre_sort_order + ' ' +
-                    //     ' =' + FormatCategory[surveyRenderingElement.sre_foca_id] + '= ' +
-                    //     ' =' + AnswerCategory[surveyRenderingElement.sre_anca_id] + '= ' +
-                    //     displayValue + ' ';
-                    // this.responseData.push(summary);
-                    // console.log(summary);
                 } else {
-                    // log this
                     let summary: string = "*** No SRE found for obj_uid " + curElement.seq_sre_uid;
-                    //this.responseData.push(summary);
                     console.log(summary);
                 }
 
@@ -169,19 +153,12 @@ export class SeedDataService {
     }
 
     getAllQuestions() {
-        return this._questionsNew;
+        return this._questions;
     }
 
     getQuestionsForPage(page_Id: number) {
-        //return this._questions.filter(i => i.page_id === page_Id);
-        return this._questionsNew.filter(i => i.page_id === page_Id);
+        return this._questions.filter(i => i.page_id === page_Id);
     }
-
-    // getTooltipForId(id: number) {
-    //     return this.readJsonFilesPromiseAll().then(
-    //         data => data.tooltips.find(i => i.id === id)
-    //         );
-    // }
 
     getMatrixElementsForQuestionId_OldVersion(question_id: number): MatrixElement[] {
         return this._matrixElements.filter(i => i.seq_sre_uid === question_id);
