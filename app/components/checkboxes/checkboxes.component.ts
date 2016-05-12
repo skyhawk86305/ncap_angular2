@@ -88,7 +88,7 @@ export class CheckboxesComponent implements OnInit {
 
   private _loadUserInput() {
     // Is there previous entered User Input we need to load
-    let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(this.question.tracking_key);
+    let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.question.tracking_key);
     if (userInput) {
       let serializedUserInput = userInput.storedValue;
       // Split the string into an array
@@ -114,7 +114,7 @@ export class CheckboxesComponent implements OnInit {
     }
 
     // Save using the User Input Service
-    UserInputSingleton.getInstance().setUserInput(this.question.tracking_key, arrayOfUserInput.join(','));
+    UserInputSingleton.instanceOf().setUserInput(this.question.tracking_key, arrayOfUserInput.join(','));
   }
 
 }

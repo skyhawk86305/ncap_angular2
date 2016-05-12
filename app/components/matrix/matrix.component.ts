@@ -53,14 +53,14 @@ export class MatrixComponent implements OnInit {
   click(trackingKey: string, value: string) {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
 
-    UserInputSingleton.getInstance().setUserInput(trackingKey, value);
+    UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
   }
 
   calculateValidatiodCSS(curMatrixElement: MatrixElement) {
     let cssClass = '';
 
     if (this.showValidation) {
-      let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(curMatrixElement.tracking_key);
+      let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key);
       let storedValue = userInput ? userInput.storedValue : '';
       let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
 

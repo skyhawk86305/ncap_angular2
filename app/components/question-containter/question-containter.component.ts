@@ -43,7 +43,7 @@ export class QuestionContainerComponent implements OnInit {
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId) {
-            UserInputSingleton.getInstance().defaultUserInput(USERINPUT_SCENARIO1);
+            UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO1);
             this._applicationStateService.setPageNumber(3);
         }
 
@@ -55,6 +55,13 @@ export class QuestionContainerComponent implements OnInit {
         this.getQuestionsToRender();
 
         this._applicationStateService.registerQuestionContainerComponent(this);
+    }
+
+    // xyzzy5 - try to remove dependance on this method + trigger when necssary from a Singleton
+    runValidationOnCurrentQuestions(): ValidationResult {
+        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()
+            .validateQuestionArray(this.questions);
+        return aggregateResult;
     }
 
     getQuestionsToRender() {
@@ -71,8 +78,7 @@ export class QuestionContainerComponent implements OnInit {
     next() {
         console.log('Clicked next on pageController');
 
-        let aggregateResult: ValidationResult = ValidationSingleton.getInstance()
-            .validateQuestionArray(this.questions);
+        let aggregateResult = this.runValidationOnCurrentQuestions()
 
         // Requested Validation is only asked for up to three times 
         if (aggregateResult === ValidationResult.requested) {

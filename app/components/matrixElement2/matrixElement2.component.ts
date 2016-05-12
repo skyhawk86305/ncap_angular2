@@ -49,17 +49,17 @@ export class MatrixElement2Component implements OnInit {
 
   radioButtonClick(trackingKey: string, id: number) {
     console.log('Clicked ' + trackingKey + ' with value ' + id);
-    UserInputSingleton.getInstance().setUserInput(trackingKey, id.toString());
+    UserInputSingleton.instanceOf().setUserInput(trackingKey, id.toString());
   }
 
   textChanged(trackingKey: string) {
     console.log('Changed ' + trackingKey + ' with value ' + this.textInput);
-    UserInputSingleton.getInstance().setUserInput(trackingKey, this.textInput);
+    UserInputSingleton.instanceOf().setUserInput(trackingKey, this.textInput);
   }
 
   private syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = UserInputSingleton.getInstance().getUserInput(this.matrixElement.tracking_key);
+    let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.matrixElement.tracking_key);
 
     if (previousUserInput) {
       switch (this.matrixElement.answer_category) {

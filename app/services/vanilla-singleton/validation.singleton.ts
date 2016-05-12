@@ -9,7 +9,7 @@ export class ValidationSingleton {
 
     private static _instance: ValidationSingleton = new ValidationSingleton();
 
-    public static getInstance(): ValidationSingleton {
+    public static instanceOf(): ValidationSingleton {
         return ValidationSingleton._instance;
     }
 
@@ -24,7 +24,7 @@ export class ValidationSingleton {
         let aggregateResult: ValidationResult = ValidationResult.ok;
 
         for (let curQuestion of questions) {
-            ValidationSingleton.getInstance().validateQuestion(curQuestion);
+            ValidationSingleton.instanceOf().validateQuestion(curQuestion);
 
             if (curQuestion.validation_result > aggregateResult) {
                 aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on teh int values of the enum
@@ -49,7 +49,7 @@ export class ValidationSingleton {
         if (question.validation_type === ValidationType.optional || question.validation_type === ValidationType.notApplicable) {
             result = ValidationResult.ok;
         } else {
-            let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(question.tracking_key);
+            let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(question.tracking_key);
             let storedValue = userInput ? userInput.storedValue : '';
             let populated = storedValue !== null && storedValue.length > 0;
             if (populated) {
@@ -71,7 +71,7 @@ export class ValidationSingleton {
         if (matrixElement.validation_type === ValidationType.optional) {
             result = ValidationResult.ok;
         } else {
-            let userInput: UserInput = UserInputSingleton.getInstance().getUserInput(matrixElement.tracking_key);
+            let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(matrixElement.tracking_key);
             let storedValue = userInput ? userInput.storedValue : '';
             let populated = storedValue !== null && storedValue.length > 0;
             if (populated) {

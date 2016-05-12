@@ -23,7 +23,7 @@ export class ConsentComponent implements OnInit {
     }
 
     ngOnInit() {
-        let previousUserInput: UserInput = UserInputSingleton.getInstance().getUserInput(this.question.tracking_key);
+        let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.question.tracking_key);
         if (previousUserInput) {
             this.hasConsent = (previousUserInput.storedValue === 'Y');
         }
@@ -31,7 +31,7 @@ export class ConsentComponent implements OnInit {
 
     next() {
         console.log('Clicked next');
-        UserInputSingleton.getInstance().setUserInput('initial_consent', 'Y');
+        UserInputSingleton.instanceOf().setUserInput('initial_consent', 'Y');
         this._applicationStateService.next();
     }
 

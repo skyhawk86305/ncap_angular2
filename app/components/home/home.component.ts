@@ -34,7 +34,7 @@ export class HomeComponent {
     }
 
     private setTrackingValueAndMovePage(selectedOption: string) {
-        UserInputSingleton.getInstance().setUserInput('respondent_type', selectedOption);
+        UserInputSingleton.instanceOf().setUserInput('respondent_type', selectedOption);
         this._applicationStateService.next();
     }
 }

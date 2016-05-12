@@ -43,7 +43,7 @@ export class RadioButtonComponent implements OnInit {
 
   click(trackingKey: string, id: number) {
     //console.log('Clicked ' + trackingKey + ' with id ' + id);
-    UserInputSingleton.getInstance().setUserInput(trackingKey, id.toString());
+    UserInputSingleton.instanceOf().setUserInput(trackingKey, id.toString());
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
@@ -52,7 +52,7 @@ export class RadioButtonComponent implements OnInit {
 
   private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = UserInputSingleton.getInstance().getUserInput(this.question.tracking_key);
+    let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.question.tracking_key);
     if (previousUserInput) {
       this.previouslySelectedStoredValue = +previousUserInput.storedValue;
     }

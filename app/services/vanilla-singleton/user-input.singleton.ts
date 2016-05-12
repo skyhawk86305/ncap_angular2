@@ -5,7 +5,7 @@ export class UserInputSingleton {
     private static _instance: UserInputSingleton = new UserInputSingleton();
     private _UserInput: UserInput[] = new Array<UserInput>();
 
-    public static getInstance(): UserInputSingleton {
+    public static instanceOf(): UserInputSingleton {
         return UserInputSingleton._instance;
     }
 

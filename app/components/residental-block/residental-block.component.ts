@@ -33,7 +33,7 @@ export class ResidentalBlockComponent {
   //ngAfterViewChecked() {
   ngAfterContentInit() {
     // Hack to stop the weird error showing in Diagnostics mode
-    setTimeout(() => UserInputSingleton.getInstance().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
+    setTimeout(() => UserInputSingleton.instanceOf().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
   }
 
 }

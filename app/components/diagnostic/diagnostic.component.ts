@@ -18,7 +18,7 @@ export class DiagnosticComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.data = UserInputSingleton.getInstance().getAllUserInput();
+        this.data = UserInputSingleton.instanceOf().getAllUserInput();
         this.currentPage = this._applicationStateService.getCurrentPageNumber();
     }
 }
