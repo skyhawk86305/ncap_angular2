@@ -1,5 +1,5 @@
 import { Injectable } from 'angular2/core';
-import { UserInputSingleton } from '../../app/services/user-input.singleton';
+import { UserInputSingleton } from '../../app/services/vanilla-singleton/user-input.singleton';
 import { QuestionContainerComponent } from  '../../app/components/question-containter/question-containter.component';
 
 @Injectable()

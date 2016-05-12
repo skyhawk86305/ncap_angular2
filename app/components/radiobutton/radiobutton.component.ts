@@ -6,7 +6,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputSingleton } from '../../../app/services/user-input.singleton';
+import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 

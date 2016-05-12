@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
 
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputSingleton } from '../../../app/services/user-input.singleton';
+import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 
 import { Question } from       '../../../app/types/question';
 

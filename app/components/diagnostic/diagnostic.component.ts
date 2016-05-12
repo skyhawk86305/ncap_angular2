@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputSingleton } from '../../../app/services/user-input.singleton';
+import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({

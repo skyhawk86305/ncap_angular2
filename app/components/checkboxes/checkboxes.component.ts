@@ -7,7 +7,7 @@ import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
-import { UserInputSingleton } from '../../../app/services/user-input.singleton';
+import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 
 import { UserInput } from  '../../../app/types/user-input';

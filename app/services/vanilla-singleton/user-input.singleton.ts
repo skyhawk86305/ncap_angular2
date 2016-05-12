@@ -1,4 +1,4 @@
-import { UserInput } from  '../../app/types/user-input';
+import { UserInput } from  '../../../app/types/user-input';
 
 export class UserInputSingleton {
 

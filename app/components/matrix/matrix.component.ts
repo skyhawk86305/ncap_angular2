@@ -10,7 +10,7 @@ import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { ApplicationControllerService } from '../../../app/services/application-controller.service';
 import { SeedDataMatrixService } from '../../../app/services/seed-data-matrix.service';
-import { UserInputSingleton } from '../../../app/services/user-input.singleton';
+import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';

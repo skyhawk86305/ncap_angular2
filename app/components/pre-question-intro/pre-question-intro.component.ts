@@ -3,7 +3,7 @@ import { Component, Input } from 'angular2/core';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 
-import { UserInputSingleton } from '../../../app/services/user-input.singleton';
+import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 
 @Component({
   selector: 'pre-question-intro',
