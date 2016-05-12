@@ -13,8 +13,6 @@ export class TooltipComponent implements OnInit {
   tooltipText: string;
 
   ngOnInit() {
-
-    this.tooltipText = tooltip[this.toolTipId - 1].definition;
+    this.tooltipText = tooltip.find((i) => i.id === this.toolTipId).definition;
   }
-
 }
