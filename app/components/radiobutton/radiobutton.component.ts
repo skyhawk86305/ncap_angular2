@@ -3,7 +3,7 @@ import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
+import { LoadDomainOptionsSingleton } from '../../../app/services/vanilla-singleton/load-domain-options.singleton';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
@@ -27,13 +27,8 @@ export class RadioButtonComponent implements OnInit {
   // Permit view to use the enumeration type
   ValidationResult = ValidationResult;
 
-  constructor(
-    private _loadDomainOptionsService: LoadDomainOptionsService
-  ) {
-  }
-
   ngOnInit() {
-    this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
 
     ComponentHelperClass.addTooltipIfNecessary(this.question);
 

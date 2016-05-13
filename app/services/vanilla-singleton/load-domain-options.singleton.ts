@@ -1,10 +1,10 @@
-import { Injectable } from 'angular2/core';
-import { DomainOption } from  '../../app/types/domain-option';
-import { domain } from '../../app/seed-data/domain';
+import { DomainOption } from  '../../../app/types/domain-option';
+import { domain } from '../../../app/seed-data/domain';
 import _ from 'lodash';
 
-@Injectable()
-export class LoadDomainOptionsService {
+export class LoadDomainOptionsSingleton {
+
+    private static _instance: LoadDomainOptionsSingleton = new LoadDomainOptionsSingleton();
     BASE_PATH = 'app/seed-data/raw-json/';
 
     private allDomainOptions: Array<DomainOption[]> = new Array<DomainOption[]>();
@@ -23,10 +23,17 @@ export class LoadDomainOptionsService {
         }
     }
 
-    constructor(
-    ) {
-        // Should only fire once since Services are Singletons in Angular2
+    public static instanceOf(): LoadDomainOptionsSingleton {
+        return LoadDomainOptionsSingleton._instance;
+    }
+
+    constructor() {
+        if (LoadDomainOptionsSingleton._instance) {
+            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
+        }
+        // Will only fire once since this class is a Singleton
         this.populateWithData();
+        LoadDomainOptionsSingleton._instance = this;
     }
 
     public getDomainOptions(id: number): DomainOption[] {
@@ -51,7 +58,7 @@ export class LoadDomainOptionsService {
                     newDomainOption.displayed_value = newDomainOption.displayed_value.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
                     newDomainOption.displayed_value = newDomainOption.displayed_value.replace('<tooltip id="', '--TT').replace('"/>', '--'); // xyzzy
 
-                    LoadDomainOptionsService.addTooltipIfNecessary(newDomainOption);
+                    LoadDomainOptionsSingleton.addTooltipIfNecessary(newDomainOption);
 
                 }
                 newDomainOption.sort_order = curEntry.sort_order;

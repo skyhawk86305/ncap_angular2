@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
-import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
+import { LoadDomainOptionsSingleton } from '../../../app/services/vanilla-singleton/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInput } from  '../../../app/types/user-input';
@@ -24,11 +24,6 @@ export class DropdownComponent implements OnInit {
   // Permit view to use the enumeration type
   ValidationResult = ValidationResult;
 
-  constructor(
-    private _loadDomainOptionsService: LoadDomainOptionsService
-  ) {
-  }
-
   ngOnInit() {
     ComponentHelperClass.addTooltipIfNecessary(this.question);
     this._syncToPreviouslyEnteredData();
@@ -45,7 +40,7 @@ export class DropdownComponent implements OnInit {
   }
 
   private _getDomainOptions(id: number, addPleaseSelect: boolean): DomainOption[] {
-    let result = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+    let result = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
 
     if (addPleaseSelect) {
       // Copy the array as we are going to modify it

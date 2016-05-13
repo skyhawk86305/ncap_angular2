@@ -6,7 +6,7 @@ import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
-import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
+import { LoadDomainOptionsSingleton } from '../../../app/services/vanilla-singleton/load-domain-options.singleton';
 import { SeedDataMatrixService } from '../../../app/services/seed-data-matrix.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
@@ -33,7 +33,6 @@ export class MatrixComponent implements OnInit {
   AnswerCategory = AnswerCategory;
 
   constructor(
-    private _loadDomainOptionsService: LoadDomainOptionsService,
     private _matrixDbDataService: SeedDataMatrixService
   ) {
   }
@@ -42,7 +41,7 @@ export class MatrixComponent implements OnInit {
     ComponentHelperClass.addTooltipIfNecessary(this.question);
 
     this.matrixElements = this._matrixDbDataService.getMatrixElementsForSreUid(this.question.obj_uid);
-    this.domainOptions = this._loadDomainOptionsService.getDomainOptions(this.question.parent_sre_dona_id);
+    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     this.xyzzy = this.matrixElements[0].answer_category;
   }
 
