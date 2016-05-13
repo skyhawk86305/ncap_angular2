@@ -3,9 +3,9 @@ import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { LoadDomainOptionsSingleton } from '../../../app/services/vanilla-singleton/load-domain-options.singleton';
-import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
-import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
+import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
+import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
+import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 

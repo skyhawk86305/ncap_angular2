@@ -1,4 +1,4 @@
-import { QuestionContainerComponent } from  '../../../app/components/question-containter/question-containter.component';
+import { QuestionContainerComponent } from  '../../app/components/question-containter/question-containter.component';
 
 export class NavigationSingleton {
 

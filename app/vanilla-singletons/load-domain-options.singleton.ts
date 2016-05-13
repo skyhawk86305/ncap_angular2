@@ -1,5 +1,5 @@
-import { DomainOption } from  '../../../app/types/domain-option';
-import { domain } from '../../../app/seed-data/domain';
+import { DomainOption } from  '../../app/types/domain-option';
+import { domain } from '../../app/seed-data/domain';
 import _ from 'lodash';
 
 export class LoadDomainOptionsSingleton {

@@ -1,15 +1,15 @@
-import { MatrixElement } from '../../../app/types/matrix-element';
-import { Question } from       '../../../app/types/question';
-import { MATRIX_ELEMENTS_JSON } from '../../../app/seed-data/matrix-elements.json';
-import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
-import { ValidationType } from '../../../app/types/enums/validation-type.enum';
+import { MatrixElement } from '../../app/types/matrix-element';
+import { Question } from       '../../app/types/question';
+import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
+import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
+import { ValidationType } from '../../app/types/enums/validation-type.enum';
 // The data
-import { sre } from '../../../app/seed-data/sre';
-import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
+import { sre } from '../../app/seed-data/sre';
+import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
 // Types to hold the data
-import { Sre } from '../../../app/types/database-data/sre';
-import { SurveyPageSre } from '../../../app/types/database-data/survey-page-sre';
-import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
+import { Sre } from '../../app/types/database-data/sre';
+import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
+import { NavigationSingleton } from '../../app/vanilla-singletons/navigation.singleton';
 import _ from 'lodash';
 
 export class SeedDataSingleton {

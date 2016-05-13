@@ -3,8 +3,8 @@ import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
-import { LoadDomainOptionsSingleton } from '../../../app/services/vanilla-singleton/load-domain-options.singleton';
-import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
+import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
+import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
 

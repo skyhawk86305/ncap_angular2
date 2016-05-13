@@ -1,9 +1,9 @@
-import { MatrixElement } from '../../../app/types/matrix-element';
-import { Question } from '../../../app/types/question';
-import { UserInput } from  '../../../app/types/user-input';
-import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
-import { ValidationType } from '../../../app/types/enums/validation-type.enum';
-import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
+import { MatrixElement } from '../../app/types/matrix-element';
+import { Question } from '../../app/types/question';
+import { UserInput } from  '../../app/types/user-input';
+import { ValidationResult } from '../../app/types/enums/validation-result.enum';
+import { ValidationType } from '../../app/types/enums/validation-type.enum';
+import { UserInputSingleton } from '../../app/vanilla-singletons/user-input.singleton';
 
 export class ValidationSingleton {
 

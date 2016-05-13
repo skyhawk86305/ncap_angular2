@@ -6,10 +6,10 @@ import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 import { Question } from  '../../../app/types/question';
-import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
-import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
-import { SeedDataSingleton } from '../../../app/services/vanilla-singleton/seed-data.singleton';
-import { ValidationSingleton } from '../../../app/services/vanilla-singleton/validation.singleton';
+import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
+import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
+import { SeedDataSingleton } from '../../../app/vanilla-singletons/seed-data.singleton';
+import { ValidationSingleton } from '../../../app/vanilla-singletons/validation.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
 
 @Component({

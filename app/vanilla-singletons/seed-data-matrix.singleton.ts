@@ -1,8 +1,8 @@
-import { ValidationType } from '../../../app/types/enums/validation-type.enum';
-import { MatrixElement } from '../../../app/types/matrix-element';
+import { ValidationType } from '../../app/types/enums/validation-type.enum';
+import { MatrixElement } from '../../app/types/matrix-element';
 // The data
-import { sre } from '../../../app/seed-data/sre';
-import { subu } from '../../../app/seed-data/subu';
+import { sre } from '../../app/seed-data/sre';
+import { subu } from '../../app/seed-data/subu';
 
 export class SeedDataMatrixSingleton {
 

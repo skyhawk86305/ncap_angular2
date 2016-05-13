@@ -1,6 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
-import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
-import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
+import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
+import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({

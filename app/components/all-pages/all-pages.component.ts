@@ -2,7 +2,7 @@ import { Component, OnInit } from 'angular2/core';
 import { Question } from  '../../../app/types/question';
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
-import { SeedDataSingleton } from '../../../app/services/vanilla-singleton/seed-data.singleton';
+import { SeedDataSingleton } from '../../../app/vanilla-singletons/seed-data.singleton';
 
 @Component({
     selector: 'page',
