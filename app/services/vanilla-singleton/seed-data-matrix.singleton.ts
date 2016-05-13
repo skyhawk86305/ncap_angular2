@@ -1,20 +1,27 @@
-import { Injectable } from 'angular2/core';
-import { ValidationType } from '../../app/types/enums/validation-type.enum';
-import { MatrixElement } from '../../app/types/matrix-element';
+import { ValidationType } from '../../../app/types/enums/validation-type.enum';
+import { MatrixElement } from '../../../app/types/matrix-element';
 // The data
-import { sre } from '../../app/seed-data/sre';
-import { subu } from '../../app/seed-data/subu';
-import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
-// Types to hold the data
-import { Sre } from '../../app/types/database-data/sre';
-import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
+import { sre } from '../../../app/seed-data/sre';
+import { subu } from '../../../app/seed-data/subu';
 
-@Injectable()
-export class SeedDataMatrixService {
+export class SeedDataMatrixSingleton {
+
+    private static _instance: SeedDataMatrixSingleton = new SeedDataMatrixSingleton();
+
+    public static instanceOf(): SeedDataMatrixSingleton {
+        return SeedDataMatrixSingleton._instance;
+    }
+
+    constructor() {
+        if (SeedDataMatrixSingleton._instance) {
+            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
+        }
+        SeedDataMatrixSingleton._instance = this;
+    }
 
     getMatrixElementsForSreUid(seq_sre_uid: number): MatrixElement[] {
         let subuRows = subu.filter((i) => i.seq_sre_uid === seq_sre_uid);
-        subuRows = subuRows.sort((n1,n2)=> n1.subu_sort_order - n2.subu_sort_order);
+        subuRows = subuRows.sort((n1, n2) => n1.subu_sort_order - n2.subu_sort_order);
 
         // Join subuRows to sre to get the matric element data
         let result: MatrixElement[] = new Array<MatrixElement>();
