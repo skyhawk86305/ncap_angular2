@@ -3,7 +3,6 @@ import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
@@ -29,8 +28,7 @@ export class RadioButtonComponent implements OnInit {
   ValidationResult = ValidationResult;
 
   constructor(
-    private _loadDomainOptionsService: LoadDomainOptionsService,
-    private _loadJsonDataService: SeedDataService
+    private _loadDomainOptionsService: LoadDomainOptionsService
   ) {
   }
 

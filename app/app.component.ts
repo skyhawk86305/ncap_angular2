@@ -3,7 +3,6 @@ import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular
 import { QuestionContainerComponent } from './components/question-containter/question-containter.component';
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
-import { SeedDataService } from '../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../app/services/load-domain-options.service';
 import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service';
 
@@ -16,7 +15,6 @@ import { SeedDataMatrixService } from '../app/services/seed-data-matrix.service'
   providers: [
     ROUTER_PROVIDERS,
     Route,
-    SeedDataService,
     LoadDomainOptionsService,
     SeedDataMatrixService
   ]

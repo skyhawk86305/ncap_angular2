@@ -1,32 +1,37 @@
-import { Injectable } from 'angular2/core';
-import {Http} from 'angular2/http';
-import { MatrixElement } from '../../app/types/matrix-element';
-import { Question } from       '../../app/types/question';
-import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
-import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
-import { ValidationType } from '../../app/types/enums/validation-type.enum';
+import { MatrixElement } from '../../../app/types/matrix-element';
+import { Question } from       '../../../app/types/question';
+import { MATRIX_ELEMENTS_JSON } from '../../../app/seed-data/matrix-elements.json';
+import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
+import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 // The data
-import { sre } from '../../app/seed-data/sre';
-import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
+import { sre } from '../../../app/seed-data/sre';
+import { surveyPageSre } from '../../../app/seed-data/survey-page-sre';
 // Types to hold the data
-import { Sre } from '../../app/types/database-data/sre';
-import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
-import { NavigationSingleton } from '../../app/services/vanilla-singleton/navigation.singleton';
+import { Sre } from '../../../app/types/database-data/sre';
+import { SurveyPageSre } from '../../../app/types/database-data/survey-page-sre';
+import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import _ from 'lodash';
 
-@Injectable()
-export class SeedDataService {
-    BASE_PATH = 'app/seed-data/raw-json/';
+export class SeedDataSingleton {
 
+    private static _instance: SeedDataSingleton = new SeedDataSingleton();
     private _questions: Question[] = new Array<Question>();
     private _matrixElements: MatrixElement[];
 
-    constructor(
-        private http: Http
-    ) {
-        // Should only fire once since Services are Singletons in Angular2
-        this.init();
+    public static instanceOf(): SeedDataSingleton {
+        return SeedDataSingleton._instance;
     }
+
+    constructor() {
+        if (SeedDataSingleton._instance) {
+            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
+        }
+        // Will fire once since this class is a Singleton
+        this.init();
+
+        SeedDataSingleton._instance = this;
+    }
+
 
     init() {
         // Old code
@@ -138,7 +143,7 @@ export class SeedDataService {
                     this._questions.push(question);
 
                 } else {
-                    let summary: string = "*** No SRE found for obj_uid " + curElement.seq_sre_uid;
+                    let summary: string = '*** No SRE found for obj_uid ' + curElement.seq_sre_uid;
                     console.log(summary);
                 }
 
@@ -161,4 +166,6 @@ export class SeedDataService {
         return this._matrixElements.filter(i => i.seq_sre_uid === question_id);
     }
 
+
 }
+

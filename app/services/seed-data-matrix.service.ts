@@ -1,7 +1,6 @@
 import { Injectable } from 'angular2/core';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { MatrixElement } from '../../app/types/matrix-element';
-import { SeedDataService } from '../../app/services/seed-data.service';
 // The data
 import { sre } from '../../app/seed-data/sre';
 import { subu } from '../../app/seed-data/subu';
@@ -12,11 +11,6 @@ import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
 
 @Injectable()
 export class SeedDataMatrixService {
-
-    constructor(
-        private _loadJsonDataService: SeedDataService
-    ) {
-    }
 
     getMatrixElementsForSreUid(seq_sre_uid: number): MatrixElement[] {
         let subuRows = subu.filter((i) => i.seq_sre_uid === seq_sre_uid);

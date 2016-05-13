@@ -6,9 +6,9 @@ import { HomeComponent } from '../home/home.component';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 import { Question } from  '../../../app/types/question';
-import { SeedDataService } from '../../../app/services/seed-data.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
+import { SeedDataSingleton } from '../../../app/services/vanilla-singleton/seed-data.singleton';
 import { ValidationSingleton } from '../../../app/services/vanilla-singleton/validation.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
 
@@ -26,7 +26,6 @@ export class QuestionContainerComponent implements OnInit {
     public NavigationSingleton = NavigationSingleton;
 
     constructor(
-        private _loadJsonDataService: SeedDataService,
         private _routeParams: RouteParams
     ) {
     }
@@ -68,8 +67,7 @@ export class QuestionContainerComponent implements OnInit {
     getQuestionsToRender() {
         // filter the quesions to the page we are concerned with
         let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
-        console.log("fff pageId " + pageId);
-        this.questions = this._loadJsonDataService.getQuestionsForPage(pageId);
+        this.questions = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
 
         // Todo: hack, improve later
         this.renderButtons = pageId > 2;

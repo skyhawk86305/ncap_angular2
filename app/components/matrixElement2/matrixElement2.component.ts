@@ -3,7 +3,6 @@ import { DomainOption } from   '../../../app/types/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
-import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
@@ -27,7 +26,6 @@ export class MatrixElement2Component implements OnInit {
   AnswerCategory = AnswerCategory;
 
   constructor(
-    private _loadJsonDataService: SeedDataService,
     private _loadDomainOptionsService: LoadDomainOptionsService
   ) {
   }

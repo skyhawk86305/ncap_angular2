@@ -6,7 +6,6 @@ import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
-import { SeedDataService } from '../../../app/services/seed-data.service';
 import { LoadDomainOptionsService } from '../../../app/services/load-domain-options.service';
 import { SeedDataMatrixService } from '../../../app/services/seed-data-matrix.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
@@ -34,7 +33,6 @@ export class MatrixComponent implements OnInit {
   AnswerCategory = AnswerCategory;
 
   constructor(
-    private _loadJsonDataService: SeedDataService,
     private _loadDomainOptionsService: LoadDomainOptionsService,
     private _matrixDbDataService: SeedDataMatrixService
   ) {

@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { SeedDataService } from '../../../app/services/seed-data.service';
 import { UserInputSingleton } from '../../../app/services/vanilla-singleton/user-input.singleton';
 import { NavigationSingleton } from '../../../app/services/vanilla-singleton/navigation.singleton';
 import { Question } from       '../../../app/types/question';
@@ -13,11 +12,6 @@ export class ConsentComponent implements OnInit {
 
     @Input() question: Question;
     hasConsent: boolean = false;
-
-    constructor(
-        private _loadJsonDataService: SeedDataService
-    ) {
-    }
 
     ngOnInit() {
         let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.question.tracking_key);
