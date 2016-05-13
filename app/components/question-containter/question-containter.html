@@ -1,8 +1,8 @@
 <!-- Progress Bar -->
 <div *ngIf="NavigationSingleton.instanceOf().getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
-  <div class="progress-bar" role="progressbar" aria-valuenow="NavigationSingleton.instanceOf().getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [style]="'width: ' + NavigationSingleton.instanceOf().getPercentageComplete() + '%;'">  
-NavigationSingleton.instanceOf().getPercentageComplete() }}% (pg 
-NavigationSingleton.instanceOf().getCurrentPageNumber() }})
+  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="NavigationSingleton.instanceOf().getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + NavigationSingleton.instanceOf().getPercentageComplete() + '%;'">  
+{{ NavigationSingleton.instanceOf().getPercentageComplete() }}% (pg 
+{{ NavigationSingleton.instanceOf().getCurrentPageNumber() }})
   </div>
 </div>
 
