@@ -3,7 +3,6 @@ import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular
 import { QuestionContainerComponent } from './components/question-containter/question-containter.component';
 import { AllPagesComponent } from './components/all-pages/all-pages.component';
 import { TestPageComponent } from './components/test-page/test-page.component';
-import { SeedDataMatrixSingleton } from '../app/vanilla-singletons/seed-data-matrix.singleton';
 
 @Component({
   selector: 'the-app',
@@ -13,8 +12,7 @@ import { SeedDataMatrixSingleton } from '../app/vanilla-singletons/seed-data-mat
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    Route,
-    SeedDataMatrixSingleton
+    Route
   ]
 })
 @RouteConfig([

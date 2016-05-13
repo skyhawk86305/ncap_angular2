@@ -1,6 +1,4 @@
-import { MatrixElement } from '../../app/types/matrix-element';
 import { Question } from       '../../app/types/question';
-import { MATRIX_ELEMENTS_JSON } from '../../app/seed-data/matrix-elements.json';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 // The data
@@ -9,14 +7,12 @@ import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
 // Types to hold the data
 import { Sre } from '../../app/types/database-data/sre';
 import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
-import { NavigationSingleton } from '../../app/vanilla-singletons/navigation.singleton';
 import _ from 'lodash';
 
 export class SeedDataSingleton {
 
     private static _instance: SeedDataSingleton = new SeedDataSingleton();
     private _questions: Question[] = new Array<Question>();
-    private _matrixElements: MatrixElement[];
 
     public static instanceOf(): SeedDataSingleton {
         return SeedDataSingleton._instance;
@@ -35,7 +31,7 @@ export class SeedDataSingleton {
 
     init() {
         // Old code
-        this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
+        //this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
 
         // New code -using data from Database
         // find unique page numbers + order by page id
@@ -43,7 +39,7 @@ export class SeedDataSingleton {
         sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
         let sortedSurveyRenderingElements = _.orderBy(sre, 'sre_sort_order');
 
-        NavigationSingleton.instanceOf().setTotalPages(sortedUniquePages.length);
+        //NavigationSingleton.instanceOf().sortedUniquePages.length);
 
         // Combine into one Question class for the app to use
 
@@ -162,9 +158,9 @@ export class SeedDataSingleton {
         return this._questions.filter(i => i.page_id === page_Id);
     }
 
-    getMatrixElementsForQuestionId_OldVersion(question_id: number): MatrixElement[] {
-        return this._matrixElements.filter(i => i.seq_sre_uid === question_id);
-    }
+    // getMatrixElementsForQuestionId_OldVersion(question_id: number): MatrixElement[] {
+    //     return this._matrixElements.filter(i => i.seq_sre_uid === question_id);
+    // }
 
 
 }

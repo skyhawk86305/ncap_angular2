@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-
 import { HomeComponent } from '../home/home.component';
 import { ConsentComponent } from '../consent/consent.component';
 import { CheckboxesComponent } from '../checkboxes/checkboxes.component';
@@ -11,7 +10,6 @@ import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
 import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
-
 import { Question } from  '../../../app/types/question';
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../app/types/enums/format-category.enum';
@@ -49,7 +47,5 @@ export class NgSwitchQuestionComponent implements OnInit {
         if (this.question.sre_anca_id === AnswerCategory.Consent && this.question.sort_order > 1) {
             this.question.sre_anca_id = AnswerCategory.Skip;
         }
-
-
-    }
+   }
 }

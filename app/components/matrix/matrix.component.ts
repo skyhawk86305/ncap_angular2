@@ -32,15 +32,10 @@ export class MatrixComponent implements OnInit {
   // Permit view to use the enumeration type
   AnswerCategory = AnswerCategory;
 
-  constructor(
-    private _matrixDbDataService: SeedDataMatrixSingleton
-  ) {
-  }
-
   ngOnInit() {
     ComponentHelperClass.addTooltipIfNecessary(this.question);
 
-    this.matrixElements = this._matrixDbDataService.getMatrixElementsForSreUid(this.question.obj_uid);
+    this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.obj_uid);
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     this.xyzzy = this.matrixElements[0].answer_category;
   }

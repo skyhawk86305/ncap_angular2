@@ -12,7 +12,6 @@ import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
   selector: '[matrixElement2]',
   templateUrl: 'app/components/matrixElement2/matrixElement2.html',
   directives: [TooltipComponent]
-
 })
 export class MatrixElement2Component implements OnInit {
 
