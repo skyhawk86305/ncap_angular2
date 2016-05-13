@@ -105,13 +105,4 @@ export class QuestionContainerComponent implements OnInit {
         }
 
     }
-
-    back() {
-        console.log('Clicked back');
-        NavigationSingleton.instanceOf().back();
-    }
-
-    exit() {
-        console.log('Clicked exit');
-    }
 }
