@@ -8,7 +8,7 @@ export class NavigationSingleton {
 
     private static _instance: NavigationSingleton = new NavigationSingleton();
 
-    private _QuestionContainerComponent: QuestionContainerComponent;
+    private _observer: QuestionContainerComponent;
     private _currentPageNumber: number = 1;
     private _totalPages: number = 40; // xyzzy5
 
@@ -72,8 +72,8 @@ export class NavigationSingleton {
         // If validation was ok, then let go to the next page
         if (aggregateResult === ValidationResult.ok) {
             this._currentPageNumber++;
-            if (this._QuestionContainerComponent) {
-                this._QuestionContainerComponent.refreshFromModel();
+            if (this._observer) {
+                this._observer.oberservedDataChanged();
             }
         } else {
             console.log('Aggregate validation is ' + ValidationResult[aggregateResult]);
@@ -83,15 +83,10 @@ export class NavigationSingleton {
 
     back() {
         this._currentPageNumber--;
-        if (this._QuestionContainerComponent) {
-            this._QuestionContainerComponent.refreshFromModel();
+        if (this._observer) {
+            this._observer.oberservedDataChanged();
         }
     }
-
-    // Methods to notify the Page Controller of changes
-    registerQuestionContainerComponent(QuestionContainerComponent: QuestionContainerComponent) {
-        this._QuestionContainerComponent = QuestionContainerComponent;
-    };
 
     requestPageControlRevalidate() {
         // xyzzy This may not be efficient. Maybe tune later?
@@ -118,4 +113,11 @@ export class NavigationSingleton {
 
         return percentage;
     }
+
+    // Observer registration
+    // xyzzy change to use vanilla interface
+    registerAsObserver(QuestionContainerComponent: QuestionContainerComponent) {
+        this._observer = QuestionContainerComponent;
+    };
+
 }

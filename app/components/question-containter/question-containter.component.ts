@@ -1,18 +1,16 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
-import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
-import { HomeComponent } from '../home/home.component';
-import { TooltipComponent } from '../tooltip/tooltip.component';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
+import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
 import { Question } from  '../../../app/types/question';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
+import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
 
 @Component({
     selector: 'page',
     templateUrl: 'app/components/question-containter/question-containter.html',
-    directives: [NgSwitchQuestionComponent, HomeComponent, TooltipComponent, DiagnosticComponent]
+    directives: [NgSwitchQuestionComponent, DiagnosticComponent]
 })
 export class QuestionContainerComponent implements OnInit {
 
@@ -28,8 +26,17 @@ export class QuestionContainerComponent implements OnInit {
     }
 
     ngOnInit() {
-        // xyzzy Move to a Scenario service
-        console.log('** in ngOnInit for pageController');
+        this.handleUrlParameters()
+        NavigationSingleton.instanceOf().registerAsObserver(this);
+        this.oberservedDataChanged();
+    }
+
+    public oberservedDataChanged() {
+        this.questions = NavigationSingleton.instanceOf().getQuestionsToRender();
+    }
+
+    private handleUrlParameters() {
+        // xyzzy Move all below to a Scenario service/ singleton
 
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
@@ -48,13 +55,5 @@ export class QuestionContainerComponent implements OnInit {
             // enable Diag mode
             NavigationSingleton.instanceOf().diagMode = true;
         }
-
-        NavigationSingleton.instanceOf().registerQuestionContainerComponent(this);
-        this.refreshFromModel();
     }
-
-    public refreshFromModel() {
-        this.questions = NavigationSingleton.instanceOf().getQuestionsToRender();
-    }
-
 }
