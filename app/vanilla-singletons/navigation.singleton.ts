@@ -30,22 +30,28 @@ export class NavigationSingleton {
     // xyzzy5 - try to remove dependance on this method + trigger when necssary from a Singleton
     runValidationOnCurrentQuestions(): ValidationResult {
         let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()
-            .validateQuestionArray(NavigationSingleton.instanceOf().getQuestionsToRender());
+            .validateQuestionArray(NavigationSingleton.instanceOf().getQuestionsToRender().questions);
         return aggregateResult;
     }
 
-    getQuestionsToRender(): Question[] {
+    getQuestionsToRender(): { questions: Question[], pageVisible: boolean } {
         // filter the quesions to the page we are concerned with
         let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
-        let result: Question[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
+        let questions: Question[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
+
+        let atLeastOneVisibleQuestion = false;
+
+        for (let curQuestion of questions) {
+            atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible();
+        }
 
         // Todo: hack, improve later
         // xyzzy5
         //this.renderButtons = pageId > 2;
 
-        console.log('qu count is ' + result.length);
+        console.log('qu count is ' + questions.length);
 
-        return result;
+        return { questions: questions, pageVisible: atLeastOneVisibleQuestion };
     }
 
     // Navigation
@@ -60,11 +66,11 @@ export class NavigationSingleton {
             NavigationSingleton.instanceOf().shownRequestedValidation++;
         }
 
-        let curQuesions: Question[] = NavigationSingleton.instanceOf().getQuestionsToRender()
+        let curQuestions: Question[] = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
 
         // If validation should be show update show_validation property in the questions
         if (aggregateResult !== ValidationResult.ok) {
-            for (let curQuestion of curQuesions) {
+            for (let curQuestion of curQuestions) {
                 curQuestion.show_validation = true;
             }
         }
@@ -72,6 +78,16 @@ export class NavigationSingleton {
         // If validation was ok, then let go to the next page
         if (aggregateResult === ValidationResult.ok) {
             this._currentPageNumber++;
+
+            // Verify page is has at leat one visible Question            
+            let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+            let avoideInfinteLoopCount = 0; // avoid an infinite loop
+            while (avoideInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
+                console.log('Skipping page ' + this._currentPageNumber + ' becuase there are no visible questions');
+                this._currentPageNumber++;
+                questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+            }
+
             if (this._observer) {
                 this._observer.oberservedDataChanged();
             }
@@ -83,6 +99,16 @@ export class NavigationSingleton {
 
     back() {
         this._currentPageNumber--;
+
+        // Verify page is has at leat one visible Question            
+        let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+        let avoideInfinteLoopCount = 0;
+        while (avoideInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
+            console.log('Skipping page ' + this._currentPageNumber + ' becuase there are no visible questions');
+            this._currentPageNumber--;
+            questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+        }
+
         if (this._observer) {
             this._observer.oberservedDataChanged();
         }
@@ -119,5 +145,4 @@ export class NavigationSingleton {
     registerAsObserver(QuestionContainerComponent: QuestionContainerComponent) {
         this._observer = QuestionContainerComponent;
     };
-
 }

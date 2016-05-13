@@ -38,5 +38,10 @@ export class Question {
   // Below not populated from JSON file
   validation_result: ValidationResult;
   show_validation: boolean;
-  toolTipId: number; // xyzzy Temp property to get Tooltips partially working 
+  toolTipId: number; // xyzzy Temp property to get Tooltips partially working
+
+  visible(): boolean {
+    let result = this.sre_anca_id !== AnswerCategory.Skip;
+    return result;
+  }
 }

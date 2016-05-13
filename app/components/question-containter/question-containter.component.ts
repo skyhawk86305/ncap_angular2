@@ -32,7 +32,7 @@ export class QuestionContainerComponent implements OnInit {
     }
 
     public oberservedDataChanged() {
-        this.questions = NavigationSingleton.instanceOf().getQuestionsToRender();
+        this.questions = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
     }
 
     private handleUrlParameters() {
