@@ -2,8 +2,9 @@
 <div>
     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required">
         <span class="ng-scope">
-            <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sort_order}} - </span> {{question.question_text}}
+            <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sort_order}} - </span>
         </span>
+        <span [innerHTML]='question.question_text'></span>
         <tooltip *ngIf="questionToolTipId>0" [toolTipId]="questionToolTipId"></tooltip>
     </div>
 </div>
