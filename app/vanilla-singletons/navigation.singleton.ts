@@ -7,13 +7,10 @@ import { ValidationSingleton } from '../../app/vanilla-singletons/validation.sin
 export class NavigationSingleton {
 
     private static _instance: NavigationSingleton = new NavigationSingleton();
-
-    private _observer: QuestionContainerComponent;
+    public diagMode = false; // Is the app in Diagnostic Mode?
+    public shownRequestedValidation: number = 0; // We only show 'Requested Validation' message three times
     private _currentPageNumber: number = 1;
-
-    // xyzzy5 these should not stay here 
-    public diagMode: boolean = false;
-    shownRequestedValidation: number = 0;
+    private _observer: QuestionContainerComponent; // We could use an interface instead of coupling to the class' type
 
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
@@ -23,14 +20,14 @@ export class NavigationSingleton {
         NavigationSingleton._instance = this;
     }
 
-    // xyzzy5 - try to remove dependance on this method + trigger when necssary from a Singleton
+    // xyzzy5 - try to remove dependence on this method + trigger when necssary from a Singleton
     runValidationOnCurrentQuestions(): ValidationResult {
         let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()
             .validateQuestionArray(NavigationSingleton.instanceOf().getQuestionsToRender().questions);
         return aggregateResult;
     }
 
-    getQuestionsToRender(): { questions: Question[], pageVisible: boolean } {
+    getQuestionsToRender(): { questions: Question[], pageVisible: boolean, renderButtons: boolean } {
         // filter the quesions to the page we are concerned with
         let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
         let questions: Question[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
@@ -41,13 +38,9 @@ export class NavigationSingleton {
             atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible();
         }
 
-        // Todo: hack, improve later
-        // xyzzy5
-        //this.renderButtons = pageId > 2;
-
         console.log('qu count is ' + questions.length);
 
-        return { questions: questions, pageVisible: atLeastOneVisibleQuestion };
+        return { questions: questions, pageVisible: atLeastOneVisibleQuestion, renderButtons: pageId > 2 };
     }
 
     // Navigation
@@ -133,8 +126,7 @@ export class NavigationSingleton {
         return percentage;
     }
 
-    // Observer registration
-    // xyzzy change to use vanilla interface
+    // Observer registration. We could change to use a vanilla interface
     registerAsObserver(QuestionContainerComponent: QuestionContainerComponent) {
         this._observer = QuestionContainerComponent;
     };
