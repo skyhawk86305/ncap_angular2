@@ -16,11 +16,12 @@ export class SeedDataMatrixSingleton {
         SeedDataMatrixSingleton._instance = this;
     }
 
+    // henry_db_related - the node app should pre-compute all these
     getMatrixElementsForSreUid(seq_sre_uid: number): MatrixElement[] {
         let subuRows = subu.filter((i) => i.seq_sre_uid === seq_sre_uid);
         subuRows = subuRows.sort((n1, n2) => n1.subu_sort_order - n2.subu_sort_order);
 
-        // Join subuRows to sre to get the matric element data
+        // Join subuRows to sre to get the matrix element data
         let result: MatrixElement[] = new Array<MatrixElement>();
         for (let curSubuRow of subuRows) {
             // Find sre row
