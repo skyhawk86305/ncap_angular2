@@ -5,7 +5,6 @@ import _ from 'lodash';
 export class LoadDomainOptionsSingleton {
 
     private static _instance: LoadDomainOptionsSingleton = new LoadDomainOptionsSingleton();
-    BASE_PATH = 'app/seed-data/raw-json/';
 
     private allDomainOptions: Array<DomainOption[]> = new Array<DomainOption[]>();
 
@@ -29,7 +28,7 @@ export class LoadDomainOptionsSingleton {
 
     constructor() {
         // Will only fire once since this class is a Singleton
-        this.populateWithData();
+        this.initializeData();
         LoadDomainOptionsSingleton._instance = this;
     }
 
@@ -37,7 +36,7 @@ export class LoadDomainOptionsSingleton {
         return this.allDomainOptions[id];
     }
 
-    private populateWithData() {
+    private initializeData() {
         // Get unique ids
         let sortedDomains = _.orderBy(domain, 'id');
         let sortedUniqueDomains = _.sortedUniqBy(sortedDomains, 'id');
@@ -59,7 +58,7 @@ export class LoadDomainOptionsSingleton {
 
                 }
                 newDomainOption.sort_order = curEntry.sort_order;
-                newDomainOption.stored_value = curEntry.name.toString(); //xyzzy
+                newDomainOption.stored_value = curEntry.name.toString(); // xyzzy
                 newDomainOptions.push(newDomainOption);
             }
 
