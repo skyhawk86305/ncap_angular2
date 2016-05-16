@@ -20,15 +20,16 @@ export class NavigationSingleton {
         NavigationSingleton._instance = this;
     }
 
-    // xyzzy5 - try to remove dependence on this method + trigger when necssary from a Singleton
+    // xyzzy5 - try to remove dependence on this method + trigger when necessary from a Singleton
     runValidationOnCurrentQuestions(): ValidationResult {
+        let questionsToValidate = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
         let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()
-            .validateQuestionArray(NavigationSingleton.instanceOf().getQuestionsToRender().questions);
+            .validateQuestionArray(questionsToValidate);
         return aggregateResult;
     }
 
     getQuestionsToRender(): { questions: Question[], pageVisible: boolean, renderButtons: boolean } {
-        // filter the quesions to the page we are concerned with
+        // Find questions for current page
         let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
         let questions: Question[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
 
@@ -38,8 +39,6 @@ export class NavigationSingleton {
             atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible();
         }
 
-        console.log('qu count is ' + questions.length);
-
         return { questions: questions, pageVisible: atLeastOneVisibleQuestion, renderButtons: pageId > 2 };
     }
 
@@ -47,7 +46,7 @@ export class NavigationSingleton {
     next() {
         let aggregateResult = this.runValidationOnCurrentQuestions();
 
-        // Requested Validation is only asked for up to three times 
+        // Requested Validation message is only shown three times 
         if (aggregateResult === ValidationResult.requested) {
             if (NavigationSingleton.instanceOf().shownRequestedValidation >= 3) {
                 aggregateResult = ValidationResult.ok;
@@ -55,24 +54,23 @@ export class NavigationSingleton {
             NavigationSingleton.instanceOf().shownRequestedValidation++;
         }
 
-        let curQuestions: Question[] = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
-
-        // If validation should be show update show_validation property in the questions
+        // If validation should be shown update show_validation property in the questions
         if (aggregateResult !== ValidationResult.ok) {
+            let curQuestions: Question[] = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
             for (let curQuestion of curQuestions) {
                 curQuestion.show_validation = true;
             }
         }
 
-        // If validation was ok, then let go to the next page
+        // If validation was ok, then go to the next page
         if (aggregateResult === ValidationResult.ok) {
             this._currentPageNumber++;
 
             // Verify page is has at leat one visible Question            
             let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
-            let avoideInfinteLoopCount = 0; // avoid an infinite loop
-            while (avoideInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
-                console.log('Skipping page ' + this._currentPageNumber + ' becuase there are no visible questions');
+            let avoidInfinteLoopCount = 0; // avoid an infinite loop
+            while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
+                console.log('Skipping page ' + this._currentPageNumber + ' because there are no visible questions');
                 this._currentPageNumber++;
                 questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
             }
@@ -91,9 +89,9 @@ export class NavigationSingleton {
 
         // Verify page is has at leat one visible Question            
         let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
-        let avoideInfinteLoopCount = 0;
-        while (avoideInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
-            console.log('Skipping page ' + this._currentPageNumber + ' becuase there are no visible questions');
+        let avoidInfinteLoopCount = 0;
+        while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
+            console.log('Skipping page ' + this._currentPageNumber + ' because there are no visible questions');
             this._currentPageNumber--;
             questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
         }
@@ -104,17 +102,15 @@ export class NavigationSingleton {
     }
 
     requestPageControlRevalidate() {
-        // xyzzy This may not be efficient. Maybe tune later?
+        // xyzzy This may not be efficient. Tune later?
         NavigationSingleton.instanceOf().runValidationOnCurrentQuestions();
     }
 
-    // Current page, percentage compelte etc
     getCurrentPageNumber() {
         return this._currentPageNumber;
     }
 
     setPageNumber(pageNumber: number) {
-        console.log('** App State Service: setPageNumber ' + pageNumber);
         this._currentPageNumber = pageNumber;
     }
 
