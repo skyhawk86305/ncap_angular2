@@ -35,10 +35,8 @@ export class UserInputSingleton {
         userInputEntry.storedValue = enteredValue;
     }
 
-    // Used to set User Input data to a known state
+    // Used to set User Input data to a known state (for testing purposes)
     defaultUserInput(data: UserInput[]) {
         this._UserInput = data;
     }
 }
-
-
