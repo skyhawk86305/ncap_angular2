@@ -10,7 +10,6 @@ export class NavigationSingleton {
 
     private _observer: QuestionContainerComponent;
     private _currentPageNumber: number = 1;
-    private _totalPages: number = 40; // xyzzy5
 
     // xyzzy5 these should not stay here 
     public diagMode: boolean = false;
@@ -126,12 +125,9 @@ export class NavigationSingleton {
         this._currentPageNumber = pageNumber;
     }
 
-    setTotalPages(totalPages: number) {
-        this._totalPages = totalPages;
-    }
-
     getPercentageComplete() {
-        let percentage: number = (this._currentPageNumber / this._totalPages) * 100;
+        let totalPages = SeedDataSingleton.instanceOf().totalPages;
+        let percentage: number = (this._currentPageNumber / totalPages) * 100;
         percentage = Math.round(percentage);
 
         return percentage;

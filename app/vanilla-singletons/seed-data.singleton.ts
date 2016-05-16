@@ -13,6 +13,7 @@ export class SeedDataSingleton {
 
     private static _instance: SeedDataSingleton = new SeedDataSingleton();
     private _questions: Question[] = new Array<Question>();
+    public totalPages = -1;
 
     public static instanceOf(): SeedDataSingleton {
         return SeedDataSingleton._instance;
@@ -25,10 +26,19 @@ export class SeedDataSingleton {
         SeedDataSingleton._instance = this;
     }
 
+    getAllQuestions() {
+        return this._questions;
+    }
+
+    getQuestionsForPage(page_Id: number) {
+        return this._questions.filter(i => i.page_id === page_Id);
+    }
+
     private preProcessData() {
         // Find unique page numbers + order by page id
         let sortedUniquePages = _.orderBy(surveyPageSre, 'page_sort_order');
         sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
+        this.totalPages = sortedUniquePages.length;
         let sortedSurveyRenderingElements = _.orderBy(sre, 'sre_sort_order');
 
         //NavigationSingleton.instanceOf().sortedUniquePages.length);
@@ -137,13 +147,5 @@ export class SeedDataSingleton {
 
             }
         }
-    }
-
-    getAllQuestions() {
-        return this._questions;
-    }
-
-    getQuestionsForPage(page_Id: number) {
-        return this._questions.filter(i => i.page_id === page_Id);
     }
 }
