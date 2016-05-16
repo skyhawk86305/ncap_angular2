@@ -5,7 +5,7 @@ import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-quest
 import { Question } from  '../../../app/types/question';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data-for-debugging/json-user-input-senario1';
+import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data/json-for-debugging/user-input-senario1';
 
 @Component({
     selector: 'page',
