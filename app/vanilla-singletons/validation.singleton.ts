@@ -14,9 +14,6 @@ export class ValidationSingleton {
     }
 
     constructor() {
-        if (ValidationSingleton._instance) {
-            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
-        }
         ValidationSingleton._instance = this;
     }
 

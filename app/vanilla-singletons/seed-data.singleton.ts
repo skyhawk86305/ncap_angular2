@@ -19,22 +19,14 @@ export class SeedDataSingleton {
     }
 
     constructor() {
-        if (SeedDataSingleton._instance) {
-            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
-        }
         // Will fire once since this class is a Singleton
-        this.init();
+        this.preProcessData();
 
         SeedDataSingleton._instance = this;
     }
 
-
-    init() {
-        // Old code
-        //this._matrixElements = JSON.parse(MATRIX_ELEMENTS_JSON);
-
-        // New code -using data from Database
-        // find unique page numbers + order by page id
+    private preProcessData() {
+        // Find unique page numbers + order by page id
         let sortedUniquePages = _.orderBy(surveyPageSre, 'page_sort_order');
         sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
         let sortedSurveyRenderingElements = _.orderBy(sre, 'sre_sort_order');
@@ -145,9 +137,6 @@ export class SeedDataSingleton {
 
             }
         }
-
-
-
     }
 
     getAllQuestions() {
@@ -157,11 +146,4 @@ export class SeedDataSingleton {
     getQuestionsForPage(page_Id: number) {
         return this._questions.filter(i => i.page_id === page_Id);
     }
-
-    // getMatrixElementsForQuestionId_OldVersion(question_id: number): MatrixElement[] {
-    //     return this._matrixElements.filter(i => i.seq_sre_uid === question_id);
-    // }
-
-
 }
-

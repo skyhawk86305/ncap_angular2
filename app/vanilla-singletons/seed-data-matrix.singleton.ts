@@ -13,9 +13,6 @@ export class SeedDataMatrixSingleton {
     }
 
     constructor() {
-        if (SeedDataMatrixSingleton._instance) {
-            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
-        }
         SeedDataMatrixSingleton._instance = this;
     }
 

@@ -28,9 +28,6 @@ export class LoadDomainOptionsSingleton {
     }
 
     constructor() {
-        if (LoadDomainOptionsSingleton._instance) {
-            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
-        }
         // Will only fire once since this class is a Singleton
         this.populateWithData();
         LoadDomainOptionsSingleton._instance = this;

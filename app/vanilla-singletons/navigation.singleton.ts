@@ -21,9 +21,6 @@ export class NavigationSingleton {
     }
 
     constructor() {
-        if (NavigationSingleton._instance) {
-            throw new Error('Error: Instantiation failed: Use .instanceOf() instead of new.');
-        }
         NavigationSingleton._instance = this;
     }
 
