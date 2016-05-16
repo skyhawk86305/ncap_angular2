@@ -12,17 +12,17 @@ import _ from 'lodash';
 export class SeedDataSingleton {
 
     private static _instance: SeedDataSingleton = new SeedDataSingleton();
-    private _questions: Question[] = new Array<Question>();
+
     public totalPages = -1;
+    private _questions: Question[] = new Array<Question>();
 
     public static instanceOf(): SeedDataSingleton {
         return SeedDataSingleton._instance;
     }
 
     constructor() {
-        // Will fire once since this class is a Singleton
+        // Will fire only once since this class is a Singleton
         this.preProcessData();
-
         SeedDataSingleton._instance = this;
     }
 
@@ -34,6 +34,9 @@ export class SeedDataSingleton {
         return this._questions.filter(i => i.page_id === page_Id);
     }
 
+    // henry_db_related
+    // This whole method should be relocated to the Node app which pre-processes data
+    // Output one Question class for the app to use?
     private preProcessData() {
         // Find unique page numbers + order by page id
         let sortedUniquePages = _.orderBy(surveyPageSre, 'page_sort_order');
@@ -41,21 +44,16 @@ export class SeedDataSingleton {
         this.totalPages = sortedUniquePages.length;
         let sortedSurveyRenderingElements = _.orderBy(sre, 'sre_sort_order');
 
-        //NavigationSingleton.instanceOf().sortedUniquePages.length);
-
-        // Combine into one Question class for the app to use
-
         // Loop through pages, showing question number + text
         for (let curPage of sortedUniquePages as SurveyPageSre[]) {
 
             // Get all elements for this page (these elements link to Sre for the rest of the data)
             let curPageElements = _.filter(surveyPageSre, { page_sort_order: curPage.page_sort_order });
-            let pageNumber = 1; // xyzzy5
-            let elementNumber = 1; // xyzzy5
+            let pageNumber = 1; // xyzzy
+            let elementNumber = 1; // xyzzy
 
             for (let curElement of curPageElements as SurveyPageSre[]) {
                 let surveyRenderingElement: Sre = _.find(sortedSurveyRenderingElements, { obj_uid: curElement.seq_sre_uid });
-
 
                 if (surveyRenderingElement) {
                     let question: Question = new Question();
@@ -85,17 +83,15 @@ export class SeedDataSingleton {
 
                     question.page_id = curPage.seq_pag_id;
 
-                    // xyzzy Temp hacks to get this data rendering
-
-                    //question.sre_foca_id =
+                    // xyzzy Temp hacks to deal with data we don't need
                     if (question.page_id === 1) {
-                        question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Home : AnswerCategory.Skip;
+                        question.sre_anca_id = pageNumber === 1 ? AnswerCategory.Home : AnswerCategory.Skip;
                     }
                     if (question.page_id === 2) {
-                        question.sre_anca_id = pageNumber = 1 ? AnswerCategory.Consent : AnswerCategory.Skip;
+                        question.sre_anca_id = pageNumber === 1 ? AnswerCategory.Consent : AnswerCategory.Skip;
                     }
 
-                    question.question_text = surveyRenderingElement.txt_parent_lang1;
+                    question.question_text = surveyRenderingElement.txt_parent_lang1; // xyzzy - need to handle all three categories 
                     question.question_text = question.question_text.replace(/\\'/g, '\''); // xyzzy fix text like child\'s etc
                     question.question_text = question.question_text.replace('<tooltip id="', '--TT').replace('"/>', '--'); // xyzzy
 
@@ -116,7 +112,7 @@ export class SeedDataSingleton {
                             question.validation_type = ValidationType.notApplicable;
                     }
 
-                    // xyzzy5 Detect Residental Block
+                    // Detect Residental Block
                     if (question.question_text.indexOf('Where did the child live from birth through') > -1) {
                         question.sre_anca_id = AnswerCategory.ResidentialBlock;
                     }
@@ -136,7 +132,6 @@ export class SeedDataSingleton {
                     if (question.question_text.indexOf('This row is to be deleted') > -1) {
                         question.sre_anca_id = AnswerCategory.Skip;
                     }
-
 
                     this._questions.push(question);
 
