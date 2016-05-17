@@ -1,4 +1,6 @@
-export var subuQuestionDict = {
+import { SubuQuestions } from '../types/database-data/subu-questions';
+
+export var subuQuestionDict: SubuQuestions = {
     "1200": [
         {
             "sre_parent_id": "1200",
