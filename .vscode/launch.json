@@ -13,7 +13,7 @@
 			"name": "Launch localhost with sourcemaps",
 			"type": "chrome",
 			"request": "launch",
-			"url": "http://localhost:3000/5?diag",
+			"url": "http://localhost:3000/3",
 			"sourceMaps": true,
 			"webRoot": "${workspaceRoot}"
 		},

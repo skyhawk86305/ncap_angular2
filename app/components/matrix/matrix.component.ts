@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
-import { Question } from       '../../../app/types/question';
+import { PageQuestion } from '../../../app/types/database-data/page-question';
 import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
@@ -20,7 +20,7 @@ import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
 })
 export class MatrixComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   @Input() showValidation: boolean = true;
   domainOptions: DomainOption[];
   questionToolTipId: number = -1;
@@ -35,7 +35,7 @@ export class MatrixComponent implements OnInit {
   ngOnInit() {
     ComponentHelperClass.addTooltipIfNecessary(this.question);
 
-    this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.obj_uid);
+    this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.sre_uid);
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     this.xyzzy = this.matrixElements[0].answer_category;
   }

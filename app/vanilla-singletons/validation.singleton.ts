@@ -1,5 +1,5 @@
 import { MatrixElement } from '../../app/types/matrix-element';
-import { Question } from '../../app/types/question';
+import { PageQuestion } from '../../app/types/database-data/page-question';
 import { UserInput } from  '../../app/types/user-input';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
@@ -17,7 +17,7 @@ export class ValidationSingleton {
         ValidationSingleton._instance = this;
     }
 
-    validateQuestionArray(questions: Question[]): ValidationResult {
+    validateQuestionArray(questions: PageQuestion[]): ValidationResult {
         let aggregateResult: ValidationResult = ValidationResult.ok;
 
         for (let curQuestion of questions) {
@@ -40,7 +40,7 @@ export class ValidationSingleton {
         return result;
     }
 
-    validateQuestion(question: Question) {
+    validateQuestion(question: PageQuestion) {
         let result: ValidationResult;
 
         if (question.validation_type === ValidationType.optional || question.validation_type === ValidationType.notApplicable) {

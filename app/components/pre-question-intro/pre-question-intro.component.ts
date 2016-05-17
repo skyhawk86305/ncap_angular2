@@ -1,8 +1,6 @@
 import { Component, Input } from 'angular2/core';
-
 import { DomainOption } from   '../../../app/types/domain-option';
-import { Question } from       '../../../app/types/question';
-
+import { PageQuestion } from '../../../app/types/database-data/page-question';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 
 @Component({
@@ -11,7 +9,7 @@ import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.s
 })
 export class PreQuestionIntroComponent {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
 
   constructor(
     

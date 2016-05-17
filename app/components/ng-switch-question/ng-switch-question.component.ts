@@ -10,7 +10,7 @@ import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
 import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
-import { Question } from  '../../../app/types/question';
+import { PageQuestion } from '../../../app/types/database-data/page-question';
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 
@@ -24,7 +24,7 @@ import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 })
 export class NgSwitchQuestionComponent implements OnInit {
 
-    @Input() question: Question;
+    @Input() question: PageQuestion;
 
     renderingAnswerComponent: boolean = false;
 
@@ -40,11 +40,11 @@ export class NgSwitchQuestionComponent implements OnInit {
                 break;
         }
 
-        if (this.question.sre_anca_id === AnswerCategory.Home && this.question.sort_order > 1) {
+        if (this.question.sre_anca_id === AnswerCategory.Home && this.question.sre_sort_order > 1) {
             this.question.sre_anca_id = AnswerCategory.Skip;
         }
 
-        if (this.question.sre_anca_id === AnswerCategory.Consent && this.question.sort_order > 1) {
+        if (this.question.sre_anca_id === AnswerCategory.Consent && this.question.sre_sort_order > 1) {
             this.question.sre_anca_id = AnswerCategory.Skip;
         }
    }

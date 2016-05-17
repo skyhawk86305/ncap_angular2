@@ -3,7 +3,7 @@ import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../app/types/enums/format-category.enum';
 
-export class Question {
+export interface Question {
   obj_uid: number;
   block: string;
   parent_sre_disp_id: number;
@@ -36,12 +36,12 @@ export class Question {
   question_text: string;
 
   // Below not populated from JSON file
-  validation_result: ValidationResult;
-  show_validation: boolean;
-  toolTipId: number; // xyzzy Temp property to get Tooltips partially working
+  validation_result?: ValidationResult;
+  show_validation?: boolean;
+  toolTipId?: number; // xyzzy Temp property to get Tooltips partially working
 
-  visible(): boolean {
-    let result = this.sre_anca_id !== AnswerCategory.Skip;
-    return result;
-  }
+  // visible(): boolean {
+  //   let result = this.sre_anca_id !== AnswerCategory.Skip;
+  //   return result;
+  // }
 }

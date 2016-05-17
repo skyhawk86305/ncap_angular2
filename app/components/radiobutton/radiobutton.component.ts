@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
-import { Question } from       '../../../app/types/question';
+import { PageQuestion } from '../../../app/types/database-data/page-question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
@@ -17,7 +17,7 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 })
 export class RadioButtonComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
 
   domainOptions: DomainOption[];

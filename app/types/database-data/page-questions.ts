@@ -1,5 +1,5 @@
 import { PageQuestion } from './page-question';
 
-export class PageQuestions {
+export class SeedDataPageQuestions {
     [id: string]: Array<PageQuestion>;
 }

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/domain-option';
-import { Question } from       '../../../app/types/question';
+import { PageQuestion } from '../../../app/types/database-data/page-question';
 import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
@@ -16,7 +16,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 })
 export class DropdownComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
   domainOptions: DomainOption[];
   previouslySelectedStoredValue: string;

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { DomainOption } from   '../../../app/types/domain-option';
-import { Question } from       '../../../app/types/question';
+import { PageQuestion } from '../../../app/types/database-data/page-question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';
 import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
@@ -17,7 +17,7 @@ import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
 export class MatrixRowComponent implements OnInit {
 
   @Input() matrixElement: MatrixElement;
-  @Input('question') question: Question;
+  @Input('question') question: PageQuestion;
   domainOptions: DomainOption[] = new Array<DomainOption>();
   previouslySelectedRadioButton: number;
   textInput: string;

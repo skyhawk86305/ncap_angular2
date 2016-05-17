@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
-import { Question } from       '../../../app/types/question';
+import { PageQuestion } from '../../../app/types/database-data/page-question';
 import { UserInput } from  '../../../app/types/user-input';
 
 @Component({
@@ -10,7 +10,7 @@ import { UserInput } from  '../../../app/types/user-input';
 })
 export class ConsentComponent implements OnInit {
 
-    @Input() question: Question;
+    @Input() question: PageQuestion;
     hasConsent: boolean = false;
 
     ngOnInit() {
