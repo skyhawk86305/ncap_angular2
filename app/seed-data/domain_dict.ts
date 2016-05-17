@@ -1,3 +1,5 @@
+import { Domains } from '../types/database-data/domains';
+
 export var domainDict = {
     1: [
         {
@@ -73,7 +75,7 @@ export var domainDict = {
         {
             sort_order: 15,
             name: 15,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     2: [
@@ -155,7 +157,7 @@ export var domainDict = {
         {
             sort_order: 16,
             name: 16,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     3: [
@@ -274,7 +276,7 @@ export var domainDict = {
         {
             sort_order: 8,
             name: 8,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     5: [
@@ -506,7 +508,7 @@ export var domainDict = {
         {
             sort_order: 46,
             name: 46,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     6: [
@@ -533,7 +535,7 @@ export var domainDict = {
         {
             sort_order: 5,
             name: 5,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     7: [
@@ -610,7 +612,7 @@ export var domainDict = {
         {
             sort_order: 15,
             name: 15,
-            value: "Don\\'t know"
+            value: "Don't know"
         },
         {
             sort_order: 15,
@@ -632,7 +634,7 @@ export var domainDict = {
         {
             sort_order: 3,
             name: 3,
-            value: "Don\\'t know"
+            value: "Don't know"
         },
         {
             sort_order: 4,
@@ -666,22 +668,22 @@ export var domainDict = {
         {
             sort_order: 4,
             name: 4,
-            value: "Associate\\'s degree (including occupational or academic degrees)"
+            value: "Associate's degree (including occupational or academic degrees)"
         },
         {
             sort_order: 5,
             name: 5,
-            value: "Bachelor\\'s degree (BA, BS, AB, etc.)"
+            value: "Bachelor's degree (BA, BS, AB, etc.)"
         },
         {
             sort_order: 6,
             name: 6,
-            value: "Master\\'s degree, professional school degree, or doctorate degree (MA, MS, MSW, MENG, MD, DDC, JD, PhD, ScD, EdD, etc.)"
+            value: "Master's degree, professional school degree, or doctorate degree (MA, MS, MSW, MENG, MD, DDC, JD, PhD, ScD, EdD, etc.)"
         },
         {
             sort_order: 7,
             name: 7,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     11: [
@@ -747,7 +749,7 @@ export var domainDict = {
         {
             sort_order: 6,
             name: 6,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     14: [
@@ -774,7 +776,7 @@ export var domainDict = {
         {
             sort_order: 5,
             name: 5,
-            value: "Don\\'t know"
+            value: "Don't know"
         },
         {
             sort_order: 6,
@@ -811,7 +813,7 @@ export var domainDict = {
         {
             sort_order: 6,
             name: 6,
-            value: "Don\\'t know"
+            value: "Don't know"
         },
         {
             sort_order: 7,
@@ -952,7 +954,7 @@ export var domainDict = {
         {
             sort_order: 6,
             name: 6,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     19: [
@@ -984,7 +986,7 @@ export var domainDict = {
         {
             sort_order: 6,
             name: 6,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     20: [
@@ -1041,7 +1043,7 @@ export var domainDict = {
         {
             sort_order: 11,
             name: 11,
-            value: "Teacher/teacher\\'s aid"
+            value: "Teacher/teacher's aid"
         },
         {
             sort_order: 12,
@@ -1475,7 +1477,7 @@ export var domainDict = {
         {
             sort_order: 4,
             name: 4,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     28: [
@@ -1537,7 +1539,7 @@ export var domainDict = {
         {
             sort_order: 12,
             name: 12,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     29: [
@@ -1566,7 +1568,7 @@ export var domainDict = {
         {
             sort_order: 3,
             name: 3,
-            value: "Don\\'t know"
+            value: "Don't know"
         }
     ],
     31: [
@@ -1583,7 +1585,7 @@ export var domainDict = {
         {
             sort_order: 3,
             name: 3,
-            value: "Don\\'t know"
+            value: "Don't know"
         },
         {
             sort_order: 4,
@@ -1605,7 +1607,7 @@ export var domainDict = {
         {
             sort_order: 3,
             name: 3,
-            value: "Don\\'t know"
+            value: "Don't know"
         },
         {
             sort_order: 4,
@@ -1627,7 +1629,7 @@ export var domainDict = {
         {
             sort_order: 3,
             name: 3,
-            value: "Don\\'t know"
+            value: "Don't know"
         },
         {
             sort_order: 4,
@@ -1637,7 +1639,7 @@ export var domainDict = {
         {
             sort_order: 5,
             name: 5,
-            value: "If yes, what was the child\\'s age when you first noticed this change in their development?"
+            value: "If yes, what was the child's age when you first noticed this change in their development?"
         }
     ],
     34: [
@@ -2222,7 +2224,7 @@ export var domainDict = {
         {
             sort_order: 1,
             name: 1,
-            value: "Want to work but can\\'t find a job"
+            value: "Want to work but can't find a job"
         },
         {
             sort_order: 2,
