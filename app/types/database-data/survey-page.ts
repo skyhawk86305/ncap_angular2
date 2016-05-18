@@ -1,5 +1,5 @@
 import { Page } from './page';
 
 export class SurveyPage {
-    [id: number]: Page[];
+    [id: string]: Page[];
 }

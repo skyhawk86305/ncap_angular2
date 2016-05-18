@@ -1,6 +1,4 @@
 export class Page {
-  constructor(
-    public page_id: number,
-    public page_sort_order: number
-  ) {}  
+            page_id: number;
+            page_sort_order: number;
 }

@@ -1,569 +1,2240 @@
-import { Domain } from '../types/database-data/domain';
 import { Domains } from '../types/database-data/domains';
 
-export var domain:Domains = {
+export var domainDict = {
     1: [
-        new Domain(1,1,'Less than 12 months' ) ,
-        new Domain(2,2,'12 months' ) ,
-        new Domain(3,3,'13 months' ) ,
-        new Domain(4,4,'14 months' ) ,
-        new Domain(5,5,'15 months' ) ,
-        new Domain(6,6,'16 months' ) ,
-        new Domain(7,7,'17 months' ) ,
-        new Domain(8,8,'18 months' ) ,
-        new Domain(9,9,'19 months' ) ,
-        new Domain(10,10,'20 months' ) ,
-        new Domain(11,11,'21 months' ) ,
-        new Domain(12,12,'22 months' ) ,
-        new Domain(13,13,'23 months' ) ,
-        new Domain(14,14,'2 years' ) ,
-        new Domain(15,15,'3 years' ) ,
-        new Domain(16,16,'4 years' ) ,
-        new Domain(17,17,'5 years' ) ,
-        new Domain(18,18,'6 years' ) ,
-        new Domain(19,19,'7 years' ) ,
-        new Domain(20,20,'8 years' ) ,
-        new Domain(21,21,'9 years' ) ,
-        new Domain(22,22,'10-12 years' ) ,
-        new Domain(23,23,'13-15 years' ) ,
-        new Domain(24,24,'16-18 years' ) ,
-        new Domain(25,25,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Less than 12 months"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "12-17 months"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "18-23 months"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "2 years"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "3 years"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "4 years"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "5 years"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "6 years"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "7 years"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "8 years"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "9 years"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "10-12 years"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "13-15 years"
+        },
+        {
+            sort_order: 14,
+            name: 14,
+            value: "16-17 years"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "Don't know"
+        }
     ],
     2: [
-        new Domain(1,1,'Less than 12 months' ) ,
-        new Domain(2,2,'12 months' ) ,
-        new Domain(3,3,'13 months' ) ,
-        new Domain(4,4,'14 months' ) ,
-        new Domain(5,5,'15 months' ) ,
-        new Domain(6,6,'16 months' ) ,
-        new Domain(7,7,'17 months' ) ,
-        new Domain(8,8,'18 months' ) ,
-        new Domain(9,9,'19 months' ) ,
-        new Domain(10,10,'20 months' ) ,
-        new Domain(11,11,'21 months' ) ,
-        new Domain(12,12,'22 months' ) ,
-        new Domain(13,13,'23 months' ) ,
-        new Domain(14,14,'2 years' ) ,
-        new Domain(15,15,'3 years' ) ,
-        new Domain(16,16,'4 years' ) ,
-        new Domain(17,17,'5 years' ) ,
-        new Domain(18,18,'6 years' ) ,
-        new Domain(19,19,'7 years' ) ,
-        new Domain(20,20,'8 years' ) ,
-        new Domain(21,21,'9 years' ) ,
-        new Domain(22,22,'10-12 years' ) ,
-        new Domain(23,23,'13-15 years' ) ,
-        new Domain(24,24,'16-18 years' ) ,
-        new Domain(25,25,'More than 18 years' ) ,
-        new Domain(26,26,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Less than 12 months"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "12-17 months"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "18-23 months"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "2 years"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "3 years"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "4 years"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "5 years"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "6 years"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "7 years"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "8 years"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "9 years"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "10-12 years"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "13-15 years"
+        },
+        {
+            sort_order: 14,
+            name: 14,
+            value: "16-17 years"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "More than 18 years"
+        },
+        {
+            sort_order: 16,
+            name: 16,
+            value: "Don't know"
+        }
     ],
     3: [
-        new Domain(1,1,'Less than 6 months' ) ,
-        new Domain(2,2,'6-11 months' ) ,
-        new Domain(3,3,'12-17 months' ) ,
-        new Domain(4,4,'18-23 months' ) ,
-        new Domain(5,5,'2 years' ) ,
-        new Domain(6,6,'3 years' ) ,
-        new Domain(7,7,'4 years' ) ,
-        new Domain(8,8,'5 years' ) ,
-        new Domain(9,9,'6 years' ) ,
-        new Domain(10,10,'7 years' ) ,
-        new Domain(11,11,'8 years' ) ,
-        new Domain(12,12,'9 years' ) ,
-        new Domain(13,13,'10-12 years' ) ,
-        new Domain(14,14,'13-15 years' ) ,
-        new Domain(15,15,'16-17 years' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Less than 6 months"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "6-11 months"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "12-17 months"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "18-23 months"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "2 years"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "3 years"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "4 years"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "5 years"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "6 years"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "7 years"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "8 years"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "9 years"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "10-12 years"
+        },
+        {
+            sort_order: 14,
+            name: 14,
+            value: "13-15 years"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "16-17 years"
+        }
     ],
     4: [
-        new Domain(1,1,'Less than 12 months' ) ,
-        new Domain(2,2,'12 months' ) ,
-        new Domain(3,3,'13 months' ) ,
-        new Domain(4,4,'14 months' ) ,
-        new Domain(5,5,'15 months' ) ,
-        new Domain(6,6,'16 months' ) ,
-        new Domain(7,7,'17 months' ) ,
-        new Domain(8,8,'18 months' ) ,
-        new Domain(9,9,'19 months' ) ,
-        new Domain(10,10,'20 months' ) ,
-        new Domain(11,11,'21 months' ) ,
-        new Domain(12,12,'22 months' ) ,
-        new Domain(13,13,'23 months' ) ,
-        new Domain(14,14,'2 years' ) ,
-        new Domain(15,15,'3 years' ) ,
-        new Domain(16,16,'4-6 years' ) ,
-        new Domain(17,17,'7 years or older' ) ,
-        new Domain(18,18,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Less than 12 months"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "12-17 months"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "18-23 months"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "2 years"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "3 years"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "4-6 years"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "7 years or older"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "Don't know"
+        }
     ],
     5: [
-        new Domain(1,1,'12' ) ,
-        new Domain(2,2,'13' ) ,
-        new Domain(3,3,'14' ) ,
-        new Domain(4,4,'15' ) ,
-        new Domain(5,5,'16' ) ,
-        new Domain(6,6,'17' ) ,
-        new Domain(7,7,'18' ) ,
-        new Domain(8,8,'19' ) ,
-        new Domain(9,9,'20' ) ,
-        new Domain(10,10,'21' ) ,
-        new Domain(11,11,'22' ) ,
-        new Domain(12,12,'23' ) ,
-        new Domain(13,13,'24' ) ,
-        new Domain(14,14,'25' ) ,
-        new Domain(15,15,'26' ) ,
-        new Domain(16,16,'27' ) ,
-        new Domain(17,17,'28' ) ,
-        new Domain(18,18,'29' ) ,
-        new Domain(19,19,'30' ) ,
-        new Domain(20,20,'31' ) ,
-        new Domain(21,21,'32' ) ,
-        new Domain(22,22,'33' ) ,
-        new Domain(23,23,'34' ) ,
-        new Domain(24,24,'35' ) ,
-        new Domain(25,25,'36' ) ,
-        new Domain(26,26,'37' ) ,
-        new Domain(27,27,'38' ) ,
-        new Domain(28,28,'39' ) ,
-        new Domain(29,29,'40' ) ,
-        new Domain(30,30,'41' ) ,
-        new Domain(31,31,'42' ) ,
-        new Domain(32,32,'43' ) ,
-        new Domain(33,33,'44' ) ,
-        new Domain(34,34,'45' ) ,
-        new Domain(35,35,'46' ) ,
-        new Domain(36,36,'47' ) ,
-        new Domain(37,37,'48' ) ,
-        new Domain(38,38,'49' ) ,
-        new Domain(39,39,'50' ) ,
-        new Domain(40,40,'51' ) ,
-        new Domain(41,41,'52' ) ,
-        new Domain(42,42,'53' ) ,
-        new Domain(43,43,'54' ) ,
-        new Domain(44,44,'55' ) ,
-        new Domain(45,45,'Over 55' ) ,
-        new Domain(46,46,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "12"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "13"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "14"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "15"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "16"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "17"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "18"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "19"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "20"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "21"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "22"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "23"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "24"
+        },
+        {
+            sort_order: 14,
+            name: 14,
+            value: "25"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "26"
+        },
+        {
+            sort_order: 16,
+            name: 16,
+            value: "27"
+        },
+        {
+            sort_order: 17,
+            name: 17,
+            value: "28"
+        },
+        {
+            sort_order: 18,
+            name: 18,
+            value: "29"
+        },
+        {
+            sort_order: 19,
+            name: 19,
+            value: "30"
+        },
+        {
+            sort_order: 20,
+            name: 20,
+            value: "31"
+        },
+        {
+            sort_order: 21,
+            name: 21,
+            value: "32"
+        },
+        {
+            sort_order: 22,
+            name: 22,
+            value: "33"
+        },
+        {
+            sort_order: 23,
+            name: 23,
+            value: "34"
+        },
+        {
+            sort_order: 24,
+            name: 24,
+            value: "35"
+        },
+        {
+            sort_order: 25,
+            name: 25,
+            value: "36"
+        },
+        {
+            sort_order: 26,
+            name: 26,
+            value: "37"
+        },
+        {
+            sort_order: 27,
+            name: 27,
+            value: "38"
+        },
+        {
+            sort_order: 28,
+            name: 28,
+            value: "39"
+        },
+        {
+            sort_order: 29,
+            name: 29,
+            value: "40"
+        },
+        {
+            sort_order: 30,
+            name: 30,
+            value: "41"
+        },
+        {
+            sort_order: 31,
+            name: 31,
+            value: "42"
+        },
+        {
+            sort_order: 32,
+            name: 32,
+            value: "43"
+        },
+        {
+            sort_order: 33,
+            name: 33,
+            value: "44"
+        },
+        {
+            sort_order: 34,
+            name: 34,
+            value: "45"
+        },
+        {
+            sort_order: 35,
+            name: 35,
+            value: "46"
+        },
+        {
+            sort_order: 36,
+            name: 36,
+            value: "47"
+        },
+        {
+            sort_order: 37,
+            name: 37,
+            value: "48"
+        },
+        {
+            sort_order: 38,
+            name: 38,
+            value: "49"
+        },
+        {
+            sort_order: 39,
+            name: 39,
+            value: "50"
+        },
+        {
+            sort_order: 40,
+            name: 40,
+            value: "51"
+        },
+        {
+            sort_order: 41,
+            name: 41,
+            value: "52"
+        },
+        {
+            sort_order: 42,
+            name: 42,
+            value: "53"
+        },
+        {
+            sort_order: 43,
+            name: 43,
+            value: "54"
+        },
+        {
+            sort_order: 44,
+            name: 44,
+            value: "55"
+        },
+        {
+            sort_order: 45,
+            name: 45,
+            value: "Over 55"
+        },
+        {
+            sort_order: 46,
+            name: 46,
+            value: "Don't know"
+        }
     ],
     6: [
-        new Domain(1,1,'0-3 months' ) ,
-        new Domain(2,2,'4-6 months' ) ,
-        new Domain(3,3,'7-12 months' ) ,
-        new Domain(4,4,'More than 12 months' ) ,
-        new Domain(5,5,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "0-3 months"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "4-6 months"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "7-12 months"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "More than 12 months"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "Don't know"
+        }
     ],
     7: [
-        new Domain(1,1,'Less than 12 months' ) ,
-        new Domain(2,2,'12 months' ) ,
-        new Domain(3,3,'13 months' ) ,
-        new Domain(4,4,'14 months' ) ,
-        new Domain(5,5,'15 months' ) ,
-        new Domain(6,6,'16 months' ) ,
-        new Domain(7,7,'17 months' ) ,
-        new Domain(8,8,'18 months' ) ,
-        new Domain(9,9,'19 months' ) ,
-        new Domain(10,10,'20 months' ) ,
-        new Domain(11,11,'21 months' ) ,
-        new Domain(12,12,'22 months' ) ,
-        new Domain(13,13,'23 months' ) ,
-        new Domain(14,14,'2 years' ) ,
-        new Domain(15,15,'3 years' ) ,
-        new Domain(16,16,'4 years' ) ,
-        new Domain(17,17,'5 years' ) ,
-        new Domain(18,18,'6 years' ) ,
-        new Domain(19,19,'7 years' ) ,
-        new Domain(20,20,'8 years' ) ,
-        new Domain(21,21,'9 years' ) ,
-        new Domain(22,22,'10-12 years' ) ,
-        new Domain(23,23,'13-15 years' ) ,
-        new Domain(24,24,'16-18 years' ) ,
-        new Domain(25,25,'Don\'t know' ) ,
-        new Domain(26,26,'No concern before ASD diagnosis was given' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Less than 12 months"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "12-17 months"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "18-23 months"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "2 years"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "3 years"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "4 years"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "5 years"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "6 years"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "7 years"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "8 years"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "9 years"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "10-12 years"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "13-15 years"
+        },
+        {
+            sort_order: 14,
+            name: 14,
+            value: "16-17 years"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "Don't know"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "No concern before ASD diagnosis was given"
+        }
     ],
     8: [
-        new Domain(1,1,'Professional in a health care setting' ) ,
-        new Domain(2,2,'Professional in an educational setting' ) ,
-        new Domain(3,3,'Don\'t know' ) ,
-        new Domain(4,4,'Other' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Professional in a health care setting"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Professional in an educational setting"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Don't know"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Other"
+        }
     ],
     9: [
-        new Domain(1,1,'Dummy' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Dummy"
+        }
     ],
     10: [
-        new Domain(1,1,'Less than high school (did not receive a high school diploma or equivalent)' ) ,
-        new Domain(2,2,'High school graduate (or equivalent)' ) ,
-        new Domain(3,3,'Some college (1-4 years, no degree)' ) ,
-        new Domain(4,4,'Associate\'s degree (including occupational or academic degrees)' ) ,
-        new Domain(5,5,'Bachelor\'s degree (BA, BS, AB, etc.)' ) ,
-        new Domain(6,6,'Master\'s degree, professional school degree, or doctorate degree (MA, MS, MSW, MENG, MD, DDC, JD, PhD, ScD, EdD, etc.)' ) ,
-        new Domain(7,7,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Less than high school (did not receive a high school diploma or equivalent)"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "High school graduate (or equivalent)"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Some college (1-4 years, no degree)"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Associate's degree (including occupational or academic degrees)"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "Bachelor's degree (BA, BS, AB, etc.)"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Master's degree, professional school degree, or doctorate degree (MA, MS, MSW, MENG, MD, DDC, JD, PhD, ScD, EdD, etc.)"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "Don't know"
+        }
     ],
     11: [
-        new Domain(1,1,'Hispanic or Latino' ) ,
-        new Domain(2,2,'Not Hispanic or Latino' ) ,
-        new Domain(3,3,'Prefer not to answer' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Hispanic or Latino"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Not Hispanic or Latino"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Prefer not to answer"
+        }
     ],
     12: [
-        new Domain(1,1,'proband' ) ,
-        new Domain(2,2,'mother' ) ,
-        new Domain(3,3,'father' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "proband"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "mother"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "father"
+        }
     ],
     13: [
-        new Domain(1,1,'Always' ) ,
-        new Domain(2,2,'Often' ) ,
-        new Domain(3,3,'Sometimes' ) ,
-        new Domain(4,4,'Rarely' ) ,
-        new Domain(5,5,'Never' ) ,
-        new Domain(6,6,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Always"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Often"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Sometimes"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Rarely"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "Never"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Don't know"
+        }
     ],
     14: [
-        new Domain(1,1,'Never' ) ,
-        new Domain(2,2,'Less than once per week' ) ,
-        new Domain(3,3,'1-6 times per week' ) ,
-        new Domain(4,4,'1+ times per day' ) ,
-        new Domain(5,5,'Don\'t know' ) ,
-        new Domain(6,6,'Prefer not to answer' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Never"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Less than once per week"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "1-6 times per week"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "1+ times per day"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "Don't know"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Prefer not to answer"
+        }
     ],
     15: [
-        new Domain(1,1,'Never' ) ,
-        new Domain(2,2,'Less than once per week' ) ,
-        new Domain(3,3,'1-6 times per week' ) ,
-        new Domain(4,4,'1-2 times per day' ) ,
-        new Domain(5,5,'3 or more times per day' ) ,
-        new Domain(6,6,'Don\'t know' ) ,
-        new Domain(7,7,'Prefer not to answer' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Never"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Less than once per week"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "1-6 times per week"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "1-2 times per day"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "3 or more times per day"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Don't know"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "Prefer not to answer"
+        }
     ],
     16: [
-        new Domain(3,1,'2' ) ,
-        new Domain(4,2,'3' ) ,
-        new Domain(5,3,'4' ) ,
-        new Domain(6,4,'5' ) ,
-        new Domain(7,5,'6' ) ,
-        new Domain(8,6,'7' ) ,
-        new Domain(9,7,'8' ) ,
-        new Domain(10,8,'9' ) 
+        {
+            sort_order: 3,
+            name: 1,
+            value: "2"
+        },
+        {
+            sort_order: 4,
+            name: 2,
+            value: "3"
+        },
+        {
+            sort_order: 5,
+            name: 3,
+            value: "4"
+        },
+        {
+            sort_order: 6,
+            name: 4,
+            value: "5"
+        },
+        {
+            sort_order: 7,
+            name: 5,
+            value: "6"
+        },
+        {
+            sort_order: 8,
+            name: 6,
+            value: "7"
+        },
+        {
+            sort_order: 9,
+            name: 7,
+            value: "8"
+        },
+        {
+            sort_order: 10,
+            name: 8,
+            value: "9"
+        }
     ],
     17: [
-        new Domain(1,1,'0' ) ,
-        new Domain(2,2,'1' ) ,
-        new Domain(3,3,'2' ) ,
-        new Domain(4,4,'3' ) ,
-        new Domain(5,5,'4' ) ,
-        new Domain(6,6,'5' ) ,
-        new Domain(7,7,'6' ) ,
-        new Domain(8,8,'7' ) ,
-        new Domain(9,9,'8' ) ,
-        new Domain(10,10,'9' ) ,
-        new Domain(11,11,'10' ) ,
-        new Domain(12,12,'11' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "0"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "1"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "2"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "3"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "4"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "5"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "6"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "7"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "8"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "9"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "10"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "11"
+        }
     ],
     18: [
-        new Domain(1,1,'1' ) ,
-        new Domain(2,2,'2' ) ,
-        new Domain(3,3,'3' ) ,
-        new Domain(4,4,'4' ) ,
-        new Domain(5,5,'5+' ) ,
-        new Domain(6,6,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "1"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "2"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "3"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "4"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "5+"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Don't know"
+        }
     ],
     19: [
-        new Domain(1,1,'0' ) ,
-        new Domain(2,2,'1' ) ,
-        new Domain(3,3,'2' ) ,
-        new Domain(4,4,'3' ) ,
-        new Domain(5,5,'4+' ) ,
-        new Domain(6,6,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "0"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "1"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "2"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "3"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "4+"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Don't know"
+        }
     ],
     20: [
-        new Domain(1,1,'Work in an office environment' ) ,
-        new Domain(2,2,'Retail/sales/cashier' ) ,
-        new Domain(3,3,'Food preparation/food server/waiter or waitress' ) ,
-        new Domain(4,4,'Health care worker/doctor/nurse' ) ,
-        new Domain(5,5,'Janitor/housekeeper' ) ,
-        new Domain(6,6,'Warehouse/stockroom' ) ,
-        new Domain(7,7,'Manufacturing/factory' ) ,
-        new Domain(8,8,'Repair services/mechanic/plumber' ) ,
-        new Domain(9,9,'Miner ' ) ,
-        new Domain(10,10,'Welder ' ) ,
-        new Domain(11,11,'Teacher/teacher\'s aid' ) ,
-        new Domain(12,12,'Student' ) ,
-        new Domain(13,13,'Construction' ) ,
-        new Domain(14,14,'Laboratory technician/scientist' ) ,
-        new Domain(15,15,'Public safety (police, firefighter, security guard)' ) ,
-        new Domain(16,16,'Agriculture/farming' ) ,
-        new Domain(17,17,'Stay-at-home parent' ) ,
-        new Domain(18,18,'Unemployed' ) ,
-        new Domain(19,19,'Unknown' ) ,
-        new Domain(20,20,'Prefer not to answer' ) ,
-        new Domain(21,21,'Other (Please indicate)' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Work in an office environment"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Retail/sales/cashier"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Food preparation/food server/waiter or waitress"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Health care worker/doctor/nurse"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "Janitor/housekeeper"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Warehouse/stockroom"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "Manufacturing/factory"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "Repair services/mechanic/plumber"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "Miner "
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "Welder "
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "Teacher/teacher's aid"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "Student"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "Construction"
+        },
+        {
+            sort_order: 14,
+            name: 14,
+            value: "Laboratory technician/scientist"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "Public safety (police, firefighter, security guard)"
+        },
+        {
+            sort_order: 16,
+            name: 16,
+            value: "Agriculture/farming"
+        },
+        {
+            sort_order: 17,
+            name: 17,
+            value: "Stay-at-home parent"
+        },
+        {
+            sort_order: 18,
+            name: 18,
+            value: "Unemployed"
+        },
+        {
+            sort_order: 19,
+            name: 19,
+            value: "Unknown"
+        },
+        {
+            sort_order: 20,
+            name: 20,
+            value: "Prefer not to answer"
+        },
+        {
+            sort_order: 21,
+            name: 21,
+            value: "Other (Please indicate)"
+        }
     ],
     21: [
-        new Domain(1,1,'American Indian or Alaska Native <tooltip id="6"/>' ) ,
-        new Domain(2,2,'Asian <tooltip id="4"/>' ) ,
-        new Domain(3,3,'Black or African American <tooltip id="3"/>' ) ,
-        new Domain(4,4,'Native Hawaiian or Other Pacific Islander <tooltip id="5"/>' ) ,
-        new Domain(5,5,'White <tooltip id="2"/>' ) ,
-        new Domain(6,6,'Prefer not to answer' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "American Indian or Alaska Native <tooltip id=\"6\"/>"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Asian <tooltip id=\"4\"/>"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Black or African American <tooltip id=\"3\"/>"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Native Hawaiian or Other Pacific Islander <tooltip id=\"5\"/>"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "White <tooltip id=\"2\"/>"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Prefer not to answer"
+        }
     ],
     22: [
-        new Domain(1,1,'Please do not contact me again.' ) ,
-        new Domain(2,2,'You can contact me again.' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Please do not contact me again."
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "You can contact me again."
+        }
     ],
     23: [
-        new Domain(1,1,'Male' ) ,
-        new Domain(2,2,'Female' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Male"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Female"
+        }
     ],
     24: [
-        new Domain(1,1,'AL' ) ,
-        new Domain(2,2,'AK' ) ,
-        new Domain(3,3,'AZ' ) ,
-        new Domain(4,4,'AR' ) ,
-        new Domain(5,5,'CA' ) ,
-        new Domain(6,6,'CO' ) ,
-        new Domain(7,7,'CT' ) ,
-        new Domain(8,8,'DE' ) ,
-        new Domain(9,9,'DC' ) ,
-        new Domain(10,10,'FL' ) ,
-        new Domain(11,11,'GA' ) ,
-        new Domain(12,12,'HI' ) ,
-        new Domain(13,13,'ID' ) ,
-        new Domain(14,14,'IL' ) ,
-        new Domain(15,15,'IN' ) ,
-        new Domain(16,16,'IA' ) ,
-        new Domain(17,17,'KS' ) ,
-        new Domain(18,18,'KY' ) ,
-        new Domain(19,19,'LA' ) ,
-        new Domain(20,20,'ME' ) ,
-        new Domain(21,21,'MD' ) ,
-        new Domain(22,22,'MA' ) ,
-        new Domain(23,23,'MI' ) ,
-        new Domain(24,24,'MN' ) ,
-        new Domain(25,25,'MS' ) ,
-        new Domain(26,26,'MO' ) ,
-        new Domain(27,27,'MT' ) ,
-        new Domain(28,28,'NE' ) ,
-        new Domain(29,29,'NV' ) ,
-        new Domain(30,30,'NH' ) ,
-        new Domain(31,31,'NJ' ) ,
-        new Domain(32,32,'NM' ) ,
-        new Domain(33,33,'NY' ) ,
-        new Domain(34,34,'NC' ) ,
-        new Domain(35,35,'ND' ) ,
-        new Domain(36,36,'OH' ) ,
-        new Domain(37,37,'OK' ) ,
-        new Domain(38,38,'OR' ) ,
-        new Domain(39,39,'PA' ) ,
-        new Domain(40,40,'RI' ) ,
-        new Domain(41,41,'SC' ) ,
-        new Domain(42,42,'SD' ) ,
-        new Domain(43,43,'TN' ) ,
-        new Domain(44,44,'TX' ) ,
-        new Domain(45,45,'UT' ) ,
-        new Domain(46,46,'VT' ) ,
-        new Domain(47,47,'VA' ) ,
-        new Domain(48,48,'WA' ) ,
-        new Domain(49,49,'WV' ) ,
-        new Domain(50,50,'WI' ) ,
-        new Domain(51,51,'WY' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "AL"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "AK"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "AZ"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "AR"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "CA"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "CO"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "CT"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "DE"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "DC"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "FL"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "GA"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "HI"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "ID"
+        },
+        {
+            sort_order: 14,
+            name: 14,
+            value: "IL"
+        },
+        {
+            sort_order: 15,
+            name: 15,
+            value: "IN"
+        },
+        {
+            sort_order: 16,
+            name: 16,
+            value: "IA"
+        },
+        {
+            sort_order: 17,
+            name: 17,
+            value: "KS"
+        },
+        {
+            sort_order: 18,
+            name: 18,
+            value: "KY"
+        },
+        {
+            sort_order: 19,
+            name: 19,
+            value: "LA"
+        },
+        {
+            sort_order: 20,
+            name: 20,
+            value: "ME"
+        },
+        {
+            sort_order: 21,
+            name: 21,
+            value: "MD"
+        },
+        {
+            sort_order: 22,
+            name: 22,
+            value: "MA"
+        },
+        {
+            sort_order: 23,
+            name: 23,
+            value: "MI"
+        },
+        {
+            sort_order: 24,
+            name: 24,
+            value: "MN"
+        },
+        {
+            sort_order: 25,
+            name: 25,
+            value: "MS"
+        },
+        {
+            sort_order: 26,
+            name: 26,
+            value: "MO"
+        },
+        {
+            sort_order: 27,
+            name: 27,
+            value: "MT"
+        },
+        {
+            sort_order: 28,
+            name: 28,
+            value: "NE"
+        },
+        {
+            sort_order: 29,
+            name: 29,
+            value: "NV"
+        },
+        {
+            sort_order: 30,
+            name: 30,
+            value: "NH"
+        },
+        {
+            sort_order: 31,
+            name: 31,
+            value: "NJ"
+        },
+        {
+            sort_order: 32,
+            name: 32,
+            value: "NM"
+        },
+        {
+            sort_order: 33,
+            name: 33,
+            value: "NY"
+        },
+        {
+            sort_order: 34,
+            name: 34,
+            value: "NC"
+        },
+        {
+            sort_order: 35,
+            name: 35,
+            value: "ND"
+        },
+        {
+            sort_order: 36,
+            name: 36,
+            value: "OH"
+        },
+        {
+            sort_order: 37,
+            name: 37,
+            value: "OK"
+        },
+        {
+            sort_order: 38,
+            name: 38,
+            value: "OR"
+        },
+        {
+            sort_order: 39,
+            name: 39,
+            value: "PA"
+        },
+        {
+            sort_order: 40,
+            name: 40,
+            value: "RI"
+        },
+        {
+            sort_order: 41,
+            name: 41,
+            value: "SC"
+        },
+        {
+            sort_order: 42,
+            name: 42,
+            value: "SD"
+        },
+        {
+            sort_order: 43,
+            name: 43,
+            value: "TN"
+        },
+        {
+            sort_order: 44,
+            name: 44,
+            value: "TX"
+        },
+        {
+            sort_order: 45,
+            name: 45,
+            value: "UT"
+        },
+        {
+            sort_order: 46,
+            name: 46,
+            value: "VT"
+        },
+        {
+            sort_order: 47,
+            name: 47,
+            value: "VA"
+        },
+        {
+            sort_order: 48,
+            name: 48,
+            value: "WA"
+        },
+        {
+            sort_order: 49,
+            name: 49,
+            value: "WV"
+        },
+        {
+            sort_order: 50,
+            name: 50,
+            value: "WI"
+        },
+        {
+            sort_order: 51,
+            name: 51,
+            value: "WY"
+        }
     ],
     25: [
-        new Domain(1,1,'If you are a parent or guardian taking the survey for a child, click here.' ) ,
-        new Domain(2,2,'If you are a legally authorized representative taking the survey for another adult, click here.' ) ,
-        new Domain(3,3,'If you are an adult taking the survey on behalf of yourself, click here.' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "If you are a parent or guardian taking the survey for a child, click here."
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "If you are a legally authorized representative taking the survey for another adult, click here."
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "If you are an adult taking the survey on behalf of yourself, click here."
+        }
     ],
     26: [
-        new Domain(1,5,'Speaks in 3 or more word combinations' ) ,
-        new Domain(2,4,'Speaks in 2 words combinations' ) ,
-        new Domain(3,3,'Uses more than 10 single words' ) ,
-        new Domain(4,2,'Uses 1-10 single words' ) ,
-        new Domain(5,1,'Does not use any words' ) ,
-        new Domain(6,6,'Prefer not to answer' ) 
+        {
+            sort_order: 1,
+            name: 5,
+            value: "Speaks in 3 or more word combinations"
+        },
+        {
+            sort_order: 2,
+            name: 4,
+            value: "Speaks in 2 words combinations"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Uses more than 10 single words"
+        },
+        {
+            sort_order: 4,
+            name: 2,
+            value: "Uses 1-10 single words"
+        },
+        {
+            sort_order: 5,
+            name: 1,
+            value: "Does not use any words"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "Prefer not to answer"
+        }
     ],
     27: [
-        new Domain(1,1,'Private well' ) ,
-        new Domain(2,2,'Public water supply' ) ,
-        new Domain(3,3,'Bottled water' ) ,
-        new Domain(4,4,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Private well"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Public water supply"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Bottled water"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Don't know"
+        }
     ],
     28: [
-        new Domain(1,1,'24 weeks or less' ) ,
-        new Domain(2,2,'25-26 weeks' ) ,
-        new Domain(3,3,'27-28 weeks' ) ,
-        new Domain(4,4,'29-30 weeks' ) ,
-        new Domain(5,5,'31-32 weeks' ) ,
-        new Domain(6,6,'33-34 weeks' ) ,
-        new Domain(7,7,'35-36 weeks' ) ,
-        new Domain(8,8,'37-38 weeks' ) ,
-        new Domain(9,9,'39-40 weeks' ) ,
-        new Domain(10,10,'41-42 weeks' ) ,
-        new Domain(11,11,'43 weeks or more' ) ,
-        new Domain(12,12,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "24 weeks or less"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "25-26 weeks"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "27-28 weeks"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "29-30 weeks"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "31-32 weeks"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "33-34 weeks"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "35-36 weeks"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "37-38 weeks"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "39-40 weeks"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "41-42 weeks"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "43 weeks or more"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "Don't know"
+        }
     ],
     29: [
-        new Domain(1,1,'Yes' ) ,
-        new Domain(2,2,'No' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Yes"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "No"
+        }
     ],
     30: [
-        new Domain(1,1,'Yes' ) ,
-        new Domain(2,2,'No' ) ,
-        new Domain(3,3,'Don\'t know' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Yes"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "No"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Don't know"
+        }
     ],
     31: [
-        new Domain(1,1,'Yes' ) ,
-        new Domain(2,2,'No' ) ,
-        new Domain(3,3,'Don\'t know' ) ,
-        new Domain(4,4,'Not Applicable' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Yes"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "No"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Don't know"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Not Applicable"
+        }
     ],
     32: [
-        new Domain(1,1,'Yes' ) ,
-        new Domain(2,2,'No' ) ,
-        new Domain(3,3,'Don\'t know' ) ,
-        new Domain(4,4,'Prefer not to answer' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Yes"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "No"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Don't know"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Prefer not to answer"
+        }
     ],
     33: [
-        new Domain(1,1,'Yes' ) ,
-        new Domain(2,2,'No' ) ,
-        new Domain(3,3,'Don\'t know' ) ,
-        new Domain(4,4,'Never had these skills' ) ,
-        new Domain(5,5,'If yes, what was the child\'s age when you first noticed this change in their development?' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Yes"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "No"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Don't know"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Never had these skills"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "If yes, what was the child's age when you first noticed this change in their development?"
+        }
     ],
     34: [
-        new Domain(1,1,'Yes' ) ,
-        new Domain(2,2,'No' ) ,
-        new Domain(3,3,'Prefer not to answer' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Yes"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "No"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Prefer not to answer"
+        }
     ],
     35: [
-        new Domain(1,1,'Write code for Today minus 17 years' ) ,
-        new Domain(2,2,'Write code for Today minus 17 years' ) ,
-        new Domain(3,3,'Write code for Today minus 17 years' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Write code for Today minus 17 years"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Write code for Today minus 17 years"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Write code for Today minus 17 years"
+        }
     ],
     36: [
-        new Domain(1,1,'Write code for Today minus 99 years' ) ,
-        new Domain(2,2,'Write code for Today minus 18 years' ) ,
-        new Domain(3,3,'Write code for Today minus 18 years' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Write code for Today minus 99 years"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Write code for Today minus 18 years"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Write code for Today minus 18 years"
+        }
     ],
     37: [
-        new Domain(1,1,'Write code for Today minus 99 years' ) ,
-        new Domain(2,2,'Write code for Today minus 18 years' ) ,
-        new Domain(3,3,'Write code for Today minus 18 years' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Write code for Today minus 99 years"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Write code for Today minus 18 years"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Write code for Today minus 18 years"
+        }
     ],
     38: [
-        new Domain(1,1,'Write code for Today minus 99 years' ) ,
-        new Domain(2,2,'Write code for Today minus 10 years' ) ,
-        new Domain(3,3,'Write code for Today minus 20 years' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Write code for Today minus 99 years"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Write code for Today minus 10 years"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Write code for Today minus 20 years"
+        }
     ],
     39: [
-        new Domain(1,1,'Write code for Today minus 99 years' ) ,
-        new Domain(2,2,'Write code for Today minus 10 years' ) ,
-        new Domain(3,3,'Write code for Today minus 20 years' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Write code for Today minus 99 years"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Write code for Today minus 10 years"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Write code for Today minus 20 years"
+        }
     ],
     40: [
-        new Domain(1,1,'Write code for Today minus 99 years' ) ,
-        new Domain(2,2,'Write code for Today minus 10 years' ) ,
-        new Domain(3,3,'Write code for Today minus 20 years' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Write code for Today minus 99 years"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Write code for Today minus 10 years"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Write code for Today minus 20 years"
+        }
     ],
     41: [
-        new Domain(1,1,'January' ) ,
-        new Domain(2,2,'February' ) ,
-        new Domain(3,3,'March' ) ,
-        new Domain(4,4,'April' ) ,
-        new Domain(5,5,'May' ) ,
-        new Domain(6,6,'June' ) ,
-        new Domain(7,7,'July' ) ,
-        new Domain(8,8,'August' ) ,
-        new Domain(9,9,'September' ) ,
-        new Domain(10,10,'October' ) ,
-        new Domain(11,11,'November' ) ,
-        new Domain(12,12,'December' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "January"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "February"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "March"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "April"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "May"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "June"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "July"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "August"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "September"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "October"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "November"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "December"
+        }
     ],
     42: [
-        new Domain(1,1,'Write code for earliest_year(residence_person)' ) ,
-        new Domain(2,2,'Write code for Date().getFullYear()' ) ,
-        new Domain(3,3,null ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Write code for earliest_year(residence_person)"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Write code for Date().getFullYear()"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: null
+        }
     ],
     43: [
-        new Domain(1,1,'Unsure of address during this time period' ) ,
-        new Domain(2,2,'Lived outside of the 50 US states and the District of Columbia during this time period' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Unsure of address during this time period"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Lived outside of the 50 US states and the District of Columbia during this time period"
+        }
     ],
     44: [
-        new Domain(1,52,'Not born in the 50 US states or DC' ) ,
-        new Domain(2,1,'AL' ) ,
-        new Domain(3,2,'AK' ) ,
-        new Domain(4,3,'AZ' ) ,
-        new Domain(5,4,'AR' ) ,
-        new Domain(6,5,'CA' ) ,
-        new Domain(7,6,'CO' ) ,
-        new Domain(8,7,'CT' ) ,
-        new Domain(9,8,'DE' ) ,
-        new Domain(10,9,'DC' ) ,
-        new Domain(11,10,'FL' ) ,
-        new Domain(12,11,'GA' ) ,
-        new Domain(13,12,'HI' ) ,
-        new Domain(14,13,'ID' ) ,
-        new Domain(15,14,'IL' ) ,
-        new Domain(16,15,'IN' ) ,
-        new Domain(17,16,'IA' ) ,
-        new Domain(18,17,'KS' ) ,
-        new Domain(19,18,'KY' ) ,
-        new Domain(20,19,'LA' ) ,
-        new Domain(21,20,'ME' ) ,
-        new Domain(22,21,'MD' ) ,
-        new Domain(23,22,'MA' ) ,
-        new Domain(24,23,'MI' ) ,
-        new Domain(25,24,'MN' ) ,
-        new Domain(26,25,'MS' ) ,
-        new Domain(27,26,'MO' ) ,
-        new Domain(28,27,'MT' ) ,
-        new Domain(29,28,'NE' ) ,
-        new Domain(30,29,'NV' ) ,
-        new Domain(31,30,'NH' ) ,
-        new Domain(32,31,'NJ' ) ,
-        new Domain(33,32,'NM' ) ,
-        new Domain(34,33,'NY' ) ,
-        new Domain(35,34,'NC' ) ,
-        new Domain(36,35,'ND' ) ,
-        new Domain(37,36,'OH' ) ,
-        new Domain(38,37,'OK' ) ,
-        new Domain(39,38,'OR' ) ,
-        new Domain(40,39,'PA' ) ,
-        new Domain(41,40,'RI' ) ,
-        new Domain(42,41,'SC' ) ,
-        new Domain(43,42,'SD' ) ,
-        new Domain(44,43,'TN' ) ,
-        new Domain(45,44,'TX' ) ,
-        new Domain(46,45,'UT' ) ,
-        new Domain(47,46,'VT' ) ,
-        new Domain(48,47,'VA' ) ,
-        new Domain(49,48,'WA' ) ,
-        new Domain(50,49,'WV' ) ,
-        new Domain(51,50,'WI' ) ,
-        new Domain(52,51,'WY' ) 
+        {
+            sort_order: 1,
+            name: 52,
+            value: "Not born in the 50 US states or DC"
+        },
+        {
+            sort_order: 2,
+            name: 1,
+            value: "AL"
+        },
+        {
+            sort_order: 3,
+            name: 2,
+            value: "AK"
+        },
+        {
+            sort_order: 4,
+            name: 3,
+            value: "AZ"
+        },
+        {
+            sort_order: 5,
+            name: 4,
+            value: "AR"
+        },
+        {
+            sort_order: 6,
+            name: 5,
+            value: "CA"
+        },
+        {
+            sort_order: 7,
+            name: 6,
+            value: "CO"
+        },
+        {
+            sort_order: 8,
+            name: 7,
+            value: "CT"
+        },
+        {
+            sort_order: 9,
+            name: 8,
+            value: "DE"
+        },
+        {
+            sort_order: 10,
+            name: 9,
+            value: "DC"
+        },
+        {
+            sort_order: 11,
+            name: 10,
+            value: "FL"
+        },
+        {
+            sort_order: 12,
+            name: 11,
+            value: "GA"
+        },
+        {
+            sort_order: 13,
+            name: 12,
+            value: "HI"
+        },
+        {
+            sort_order: 14,
+            name: 13,
+            value: "ID"
+        },
+        {
+            sort_order: 15,
+            name: 14,
+            value: "IL"
+        },
+        {
+            sort_order: 16,
+            name: 15,
+            value: "IN"
+        },
+        {
+            sort_order: 17,
+            name: 16,
+            value: "IA"
+        },
+        {
+            sort_order: 18,
+            name: 17,
+            value: "KS"
+        },
+        {
+            sort_order: 19,
+            name: 18,
+            value: "KY"
+        },
+        {
+            sort_order: 20,
+            name: 19,
+            value: "LA"
+        },
+        {
+            sort_order: 21,
+            name: 20,
+            value: "ME"
+        },
+        {
+            sort_order: 22,
+            name: 21,
+            value: "MD"
+        },
+        {
+            sort_order: 23,
+            name: 22,
+            value: "MA"
+        },
+        {
+            sort_order: 24,
+            name: 23,
+            value: "MI"
+        },
+        {
+            sort_order: 25,
+            name: 24,
+            value: "MN"
+        },
+        {
+            sort_order: 26,
+            name: 25,
+            value: "MS"
+        },
+        {
+            sort_order: 27,
+            name: 26,
+            value: "MO"
+        },
+        {
+            sort_order: 28,
+            name: 27,
+            value: "MT"
+        },
+        {
+            sort_order: 29,
+            name: 28,
+            value: "NE"
+        },
+        {
+            sort_order: 30,
+            name: 29,
+            value: "NV"
+        },
+        {
+            sort_order: 31,
+            name: 30,
+            value: "NH"
+        },
+        {
+            sort_order: 32,
+            name: 31,
+            value: "NJ"
+        },
+        {
+            sort_order: 33,
+            name: 32,
+            value: "NM"
+        },
+        {
+            sort_order: 34,
+            name: 33,
+            value: "NY"
+        },
+        {
+            sort_order: 35,
+            name: 34,
+            value: "NC"
+        },
+        {
+            sort_order: 36,
+            name: 35,
+            value: "ND"
+        },
+        {
+            sort_order: 37,
+            name: 36,
+            value: "OH"
+        },
+        {
+            sort_order: 38,
+            name: 37,
+            value: "OK"
+        },
+        {
+            sort_order: 39,
+            name: 38,
+            value: "OR"
+        },
+        {
+            sort_order: 40,
+            name: 39,
+            value: "PA"
+        },
+        {
+            sort_order: 41,
+            name: 40,
+            value: "RI"
+        },
+        {
+            sort_order: 42,
+            name: 41,
+            value: "SC"
+        },
+        {
+            sort_order: 43,
+            name: 42,
+            value: "SD"
+        },
+        {
+            sort_order: 44,
+            name: 43,
+            value: "TN"
+        },
+        {
+            sort_order: 45,
+            name: 44,
+            value: "TX"
+        },
+        {
+            sort_order: 46,
+            name: 45,
+            value: "UT"
+        },
+        {
+            sort_order: 47,
+            name: 46,
+            value: "VT"
+        },
+        {
+            sort_order: 48,
+            name: 47,
+            value: "VA"
+        },
+        {
+            sort_order: 49,
+            name: 48,
+            value: "WA"
+        },
+        {
+            sort_order: 50,
+            name: 49,
+            value: "WV"
+        },
+        {
+            sort_order: 51,
+            name: 50,
+            value: "WI"
+        },
+        {
+            sort_order: 52,
+            name: 51,
+            value: "WY"
+        }
     ],
     45: [
-        new Domain(1,1,'0' ) ,
-        new Domain(2,2,'1' ) ,
-        new Domain(3,3,'2' ) ,
-        new Domain(4,4,'3' ) ,
-        new Domain(5,5,'4' ) ,
-        new Domain(6,6,'5' ) ,
-        new Domain(7,7,'6' ) ,
-        new Domain(8,8,'7' ) ,
-        new Domain(9,9,'8' ) ,
-        new Domain(10,10,'9' ) ,
-        new Domain(11,11,'10' ) ,
-        new Domain(12,12,'11' ) ,
-        new Domain(13,13,'12' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "0"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "1"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "2"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "3"
+        },
+        {
+            sort_order: 5,
+            name: 5,
+            value: "4"
+        },
+        {
+            sort_order: 6,
+            name: 6,
+            value: "5"
+        },
+        {
+            sort_order: 7,
+            name: 7,
+            value: "6"
+        },
+        {
+            sort_order: 8,
+            name: 8,
+            value: "7"
+        },
+        {
+            sort_order: 9,
+            name: 9,
+            value: "8"
+        },
+        {
+            sort_order: 10,
+            name: 10,
+            value: "9"
+        },
+        {
+            sort_order: 11,
+            name: 11,
+            value: "10"
+        },
+        {
+            sort_order: 12,
+            name: 12,
+            value: "11"
+        },
+        {
+            sort_order: 13,
+            name: 13,
+            value: "12"
+        }
     ],
     46: [
-        new Domain(1,1,'lbs' ) ,
-        new Domain(2,2,'0' ) ,
-        new Domain(3,3,'999' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "lbs"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "0"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "999"
+        }
     ],
     47: [
-        new Domain(1,1,'Full time/part time employment in an independent position' ) ,
-        new Domain(2,2,'Full time/part time employment with a job coach or other help at work' ) ,
-        new Domain(3,3,'Internship or work study program' ) ,
-        new Domain(4,4,'Other' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Full time/part time employment in an independent position"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Full time/part time employment with a job coach or other help at work"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Internship or work study program"
+        },
+        {
+            sort_order: 4,
+            name: 4,
+            value: "Other"
+        }
     ],
     48: [
-        new Domain(1,1,'Want to work but can\'t find a job' ) ,
-        new Domain(2,2,'Not currently seeking employment' ) ,
-        new Domain(3,3,'Other' ) 
+        {
+            sort_order: 1,
+            name: 1,
+            value: "Want to work but can't find a job"
+        },
+        {
+            sort_order: 2,
+            name: 2,
+            value: "Not currently seeking employment"
+        },
+        {
+            sort_order: 3,
+            name: 3,
+            value: "Other"
+        }
     ]
 }
