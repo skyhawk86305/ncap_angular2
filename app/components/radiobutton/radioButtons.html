@@ -4,7 +4,7 @@
     [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" 
     [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required" >
         <span class="ng-scope">
-            <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
+            <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sort_order}} - </span>
         </span>            
         <span [innerHTML]='question.question_text'></span>
         <tooltip *ngIf="question.toolTipId>0" [toolTipId]="question.toolTipId"></tooltip>
@@ -16,7 +16,7 @@
 
     <div class="form-group ng-scope">
         <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index" (click)='click(question.tracking_key, item.stored_value)'>
-            <input type="radio" style="outline:none" name="{{question.page_id}}.{{question.sre_sort_order}}" value="{{item.stored_value}}" [checked]='previouslySelectedStoredValue == item.stored_value'> {{item.displayed_value}} 
+            <input type="radio" style="outline:none" name="{{question.page_id}}.{{question.sort_order}}" value="{{item.stored_value}}" [checked]='previouslySelectedStoredValue == item.stored_value'> {{item.displayed_value}} 
             <tooltip *ngIf="item.toolTipId>0" [toolTipId]="item.toolTipId"></tooltip> 
         </div>
     </div>

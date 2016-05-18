@@ -73,12 +73,11 @@ export class PageQuestion {
     public error_msg_lang1: string;
     public bypass_var: string;
 
-    // Below not populated directly from DB Data
+    // Below not populated from JSON file
     validation_result: ValidationResult;
     validation_type: ValidationType;
     show_validation: boolean;
     toolTipId: number; // xyzzy Temp property to get Tooltips partially working
-    page_id: number; // Used iin Diag mode
 
     get visible(): boolean {
         let result = this.sre_anca_id !== AnswerCategory.Skip;

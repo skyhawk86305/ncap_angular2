@@ -1,14 +1,17 @@
 import { PageQuestion } from '../../app/types/database-data/page-question';
+import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
+import { ValidationType } from '../../app/types/enums/validation-type.enum';
+// The data
+import { sre } from '../../app/seed-data/sre';
+import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
+// Types to hold the data
+import { Sre } from '../../app/types/database-data/sre';
+import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
+
 import { SeedDataPageQuestions } from '../types/database-data/page-questions';
 import { pageQuestionDict } from '../../app/seed-data/page_question_dict';
 
-// import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
-// import { ValidationType } from '../../app/types/enums/validation-type.enum';
-// import { sre } from '../../app/seed-data/sre';
-// import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
-// import { Sre } from '../../app/types/database-data/sre';
-// import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
-// import _ from 'lodash';
+import _ from 'lodash';
 
 export class SeedDataSingleton {
 
@@ -24,7 +27,7 @@ export class SeedDataSingleton {
 
     constructor() {
         // Will fire only once since this class is a Singleton
-        this._seedData = pageQuestionDict; 
+        this._seedData = pageQuestionDict; //xyzzy - move to 
         SeedDataSingleton._instance = this;
     }
 
@@ -33,13 +36,20 @@ export class SeedDataSingleton {
     }
 
     getQuestionsForPage(page_Id: number): PageQuestion[] {
-        let result = this._seedData[page_Id.toString()]; // Cast to PageQuestion[]
+        let tempResult = this._seedData[page_Id.toString()]; // Cast to PageQuestion[]
+        let result: PageQuestion[] = new Array<PageQuestion>();
 
-        // xyzzy Probabably do this via a background promise after the app has loaded
-        for (let curItem of result) {
-            curItem.page_id = page_Id;
+        for (let curItem of tempResult) {
+            let newPageQuestion = curItem as PageQuestion;
+            console.log('sre_uid: ' + newPageQuestion.sre_uid);
+            console.log('question_text: ' + newPageQuestion.question_text);
+            newPageQuestion = <PageQuestion>curItem;
+            console.log('sre_uid: ' + newPageQuestion.sre_uid);
+            console.log('question_text: ' + newPageQuestion.question_text);
+            result.push(newPageQuestion);
         }
 
+        //return this._questions.filter(i => i.page_id === page_Id);
         return result;
     }
 
