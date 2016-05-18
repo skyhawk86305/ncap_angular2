@@ -9,7 +9,8 @@
     </span>
 </div>
 
-<div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
+<div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer' && FormatCategory[question.sre_foca_id] !== 'Dummy'" 
+[ngSwitch]=AnswerCategory[question.sre_anca_id]>
   <span *ngSwitchWhen="'Home'">                               <home             [question]="question"></home></span>
   <span *ngSwitchWhen="'Consent'">                            <consent          [question]="question"></consent></span>
   <span *ngSwitchWhen="'Checkboxes'">                         <checkboxes       [question]="question"></checkboxes></span>
@@ -26,6 +27,6 @@
   <span *ngSwitchWhen="'Skip'"></span>
 
   <span *ngSwitchDefault>
-    **Unsupported** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}
+    **Unsupported** sre_anca_id:{{question.sre_anca_id}} P{{question.page_id}}.Q{{question.question_id}} Bypass:{{question.bypass_property}} sre_foca_id:{{question.sre_foca_id}} - {{question.question_text}}
     </span>
 </div>
