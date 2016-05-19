@@ -9,7 +9,7 @@
     </span>
 </div>
 
-<div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
+<div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer' && FormatCategory[question.sre_foca_id] !== 'Dummy'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
   <span *ngSwitchWhen="'Home'">                               <home             [question]="question"></home></span>
   <span *ngSwitchWhen="'Consent'">                            <consent          [question]="question"></consent></span>
   <span *ngSwitchWhen="'Checkboxes'">                         <checkboxes       [question]="question"></checkboxes></span>
