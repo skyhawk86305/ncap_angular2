@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
-import { DomainOption } from   '../../../app/types/domain-option';
+import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
@@ -84,7 +84,7 @@ export class CheckboxesComponent implements OnInit {
       // Split the string into an array
       let splitArray: string[] = serializedUserInput.split(',');
 
-      if (splitArray.find((i) => i === 'other:')) {
+      if (splitArray.find((i: string) => i === 'other:')) {
         this.userInputOther = splitArray.pop(); // Other value will be the last item in the array
         splitArray.pop(); // discare the element for 'other:'
       }

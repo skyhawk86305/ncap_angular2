@@ -7,3 +7,5 @@ export class DomainOption {
   // Below not populated from JSON file
   toolTipId: number; // xyzzy Temp property to get Tooltips partially working 
 }
+
+

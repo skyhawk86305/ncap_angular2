@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { DomainOption } from   '../../../app/types/domain-option';
+import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
 import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixElement } from '../../../app/types/matrix-element';

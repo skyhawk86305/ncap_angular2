@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
-import { DomainOption } from   '../../../app/types/domain-option';
+import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
 import { Question } from       '../../../app/types/question';
 import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
@@ -46,9 +46,7 @@ export class DropdownComponent implements OnInit {
       // Copy the array as we are going to modify it
       result = result.slice(0);
       // Add 'Please select' as the first option
-      let pleaseSelecteDomainOption: DomainOption = new DomainOption();
-      pleaseSelecteDomainOption.displayed_value = '---Please select---';
-      pleaseSelecteDomainOption.stored_value = '';
+      let pleaseSelecteDomainOption: DomainOption = new DomainOption(-1, -1, '---Please select---');
       result.unshift(pleaseSelecteDomainOption);
     }
 
