@@ -2,10 +2,10 @@ import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
 import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
-import { Question } from  '../../../app/types/question';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data/json-for-debugging/user-input-senario1';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
 
 @Component({
     selector: 'page',
@@ -14,7 +14,7 @@ import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data/json-for-debugging/
 })
 export class QuestionContainerComponent implements OnInit {
 
-    questions: Question[];
+    questions: PageQuestion[];
     renderButtons: boolean = true;
     that: QuestionContainerComponent;
 

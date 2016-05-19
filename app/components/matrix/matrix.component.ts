@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
-import { Question } from       '../../../app/types/question';
 import { MatrixElement } from '../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
@@ -12,6 +11,7 @@ import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.s
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'matrix',
@@ -20,7 +20,7 @@ import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
 })
 export class MatrixComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   @Input() showValidation: boolean = true;
   domainOptions: DomainOption[];
   questionToolTipId: number = -1;

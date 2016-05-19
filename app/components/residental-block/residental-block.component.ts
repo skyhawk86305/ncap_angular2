@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
-import { Question } from       '../../../app/types/question';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'residental-block',
@@ -9,7 +9,7 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 })
 export class ResidentalBlockComponent {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type

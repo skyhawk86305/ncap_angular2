@@ -1,7 +1,7 @@
-import { Question } from       '../../app/types/question';
+import { PageQuestion } from '../../app/types/database-data/new/page-question';
 
 export class ComponentHelperClass {
-  static addTooltipIfNecessary(question: Question) {
+  static addTooltipIfNecessary(question: PageQuestion) {
     // Does the question contain a tooltip?
     if (question.question_text.indexOf('--TT') >= 0) {
       let position = question.question_text.indexOf('--TT');

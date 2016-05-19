@@ -1,8 +1,8 @@
-import { Question } from  '../../app/types/question';
 import { QuestionContainerComponent } from  '../../app/components/question-containter/question-containter.component';
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
+import { PageQuestion } from '../../app/types/database-data/new/page-question';
 
 export class NavigationSingleton {
 
@@ -28,15 +28,15 @@ export class NavigationSingleton {
         return aggregateResult;
     }
 
-    getQuestionsToRender(): { questions: Question[], pageVisible: boolean, renderButtons: boolean } {
+    getQuestionsToRender(): { questions: PageQuestion[], pageVisible: boolean, renderButtons: boolean } {
         // Find questions for current page
         let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
-        let questions: Question[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
+        let questions: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
 
         let atLeastOneVisibleQuestion = false;
 
         for (let curQuestion of questions) {
-            atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible();
+            atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
         }
 
         return { questions: questions, pageVisible: atLeastOneVisibleQuestion, renderButtons: pageId > 2 };
@@ -56,7 +56,7 @@ export class NavigationSingleton {
 
         // If validation should be shown update show_validation property in the questions
         if (aggregateResult !== ValidationResult.ok) {
-            let curQuestions: Question[] = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
+            let curQuestions: PageQuestion[] = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
             for (let curQuestion of curQuestions) {
                 curQuestion.show_validation = true;
             }

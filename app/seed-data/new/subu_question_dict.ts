@@ -1,4 +1,4 @@
-import { SubuQuestions } from '../types/database-data/subu-questions';
+import { SubuQuestions } from '../../types/database-data/new/subu-questions';
 
 export var subuQuestionDict: SubuQuestions = {
     "1200": [

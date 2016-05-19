@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
-import { Question } from       '../../../app/types/question';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 import { TooltipComponent } from '../tooltip/tooltip.component';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'textbox',
@@ -14,7 +14,7 @@ import { TooltipComponent } from '../tooltip/tooltip.component';
 })
 export class TextboxComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
   previouslySelectedStoredValue: string;
 

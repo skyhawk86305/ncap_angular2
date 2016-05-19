@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
-import { Question } from       '../../../app/types/question';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
 
 @Component({
     selector: 'home',
@@ -9,7 +9,7 @@ import { Question } from       '../../../app/types/question';
 })
 export class HomeComponent {
 
-    @Input() question: Question;
+    @Input() question: PageQuestion;
 
 
     childclicked() {

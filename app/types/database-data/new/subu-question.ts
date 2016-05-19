@@ -1,5 +1,5 @@
-import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
-import { FormatCategory } from '../../../app/types/enums/format-category.enum';
+import { AnswerCategory } from '../../../../app/types/enums/answer-category.enum';
+import { FormatCategory } from '../../../../app/types/enums/format-category.enum';
 
 export class SubuQuestion {
     sre_parent_id: string;

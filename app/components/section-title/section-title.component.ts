@@ -1,6 +1,5 @@
 import { Component, Input } from 'angular2/core';
-import { Question } from       '../../../app/types/question';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'section-title',
@@ -8,11 +7,5 @@ import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.s
 })
 export class SectionTitleComponent {
 
-  @Input() question: Question;
-
-  constructor(
-    
-  ) {
-  }
-
+  @Input() question: PageQuestion;
 }

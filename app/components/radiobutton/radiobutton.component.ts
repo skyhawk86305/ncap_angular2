@@ -1,23 +1,22 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
-import { DomainOption } from   '../../../app/types/domain-option';
-import { Question } from       '../../../app/types/question';
-import { TooltipComponent } from '../tooltip/tooltip.component';
+import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
 import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { TooltipComponent } from '../tooltip/tooltip.component';
 
 @Component({
   selector: 'radio-buttons',
   templateUrl: 'app/components/radiobutton/radioButtons.html',
   directives: [TooltipComponent]
-
 })
 export class RadioButtonComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
 
   domainOptions: DomainOption[];

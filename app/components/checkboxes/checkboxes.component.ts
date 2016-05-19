@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../component-helper-class';
 import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
-import { Question } from       '../../../app/types/question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
@@ -9,6 +8,7 @@ import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load
 import { UserInput } from  '../../../app/types/user-input';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
+import { PageQuestion } from '../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'checkboxes',
@@ -17,7 +17,7 @@ import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 })
 export class CheckboxesComponent implements OnInit {
 
-  @Input() question: Question;
+  @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
   domainOptions: DomainOption[];
   showOtherTextBoxForStoredValue: number = -1;
