@@ -9,6 +9,12 @@ import { Sre } from '../../app/types/database-data/sre';
 import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
 import _ from 'lodash';
 
+import { surveyPageDict } from '../../app/seed-data/new/survey_page_dict';
+import { SurveyPage } from '../../app/types/database-data/new/survey-page';
+import { Page } from '../../app/types/database-data/new/page';
+
+//sortedUniquePages
+
 export class SeedDataSingleton {
 
     private static _instance: SeedDataSingleton = new SeedDataSingleton();
@@ -39,13 +45,14 @@ export class SeedDataSingleton {
     // Output one Question class for the app to use?
     private preProcessData() {
         // Find unique page numbers + order by page id
-        let sortedUniquePages = _.orderBy(surveyPageSre, 'page_sort_order');
-        sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
+        //let sortedUniquePages = _.orderBy(surveyPageSre, 'page_sort_order');
+        //sortedUniquePages = _.sortedUniqBy(sortedUniquePages, 'page_sort_order');
+        let sortedUniquePages = surveyPageDict[1];
         this.totalPages = sortedUniquePages.length;
         let sortedSurveyRenderingElements = _.orderBy(sre, 'sre_sort_order');
 
         // Loop through pages, showing question number + text
-        for (let curPage of sortedUniquePages as SurveyPageSre[]) {
+        for (let curPage of sortedUniquePages as Page[]) {
 
             // Get all elements for this page (these elements link to Sre for the rest of the data)
             let curPageElements = _.filter(surveyPageSre, { page_sort_order: curPage.page_sort_order });
@@ -81,7 +88,7 @@ export class SeedDataSingleton {
                     question.error_msg_lang1 = surveyRenderingElement.error_msg_lang1;
                     question.bypass_var = surveyRenderingElement.bypass_var;
 
-                    question.page_id = curPage.seq_pag_id;
+                    question.page_id = curPage.page_id;
 
                     // xyzzy Temp hacks to deal with data we don't need
                     if (question.page_id === 1) {
