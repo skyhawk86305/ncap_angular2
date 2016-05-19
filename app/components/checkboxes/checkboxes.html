@@ -14,12 +14,12 @@
 
     <div class="form-group ng-input">
         <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index">
-            <span (click)='toggleCheckbox(item.value)'>
-                <input type="checkbox" id="{{item.value}}" [checked]='isCheckboxSelected(+item.value)'> {{item.value}} 
+            <span (click)='toggleCheckbox(item.stored_value)'>
+                <input type="checkbox" id="{{item.stored_value}}" [checked]='isCheckboxSelected(+item.stored_value)'> {{item.displayed_value}} 
                 <tooltip *ngIf="item.toolTipId>0" [toolTipId]="item.toolTipId"></tooltip> 
             </span>
             <!-- Optional Other TextBox -->
-            <span *ngIf='item.value == showOtherTextBoxForStoredValue && isCheckboxSelected(showOtherTextBoxForStoredValue)'>
+            <span *ngIf='item.stored_value == showOtherTextBoxForStoredValue && isCheckboxSelected(showOtherTextBoxForStoredValue)'>
                 <input class='form-control' type="text" placeholder='(Please Indicate)' [ngModel]='userInputOther' (ngModelChange)='otherChanged($event)'/>
             </span>
 

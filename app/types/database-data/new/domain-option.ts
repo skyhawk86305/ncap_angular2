@@ -4,8 +4,8 @@ export class DomainOption {
 
   constructor(
     public sort_order: number,
-    public name: number,
-    public value: string
+    public stored_value: number,
+    public displayed_value: string
   ) { }
 
 }

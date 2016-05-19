@@ -6,8 +6,8 @@
 <!-- render options for this element -->
 <td class="mat_c ng-scope" *ngFor="#item of domainOptions; #idx = index">
     <input type="radio" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" 
-    value="{{item.value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.value)" 
-    [checked]="previouslySelectedRadioButton == item.value">
+    value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)" 
+    [checked]="previouslySelectedRadioButton == item.stored_value">
 </td>
 
 <!-- render textbox  -->

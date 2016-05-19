@@ -15,7 +15,7 @@
             <thead style="padding-left: 1em;border-bottom:1pt solid black;">
                 <tr>
                     <th></th>
-                    <th class='mat_c_th' *ngFor="#curOption of domainOptions">{{curOption.value}}</th>
+                    <th class='mat_c_th' *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</th>
                 </tr>
             </thead>
              <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" 
@@ -30,7 +30,7 @@
             <thead style="padding-left: 1em;border-bottom:1pt solid black;">
                 <tr>
                     <th></th>
-                    <th class='mat_c_th' *ngFor="#curOption of domainOptions">{{curOption.value}}</th>
+                    <th class='mat_c_th' *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</th>
                 </tr>
             </thead>
              <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" 
