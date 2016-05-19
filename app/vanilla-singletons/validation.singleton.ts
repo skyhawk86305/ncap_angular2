@@ -43,7 +43,7 @@ export class ValidationSingleton {
     validateQuestion(question: PageQuestion) {
         let result: ValidationResult;
 
-        if (question.validation_type === ValidationType.optional || question.validation_type === ValidationType.notApplicable) {
+        if (question.bypass_enum_code === ValidationType.optional || question.bypass_enum_code === ValidationType.notApplicable) {
             result = ValidationResult.ok;
         } else {
             let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(question.tracking_key);
@@ -52,7 +52,7 @@ export class ValidationSingleton {
             if (populated) {
                 result = ValidationResult.ok;
             } else {
-                result = (question.validation_type === ValidationType.requested) ?
+                result = (question.bypass_enum_code === ValidationType.requested) ?
                     ValidationResult.requested : ValidationResult.required;
             }
         }

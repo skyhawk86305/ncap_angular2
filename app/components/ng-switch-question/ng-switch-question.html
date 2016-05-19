@@ -1,4 +1,4 @@
-<!--{{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{question.validation_type}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}-->
+<!--{{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{question.bypass_enum_code}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}-->
 
 <div *ngIf="AnswerCategory[question.sre_anca_id] === 'No_Answer'" [ngSwitch]=FormatCategory[question.sre_foca_id]>
   <span *ngSwitchWhen="'Section_Title'">                      <section-title              [question]="question"></section-title></span>
