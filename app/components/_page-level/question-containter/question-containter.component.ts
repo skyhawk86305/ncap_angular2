@@ -1,7 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
-import { NgSwitchQuestionComponent } from '../../ng-switch-question/ng-switch-question.component';
+import { NgSwitchQuestionComponent } from '../../_question-level-elements/ng-switch-question/ng-switch-question.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';

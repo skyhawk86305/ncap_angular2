@@ -1,18 +1,18 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { ComponentHelperClass } from  '../component-helper-class';
-import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
+import { ComponentHelperClass } from  '../../component-helper-class';
+import { DomainOption } from   '../../../../app/types/database-data/new/domain-option';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
-import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
-import { UserInput } from  '../../../app/types/user-input';
-import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
-import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
+import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
+import { UserInput } from  '../../../../app/types/user-input';
+import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
+import { AnswerCategory } from '../../../../app/types/enums/answer-category.enum';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'checkboxes',
-  templateUrl: 'app/components/checkboxes/checkboxes.html',
+  templateUrl: 'app/components/_question-level-elements/checkboxes/checkboxes.html',
   directives: [TooltipComponent]
 })
 export class CheckboxesComponent implements OnInit {

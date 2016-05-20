@@ -1,5 +1,5 @@
 import { Component, OnInit } from 'angular2/core';
-import { NgSwitchQuestionComponent } from '../../ng-switch-question/ng-switch-question.component';
+import { NgSwitchQuestionComponent } from '../../_question-level-elements/ng-switch-question/ng-switch-question.component';
 import { HomeComponent } from '../home/home.component';
 import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.singleton';
 import { PageQuestion } from '../../../../app/types/database-data/new/page-question';

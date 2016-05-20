@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
-import { HomeComponent } from '../_page-level/home/home.component';
-import { ConsentComponent } from '../_page-level/consent/consent.component';
-import { ResidentalBlockComponent } from '../_page-level/residental-block/residental-block.component';
+import { HomeComponent } from '../../_page-level/home/home.component';
+import { ConsentComponent } from '../../_page-level/consent/consent.component';
+import { ResidentalBlockComponent } from '../../_page-level/residental-block/residental-block.component';
 
 import { CheckboxesComponent } from '../checkboxes/checkboxes.component';
 import { DateComponent } from '../date/date.component';
@@ -12,13 +12,13 @@ import { RadioButtonComponent } from '../radiobutton/radiobutton.component';
 import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
-import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
-import { FormatCategory } from '../../../app/types/enums/format-category.enum';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { AnswerCategory } from '../../../../app/types/enums/answer-category.enum';
+import { FormatCategory } from '../../../../app/types/enums/format-category.enum';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
     selector: 'ng-switch-question',
-    templateUrl: 'app/components/ng-switch-question/ng-switch-question.html',
+    templateUrl: 'app/components/_question-level-elements/ng-switch-question/ng-switch-question.html',
     directives: [HomeComponent, RadioButtonComponent, CheckboxesComponent,
         DropdownComponent, DateComponent, TextboxComponent,
         ConsentComponent, MatrixComponent, SectionTitleComponent,

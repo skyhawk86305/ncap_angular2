@@ -1,19 +1,20 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
+import { DomainOption } from   '../../../../app/types/database-data/new/domain-option';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { MatrixElement } from '../../../app/types/matrix-element';
-import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { UserInput } from  '../../../app/types/user-input';
-import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { MatrixElement } from '../../../../app/types/matrix-element';
+import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { UserInput } from  '../../../../app/types/user-input';
+import { AnswerCategory } from  '../../../../app/types/enums/answer-category.enum';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
-  selector: '[matrixElement2]',
-  templateUrl: 'app/components/matrixElement2/matrixElement2.html',
+  selector: '[matrixElement]',
+  templateUrl: 'app/components/_question-level-elements/matrix-row/matrix-row.html',
   directives: [TooltipComponent]
+
 })
-export class MatrixElement2Component implements OnInit {
+export class MatrixRowComponent implements OnInit {
 
   @Input() matrixElement: MatrixElement;
   @Input('question') question: PageQuestion;

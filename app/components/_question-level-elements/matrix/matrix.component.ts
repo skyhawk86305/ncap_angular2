@@ -1,21 +1,21 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { ComponentHelperClass } from  '../component-helper-class';
-import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
-import { MatrixElement } from '../../../app/types/matrix-element';
+import { ComponentHelperClass } from  '../../component-helper-class';
+import { DomainOption } from   '../../../../app/types/database-data/new/domain-option';
+import { MatrixElement } from '../../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
-import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
-import { SeedDataMatrixSingleton } from '../../../app/vanilla-singletons/seed-data-matrix.singleton';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { UserInput } from  '../../../app/types/user-input';
-import { ValidationType } from '../../../app/types/enums/validation-type.enum';
-import { AnswerCategory } from  '../../../app/types/enums/answer-category.enum';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
+import { SeedDataMatrixSingleton } from '../../../../app/vanilla-singletons/seed-data-matrix.singleton';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { UserInput } from  '../../../../app/types/user-input';
+import { ValidationType } from '../../../../app/types/enums/validation-type.enum';
+import { AnswerCategory } from  '../../../../app/types/enums/answer-category.enum';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'matrix',
-  templateUrl: 'app/components/matrix/matrix.html',
+  templateUrl: 'app/components/_question-level-elements/matrix/matrix.html',
   directives: [TooltipComponent, MatrixRowComponent, MatrixElement2Component]
 })
 export class MatrixComponent implements OnInit {

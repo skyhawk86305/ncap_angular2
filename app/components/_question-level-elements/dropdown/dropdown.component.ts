@@ -1,17 +1,17 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { ComponentHelperClass } from  '../component-helper-class';
-import { DomainOption } from   '../../../app/types/database-data/new/domain-option';
-import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
-import { UserInput } from  '../../../app/types/user-input';
-import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { ComponentHelperClass } from  '../../component-helper-class';
+import { DomainOption } from   '../../../../app/types/database-data/new/domain-option';
+import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
+import { UserInput } from  '../../../../app/types/user-input';
+import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'dropdown',
-  templateUrl: 'app/components/dropdown/dropdown.html',
+  templateUrl: 'app/components/_question-level-elements/dropdown/dropdown.html',
   directives: [TooltipComponent]
 })
 export class DropdownComponent implements OnInit {

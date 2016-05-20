@@ -1,15 +1,15 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { ComponentHelperClass } from  '../component-helper-class';
-import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { UserInput } from  '../../../app/types/user-input';
-import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { ComponentHelperClass } from  '../../component-helper-class';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { UserInput } from  '../../../../app/types/user-input';
+import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'textbox',
-  templateUrl: 'app/components/textbox/textbox.html',
+  templateUrl: 'app/components/_question-level-elements/textbox/textbox.html',
   directives: [TooltipComponent]
 })
 export class TextboxComponent implements OnInit {
