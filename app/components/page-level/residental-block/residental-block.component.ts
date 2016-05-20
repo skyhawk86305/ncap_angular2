@@ -1,4 +1,5 @@
 import { Component, Input } from 'angular2/core';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
@@ -9,11 +10,12 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 })
 export class ResidentalBlockComponent {
 
-  @Input() question: PageQuestion;
+  @Input() pageId: number;
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type
-  ValidationResult = ValidationResult;
+  public NavigationSingleton = NavigationSingleton;
+  public ValidationResult = ValidationResult;
 
   //ngAfterContentChecked() {
   //ngAfterViewInit() {
@@ -21,8 +23,9 @@ export class ResidentalBlockComponent {
   //ngAfterContentInit() {
   //ngAfterViewChecked() {
   ngAfterContentInit() {
+    console.log('Page Id: ' + this.pageId);
     // Hack to stop the weird error showing in Diagnostics mode
-    setTimeout(() => UserInputSingleton.instanceOf().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
+    //setTimeout(() => UserInputSingleton.instanceOf().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
   }
 
 }

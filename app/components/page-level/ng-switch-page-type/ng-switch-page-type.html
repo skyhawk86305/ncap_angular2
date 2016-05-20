@@ -11,6 +11,11 @@
   <span *ngSwitchWhen="'normal'">                      <question-container [pageId]="pageData.page_id"></question-container></span>
   <span *ngSwitchWhen="'consent'">                      <consent></consent></span>
   <span *ngSwitchWhen="'home'">                         <home></home></span>
+  <!--<span *ngSwitchWhen="'birthCertificate'">                         <residental-block  [pageId]="pageData.page_id"></residental-block></span>-->
+  <span *ngSwitchWhen="'residentialBlockPart1'">                         <residental-block [pageId]="pageData.page_id"></residental-block></span>
+  <span *ngSwitchWhen="'residentialBlockPart2'">                         <residental-block [pageId]="pageData.page_id"></residental-block></span>
+  <span *ngSwitchWhen="'residentialBlockPart3'">                         <residental-block [pageId]="pageData.page_id"></residental-block></span>
+  <span *ngSwitchWhen="'residentialBlockPart3'">                         <residental-block [pageId]="pageData.page_id"></residental-block></span>
 
   <span *ngSwitchDefault>
     **Unsupported** pageData.page_type = {{pageData.page_type}}
@@ -21,10 +26,10 @@
      = 1,
      = 2,
      = 3,
-    birthCertificate = 4,
-    residentialBlockPart1 = 5,
-    residentialBlockPart2 = 6,
-    residentialBlockPart3 = 7,
+     = 4,
+     = 5,
+     = 6,
+     = 7,
     reContact = 8,
     lastPage = 9
 -->
