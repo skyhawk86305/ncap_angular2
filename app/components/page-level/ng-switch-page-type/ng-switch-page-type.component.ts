@@ -5,21 +5,27 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
+import { Page } from '../../../../app/types/database-data/page';
 
 import { QuestionContainerComponent } from '../question-container/question-container.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
+import { PageType } from '../../../types/enums/page-type.enum';
+
+import { HomeComponent } from '../../page-level/home/home.component';
+import { ConsentComponent } from '../../page-level/consent/consent.component';
+import { ResidentalBlockComponent } from '../../page-level/residental-block/residental-block.component';
 
 @Component({
     selector: 'ng-switch-page-type',
     templateUrl: 'app/components/page-level/ng-switch-page-type/ng-switch-page-type.html',
-    directives: [QuestionContainerComponent, NgSwitchQuestionComponent, DiagnosticComponent]
+    directives: [QuestionContainerComponent, NgSwitchQuestionComponent, 
+    DiagnosticComponent, HomeComponent,
+        ConsentComponent, ResidentalBlockComponent]
 })
 export class NgSwitchPageTypeComponent implements OnInit {
 
-    questions: PageQuestion[];
-    renderButtons: boolean = true;
-    that: NgSwitchPageTypeComponent;
-
+    pageData: Page
+    public PageType = PageType;
     public NavigationSingleton = NavigationSingleton;
 
     constructor(
@@ -34,9 +40,7 @@ export class NgSwitchPageTypeComponent implements OnInit {
     }
 
     public oberservedDataChanged() {
-        let data = NavigationSingleton.instanceOf().getQuestionsToRender();
-        this.questions = data.questions;
-        this.renderButtons = data.renderButtons;
+        this.pageData = NavigationSingleton.instanceOf().getPageToRender();
     }
 
     private handleUrlParameters() {

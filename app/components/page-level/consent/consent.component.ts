@@ -9,12 +9,11 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
     templateUrl: 'app/components/page-level/consent/consent.html'
 })
 export class ConsentComponent implements OnInit {
-
-    @Input() question: PageQuestion;
     hasConsent: boolean = false;
+    TRACKING_KEY: string = 'initial_consent';
 
     ngOnInit() {
-        let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.question.tracking_key);
+        let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.TRACKING_KEY);
         if (previousUserInput) {
             this.hasConsent = (previousUserInput.storedValue === 'Y');
         }
@@ -22,7 +21,7 @@ export class ConsentComponent implements OnInit {
 
     next() {
         console.log('Clicked next');
-        UserInputSingleton.instanceOf().setUserInput('initial_consent', 'Y');
+        UserInputSingleton.instanceOf().setUserInput(this.TRACKING_KEY, 'Y');
         NavigationSingleton.instanceOf().next();
     }
 
@@ -30,5 +29,4 @@ export class ConsentComponent implements OnInit {
         // Todo
         console.log('Clicked exit');
     }
-
 }

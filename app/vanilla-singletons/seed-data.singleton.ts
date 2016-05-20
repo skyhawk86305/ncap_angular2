@@ -51,6 +51,13 @@ export class SeedDataSingleton {
         return result;
     }
 
+    getPage(page_Id: number): Page {
+        let result = surveyPageDict[1].find((i) => i.page_id === page_Id); 
+        return result;
+    }
+    
+    
+
     // henry_db_related
     // This whole method should be relocated to the Node app which pre-processes data
     // Output one Question class for the app to use?

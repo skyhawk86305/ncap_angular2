@@ -3,6 +3,7 @@ import { ValidationResult } from  '../../app/types/enums/validation-result.enum'
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
 import { PageQuestion } from '../../app/types/database-data/page-question';
+import { Page } from '../../app/types/database-data/page';
 
 export class NavigationSingleton {
 
@@ -26,6 +27,12 @@ export class NavigationSingleton {
         let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()
             .validateQuestionArray(questionsToValidate);
         return aggregateResult;
+    }
+
+    getPageToRender(): Page {
+        let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber); //xyzzy5 ned to reconcile use of page number and page id
+        
+        return result;
     }
 
     getQuestionsToRender(): { questions: PageQuestion[], pageVisible: boolean, renderButtons: boolean } {

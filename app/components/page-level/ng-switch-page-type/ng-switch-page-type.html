@@ -1,32 +1,60 @@
 <!-- Progress Bar -->
 <div *ngIf="NavigationSingleton.instanceOf().getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
-  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="NavigationSingleton.instanceOf().getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + NavigationSingleton.instanceOf().getPercentageComplete() + '%;'">  
-{{ NavigationSingleton.instanceOf().getPercentageComplete() }}% (pg 
-{{ NavigationSingleton.instanceOf().getCurrentPageNumber() }})
+  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="NavigationSingleton.instanceOf().getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + NavigationSingleton.instanceOf().getPercentageComplete() + '%;'">
+    {{ NavigationSingleton.instanceOf().getPercentageComplete() }}% (pg {{ NavigationSingleton.instanceOf().getCurrentPageNumber() }})
   </div>
 </div>
 
-<question-container [questions]="questions"></question-container>
+<!--{{ PageType[pageData.page_type] }}-->
 
-<BR>
-<BR>
+<div [ngSwitch]=PageType[pageData.page_type]>
+  <!--<span *ngSwitchWhen="'normal'">                      <question-container [pageId]="pageData.page_id"></question-container></span>-->
+  <span *ngSwitchWhen="'consent'">                      <consent></consent></span>
+  <span *ngSwitchWhen="'home'">                         <home></home></span>
 
-<!--Buttons-->
-<!--<div *ngIf="renderButtons" align="center" class="navigation-buttons ng-scope">
+  <span *ngSwitchDefault>
+    **Unsupported** pageData.page_type = {{pageData.page_type}}
+    </span>
+</div>
+<!--
 
-  <button type="button" class="btn btn-warning btn-lg ng-isolate-scope" style="outline:none" (click)="NavigationSingleton.instanceOf().exit()" confirm-ok="OK - Exit Now" confirm-cancel="Return to Survey" confirm-title="Exit Survey" confirm="If you exit the survey now you will not be able to return and finish it later.  We will not keep any information you have entered so far.  Are you sure you want to exit?"
-    nga11y-modal-closer="">
-      <i class="fa fa-times"></i> Exit Survey 
-      </button>
+     = 1,
+     = 2,
+     = 3,
+    birthCertificate = 4,
+    residentialBlockPart1 = 5,
+    residentialBlockPart2 = 6,
+    residentialBlockPart3 = 7,
+    reContact = 8,
+    lastPage = 9
+-->
+<!--
+<div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer' && FormatCategory[question.sre_foca_id] !== 'Dummy'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
+  <span *ngSwitchWhen="'Home'">                               <home             [question]="question"></home></span>
+  <span *ngSwitchWhen="'Consent'">                            <consent          [question]="question"></consent></span>
+  <span *ngSwitchWhen="'Checkboxes'">                         <checkboxes       [question]="question"></checkboxes></span>
+  <span *ngSwitchWhen="'Checkboxes_TextboxLastEntry'">        <checkboxes       [question]="question"></checkboxes></span>
+  <span *ngSwitchWhen="'DropDown'">                           <dropdown         [question]="question"></dropdown></span>
+  <span *ngSwitchWhen="'Textbox'">                            <textbox          [question]="question"></textbox></span>
+  <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons    [question]="question"></radio-buttons></span>
+  <span *ngSwitchWhen="'Date_MonthDayYear'">                  <date             [question]="question"></date></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix           [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix           [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons_DropDownLastCol'"> <matrix           [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'ResidentialBlock'">                   <residental-block [question]="question"></residental-block></span>
 
-  <button type="button" class="btn btn-primary btn-lg" style="outline:none" (click)="NavigationSingleton.instanceOf().back()" nga11y-modal-closer=""><i class="fa fa-arrow-circle-left"></i> Back
-  </button>
+  <span *ngSwitchWhen="'Skip'"></span>
 
-  <button type="button" nga11y-modal-closer="" style="outline:none" class="btn btn-primary btn-lg ng-binding" (click)="NavigationSingleton.instanceOf().next()">
-      <i class="fa fa-arrow-circle-right" ng-class="{'fa-arrow-circle-right':vm.currPage!==vm.breakArr.length, 'fa-paper-plane-o':vm.currPage===vm.breakArr.length}"></i> Next
-      </button>
-
+  <span *ngSwitchDefault>
+    **Unsupported** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}
+    </span>
 </div>-->
+
+
+
+
+<BR>
+<BR>
 
 <BR>
 <BR>

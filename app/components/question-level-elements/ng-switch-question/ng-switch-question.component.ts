@@ -1,9 +1,5 @@
 import { Component, Input, OnInit } from 'angular2/core';
 
-import { HomeComponent } from '../../page-level/home/home.component';
-import { ConsentComponent } from '../../page-level/consent/consent.component';
-import { ResidentalBlockComponent } from '../../page-level/residental-block/residental-block.component';
-
 import { CheckboxesComponent } from '../checkboxes/checkboxes.component';
 import { DateComponent } from '../date/date.component';
 import { DropdownComponent } from '../dropdown/dropdown.component';
@@ -19,10 +15,10 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 @Component({
     selector: 'ng-switch-question',
     templateUrl: 'app/components/question-level-elements/ng-switch-question/ng-switch-question.html',
-    directives: [HomeComponent, RadioButtonComponent, CheckboxesComponent,
+    directives: [RadioButtonComponent, CheckboxesComponent,
         DropdownComponent, DateComponent, TextboxComponent,
-        ConsentComponent, MatrixComponent, SectionTitleComponent,
-        PreQuestionIntroComponent, ResidentalBlockComponent]
+        MatrixComponent, SectionTitleComponent,
+        PreQuestionIntroComponent]
 })
 export class NgSwitchQuestionComponent implements OnInit {
 
