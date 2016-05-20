@@ -3,7 +3,7 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 
 @Component({
   selector: 'last-page',
-  templateUrl: 'app/components/last-page/last-page.html'
+  templateUrl: 'app/components/page-level/last-page/last-page.html'
 })
 export class LastPageComponent {
 

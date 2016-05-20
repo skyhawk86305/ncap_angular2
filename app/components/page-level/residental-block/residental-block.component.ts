@@ -1,8 +1,5 @@
 import { Component, Input } from 'angular2/core';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
-import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
-import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
-import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
   selector: 'residental-block',
@@ -19,5 +16,4 @@ export class ResidentalBlockComponent {
     // Hack to stop the weird error showing in Diagnostics mode
     //setTimeout(() => UserInputSingleton.instanceOf().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
   }
-
 }

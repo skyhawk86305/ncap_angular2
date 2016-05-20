@@ -3,7 +3,7 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 
 @Component({
   selector: 're-contact',
-  templateUrl: 'app/components/re-contact/re-contact/re-contact.html'
+  templateUrl: 'app/components/page-level/re-contact/re-contact.html'
 })
 export class ReContactComponent {
 
