@@ -1,16 +1,18 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
-import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
+import { QuestionContainerComponent } from '../question-container/question-container.component';
+import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
+
 @Component({
     selector: 'ng-switch-page-type',
     templateUrl: 'app/components/page-level/ng-switch-page-type/ng-switch-page-type.html',
-    directives: [NgSwitchQuestionComponent, DiagnosticComponent]
+    directives: [QuestionContainerComponent, NgSwitchQuestionComponent, DiagnosticComponent]
 })
 export class NgSwitchPageTypeComponent implements OnInit {
 
@@ -26,8 +28,6 @@ export class NgSwitchPageTypeComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log('xyzzy');
-
         this.handleUrlParameters();
         NavigationSingleton.instanceOf().registerAsObserver(this);
         this.oberservedDataChanged();

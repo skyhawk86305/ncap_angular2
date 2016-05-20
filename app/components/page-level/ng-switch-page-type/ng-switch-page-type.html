@@ -6,18 +6,13 @@
   </div>
 </div>
 
-<!--Loop for all questions, letting ng-switch delegate the rendering-->
-<div *ngFor="#curQuestionData of questions" class="container ng-scope" style="max-width: 80%;margin: auto;">
-  <!--Question is {{curQuestion.question_text}}-->
-  <!--<ng-switch-question question-data="curQuestionData"></ng-switch-question>oo-->
-  <ng-switch-question [question]="curQuestionData"></ng-switch-question>
-</div>
+<question-container [questions]="questions"></question-container>
 
 <BR>
 <BR>
 
 <!--Buttons-->
-<div *ngIf="renderButtons" align="center" class="navigation-buttons ng-scope">
+<!--<div *ngIf="renderButtons" align="center" class="navigation-buttons ng-scope">
 
   <button type="button" class="btn btn-warning btn-lg ng-isolate-scope" style="outline:none" (click)="NavigationSingleton.instanceOf().exit()" confirm-ok="OK - Exit Now" confirm-cancel="Return to Survey" confirm-title="Exit Survey" confirm="If you exit the survey now you will not be able to return and finish it later.  We will not keep any information you have entered so far.  Are you sure you want to exit?"
     nga11y-modal-closer="">
@@ -31,7 +26,7 @@
       <i class="fa fa-arrow-circle-right" ng-class="{'fa-arrow-circle-right':vm.currPage!==vm.breakArr.length, 'fa-paper-plane-o':vm.currPage===vm.breakArr.length}"></i> Next
       </button>
 
-</div>
+</div>-->
 
 <BR>
 <BR>

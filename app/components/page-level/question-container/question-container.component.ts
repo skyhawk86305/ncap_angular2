@@ -1,4 +1,4 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component, OnInit, Input } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
@@ -8,13 +8,13 @@ import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debuggi
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
-    selector: 'questions-container',
+    selector: 'question-container',
     templateUrl: 'app/components/page-level/question-container/question-container.html',
     directives: [NgSwitchQuestionComponent, DiagnosticComponent]
 })
 export class QuestionContainerComponent implements OnInit {
 
-    questions: PageQuestion[];
+    @Input() questions: PageQuestion[];
     renderButtons: boolean = true;
     //that: QuestionContainerComponent;
 
@@ -26,8 +26,6 @@ export class QuestionContainerComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log('plugh');
-        
         //this.handleUrlParameters();
         // NavigationSingleton.instanceOf().registerAsObserver(this);
         // this.oberservedDataChanged();

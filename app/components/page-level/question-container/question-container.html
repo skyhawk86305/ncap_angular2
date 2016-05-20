@@ -1,11 +1,3 @@
-<!-- Progress Bar -->
-<div *ngIf="NavigationSingleton.instanceOf().getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
-  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="NavigationSingleton.instanceOf().getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + NavigationSingleton.instanceOf().getPercentageComplete() + '%;'">  
-{{ NavigationSingleton.instanceOf().getPercentageComplete() }}% (pg 
-{{ NavigationSingleton.instanceOf().getCurrentPageNumber() }})
-  </div>
-</div>
-
 <!--Loop for all questions, letting ng-switch delegate the rendering-->
 <div *ngFor="#curQuestionData of questions" class="container ng-scope" style="max-width: 80%;margin: auto;">
   <!--Question is {{curQuestion.question_text}}-->
@@ -32,7 +24,3 @@
       </button>
 
 </div>
-
-<BR>
-<BR>
-<diag *ngIf="NavigationSingleton.instanceOf().diagMode"></diag>
