@@ -1,6 +1,6 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-import { QuestionContainerComponent } from './components/page-level/question-containter/question-containter.component';
+import { NgSwitchPageTypeComponent } from './components/page-level/ng-switch-page-type/ng-switch-page-type.component';
 import { AllPagesComponent } from './components/page-level/all-pages/all-pages.component';
 import { TestPageComponent } from './components/page-level/test-page/test-page.component';
 
@@ -19,7 +19,7 @@ import { TestPageComponent } from './components/page-level/test-page/test-page.c
   {
     path: '/',
     name: 'Home',
-    component: QuestionContainerComponent,
+    component: NgSwitchPageTypeComponent,
     useAsDefault: true
   },
   {
@@ -40,12 +40,12 @@ import { TestPageComponent } from './components/page-level/test-page/test-page.c
   {
     path: '/:pageId',
     name: 'SpecificPage1',
-    component: QuestionContainerComponent
+    component: NgSwitchPageTypeComponent
   },
   {
     path: '/scenario/:scenarioId',
     name: 'Scenario',
-    component: QuestionContainerComponent
+    component: NgSwitchPageTypeComponent
   }
 ])
 export class AppComponent {

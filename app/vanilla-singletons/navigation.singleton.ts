@@ -1,4 +1,4 @@
-import { QuestionContainerComponent } from  '../../app/components/page-level/question-containter/question-containter.component';
+import { NgSwitchPageTypeComponent } from '../../app/components/page-level/ng-switch-page-type/ng-switch-page-type.component';
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
@@ -10,7 +10,7 @@ export class NavigationSingleton {
     public diagMode = false; // Is the app in Diagnostic Mode?
     public shownRequestedValidation: number = 0; // We only show 'Requested Validation' message three times
     private _currentPageNumber: number = 1;
-    private _observer: QuestionContainerComponent; // We could use an interface instead of coupling to the class' type
+    private _observer: NgSwitchPageTypeComponent; // We could use an interface instead of coupling to the class' type
 
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
@@ -123,7 +123,8 @@ export class NavigationSingleton {
     }
 
     // Observer registration. We could change to use a vanilla interface
-    registerAsObserver(QuestionContainerComponent: QuestionContainerComponent) {
-        this._observer = QuestionContainerComponent;
+    registerAsObserver(component: NgSwitchPageTypeComponent) {
+        this._observer = component;
     };
 }
+

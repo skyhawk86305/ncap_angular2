@@ -8,15 +8,15 @@ import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debuggi
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
-    selector: 'page',
-    templateUrl: 'app/components/page-level/question-containter/question-containter.html',
+    selector: 'ng-switch-page-type',
+    templateUrl: 'app/components/page-level/ng-switch-page-type/ng-switch-page-type.html',
     directives: [NgSwitchQuestionComponent, DiagnosticComponent]
 })
-export class QuestionContainerComponent implements OnInit {
+export class NgSwitchPageTypeComponent implements OnInit {
 
     questions: PageQuestion[];
     renderButtons: boolean = true;
-    that: QuestionContainerComponent;
+    that: NgSwitchPageTypeComponent;
 
     public NavigationSingleton = NavigationSingleton;
 
@@ -26,6 +26,8 @@ export class QuestionContainerComponent implements OnInit {
     }
 
     ngOnInit() {
+        console.log('xyzzy');
+
         this.handleUrlParameters();
         NavigationSingleton.instanceOf().registerAsObserver(this);
         this.oberservedDataChanged();
@@ -54,6 +56,7 @@ export class QuestionContainerComponent implements OnInit {
         }
 
         if (this._routeParams.get('diag')) {
+            console.log('In Diag mode');
             // enable Diag mode
             NavigationSingleton.instanceOf().diagMode = true;
         }

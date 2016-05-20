@@ -1,0 +1,38 @@
+<!-- Progress Bar -->
+<div *ngIf="NavigationSingleton.instanceOf().getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
+  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="NavigationSingleton.instanceOf().getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + NavigationSingleton.instanceOf().getPercentageComplete() + '%;'">  
+{{ NavigationSingleton.instanceOf().getPercentageComplete() }}% (pg 
+{{ NavigationSingleton.instanceOf().getCurrentPageNumber() }})
+  </div>
+</div>
+
+<!--Loop for all questions, letting ng-switch delegate the rendering-->
+<div *ngFor="#curQuestionData of questions" class="container ng-scope" style="max-width: 80%;margin: auto;">
+  <!--Question is {{curQuestion.question_text}}-->
+  <!--<ng-switch-question question-data="curQuestionData"></ng-switch-question>oo-->
+  <ng-switch-question [question]="curQuestionData"></ng-switch-question>
+</div>
+
+<BR>
+<BR>
+
+<!--Buttons-->
+<div *ngIf="renderButtons" align="center" class="navigation-buttons ng-scope">
+
+  <button type="button" class="btn btn-warning btn-lg ng-isolate-scope" style="outline:none" (click)="NavigationSingleton.instanceOf().exit()" confirm-ok="OK - Exit Now" confirm-cancel="Return to Survey" confirm-title="Exit Survey" confirm="If you exit the survey now you will not be able to return and finish it later.  We will not keep any information you have entered so far.  Are you sure you want to exit?"
+    nga11y-modal-closer="">
+      <i class="fa fa-times"></i> Exit Survey 
+      </button>
+
+  <button type="button" class="btn btn-primary btn-lg" style="outline:none" (click)="NavigationSingleton.instanceOf().back()" nga11y-modal-closer=""><i class="fa fa-arrow-circle-left"></i> Back
+  </button>
+
+  <button type="button" nga11y-modal-closer="" style="outline:none" class="btn btn-primary btn-lg ng-binding" (click)="NavigationSingleton.instanceOf().next()">
+      <i class="fa fa-arrow-circle-right" ng-class="{'fa-arrow-circle-right':vm.currPage!==vm.breakArr.length, 'fa-paper-plane-o':vm.currPage===vm.breakArr.length}"></i> Next
+      </button>
+
+</div>
+
+<BR>
+<BR>
+<diag *ngIf="NavigationSingleton.instanceOf().diagMode"></diag>
