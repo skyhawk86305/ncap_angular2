@@ -5,10 +5,10 @@ import { ValidationResult } from '../../../../app/types/enums/validation-result.
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
-  selector: 'residental-block',
-  templateUrl: 'app/components/page-level/residental-block/residental-block.html'
+  selector: 'birth-certificate',
+  templateUrl: 'app/components/page-level/birth-certificate/birth-certificate.html'
 })
-export class ResidentalBlockComponent {
+export class BirthCertificateComponent {
 
   @Input() pageId: number;
   previouslySelectedStoredValue: string;
@@ -23,7 +23,7 @@ export class ResidentalBlockComponent {
   //ngAfterContentInit() {
   //ngAfterViewChecked() {
   ngAfterContentInit() {
-    console.log('In residental block. Page Id: ' + this.pageId);
+    console.log('Page Id: ' + this.pageId);
     // Hack to stop the weird error showing in Diagnostics mode
     //setTimeout(() => UserInputSingleton.instanceOf().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
   }

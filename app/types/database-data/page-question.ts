@@ -19,7 +19,7 @@ export class PageQuestion {
         public block: string,
         public sre_foca_id: FormatCategory,
         public sre_anca_id: AnswerCategory,
-        public bypass_enum_code: number,
+        public bypass_enum_code: ValidationType,
         public higher_lvl_uid: number,
         public txt_parent_lang1: string,
         public txt_legalrep_lang1: string,
