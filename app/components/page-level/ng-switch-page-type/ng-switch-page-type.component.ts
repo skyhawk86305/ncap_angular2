@@ -41,6 +41,8 @@ export class NgSwitchPageTypeComponent implements OnInit {
 
     public oberservedDataChanged() {
         this.pageData = NavigationSingleton.instanceOf().getPageToRender();
+        console.log("oberservedDataChanged. PageId = " + this.pageData.page_id);
+        
     }
 
     private handleUrlParameters() {

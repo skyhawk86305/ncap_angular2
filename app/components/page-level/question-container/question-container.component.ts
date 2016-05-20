@@ -16,11 +16,11 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 export class QuestionContainerComponent implements OnInit {
 
     @Input() pageId: number;
-    questions: PageQuestion[];
     renderButtons: boolean = true;
+    //questions: PageQuestion[];
     //that: QuestionContainerComponent;
-
     public NavigationSingleton = NavigationSingleton;
+    public SeedDataSingleton = SeedDataSingleton; 
 
     constructor(
         private _routeParams: RouteParams
@@ -29,7 +29,7 @@ export class QuestionContainerComponent implements OnInit {
 
     ngOnInit() {
         console.log('pageId = ' + this.pageId);
-        this.questions = SeedDataSingleton.instanceOf().getQuestionsForPage(this.pageId);
+        //this.questions = SeedDataSingleton.instanceOf().getQuestionsForPage(this.pageId);
         //this.handleUrlParameters();
         // NavigationSingleton.instanceOf().registerAsObserver(this);
         // this.oberservedDataChanged();
