@@ -10,19 +10,17 @@
   <span *ngSwitchWhen="'consent'">                      <consent></consent></span>
   <span *ngSwitchWhen="'home'">                         <home></home></span>
   <span *ngSwitchWhen="'birthCertificate'">             <birth-certificate [pageId]="pageData.page_id"></birth-certificate></span>
-  <span *ngSwitchWhen="'residentialBlockPart1'">        <residental-block [pageId]="pageData.page_id"></residental-block></span>
-  <span *ngSwitchWhen="'residentialBlockPart2'">        <residental-block [pageId]="pageData.page_id"></residental-block></span>
-  <span *ngSwitchWhen="'residentialBlockPart3'">        <residental-block [pageId]="pageData.page_id"></residental-block></span>
-  <span *ngSwitchWhen="'reContact'">                    <re-contact [pageId]="pageData.page_id"></re-contact></span>
+  <span *ngSwitchWhen="'residentialBlockPart1'">        <residental-block  [pageId]="pageData.page_id"></residental-block></span>
+  <span *ngSwitchWhen="'residentialBlockPart2'">        <residental-block  [pageId]="pageData.page_id"></residental-block></span>
+  <span *ngSwitchWhen="'residentialBlockPart3'">        <residental-block  [pageId]="pageData.page_id"></residental-block></span>
+  <span *ngSwitchWhen="'reContact'">                    <re-contact        [pageId]="pageData.page_id"></re-contact></span>
+  <span *ngSwitchWhen="'lastPage'">                     <last-page         [pageId]="pageData.page_id"></last-page></span>
 
   <span *ngSwitchDefault>
     **Unsupported** pageData.page_type = {{pageData.page_type}}
     </span>
 </div>
-<!--
-     = 8,
-    lastPage = 9
--->
+
 <BR>
 <BR>
 

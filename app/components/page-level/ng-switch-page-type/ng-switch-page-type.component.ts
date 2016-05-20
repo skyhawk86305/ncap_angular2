@@ -1,27 +1,27 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
-import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
-import { PageQuestion } from '../../../../app/types/database-data/page-question';
 import { Page } from '../../../../app/types/database-data/page';
-
 import { PageType } from '../../../types/enums/page-type.enum';
-
-import { HomeComponent } from '../../page-level/home/home.component';
-import { ConsentComponent } from '../../page-level/consent/consent.component';
-import { ResidentalBlockComponent } from '../../page-level/residental-block/residental-block.component';
-import { BirthCertificateComponent } from '../../page-level/birth-certificate/birth-certificate.component';
+import { HomeComponent } from '../home/home.component';
+import { ConsentComponent } from '../consent/consent.component';
+import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
+import { BirthCertificateComponent } from '../birth-certificate/birth-certificate.component';
 import { QuestionContainerComponent } from '../question-container/question-container.component';
+import { LastPageComponent } from '../last-page/last-page.component';
+import { ReContactComponent } from '../re-contact/re-contact.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
+import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
 
 @Component({
     selector: 'ng-switch-page-type',
     templateUrl: 'app/components/page-level/ng-switch-page-type/ng-switch-page-type.html',
     directives: [QuestionContainerComponent, NgSwitchQuestionComponent,
         DiagnosticComponent, HomeComponent,
-        BirthCertificateComponent, ConsentComponent, ResidentalBlockComponent]
+        BirthCertificateComponent, ConsentComponent, ResidentalBlockComponent,
+        LastPageComponent, ReContactComponent]
 })
 export class NgSwitchPageTypeComponent implements OnInit {
 
@@ -44,8 +44,6 @@ export class NgSwitchPageTypeComponent implements OnInit {
     public oberservedDataChanged() {
         this.pageData = NavigationSingleton.instanceOf().getPageToRender();
         this.pageId = this.pageData.page_id;
-        console.log("oberservedDataChanged. PageId = " + this.pageData.page_id);
-
     }
 
     private handleUrlParameters() {
