@@ -1,4 +1,4 @@
-import { MatrixElement } from '../../app/types/matrix-element';
+import { SubuQuestion } from '../../app/types/database-data/subu-question';
 import { PageQuestion } from '../../app/types/database-data/page-question';
 import { UserInput } from  '../../app/types/user-input';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
@@ -62,10 +62,10 @@ export class ValidationSingleton {
         question.validation_result = result;
     }
 
-    validateMatrixElement(matrixElement: MatrixElement) {
+    validateMatrixElement(matrixElement: SubuQuestion) {
         let result: ValidationResult;
 
-        if (matrixElement.validation_type === ValidationType.optional) {
+        if (matrixElement.bypass_enum_code === ValidationType.optional) {
             result = ValidationResult.ok;
         } else {
             let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(matrixElement.tracking_key);
@@ -74,7 +74,7 @@ export class ValidationSingleton {
             if (populated) {
                 result = ValidationResult.ok;
             } else {
-                result = (matrixElement.validation_type === ValidationType.requested) ?
+                result = (matrixElement.bypass_enum_code === ValidationType.requested) ?
                     ValidationResult.requested : ValidationResult.required;
             }
         }

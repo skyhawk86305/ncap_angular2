@@ -1,10 +1,4 @@
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
-import { MatrixElement } from '../../app/types/matrix-element';
-// The data
-// import { Sre } from '../types/database-data/sre';
-// import { sre } from '../../app/seed-data/sre';
-// import { subu } from '../../app/seed-data/subu';
-
 import { subuQuestionDict } from '../../app/seed-data/subu_question_dict';
 import { SubuQuestions } from '../types/database-data/subu-questions';
 import { SubuQuestion } from '../types/database-data/subu-question';

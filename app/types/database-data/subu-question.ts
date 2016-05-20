@@ -1,8 +1,13 @@
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
+import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 export class SubuQuestion {
+
+  // Not populated directly from DB Data:
+  validation_result: ValidationResult;
+
   constructor(
     public sre_parent_id: string,
     public sre_uid: number,
@@ -26,4 +31,10 @@ export class SubuQuestion {
     public error_msg_lang1: number,
     public bypass_var: string
   ) { }
+
+  get text(): string {
+    // xyzzy5 - Switch according to value in tracking_key
+    return this.txt_parent_lang1;
+  }
+
 }

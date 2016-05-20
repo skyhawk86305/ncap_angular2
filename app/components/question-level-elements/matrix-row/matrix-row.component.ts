@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Domain } from   '../../../../app/types/database-data/domain';
+import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { MatrixElement } from '../../../../app/types/matrix-element';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
@@ -16,7 +16,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 })
 export class MatrixRowComponent implements OnInit {
 
-  @Input() matrixElement: MatrixElement;
+  @Input() matrixElement: SubuQuestion;
   @Input('question') question: PageQuestion;
   domainOptions: Domain[] = new Array<Domain>();
   previouslySelectedRadioButton: number;
@@ -50,7 +50,7 @@ export class MatrixRowComponent implements OnInit {
     let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.matrixElement.tracking_key);
 
     if (previousUserInput) {
-      switch (this.matrixElement.answer_category) {
+      switch (this.matrixElement.sre_anca_id) {
         case AnswerCategory.RadioButons_in_Matrix:
           this.previouslySelectedRadioButton = +previousUserInput.storedValue;
           break;
@@ -58,7 +58,7 @@ export class MatrixRowComponent implements OnInit {
           this.textInput = previousUserInput.storedValue;
           break;
         default:
-          let message = 'Not yet supported :' + this.matrixElement.answer_category;
+          let message = 'Not yet supported :' + this.matrixElement.sre_anca_id;
           console.log(message);
           throw new Error(message);
       }
