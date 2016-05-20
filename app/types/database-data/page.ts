@@ -1,4 +1,4 @@
-import { PageType } from '../../../types/enums/page-type.enum';
+import { PageType } from '../types/enums/page-type';
 
 export class Page {
   constructor(

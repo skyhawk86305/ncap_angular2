@@ -1,5 +1,5 @@
-import { SeedDataPageQuestions } from '../../types/database-data/new/seed-data-page-questions';
-import { PageQuestion } from '../../types/database-data/new/page-question';
+import { SeedDataPageQuestions } from '../types/database-data/page-questions';
+import { PageQuestion } from '../types/database-data/page-question';
 
 export var pageQuestionDict: SeedDataPageQuestions = {
     1: [
@@ -45,15 +45,15 @@ export var pageQuestionDict: SeedDataPageQuestions = {
     5: [
         new PageQuestion(1,1600,0,'RS',2,8,3,null,'Residential Information','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) ,
         new PageQuestion(2,1700,0,'RS',3,8,3,null,'We ask for addresses where the child and parents lived to connect the location with other data. Even limited information about location helps. <u>Please enter as much as you can remember.</u>','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) ,
-        new PageQuestion(3,1800,0,'RS',4,8,2,null,'Where did the child live from birth through the first year of their life?','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,'<!--special case-->','<!--special case-->' ) ,
+        new PageQuestion(3,1800,0,'RS',4,8,1,null,'Where did the <u>child</u> live from birth through the first year of their life?','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,'<!--special case-->','<!--special case-->' ) ,
         new PageQuestion(4,1900,0,'RS',15,8,3,null,'Please include all addresses during this 1-year period, along with dates of residence. Click \'Save Address\' to save each address you enter. When all addresses have been entered, click \'Next\'.','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) 
     ],
     6: [
-        new PageQuestion(1,2000,0,'RS',4,8,2,null,'Where did the child\'s biological mother live for the 2 years prior to the child\'s birth? ','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,'<!--special case-->','<!--special case-->' ) ,
+        new PageQuestion(1,2000,0,'RS',4,8,1,null,'Where did the child\'s biological <u>mother</u> live for the 2 years prior to the child\'s birth? ','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,'<!--special case-->','<!--special case-->' ) ,
         new PageQuestion(2,2100,0,'RS',15,8,3,null,'Please include all addresses during this 2-year period, along with dates of residence. Click \'Save Address\' to save each address you enter. When all addresses have been entered, click \'Next\'.','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) 
     ],
     7: [
-        new PageQuestion(1,2200,0,'RS',4,8,2,null,'Where did the child\'s biological father live for the 2 years prior to the child\'s birth?','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,'<!--special case-->','<!--special case-->' ) ,
+        new PageQuestion(1,2200,0,'RS',4,8,1,null,'Where did the child\'s biological <u>father</u> live for the 2 years prior to the child\'s birth?','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,'<!--special case-->','<!--special case-->' ) ,
         new PageQuestion(2,2300,0,'RS',15,8,3,null,'Please include all addresses during this 2-year period, along with dates of residence. Click \'Save Address\' to save each address you enter. When all addresses have been entered, click \'Next\'.','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) 
     ],
     9: [
@@ -76,8 +76,8 @@ export var pageQuestionDict: SeedDataPageQuestions = {
         new PageQuestion(1,8000,0,'PH',4,1,1,null,'Does the child currently walk on their own?','-- TBD --','-- TBD --',33,33,33,'WalkByOneself',null,null,null,null,null,'WalkByOneself' ) ,
         new PageQuestion(2,8100,0,'PH',4,7,1,null,'How old was child when they first walked?','-- TBD --','-- TBD --',4,4,4,'WalkByOneselfAge','Please select',null,null,null,null,'WalkByOneselfAge' ) ,
         new PageQuestion(3,8200,0,'PH',4,1,1,null,'What best describes the child\'s current verbal skill?','-- TBD --','-- TBD --',26,26,26,'VerbalSkill',null,null,null,null,null,'VerbalSkill' ) ,
-        new PageQuestion(4,8300,0,'PH',4,7,1,null,'At what age did the child say their first words?','-- TBD --','-- TBD --',1,1,1,'FirstWordsAge','Please select',null,null,null,null,'FirstWordsAge' ) ,
-        new PageQuestion(5,8400,0,'PH',4,7,1,null,'At what age did they string two to three words together to express needs?','-- TBD --','-- TBD --',1,1,1,'StringWordsAge','Please select',null,null,null,null,'StringWordsAge' ) 
+        new PageQuestion(4,8300,0,'PH',4,7,1,null,'At what age did the child say their first words?','-- TBD --','-- TBD --',1,49,50,'FirstWordsAge','Please select',null,null,null,null,'FirstWordsAge' ) ,
+        new PageQuestion(5,8400,0,'PH',4,7,1,null,'At what age did they string two to three words together to express needs?','-- TBD --','-- TBD --',1,49,50,'StringWordsAge','Please select',null,null,null,null,'StringWordsAge' ) 
     ],
     13: [
         new PageQuestion(1,8500,1,'PH',4,10,3,null,'How often does the child currently:','-- TBD --','-- TBD --',13,13,13,null,null,null,null,null,null,null ) ,
@@ -132,7 +132,7 @@ export var pageQuestionDict: SeedDataPageQuestions = {
     ],
     23: [
         new PageQuestion(1,14950,0,'EN',17,8,3,null,'<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>',null,null,null,null,null,null,null,null,null,null ) ,
-        new PageQuestion(2,16600,1,'EN',4,2,1,null,'Which of the following best describes the mother\'s occupation during the three months before conception, through pregnancy, and through the first year of the child\'s life.?','-- TBD --','-- TBD --',20,20,20,'occupation_mother',null,null,null,null,null,'occupation_mother' ) 
+        new PageQuestion(2,16600,1,'EN',4,4,1,null,'Which of the following best describes the mother\'s occupation during the three months before conception, through pregnancy, and through the first year of the child\'s life.?','-- TBD --','-- TBD --',20,20,20,'occupation_mother',null,null,null,null,null,'occupation_mother' ) 
     ],
     24: [
         new PageQuestion(1,14950,0,'EN',17,8,3,null,'<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>',null,null,null,null,null,null,null,null,null,null ) ,
@@ -178,7 +178,7 @@ export var pageQuestionDict: SeedDataPageQuestions = {
     ],
     32: [
         new PageQuestion(1,14950,0,'EN',17,8,3,null,'<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>',null,null,null,null,null,null,null,null,null,null ) ,
-        new PageQuestion(2,21800,1,'EN',4,2,3,null,'Which of the following best describes the father\'s occupation during the three months before conception, through pregnancy, and through the first year of the child\'s life.?','-- TBD --','-- TBD --',20,20,20,'occupation_father',null,null,null,null,null,'occupation_father' ) 
+        new PageQuestion(2,21800,1,'EN',4,4,3,null,'Which of the following best describes the father\'s occupation during the three months before conception, through pregnancy, and through the first year of the child\'s life.?','-- TBD --','-- TBD --',20,20,20,'occupation_father',null,null,null,null,null,'occupation_father' ) 
     ],
     33: [
         new PageQuestion(1,14950,0,'EN',17,8,3,null,'<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>','<Placeholder for the URL of timeline 1>',null,null,null,null,null,null,null,null,null,null ) ,

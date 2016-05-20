@@ -2,10 +2,9 @@
 // import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 
 export class Domain {
-  constructor(
-    public sort_order: number,
-    public name: number,
-    public value: string
-  ) {}
+    id: number;
+    domain_type: string;
+    sort_order: number;
+    name: number;
+    value: string;
 }
-
