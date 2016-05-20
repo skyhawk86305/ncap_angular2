@@ -57,14 +57,12 @@ export var pageQuestionDict: SeedDataPageQuestions = {
         new PageQuestion(2,2300,0,'RS',15,8,3,null,'Please include all addresses during this 2-year period, along with dates of residence. Click \'Save Address\' to save each address you enter. When all addresses have been entered, click \'Next\'.','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) 
     ],
     9: [
-        new PageQuestion(1,3800,0,'DI',16,8,3,null,'<!-- This row is to be deleted -->','<!-- This row is to be deleted -->','<!-- This row is to be deleted -->',null,null,null,null,null,null,null,null,null,null ) ,
         new PageQuestion(2,3900,0,'DI',3,8,3,null,'The next set of questions is about the child\'s ASD diagnosis. Please answer as best you can. You indicated earlier in the survey that the child received a diagnosis of ASD.','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) ,
         new PageQuestion(3,4000,0,'DI',4,7,1,null,'How old was the child when you or anyone else started to be concerned about their development?','-- TBD --','-- TBD --',7,1,7,'dev_concern_age',null,null,null,null,null,'dev_concern_age' ) ,
         new PageQuestion(4,4100,0,'DI',4,7,1,null,'About how old was the child when they were diagnosed with ASD?','About how old was the individual when they were diagnosed with ASD?','About how old were you when you were diagnosed with ASD?',1,2,2,'ASD_diag_age',null,null,null,null,null,'ASD_diag_age' ) ,
         new PageQuestion(5,4200,1,'DI',4,4,1,null,'Who diagnosed the child with ASD?','-- TBD --','-- TBD --',8,8,8,'ASD_diag_src',null,null,null,null,null,'ASD_diag_src' ) 
     ],
     10: [
-        new PageQuestion(1,4400,0,'PH',2,8,3,null,'<!-- This row is to be deleted -->','<!-- This row is to be deleted -->','<!-- This row is to be deleted -->',null,null,null,null,null,null,null,null,null,null ) ,
         new PageQuestion(2,4500,0,'PH',3,8,3,null,'The next set of questions is about the child\'s symptoms, behaviors, and development. Please answer as best you can.','-- TBD --','-- TBD --',null,null,null,null,null,null,null,null,null,null ) ,
         new PageQuestion(3,4600,1,'PH',4,10,3,null,'Did the child display the following developmental milestones?','-- TBD --','-- TBD --',31,31,31,null,null,null,null,null,null,null ) ,
         new PageQuestion(4,4950,1,'PH',4,12,3,null,'Did the child have any of the following behaviors or symptoms during any stage of development?','-- TBD --','-- TBD --',31,31,31,null,null,null,null,null,null,null ) 

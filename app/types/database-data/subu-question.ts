@@ -1,5 +1,6 @@
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../app/types/enums/format-category.enum';
+import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 
 export class SubuQuestion {
   constructor(
@@ -9,7 +10,7 @@ export class SubuQuestion {
     public block: string,
     public sre_foca_id: FormatCategory,
     public sre_anca_id: AnswerCategory,
-    public bypass_enum_code: number,
+    public bypass_enum_code: ValidationType,
     public higher_lvl_uid: number,
     public txt_parent_lang1: string,
     public txt_legalrep_lang1: string,

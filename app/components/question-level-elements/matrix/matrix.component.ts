@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../../component-helper-class';
 import { Domain } from '../../../../app/types/database-data/domain';
-import { MatrixElement } from '../../../../app/types/matrix-element';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
@@ -12,6 +11,8 @@ import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationType } from '../../../../app/types/enums/validation-type.enum';
 import { AnswerCategory } from  '../../../../app/types/enums/answer-category.enum';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
+import { SubuQuestions } from '../../../../app/types/database-data/subu-questions';
+import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
 
 @Component({
   selector: 'matrix',
@@ -25,7 +26,7 @@ export class MatrixComponent implements OnInit {
   domainOptions: Domain[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;
-  matrixElements: MatrixElement[];
+  matrixElements: SubuQuestion[];
   columnHeadings: string[];
   xyzzy: AnswerCategory;
 
@@ -37,7 +38,7 @@ export class MatrixComponent implements OnInit {
 
     this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.sre_uid);
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
-    this.xyzzy = this.matrixElements[0].answer_category;
+    this.xyzzy = this.matrixElements[0].sre_anca_id;
   }
 
   click(trackingKey: string, value: string) {
@@ -46,7 +47,7 @@ export class MatrixComponent implements OnInit {
     UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
   }
 
-  calculateValidatiodCSS(curMatrixElement: MatrixElement) {
+  calculateValidatiodCSS(curMatrixElement: SubuQuestion) {
     let cssClass = '';
 
     if (this.showValidation) {
@@ -55,7 +56,7 @@ export class MatrixComponent implements OnInit {
       let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
 
       if (!fieldPopulated) {
-        switch (curMatrixElement.validation_type) {
+        switch (curMatrixElement.bypass_enum_code) {
           case ValidationType.requested:
             cssClass = 'ncap-requested';
             break;
