@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../../component-helper-class';
-import { Domain } from   '../../../../app/types/database-data/domain';
+import { Domain } from  '../../../../app/types/database-data/domain';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
