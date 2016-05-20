@@ -8,7 +8,7 @@
 <!--{{ PageType[pageData.page_type] }}-->
 
 <div [ngSwitch]=PageType[pageData.page_type]>
-  <!--<span *ngSwitchWhen="'normal'">                      <question-container [pageId]="pageData.page_id"></question-container></span>-->
+  <span *ngSwitchWhen="'normal'">                      <question-container [pageId]="pageData.page_id"></question-container></span>
   <span *ngSwitchWhen="'consent'">                      <consent></consent></span>
   <span *ngSwitchWhen="'home'">                         <home></home></span>
 

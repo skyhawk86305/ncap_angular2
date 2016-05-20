@@ -31,6 +31,7 @@ export class NgSwitchQuestionComponent implements OnInit {
     FormatCategory = FormatCategory;
 
     ngOnInit() {
+        //this.question.sre_anca_id
         switch (this.question.sre_anca_id) {
             case AnswerCategory.Consent, AnswerCategory.RadioButtons, AnswerCategory.Date_MonthDayYear,
                 AnswerCategory.MatrixRadioButtons, AnswerCategory.MatrixRadioButtons_TextboxLastRow:

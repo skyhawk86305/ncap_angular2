@@ -4,6 +4,7 @@ import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.singleton';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
@@ -14,7 +15,8 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 })
 export class QuestionContainerComponent implements OnInit {
 
-    @Input() questions: PageQuestion[];
+    @Input() pageId: number;
+    questions: PageQuestion[];
     renderButtons: boolean = true;
     //that: QuestionContainerComponent;
 
@@ -26,6 +28,8 @@ export class QuestionContainerComponent implements OnInit {
     }
 
     ngOnInit() {
+        console.log('pageId = ' + this.pageId);
+        this.questions = SeedDataSingleton.instanceOf().getQuestionsForPage(this.pageId);
         //this.handleUrlParameters();
         // NavigationSingleton.instanceOf().registerAsObserver(this);
         // this.oberservedDataChanged();
