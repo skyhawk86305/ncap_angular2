@@ -1,13 +1,13 @@
-import { domainDict } from '../../app/seed-data/new/domain_dict';
-import { DomainOption } from  '../../app/types/database-data/new/domain-option';
-import { SeedDataDomainOptions } from  '../../app/types/database-data/new/seed-data-domain-options';
+import { Domain } from '../../app/types/database-data/domain';
+import { Domains } from '../../app/types/database-data/domains';
+import { domain } from '../../app/seed-data/domain_dict';
 
 import _ from 'lodash';
 
 export class LoadDomainOptionsSingleton {
 
     private static _instance: LoadDomainOptionsSingleton = new LoadDomainOptionsSingleton();
-    private _seedDataDomainOptions: SeedDataDomainOptions = domainDict;
+    private _seedDataDomainOptions: Domains = domain;
 
     // static addTooltipIfNecessary(domainOption: DomainOption) {
     //     // Does the question contain a tooltip?
@@ -30,11 +30,11 @@ export class LoadDomainOptionsSingleton {
     constructor() {
         // Will only fire once since this class is a Singleton
         //this.initializeData();
-        this._seedDataDomainOptions = domainDict;
+        this._seedDataDomainOptions = domain;
         LoadDomainOptionsSingleton._instance = this;
     }
 
-    public getDomainOptions(id: number): DomainOption[] {
+    public getDomainOptions(id: number): Domain[] {
         let result = this._seedDataDomainOptions[id];
         return result;
     }

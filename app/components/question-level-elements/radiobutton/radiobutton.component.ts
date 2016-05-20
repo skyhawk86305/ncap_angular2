@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../../component-helper-class';
-import { DomainOption } from   '../../../../app/types/database-data/new/domain-option';
+import { Domain } from   '../../../../app/types/database-data/domain';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
-import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/page-question';
 import { TooltipComponent } from '../tooltip/tooltip.component';
 
 @Component({
@@ -19,7 +19,7 @@ export class RadioButtonComponent implements OnInit {
   @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
 
-  domainOptions: DomainOption[];
+  domainOptions: Domain[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: number;
 

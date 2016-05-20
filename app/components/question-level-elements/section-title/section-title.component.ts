@@ -1,5 +1,5 @@
 import { Component, Input } from 'angular2/core';
-import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
   selector: 'section-title',

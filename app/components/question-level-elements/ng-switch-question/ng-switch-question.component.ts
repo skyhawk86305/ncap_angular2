@@ -14,7 +14,7 @@ import { SectionTitleComponent } from '../section-title/section-title.component'
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
 import { AnswerCategory } from '../../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../../app/types/enums/format-category.enum';
-import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
     selector: 'ng-switch-question',

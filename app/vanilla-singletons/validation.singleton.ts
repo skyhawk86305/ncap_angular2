@@ -1,5 +1,5 @@
 import { MatrixElement } from '../../app/types/matrix-element';
-import { PageQuestion } from '../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../app/types/database-data/page-question';
 import { UserInput } from  '../../app/types/user-input';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';

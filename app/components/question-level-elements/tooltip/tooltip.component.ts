@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import {Tooltip} from '../../../types/database-data/tooltip';
-import { tooltip } from '../../../../app/seed-data/tooltip';
+import { Tooltip } from '../../../types/tooltip';
+import { tooltip } from '../../../seed-data/tooltip';
 
 @Component({
   selector: 'tooltip',

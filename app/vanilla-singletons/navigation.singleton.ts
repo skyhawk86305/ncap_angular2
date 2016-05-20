@@ -2,7 +2,7 @@ import { QuestionContainerComponent } from  '../../app/components/page-level/que
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
-import { PageQuestion } from '../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../app/types/database-data/page-question';
 
 export class NavigationSingleton {
 

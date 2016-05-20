@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../../component-helper-class';
-import { DomainOption } from   '../../../../app/types/database-data/new/domain-option';
+import { Domain } from   '../../../../app/types/database-data/domain';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
   selector: 'dropdown',
@@ -18,7 +18,7 @@ export class DropdownComponent implements OnInit {
 
   @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
-  domainOptions: DomainOption[];
+  domainOptions: Domain[];
   previouslySelectedStoredValue: string;
 
   // Permit view to use the enumeration type
@@ -39,14 +39,14 @@ export class DropdownComponent implements OnInit {
     NavigationSingleton.instanceOf().requestPageControlRevalidate();
   }
 
-  private _getDomainOptions(id: number, addPleaseSelect: boolean): DomainOption[] {
+  private _getDomainOptions(id: number, addPleaseSelect: boolean): Domain[] {
     let result = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
 
     if (addPleaseSelect) {
       // Copy the array as we are going to modify it
       result = result.slice(0);
       // Add 'Please select' as the first option
-      let pleaseSelecteDomainOption: DomainOption = new DomainOption(-1, -1, '---Please select---');
+      let pleaseSelecteDomainOption: Domain = new Domain(-1, -1, '---Please select---');
       result.unshift(pleaseSelecteDomainOption);
     }
 

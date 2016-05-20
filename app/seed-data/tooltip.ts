@@ -1,4 +1,4 @@
-import {Tooltip} from "../types/database-data/tooltip";
+import {Tooltip} from "../types/tooltip";
 export var tooltip: Tooltip[] = [
     {
         "id": 1,

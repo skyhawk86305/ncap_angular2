@@ -5,7 +5,7 @@ import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-inpu
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { TooltipComponent } from '../tooltip/tooltip.component';
-import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
   selector: 'textbox',

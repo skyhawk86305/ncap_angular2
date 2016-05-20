@@ -12,6 +12,7 @@
   },
   "exclude": [
     "node_modules",
+    "old-delete-soon",
     "typings/main",
     "typings/main.d.ts"
   ]

@@ -1,7 +1,7 @@
 import { Component, Input } from 'angular2/core';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
-import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
     selector: 'home',

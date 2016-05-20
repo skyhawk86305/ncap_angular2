@@ -1,18 +1,18 @@
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 // The data
-import { sre } from '../../app/seed-data/sre';
-import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
+// import { sre } from '../../app/seed-data/sre';
+// import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
 // Types to hold the data
-import { Sre } from '../../app/types/database-data/sre';
-import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
+// import { Sre } from '../../app/types/database-data/sre';
+// import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
 import _ from 'lodash';
 
-import { surveyPageDict } from '../../app/seed-data/new/survey_page_dict';
-import { Page } from '../../app/types/database-data/new/page';
-import { SeedDataPageQuestions } from '../../app/types/database-data/new/seed-data-page-questions';
-import { PageQuestion } from '../../app/types/database-data/new/page-question';
-import { pageQuestionDict } from '../../app/seed-data/new/page_question_dict';
+import { surveyPageDict } from '../../app/seed-data/survey_page_dict';
+import { Page } from '../../app/types/database-data/page';
+//import { SeedDataPageQuestions } from '../../app/types/database-data/seed-data-page-questions';
+import { PageQuestion } from '../../app/types/database-data/page-question';
+import { pageQuestionDict } from '../../app/seed-data/page_question_dict';
 
 export class SeedDataSingleton {
 
@@ -47,7 +47,7 @@ export class SeedDataSingleton {
     getQuestionsForPage(page_Id: number) {
         //SeedDataPageQuestions
         let result = pageQuestionDict[page_Id];
-        
+
         return result;
     }
 

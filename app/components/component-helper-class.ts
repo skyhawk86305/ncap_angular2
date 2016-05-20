@@ -1,4 +1,4 @@
-import { PageQuestion } from '../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../app/types/database-data/page-question';
 
 export class ComponentHelperClass {
   static addTooltipIfNecessary(question: PageQuestion) {

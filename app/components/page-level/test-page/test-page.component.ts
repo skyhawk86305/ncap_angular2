@@ -1,7 +1,7 @@
 import { Component, OnInit} from 'angular2/core';
 import { HTTP_PROVIDERS} from 'angular2/http';
-import { Sre } from '../../../../app/types/database-data/sre';
-import { SurveyPageSre } from '../../../../app/types/database-data/survey-page-sre';
+// import { Sre } from '../../../../app/types/database-data/sre';
+// import { SurveyPageSre } from '../../../../app/types/database-data/survey-page-sre';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 
 class Slim {
@@ -18,8 +18,8 @@ export class TestPageComponent implements OnInit {
 
     responseData: string[] = new Array<string>();
 
-    sortedSurveyRenderingElements: Sre[];
-    sortedUniquePages: SurveyPageSre[];
+    // sortedSurveyRenderingElements: Sre[];
+    // sortedUniquePages: SurveyPageSre[];
 
     ngOnInit() {
         let test = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(15);

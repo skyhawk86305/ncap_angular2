@@ -4,7 +4,7 @@ import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-inpu
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
-import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
+import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
   selector: 'date',
