@@ -26,7 +26,7 @@ export class QuestionContainerComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.handleUrlParameters()
+        this.handleUrlParameters();
         NavigationSingleton.instanceOf().registerAsObserver(this);
         this.oberservedDataChanged();
     }

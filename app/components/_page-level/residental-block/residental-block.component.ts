@@ -1,11 +1,11 @@
 import { Component, Input } from 'angular2/core';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
   selector: 'residental-block',
-  templateUrl: 'app/components/residental-block/residental-block.html'
+  templateUrl: 'app/components/_page-level/residental-block/residental-block.html'
 })
 export class ResidentalBlockComponent {
 

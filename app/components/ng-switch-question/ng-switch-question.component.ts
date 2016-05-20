@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { HomeComponent } from '../home/home.component';
-import { ConsentComponent } from '../consent/consent.component';
+
+import { HomeComponent } from '../_page-level/home/home.component';
+import { ConsentComponent } from '../_page-level/consent/consent.component';
+import { ResidentalBlockComponent } from '../_page-level/residental-block/residental-block.component';
+
 import { CheckboxesComponent } from '../checkboxes/checkboxes.component';
 import { DateComponent } from '../date/date.component';
 import { DropdownComponent } from '../dropdown/dropdown.component';
@@ -9,7 +12,6 @@ import { RadioButtonComponent } from '../radiobutton/radiobutton.component';
 import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
-import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
 import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 import { PageQuestion } from '../../../app/types/database-data/new/page-question';

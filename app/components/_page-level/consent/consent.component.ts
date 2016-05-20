@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
-import { UserInput } from  '../../../app/types/user-input';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
+import { UserInput } from  '../../../../app/types/user-input';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
     selector: 'consent',
-    templateUrl: 'app/components/consent/consent.html'
+    templateUrl: 'app/components/_page-level/consent/consent.html'
 })
 export class ConsentComponent implements OnInit {
 

@@ -1,6 +1,7 @@
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { MatrixElement } from '../../app/types/matrix-element';
 // The data
+import { Sre } from '../types/database-data/sre';
 import { sre } from '../../app/seed-data/sre';
 import { subu } from '../../app/seed-data/subu';
 
@@ -25,7 +26,7 @@ export class SeedDataMatrixSingleton {
         let result: MatrixElement[] = new Array<MatrixElement>();
         for (let curSubuRow of subuRows) {
             // Find sre row
-            let sreRow = sre.find((i) => i.obj_uid === curSubuRow.subu_sre_uid);
+            let sreRow = sre.find((i: Sre) => i.obj_uid === curSubuRow.subu_sre_uid);
             let newMatrixElement: MatrixElement = new MatrixElement();
             newMatrixElement.answer_category = sreRow.sre_anca_id;
             newMatrixElement.seq_sre_uid = seq_sre_uid;

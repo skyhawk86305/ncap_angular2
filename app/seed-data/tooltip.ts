@@ -1,5 +1,5 @@
 import {Tooltip} from "../types/database-data/tooltip";
-export var tooltip:Tooltip[] = [
+export var tooltip: Tooltip[] = [
     {
         "id": 1,
         "term": "Autism Spectrum Disorder (ASD)",

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from 'angular2/core';
+import {Tooltip} from '../../types/database-data/tooltip';
 import { tooltip } from '../../../app/seed-data/tooltip';
 
 @Component({
@@ -13,6 +14,6 @@ export class TooltipComponent implements OnInit {
   tooltipText: string;
 
   ngOnInit() {
-    this.tooltipText = tooltip.find((i) => i.id === this.toolTipId).definition;
+    this.tooltipText = tooltip.find((i: Tooltip) => i.id === this.toolTipId).definition;
   }
 }

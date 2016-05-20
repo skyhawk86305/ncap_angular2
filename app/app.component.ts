@@ -1,8 +1,8 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 import { QuestionContainerComponent } from './components/_page-level/question-containter/question-containter.component';
-import { AllPagesComponent } from './components/all-pages/all-pages.component';
-import { TestPageComponent } from './components/test-page/test-page.component';
+import { AllPagesComponent } from './components/_page-level/all-pages/all-pages.component';
+import { TestPageComponent } from './components/_page-level/test-page/test-page.component';
 
 @Component({
   selector: 'the-app',

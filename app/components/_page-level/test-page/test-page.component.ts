@@ -1,8 +1,8 @@
 import { Component, OnInit} from 'angular2/core';
 import { HTTP_PROVIDERS} from 'angular2/http';
-import { Sre } from '../../../app/types/database-data/sre';
-import { SurveyPageSre } from '../../../app/types/database-data/survey-page-sre';
-import { LoadDomainOptionsSingleton } from '../../../app/vanilla-singletons/load-domain-options.singleton';
+import { Sre } from '../../../../app/types/database-data/sre';
+import { SurveyPageSre } from '../../../../app/types/database-data/survey-page-sre';
+import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 
 class Slim {
     seq_pag_id: number;
@@ -12,7 +12,7 @@ class Slim {
 @Component({
     selector: 'test-page',
     viewProviders: [HTTP_PROVIDERS],
-    templateUrl: 'app/components/test-page/test-page.html'
+    templateUrl: 'app/components/_page-level/test-page/test-page.html'
 })
 export class TestPageComponent implements OnInit {
 

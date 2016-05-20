@@ -18,14 +18,14 @@ export class UserInputSingleton {
     }
 
     getUserInput(trackingKey: string) {
-        let item: UserInput = this._UserInput.find(i => i.trackingKey === trackingKey);
+        let item: UserInput = this._UserInput.find((i: UserInput) => i.trackingKey === trackingKey);
 
         return item;
     }
 
     setUserInput(trackingKey: string, enteredValue: string) {
         // Is this item already in the array?
-        let userInputEntry: UserInput = this._UserInput.find(i => i.trackingKey === trackingKey);
+        let userInputEntry: UserInput = this._UserInput.find((i: UserInput)  => i.trackingKey === trackingKey);
         if (!userInputEntry) {
             userInputEntry = new UserInput();
             userInputEntry.trackingKey = trackingKey;
