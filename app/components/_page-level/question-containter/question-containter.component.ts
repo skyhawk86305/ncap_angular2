@@ -1,15 +1,15 @@
 import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
-import { DiagnosticComponent } from '../diagnostic/diagnostic.component';
-import { NgSwitchQuestionComponent } from '../ng-switch-question/ng-switch-question.component';
-import { NavigationSingleton } from '../../../app/vanilla-singletons/navigation.singleton';
-import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { USERINPUT_SCENARIO1 } from  '../../../app/seed-data/json-for-debugging/user-input-senario1';
-import { PageQuestion } from '../../../app/types/database-data/new/page-question';
+import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
+import { NgSwitchQuestionComponent } from '../../ng-switch-question/ng-switch-question.component';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
+import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
+import { PageQuestion } from '../../../../app/types/database-data/new/page-question';
 
 @Component({
     selector: 'page',
-    templateUrl: 'app/components/question-containter/question-containter.html',
+    templateUrl: 'app/components/_page-level/question-containter/question-containter.html',
     directives: [NgSwitchQuestionComponent, DiagnosticComponent]
 })
 export class QuestionContainerComponent implements OnInit {

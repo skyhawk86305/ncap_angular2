@@ -1,4 +1,4 @@
-import { QuestionContainerComponent } from  '../../app/components/question-containter/question-containter.component';
+import { QuestionContainerComponent } from  '../../app/components/_page-level/question-containter/question-containter.component';
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
