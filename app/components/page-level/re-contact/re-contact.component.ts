@@ -5,17 +5,17 @@ import { ValidationResult } from '../../../../app/types/enums/validation-result.
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
-  selector: 'residental-block',
-  templateUrl: 'app/components/page-level/residental-block/residental-block.html'
+  selector: 're-contact',
+  templateUrl: 'app/components/re-contact/re-contact/re-contact.html'
 })
-export class ResidentalBlockComponent {
+export class ReContactComponent {
 
   @Input() pageId: number;
   // Permit view to use the enumeration type
   public NavigationSingleton = NavigationSingleton;
 
   ngAfterContentInit() {
-    console.log('In residental block. Page Id: ' + this.pageId);
+    console.log('In re-contact block. Page Id: ' + this.pageId);
     // Hack to stop the weird error showing in Diagnostics mode
     //setTimeout(() => UserInputSingleton.instanceOf().setUserInput(this.question.tracking_key, 'Residental block is WIP'), 100);
   }
