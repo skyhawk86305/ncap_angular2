@@ -6,7 +6,7 @@ import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-inpu
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
-import { TooltipComponent } from '../tooltip/tooltip.component';
+import { TooltipComponent } from '../../other/tooltip/tooltip.component';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({

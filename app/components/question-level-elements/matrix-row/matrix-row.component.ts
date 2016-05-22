@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Domain } from   '../../../../app/types/database-data/domain';
 import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
-import { TooltipComponent } from '../tooltip/tooltip.component';
+import { TooltipComponent } from '../../other/tooltip/tooltip.component';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
