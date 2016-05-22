@@ -2,8 +2,6 @@ import { Domain } from '../../app/types/database-data/domain';
 import { Domains } from '../../app/types/database-data/domains';
 import { domain } from '../../app/seed-data/domain_dict';
 
-import _ from 'lodash';
-
 export class LoadDomainOptionsSingleton {
 
     private static _instance: LoadDomainOptionsSingleton = new LoadDomainOptionsSingleton();

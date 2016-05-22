@@ -6,7 +6,6 @@ import { ValidationType } from '../../app/types/enums/validation-type.enum';
 // Types to hold the data
 // import { Sre } from '../../app/types/database-data/sre';
 // import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
-import _ from 'lodash';
 
 import { surveyPageDict } from '../../app/seed-data/survey_page_dict';
 import { Page } from '../../app/types/database-data/page';
