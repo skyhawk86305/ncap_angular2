@@ -5,7 +5,7 @@
     [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required" >
         <span class="ng-scope">
             <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
-        </span>            
+        </span>
         <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>
 </div>

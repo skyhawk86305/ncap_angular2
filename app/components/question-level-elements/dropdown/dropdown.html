@@ -4,7 +4,7 @@
         <span class="ng-scope">
             <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
         </span>
-        <span [innerHTML]='question.question_text'></span>
+        <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
         SeedDataService
     </div>
 </div>
