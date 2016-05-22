@@ -1,4 +1,3 @@
-
 export class DisplayCondition {
   constructor(
     public condition_order: number,

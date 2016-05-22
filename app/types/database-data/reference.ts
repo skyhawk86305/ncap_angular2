@@ -3,6 +3,6 @@
 
 export class Reference {
   constructor(
-    public reference_txt: string  
-  ){}
+    public reference_txt: string
+  ) { }
 }
