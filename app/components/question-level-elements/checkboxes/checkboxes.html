@@ -5,7 +5,7 @@
             <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
             <span [innerHTML]='question.question_text'></span>
         </span>
-        <tooltip *ngIf="questionToolTipId>0" [toolTipId]="questionToolTipId"></tooltip>
+        SeedDataService
     </div>
 </div>
 
@@ -16,7 +16,6 @@
         <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index">
             <span (click)='toggleCheckbox(item.stored_value)'>
                 <input type="checkbox" id="{{item.stored_value}}" [checked]='isCheckboxSelected(+item.stored_value)'> {{item.displayed_value}} 
-                <tooltip *ngIf="item.toolTipId>0" [toolTipId]="item.toolTipId"></tooltip> 
             </span>
             <!-- Optional Other TextBox -->
             <span *ngIf='item.stored_value == showOtherTextBoxForStoredValue && isCheckboxSelected(showOtherTextBoxForStoredValue)'>

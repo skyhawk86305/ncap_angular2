@@ -4,13 +4,13 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
-import { TooltipComponent } from '../../other/tooltip/tooltip.component';
+import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
   selector: 'textbox',
   templateUrl: 'app/components/question-level-elements/textbox/textbox.html',
-  directives: [TooltipComponent]
+  directives: [RenderHtmlStringIncludingTooltipsComponent]
 })
 export class TextboxComponent implements OnInit {
 

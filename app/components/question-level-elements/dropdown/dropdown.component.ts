@@ -6,13 +6,13 @@ import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-inpu
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
-import { TooltipComponent } from '../../other/tooltip/tooltip.component';
+import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
   selector: 'dropdown',
   templateUrl: 'app/components/question-level-elements/dropdown/dropdown.html',
-  directives: [TooltipComponent]
+  directives: [RenderHtmlStringIncludingTooltipsComponent]
 })
 export class DropdownComponent implements OnInit {
 

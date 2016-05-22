@@ -7,12 +7,12 @@ import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-inpu
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
-import { TooltipComponent } from '../../other/tooltip/tooltip.component';
+import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 
 @Component({
   selector: 'radio-buttons',
   templateUrl: 'app/components/question-level-elements/radiobutton/radioButtons.html',
-  directives: [TooltipComponent]
+  directives: [RenderHtmlStringIncludingTooltipsComponent]
 })
 export class RadioButtonComponent implements OnInit {
 

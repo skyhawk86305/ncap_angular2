@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Domain } from   '../../../../app/types/database-data/domain';
-import { TooltipComponent } from '../../other/tooltip/tooltip.component';
+import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
@@ -11,7 +11,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 @Component({
   selector: '[matrixElement2]',
   templateUrl: 'app/components/question-level-elements/matrixElement2/matrixElement2.html',
-  directives: [TooltipComponent]
+  directives: [RenderHtmlStringIncludingTooltipsComponent]
 })
 export class MatrixElement2Component implements OnInit {
 

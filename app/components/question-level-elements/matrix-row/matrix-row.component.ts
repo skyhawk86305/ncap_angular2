@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Domain } from   '../../../../app/types/database-data/domain';
 import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
-import { TooltipComponent } from '../../other/tooltip/tooltip.component';
+import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
@@ -11,7 +11,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 @Component({
   selector: '[matrixElement]',
   templateUrl: 'app/components/question-level-elements/matrix-row/matrix-row.html',
-  directives: [TooltipComponent]
+  directives: [RenderHtmlStringIncludingTooltipsComponent]
 
 })
 export class MatrixRowComponent implements OnInit {

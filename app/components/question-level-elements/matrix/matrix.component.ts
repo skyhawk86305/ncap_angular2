@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { ComponentHelperClass } from  '../../component-helper-class';
 import { Domain } from '../../../../app/types/database-data/domain';
-import { TooltipComponent } from '../../other/tooltip/tooltip.component';
+import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
@@ -17,7 +17,7 @@ import { SubuQuestion } from '../../../../app/types/database-data/subu-question'
 @Component({
   selector: 'matrix',
   templateUrl: 'app/components/question-level-elements/matrix/matrix.html',
-  directives: [TooltipComponent, MatrixRowComponent, MatrixElement2Component]
+  directives: [RenderHtmlStringIncludingTooltipsComponent, MatrixRowComponent, MatrixElement2Component]
 })
 export class MatrixComponent implements OnInit {
 
