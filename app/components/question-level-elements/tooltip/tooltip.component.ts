@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { Tooltip } from '../../../types/tooltip';
-import { tooltip } from '../../../seed-data/tooltip';
+import { tooltipDict } from '../../../../app/seed-data/tooltip_dict';
 
 @Component({
   selector: 'tooltip',
@@ -14,6 +13,10 @@ export class TooltipComponent implements OnInit {
   tooltipText: string;
 
   ngOnInit() {
-    this.tooltipText = tooltip.find((i: Tooltip) => i.id === this.toolTipId).definition;
+    if (tooltipDict[this.toolTipId]) {
+      this.tooltipText = tooltipDict[this.toolTipId].definition;
+    } else {
+      console.log('could not find entry for tooltip id ' + this.toolTipId);
+    }
   }
 }
