@@ -43,7 +43,8 @@ export class PageQuestion {
     }
 
     get question_text(): string {
-        let storedValue = UserInputSingleton.instanceOf().getUserInput('respondent_type').storedValue;
+        let userInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
+        let storedValue = userInput ? userInput.storedValue : null;
         let result: string;
 
         // Switch according to value in tracking_key
@@ -58,7 +59,7 @@ export class PageQuestion {
                 result = this.txt_selfreport_lang1;
                 break;
             default:
-                result = '** Error occured, storeValue should be legalrep, parent or selfreport';
+                result = this.txt_parent_lang1;
                 break;
         }
 
