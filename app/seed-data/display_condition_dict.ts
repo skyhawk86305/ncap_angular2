@@ -1,7 +1,7 @@
 import { DisplayConditions } from '../types/database-data/display_conditions';
 import { DisplayCondition } from '../types/database-data/display_condition';
 
-export var tooltipDict: DisplayConditions = {
+export var displayConditionDict: DisplayConditions = {
     1: [
         new DisplayCondition(1, null, 'IS NULL', 'middleName', null, null)
     ],
@@ -130,4 +130,4 @@ export var tooltipDict: DisplayConditions = {
     37: [
         new DisplayCondition(1, null, 'EQUAL', 'respondent_type', 25, 'If you are a parent or guardian taking the survey for a child, click here.')
     ]
-}
+};
