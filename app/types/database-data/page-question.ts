@@ -1,7 +1,8 @@
-import { AnswerCategory } from '../enums/answer-category.enum';
-import { FormatCategory } from '../enums/format-category.enum';
-import { ValidationType } from '../enums/validation-type.enum';
-import { ValidationResult } from '../enums/validation-result.enum';
+import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
+import { FormatCategory } from '../../../app/types/enums/format-category.enum';
+import { ValidationType } from '../../../app/types/enums/validation-type.enum';
+import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 
 export class PageQuestion {
 
@@ -19,7 +20,7 @@ export class PageQuestion {
         public block: string,
         public parent_sre_disp_id: number,
         public legalrep_sre_disp_id: number,
-        public selfreport_sre_disp_id: number, 
+        public selfreport_sre_disp_id: number,
         public sre_foca_id: FormatCategory,
         public sre_anca_id: AnswerCategory,
         public bypass_enum_code: ValidationType,
@@ -45,7 +46,26 @@ export class PageQuestion {
     }
 
     get question_text(): string {
-        // xyzzy5 - Switch according to value in tracking_key
-        return this.txt_parent_lang1;
+        let userInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
+        let storedValue = userInput ? userInput.storedValue : null;
+        let result: string;
+
+        // Switch according to value in tracking_key
+        switch (storedValue) {
+            case 'legalrep':
+                result = this.txt_legalrep_lang1;
+                break;
+            case 'parent':
+                result = this.txt_parent_lang1;
+                break;
+            case 'selfreport':
+                result = this.txt_selfreport_lang1;
+                break;
+            default:
+                result = this.txt_parent_lang1;
+                break;
+        }
+
+        return result;
     }
 }
