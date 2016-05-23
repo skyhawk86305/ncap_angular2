@@ -4,10 +4,7 @@
         <span class="ng-scope">
             <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span> {{question.question_text}}
         </span>
-        SeedDataService
     </div>
 </div>
 
-<input class='form-control ng-invalid-number-validator' type="text" name="{{question.tracking_key}}" 
-placeholder="{{question.def_disp_value}}"
-[ngModel]="previouslySelectedStoredValue" (ngModelChange)="modelChange(question.tracking_key, $event)" />
+<input class='form-control ng-invalid-number-validator' type="text" name="{{question.tracking_key}}" placeholder="{{question.def_disp_value}}" [ngModel]="previouslySelectedStoredValue" (ngModelChange)="modelChange(question.tracking_key, $event)" />

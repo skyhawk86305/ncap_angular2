@@ -31,7 +31,7 @@ export class NavigationSingleton {
 
     getPageToRender(): Page {
         let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber); //xyzzy5 ned to reconcile use of page number and page id
-        
+
         return result;
     }
 

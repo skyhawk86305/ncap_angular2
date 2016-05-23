@@ -42,6 +42,13 @@ export class PageQuestion {
 
     get visible(): boolean {
         let result = this.sre_anca_id !== AnswerCategory.Skip;
+
+        // Is there a disp_id to check
+        if (this.parent_sre_disp_id > 0) {
+            console.log('parent_sre_disp_id = ' + this.parent_sre_disp_id + ' for ' + this.txt_parent_lang1 );
+            //result = false;
+        }
+
         return result;
     }
 

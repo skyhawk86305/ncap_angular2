@@ -5,10 +5,11 @@
             <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
         </span>
         <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
-        SeedDataService
     </div>
 </div>
 
-<select class="form-control" (change)="modelChange(question.tracking_key, $event.target.value)">
+<div>
+    <select class="form-control" (change)="modelChange(question.tracking_key, $event.target.value)">
       <option *ngFor="#item of domainOptions" [value]="item.stored_value">{{item.displayed_value}}</option>
-</select>
+    </select>
+</div>

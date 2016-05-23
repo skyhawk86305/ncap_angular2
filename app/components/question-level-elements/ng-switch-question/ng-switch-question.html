@@ -9,7 +9,7 @@
     </span>
 </div>
 
-<div *ngIf="AnswerCategory[question.sre_anca_id] !== 'No_Answer' && FormatCategory[question.sre_foca_id] !== 'Dummy'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
+<div *ngIf="question.visible" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
   <span *ngSwitchWhen="'Checkboxes'">                         <checkboxes       [question]="question"></checkboxes></span>
   <span *ngSwitchWhen="'Checkboxes_TextboxLastEntry'">        <checkboxes       [question]="question"></checkboxes></span>
   <span *ngSwitchWhen="'DropDown'">                           <dropdown         [question]="question"></dropdown></span>
