@@ -59,7 +59,7 @@ export class NgSwitchPageTypeComponent implements OnInit {
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO1);
-            NavigationSingleton.instanceOf().setPageNumber(3);
+            NavigationSingleton.instanceOf().setPageNumber(10);
         }
 
         if (this._routeParams.get('diag')) {
