@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-
 import { CheckboxesComponent } from '../checkboxes/checkboxes.component';
 import { DateComponent } from '../date/date.component';
 import { DropdownComponent } from '../dropdown/dropdown.component';
@@ -31,7 +30,6 @@ export class NgSwitchQuestionComponent implements OnInit {
     FormatCategory = FormatCategory;
 
     ngOnInit() {
-        //this.question.sre_anca_id
         switch (this.question.sre_anca_id) {
             case AnswerCategory.Consent, AnswerCategory.RadioButtons, AnswerCategory.Date_MonthDayYear,
                 AnswerCategory.MatrixRadioButtons, AnswerCategory.MatrixRadioButtons_TextboxLastRow:
@@ -46,5 +44,5 @@ export class NgSwitchQuestionComponent implements OnInit {
         if (this.question.sre_anca_id === AnswerCategory.Consent && this.question.sre_sort_order > 1) {
             this.question.sre_anca_id = AnswerCategory.Skip;
         }
-   }
+    }
 }

@@ -5,24 +5,25 @@
   <span *ngSwitchWhen="'PreQ_Intro'">                         <pre-question-intro         [question]="question"></pre-question-intro></span>
 
   <span *ngSwitchDefault>
-    **Unsupported** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}
+    **Unsupported 1** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}
     </span>
 </div>
 
-<div *ngIf="question.visible" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
-  <span *ngSwitchWhen="'Checkboxes'">                         <checkboxes       [question]="question"></checkboxes></span>
-  <span *ngSwitchWhen="'Checkboxes_TextboxLastEntry'">        <checkboxes       [question]="question"></checkboxes></span>
-  <span *ngSwitchWhen="'DropDown'">                           <dropdown         [question]="question"></dropdown></span>
-  <span *ngSwitchWhen="'Textbox'">                            <textbox          [question]="question"></textbox></span>
-  <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons    [question]="question"></radio-buttons></span>
-  <span *ngSwitchWhen="'Date_MonthDayYear'">                  <date             [question]="question"></date></span>
-  <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix           [question]="question"></matrix></span>
-  <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix           [question]="question"></matrix></span>
-  <span *ngSwitchWhen="'MatrixRadioButtons_DropDownLastCol'"> <matrix           [question]="question"></matrix></span>
+<div *ngIf="question.visible && AnswerCategory[question.sre_anca_id] !== 'No_Answer'" [ngSwitch]=AnswerCategory[question.sre_anca_id]>
+  <span *ngSwitchWhen="'Checkboxes'">                         <checkboxes         [question]="question"></checkboxes></span>
+  <span *ngSwitchWhen="'Checkboxes_TextboxLastEntry'">        <checkboxes         [question]="question"></checkboxes></span>
+  <span *ngSwitchWhen="'DropDown'">                           <dropdown           [question]="question"></dropdown></span>
+  <span *ngSwitchWhen="'Textbox'">                            <textbox            [question]="question"></textbox></span>
+  <span *ngSwitchWhen="'RadioButtons'">                       <radio-buttons      [question]="question"></radio-buttons></span>
+  <span *ngSwitchWhen="'Date_MonthDayYear'">                  <date               [question]="question"></date></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix             [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix             [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'MatrixRadioButtons_DropDownLastCol'"> <matrix             [question]="question"></matrix></span>
+  <span *ngSwitchWhen="'PreQ_Intro'">                         <pre-question-intro [question]="question"></pre-question-intro></span>
 
   <span *ngSwitchWhen="'Skip'"></span>
 
   <span *ngSwitchDefault>
-    **Unsupported** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}
+    **Unsupported 2** anca:{{AnswerCategory[question.sre_anca_id]}} pg{{question.page_id}}.qu{{question.question_id}}. foca:{{FormatCategory[question.sre_foca_id]}} - {{question.question_text}} bypass_property:{{question.bypass_property}} 
   </span>
 </div>
