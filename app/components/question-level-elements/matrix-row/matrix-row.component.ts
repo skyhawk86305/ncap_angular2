@@ -21,16 +21,19 @@ export class MatrixRowComponent implements OnInit {
   domainOptions: Domain[] = new Array<Domain>();
   previouslySelectedRadioButton: number;
   textInput: string;
-
+xyzzy: string;
+  
   // Permit view to use the enumeration type
   AnswerCategory = AnswerCategory;
 
   ngOnInit() {
     this.syncToPreviouslyEnteredData();
+    
+    this.xyzzy = JSON.stringify(this.matrixElement);
 
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
-    //console.log('get domain for ' + AnswerCategory[this.matrixElement.answer_category]);
-    //if (this.matrixElement.answer_category !== AnswerCategory.Textbox_in_Matrix) {
+    console.log('get domain for ' + AnswerCategory[this.matrixElement.sre_anca_id]);
+    //if (this.matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
       this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     //}
   }

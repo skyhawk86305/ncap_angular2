@@ -32,7 +32,7 @@ export class SeedDataMatrixSingleton {
         //     // Find sre row
         //     let sreRow = sre.find((i: Sre) => i.obj_uid === curSubuRow.subu_sre_uid);
         //     let newMatrixElement: MatrixElement = new MatrixElement();
-        //     newMatrixElement.answer_category = sreRow.sre_anca_id;
+        //     newMatrixElement.sre_anca_id = sreRow.sre_anca_id;
         //     newMatrixElement.seq_sre_uid = seq_sre_uid;
         //     newMatrixElement.sort_order = curSubuRow.subu_sort_order;
         //     newMatrixElement.text = sreRow.txt_parent_lang1;
