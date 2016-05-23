@@ -50,7 +50,7 @@ export class MatrixElement2Component implements OnInit {
 
     if (previousUserInput) {
       switch (this.matrixElement.sre_anca_id) {
-        case AnswerCategory.RadioButons_in_Matrix:
+        case AnswerCategory.RadioButtons_in_Matrix:
           this.previouslySelectedRadioButton = +previousUserInput.storedValue;
           break;
         case AnswerCategory.Textbox_in_Matrix:

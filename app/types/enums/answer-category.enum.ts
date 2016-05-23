@@ -13,7 +13,7 @@ export enum AnswerCategory {
     MatrixRadioButtons_TextboxLastRow = 12,
     RadioButtons_in_Matrix_DropDownLastCol = 13,
     Textbox_in_Matrix = 14,
-    RadioButons_in_Matrix = 15,
+    RadioButtons_in_Matrix = 15,
     Calculated = 16,
     Address = 17,
     Immediate_Selection = 18,
