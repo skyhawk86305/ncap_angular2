@@ -9,13 +9,13 @@ import { DisplayCondition } from '../../../app/types/database-data/display_condi
 export class PageQuestion {
 
     // Not populated directly from DB Data:
-    page_id: number; // Used in Diag mode
     toolTipId: number; // xyzzy Temp property to get Tooltips partially working
     validation_result: ValidationResult;
     validation_type: ValidationType;
     show_validation: boolean;
 
     constructor(
+        public page_id: number,
         public sre_sort_order: number,
         public sre_uid: number,
         public has_subu: number,
