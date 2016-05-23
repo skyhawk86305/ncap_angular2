@@ -24,8 +24,6 @@ export class RenderHtmlStringIncludingTooltipsComponent implements OnInit {
     let remainingHtml: string = this.htmlToRender;
     this.elementsToRender = new Array<Element>();
 
-    console.log('>' + this.htmlToRender + '>');
-
     let infiniteLoopProtection = 0;
     while (infiniteLoopProtection++ < 10 && remainingHtml.indexOf(this.TOOLTIP_LEFT_HTML) > -1) {
       infiniteLoopProtection++;

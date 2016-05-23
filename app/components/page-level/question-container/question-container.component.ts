@@ -28,7 +28,6 @@ export class QuestionContainerComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log('pageId = ' + this.pageId);
         //this.questions = SeedDataSingleton.instanceOf().getQuestionsForPage(this.pageId);
         //this.handleUrlParameters();
         // NavigationSingleton.instanceOf().registerAsObserver(this);
