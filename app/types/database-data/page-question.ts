@@ -3,6 +3,8 @@ import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
+import { displayConditionDict } from '../../../app/seed-data/display_condition_dict';
+import { DisplayCondition } from '../../../app/types/database-data/display_condition';
 
 export class PageQuestion {
 
@@ -46,6 +48,8 @@ export class PageQuestion {
         // Is there a disp_id to check
         if (this.parent_sre_disp_id > 0) {
             console.log('parent_sre_disp_id = ' + this.parent_sre_disp_id + ' for ' + this.txt_parent_lang1 );
+            
+            let displayCondition: DisplayCondition[] = displayConditionDict[this.parent_sre_disp_id];
             //result = false;
         }
 
