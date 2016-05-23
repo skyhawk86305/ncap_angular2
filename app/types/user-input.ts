@@ -1,4 +1,4 @@
 export class UserInput {
-  trackingKey: string;
-  storedValue: string;
+    trackingKey: string;
+    storedValue: string;
 }
