@@ -46,11 +46,28 @@ export class PageQuestion {
         let result = this.sre_anca_id !== AnswerCategory.Skip;
 
         // Is there a disp_id to check
+        // xyzzy - switch on parent, legal etc
         if (this.parent_sre_disp_id > 0) {
-            console.log('parent_sre_disp_id = ' + this.parent_sre_disp_id + ' for ' + this.txt_parent_lang1 );
-            
-            let displayCondition: DisplayCondition[] = displayConditionDict[this.parent_sre_disp_id];
-            //result = false;
+            result = false;
+            console.log('parent_sre_disp_id = ' + this.parent_sre_disp_id + ' for ' + this.txt_parent_lang1);
+
+            let displayConditions: DisplayCondition[] = displayConditionDict[this.parent_sre_disp_id];
+
+            for (let curDisplayCondition of displayConditions) {
+                if (curDisplayCondition.relation === 'EQUAL') {
+                    console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
+                    result = false;
+                    let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
+                    if (userInput) {
+                        let expectedValue = userInput.storedValue;
+                        console.log('expectedValue is ' + expectedValue);
+                        console.log('stored_value is ' + curDisplayCondition.stored_value);
+                        result = (+expectedValue === +curDisplayCondition.stored_value);
+                        console.log('result is ' + result);
+                    }
+                }
+            }
+
         }
 
         return result;

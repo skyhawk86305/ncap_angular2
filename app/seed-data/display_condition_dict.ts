@@ -39,7 +39,7 @@ export var displayConditionDict: DisplayConditions = {
         new DisplayCondition(1, null, 'EQUAL', 'SlowStopDailyLiving', 33, 'Yes')
     ],
     13: [
-        new DisplayCondition(1, null, 'EQUAL', 'WalkByOneself', 33, 'Yes')
+        new DisplayCondition(1, null, 'EQUAL', 'WalkByOneself', 1, 'Yes')
     ],
     14: [
         new DisplayCondition(1, null, 'IS NOT NULL', 'VerbalSkill', 26, null),
