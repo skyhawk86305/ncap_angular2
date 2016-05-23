@@ -18,7 +18,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 export class CheckboxesComponent implements OnInit {
 
   @Input() question: PageQuestion;
-  public NavigationSingleton = NavigationSingleton;
+  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
   domainOptions: Domain[];
   showOtherTextBoxForStoredValue: number = -1;
   ValidationResult = ValidationResult; // Permit html to use the enumeration type

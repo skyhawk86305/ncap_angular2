@@ -17,14 +17,11 @@ import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-inc
 export class RadioButtonComponent implements OnInit {
 
   @Input() question: PageQuestion;
-  public NavigationSingleton = NavigationSingleton;
-
+  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
+  public ValidationResult = ValidationResult; // Permit view to use the enumeration type
   domainOptions: Domain[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: number;
-
-  // Permit view to use the enumeration type
-  ValidationResult = ValidationResult;
 
   ngOnInit() {
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);

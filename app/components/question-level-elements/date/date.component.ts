@@ -13,10 +13,9 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 export class DateComponent {
 
   @Input() question: PageQuestion;
+  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
   previouslySelectedStoredValue: string;
-
-  // Permit view to use the enumeration type
-  ValidationResult = ValidationResult;
+  ValidationResult = ValidationResult; // Permit view to use the enumeration type
 
   ngOnInit() {
     ComponentHelperClass.addTooltipIfNecessary(this.question);

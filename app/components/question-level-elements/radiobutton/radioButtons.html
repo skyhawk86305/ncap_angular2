@@ -1,11 +1,7 @@
 <!-- Question text -->
 <div>
-    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" 
-    [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" 
-    [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required" >
-        <span class="ng-scope">
-            <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
-        </span>
+    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required">
+        <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
         <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>
 </div>
@@ -15,7 +11,7 @@
 
     <div class="form-group ng-scope">
         <div class="radio-group radio" *ngFor="#item of domainOptions; #idx = index" (click)='click(question.tracking_key, item.stored_value)'>
-            <input type="radio" style="outline:none" name="{{question.page_id}}.{{question.sre_sort_order}}" value="{{item.stored_value}}" [checked]='previouslySelectedStoredValue == item.stored_value'> {{item.displayed_value}} 
+            <input type="radio" style="outline:none" name="{{question.page_id}}.{{question.sre_sort_order}}" value="{{item.stored_value}}" [checked]='previouslySelectedStoredValue == item.stored_value'> {{item.displayed_value}}
         </div>
     </div>
 </div>

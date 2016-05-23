@@ -1,9 +1,11 @@
 <div>
     <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
-        <span class="ng-scope">{{question.page_id}}.{{question.sre_sort_order}} - </span>
-        <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
+            <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
+            <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>
 </div>
+
+anca: {{AnswerCategory[xyzzy]}}
 
 <div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
 

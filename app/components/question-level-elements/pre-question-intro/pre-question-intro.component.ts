@@ -1,6 +1,7 @@
 import { Component, Input } from 'angular2/core';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 
 @Component({
   selector: 'pre-question-intro',
@@ -10,5 +11,6 @@ import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-inc
 export class PreQuestionIntroComponent {
 
   @Input() question: PageQuestion;
+  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
 
 }

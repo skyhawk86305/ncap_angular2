@@ -1,14 +1,8 @@
 <div>
-    <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" 
-    [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" 
-    [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required">
-
-        <span class="ng-scope">{{question.page_id}}.{{question.sre_sort_order}} - {{question.question_text}}</span>
-
+    <div question="ethinicity" style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required">
+        <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
+        <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>
 </div>
 
 <input type="date" [ngModel]="previouslySelectedStoredValue" (ngModelChange)="modelChange(question.tracking_key, $event)" />
-
-<BR>
-<BR>

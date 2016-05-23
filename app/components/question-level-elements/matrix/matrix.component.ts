@@ -11,8 +11,8 @@ import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationType } from '../../../../app/types/enums/validation-type.enum';
 import { AnswerCategory } from  '../../../../app/types/enums/answer-category.enum';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
-import { SubuQuestions } from '../../../../app/types/database-data/subu-questions';
 import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
+import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 
 @Component({
   selector: 'matrix',
@@ -23,6 +23,7 @@ export class MatrixComponent implements OnInit {
 
   @Input() question: PageQuestion;
   @Input() showValidation: boolean = true;
+  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
   domainOptions: Domain[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;

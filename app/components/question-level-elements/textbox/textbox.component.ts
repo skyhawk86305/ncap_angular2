@@ -16,10 +16,8 @@ export class TextboxComponent implements OnInit {
 
   @Input() question: PageQuestion;
   public NavigationSingleton = NavigationSingleton;
+  public ValidationResult = ValidationResult; // Permit view to use the enumeration type
   previouslySelectedStoredValue: string;
-
-  // Permit view to use the enumeration type
-  ValidationResult = ValidationResult;
 
   ngOnInit() {
     ComponentHelperClass.addTooltipIfNecessary(this.question);
