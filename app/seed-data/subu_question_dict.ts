@@ -181,4 +181,4 @@ export var subuQuestionDict: SubuQuestions = {
         new SubuQuestion('22000',23200,12,'EN',null,null,null,5,15,1,22000,'X-rays/radioactive materials <tooltip id="13"/>','X-rays/radioactive materials <tooltip id="13"/>','X-rays/radioactive materials <tooltip id="13"/>',30,30,30,'xray_radioactive_father',null,null,null,null,null,'xray_radioactive_father' ) ,
         new SubuQuestion('22000',23300,13,'EN',null,null,null,5,15,1,22000,'Varnish <tooltip id="14"/> / lacquer <tooltip id="15"/>','Varnish <tooltip id="14"/> / lacquer <tooltip id="15"/>','Varnish <tooltip id="14"/> / lacquer <tooltip id="15"/>',30,30,30,'varnish_lacquer_father',null,null,null,null,null,'varnish_lacquer_father' ) 
     ]
-}
+};

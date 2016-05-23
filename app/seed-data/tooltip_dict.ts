@@ -56,4 +56,4 @@ export var tooltipDict: Tooltips = {
     18:
     new Tooltip('Ethnicity', 'The Census Bureau provides two categories for ethnicity:  "Hispanic or Latino" and "Not Hispanic or Latino".  The Census Bureau defines a Hispanic or Latino person as someone of Cuban, Mexican, Puerto Rican, Cuban, South or Central American, or other Spanish culture or origin, regardless of race.', 2)
 
-}
+};
