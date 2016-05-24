@@ -3,8 +3,6 @@ import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
-import { displayConditionDict } from '../../../app/seed-data/display_condition_dict';
-import { DisplayCondition } from '../../../app/types/database-data/display_condition';
 import { ProcessDisplayCondition } from '../../../app/other-logic/process-display-conditions';
 
 export class PageQuestion {
@@ -46,10 +44,29 @@ export class PageQuestion {
     get visible(): boolean {
         let result = this.sre_anca_id !== AnswerCategory.Skip;
 
-        // Is there a disp_id to check
-        // xyzzy - switch on parent, legal etc
-        if (this.parent_sre_disp_id > 0) {
-            result = ProcessDisplayCondition.processDisplayCondition(this);
+        let userInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
+        let storedValue = userInput ? userInput.storedValue : null;
+
+        // Switch according to respondent_type
+        switch (storedValue) {
+            case 'legalrep':
+                if (this.legalrep_sre_disp_id > 0) {
+                    result = ProcessDisplayCondition.processDisplayCondition(this.legalrep_sre_disp_id, this);
+                }
+                break;
+            case 'parent':
+                if (this.parent_sre_disp_id > 0) {
+                    result = ProcessDisplayCondition.processDisplayCondition(this.parent_sre_disp_id, this);
+                }
+                break;
+            case 'selfreport':
+                if (this.selfreport_sre_disp_id > 0) {
+                    result = ProcessDisplayCondition.processDisplayCondition(this.selfreport_sre_disp_id, this);
+                }
+                break;
+            default:
+                console.log('respondent_type not supported: ' + storedValue);
+                break;
         }
 
         return result;
@@ -60,7 +77,7 @@ export class PageQuestion {
         let storedValue = userInput ? userInput.storedValue : null;
         let result: string;
 
-        // Switch according to value in tracking_key
+        // Switch according to respondent_type
         switch (storedValue) {
             case 'legalrep':
                 result = this.txt_legalrep_lang1;

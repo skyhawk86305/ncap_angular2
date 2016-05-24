@@ -5,12 +5,10 @@ import { DisplayCondition } from '../../app/types/database-data/display_conditio
 
 export class ProcessDisplayCondition {
 
-    static processDisplayCondition(pageQuestion: PageQuestion): boolean {
+    static processDisplayCondition(sre_disp_id: number, pageQuestion: PageQuestion): boolean {
+        console.log('sre_disp_id is ' + sre_disp_id + ' for pg' + pageQuestion.page_id + '-qu' + pageQuestion.sre_sort_order);
         let result = false;
-        console.log('parent_sre_disp_id is ' + pageQuestion.parent_sre_disp_id
-            + ' for pg' + pageQuestion.page_id + '-qu' + pageQuestion.sre_sort_order);
-
-        let displayConditions: DisplayCondition[] = displayConditionDict[pageQuestion.parent_sre_disp_id];
+        let displayConditions: DisplayCondition[] = displayConditionDict[sre_disp_id];
 
         for (let curDisplayCondition of displayConditions) {
             switch (curDisplayCondition.logical_operator) {
