@@ -128,6 +128,6 @@ export var displayConditionDict: DisplayConditions = {
         new DisplayCondition(1, null, 'EQUAL', 'proband_employed', null, null)
     ],
     37: [
-        new DisplayCondition(1, null, 'EQUAL', 'respondent_type', 1, 'If you are a parent or guardian taking the survey for a child, click here.')
+        new DisplayCondition(1, null, 'EQUAL', 'respondent_type', 1, 'parent')
     ]
 };

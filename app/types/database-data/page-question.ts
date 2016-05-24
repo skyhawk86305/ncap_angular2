@@ -59,10 +59,11 @@ export class PageQuestion {
                     result = false;
                     let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
                     if (userInput) {
-                        let expectedValue = userInput.storedValue;
-                        console.log('expectedValue is ' + expectedValue);
-                        console.log('stored_value is ' + curDisplayCondition.stored_value);
-                        result = (+expectedValue === +curDisplayCondition.stored_value);
+                        let expectedstoredValue: number = curDisplayCondition.stored_value;
+                        let expectedDisplayValue = curDisplayCondition.displayed_value;
+                        console.log(' DisplayCondition.stored_value is ' + curDisplayCondition.stored_value + ',' + 'DisplayCondition.displayed_value is ' + curDisplayCondition.displayed_value);
+                        result = (+expectedstoredValue === +userInput.storedValue);
+                        result = result || (expectedDisplayValue === userInput.storedValue);
                         console.log('result is ' + result);
                     }
                 }
