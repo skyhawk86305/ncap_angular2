@@ -6,7 +6,6 @@ import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-inpu
     templateUrl: 'app/components/diagnostic/modify-user-input/modify-user-input.html'
 })
 export class ModifyUserInputComponent {
-
     trackingKey: string;
     enteredValue: string;
 

@@ -14,6 +14,7 @@ import { ReContactComponent } from '../re-contact/re-contact.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { ShowJsonComponent } from '../../diagnostic/show-json/show-json.component';
 import { ModifyUserInputComponent } from '../../diagnostic/modify-user-input/modify-user-input.component';
+import { JsonStringifyPageQuestionComponent } from '../../diagnostic/json-stringify-page-question/json-stringify-page-question.component';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
 import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario2';
 
@@ -21,7 +22,7 @@ import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debuggi
     selector: 'ng-switch-page-type',
     templateUrl: 'app/components/page-level/ng-switch-page-type/ng-switch-page-type.html',
     directives: [QuestionContainerComponent, NgSwitchQuestionComponent,
-        ShowJsonComponent, HomeComponent, ModifyUserInputComponent,
+        ModifyUserInputComponent, JsonStringifyPageQuestionComponent, ShowJsonComponent, HomeComponent, 
         BirthCertificateComponent, ConsentComponent, ResidentalBlockComponent,
         LastPageComponent, ReContactComponent]
 })
