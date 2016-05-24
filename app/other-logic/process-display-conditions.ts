@@ -33,19 +33,57 @@ export class ProcessDisplayCondition {
     static evaluteDisplyCondition(curDisplayCondition: DisplayCondition) {
         let result = false;
 
-        if (curDisplayCondition.relation === 'EQUAL') {
-            // console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
-            let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
-            if (userInput) {
-                let expectedstoredValue: number = curDisplayCondition.stored_value;
-                let expectedDisplayValue = curDisplayCondition.displayed_value;
-                // console.log(' DisplayCondition.stored_value is ' + curDisplayCondition.stored_value 
-                // + ',' + 'DisplayCondition.displayed_value is ' + curDisplayCondition.displayed_value);
-                result = (+expectedstoredValue === +userInput.storedValue);
-                result = result || (expectedDisplayValue === userInput.storedValue);
-            }
+        switch (curDisplayCondition.relation) {
+            case 'EQUAL':
+                result = ProcessDisplayCondition.processEqual(curDisplayCondition);
+                break;
+            case 'IS NOT NULL':
+                result = ProcessDisplayCondition.processIsNotNull(curDisplayCondition);
+                break;
+            case 'IS NULL':
+                result = ProcessDisplayCondition.processIsNull(curDisplayCondition);
+                break;
+            default:
+                console.log('curDisplayCondition.relation not supported ' + curDisplayCondition.relation);
+                break;
         }
 
+        return result;
+    }
+
+    static processEqual(curDisplayCondition: DisplayCondition): boolean {
+        let result = false;
+
+        // console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
+        let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
+        if (userInput) {
+            let expectedstoredValue: number = curDisplayCondition.stored_value;
+            let expectedDisplayValue = curDisplayCondition.displayed_value;
+            // console.log(' DisplayCondition.stored_value is ' + curDisplayCondition.stored_value 
+            // + ',' + 'DisplayCondition.displayed_value is ' + curDisplayCondition.displayed_value);
+            result = (+expectedstoredValue === +userInput.storedValue);
+            result = result || (expectedDisplayValue === userInput.storedValue);
+        }
+
+        return result;
+    }
+
+    static processIsNotNull(curDisplayCondition: DisplayCondition): boolean {
+        let result = false;
+
+        // console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
+        let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
+        result = !!userInput;
+
+        return result;
+    }
+
+    static processIsNull(curDisplayCondition: DisplayCondition): boolean {
+        let result = false;
+
+        // console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
+        let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
+        result = !userInput;
 
         return result;
     }
