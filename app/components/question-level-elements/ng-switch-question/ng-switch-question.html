@@ -1,11 +1,11 @@
-<!--{{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{question.bypass_enum_code}} {{FormatCategory[question.sre_foca_id]}}, anca_id: {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}-->
+<!--DiagInfo: p{{question.page_id}}.so.{{question.sre_sort_order}} anca_id:{{question.sre_anca_id}}({{AnswerCategory[question.sre_anca_id]}}) foca_id:{{question.sre_foca_id}}({{FormatCategory[question.sre_foca_id]}}) -->
 
 <div *ngIf="AnswerCategory[question.sre_anca_id] === 'No_Answer'" [ngSwitch]=FormatCategory[question.sre_foca_id]>
   <span *ngSwitchWhen="'Section_Title'">                      <section-title              [question]="question"></section-title></span>
   <span *ngSwitchWhen="'PreQ_Intro'">                         <pre-question-intro         [question]="question"></pre-question-intro></span>
 
   <span *ngSwitchDefault>
-    **Unsupported 1** {{question.page_id}}.{{question.question_id}}. {{question.bypass_property}} {{FormatCategory[question.sre_foca_id]}}, {{AnswerCategory[question.sre_anca_id]}} - {{question.question_text}}
+    **Unsupported 1** p{{question.page_id}}.so.{{question.sre_sort_order}} anca_id:{{question.sre_anca_id}}({{AnswerCategory[question.sre_anca_id]}}) foca_id:{{question.sre_foca_id}}({{FormatCategory[question.sre_foca_id]}})
     </span>
 </div>
 
@@ -24,6 +24,6 @@
   <span *ngSwitchWhen="'Skip'"></span>
 
   <span *ngSwitchDefault>
-    **Unsupported 2** anca:{{AnswerCategory[question.sre_anca_id]}} pg{{question.page_id}}.qu{{question.question_id}}. foca:{{FormatCategory[question.sre_foca_id]}} - {{question.question_text}} bypass_property:{{question.bypass_property}} 
+    **Unsupported 2** p{{question.page_id}}.so.{{question.sre_sort_order}} anca_id:{{question.sre_anca_id}}({{AnswerCategory[question.sre_anca_id]}}) foca_id:{{question.sre_foca_id}}({{FormatCategory[question.sre_foca_id]}}) 
   </span>
 </div>
