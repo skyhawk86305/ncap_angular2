@@ -1,3 +1,4 @@
+import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { NgSwitchPageTypeComponent } from '../../app/components/page-level/ng-switch-page-type/ng-switch-page-type.component';
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
@@ -43,7 +44,9 @@ export class NavigationSingleton {
         let atLeastOneVisibleQuestion = false;
 
         for (let curQuestion of questions) {
-            atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
+            if (curQuestion.sre_anca_id !== AnswerCategory.No_Answer) {
+                atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
+            }
         }
 
         return { questions: questions, pageVisible: atLeastOneVisibleQuestion, renderButtons: pageId > 2 };
@@ -73,7 +76,7 @@ export class NavigationSingleton {
         if (aggregateResult === ValidationResult.ok) {
             this._currentPageNumber++;
 
-            // Verify page is has at leat one visible Question            
+            // Verify page is has at least one visible Question            
             let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
             let avoidInfinteLoopCount = 0; // avoid an infinite loop
             while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
