@@ -13,10 +13,21 @@ export class ProcessDisplayCondition {
         let displayConditions: DisplayCondition[] = displayConditionDict[pageQuestion.parent_sre_disp_id];
 
         for (let curDisplayCondition of displayConditions) {
-            result = ProcessDisplayCondition.evaluteDisplyCondition(curDisplayCondition);
+            switch (curDisplayCondition.logical_operator) {
+                case null:
+                    result = ProcessDisplayCondition.evaluteDisplyCondition(curDisplayCondition);
+                    break;
+                case 'AND':
+                    result = result && ProcessDisplayCondition.evaluteDisplyCondition(curDisplayCondition);
+                    break;
+                case 'OR':
+                    result = result || ProcessDisplayCondition.evaluteDisplyCondition(curDisplayCondition);
+                    break;
+                default:
+                    console.log('curDisplayCondition.logical_operator is not supported: ' + curDisplayCondition.logical_operator);
+                    break;
+            }
         }
-
-        //console.log('result is ' + result);
 
         return result;
     }
@@ -36,6 +47,7 @@ export class ProcessDisplayCondition {
                 result = result || (expectedDisplayValue === userInput.storedValue);
             }
         }
+
 
         return result;
     }
