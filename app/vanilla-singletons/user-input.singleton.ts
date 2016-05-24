@@ -10,6 +10,7 @@ export class UserInputSingleton {
     }
 
     constructor() {
+        this.setUserInput('respondent_type', 'parent'); // Default value. Wil be overriden on the first page anyway
         UserInputSingleton._instance = this;
     }
 
