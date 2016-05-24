@@ -1,17 +1,14 @@
 import { Component, OnInit, Input } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
-import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
+import { ShowJsonComponent } from '../../diagnostic/show-json/show-json.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
-import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.singleton';
-import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
-import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
     selector: 'question-container',
     templateUrl: 'app/components/page-level/question-container/question-container.html',
-    directives: [NgSwitchQuestionComponent, DiagnosticComponent]
+    directives: [NgSwitchQuestionComponent, ShowJsonComponent]
 })
 export class QuestionContainerComponent implements OnInit {
 

@@ -12,7 +12,7 @@ import { QuestionContainerComponent } from '../question-container/question-conta
 import { LastPageComponent } from '../last-page/last-page.component';
 import { ReContactComponent } from '../re-contact/re-contact.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
-import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
+import { ShowJsonComponent } from '../../diagnostic/show-json/show-json.component';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
 import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario2';
 
@@ -20,7 +20,7 @@ import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debuggi
     selector: 'ng-switch-page-type',
     templateUrl: 'app/components/page-level/ng-switch-page-type/ng-switch-page-type.html',
     directives: [QuestionContainerComponent, NgSwitchQuestionComponent,
-        DiagnosticComponent, HomeComponent,
+        ShowJsonComponent, HomeComponent,
         BirthCertificateComponent, ConsentComponent, ResidentalBlockComponent,
         LastPageComponent, ReContactComponent]
 })
