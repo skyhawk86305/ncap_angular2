@@ -5,6 +5,7 @@ import { ValidationResult } from '../../../app/types/enums/validation-result.enu
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 import { displayConditionDict } from '../../../app/seed-data/display_condition_dict';
 import { DisplayCondition } from '../../../app/types/database-data/display_condition';
+import { ProcessDisplayCondition } from '../../../app/other-logic/process-display-conditions';
 
 export class PageQuestion {
 
@@ -48,27 +49,7 @@ export class PageQuestion {
         // Is there a disp_id to check
         // xyzzy - switch on parent, legal etc
         if (this.parent_sre_disp_id > 0) {
-            result = false;
-            console.log('parent_sre_disp_id = ' + this.parent_sre_disp_id + ' for ' + this.txt_parent_lang1);
-
-            let displayConditions: DisplayCondition[] = displayConditionDict[this.parent_sre_disp_id];
-
-            for (let curDisplayCondition of displayConditions) {
-                if (curDisplayCondition.relation === 'EQUAL') {
-                    console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
-                    result = false;
-                    let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
-                    if (userInput) {
-                        let expectedstoredValue: number = curDisplayCondition.stored_value;
-                        let expectedDisplayValue = curDisplayCondition.displayed_value;
-                        console.log(' DisplayCondition.stored_value is ' + curDisplayCondition.stored_value + ',' + 'DisplayCondition.displayed_value is ' + curDisplayCondition.displayed_value);
-                        result = (+expectedstoredValue === +userInput.storedValue);
-                        result = result || (expectedDisplayValue === userInput.storedValue);
-                        console.log('result is ' + result);
-                    }
-                }
-            }
-
+            result = ProcessDisplayCondition.processDisplayCondition(this);
         }
 
         return result;
