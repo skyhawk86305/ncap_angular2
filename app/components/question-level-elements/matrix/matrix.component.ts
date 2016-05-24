@@ -17,6 +17,7 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 @Component({
   selector: 'matrix',
   templateUrl: 'app/components/question-level-elements/matrix/matrix.html',
+  styleUrls: ['app/components/question-level-elements/matrix/matrix.css'],
   directives: [RenderHtmlStringIncludingTooltipsComponent, MatrixRowComponent, MatrixElement2Component]
 })
 export class MatrixComponent implements OnInit {
