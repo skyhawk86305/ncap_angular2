@@ -2,7 +2,6 @@ import { Component, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
-import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
 import { Page } from '../../../../app/types/database-data/page';
 import { PageType } from '../../../types/enums/page-type.enum';
 import { HomeComponent } from '../home/home.component';
@@ -14,6 +13,8 @@ import { LastPageComponent } from '../last-page/last-page.component';
 import { ReContactComponent } from '../re-contact/re-contact.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { DiagnosticComponent } from '../../diagnostic/diagnostic.component';
+import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
+import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario2';
 
 @Component({
     selector: 'ng-switch-page-type',
@@ -57,9 +58,13 @@ export class NgSwitchPageTypeComponent implements OnInit {
 
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
-        if (scenarioId) {
+        if (scenarioId === 1) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO1);
-            NavigationSingleton.instanceOf().setPageNumber(10);
+            NavigationSingleton.instanceOf().setPageNumber(8);
+        }
+        if (scenarioId === 2) {
+            UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO2);
+            NavigationSingleton.instanceOf().setPageNumber(8);
         }
 
         if (this._routeParams.get('diag')) {

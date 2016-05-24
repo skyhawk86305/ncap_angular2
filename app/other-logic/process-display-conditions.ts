@@ -7,7 +7,7 @@ export class ProcessDisplayCondition {
 
     static processDisplayCondition(pageQuestion: PageQuestion): boolean {
         let result = false;
-        console.log('parent_sre_disp_id = ' + pageQuestion.parent_sre_disp_id + ' for ' + pageQuestion.txt_parent_lang1);
+        console.log('parent_sre_disp_id is ' + pageQuestion.parent_sre_disp_id + ' for pg' + pageQuestion.page_id + '-qu' + pageQuestion.sre_sort_order);
 
         let displayConditions: DisplayCondition[] = displayConditionDict[pageQuestion.parent_sre_disp_id];
 
