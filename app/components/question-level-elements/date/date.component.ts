@@ -18,7 +18,7 @@ export class DateComponent {
   ValidationResult = ValidationResult; // Permit view to use the enumeration type
 
   ngOnInit() {
-    ComponentHelperClass.addTooltipIfNecessary(this.question);
+    //ComponentHelperClass.addTooltipIfNecessary(this.question);
 
     this._syncToPreviouslyEnteredData();
   }

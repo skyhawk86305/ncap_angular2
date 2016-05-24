@@ -26,7 +26,7 @@ export class RadioButtonComponent implements OnInit {
   ngOnInit() {
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
 
-    ComponentHelperClass.addTooltipIfNecessary(this.question);
+    //ComponentHelperClass.addTooltipIfNecessary(this.question);
 
     this._syncToPreviouslyEnteredData();
   }

@@ -7,20 +7,6 @@ export class LoadDomainOptionsSingleton {
     private static _instance: LoadDomainOptionsSingleton = new LoadDomainOptionsSingleton();
     private _seedDataDomainOptions: Domains = domain;
 
-    // static addTooltipIfNecessary(domainOption: DomainOption) {
-    //     // Does the question contain a tooltip?
-    //     if (domainOption.displayed_value.indexOf('--TT') >= 0) {
-    //         let position = domainOption.displayed_value.indexOf('--TT');
-    //         let workingText = domainOption.displayed_value.substring(position + 4);
-
-    //         workingText = workingText.replace(/--.*/, '');
-    //         domainOption.toolTipId = +workingText;
-
-    //         // Remove --TT5-- etc from question text    
-    //         domainOption.displayed_value = domainOption.displayed_value.replace(/--TT.*--/g, '');
-    //     }
-    // }
-
     public static instanceOf(): LoadDomainOptionsSingleton {
         return LoadDomainOptionsSingleton._instance;
     }

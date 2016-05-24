@@ -36,7 +36,7 @@ export class MatrixComponent implements OnInit {
   AnswerCategory = AnswerCategory;
 
   ngOnInit() {
-    ComponentHelperClass.addTooltipIfNecessary(this.question);
+    //ComponentHelperClass.addTooltipIfNecessary(this.question);
 
     this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.sre_uid);
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
