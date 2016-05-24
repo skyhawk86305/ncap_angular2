@@ -118,8 +118,8 @@ export var displayConditionDict: DisplayConditions = {
         new DisplayCondition(3, 'AND', 'CUSTOM_FUNCTION_1', 'phone_alt4_number', null, null)
     ],
     34: [
-        new DisplayCondition(1, null, 'EQUAL', 'respondent_type', 2, 'If you are a legally authorized representative taking the survey for another adult, click here.'),
-        new DisplayCondition(2, 'OR', 'EQUAL', 'respondent_type', 3, 'If you are an adult taking the survey on behalf of yourself, click here.')
+        new DisplayCondition(1, null, 'EQUAL', 'respondent_type', 2, 'legalrep'),
+        new DisplayCondition(2, 'OR', 'EQUAL', 'respondent_type', 3, 'selfreport')
     ],
     35: [
         new DisplayCondition(1, null, 'EQUAL', 'proband_employed', null, null)
