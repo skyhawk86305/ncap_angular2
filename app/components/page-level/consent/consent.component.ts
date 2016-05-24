@@ -20,7 +20,7 @@ export class ConsentComponent implements OnInit {
     }
 
     next() {
-        console.log('Clicked next');
+        //console.log('Clicked next');
         UserInputSingleton.instanceOf().setUserInput(this.TRACKING_KEY, 'Y');
         NavigationSingleton.instanceOf().next();
     }

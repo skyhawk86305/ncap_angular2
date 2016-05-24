@@ -13,20 +13,19 @@ export class ProcessDisplayCondition {
 
         for (let curDisplayCondition of displayConditions) {
             if (curDisplayCondition.relation === 'EQUAL') {
-                console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
+                //console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
                 let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
                 if (userInput) {
                     let expectedstoredValue: number = curDisplayCondition.stored_value;
                     let expectedDisplayValue = curDisplayCondition.displayed_value;
-                    console.log(' DisplayCondition.stored_value is ' + curDisplayCondition.stored_value + ',' + 'DisplayCondition.displayed_value is ' + curDisplayCondition.displayed_value);
+                    //console.log(' DisplayCondition.stored_value is ' + curDisplayCondition.stored_value + ',' + 'DisplayCondition.displayed_value is ' + curDisplayCondition.displayed_value);
                     result = (+expectedstoredValue === +userInput.storedValue);
                     result = result || (expectedDisplayValue === userInput.storedValue);
                 }
             }
         }
 
-        console.log('result is ' + result);
-
+        //console.log('result is ' + result);
 
         return result;
     }

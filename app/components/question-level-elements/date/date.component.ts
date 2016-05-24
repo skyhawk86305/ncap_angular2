@@ -5,10 +5,12 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 import { UserInput } from  '../../../../app/types/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
+import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 
 @Component({
   selector: 'date',
-  templateUrl: 'app/components/question-level-elements/date/date.html'
+  templateUrl: 'app/components/question-level-elements/date/date.html',
+  directives: [RenderHtmlStringIncludingTooltipsComponent]
 })
 export class DateComponent {
 
