@@ -110,6 +110,7 @@ export class ValidationSingleton {
             } else {
                 result = (curSubu.bypass_enum_code === ValidationType.requested) ?
                     ValidationResult.requested : ValidationResult.required;
+                    //console.log('xyzzy ' + result + ' - ' + curSubu.tracking_key)
             }
         }
         //let domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(question.parent_sre_dona_id);
