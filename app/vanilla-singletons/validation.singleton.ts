@@ -6,6 +6,7 @@ import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { UserInputSingleton } from '../../app/vanilla-singletons/user-input.singleton';
+import { SeedDataMatrixSingleton } from '../../app/vanilla-singletons/seed-data-matrix.singleton';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 
 export class ValidationSingleton {
@@ -94,13 +95,28 @@ export class ValidationSingleton {
 
     private validateMatrixQuestion(question: PageQuestion): ValidationResult {
         let result: ValidationResult;
-        
-        
+
+        let matrixElements: SubuQuestion[] = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(question.sre_uid);
+
+
+        console.log('matrixElements: ' + JSON.stringify(matrixElements));
+
+        for (let curSubu of matrixElements) {
+            let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curSubu.tracking_key);
+            let storedValue = userInput ? userInput.storedValue : '';
+            let populated = storedValue !== null && storedValue.length > 0;
+            if (populated) {
+                result = ValidationResult.ok;
+            } else {
+                result = (curSubu.bypass_enum_code === ValidationType.requested) ?
+                    ValidationResult.requested : ValidationResult.required;
+            }
+        }
+        //let domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(question.parent_sre_dona_id);
 
         return result;
 
     }
-
 
     private validateMatrixElement(matrixElement: SubuQuestion) {
         let result: ValidationResult;
