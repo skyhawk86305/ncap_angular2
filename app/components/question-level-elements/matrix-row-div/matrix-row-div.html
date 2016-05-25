@@ -1,5 +1,37 @@
-<div class="divTableCell">1&nbsp;</div>
-<div class="divTableCell">2&nbsp;</div>
-<div class="divTableCell">3&nbsp;</div>
-<div class="divTableCell">4&nbsp;</div>
-<div class="divTableCell">5&nbsp;</div>
+<div class="divTableCell">{{matrixElement.text}}</div>
+
+<div class="divTableCell" *ngFor="#item of domainOptions; #idx = index">
+    <input *ngIf="matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" type="radio" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)"
+        [checked]="previouslySelectedRadioButton == item.stored_value">
+    <input *ngIf="matrixElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix && idx===0" type="text" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)"
+        [checked]="previouslySelectedRadioButton == item.stored_value">
+</div>
+
+<!--<div *ngIf="AnswerCategory[question.sre_anca_id] === 'No_Answer'" [ngSwitch]=FormatCategory[question.sre_foca_id]>
+  <span *ngSwitchWhen="'Section_Title'">                      <section-title              [question]="question"></section-title></span>
+  <span *ngSwitchWhen="'PreQ_Intro'">                         <pre-question-intro         [question]="question"></pre-question-intro></span>
+
+  <span *ngSwitchDefault>
+    **Unsupported 1** p{{question.page_id}}.so.{{question.sre_sort_order}} anca_id:{{question.sre_anca_id}}({{AnswerCategory[question.sre_anca_id]}}) foca_id:{{question.sre_foca_id}}({{FormatCategory[question.sre_foca_id]}})
+    </span>
+</div>-->
+
+
+
+<!--{{xyzzy}}-->
+<!--{{AnswerCategory[matrixElement.sre_anca_id]}} - {{matrixElement.text}}-->
+
+<!--{{matrixElement.sort_order}}-->
+
+<!--<td *ngIf='[1,10,11,12,13,15].indexOf(matrixElement.sre_anca_id)>-1' class='mat_q'>{{matrixElement.text}}</td>-->
+
+<!-- render options for this element -->
+<!--<td class="mat_c ng-scope" *ngFor="#item of domainOptions; #idx = index">
+    <input *ngIf="matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" type="radio" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)"
+        [checked]="previouslySelectedRadioButton == item.stored_value">
+</td>-->
+
+<!-- render textbox  -->
+<!--<td *ngIf="matrixElement.sre_anca_id === AnswerCategory.Textbox_in_Matrix" class='mat_q' colspan="5">
+    {{matrixElement.text}} <input class="form-control" type="text" width="10" placeholder="(Please indicate)" [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_key )">
+</td>-->

@@ -16,7 +16,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 })
 export class MatrixRowDivComponent implements OnInit {
 
-//  @Input('question') question: PageQuestion;
+  @Input('question') question: PageQuestion;
   @Input('element') matrixElement: SubuQuestion;
   domainOptions: Domain[] = new Array<Domain>();
   previouslySelectedRadioButton: number;
@@ -27,16 +27,15 @@ export class MatrixRowDivComponent implements OnInit {
   AnswerCategory = AnswerCategory;
 
   ngOnInit() {
-    console.log('xyzzy');
-    // this.syncToPreviouslyEnteredData();
+    this.syncToPreviouslyEnteredData();
 
-    // this.xyzzy = JSON.stringify(this.matrixElement);
+    this.xyzzy = JSON.stringify(this.matrixElement);
 
-    // // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
-    // console.log('get domain for ' + AnswerCategory[this.matrixElement.sre_anca_id]);
-    // //if (this.matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
-    // this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
-    // //}
+    // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
+    console.log('get domain for ' + AnswerCategory[this.matrixElement.sre_anca_id]);
+    //if (this.matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
+    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+    //}
   }
 
   radioButtonClick(trackingKey: string, id: number) {
