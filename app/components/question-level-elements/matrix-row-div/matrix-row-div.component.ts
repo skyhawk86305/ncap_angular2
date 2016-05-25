@@ -33,9 +33,9 @@ export class MatrixRowDivComponent implements OnInit {
 
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     console.log('get domain for ' + AnswerCategory[this.matrixElement.sre_anca_id]);
-    //if (this.matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
-    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
-    //}
+    if (this.matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
+      this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+    }
   }
 
   radioButtonClick(trackingKey: string, id: number) {

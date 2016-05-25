@@ -1,11 +1,45 @@
-<div class="divTableCell">{{matrixElement.text}}</div>
+<div *ngIf="matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" class="divTableCell">{{matrixElement.text}}</div>
+
+<div class="divTableCell" *ngFor="#item of domainOptions; #idx = index">
+    <input type="radio" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)"
+        [checked]="previouslySelectedRadioButton == item.stored_value">
+</div>
+
+
+<div *ngIf="matrixElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix" class="divTableCell" style="width:100%;" >{{matrixElement.text}}&nbsp;<input class="form-control" type="text" width="10" placeholder="(Please indicate)" 
+    [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_key )">
+</div>
+
+
+
+
+
+
+
+
+
+<!--<div class="divTableCell">{{matrixElement.text}}</div>
 
 <div class="divTableCell" *ngFor="#item of domainOptions; #idx = index">
     <input *ngIf="matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" type="radio" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)"
         [checked]="previouslySelectedRadioButton == item.stored_value">
-    <input *ngIf="matrixElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix && idx===0" type="text" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)"
-        [checked]="previouslySelectedRadioButton == item.stored_value">
-</div>
+    <input *ngIf="matrixElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix && idx===0" 
+    class="form-control" type="text" width="10" placeholder="(Please indicate)" [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_key )">   
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--<div *ngIf="AnswerCategory[question.sre_anca_id] === 'No_Answer'" [ngSwitch]=FormatCategory[question.sre_foca_id]>
   <span *ngSwitchWhen="'Section_Title'">                      <section-title              [question]="question"></section-title></span>
