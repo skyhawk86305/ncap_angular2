@@ -6,7 +6,7 @@
 </div>
 
 anca: {{AnswerCategory[xyzzy]}} {{xyzzy}}
-<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion">
+<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion form-group ng-scope">
 
     <div *ngIf='[1, 10,11,12,13,14,15].indexOf(xyzzy)>-1' class="form-group ng-scope">
         <table>
@@ -22,7 +22,7 @@ anca: {{AnswerCategory[xyzzy]}} {{xyzzy}}
 
     <div *ngIf='[1, 10,11,12,13,14,15].indexOf(xyzzy)>-1' class="form-group ng-scope">
         <div class="divTable">
-            <div class="divTableHeading">
+            <div class="divTableHeading mat_c_th">
                 <div class="divTableRow">
                     <div class="divTableHead">&nbsp;</div>
                     <div class="divTableHead" *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</div>
@@ -30,7 +30,8 @@ anca: {{AnswerCategory[xyzzy]}} {{xyzzy}}
                 </div>
             </div>
             <div class="divTableBody">
-                <matrix-row-div class="divTableRow" *ngFor="#curMatrixElement of matrixElements" [element]="curMatrixElement" [question]="question"></matrix-row-div>
+                <matrix-row-div class='{{calculateValidatiodCSS(curMatrixElement)}} divTableRow' *ngFor="#curMatrixElement of matrixElements" 
+                [element]="curMatrixElement" [question]="question" [class.matrix-odd]="odd" ></matrix-row-div>
             </div>
         </div>
     </div>

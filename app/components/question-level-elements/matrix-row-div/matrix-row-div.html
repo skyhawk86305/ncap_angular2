@@ -1,12 +1,12 @@
-<div *ngIf="matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" class="divTableCell">{{matrixElement.text}}</div>
+<div *ngIf="matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" class="divTableCell mat_q">{{matrixElement.text}}</div>
 
-<div class="divTableCell" *ngFor="#item of domainOptions; #idx = index">
+<div class="divTableCell mat_c" *ngFor="#item of domainOptions; #idx = index">
     <input type="radio" style="outline:none" name="{{matrixElement.seq_sre_uid}}{{matrixElement.sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(matrixElement.tracking_key, item.stored_value)"
         [checked]="previouslySelectedRadioButton == item.stored_value">
 </div>
 
 
-<div *ngIf="matrixElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix" class="divTableCell" style="width:100%;" >{{matrixElement.text}}&nbsp;<input class="form-control" type="text" width="10" placeholder="(Please indicate)" 
+<div *ngIf="matrixElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix" class="divTableCell mat_q" style="width:100%;" >{{matrixElement.text}}&nbsp;<input class="form-control" type="text" width="10" placeholder="(Please indicate)" 
     [(ngModel)]="textInput" (keyup)="textChanged(matrixElement.tracking_key )">
 </div>
 

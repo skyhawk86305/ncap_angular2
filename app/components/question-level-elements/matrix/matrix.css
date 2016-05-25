@@ -16,12 +16,12 @@
 .divTableCell {
 	/*border: 1px solid #999999;*/
 	display: table-cell;
-	padding: 3px 10px;
+	/*padding: 3px 10px;*/
 }
 .divTableHead {
 	border-bottom: 1px solid black;
 	display: table-cell;
-	padding: 3px 10px;
+	/*padding: 3px 10px;*/
 }
 
 .divTableFoot {

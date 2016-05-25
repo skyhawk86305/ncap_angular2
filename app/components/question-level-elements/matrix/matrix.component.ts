@@ -51,7 +51,7 @@ export class MatrixComponent implements OnInit {
   }
 
   calculateValidatiodCSS(curMatrixElement: SubuQuestion) {
-    let cssClass = '';
+    let result = '';
 
     if (this.showValidation) {
       let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key);
@@ -61,16 +61,19 @@ export class MatrixComponent implements OnInit {
       if (!fieldPopulated) {
         switch (curMatrixElement.bypass_enum_code) {
           case ValidationType.requested:
-            cssClass = 'ncap-requested';
+            result = 'ncap-requested';
             break;
           case ValidationType.required:
-            cssClass = 'ncap-required';
+            result = 'ncap-required';
+            break;
+          default:
+            result = '';
             break;
         }
       }
     }
 
-    return cssClass;
+    return result;
   }
 
 }
