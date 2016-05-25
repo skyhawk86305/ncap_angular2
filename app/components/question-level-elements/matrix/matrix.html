@@ -22,11 +22,10 @@ anca: {{AnswerCategory[xyzzy]}} {{xyzzy}}
 
     <div *ngIf='[1, 10,11,12,13,14,15].indexOf(xyzzy)>-1' class="form-group ng-scope">
         <div class="divTable">
-            <div class="divTableHeading mat_c_th">
+            <div class="divTableHeading">
                 <div class="divTableRow">
-                    <div class="divTableHead">&nbsp;</div>
-                    <div class="divTableHead" *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</div>
-                    <!--class='mat_c_th' -->
+                    <div class="divTableHeadQuestion">&nbsp;</div>
+                    <div class="divTableHeadCenter mat_c_th" *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</div>
                 </div>
             </div>
             <div class="divTableBody">

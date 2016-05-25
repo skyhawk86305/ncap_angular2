@@ -18,9 +18,31 @@
 	display: table-cell;
 	/*padding: 3px 10px;*/
 }
+.divTableCellQuestion {
+	/*border: 1px solid #999999;*/
+	display: table-cell;
+	/*padding: 3px 10px;*/
+}
+.divTableCellCenter {
+	/*border: 1px solid #999999;*/
+	display: table-cell;
+	width:90px;
+	/*padding: 3px 10px;*/
+}
 .divTableHead {
 	border-bottom: 1px solid black;
 	display: table-cell;
+	/*padding: 3px 10px;*/
+}
+.divTableHeadQuestion {
+	border-bottom: 1px solid black;
+	display: table-cell;
+	/*padding: 3px 10px;*/
+}
+.divTableHeadCenter {
+	border-bottom: 1px solid black;
+	display: table-cell;
+	width:90px;
 	/*padding: 3px 10px;*/
 }
 
