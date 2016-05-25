@@ -58,6 +58,7 @@ export class ValidationSingleton {
         }
 
         // xyzzy5 cater for Matrix types 
+        console.log('xyzzy validation');
 
         question.validation_result = result;
     }

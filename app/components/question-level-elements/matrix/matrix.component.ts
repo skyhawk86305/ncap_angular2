@@ -51,6 +51,7 @@ export class MatrixComponent implements OnInit {
   }
 
   calculateValidatiodCSS(curMatrixElement: SubuQuestion) {
+    //[class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required"
     let result = '';
 
     if (this.showValidation) {
@@ -58,7 +59,7 @@ export class MatrixComponent implements OnInit {
       let storedValue = userInput ? userInput.storedValue : '';
       let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
 
-      if (!fieldPopulated) {
+      if (!fieldPopulated && this.question.show_validation) {
         switch (curMatrixElement.bypass_enum_code) {
           case ValidationType.requested:
             result = 'ncap-requested';

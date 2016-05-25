@@ -10,3 +10,5 @@
 
 <div *ngIf="subuElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix" class="divTableCellQuestion mat_q">{{subuElement.text}}&nbsp;<input class="form-control" type="text" width="10" placeholder="(Please indicate)" [(ngModel)]="textInput" (keyup)="textChanged(subuElement.tracking_key )">
 </div>
+
+<!--[class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required"-->
