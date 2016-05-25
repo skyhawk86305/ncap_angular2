@@ -3,9 +3,10 @@
 <div *ngIf="AnswerCategory[question.sre_anca_id] === 'No_Answer'" [ngSwitch]=FormatCategory[question.sre_foca_id]>
   <span *ngSwitchWhen="'Section_Title'">                      <section-title              [question]="question"></section-title></span>
   <span *ngSwitchWhen="'PreQ_Intro'">                         <pre-question-intro         [question]="question"></pre-question-intro></span>
+  <span *ngSwitchWhen="'Lvl_1_Q'">                            <level-one-question [question]="question"></level-one-question></span>
 
   <span *ngSwitchDefault>
-    **Unsupported 1** p{{question.page_id}}.so.{{question.sre_sort_order}} anca_id:{{question.sre_anca_id}}({{AnswerCategory[question.sre_anca_id]}}) foca_id:{{question.sre_foca_id}}({{FormatCategory[question.sre_foca_id]}})
+    **Unsupported 1** p{{question.page_id}}.so.{{question.sre_sort_order}} anca_id:{{question.sre_anca_id}}({{AnswerCategory[question.sre_anca_id]}}) foca_id:{{question.sre_foca_id}}({{FormatCategory[question.sre_foca_id]}}) - {{question.txt_parent_lang1}}
     </span>
 </div>
 
@@ -19,7 +20,6 @@
   <span *ngSwitchWhen="'MatrixRadioButtons'">                 <matrix             [question]="question"></matrix></span>
   <span *ngSwitchWhen="'MatrixRadioButtons_TextboxLastRow'">  <matrix             [question]="question"></matrix></span>
   <span *ngSwitchWhen="'MatrixRadioButtons_DropDownLastCol'"> <matrix             [question]="question"></matrix></span>
-  <span *ngSwitchWhen="'PreQ_Intro'">                         <pre-question-intro [question]="question"></pre-question-intro></span>
 
   <span *ngSwitchWhen="'Skip'"></span>
 

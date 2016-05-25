@@ -7,6 +7,7 @@ import { RadioButtonComponent } from '../radiobutton/radiobutton.component';
 import { MatrixComponent } from '../matrix/matrix.component';
 import { SectionTitleComponent } from '../section-title/section-title.component';
 import { PreQuestionIntroComponent } from '../pre-question-intro/pre-question-intro.component';
+import { LevelOneQuestionComponent } from '../level-one-question/level-one-question.component';
 import { AnswerCategory } from '../../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../../app/types/enums/format-category.enum';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
@@ -17,7 +18,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
     directives: [RadioButtonComponent, CheckboxesComponent,
         DropdownComponent, DateComponent, TextboxComponent,
         MatrixComponent, SectionTitleComponent,
-        PreQuestionIntroComponent]
+        PreQuestionIntroComponent, LevelOneQuestionComponent]
 })
 export class NgSwitchQuestionComponent implements OnInit {
 

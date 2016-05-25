@@ -1,5 +1,5 @@
 <div>
-    <div tyle="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
+    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope">
         <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
         <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>
@@ -20,19 +20,3 @@
         </div>
     </div>
 </div>
-
-
-
-<!--<div class="formly-field ng-scope ng-isolate-scope leftPadding1 formly-field-radion form-group ng-scope">
-
-    <div *ngIf='[1, 10,11,12,13,14,15].indexOf(xyzzy)>-1' class="form-group ng-scope">
-        <table>
-            <thead style="padding-left: 1em;border-bottom:1pt solid black;">
-                <tr>
-                    <th></th>
-                    <th class='mat_c_th' *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</th>
-                </tr>
-            </thead>
-            <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" [matrixElement]="curMatrixElement" [question]="question" [class.matrix-odd]="odd" class='{{calculateValidatiodCSS(curMatrixElement)}}' class='border_bottom ng-scope'>
-        </table>
-    </div>-->
