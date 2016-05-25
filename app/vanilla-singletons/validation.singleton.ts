@@ -6,6 +6,7 @@ import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { UserInputSingleton } from '../../app/vanilla-singletons/user-input.singleton';
+import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 
 export class ValidationSingleton {
 
@@ -19,7 +20,16 @@ export class ValidationSingleton {
         ValidationSingleton._instance = this;
     }
 
-    validateQuestionArray(questions: PageQuestion[]): ValidationResult {
+    validatePage(pageId: number): ValidationResult {
+        // Get all questions on page
+        let questionsToValidate: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
+        // Run validation on all questions
+        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf().validateQuestionArray(questionsToValidate);
+
+        return aggregateResult;
+    }
+
+    private validateQuestionArray(questions: PageQuestion[]): ValidationResult {
         let aggregateResult: ValidationResult = ValidationResult.ok;
 
         for (let curQuestion of questions) {
@@ -33,30 +43,45 @@ export class ValidationSingleton {
         return aggregateResult;
     }
 
-    validatePage(pageId: number): ValidationResult {
-        // Get all questions on page
-        let questionsToValidate: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
-        // Run validation on all questions
-        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf().validateQuestionArray(questionsToValidate);
-
-        return aggregateResult;
-    }
-
-    validateQuestion(question: PageQuestion): ValidationResult {
+    private validateQuestion(question: PageQuestion): ValidationResult {
         let result: ValidationResult;
 
-        if (question.bypass_enum_code === ValidationType.optional || question.bypass_enum_code === ValidationType.notApplicable) {
+        console.log(JSON.stringify(question));
+
+        let isMatrix: boolean = [10, 11, 12, 13, 14, 15].indexOf(question.sre_anca_id) > -1;
+
+        // if (question.sre_anca_id === AnswerCategory.Skip) {
+        //     result = ValidationResult.ok;
+        // }
+
+        // If not a matrix does this questions need validating?
+        if (!isMatrix && result === undefined) {
+            if (question.bypass_enum_code === ValidationType.optional || question.bypass_enum_code === ValidationType.notApplicable) {
+                result = ValidationResult.ok;
+            }
+        }
+
+        // Some data has a tracking key of null + is flagged as required/requested! Ignore these:
+        if (!isMatrix && result === undefined && question.tracking_key === null) {
             result = ValidationResult.ok;
-        } else {
+        }
+
+        // If a decision was not made above then validate a non-matrix question
+        if (!isMatrix && result === undefined) {
             let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(question.tracking_key);
             let storedValue = userInput ? userInput.storedValue : '';
             let populated = storedValue !== null && storedValue.length > 0;
             if (populated) {
                 result = ValidationResult.ok;
             } else {
-                result = (question.bypass_enum_code === ValidationType.requested) ?
-                    ValidationResult.requested : ValidationResult.required;
+                // Value was not populated. Reture required or requested
+                result = (question.bypass_enum_code === ValidationType.requested) ? ValidationResult.requested : ValidationResult.required;
             }
+        }
+
+        if (isMatrix) {
+            // Drill into each element of the matrix
+
         }
 
         // xyzzy5 cater for Matrix types 
@@ -65,7 +90,7 @@ export class ValidationSingleton {
         return result;
     }
 
-    validateMatrixElement(matrixElement: SubuQuestion) {
+    private validateMatrixElement(matrixElement: SubuQuestion) {
         let result: ValidationResult;
 
         if (matrixElement.bypass_enum_code === ValidationType.optional) {
