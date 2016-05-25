@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { ComponentHelperClass } from  '../../component-helper-class';
 import { Domain } from   '../../../../app/types/database-data/domain';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';

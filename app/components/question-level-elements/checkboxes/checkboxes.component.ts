@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from 'angular2/core';
-import { ComponentHelperClass } from  '../../component-helper-class';
 import { Domain } from  '../../../../app/types/database-data/domain';
 import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';

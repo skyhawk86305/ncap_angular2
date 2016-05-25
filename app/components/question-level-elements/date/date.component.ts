@@ -1,5 +1,4 @@
 import { Component, Input } from 'angular2/core';
-import { ComponentHelperClass } from  '../../component-helper-class';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInput } from  '../../../../app/types/user-input';
