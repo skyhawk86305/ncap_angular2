@@ -17,7 +17,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 export class MatrixRowDivComponent implements OnInit {
 
   @Input('question') question: PageQuestion;
-  @Input('element') matrixElement: SubuQuestion;
+  @Input('element') subuElement: SubuQuestion;
   domainOptions: Domain[] = new Array<Domain>();
   previouslySelectedRadioButton: number;
   textInput: string;
@@ -29,11 +29,11 @@ export class MatrixRowDivComponent implements OnInit {
   ngOnInit() {
     this.syncToPreviouslyEnteredData();
 
-    this.xyzzy = JSON.stringify(this.matrixElement);
+    this.xyzzy = JSON.stringify(this.subuElement);
 
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
-    console.log('get domain for ' + AnswerCategory[this.matrixElement.sre_anca_id]);
-    if (this.matrixElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
+    console.log('get domain for ' + AnswerCategory[this.subuElement.sre_anca_id]);
+    if (this.subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
       this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     }
   }
@@ -50,10 +50,10 @@ export class MatrixRowDivComponent implements OnInit {
 
   private syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
-    let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.matrixElement.tracking_key);
+    let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.subuElement.tracking_key);
 
     if (previousUserInput) {
-      switch (this.matrixElement.sre_anca_id) {
+      switch (this.subuElement.sre_anca_id) {
         case AnswerCategory.RadioButtons_in_Matrix:
           this.previouslySelectedRadioButton = +previousUserInput.storedValue;
           break;
@@ -61,7 +61,7 @@ export class MatrixRowDivComponent implements OnInit {
           this.textInput = previousUserInput.storedValue;
           break;
         default:
-          let message = 'Not yet supported :' + this.matrixElement.sre_anca_id;
+          let message = 'Not yet supported :' + this.subuElement.sre_anca_id;
           console.log(message);
           throw new Error(message);
       }
