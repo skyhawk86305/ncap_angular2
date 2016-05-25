@@ -30,21 +30,7 @@ export class ValidationSingleton {
         return aggregateResult;
     }
 
-    private validateQuestionArray(questions: PageQuestion[]): ValidationResult {
-        let aggregateResult: ValidationResult = ValidationResult.ok;
-
-        for (let curQuestion of questions) {
-            curQuestion.validation_result = ValidationSingleton.instanceOf().validateQuestion(curQuestion);
-
-            if (curQuestion.validation_result > aggregateResult) {
-                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on the int values of the enum
-            }
-        }
-
-        return aggregateResult;
-    }
-
-    private validateQuestion(question: PageQuestion): ValidationResult {
+    public validateQuestion(question: PageQuestion): ValidationResult {
         let result: ValidationResult;
 
         let isMatrix: boolean = [10, 11, 12, 13, 14, 15].indexOf(question.sre_anca_id) > -1;
@@ -63,6 +49,20 @@ export class ValidationSingleton {
         }
 
         return result;
+    }
+
+    private validateQuestionArray(questions: PageQuestion[]): ValidationResult {
+        let aggregateResult: ValidationResult = ValidationResult.ok;
+
+        for (let curQuestion of questions) {
+            curQuestion.validation_result = ValidationSingleton.instanceOf().validateQuestion(curQuestion);
+
+            if (curQuestion.validation_result > aggregateResult) {
+                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on the int values of the enum
+            }
+        }
+
+        return aggregateResult;
     }
 
     private validateNonMatrixQuestion(question: PageQuestion): ValidationResult {
@@ -90,39 +90,46 @@ export class ValidationSingleton {
             }
         }
         return result;
-
     }
 
     private validateMatrixQuestion(question: PageQuestion): ValidationResult {
-        let result: ValidationResult;
+        let agregateResult: ValidationResult = ValidationResult.ok;
 
         let matrixElements: SubuQuestion[] = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(question.sre_uid);
 
-
-        console.log('matrixElements: ' + JSON.stringify(matrixElements));
-
         for (let curSubu of matrixElements) {
-            let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curSubu.tracking_key);
-            let storedValue = userInput ? userInput.storedValue : '';
-            let populated = storedValue !== null && storedValue.length > 0;
-            if (populated) {
-                result = ValidationResult.ok;
-            } else {
-                result = (curSubu.bypass_enum_code === ValidationType.requested) ?
-                    ValidationResult.requested : ValidationResult.required;
-                    //console.log('xyzzy ' + result + ' - ' + curSubu.tracking_key)
+            let curResult: ValidationResult;
+            if (curSubu.bypass_enum_code === ValidationType.optional || curSubu.bypass_enum_code === ValidationType.notApplicable) {
+                curResult = ValidationResult.ok;
             }
+            else {
+                let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curSubu.tracking_key);
+                let storedValue = userInput ? userInput.storedValue : '';
+                let populated = storedValue !== null && storedValue.length > 0;
+                if (populated) {
+                    curResult = ValidationResult.ok;
+                } else {
+                    curResult = (curSubu.bypass_enum_code === ValidationType.requested) ?
+                        ValidationResult.requested : ValidationResult.required;
+                    //console.log('xyzzy ' + result + ' - ' + curSubu.tracking_key)
+                }
+            }
+
+            if (curResult > agregateResult) {
+                agregateResult = curResult; // xyzzy Note this code relies on the int values of the enum
+            }
+
         }
         //let domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(question.parent_sre_dona_id);
 
-        return result;
+        return agregateResult;
 
     }
 
     private validateMatrixElement(matrixElement: SubuQuestion) {
         let result: ValidationResult;
 
-        if (matrixElement.bypass_enum_code === ValidationType.optional) {
+        if (matrixElement.bypass_enum_code === ValidationType.optional || matrixElement.bypass_enum_code === ValidationType.notApplicable) {
             result = ValidationResult.ok;
         } else {
             let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(matrixElement.tracking_key);

@@ -11,6 +11,8 @@ import { AnswerCategory } from  '../../../../app/types/enums/answer-category.enu
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
+import { ValidationSingleton } from '../../../../app/vanilla-singletons/validation.singleton';
+import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 
 @Component({
   selector: 'matrix',
@@ -45,7 +47,7 @@ export class MatrixComponent implements OnInit {
     UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
   }
 
-  calculateValidatiodCSS(curMatrixElement: SubuQuestion) {
+  calculateValidationCSS(curMatrixElement: SubuQuestion) {
     //[class.ncap-requested]="question.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="question.show_validation && question.validation_result===ValidationResult.required"
     let result = '';
 
@@ -69,6 +71,26 @@ export class MatrixComponent implements OnInit {
       }
     }
 
+    return result;
+  }
+
+  calculateAggregateValidationCSS(curMatrixElement: SubuQuestion) {
+    let aggregateResult: ValidationResult = ValidationSingleton.instanceOf().validateQuestion(this.question);
+    let result = '';
+
+    if (this.question.show_validation) {
+      switch (aggregateResult) {
+        case ValidationResult.requested:
+          result = 'ncap-requested';
+          break;
+        case ValidationResult.required:
+          result = 'ncap-required';
+          break;
+        default:
+          result = '';
+          break;
+      }
+    }
     return result;
   }
 

@@ -27,7 +27,7 @@ export var subuQuestionDict: SubuQuestions = {
         new SubuQuestion('4950', 5900, 10, 'PH', null, null, null, 5, 1, 1, 4950, 'Restricted patterns of interest that are unusual in intensity or focus', '-- TBD --', '-- TBD --', 31, 31, 31, 'restricted_interests', null, null, null, null, null, 'restricted_interests'),
         new SubuQuestion('4950', 6000, 11, 'PH', null, null, null, 5, 1, 1, 4950, 'Preoccupation with certain objects or subjects', '-- TBD --', '-- TBD --', 31, 31, 31, 'preoccup_obj_sub', null, null, null, null, null, 'preoccup_obj_sub'),
         new SubuQuestion('4950', 6100, 12, 'PH', null, null, null, 5, 1, 1, 4950, 'Trouble adjusting to changes in specific routines or rituals', '-- TBD --', '-- TBD --', 31, 31, 31, 'trouble_adjust_changes', null, null, null, null, null, 'trouble_adjust_changes'),
-        new SubuQuestion('4950', 6200, 13, 'PH', null, null, null, 5, 14, 1, 4950, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_verbal_social_problem', '(Please indicate)', null, null, null, null, null)
+        new SubuQuestion('4950', 6200, 13, 'PH', null, null, null, 5, 14, 0, 4950, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_verbal_social_problem', '(Please indicate)', null, null, null, null, null)
     ],
     6300: [
         new SubuQuestion('6300', 6400, 1, 'PH', null, null, null, 5, 13, 1, 6300, 'Lose speech or language skills?', '-- TBD --', '-- TBD --', 33, 33, 33, 'LoseSpeech', null, null, null, null, null, 'LoseSpeech'),
@@ -74,7 +74,7 @@ export var subuQuestionDict: SubuQuestions = {
         new SubuQuestion('10800', 11400, 6, 'PH', null, null, null, 5, 15, 1, 10800, 'Reading Disorder or Dyslexia', '-- TBD --', '-- TBD --', 30, 30, 30, 'dyslexia_diag', null, null, null, null, null, 'dyslexia_diag'),
         new SubuQuestion('10800', 11500, 7, 'PH', null, null, null, 5, 15, 1, 10800, 'Developmental Delay', '-- TBD --', '-- TBD --', 30, 30, 30, 'dev_delay_diag', null, null, null, null, null, 'dev_delay_diag'),
         new SubuQuestion('10800', 11600, 8, 'PH', null, null, null, 5, 15, 1, 10800, 'Motor delay', '-- TBD --', '-- TBD --', 30, 30, 30, 'motor_delay_diag', null, null, null, null, null, 'motor_delay_diag'),
-        new SubuQuestion('10800', 11700, 9, 'PH', null, null, null, 5, 14, 1, 10800, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_learn_dev_behav_issue_diag', '(Please indicate)', null, null, null, null, null)
+        new SubuQuestion('10800', 11700, 9, 'PH', null, null, null, 5, 14, 0, 10800, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_learn_dev_behav_issue_diag', '(Please indicate)', null, null, null, null, null)
     ],
     11800: [
         new SubuQuestion('11800', 11900, 1, 'PH', null, null, null, 5, 15, 1, 11800, 'Anxiety', '-- TBD --', '-- TBD --', 30, 30, 30, 'anxiety_diag', null, null, null, null, null, 'anxiety_diag'),
@@ -82,7 +82,7 @@ export var subuQuestionDict: SubuQuestions = {
         new SubuQuestion('11800', 12100, 3, 'PH', null, null, null, 5, 15, 1, 11800, 'Bipolar Disorder', '-- TBD --', '-- TBD --', 30, 30, 30, 'bipolar_diag', null, null, null, null, null, 'bipolar_diag'),
         new SubuQuestion('11800', 12200, 4, 'PH', null, null, null, 5, 15, 1, 11800, 'Schizophrenia', '-- TBD --', '-- TBD --', 30, 30, 30, 'schizophrenia_diag', null, null, null, null, null, 'schizophrenia_diag'),
         new SubuQuestion('11800', 12300, 5, 'PH', null, null, null, 5, 15, 1, 11800, 'Pica (eating non-food items such as dirt, clay, chalk, or paint chips)', '-- TBD --', '-- TBD --', 30, 30, 30, 'pica_diag', null, null, null, null, null, 'pica_diag'),
-        new SubuQuestion('11800', 12400, 6, 'PH', null, null, null, 5, 14, 1, 11800, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_emotional_health_issue_diag', '(Please indicate)', null, null, null, null, null)
+        new SubuQuestion('11800', 12400, 6, 'PH', null, null, null, 5, 14, 0, 11800, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_emotional_health_issue_diag', '(Please indicate)', null, null, null, null, null)
     ],
     12500: [
         new SubuQuestion('12500', 12600, 1, 'PH', null, null, null, 5, 15, 1, 12500, 'Diabetes', '-- TBD --', '-- TBD --', 30, 30, 30, 'diabetes_diag', null, null, null, null, null, 'diabetes_diag'),
@@ -92,7 +92,7 @@ export var subuQuestionDict: SubuQuestions = {
         new SubuQuestion('12500', 13000, 5, 'PH', null, null, null, 5, 15, 1, 12500, 'Immune dysfunction (such as psoriasis, eczema)', '-- TBD --', '-- TBD --', 30, 30, 30, 'immune_dysfunction_diag', null, null, null, null, null, 'immune_dysfunction_diag'),
         new SubuQuestion('12500', 13100, 6, 'PH', null, null, null, 5, 15, 1, 12500, 'Cerebral palsy', '-- TBD --', '-- TBD --', 30, 30, 30, 'cerebral_palsy_diag', null, null, null, null, null, 'cerebral_palsy_diag'),
         new SubuQuestion('12500', 13200, 7, 'PH', null, null, null, 5, 15, 1, 12500, 'Deafness or significant hearing loss', '-- TBD --', '-- TBD --', 30, 30, 30, 'deafness_diag', null, null, null, null, null, 'deafness_diag'),
-        new SubuQuestion('12500', 13300, 8, 'PH', null, null, null, 5, 14, 1, 12500, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_health_issue_diag', '(Please indicate)', null, null, null, null, null)
+        new SubuQuestion('12500', 13300, 8, 'PH', null, null, null, 5, 14, 0, 12500, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_health_issue_diag', '(Please indicate)', null, null, null, null, null)
     ],
     13400: [
         new SubuQuestion('13400', 13500, 1, 'PH', null, null, null, 5, 15, 1, 13400, 'Allergies (such as to medication, food, or the environment, such as pollen)', '-- TBD --', '-- TBD --', 30, 30, 30, 'allergies', null, null, null, null, null, 'allergies'),
@@ -100,7 +100,7 @@ export var subuQuestionDict: SubuQuestions = {
         new SubuQuestion('13400', 13700, 3, 'PH', null, null, null, 5, 15, 1, 13400, 'Sleep dysfunction (such as problems going to sleep or staying asleep, or sleeping too much)', '-- TBD --', '-- TBD --', 30, 30, 30, 'sleep_dysfunction', null, null, null, null, null, 'sleep_dysfunction'),
         new SubuQuestion('13400', 13800, 4, 'PH', null, null, null, 5, 15, 1, 13400, 'Motor impairment (such as repetitive behaviors, motor delay, gait abnormality, incoordination)', '-- TBD --', '-- TBD --', 30, 30, 30, 'motor_impairment', null, null, null, null, null, 'motor_impairment'),
         new SubuQuestion('13400', 13900, 5, 'PH', null, null, null, 5, 15, 1, 13400, 'Gastrointestinal issues (such as chronic diarrhea, constipation, nausea, vomiting, acid reflux)', '-- TBD --', '-- TBD --', 30, 30, 30, 'gastrointestinal_issues', null, null, null, null, null, 'gastrointestinal_issues'),
-        new SubuQuestion('13400', 14000, 6, 'PH', null, null, null, 5, 12, 1, 13400, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_observed_issues', '(Please indicate)', null, null, null, null, null)
+        new SubuQuestion('13400', 14000, 6, 'PH', null, null, null, 5, 12, 0, 13400, 'Other', '-- TBD --', '-- TBD --', null, null, null, 'other_observed_issues', '(Please indicate)', null, null, null, null, null)
     ],
     14250: [
         new SubuQuestion('14250', 14255, 1, 'EN', 35, 35, 35, 16, 6, 0, 14250, null, '<!--Placeholder for other work-->', '<!--Placeholder for other work-->', null, null, null, 'proband_employ_other', '(Please indicate)', null, null, null, null, null)
