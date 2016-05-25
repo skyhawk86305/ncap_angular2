@@ -20,7 +20,6 @@ export class TextboxComponent implements OnInit {
   previouslySelectedStoredValue: string;
 
   ngOnInit() {
-    //ComponentHelperClass.addTooltipIfNecessary(this.question);
     this._syncToPreviouslyEnteredData();
   }
 

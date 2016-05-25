@@ -29,8 +29,6 @@ export class CheckboxesComponent implements OnInit {
   ngOnInit() {
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
 
-    //ComponentHelperClass.addTooltipIfNecessary(this.question);
-
     if (this.question.sre_anca_id === AnswerCategory.Checkboxes_TextboxLastEntry) {
       this.showOtherTextBoxForStoredValue = 4; // xyzzy Hardcoded the value for Other
     }

@@ -46,8 +46,6 @@ export class ValidationSingleton {
     private validateQuestion(question: PageQuestion): ValidationResult {
         let result: ValidationResult;
 
-        console.log(JSON.stringify(question));
-
         let isMatrix: boolean = [10, 11, 12, 13, 14, 15].indexOf(question.sre_anca_id) > -1;
 
         // if (question.sre_anca_id === AnswerCategory.Skip) {
@@ -56,18 +54,30 @@ export class ValidationSingleton {
 
         // If not a matrix does this questions need validating?
         if (!isMatrix && result === undefined) {
-            if (question.bypass_enum_code === ValidationType.optional || question.bypass_enum_code === ValidationType.notApplicable) {
-                result = ValidationResult.ok;
-            }
+            result = this.validateNonMatrixQuestion(question);
         }
 
-        // Some data has a tracking key of null + is flagged as required/requested! Ignore these:
-        if (!isMatrix && result === undefined && question.tracking_key === null) {
+        if (isMatrix) {
+            result = this.validateMatrixQuestion(question);
+        }
+
+        return result;
+    }
+
+    private validateNonMatrixQuestion(question: PageQuestion): ValidationResult {
+        let result: ValidationResult;
+
+        if (question.bypass_enum_code === ValidationType.optional || question.bypass_enum_code === ValidationType.notApplicable) {
             result = ValidationResult.ok;
         }
 
-        // If a decision was not made above then validate a non-matrix question
-        if (!isMatrix && result === undefined) {
+        // Some data has a tracking key of null + is flagged as required/requested! Ignore these:
+        if (result === undefined && question.tracking_key === null) {
+            result = ValidationResult.ok;
+        }
+
+        // If a decision was not made above then validate
+        if (result === undefined) {
             let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(question.tracking_key);
             let storedValue = userInput ? userInput.storedValue : '';
             let populated = storedValue !== null && storedValue.length > 0;
@@ -78,17 +88,19 @@ export class ValidationSingleton {
                 result = (question.bypass_enum_code === ValidationType.requested) ? ValidationResult.requested : ValidationResult.required;
             }
         }
+        return result;
 
-        if (isMatrix) {
-            // Drill into each element of the matrix
+    }
 
-        }
-
-        // xyzzy5 cater for Matrix types 
-        console.log('xyzzy validation');
+    private validateMatrixQuestion(question: PageQuestion): ValidationResult {
+        let result: ValidationResult;
+        
+        
 
         return result;
+
     }
+
 
     private validateMatrixElement(matrixElement: SubuQuestion) {
         let result: ValidationResult;
