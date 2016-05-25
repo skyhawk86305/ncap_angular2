@@ -3,6 +3,7 @@ import { ComponentHelperClass } from  '../../component-helper-class';
 import { Domain } from '../../../../app/types/database-data/domain';
 import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
+import { MatrixRowDivComponent } from '../matrix-row-div/matrix-row-div.component';
 import { MatrixElement2Component } from '../matrixElement2/matrixElement2.component';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { SeedDataMatrixSingleton } from '../../../../app/vanilla-singletons/seed-data-matrix.singleton';
@@ -18,7 +19,7 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
   selector: 'matrix',
   templateUrl: 'app/components/question-level-elements/matrix/matrix.html',
   styleUrls: ['app/components/question-level-elements/matrix/matrix.css'],
-  directives: [RenderHtmlStringIncludingTooltipsComponent, MatrixRowComponent, MatrixElement2Component]
+  directives: [RenderHtmlStringIncludingTooltipsComponent, MatrixRowComponent, MatrixRowDivComponent, MatrixElement2Component]
 })
 export class MatrixComponent implements OnInit {
 

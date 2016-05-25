@@ -20,50 +20,35 @@ anca: {{AnswerCategory[xyzzy]}} {{xyzzy}}
         </table>
     </div>
 
-    <!--<div *ngIf='[1, 10,11,12,13,14,15].indexOf(xyzzy)>-1' class="form-group ng-scope">
-        <table>
-            <thead style="padding-left: 1em;border-bottom:1pt solid black;">
-                <tr>
-                    <th></th>
-                    <th class='mat_c_th' *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</th>
-                </tr>
-            </thead>
-             <tr *ngFor="#curMatrixElement of matrixElements #odd=odd" 
-             [matrixElement]="curMatrixElement" [question]="question" [class.matrix-odd]="odd"  
-             class='{{calculateValidatiodCSS(curMatrixElement)}}'
-             class='border_bottom ng-scope' >
-        </table>
-    </div>-->
+    <div *ngIf='[1, 10,11,12,13,14,15].indexOf(xyzzy)>-1' class="form-group ng-scope">
+        <div class="divTable">
+            <div class="divTableBody">
+                <div class="divTableRow" style="padding-left: 1em;border-bottom:1pt solid black;">
+                    <div class="divTableCell">&nbsp;</div>
+                    <div class="divTableCell" *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</div>
+                    <!--class='mat_c_th' -->
+                </div>
+                <test class="divTableRow">
+                <!--<div class="divTableRow">-->
+                    <div class="divTableCell">&nbsp;</div>
+                    <div class="divTableCell">&nbsp;</div>
+                    <div class="divTableCell">&nbsp;</div>
+                    <div class="divTableCell">&nbsp;</div>
+                    <div class="divTableCell">&nbsp;</div>
+                <!--</div>-->
+                </test>
+                <matrix-row-div class="divTableRow" *ngFor="#curMatrixElement of matrixElements" [element]="curMatrixElement" [question]="question"></matrix-row-div>
 
-    <!--<div class="divTable">
-        <div class="divTableBody">
-            <div class="divTableRow">
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-            </div>
-            <div class="divTableRow">
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-            </div>
-            <div class="divTableRow">
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-            </div>
-            <div class="divTableRow">
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
             </div>
         </div>
+    </div>
+
+
+
+    <!--<div class="divTableRow">
+        <div class="divTableCell">&nbsp;</div>
+        <div class="divTableCell">&nbsp;</div>
+        <div class="divTableCell">&nbsp;</div>
+        <div class="divTableCell">&nbsp;</div>
+        <div class="divTableCell">&nbsp;</div>
     </div>-->
