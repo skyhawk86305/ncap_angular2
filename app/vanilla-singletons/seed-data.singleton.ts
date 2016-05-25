@@ -51,11 +51,16 @@ export class SeedDataSingleton {
     }
 
     getPage(page_Id: number): Page {
-        let result = surveyPageDict[1].find((i) => i.page_id === page_Id); 
+        let result = surveyPageDict[1].find((i) => i.page_id === page_Id);
         return result;
     }
-    
-    
+
+    getAllPages(): Page[] {
+        let result = surveyPageDict[1];
+
+        return result;
+    }
+
 
     // henry_db_related
     // This whole method should be relocated to the Node app which pre-processes data

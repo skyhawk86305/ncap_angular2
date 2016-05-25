@@ -1,4 +1,4 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component, Input, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
@@ -22,12 +22,13 @@ import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debuggi
     selector: 'ng-switch-page-type',
     templateUrl: 'app/components/page-level/ng-switch-page-type/ng-switch-page-type.html',
     directives: [QuestionContainerComponent, NgSwitchQuestionComponent,
-        ModifyUserInputComponent, JsonStringifyPageQuestionComponent, ShowJsonComponent, HomeComponent, 
+        ModifyUserInputComponent, JsonStringifyPageQuestionComponent, ShowJsonComponent, HomeComponent,
         BirthCertificateComponent, ConsentComponent, ResidentalBlockComponent,
         LastPageComponent, ReContactComponent]
 })
 export class NgSwitchPageTypeComponent implements OnInit {
 
+    @Input() pageInput: Page;
     public pageData: Page;
     public pageId: number;
     public PageType = PageType;
@@ -40,8 +41,13 @@ export class NgSwitchPageTypeComponent implements OnInit {
 
     ngOnInit() {
         this.handleUrlParameters();
-        NavigationSingleton.instanceOf().registerAsObserver(this);
-        this.oberservedDataChanged();
+        if (!this.pageInput) {
+            NavigationSingleton.instanceOf().registerAsObserver(this);
+            this.oberservedDataChanged();
+        } else {
+            this.pageData = this.pageInput;
+        }
+
     }
 
     public oberservedDataChanged() {
