@@ -1,8 +1,10 @@
 import { SubuQuestion } from '../../app/types/database-data/subu-question';
+import { Page } from '../../app/types/database-data/page';
 import { PageQuestion } from '../../app/types/database-data/page-question';
 import { UserInput } from  '../../app/types/user-input';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
+import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { UserInputSingleton } from '../../app/vanilla-singletons/user-input.singleton';
 
 export class ValidationSingleton {
@@ -21,10 +23,10 @@ export class ValidationSingleton {
         let aggregateResult: ValidationResult = ValidationResult.ok;
 
         for (let curQuestion of questions) {
-            ValidationSingleton.instanceOf().validateQuestion(curQuestion);
+            curQuestion.validation_result = ValidationSingleton.instanceOf().validateQuestion(curQuestion);
 
             if (curQuestion.validation_result > aggregateResult) {
-                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on teh int values of the enum
+                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on the int values of the enum
             }
         }
 
@@ -32,15 +34,15 @@ export class ValidationSingleton {
     }
 
     validatePage(pageId: number): ValidationResult {
-        let result: ValidationResult;
+        // Get all questions on page
+        let questionsToValidate: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
+        // Run validation on all questions
+        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf().validateQuestionArray(questionsToValidate);
 
-        // Find questions and interate through
-        // xyzzy5
-
-        return result;
+        return aggregateResult;
     }
 
-    validateQuestion(question: PageQuestion) {
+    validateQuestion(question: PageQuestion): ValidationResult {
         let result: ValidationResult;
 
         if (question.bypass_enum_code === ValidationType.optional || question.bypass_enum_code === ValidationType.notApplicable) {
@@ -60,7 +62,7 @@ export class ValidationSingleton {
         // xyzzy5 cater for Matrix types 
         console.log('xyzzy validation');
 
-        question.validation_result = result;
+        return result;
     }
 
     validateMatrixElement(matrixElement: SubuQuestion) {

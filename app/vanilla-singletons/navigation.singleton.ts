@@ -22,16 +22,8 @@ export class NavigationSingleton {
         NavigationSingleton._instance = this;
     }
 
-    // xyzzy5 - try to remove dependence on this method + trigger when necessary from a Singleton
-    runValidationOnCurrentQuestions(): ValidationResult {
-        let questionsToValidate = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
-        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()
-            .validateQuestionArray(questionsToValidate);
-        return aggregateResult;
-    }
-
     getPageToRender(): Page {
-        let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber); //xyzzy5 ned to reconcile use of page number and page id
+        let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber); //xyzzy5 need to reconcile use of page number and page id
 
         return result;
     }
@@ -54,7 +46,7 @@ export class NavigationSingleton {
 
     // Navigation
     next() {
-        let aggregateResult = this.runValidationOnCurrentQuestions();
+        let aggregateResult = ValidationSingleton.instanceOf().validatePage(this._currentPageNumber);
 
         // Requested Validation message is only shown once per page, max three times on the survey 
         if (aggregateResult === ValidationResult.requested) {
@@ -115,7 +107,7 @@ export class NavigationSingleton {
 
     requestPageControlRevalidate() {
         // xyzzy This may not be efficient. Tune later?
-        NavigationSingleton.instanceOf().runValidationOnCurrentQuestions();
+        ValidationSingleton.instanceOf().validatePage(this._currentPageNumber);
     }
 
     getCurrentPageNumber() {
