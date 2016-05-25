@@ -10,7 +10,7 @@ export class NavigationSingleton {
 
     private static _instance: NavigationSingleton = new NavigationSingleton();
     public diagMode = false; // Is the app in Diagnostic Mode?
-    public shownRequestedValidation: number = 0; // We only show 'Requested Validation' message three times
+    public shownRequestedValidationOnPages: number[] = new Array<number>(); // Track which pages have already displayed the Requested Validation message 
     private _currentPageNumber: number = 1;
     private _observer: NgSwitchPageTypeComponent; // We could use an interface instead of coupling to the class' type
 
@@ -56,12 +56,14 @@ export class NavigationSingleton {
     next() {
         let aggregateResult = this.runValidationOnCurrentQuestions();
 
-        // Requested Validation message is only shown three times 
+        // Requested Validation message is only shown once per page, max three times on the survey 
         if (aggregateResult === ValidationResult.requested) {
-            if (NavigationSingleton.instanceOf().shownRequestedValidation >= 3) {
+            if (this.shownRequestedValidationOnPages.length >= 3 ||
+                this.shownRequestedValidationOnPages.indexOf(this.getCurrentPageNumber()) > -1) {
                 aggregateResult = ValidationResult.ok;
+            } else {
+                this.shownRequestedValidationOnPages.push(this.getCurrentPageNumber());
             }
-            NavigationSingleton.instanceOf().shownRequestedValidation++;
         }
 
         // If validation should be shown update show_validation property in the questions
