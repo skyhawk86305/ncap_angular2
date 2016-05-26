@@ -12,52 +12,42 @@
 	display: table-row;
 }
 
-
-/*.divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-}*/
-
 .divTableCell {
-	/*border: 1px solid #999999;*/
 	display: table-cell;
-	/*padding: 3px 10px;*/
 }
 
 .divTableCellQuestion {
-	/*border: 1px solid #999999;*/
 	display: table-cell;
-	/*padding: 3px 10px;*/
+	border-bottom: 1pt solid #ddd;;
+}
+
+.divTableCellOther {
+	display: table-cell;
 }
 
 .divTableCellCenter {
-	/*border: 1px solid #999999;*/
 	display: table-cell;
 	width: 90px;
-	/*padding: 3px 10px;*/
+	border-bottom: 1pt solid #ddd;;
 }
 
 .divTableHead {
 	border-bottom: 1px solid black;
 	display: table-cell;
-	/*padding: 3px 10px;*/
 }
 
 .divTableHeadQuestion {
 	border-bottom: 1px solid black;
 	display: table-cell;
-	/*padding: 3px 10px;*/
 }
 
 .divTableHeadCenter {
 	border-bottom: 1px solid black;
 	display: table-cell;
 	width: 90px;
-	/*padding: 3px 10px;*/
 }
 
 .divTableFoot {
-	/*background-color: #EEE;*/
 	display: table-footer-group;
 	font-weight: bold;
 }

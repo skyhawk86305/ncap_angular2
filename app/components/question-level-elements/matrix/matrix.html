@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="divTableBody">
-            <matrix-row-div [class.matrix-odd]="odd" class='divTableRow {{calculateValidationCSS(curMatrixElement)}}' *ngFor="#curMatrixElement of matrixElements #odd=odd" [element]="curMatrixElement" [question]="question" ></matrix-row-div>
+            <matrix-row-div class='divTableRow {{calculateValidationCSS(curMatrixElement)}}' [class.matrix-odd]='odd' *ngFor="#curMatrixElement of matrixElements #odd=odd" [element]="curMatrixElement" [question]="question" ></matrix-row-div>
         </div>
     </div>
 </div>
