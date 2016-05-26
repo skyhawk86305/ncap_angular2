@@ -3,7 +3,9 @@ import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
+import { SeedDataSingleton } from '../../../app/vanilla-singletons/seed-data.singleton';
 import { ProcessDisplayCondition } from '../../../app/other-logic/process-display-conditions';
+import { Page } from '../../../app/types/database-data/page';
 
 export class PageQuestion {
 
@@ -11,7 +13,6 @@ export class PageQuestion {
     toolTipId: number; // xyzzy Temp property to get Tooltips partially working
     validation_result: ValidationResult;
     validation_type: ValidationType;
-    show_validation: boolean;
 
     constructor(
         public page_id: number,
@@ -96,4 +97,8 @@ export class PageQuestion {
         return result;
     }
 
+    get page(): Page {
+        let result = SeedDataSingleton.instanceOf().getPage(this.page_id);
+        return result;
+    }
 }

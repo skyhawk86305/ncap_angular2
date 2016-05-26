@@ -53,7 +53,7 @@ export class ValidationSingleton {
         let aggregateResult: ValidationResult = this.validateQuestion(question);
         let result = '';
 
-        if (question.show_validation) {
+        if (question.page.show_validation) {
             switch (aggregateResult) {
                 case ValidationResult.requested:
                     result = 'ncap-requested';

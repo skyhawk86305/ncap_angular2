@@ -1,15 +1,5 @@
-import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
-import { ValidationType } from '../../app/types/enums/validation-type.enum';
-// The data
-// import { sre } from '../../app/seed-data/sre';
-// import { surveyPageSre } from '../../app/seed-data/survey-page-sre';
-// Types to hold the data
-// import { Sre } from '../../app/types/database-data/sre';
-// import { SurveyPageSre } from '../../app/types/database-data/survey-page-sre';
-
 import { surveyPageDict } from '../../app/seed-data/survey_page_dict';
 import { Page } from '../../app/types/database-data/page';
-//import { SeedDataPageQuestions } from '../../app/types/database-data/seed-data-page-questions';
 import { PageQuestion } from '../../app/types/database-data/page-question';
 import { pageQuestionDict } from '../../app/seed-data/page_question_dict';
 
@@ -18,8 +8,6 @@ export class SeedDataSingleton {
     private static _instance: SeedDataSingleton = new SeedDataSingleton();
 
     public totalPages = -1;
-    //private _questions: Question[] = new Array<Question>();
-
     public static instanceOf(): SeedDataSingleton {
         return SeedDataSingleton._instance;
     }
@@ -44,7 +32,6 @@ export class SeedDataSingleton {
     }
 
     getQuestionsForPage(page_Id: number) {
-        //SeedDataPageQuestions
         let result = pageQuestionDict[page_Id];
 
         return result;

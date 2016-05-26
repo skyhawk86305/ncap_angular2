@@ -62,7 +62,7 @@ export class NavigationSingleton {
         if (aggregateResult !== ValidationResult.ok) {
             let curQuestions: PageQuestion[] = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
             for (let curQuestion of curQuestions) {
-                curQuestion.show_validation = true;
+                curQuestion.page.show_validation = true;
             }
         }
 
