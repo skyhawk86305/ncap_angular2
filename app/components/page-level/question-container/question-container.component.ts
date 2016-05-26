@@ -6,6 +6,8 @@ import { ModifyUserInputComponent } from '../../diagnostic/modify-user-input/mod
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.singleton';
+import { ValidationSingleton } from '../../../../app/vanilla-singletons/validation.singleton';
+import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 
 @Component({
     selector: 'question-container',
@@ -19,7 +21,9 @@ export class QuestionContainerComponent implements OnInit {
     //questions: PageQuestion[];
     //that: QuestionContainerComponent;
     public NavigationSingleton = NavigationSingleton;
-    public SeedDataSingleton = SeedDataSingleton; 
+    public SeedDataSingleton = SeedDataSingleton;
+    protected validationSingleton = ValidationSingleton.instanceOf();
+    protected ValidationResult = ValidationResult;
 
     constructor(
         private _routeParams: RouteParams
