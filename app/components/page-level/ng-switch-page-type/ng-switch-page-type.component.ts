@@ -16,7 +16,8 @@ import { ShowJsonComponent } from '../../diagnostic/show-json/show-json.componen
 import { ModifyUserInputComponent } from '../../diagnostic/modify-user-input/modify-user-input.component';
 import { JsonStringifyPageQuestionComponent } from '../../diagnostic/json-stringify-page-question/json-stringify-page-question.component';
 import { USERINPUT_SCENARIO1 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario1';
-import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debugging/user-input-senario2';
+import { USERINPUT_SCENARIO2 } from '../../../../app/seed-data/json-for-debugging/user-input-senario2';
+import { IObservable } from '../../../../app/other-logic/i-observable';
 
 @Component({
     selector: 'ng-switch-page-type',
@@ -26,7 +27,7 @@ import { USERINPUT_SCENARIO2 } from  '../../../../app/seed-data/json-for-debuggi
         BirthCertificateComponent, ConsentComponent, ResidentalBlockComponent,
         LastPageComponent, ReContactComponent]
 })
-export class NgSwitchPageTypeComponent implements OnInit {
+export class NgSwitchPageTypeComponent implements OnInit, IObservable {
 
     @Input() pageInput: Page;
     public pageData: Page;

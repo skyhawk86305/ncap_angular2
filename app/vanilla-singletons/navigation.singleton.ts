@@ -1,5 +1,5 @@
+import { IObservable } from '../../app/other-logic/i-observable';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
-import { NgSwitchPageTypeComponent } from '../../app/components/page-level/ng-switch-page-type/ng-switch-page-type.component';
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
@@ -12,7 +12,7 @@ export class NavigationSingleton {
     public diagMode = false; // Is the app in Diagnostic Mode?
     public shownRequestedValidationOnPages: number[] = new Array<number>(); // Track which pages have already displayed the Requested Validation message 
     private _currentPageNumber: number = 1;
-    private _observer: NgSwitchPageTypeComponent; // We could use an interface instead of coupling to the class' type
+    private _observers: Array<IObservable> = new Array<IObservable>();
 
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
@@ -79,9 +79,7 @@ export class NavigationSingleton {
                 questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
             }
 
-            if (this._observer) {
-                this._observer.oberservedDataChanged();
-            }
+            this.notifyObservers();
         } else {
             console.log('Aggregate validation is ' + ValidationResult[aggregateResult]);
         }
@@ -100,9 +98,7 @@ export class NavigationSingleton {
             questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
         }
 
-        if (this._observer) {
-            this._observer.oberservedDataChanged();
-        }
+        this.notifyObservers();
     }
 
     requestPageControlRevalidate() {
@@ -126,9 +122,18 @@ export class NavigationSingleton {
         return percentage;
     }
 
-    // Observer registration. We could change to use a vanilla interface
-    registerAsObserver(component: NgSwitchPageTypeComponent) {
-        this._observer = component;
+    // Observer registration. Components register here to be notified of changes
+    registerAsObserver(observer: IObservable) {
+        this._observers.push(observer);
     };
+
+    // Loop through all registered observers, notifying each one
+    notifyObservers() {
+        for (let curObserver of this._observers) {
+            if (curObserver) {
+                curObserver.oberservedDataChanged();
+            }
+        }
+    }
 }
 
