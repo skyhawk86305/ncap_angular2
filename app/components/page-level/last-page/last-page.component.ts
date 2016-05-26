@@ -8,6 +8,5 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 export class LastPageComponent {
 
   @Input() pageId: number;
-  // Permit view to use the enumeration type
-  public NavigationSingleton = NavigationSingleton;
+  protected navigationSingleton = NavigationSingleton.instanceOf();
 }

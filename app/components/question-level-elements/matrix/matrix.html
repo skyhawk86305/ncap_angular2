@@ -1,6 +1,6 @@
 <div>
-    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope {{question.page.show_validation ? validationSingleton.calculateAggregateValidationCSS(question) : ''}}">
-        <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
+    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope {{navigationSingleton.show_validation ? validationSingleton.calculateAggregateValidationCSS(question) : ''}}">
+        <span *ngIf="navigationSingleton.diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
         <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>
 </div>
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="divTableBody">
-            <matrix-row-div class='divTableRow {{question.page.show_validation ? validationSingleton.calculateSubuElementValidationCSS(curMatrixElement) : (odd ? "matrix-odd" : "")}} ' *ngFor="#curMatrixElement of matrixElements #odd=odd" [element]="curMatrixElement"
+            <matrix-row-div class='divTableRow {{navigationSingleton.show_validation ? validationSingleton.calculateSubuElementValidationCSS(curMatrixElement) : (odd ? "matrix-odd" : "")}} ' *ngFor="#curMatrixElement of matrixElements #odd=odd" [element]="curMatrixElement"
                 [question]="question"></matrix-row-div>
         </div>
     </div>

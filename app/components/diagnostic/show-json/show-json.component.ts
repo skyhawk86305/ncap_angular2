@@ -8,7 +8,7 @@ import { UserInput } from  '../../../../app/types/user-input';
     templateUrl: 'app/components/diagnostic/show-json/show-json.html'
 })
 export class ShowJsonComponent implements OnInit {
-    public NavigationSingleton = NavigationSingleton;
+    protected navigationSingleton = NavigationSingleton.instanceOf();
     currentPage: number;
     data: UserInput[];
 

@@ -9,6 +9,5 @@ export class BirthCertificateComponent {
 
   @Input() pageId: number;
   // Permit view to use the enumeration type
-  public NavigationSingleton = NavigationSingleton;
-
+  protected navigationSingleton = NavigationSingleton.instanceOf();
 }

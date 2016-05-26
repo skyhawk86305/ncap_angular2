@@ -1,4 +1,4 @@
 <div style="font-size:14px; font-style: italic; max-width: 768px;" class="ng-binding ng-scope">
-    <span *ngIf="NavigationSingleton.instanceOf().diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
+    <span *ngIf="navigationSingleton.diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
     <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
 </div>

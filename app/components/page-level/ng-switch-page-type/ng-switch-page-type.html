@@ -1,7 +1,7 @@
 <!-- Progress Bar -->
-<div *ngIf="NavigationSingleton.instanceOf().getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
-  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="NavigationSingleton.instanceOf().getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + NavigationSingleton.instanceOf().getPercentageComplete() + '%;'">
-    {{ NavigationSingleton.instanceOf().getPercentageComplete() }}% (pg {{ NavigationSingleton.instanceOf().getCurrentPageNumber() }})
+<div *ngIf="navigationSingleton.getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
+  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="navigationSingleton.getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + navigationSingleton.getPercentageComplete() + '%;'">
+    {{ navigationSingleton.getPercentageComplete() }}% (pg {{ navigationSingleton.getCurrentPageNumber() }})
   </div>
 </div>
 
@@ -26,8 +26,8 @@
 
 <BR>
 <BR>
-<show-json *ngIf="NavigationSingleton.instanceOf().diagMode"></show-json>
+<show-json *ngIf="navigationSingleton.diagMode"></show-json>
 <BR>
-<modify-user-input *ngIf="NavigationSingleton.instanceOf().diagMode"></modify-user-input> 
+<modify-user-input *ngIf="navigationSingleton.diagMode"></modify-user-input> 
 <BR>
-<json-stringify-page-question *ngIf="NavigationSingleton.instanceOf().diagMode"></json-stringify-page-question> 
+<json-stringify-page-question *ngIf="navigationSingleton.diagMode"></json-stringify-page-question> 

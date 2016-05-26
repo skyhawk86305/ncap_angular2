@@ -8,11 +8,12 @@ import { Page } from '../../app/types/database-data/page';
 
 export class NavigationSingleton {
 
-    private static _instance: NavigationSingleton = new NavigationSingleton();
+    public show_validation: boolean;
     public diagMode = false; // Is the app in Diagnostic Mode?
-    public shownRequestedValidationOnPages: number[] = new Array<number>(); // Track which pages have already displayed the Requested Validation message 
+    public shownRequestedValidationOnPages: number[] = new Array<number>(); // Pages already shown Requested Validation 
     private _currentPageNumber: number = 1;
     private _observers: Array<IObservable> = new Array<IObservable>();
+    private static _instance: NavigationSingleton = new NavigationSingleton();
 
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
@@ -23,7 +24,8 @@ export class NavigationSingleton {
     }
 
     getPageToRender(): Page {
-        let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber); //xyzzy5 need to reconcile use of page number and page id
+        // xyzzy5 need to reconcile use of page number and page id
+        let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber);
 
         return result;
     }
@@ -60,15 +62,13 @@ export class NavigationSingleton {
 
         // If validation should be shown update show_validation property in the questions
         if (aggregateResult !== ValidationResult.ok) {
-            let curQuestions: PageQuestion[] = NavigationSingleton.instanceOf().getQuestionsToRender().questions;
-            for (let curQuestion of curQuestions) {
-                curQuestion.page.show_validation = true;
-            }
+            this.show_validation = true;
         }
 
         // If validation was ok, then go to the next page
         if (aggregateResult === ValidationResult.ok) {
             this._currentPageNumber++;
+            this.show_validation = false;
 
             // Verify page is has at least one visible Question            
             let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();

@@ -14,7 +14,7 @@ import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-inc
 export class DateComponent {
 
   @Input() question: PageQuestion;
-  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
+  protected navigationSingleton = NavigationSingleton.instanceOf();
   previouslySelectedStoredValue: string;
   ValidationResult = ValidationResult; // Permit view to use the enumeration type
 

@@ -21,7 +21,7 @@ export class MatrixComponent implements OnInit {
 
   @Input() question: PageQuestion;
   @Input() showValidation: boolean = true;
-  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
+  protected navigationSingleton = NavigationSingleton.instanceOf();
   domainOptions: Domain[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;

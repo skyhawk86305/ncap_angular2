@@ -14,7 +14,7 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 export class TextboxComponent implements OnInit {
 
   @Input() question: PageQuestion;
-  public NavigationSingleton = NavigationSingleton;
+  protected navigationSingleton = NavigationSingleton.instanceOf();
   public ValidationResult = ValidationResult; // Permit view to use the enumeration type
   previouslySelectedStoredValue: string;
 

@@ -18,12 +18,10 @@ export class QuestionContainerComponent implements OnInit {
 
     @Input() pageId: number;
     renderButtons: boolean = true;
-    //questions: PageQuestion[];
-    //that: QuestionContainerComponent;
-    public NavigationSingleton = NavigationSingleton;
-    public SeedDataSingleton = SeedDataSingleton;
+    protected navigationSingleton = NavigationSingleton.instanceOf();
     protected validationSingleton = ValidationSingleton.instanceOf();
     protected ValidationResult = ValidationResult;
+    public SeedDataSingleton = SeedDataSingleton;
 
     constructor(
         private _routeParams: RouteParams

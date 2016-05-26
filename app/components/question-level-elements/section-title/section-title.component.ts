@@ -9,5 +9,5 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 export class SectionTitleComponent {
 
   @Input() question: PageQuestion;
-  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
+  protected navigationSingleton = NavigationSingleton.instanceOf();
 }

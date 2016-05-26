@@ -16,7 +16,7 @@ import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-inc
 export class RadioButtonComponent implements OnInit {
 
   @Input() question: PageQuestion;
-  public NavigationSingleton = NavigationSingleton; // Permit html to access Singleton
+  protected navigationSingleton = NavigationSingleton.instanceOf();
   public ValidationResult = ValidationResult; // Permit view to use the enumeration type
   domainOptions: Domain[];
   questionToolTipId: number = -1;

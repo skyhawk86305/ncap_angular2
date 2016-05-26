@@ -6,6 +6,7 @@ import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { UserInputSingleton } from '../../app/vanilla-singletons/user-input.singleton';
 import { SeedDataMatrixSingleton } from '../../app/vanilla-singletons/seed-data-matrix.singleton';
+import { NavigationSingleton } from '../../app/vanilla-singletons/navigation.singleton';
 
 export class ValidationSingleton {
 
@@ -53,7 +54,7 @@ export class ValidationSingleton {
         let aggregateResult: ValidationResult = this.validateQuestion(question);
         let result = '';
 
-        if (question.page.show_validation) {
+        if (NavigationSingleton.instanceOf().show_validation) {
             switch (aggregateResult) {
                 case ValidationResult.requested:
                     result = 'ncap-requested';

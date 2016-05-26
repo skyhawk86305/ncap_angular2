@@ -8,8 +8,7 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 export class ResidentalBlockComponent {
 
   @Input() pageId: number;
-  // Permit view to use the enumeration type
-  public NavigationSingleton = NavigationSingleton;
+  protected navigationSingleton = NavigationSingleton.instanceOf();
 
   ngAfterContentInit() {
     console.log('In residental block. Page Id: ' + this.pageId);

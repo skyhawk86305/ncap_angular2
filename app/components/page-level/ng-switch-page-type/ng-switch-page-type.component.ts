@@ -33,7 +33,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     public pageData: Page;
     public pageId: number;
     public PageType = PageType;
-    public NavigationSingleton = NavigationSingleton;
+    protected navigationSingleton = NavigationSingleton.instanceOf();
 
     constructor(
         private _routeParams: RouteParams
