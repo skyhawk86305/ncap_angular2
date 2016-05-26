@@ -1,5 +1,5 @@
 <!--Loop for all questions, letting ng-switch delegate the rendering-->
-<!-- xyzzy5 Code embedded here to trigger a change from pageId changing. Nice to look for a better way later --> 
+<!-- xyzzy5 Code embedded here to trigger a change from pageId changing. Nice to look for a better way later -->
 <div *ngFor="#curQuestionData of SeedDataSingleton.instanceOf().getQuestionsForPage(pageId)" class="container ng-scope" style="max-width: 80%;margin: auto;">
   <!--Question is {{curQuestion.question_text}}-->
   <!--<ng-switch-question question-data="curQuestionData"></ng-switch-question>oo-->
@@ -8,6 +8,15 @@
 
 <BR>
 <BR>
+
+<div class="validation-messages">
+  <div ng-show="vm.model.appData.unansweredRequiredQuestionsCount > 0" class="ncap-required">
+    *Please answer the highlighted question(s) before proceeding to the next page. If you do not wish to answer, you may exit the survey by clicking Exit Survey.
+  </div>
+  <div ng-show="vm.showRequestedMsg() " class="ncap-requested ng-binding ng-hide">
+    *The highlighted question(s) have not been answered. Please answer these questions or click Next to go to the next page.
+  </div>
+</div>
 
 <!--Buttons-->
 <div *ngIf="renderButtons" align="center" class="navigation-buttons ng-scope">

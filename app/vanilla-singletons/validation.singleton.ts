@@ -1,5 +1,4 @@
 import { SubuQuestion } from '../../app/types/database-data/subu-question';
-import { Page } from '../../app/types/database-data/page';
 import { PageQuestion } from '../../app/types/database-data/page-question';
 import { UserInput } from  '../../app/types/user-input';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
@@ -7,7 +6,6 @@ import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { UserInputSingleton } from '../../app/vanilla-singletons/user-input.singleton';
 import { SeedDataMatrixSingleton } from '../../app/vanilla-singletons/seed-data-matrix.singleton';
-import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 
 export class ValidationSingleton {
 
@@ -50,6 +48,51 @@ export class ValidationSingleton {
 
         return result;
     }
+
+    calculateAggregateValidationCSS(question: PageQuestion) {
+        let aggregateResult: ValidationResult = this.validateQuestion(question);
+        let result = '';
+
+        if (question.show_validation) {
+            switch (aggregateResult) {
+                case ValidationResult.requested:
+                    result = 'ncap-requested';
+                    break;
+                case ValidationResult.required:
+                    result = 'ncap-required';
+                    break;
+                default:
+                    result = '';
+                    break;
+            }
+        }
+        return result;
+    }
+
+    calculateSubuElementValidationCSS(curMatrixElement: SubuQuestion) {
+        let result = '';
+
+        let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key);
+        let storedValue = userInput ? userInput.storedValue : '';
+        let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
+
+        if (!fieldPopulated) {
+            switch (curMatrixElement.bypass_enum_code) {
+                case ValidationType.requested:
+                    result = 'ncap-requested';
+                    break;
+                case ValidationType.required:
+                    result = 'ncap-required';
+                    break;
+                default:
+                    result = '';
+                    break;
+            }
+        }
+
+        return result;
+    }
+
 
     private validateQuestionArray(questions: PageQuestion[]): ValidationResult {
         let aggregateResult: ValidationResult = ValidationResult.ok;
