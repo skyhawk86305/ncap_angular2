@@ -8,7 +8,7 @@
   <button type="button" class="btn btn-primary btn-lg" style="outline:none" (click)="navigationSingleton.back()" nga11y-modal-closer=""><i class="fa fa-arrow-circle-left"></i> Back
   </button>
 
-  <button type="button" nga11y-modal-closer="" style="outline:none" class="btn btn-primary btn-lg ng-binding" (click)="navigationSingleton.next()">
+  <button *ngIf="!hideNextButton" type="button" nga11y-modal-closer="" style="outline:none" class="btn btn-primary btn-lg ng-binding" (click)="navigationSingleton.next()">
       <i class="fa fa-arrow-circle-right" ng-class="{'fa-arrow-circle-right':vm.currPage!==vm.breakArr.length, 'fa-paper-plane-o':vm.currPage===vm.breakArr.length}"></i> Next
       </button>
 
