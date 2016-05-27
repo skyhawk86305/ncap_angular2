@@ -18,25 +18,28 @@ export class MatrixRowDivComponent implements OnInit {
 
   @Input('question') question: PageQuestion;
   @Input('element') subuElement: SubuQuestion;
+  protected userInputSingleton = UserInputSingleton.instanceOf();
+  AnswerCategory = AnswerCategory; // Permit view to use the enumeration type
   domainOptions: Domain[] = new Array<Domain>();
   previouslySelectedRadioButton: number;
   textInput: string;
-
-  // Permit view to use the enumeration type
-  AnswerCategory = AnswerCategory;
+  domainOptionsForLastColDropDown: Domain[];
 
   ngOnInit() {
-    this.syncToPreviouslyEnteredData();
-
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     console.log('get domain for ' + AnswerCategory[this.subuElement.sre_anca_id]);
     if (this.subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
-      this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id).slice();
-      if (this.subuElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
-        // The last column is not needed for RadioButtons_in_Matrix_DropDownLastCol
-        this.domainOptions.pop();
-      }
+      this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     }
+
+    if (this.subuElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
+      this.domainOptions = this.domainOptions.slice(); // make a copy of the array
+      let lastDomain: Domain = this.domainOptions.pop();
+      // this.finalColumnText = lastDomain.displayed_value;
+      this.domainOptionsForLastColDropDown = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(1);
+    }
+
+    this.syncToPreviouslyEnteredData();
   }
 
   radioButtonClick(trackingKey: string, id: number) {
@@ -47,6 +50,12 @@ export class MatrixRowDivComponent implements OnInit {
   textChanged(trackingKey: string) {
     console.log('Changed ' + trackingKey + ' with value ' + this.textInput);
     UserInputSingleton.instanceOf().setUserInput(trackingKey, this.textInput);
+  }
+
+  dropDownChanged(trackingKey: string, value: string) {
+    trackingKey += '_noticed';
+    console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
+    UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
   }
 
   private syncToPreviouslyEnteredData() {
@@ -69,6 +78,14 @@ export class MatrixRowDivComponent implements OnInit {
           console.log(message);
           throw new Error(message);
       }
+    }
+
+    // And the associated drop down (if there is one)
+    previousUserInput = UserInputSingleton.instanceOf().getUserInput(this.subuElement.tracking_key + '_noticed');
+    if (previousUserInput) {
+      this.subuElement.previouslySelectedStoredValue = +previousUserInput.storedValue;
+    } else {
+      this.subuElement.previouslySelectedStoredValue = -1;
     }
   }
 

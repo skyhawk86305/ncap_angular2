@@ -1,16 +1,28 @@
 <div *ngIf="subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" class="divTableCellQuestion mat_q">
     <html-including-tooltips [htmlToRender]='subuElement.text'></html-including-tooltips>
+    <!-- Support RadioButtons_in_Matrix_DropDownLastCol -->
+    <div *ngIf='subuElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol && userInputSingleton.getUserInput(subuElement.tracking_key)?.storedValue==="1"' class='divTableRow'>
+        <div class='divTableCellQuestion'>
+            &nbsp;&nbsp;age noticed: <select style="display: inline-block;" class="form-control" (change)="dropDownChanged(subuElement.tracking_key, $event.target.value)"><option *ngFor="#item of domainOptionsForLastColDropDown" [value]="item.stored_value" [selected]='subuElement.previouslySelectedStoredValue==item.stored_value'>{{item.displayed_value}}</option></select>
+        </div>
+        <div class='divTableCellQuestion'>
+        </div>
+        <div class='divTableCellQuestion'>
+        </div>
+        <div class='divTableCellQuestion'>
+        </div>
+        <div class='divTableCellQuestion'>
+        </div>
+    </div>
+
 </div>
 
 <!--{{AnswerCategory[subuElement.sre_anca_id]}}-->
 
 <div class="divTableCellCenter mat_c" *ngFor="#item of domainOptions; #idx = index">
-    <input type="radio" style="outline:none" 
-    name="{{subuElement.sre_uid}}{{subuElement.sre_sort_order}}"  
-    value="{{item.stored_value}}" 
-    (click)="radioButtonClick(subuElement.tracking_key, item.stored_value)" 
-    [checked]="previouslySelectedRadioButton == item.stored_value">
+    <input type="radio" style="outline:none" name="{{subuElement.sre_uid}}{{subuElement.sre_sort_order}}" value="{{item.stored_value}}" (click)="radioButtonClick(subuElement.tracking_key, item.stored_value)" [checked]="previouslySelectedRadioButton == item.stored_value">
 </div>
 
 <div *ngIf="subuElement.sre_anca_id == AnswerCategory.Textbox_in_Matrix" class="divTableCellOther mat_q">{{subuElement.text}}&nbsp;<input class="form-control" type="text" width="10" placeholder="(Please indicate)" [(ngModel)]="textInput" (keyup)="textChanged(subuElement.tracking_key )">
 </div>
+

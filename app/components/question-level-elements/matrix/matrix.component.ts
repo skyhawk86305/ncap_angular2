@@ -10,7 +10,6 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 import { SubuQuestion } from '../../../../app/types/database-data/subu-question';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { ValidationSingleton } from '../../../../app/vanilla-singletons/validation.singleton';
-import { UserInput } from  '../../../../app/types/user-input';
 
 @Component({
   selector: 'matrix',
@@ -33,7 +32,6 @@ export class MatrixComponent implements OnInit {
   columnHeadings: string[];
   answerCategory: AnswerCategory;
   protected finalColumnText: string;
-  domainOptionsForLastColDropDown: Domain[];
 
   ngOnInit() {
     this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.sre_uid);
@@ -43,32 +41,11 @@ export class MatrixComponent implements OnInit {
     if (this.matrixElements[0].sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
       let lastDomain: Domain = this.domainOptions.pop();
       this.finalColumnText = lastDomain.displayed_value;
-      this.domainOptionsForLastColDropDown = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(1);
     }
-
-    this.syncToPreviouslyEnteredData();
   }
 
   click(trackingKey: string, value: string) {
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
     UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
   }
-
-  dropDownChanged(trackingKey: string, value: string) {
-    trackingKey += '_noticed';
-    console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
-    UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
-  }
-
-  private syncToPreviouslyEnteredData() {
-    for (let curItem of this.matrixElements) {
-      let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curItem.tracking_key + '_noticed');
-      if (previousUserInput) {
-        curItem.previouslySelectedStoredValue = +previousUserInput.storedValue;
-      } else {
-        curItem.previouslySelectedStoredValue = -1;
-      }
-    }
-  }
-
 }
