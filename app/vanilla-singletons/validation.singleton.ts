@@ -7,6 +7,7 @@ import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.single
 import { UserInputSingleton } from '../../app/vanilla-singletons/user-input.singleton';
 import { SeedDataMatrixSingleton } from '../../app/vanilla-singletons/seed-data-matrix.singleton';
 import { NavigationSingleton } from '../../app/vanilla-singletons/navigation.singleton';
+import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 
 export class ValidationSingleton {
 
@@ -70,15 +71,28 @@ export class ValidationSingleton {
         return result;
     }
 
+    // xyzzy - modify to return css class and Validation type, then use it below to reduce deplicated logic
     calculateSubuElementValidationCSS(curMatrixElement: SubuQuestion) {
         let result = '';
 
         let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key);
         let storedValue = userInput ? userInput.storedValue : '';
         let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
+        let bypass_enum_code = curMatrixElement.bypass_enum_code;
+
+        // Special case: If Yes selected then '_noticed' must also be populated
+        if (userInput && +userInput.storedValue === 1
+            && curMatrixElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
+            console.log('sdfoijsdoifjsodi');
+            let userInput2: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key + '_noticed');
+            if (!userInput2) {
+                fieldPopulated = false;
+                bypass_enum_code = ValidationType.required;
+            }
+        }
 
         if (!fieldPopulated) {
-            switch (curMatrixElement.bypass_enum_code) {
+            switch (bypass_enum_code) {
                 case ValidationType.requested:
                     result = 'ncap-requested';
                     break;
@@ -152,6 +166,16 @@ export class ValidationSingleton {
                 let populated = storedValue !== null && storedValue.length > 0;
                 if (populated) {
                     curResult = ValidationResult.ok;
+
+                    // Special case: If Yes selected then '_noticed' must also be populated
+                    if (curSubu.sre_anca_id === AnswerCategory.MatrixRadioButtons_DropDownLastCol) {
+                        console.log('sdfoijsdoifjsodi');
+                        let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curSubu.tracking_key + '_noticed');
+                        if (!userInput) {
+                            curResult = ValidationResult.requested; // xyzzy - not ideal
+                        }
+                    }
+
                 } else {
                     curResult = (curSubu.bypass_enum_code === ValidationType.requested) ?
                         ValidationResult.requested : ValidationResult.required;
@@ -181,6 +205,16 @@ export class ValidationSingleton {
             let populated = storedValue !== null && storedValue.length > 0;
             if (populated) {
                 result = ValidationResult.ok;
+                console.log('>>' + AnswerCategory[matrixElement.sre_anca_id]);
+                // Special case: If Yes selected then '_noticed' must also be populated
+                if (matrixElement.sre_anca_id === AnswerCategory.MatrixRadioButtons_DropDownLastCol) {
+                    console.log('sdfoijsdoifjsodi');
+                    let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(matrixElement.tracking_key + '_noticed');
+                    if (!userInput) {
+                        result = ValidationResult.requested; // xyzzy - not ideal
+                    }
+                }
+
             } else {
                 result = (matrixElement.bypass_enum_code === ValidationType.requested) ?
                     ValidationResult.requested : ValidationResult.required;
