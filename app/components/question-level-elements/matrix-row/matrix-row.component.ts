@@ -9,12 +9,12 @@ import { AnswerCategory } from  '../../../../app/types/enums/answer-category.enu
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({
-  selector: 'matrix-row-div',
-  templateUrl: 'app/components/question-level-elements/matrix-row-div/matrix-row-div.html',
+  selector: 'matrix-row',
+  templateUrl: 'app/components/question-level-elements/matrix-row/matrix-row.html',
   styleUrls: ['app/components/question-level-elements/matrix/matrix.css'],
   directives: [RenderHtmlStringIncludingTooltipsComponent]
 })
-export class MatrixRowDivComponent implements OnInit {
+export class MatrixRowComponent implements OnInit {
 
   @Input('question') question: PageQuestion;
   @Input('element') subuElement: SubuQuestion;

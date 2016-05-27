@@ -15,7 +15,7 @@
         </div>
         <div class="divTableBody" *ngFor="#curMatrixElement of matrixElements #odd=odd">
 
-            <matrix-row-div class='divTableRow {{navigationSingleton.show_validation ? validationSingleton.calculateSubuElementValidationCSS(curMatrixElement) : (odd ? "matrix-odd" : "")}} ' [question]="question" [element]="curMatrixElement"></matrix-row-div>
+            <matrix-row class='divTableRow {{navigationSingleton.show_validation ? validationSingleton.calculateSubuElementValidationCSS(curMatrixElement) : (odd ? "matrix-odd" : "")}} ' [question]="question" [element]="curMatrixElement"></matrix-row>
         </div>
     </div>
 </div>

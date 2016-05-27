@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { Domain } from '../../../../app/types/database-data/domain';
 import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
-import { MatrixRowDivComponent } from '../matrix-row-div/matrix-row-div.component';
+import { MatrixRowComponent } from '../matrix-row/matrix-row.component';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { SeedDataMatrixSingleton } from '../../../../app/vanilla-singletons/seed-data-matrix.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
@@ -15,7 +15,7 @@ import { ValidationSingleton } from '../../../../app/vanilla-singletons/validati
   selector: 'matrix',
   templateUrl: 'app/components/question-level-elements/matrix/matrix.html',
   styleUrls: ['app/components/question-level-elements/matrix/matrix.css'],
-  directives: [RenderHtmlStringIncludingTooltipsComponent, MatrixRowDivComponent]
+  directives: [RenderHtmlStringIncludingTooltipsComponent, MatrixRowComponent]
 })
 export class MatrixComponent implements OnInit {
 
