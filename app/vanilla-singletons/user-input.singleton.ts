@@ -10,7 +10,10 @@ export class UserInputSingleton {
     }
 
     constructor() {
-        this.setUserInput('respondent_type', 'parent'); // Default value. Wil be overriden on the first page anyway
+        // Default values
+        this.setUserInput('respondent_type', 'parent');
+        this.setUserInput('asd_yes_no', '1');
+        this.setUserInput('proband_DOB', '2010-05-01'); //xyzzy5 - find the correct default and calculate
         UserInputSingleton._instance = this;
     }
 
@@ -26,7 +29,7 @@ export class UserInputSingleton {
 
     setUserInput(trackingKey: string, enteredValue: string) {
         // Is this item already in the array?
-        let userInputEntry: UserInput = this._UserInput.find((i: UserInput)  => i.trackingKey === trackingKey);
+        let userInputEntry: UserInput = this._UserInput.find((i: UserInput) => i.trackingKey === trackingKey);
         if (!userInputEntry) {
             userInputEntry = new UserInput();
             userInputEntry.trackingKey = trackingKey;
