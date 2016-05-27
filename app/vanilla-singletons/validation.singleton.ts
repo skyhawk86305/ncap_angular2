@@ -21,11 +21,11 @@ export class ValidationSingleton {
         ValidationSingleton._instance = this;
     }
 
-    validatePage(pageId: number): ValidationResult {
+    public validatePage(pageId: number): ValidationResult {
         // Get all questions on page
         let questionsToValidate: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
         // Run validation on all questions
-        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf().validateQuestionArray(questionsToValidate);
+        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()._validateQuestionArray(questionsToValidate);
 
         return aggregateResult;
     }
@@ -45,13 +45,13 @@ export class ValidationSingleton {
         }
 
         if (isMatrix) {
-            result = this.validateMatrixQuestion(question);
+            result = this._validateMatrixQuestion(question);
         }
 
         return result;
     }
 
-    calculateAggregateValidationCSS(question: PageQuestion) {
+    public calculateAggregateValidationCSS(question: PageQuestion) {
         let aggregateResult: ValidationResult = this.validateQuestion(question);
         let result = '';
 
@@ -71,14 +71,35 @@ export class ValidationSingleton {
         return result;
     }
 
-    // xyzzy - modify to return css class and Validation type, then use it below to reduce deplicated logic
-    calculateSubuElementValidationCSS(curMatrixElement: SubuQuestion) {
-        let result = '';
+    public calculateSubuElementValidationCSS(curMatrixElement: SubuQuestion) {
+        let validationResult = this._validateSubuElement(curMatrixElement);
+        let resultingCss = '';
+
+        switch (validationResult) {
+            case ValidationResult.requested:
+                resultingCss = 'ncap-requested';
+                break;
+            case ValidationResult.required:
+                resultingCss = 'ncap-required';
+                break;
+            default:
+                resultingCss = '';
+                break;
+        }
+
+        return resultingCss;
+    }
+
+    private _validateSubuElement(curMatrixElement: SubuQuestion): ValidationResult {
+        let result: ValidationResult;
 
         let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key);
         let storedValue = userInput ? userInput.storedValue : '';
         let fieldPopulated: boolean = storedValue !== null && storedValue.length > 0;
-        let bypass_enum_code = curMatrixElement.bypass_enum_code;
+
+        if (fieldPopulated) {
+            result = ValidationResult.ok;
+        }
 
         // Special case: If Yes selected then '_noticed' must also be populated
         if (userInput && +userInput.storedValue === 1
@@ -87,20 +108,20 @@ export class ValidationSingleton {
             let userInput2: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key + '_noticed');
             if (!userInput2) {
                 fieldPopulated = false;
-                bypass_enum_code = ValidationType.required;
+                result = ValidationResult.required;
             }
         }
 
-        if (!fieldPopulated) {
-            switch (bypass_enum_code) {
+        if (result === undefined) {
+            switch (curMatrixElement.bypass_enum_code) {
                 case ValidationType.requested:
-                    result = 'ncap-requested';
+                    result = ValidationResult.requested;
                     break;
                 case ValidationType.required:
-                    result = 'ncap-required';
+                    result = ValidationResult.required;
                     break;
                 default:
-                    result = '';
+                    result = ValidationResult.ok;
                     break;
             }
         }
@@ -108,8 +129,7 @@ export class ValidationSingleton {
         return result;
     }
 
-
-    private validateQuestionArray(questions: PageQuestion[]): ValidationResult {
+    private _validateQuestionArray(questions: PageQuestion[]): ValidationResult {
         let aggregateResult: ValidationResult = ValidationResult.ok;
 
         for (let curQuestion of questions) {
@@ -150,7 +170,7 @@ export class ValidationSingleton {
         return result;
     }
 
-    private validateMatrixQuestion(question: PageQuestion): ValidationResult {
+    private _validateMatrixQuestion(question: PageQuestion): ValidationResult {
         let agregateResult: ValidationResult = ValidationResult.ok;
 
         let matrixElements: SubuQuestion[] = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(question.sre_uid);
@@ -159,69 +179,16 @@ export class ValidationSingleton {
             let curResult: ValidationResult;
             if (curSubu.bypass_enum_code === ValidationType.optional || curSubu.bypass_enum_code === ValidationType.notApplicable) {
                 curResult = ValidationResult.ok;
-            }
-            else {
-                let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curSubu.tracking_key);
-                let storedValue = userInput ? userInput.storedValue : '';
-                let populated = storedValue !== null && storedValue.length > 0;
-                if (populated) {
-                    curResult = ValidationResult.ok;
-
-                    // Special case: If Yes selected then '_noticed' must also be populated
-                    if (curSubu.sre_anca_id === AnswerCategory.MatrixRadioButtons_DropDownLastCol) {
-                        console.log('sdfoijsdoifjsodi');
-                        let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(curSubu.tracking_key + '_noticed');
-                        if (!userInput) {
-                            curResult = ValidationResult.requested; // xyzzy - not ideal
-                        }
-                    }
-
-                } else {
-                    curResult = (curSubu.bypass_enum_code === ValidationType.requested) ?
-                        ValidationResult.requested : ValidationResult.required;
-                    //console.log('xyzzy ' + result + ' - ' + curSubu.tracking_key)
-                }
+            } else {
+                curResult = this._validateSubuElement(curSubu);
             }
 
             if (curResult > agregateResult) {
                 agregateResult = curResult; // xyzzy Note this code relies on the int values of the enum
             }
-
         }
-        //let domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(question.parent_sre_dona_id);
 
         return agregateResult;
-
-    }
-
-    private validateMatrixElement(matrixElement: SubuQuestion) {
-        let result: ValidationResult;
-
-        if (matrixElement.bypass_enum_code === ValidationType.optional || matrixElement.bypass_enum_code === ValidationType.notApplicable) {
-            result = ValidationResult.ok;
-        } else {
-            let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(matrixElement.tracking_key);
-            let storedValue = userInput ? userInput.storedValue : '';
-            let populated = storedValue !== null && storedValue.length > 0;
-            if (populated) {
-                result = ValidationResult.ok;
-                console.log('>>' + AnswerCategory[matrixElement.sre_anca_id]);
-                // Special case: If Yes selected then '_noticed' must also be populated
-                if (matrixElement.sre_anca_id === AnswerCategory.MatrixRadioButtons_DropDownLastCol) {
-                    console.log('sdfoijsdoifjsodi');
-                    let userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(matrixElement.tracking_key + '_noticed');
-                    if (!userInput) {
-                        result = ValidationResult.requested; // xyzzy - not ideal
-                    }
-                }
-
-            } else {
-                result = (matrixElement.bypass_enum_code === ValidationType.requested) ?
-                    ValidationResult.requested : ValidationResult.required;
-            }
-        }
-
-        matrixElement.validation_result = result;
     }
 
 }
