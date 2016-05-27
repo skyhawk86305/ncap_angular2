@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { ShowJsonComponent } from '../../diagnostic/show-json/show-json.component';
 import { JsonStringifyPageQuestionComponent } from '../../diagnostic/json-stringify-page-question/json-stringify-page-question.component';
+import { PageLevelValidationComponent } from '../page-level-validation/page-level-validation.component';
 import { ModifyUserInputComponent } from '../../diagnostic/modify-user-input/modify-user-input.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
@@ -12,7 +13,8 @@ import { ValidationResult } from '../../../../app/types/enums/validation-result.
 @Component({
     selector: 'question-container',
     templateUrl: 'app/components/page-level/question-container/question-container.html',
-    directives: [JsonStringifyPageQuestionComponent, ModifyUserInputComponent, ShowJsonComponent, NgSwitchQuestionComponent]
+    directives: [ JsonStringifyPageQuestionComponent, ModifyUserInputComponent, ShowJsonComponent, 
+    NgSwitchQuestionComponent, PageLevelValidationComponent ]
 })
 export class QuestionContainerComponent implements OnInit {
 
