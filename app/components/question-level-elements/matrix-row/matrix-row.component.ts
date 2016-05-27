@@ -36,10 +36,9 @@ export class MatrixRowComponent implements OnInit {
       this.domainOptions = this.domainOptions.slice(); // make a copy of the array
       let lastDomain: Domain = this.domainOptions.pop();
       // this.finalColumnText = lastDomain.displayed_value;
-      this.domainOptionsForLastColDropDown = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(1);
     }
 
-    this.syncToPreviouslyEnteredData();
+    this._syncToPreviouslyEnteredData();
   }
 
   radioButtonClick(trackingKey: string, id: number) {
@@ -55,10 +54,27 @@ export class MatrixRowComponent implements OnInit {
   dropDownChanged(trackingKey: string, value: string) {
     trackingKey += '_noticed';
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
-    UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
+    if (+value > -1) {
+      UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
+    }
   }
 
-  private syncToPreviouslyEnteredData() {
+  // xyzzy Copy and Paste code - move to a shared class
+  private _getDomainOptions(id: number, addPleaseSelect: boolean): Domain[] {
+    let result = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(id);
+
+    if (addPleaseSelect) {
+      // Copy the array as we are going to modify it
+      result = result.slice(0);
+      // Add 'Please select' as the first option
+      let pleaseSelecteDomainOption: Domain = new Domain(-1, -1, '---Please select---');
+      result.unshift(pleaseSelecteDomainOption);
+    }
+
+    return result;
+  }
+
+  private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
     let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.subuElement.tracking_key);
 
@@ -84,9 +100,12 @@ export class MatrixRowComponent implements OnInit {
     previousUserInput = UserInputSingleton.instanceOf().getUserInput(this.subuElement.tracking_key + '_noticed');
     if (previousUserInput) {
       this.subuElement.previouslySelectedStoredValue = +previousUserInput.storedValue;
+      this.domainOptionsForLastColDropDown = this._getDomainOptions(1, false);
+
     } else {
       this.subuElement.previouslySelectedStoredValue = -1;
+      this.domainOptionsForLastColDropDown = this._getDomainOptions(1, true);
     }
-  }
 
+  }
 }

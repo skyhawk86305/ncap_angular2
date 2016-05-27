@@ -36,7 +36,7 @@ export class DropdownComponent implements OnInit {
   }
 
   private _getDomainOptions(id: number, addPleaseSelect: boolean): Domain[] {
-    let result = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+    let result = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(id);
 
     if (addPleaseSelect) {
       // Copy the array as we are going to modify it
