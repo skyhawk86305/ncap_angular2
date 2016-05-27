@@ -1,11 +1,2 @@
-<span *ngFor="#curElement of elementsToRender">
-  
-  <span *ngIf="curElement.tooltip===false" [innerHTML]='curElement.data'></span>
-
-<span *ngIf="curElement.tooltip===true" class="tooltip1 ng-scope ncapTooltipText">
-  <i class="fa fa-info-circle"></i>
-  <span class="tooltiptext1">{{getTooltipText(curElement.tooltipId)}}
-    </span>
-</span>
-
-</span>
+<span *ngFor="#curElement of elementsToRender"><span *ngIf="curElement.tooltip===false" [innerHTML]='curElement.data'></span>
+<span *ngIf="curElement.tooltip===true" class="tooltip1 ncapTooltipText"><span class="fa fa-info-circle"></span><span class="tooltiptext1">{{getTooltipText(curElement.tooltipId)}}</span></span></span>
