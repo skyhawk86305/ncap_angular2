@@ -4,6 +4,7 @@ import { ShowJsonComponent } from '../../diagnostic/show-json/show-json.componen
 import { JsonStringifyPageQuestionComponent } from '../../diagnostic/json-stringify-page-question/json-stringify-page-question.component';
 import { PageLevelValidationComponent } from '../page-level-validation/page-level-validation.component';
 import { ModifyUserInputComponent } from '../../diagnostic/modify-user-input/modify-user-input.component';
+import { NavigationButtonsComponent } from '../navigation-buttons/navigation-buttons.component';
 import { NgSwitchQuestionComponent } from '../../question-level-elements/ng-switch-question/ng-switch-question.component';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.singleton';
@@ -13,13 +14,12 @@ import { ValidationResult } from '../../../../app/types/enums/validation-result.
 @Component({
     selector: 'question-container',
     templateUrl: 'app/components/page-level/question-container/question-container.html',
-    directives: [ JsonStringifyPageQuestionComponent, ModifyUserInputComponent, ShowJsonComponent, 
-    NgSwitchQuestionComponent, PageLevelValidationComponent ]
+    directives: [JsonStringifyPageQuestionComponent, ModifyUserInputComponent, ShowJsonComponent,
+        NgSwitchQuestionComponent, PageLevelValidationComponent, NavigationButtonsComponent]
 })
 export class QuestionContainerComponent implements OnInit {
 
     @Input() pageId: number;
-    renderButtons: boolean = true;
     protected navigationSingleton = NavigationSingleton.instanceOf();
     protected validationSingleton = ValidationSingleton.instanceOf();
     protected ValidationResult = ValidationResult;
