@@ -15,9 +15,25 @@
                 <div class="divTableHeadCenter mat_c_th" *ngFor="#curOption of domainOptions">{{curOption.displayed_value}}</div>
             </div>
         </div>
-        <div class="divTableBody">
-            <matrix-row-div class='divTableRow {{navigationSingleton.show_validation ? validationSingleton.calculateSubuElementValidationCSS(curMatrixElement) : (odd ? "matrix-odd" : "")}} ' *ngFor="#curMatrixElement of matrixElements #odd=odd" [element]="curMatrixElement"
-                [question]="question"></matrix-row-div>
+        <div class="divTableBody" *ngFor="#curMatrixElement of matrixElements #odd=odd">
+
+            <matrix-row-div class='divTableRow {{navigationSingleton.show_validation ? validationSingleton.calculateSubuElementValidationCSS(curMatrixElement) : (odd ? "matrix-odd" : "")}} ' [question]="question" [element]="curMatrixElement"></matrix-row-div>
+
+            <!-- Support RadioButtons_in_Matrix_DropDownLastCol -->
+            <div *ngIf='curMatrixElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol && userInputSingleton.getUserInput(curMatrixElement.tracking_key)?.storedValue==="1"' class='divTableRow'>
+                <div class='divTableCellQuestion'>
+                    Age first noticed?
+                </div>
+                <div class='divTableCellQuestion'>
+                    <span>{{domainOptionsForLastColDropDown[0].displayed_value}}</span>
+                </div>
+                <div class='divTableCellQuestion'>
+                </div>
+                <div class='divTableCellQuestion'>
+                </div>
+                <div class='divTableCellQuestion'>
+                </div>
+            </div>
         </div>
     </div>
 </div>

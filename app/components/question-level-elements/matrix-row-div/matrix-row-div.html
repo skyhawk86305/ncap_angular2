@@ -1,6 +1,8 @@
 <div *ngIf="subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix" class="divTableCellQuestion mat_q">
     <html-including-tooltips [htmlToRender]='subuElement.text'></html-including-tooltips>
-    </div>
+</div>
+
+<!--{{AnswerCategory[subuElement.sre_anca_id]}}-->
 
 <div class="divTableCellCenter mat_c" *ngFor="#item of domainOptions; #idx = index">
     <input type="radio" style="outline:none" 

@@ -22,13 +22,16 @@ export class MatrixComponent implements OnInit {
   @Input() question: PageQuestion;
   @Input() showValidation: boolean = true;
   protected navigationSingleton = NavigationSingleton.instanceOf();
+  protected validationSingleton = ValidationSingleton.instanceOf();
+  protected userInputSingleton = UserInputSingleton.instanceOf();
   domainOptions: Domain[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;
   matrixElements: SubuQuestion[];
   columnHeadings: string[];
   xyzzy: AnswerCategory;
-  protected validationSingleton = ValidationSingleton.instanceOf();
+  protected finalColumnText: string;
+  domainOptionsForLastColDropDown: Domain[];
 
   // Permit view to use the enumeration type
   AnswerCategory = AnswerCategory;
@@ -36,7 +39,16 @@ export class MatrixComponent implements OnInit {
   ngOnInit() {
     this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.sre_uid);
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+
+    if (this.matrixElements[0].sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
+      let lastDomain: Domain = this.domainOptions.pop();
+      this.finalColumnText = lastDomain.displayed_value;
+
+      this.domainOptionsForLastColDropDown = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(1);
+    }
+
     this.xyzzy = this.matrixElements[0].sre_anca_id;
+    
   }
 
   click(trackingKey: string, value: string) {
