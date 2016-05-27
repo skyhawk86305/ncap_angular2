@@ -5,9 +5,7 @@
     </div>
 </div>
 
-<!--anca: {{AnswerCategory[xyzzy]}} {{xyzzy}}-->
-
-<div *ngIf='[1, 10,11,12,13,14,15].indexOf(xyzzy)>-1' class="form-group ng-scope">
+<div *ngIf='[1, 10,11,12,13,14,15].indexOf(answerCategory)>-1' class="form-group ng-scope">
     <div class="divTable">
         <div class="divTableHeading">
             <div class="divTableRow">
@@ -22,10 +20,12 @@
             <!-- Support RadioButtons_in_Matrix_DropDownLastCol -->
             <div *ngIf='curMatrixElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol && userInputSingleton.getUserInput(curMatrixElement.tracking_key)?.storedValue==="1"' class='divTableRow'>
                 <div class='divTableCellQuestion'>
-                    Age first noticed?
+                    &nbsp;&nbsp;Age First noticed:
+                    <select class="form-control" (change)="dropDownChanged(curMatrixElement.tracking_key, $event.target.value)">
+                        <option *ngFor="#item of domainOptionsForLastColDropDown" [value]="item.stored_value">{{item.displayed_value}}</option>
+                    </select>
                 </div>
                 <div class='divTableCellQuestion'>
-                    <span>{{domainOptionsForLastColDropDown[0].displayed_value}}</span>
                 </div>
                 <div class='divTableCellQuestion'>
                 </div>

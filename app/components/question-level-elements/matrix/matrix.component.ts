@@ -24,20 +24,19 @@ export class MatrixComponent implements OnInit {
   protected navigationSingleton = NavigationSingleton.instanceOf();
   protected validationSingleton = ValidationSingleton.instanceOf();
   protected userInputSingleton = UserInputSingleton.instanceOf();
+  protected AnswerCategory = AnswerCategory; // Permit view to use the enumeration type
   domainOptions: Domain[];
   questionToolTipId: number = -1;
   previouslySelectedStoredValue: string;
   matrixElements: SubuQuestion[];
   columnHeadings: string[];
-  xyzzy: AnswerCategory;
+  answerCategory: AnswerCategory;
   protected finalColumnText: string;
   domainOptionsForLastColDropDown: Domain[];
 
-  // Permit view to use the enumeration type
-  AnswerCategory = AnswerCategory;
-
   ngOnInit() {
     this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.sre_uid);
+    this.answerCategory = this.matrixElements[0].sre_anca_id;
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
 
     if (this.matrixElements[0].sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
@@ -46,12 +45,15 @@ export class MatrixComponent implements OnInit {
 
       this.domainOptionsForLastColDropDown = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(1);
     }
-
-    this.xyzzy = this.matrixElements[0].sre_anca_id;
-    
   }
 
   click(trackingKey: string, value: string) {
+    console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
+    UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
+  }
+
+  dropDownChanged(trackingKey: string, value: string) {
+    trackingKey += '_noticed';
     console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
     UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
   }
