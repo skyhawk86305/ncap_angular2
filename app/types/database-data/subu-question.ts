@@ -7,6 +7,7 @@ export class SubuQuestion {
 
   // Not populated directly from DB Data:
   validation_result: ValidationResult;
+  previouslySelectedStoredValue: number;
 
   constructor(
     public sre_parent_id: string,

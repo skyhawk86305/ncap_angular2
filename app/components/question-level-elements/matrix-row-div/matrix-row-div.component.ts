@@ -21,7 +21,6 @@ export class MatrixRowDivComponent implements OnInit {
   domainOptions: Domain[] = new Array<Domain>();
   previouslySelectedRadioButton: number;
   textInput: string;
-  xyzzy: string;
 
   // Permit view to use the enumeration type
   AnswerCategory = AnswerCategory;
@@ -29,12 +28,14 @@ export class MatrixRowDivComponent implements OnInit {
   ngOnInit() {
     this.syncToPreviouslyEnteredData();
 
-    this.xyzzy = JSON.stringify(this.subuElement);
-
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     console.log('get domain for ' + AnswerCategory[this.subuElement.sre_anca_id]);
     if (this.subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
-      this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+      this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id).slice();
+      if (this.subuElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
+        // The last column is not needed for RadioButtons_in_Matrix_DropDownLastCol
+        this.domainOptions.pop();
+      }
     }
   }
 
@@ -60,8 +61,11 @@ export class MatrixRowDivComponent implements OnInit {
         case AnswerCategory.Textbox_in_Matrix:
           this.textInput = previousUserInput.storedValue;
           break;
+        case AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol:
+          this.previouslySelectedRadioButton = +previousUserInput.storedValue;
+          break;
         default:
-          let message = 'Not yet supported :' + this.subuElement.sre_anca_id;
+          let message = 'Not yet supported :' + AnswerCategory[this.subuElement.sre_anca_id];
           console.log(message);
           throw new Error(message);
       }

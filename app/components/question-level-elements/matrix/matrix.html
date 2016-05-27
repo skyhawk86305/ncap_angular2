@@ -22,7 +22,7 @@
                 <div class='divTableCellQuestion'>
                     &nbsp;&nbsp;Age First noticed:
                     <select class="form-control" (change)="dropDownChanged(curMatrixElement.tracking_key, $event.target.value)">
-                        <option *ngFor="#item of domainOptionsForLastColDropDown" [value]="item.stored_value">{{item.displayed_value}}</option>
+                        <option *ngFor="#item of domainOptionsForLastColDropDown" [value]="item.stored_value" [selected]='curMatrixElement.previouslySelectedStoredValue==item.stored_value'>{{item.displayed_value}}</option>
                     </select>
                 </div>
                 <div class='divTableCellQuestion'>
