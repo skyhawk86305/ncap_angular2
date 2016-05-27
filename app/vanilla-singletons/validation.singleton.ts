@@ -104,7 +104,6 @@ export class ValidationSingleton {
         // Special case: If Yes selected then '_noticed' must also be populated
         if (userInput && +userInput.storedValue === 1
             && curMatrixElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
-            console.log('sdfoijsdoifjsodi');
             let userInput2: UserInput = UserInputSingleton.instanceOf().getUserInput(curMatrixElement.tracking_key + '_noticed');
             if (!userInput2) {
                 fieldPopulated = false;

@@ -6,7 +6,7 @@ import { DisplayCondition } from '../../app/types/database-data/display_conditio
 export class ProcessDisplayCondition {
 
     static processDisplayCondition(sre_disp_id: number, pageQuestion: PageQuestion): boolean {
-        console.log('sre_disp_id is ' + sre_disp_id + ' for pg' + pageQuestion.page_id + '-qu' + pageQuestion.sre_sort_order);
+        // console.log('sre_disp_id is ' + sre_disp_id + ' for pg' + pageQuestion.page_id + '-qu' + pageQuestion.sre_sort_order);
         let result = false;
         let displayConditions: DisplayCondition[] = displayConditionDict[sre_disp_id];
 

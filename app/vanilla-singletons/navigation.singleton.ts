@@ -81,7 +81,7 @@ export class NavigationSingleton {
 
             this.notifyObservers();
         } else {
-            console.log('Aggregate validation is ' + ValidationResult[aggregateResult]);
+            console.log('Calculated aggregate validation is: ValidationResult.' + ValidationResult[aggregateResult]);
         }
 
     }

@@ -27,7 +27,6 @@ export class MatrixRowComponent implements OnInit {
 
   ngOnInit() {
     // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
-    console.log('get domain for ' + AnswerCategory[this.subuElement.sre_anca_id]);
     if (this.subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
       this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     }
@@ -42,18 +41,18 @@ export class MatrixRowComponent implements OnInit {
   }
 
   radioButtonClick(trackingKey: string, id: number) {
-    console.log('Clicked ' + trackingKey + ' with value ' + id);
+    // console.log('Clicked ' + trackingKey + ' with value ' + id);
     UserInputSingleton.instanceOf().setUserInput(trackingKey, id.toString());
   }
 
   textChanged(trackingKey: string) {
-    console.log('Changed ' + trackingKey + ' with value ' + this.textInput);
+    // console.log('Changed ' + trackingKey + ' with value ' + this.textInput);
     UserInputSingleton.instanceOf().setUserInput(trackingKey, this.textInput);
   }
 
   dropDownChanged(trackingKey: string, value: string) {
     trackingKey += '_noticed';
-    console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
+    // console.log('Clicked ' + trackingKey + ' with value ' + trackingKey);
     if (+value > -1) {
       UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
     }
