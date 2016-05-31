@@ -1,5 +1,6 @@
 import { IObservable } from '../../app/other-logic/i-observable';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
+import { FormatCategory } from '../../app/types/enums/format-category.enum';
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
@@ -40,6 +41,10 @@ export class NavigationSingleton {
 
         for (let curQuestion of questions) {
             if (curQuestion.sre_anca_id !== AnswerCategory.No_Answer) {
+                atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
+            }
+            // Always show the page if it has a visible PreQ_Intro or Section_Title
+            if (curQuestion.sre_foca_id === FormatCategory.PreQ_Intro || curQuestion.sre_foca_id === FormatCategory.Section_Title) {
                 atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
             }
         }
