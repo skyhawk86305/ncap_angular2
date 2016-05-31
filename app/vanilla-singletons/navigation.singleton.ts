@@ -102,6 +102,27 @@ export class NavigationSingleton {
 
         this.notifyObservers();
     }
+    
+
+    /**
+     * This is used by the ReContact page since the page.  If the user doesn't want to be contacted,
+     *  transition to the next page without any validation.
+     */
+    nextWithNoValidation() {
+        this._currentPageNumber++;
+        this.show_validation = false;
+
+        // Verify page is has at least one visible Question            
+        let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+        let avoidInfinteLoopCount = 0; // avoid an infinite loop
+        while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
+            console.log('Skipping page ' + this._currentPageNumber + ' because there are no visible questions');
+            this._currentPageNumber++;
+            questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+        }
+
+        this.notifyObservers();
+    }
 
     requestPageControlRevalidate() {
         // plugh - This may not be efficient + it validatin might be called several times

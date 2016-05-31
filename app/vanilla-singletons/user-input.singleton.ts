@@ -43,4 +43,19 @@ export class UserInputSingleton {
     defaultUserInput(data: UserInput[]) {
         this._UserInput = data;
     }
+
+    /**
+     * This is used by the ReContact page.  If the user had previous entered his contact
+     *  information but changed his mind later, the contact data needs to be removed from the _UserInput.
+     *
+     * @param trackingKey   Question tracking key
+     */
+    removeUserInput(trackingKey: string) {
+        for (var i=0; i<this._UserInput.length; i++) {
+            var key = this._UserInput[i].trackingKey;
+            if (key === trackingKey) {
+                this._UserInput.splice(i, 1);
+            }
+        }
+    }
 }
