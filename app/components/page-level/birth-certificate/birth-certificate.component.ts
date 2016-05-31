@@ -86,8 +86,9 @@ export class BirthCertificateComponent implements OnInit {
     return stOpt;
   }
   modelChange(trackingKey: string, value: string) {
-    UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
-    this._syncToPreviouslyEnteredData();
+
+    UserInputSingleton.instanceOf().setUserInput(trackingKey, value.toString())
+    this._syncToPreviouslyEnteredData()
 
   }
 
@@ -95,8 +96,8 @@ export class BirthCertificateComponent implements OnInit {
     let result: PageQuestion[] = Array<PageQuestion>();
     for (let q of qArr) {
       if (q.tracking_key) {
-        result.push(q);
-        this.previouslyStoredValue[q.tracking_key] = '';
+        result.push(q)
+        this.previouslyStoredValue[q.tracking_key] = null;
       }
     }
     return result;
@@ -106,7 +107,6 @@ export class BirthCertificateComponent implements OnInit {
     for (let q of this._trackingKeyArr) {
       let tracking_key = q.tracking_key;
       let previousUserInput: UserInput = this.getUserInput(tracking_key);
-
       if (previousUserInput) {
         this.previouslyStoredValue[tracking_key] = previousUserInput.storedValue;
         q.validation_result = ValidationResult.ok;
@@ -115,7 +115,9 @@ export class BirthCertificateComponent implements OnInit {
         }
 
       } else {
-        if (q.sre_anca_id === AnswerCategory.DropDown) {
+        if (q.sre_anca_id == AnswerCategory.DropDown ) {
+          //set the default value for drop down
+          this.previouslyStoredValue[q.tracking_key] = -1;
           this.stOpts[q.tracking_key] = this._getStOpt(this._respondentType, q, true);
         }
       }
@@ -132,21 +134,21 @@ export class BirthCertificateComponent implements OnInit {
   isMiflTrue() {
     let q = this.qDict.mi_fl;
     let previousUserInput: UserInput = this.getUserInput(q.tracking_key);
-    if (previousUserInput && (+previousUserInput.storedValue === 1)) {
+    if(previousUserInput && (+previousUserInput.storedValue === 1)){
       return true;
     } else {
       return false;
     }
 
   }
-  showRequestedMsg(tracking_key: string) {
+  showRequestedMsg(tracking_key:string){
     // let result = surveyPageDict[1].find((i) => i.page_id === page_Id);
     let q = this._trackingKeyArr.find((q1) => q1.tracking_key === tracking_key);
     let previousUserInput: UserInput = this.getUserInput(tracking_key);
     if (previousUserInput) {
       return false;
-    } else {
-      if (this.navigationSingleton.show_validation && (q.bypass_enum_code === ValidationType.requested)) {
+    } else{
+      if (this.navigationSingleton.show_validation && (+q.bypass_enum_code === ValidationResult.requested)){
         return true;
       } else {
         return false;
