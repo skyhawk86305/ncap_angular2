@@ -1,6 +1,6 @@
 <!-- Loop for all questions, letting ng-switch delegate the rendering -->
 <!-- Code embedded in *ngFor so Angular will 'watch' for pageId changing + refresh the page -->
-<div *ngFor="#curQuestionData of SeedDataSingleton.instanceOf().getQuestionsForPage(pageId)" class="container ng-scope" style="max-width: 80%;margin: auto;">
+<div *ngFor="#curQuestionData of SeedDataSingleton.instanceOf().getQuestionsForPage(pageId)" class="ng-scope" style="max-width: 80%;margin: auto;">
   <ng-switch-question [question]="curQuestionData"></ng-switch-question>
 </div>
 

@@ -1,4 +1,4 @@
 <!--Loop for all questions, letting ng-switch delegate the rendering-->
-<div *ngFor="#curPage of pages" class="container ng-scope" style="max-width: 80%;margin: auto;">
+<div *ngFor="#curPage of pages" class="ng-scope" style="max-width: 80%;margin: auto;">
   <ng-switch-page-type [pageInput]="curPage"></ng-switch-page-type>
 </div>
