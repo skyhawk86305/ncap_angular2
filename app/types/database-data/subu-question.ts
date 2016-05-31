@@ -1,7 +1,7 @@
-import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
-import { FormatCategory } from '../../../app/types/enums/format-category.enum';
-import { ValidationType } from '../../../app/types/enums/validation-type.enum';
-import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { AnswerCategory } from '../enums/answer-category.enum'
+import { FormatCategory } from '../enums/format-category.enum'
+import { ValidationType } from '../enums/validation-type.enum';
+import { ValidationResult } from '../enums/validation-result.enum';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 
 export class SubuQuestion {
@@ -11,6 +11,7 @@ export class SubuQuestion {
   previouslySelectedStoredValue: number;
 
   constructor(
+    public page_id: number,
     public sre_parent_id: string,
     public sre_uid: number,
     public sre_sort_order: number,
@@ -61,5 +62,5 @@ export class SubuQuestion {
 
     return result;
   }
-
+  
 }
