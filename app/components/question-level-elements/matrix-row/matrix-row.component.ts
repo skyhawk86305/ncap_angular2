@@ -26,15 +26,14 @@ export class MatrixRowComponent implements OnInit {
   domainOptionsForLastColDropDown: Domain[];
 
   ngOnInit() {
-    // xyzzy - this will be called many times asking for the same value, so we need to use a hash lookup
     if (this.subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
+      // Note: non-hash lookup, but there are only ~<20 rows
       this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
     }
 
     if (this.subuElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
       this.domainOptions = this.domainOptions.slice(); // make a copy of the array
-      let lastDomain: Domain = this.domainOptions.pop();
-      // this.finalColumnText = lastDomain.displayed_value;
+      this.domainOptions.pop(); // remove the final item as we put a drop down below the question text
     }
 
     this._syncToPreviouslyEnteredData();
@@ -58,7 +57,7 @@ export class MatrixRowComponent implements OnInit {
     }
   }
 
-  // xyzzy Copy and Paste code - move to a shared class
+  // plugh Copy and Paste code - move to a shared class
   private _getDomainOptions(id: number, addPleaseSelect: boolean): Domain[] {
     let result = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(id);
 

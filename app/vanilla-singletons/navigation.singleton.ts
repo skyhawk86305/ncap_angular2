@@ -104,7 +104,7 @@ export class NavigationSingleton {
     }
 
     requestPageControlRevalidate() {
-        // xyzzy This may not be efficient. Tune later?
+        // plugh - This may not be efficient + it validatin might be called several times
         ValidationSingleton.instanceOf().validatePage(this._currentPageNumber);
     }
 
