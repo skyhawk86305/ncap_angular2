@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from 'angular2/core';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
-import { UserInput } from  '../../../../app/types/user-input';
+import { UserInput } from  '../../../../app/types/database-data/user-input';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';
 
 @Component({

@@ -3,7 +3,7 @@ import { Domain } from   '../../../../app/types/database-data/domain';
 import { LoadDomainOptionsSingleton } from '../../../../app/vanilla-singletons/load-domain-options.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
-import { UserInput } from  '../../../../app/types/user-input';
+import { UserInput } from  '../../../../app/types/database-data/user-input';
 import { ValidationResult } from '../../../../app/types/enums/validation-result.enum';
 import { RenderHtmlStringIncludingTooltipsComponent } from '../../other/html-including-tooltips/html-including-tooltips.component';
 import { PageQuestion } from '../../../../app/types/database-data/page-question';

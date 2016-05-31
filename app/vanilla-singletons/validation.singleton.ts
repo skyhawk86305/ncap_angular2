@@ -1,6 +1,6 @@
 import { SubuQuestion } from '../../app/types/database-data/subu-question';
 import { PageQuestion } from '../../app/types/database-data/page-question';
-import { UserInput } from  '../../app/types/user-input';
+import { UserInput } from  '../../app/types/database-data/user-input';
 import { ValidationResult } from '../../app/types/enums/validation-result.enum';
 import { ValidationType } from '../../app/types/enums/validation-type.enum';
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
