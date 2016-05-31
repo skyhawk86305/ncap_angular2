@@ -10,7 +10,6 @@ import { Page } from '../../../app/types/database-data/page';
 export class PageQuestion {
 
     // Not populated directly from DB Data:
-    toolTipId: number; // xyzzy Temp property to get Tooltips partially working
     validation_result: ValidationResult;
     validation_type: ValidationType;
 
