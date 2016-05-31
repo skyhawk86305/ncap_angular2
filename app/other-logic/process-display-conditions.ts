@@ -43,6 +43,9 @@ export class ProcessDisplayCondition {
             case 'IS NULL':
                 result = ProcessDisplayCondition.processIsNull(curDisplayCondition);
                 break;
+            case 'GREATER THAN':
+                result = ProcessDisplayCondition.processGreaterThan(curDisplayCondition);
+                break;
             default:
                 console.log('curDisplayCondition.relation not supported ' + curDisplayCondition.relation);
                 break;
@@ -84,6 +87,22 @@ export class ProcessDisplayCondition {
         // console.log('EQUAL tracking_key ' + curDisplayCondition.tracking_key);
         let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
         result = !userInput;
+
+        return result;
+    }
+
+    static processGreaterThan(curDisplayCondition: DisplayCondition): boolean {
+        let result = false;
+
+        let compareTo = +curDisplayCondition.stored_value;
+        // console.log('tracking_key: ' + curDisplayCondition.tracking_key);
+        // console.log('compareTo: ' + compareTo);
+
+        let userInput = UserInputSingleton.instanceOf().getUserInput(curDisplayCondition.tracking_key);
+        if (userInput) {
+            //console.log('userInput: ' + userInput.storedValue);
+            result = +userInput.storedValue > compareTo;
+        }
 
         return result;
     }

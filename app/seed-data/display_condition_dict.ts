@@ -60,7 +60,7 @@ export var displayConditionDict: DisplayConditions = {
         new DisplayCondition(1, null, 'CONTAINS', 'water_source_mother', 2, 'Public water supply')
     ],
     19: [
-        new DisplayCondition(1, null, 'GREATER THAN', 'has_sibling', 1, 'Yes')
+        new DisplayCondition(1, null, 'GREATER THAN', 'nb_sibling', 1, 'Yes')
     ],
     20: [
         new DisplayCondition(1, null, 'EQUAL', 'recontact', 2, 'You can contact me again.')
