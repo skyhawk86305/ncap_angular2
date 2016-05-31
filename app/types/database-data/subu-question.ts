@@ -1,5 +1,5 @@
-import { AnswerCategory } from '../enums/answer-category.enum'
-import { FormatCategory } from '../enums/format-category.enum'
+import { AnswerCategory } from '../enums/answer-category.enum';
+import { FormatCategory } from '../enums/format-category.enum';
 import { ValidationType } from '../enums/validation-type.enum';
 import { ValidationResult } from '../enums/validation-result.enum';
 import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
@@ -62,5 +62,5 @@ export class SubuQuestion {
 
     return result;
   }
-  
+
 }

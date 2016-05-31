@@ -26,7 +26,6 @@ export class NavigationSingleton {
     }
 
     getPageToRender(): Page {
-        // plugh need to reconcile use of page number and page id
         let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber);
 
         return result;

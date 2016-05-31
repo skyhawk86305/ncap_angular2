@@ -27,17 +27,18 @@ export class SeedDataSingleton {
                 }
             }
         }
-        //console.log('Question count = ' + result.length);
+        // console.log('Question count = ' + result.length);
         return result;
     }
 
-    getQuestionsForPage(page_Id: number) {
-        let result = pageQuestionDict[page_Id];
+    getQuestionsForPage(pageId: number) {
+        // let pageId = this._getPageIdForPageNumber(pageNumber);
+        let result = pageQuestionDict[pageId];
         return result;
     }
 
-    getPage(page_Id: number): Page {
-        let result = surveyPageDict[1].find((i) => i.page_id === page_Id);
+    getPage(pageNumber: number): Page {
+        let result = surveyPageDict[1].find((i) => i.page_number === pageNumber);
         return result;
     }
 
@@ -45,4 +46,10 @@ export class SeedDataSingleton {
         let result = surveyPageDict[1];
         return result;
     }
+
+    // private _getPageIdForPageNumber(pageNumber: number) {
+    //     let result = surveyPageDict[1].find((i) => i.page_number === pageNumber);
+    //     return result.page_id;
+    // }
+
 }
