@@ -1,4 +1,144 @@
 <BR>
-<div>Birth Certificate - WIP</div>
 
+
+<div *ngIf="recCount == recExpect">
+  <div class="birthCert">
+    <h3 [innerHTML]="qDict.info1.question_text"></h3>
+    <div class="form-group">
+
+      <div class="" [innerHTML]="qDict.info2.question_text"></div>
+      <br/>
+      <div class="row">
+        <div class="col-sm-4">
+          <!--<label [class.ncap-requested]="showRequestedMsg(qDict.fn.tracking_key)">{{qDict.fn.question_text}}</label>-->
+          <label [class.ncap-requested]="navigationSingleton.show_validation && qDict.fn.validation_result === ValidationResult.requested">{{qDict.fn.question_text}}</label>
+          <input type="text" class="form-control" [id]="qDict.fn.tracking_key"
+            name="{{qDict.fn.tracking_key}}" [placeholder]="qDict.fn.question_text" 
+            [value]="previouslyStoredValue[qDict.fn.tracking_key]"
+            (change)="modelChange(qDict.fn.tracking_key, $event.target.value)" 
+            />
+        </div>
+        <div *ngIf="isMiflTrue()" class="col-sm-4">
+          <label [class.ncap-requested]="navigationSingleton.show_validation && qDict.mi.validation_result === ValidationResult.requested">{{qDict.mi.question_text}}</label>
+          <input type="text" class="form-control" [id]="qDict.mi.tracking_key"
+            [name]="qDict.mi.tracking_key" [placeholder]="qDict.mi.question_text" 
+            [value]="previouslyStoredValue[qDict.mi.tracking_key]"
+            (change)="modelChange(qDict.mi.tracking_key, $event.target.value)"/>
+        </div>
+        <div class="col-sm-4">
+          <label [class.ncap-requested]="navigationSingleton.show_validation && qDict.ln.validation_result === ValidationResult.requested">{{qDict.ln.question_text}}</label>
+            <input type="text" class="form-control" [id]="qDict.ln.tracking_key"
+              [name]="qDict.ln.tracking_key" [placeholder]="qDict.ln.question_text"
+              [value]="previouslyStoredValue[qDict.ln.tracking_key]"
+              (change)="modelChange(qDict.ln.tracking_key, $event.target.value)"/>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <label [class.ncap-requested]="navigationSingleton.show_validation && qDict.mi_fl.validation_result === ValidationResult.requested">{{qDict.mi_fl.question_text}}</label>
+          <div *ngFor="#item of _miFlagOpt; #idx = index" >
+            <input type="radio" style="outline:none" name="{{qDict.mi_fl.page_id}}.{{qDict.mi_fl.sre_sort_order}}" 
+              value="{{item.stored_value}}" [checked]='previouslyStoredValue[qDict.mi_fl.tracking_key] == item.stored_value' 
+              (click)="modelChange(qDict.mi_fl.tracking_key, item.stored_value)"> {{item.displayed_value}}
+          </div>
+        </div>
+      </div>      
+    </div>  
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="birthCertCity" [class.ncap-requested]="navigationSingleton.show_validation && qDict.city.validation_result === ValidationResult.requested" class="address-label">{{qDict.city.question_text}}</label>
+            <input type="text" class="form-control" [id]="qDict.city.tracking_key"
+              [name]="qDict.city.tracking_key" [placeholder]="qDict.city.question_text"
+              [value]="previouslyStoredValue[qDict.city.tracking_key]"
+              (change)="modelChange(qDict.city.tracking_key, $event.target.value)"    />            
+        </div>
+      </div>
+      <div  class="col-sm-6" style="margin-top:20px;">
+          <label for="stateOfBirthMother" [class.ncap-requested]="navigationSingleton.show_validation && qDict.st.validation_result === ValidationResult.requested">{{qDict.st.question_text}}</label>
+          <select class="form-control" (change)="modelChange(qDict.st.tracking_key, $event.target.value)" style="position:relative;bottom:0; ">
+            <option *ngFor="#item of stOpts[qDict.st.tracking_key]" [value]="item.stored_value" 
+              [selected]='previouslyStoredValue[qDict.st.tracking_key]==item.stored_value'>{{item.displayed_value}} </option>
+          </select>
+      </div>    
+    </div>
+  </div>
+  <div class="birthCert">
+    <h3 [innerHTML]="qDict.info3.question_text"></h3>
+    <div class="form-group">
+      <div class="" [innerHTML]="qDict.info4.question_text"></div>
+      <br/>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <label [class.ncap-requested]="navigationSingleton.show_validation && qDict.fnm.validation_result === ValidationResult.requested">{{qDict.fnm.question_text}}</label>
+            <input type="text" class="form-control" [id]="qDict.fnm.tracking_key"
+              [name]="qDict.fnm.tracking_key" [placeholder]="qDict.fnm.question_text"
+              [value]="previouslyStoredValue[qDict.fnm.tracking_key]"
+              (change)="modelChange(qDict.fnm.tracking_key, $event.target.value)"/>   
+        </div>
+        <div class="col-sm-4">
+          <label [class.ncap-requested]="navigationSingleton.show_validation && qDict.mim.validation_result === ValidationResult.requested">{{qDict.mim.question_text}}</label>
+            <input type="text" class="form-control" [id]="qDict.mim.tracking_key"
+              [name]="qDict.mim.tracking_key" [placeholder]="qDict.mim.question_text"
+              [value]="previouslyStoredValue[qDict.mim.tracking_key]"
+              (change)="modelChange(qDict.mim.tracking_key, $event.target.value)"/>   
+          
+        </div>
+        <div class="col-sm-4">
+          <label [class.ncap-requested]="navigationSingleton.show_validation && qDict.lnm.validation_result === ValidationResult.requested">{{qDict.lnm.question_text}}</label>
+            <input type="text" class="form-control" [id]="qDict.lnm.tracking_key"
+              [name]="qDict.lnm.tracking_key" [placeholder]="qDict.lnm.question_text"
+              [value]="previouslyStoredValue[qDict.lnm.tracking_key]"
+              (change)="modelChange(qDict.lnm.tracking_key, $event.target.value)"/>    
+          
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="dateOfBirthMother" [class.ncap-requested]="navigationSingleton.show_validation && qDict.dobm.validation_result === ValidationResult.requested">{{qDict.dobm.question_text}}</label>
+            <input type="date" class="form-control" [id]="qDict.dobm.tracking_key" placeholder="Birthday" 
+              [name]="qDict.dobm.tracking_key" [placeholder]="qDict.dobm.question_text"
+              [value]="previouslyStoredValue[qDict.dobm.tracking_key]"
+              (change)="modelChange(qDict.dobm.tracking_key, $event.target.value)"/>              
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="motherBirthCertCity" [class.ncap-requested]="navigationSingleton.show_validation && qDict.citym.validation_result === ValidationResult.requested" class="address-label">{{qDict.citym.question_text}}</label>
+            <input type="text" class="form-control" [id]="qDict.citym.tracking_key"
+                [name]="qDict.citym.tracking_key" [placeholder]="qDict.citym.question_text"
+                [value]="previouslyStoredValue[qDict.citym.tracking_key]"
+                (change)="modelChange(qDict.citym.tracking_key, $event.target.value)"/>  
+        </div>
+      </div>
+      <div>
+          <label for="stateOfBirthMother" [class.ncap-requested]="navigationSingleton.show_validation && qDict.stm.validation_result === ValidationResult.requested">{{qDict.stm.question_text}}</label>
+            <select class="form-control" (change)="modelChange(qDict.stm.tracking_key, $event.target.value)">
+              <option *ngFor="#item of stOpts[qDict.stm.tracking_key]" [value]="item.stored_value" 
+                [selected]='previouslyStoredValue[qDict.stm.tracking_key]==item.stored_value'>{{item.displayed_value}} 
+              </option>
+            </select>
+      </div>      
+      
+    </div>
+  </div>
+</div>
+<div *ngIf="recCount !== recExpect">
+  Birth Certificate page - check data
+</div>
+
+<!--Buttons-->
+<!--<div align="center" class="navigation-buttons ng-scope">
+  <button type="button" class="btn btn-primary btn-lg" style="outline:none" (click)="validatePage()"
+    nga11y-modal-closer=""><i class="fa fa-arrow-circle-left"></i> Validate
+  </button>
+</div>-->
 <navigation-buttons></navigation-buttons>

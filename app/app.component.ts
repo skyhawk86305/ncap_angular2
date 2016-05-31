@@ -7,7 +7,9 @@ import { TestPageComponent } from './components/page-level/test-page/test-page.c
 @Component({
   selector: 'the-app',
   template: `
-    <router-outlet></router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   `,
   directives: [ROUTER_DIRECTIVES],
   providers: [
