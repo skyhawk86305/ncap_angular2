@@ -8,12 +8,14 @@ import { Page } from '../../app/types/database-data/page';
 
 export class NavigationSingleton {
 
+    private static _instance: NavigationSingleton = new NavigationSingleton();
+
     public show_validation: boolean;
     public diagMode = false; // Is the app in Diagnostic Mode?
     public shownRequestedValidationOnPages: number[] = new Array<number>(); // Pages already shown Requested Validation 
+
     private _currentPageNumber: number = 1;
     private _observers: Array<IObservable> = new Array<IObservable>();
-    private static _instance: NavigationSingleton = new NavigationSingleton();
 
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
@@ -24,7 +26,7 @@ export class NavigationSingleton {
     }
 
     getPageToRender(): Page {
-        // xyzzy5 need to reconcile use of page number and page id
+        // plugh need to reconcile use of page number and page id
         let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber);
 
         return result;
@@ -136,4 +138,3 @@ export class NavigationSingleton {
         }
     }
 }
-

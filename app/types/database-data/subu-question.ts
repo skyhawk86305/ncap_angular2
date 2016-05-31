@@ -2,6 +2,7 @@ import { AnswerCategory } from '../../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../../app/types/enums/format-category.enum';
 import { ValidationType } from '../../../app/types/enums/validation-type.enum';
 import { ValidationResult } from '../../../app/types/enums/validation-result.enum';
+import { UserInputSingleton } from '../../../app/vanilla-singletons/user-input.singleton';
 
 export class SubuQuestion {
 
@@ -37,8 +38,28 @@ export class SubuQuestion {
   ) { }
 
   get text(): string {
-    // xyzzy5 - Switch according to value in tracking_key
-    return this.txt_parent_lang1;
+    // plugh - move to a common location using an Interface to support all places this logic is used?
+    let userInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
+    let storedValue = userInput ? userInput.storedValue : null;
+    let result: string;
+
+    // Switch according to respondent_type
+    switch (storedValue) {
+      case 'legalrep':
+        result = this.txt_legalrep_lang1;
+        break;
+      case 'parent':
+        result = this.txt_parent_lang1;
+        break;
+      case 'selfreport':
+        result = this.txt_selfreport_lang1;
+        break;
+      default:
+        result = this.txt_parent_lang1;
+        break;
+    }
+
+    return result;
   }
 
 }
