@@ -134,8 +134,9 @@ export class ValidationSingleton {
         for (let curQuestion of questions) {
             curQuestion.validation_result = ValidationSingleton.instanceOf().validateQuestion(curQuestion);
 
+            // Higher numberic values are stronger. Note this code relies on us hard-coding int values of the enum 
             if (curQuestion.validation_result > aggregateResult) {
-                aggregateResult = curQuestion.validation_result; // xyzzy Note this code relies on the int values of the enum
+                aggregateResult = curQuestion.validation_result;
             }
         }
 
@@ -182,8 +183,9 @@ export class ValidationSingleton {
                 curResult = this._validateSubuElement(curSubu);
             }
 
+            // Higher numberic values are stronger. Note this code relies on us hard-coding int values of the enum 
             if (curResult > agregateResult) {
-                agregateResult = curResult; // xyzzy Note this code relies on the int values of the enum
+                agregateResult = curResult;
             }
         }
 
