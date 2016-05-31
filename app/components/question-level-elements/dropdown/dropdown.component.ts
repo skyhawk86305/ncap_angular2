@@ -52,11 +52,12 @@ export class DropdownComponent implements OnInit {
   private _syncToPreviouslyEnteredData() {
     // Is there previous entered User Input we need to sync to?
     let previousUserInput: UserInput = UserInputSingleton.instanceOf().getUserInput(this.question.tracking_key);
+
     if (previousUserInput) {
       this.previouslySelectedStoredValue = previousUserInput.storedValue;
-      this.domainOptions = this._getDomainOptions(this.question.parent_sre_dona_id, false);
+      this.domainOptions = this._getDomainOptions(this.question.sre_dona_id, false);
     } else {
-      this.domainOptions = this._getDomainOptions(this.question.parent_sre_dona_id, true);
+      this.domainOptions = this._getDomainOptions(this.question.sre_dona_id, true);
     }
   }
 

@@ -26,7 +26,7 @@ export class CheckboxesComponent implements OnInit {
   private _userInputCheckedBoxes: number[] = new Array<number>();
 
   ngOnInit() {
-    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.sre_dona_id);
 
     if (this.question.sre_anca_id === AnswerCategory.Checkboxes_TextboxLastEntry) {
       this.showOtherTextBoxForStoredValue = 4; // xyzzy Hardcoded the value for Other

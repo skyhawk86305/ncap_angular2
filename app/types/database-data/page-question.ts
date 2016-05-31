@@ -9,6 +9,11 @@ import { Page } from '../../../app/types/database-data/page';
 
 export class PageQuestion {
 
+    // constants
+    public static LEGAL_REP: string = 'legalrep';
+    public static PARENT: string = 'parent';
+    public static SELF_REPORT: string = 'selfreport';
+
     // Not populated directly from DB Data:
     validation_result: ValidationResult;
     validation_type: ValidationType;
@@ -29,9 +34,9 @@ export class PageQuestion {
         public txt_parent_lang1: string,
         public txt_legalrep_lang1: string,
         public txt_selfreport_lang1: string,
-        public parent_sre_dona_id: number,
-        public legalrep_sre_dona_id: number,
-        public selfreport_sre_dona_id: number,
+        private parent_sre_dona_id: number,
+        private legalrep_sre_dona_id: number,
+        private selfreport_sre_dona_id: number,
         public tracking_key: string,
         public def_disp_value: string,
         public parent_sre_varu_id: number,
@@ -72,6 +77,11 @@ export class PageQuestion {
         return result;
     }
 
+    get page(): Page {
+        let result = SeedDataSingleton.instanceOf().getPage(this.page_id);
+        return result;
+    }
+
     get question_text(): string {
         let userInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
         let storedValue = userInput ? userInput.storedValue : null;
@@ -79,13 +89,13 @@ export class PageQuestion {
 
         // Switch according to respondent_type
         switch (storedValue) {
-            case 'legalrep':
+            case PageQuestion.LEGAL_REP:
                 result = this.txt_legalrep_lang1;
                 break;
-            case 'parent':
+            case PageQuestion.PARENT:
                 result = this.txt_parent_lang1;
                 break;
-            case 'selfreport':
+            case PageQuestion.SELF_REPORT:
                 result = this.txt_selfreport_lang1;
                 break;
             default:
@@ -96,8 +106,35 @@ export class PageQuestion {
         return result;
     }
 
-    get page(): Page {
-        let result = SeedDataSingleton.instanceOf().getPage(this.page_id);
+    get sre_dona_id(): number {
+        let result: number;
+
+        let userInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
+        let storedValue = userInput ? userInput.storedValue : null;
+
+        // Switch according to respondent_type
+        switch (storedValue) {
+            case PageQuestion.LEGAL_REP:
+                result = this.legalrep_sre_dona_id;
+                console.log('using legalrep_sre_dona_id');
+                break;
+            case PageQuestion.PARENT:
+                result = this.parent_sre_dona_id;
+                console.log('using parent_sre_dona_id');
+                break;
+            case PageQuestion.SELF_REPORT:
+                result = this.selfreport_sre_dona_id;
+                console.log('using selfreport_sre_dona_id');
+                break;
+            default:
+                console.log('respondent_type not supported: ' + storedValue);
+                break;
+        }
+
         return result;
+
+
     }
+
+
 }

@@ -36,7 +36,7 @@ export class MatrixComponent implements OnInit {
   ngOnInit() {
     this.matrixElements = SeedDataMatrixSingleton.instanceOf().getMatrixElementsForSreUid(this.question.sre_uid);
     this.answerCategory = this.matrixElements[0].sre_anca_id;
-    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id).slice();
+    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.sre_dona_id).slice();
 
     if (this.matrixElements[0].sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {
       let lastDomain: Domain = this.domainOptions.pop();

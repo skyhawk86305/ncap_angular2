@@ -23,7 +23,7 @@ export class RadioButtonComponent implements OnInit {
   previouslySelectedStoredValue: number;
 
   ngOnInit() {
-    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+    this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.sre_dona_id);
 
     this._syncToPreviouslyEnteredData();
   }

@@ -28,7 +28,7 @@ export class MatrixRowComponent implements OnInit {
   ngOnInit() {
     if (this.subuElement.sre_anca_id !== AnswerCategory.Textbox_in_Matrix) {
       // Note: non-hash lookup, but there are only ~<20 rows
-      this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.parent_sre_dona_id);
+      this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.sre_dona_id);
     }
 
     if (this.subuElement.sre_anca_id === AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol) {

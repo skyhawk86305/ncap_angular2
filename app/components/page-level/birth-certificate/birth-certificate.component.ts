@@ -71,18 +71,7 @@ export class BirthCertificateComponent implements OnInit {
     // console.log(this.qDict.st)
   }
   _getStOpt(respondentType: UserInput, question: PageQuestion, addPleaseSelect: boolean) {
-    let stOpt: Domain[];
-    switch (respondentType.storedValue) {
-      case 'legalrep':
-        stOpt = this._getDomainOptions(question.legalrep_sre_dona_id, addPleaseSelect);
-        break;
-      case 'selfreport':
-        stOpt = this._getDomainOptions(question.selfreport_sre_dona_id, addPleaseSelect);
-        break;
-      default:
-        stOpt = this._getDomainOptions(question.parent_sre_dona_id, addPleaseSelect);
-        break;
-    }
+    let stOpt: Domain[] = this._getDomainOptions(question.sre_dona_id, addPleaseSelect);;
     return stOpt;
   }
   modelChange(trackingKey: string, value: string) {
