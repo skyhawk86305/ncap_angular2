@@ -17,11 +17,10 @@
                 <input type="checkbox" id="{{item.stored_value}}" [checked]='isCheckboxSelected(+item.stored_value)'>&nbsp;<html-including-tooltips [htmlToRender]='item.displayed_value'></html-including-tooltips> 
             </span>
             <!-- Optional Other TextBox -->
-            <span *ngIf='item.stored_value == showOtherTextBoxForStoredValue && isCheckboxSelected(showOtherTextBoxForStoredValue)'>
+            <span *ngIf='question.sre_anca_id === AnswerCategory.Checkboxes_TextboxLastEntry && idx === domainOptions.length-1 && isCheckboxSelected(item.stored_value)'>
                 <input class='form-control' type="text" placeholder='(Please Indicate)' [ngModel]='userInputOther' (ngModelChange)='otherChanged($event)'/>
             </span>
-
         </div>
-
     </div>
+    
 </div>

@@ -17,20 +17,18 @@ import { PageQuestion } from '../../../../app/types/database-data/page-question'
 export class CheckboxesComponent implements OnInit {
 
   @Input() question: PageQuestion;
-  protected navigationSingleton = NavigationSingleton.instanceOf();
-  domainOptions: Domain[];
-  showOtherTextBoxForStoredValue: number = -1;
-  ValidationResult = ValidationResult; // Permit html to use the enumeration type
 
+  // So html can access
+  protected AnswerCategory = AnswerCategory;
+  protected ValidationResult = ValidationResult;
+  protected navigationSingleton = NavigationSingleton.instanceOf();
+
+  domainOptions: Domain[];
   userInputOther: string;
   private _userInputCheckedBoxes: number[] = new Array<number>();
 
   ngOnInit() {
     this.domainOptions = LoadDomainOptionsSingleton.instanceOf().getDomainOptions(this.question.sre_dona_id);
-
-    if (this.question.sre_anca_id === AnswerCategory.Checkboxes_TextboxLastEntry) {
-      this.showOtherTextBoxForStoredValue = 4; // xyzzy Hardcoded the value for Other
-    }
 
     this._loadUserInput();
   }
