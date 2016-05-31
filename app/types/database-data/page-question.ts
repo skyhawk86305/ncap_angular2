@@ -39,9 +39,9 @@ export class PageQuestion {
         private selfreport_sre_dona_id: number,
         public tracking_key: string,
         public def_disp_value: string,
-        public parent_sre_varu_id: number,
-        public legalrep_sre_varu_id: number,
-        public selfreport_sre_varu_id: number,
+        private parent_sre_varu_id: number,
+        private legalrep_sre_varu_id: number,
+        private selfreport_sre_varu_id: number,
         public error_msg_lang1: string,
         public bypass_var: string
     ) { }
