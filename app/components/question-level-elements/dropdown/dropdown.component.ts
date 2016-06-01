@@ -26,8 +26,6 @@ export class DropdownComponent implements OnInit {
   }
 
   modelChange(trackingKey: string, value: string) {
-    // console.log('Clicked ' + trackingKey);
-    // console.log('Value: >' + value + '<');
     UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
     this._syncToPreviouslyEnteredData();
 

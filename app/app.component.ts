@@ -50,5 +50,6 @@ import { TestPageComponent } from './components/page-level/test-page/test-page.c
     component: NgSwitchPageTypeComponent
   }
 ])
+
 export class AppComponent {
 }

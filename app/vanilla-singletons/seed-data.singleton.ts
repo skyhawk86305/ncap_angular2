@@ -27,12 +27,10 @@ export class SeedDataSingleton {
                 }
             }
         }
-        // console.log('Question count = ' + result.length);
         return result;
     }
 
     getQuestionsForPage(pageId: number) {
-        // let pageId = this._getPageIdForPageNumber(pageNumber);
         let result = pageQuestionDict[pageId];
         return result;
     }

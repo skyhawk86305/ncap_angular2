@@ -13,7 +13,6 @@ export class LoadDomainOptionsSingleton {
 
     constructor() {
         // Will only fire once since this class is a Singleton
-        //this.initializeData();
         this._seedDataDomainOptions = domain;
         LoadDomainOptionsSingleton._instance = this;
     }

@@ -10,8 +10,6 @@ export class ModifyUserInputComponent {
     enteredValue: string;
 
     clicked(event: any) {
-        //console.log(JSON.stringify(event));
-        //console.log(this.trackingKey + ':' + this.enteredValue);
         UserInputSingleton.instanceOf().setUserInput(this.trackingKey, this.enteredValue);
     }
 }

@@ -18,7 +18,7 @@ import { ValidationResult } from '../../../../app/types/enums/validation-result.
 export class QuestionContainerComponent {
 
     @Input() pageId: number;
-    // Maake classes accessible by html
+    // Make classes accessible by html
     protected navigationSingleton = NavigationSingleton.instanceOf();
     protected ValidationResult = ValidationResult;
     protected SeedDataSingleton = SeedDataSingleton;

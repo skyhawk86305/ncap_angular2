@@ -51,8 +51,8 @@ export class UserInputSingleton {
      * @param trackingKey   Question tracking key
      */
     removeUserInput(trackingKey: string) {
-        for (var i=0; i<this._UserInput.length; i++) {
-            var key = this._UserInput[i].trackingKey;
+        for (let i = 0; i < this._UserInput.length; i++) {
+            let key = this._UserInput[i].trackingKey;
             if (key === trackingKey) {
                 this._UserInput.splice(i, 1);
             }

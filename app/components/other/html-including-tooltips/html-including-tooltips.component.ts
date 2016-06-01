@@ -28,11 +28,9 @@ export class RenderHtmlStringIncludingTooltipsComponent implements OnInit {
     while (infiniteLoopProtection++ < 10 && remainingHtml.indexOf(this.TOOLTIP_LEFT_HTML) > -1) {
       infiniteLoopProtection++;
       let leftHtml = remainingHtml.substring(0, remainingHtml.indexOf(this.TOOLTIP_LEFT_HTML));
-      //console.log('leftHtml=' + leftHtml);
       let tooltipIdText = remainingHtml.substring(remainingHtml.indexOf(this.TOOLTIP_LEFT_HTML)
         + this.TOOLTIP_LEFT_HTML.length, remainingHtml.indexOf(this.TOOLTIP_RIGHT_HTML));
       let tooltipId: number = +tooltipIdText;
-      //console.log('tooltipIdText=' + tooltipIdText);
 
       this.elementsToRender.push({ tooltip: false, tooltipId: -1, data: leftHtml });
       this.elementsToRender.push({ tooltip: true, tooltipId: tooltipId, data: '' });

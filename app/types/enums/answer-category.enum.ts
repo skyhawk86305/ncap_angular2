@@ -18,7 +18,7 @@ export enum AnswerCategory {
     Address = 17,
     Immediate_Selection = 18,
 
-    // xyzzzy Added so we can render existing data
+    // Added so we can render existing data
     Home = 30,
     Consent = 31,
     Skip = 32,

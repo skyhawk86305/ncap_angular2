@@ -106,7 +106,6 @@ export class NavigationSingleton {
 
         this.notifyObservers();
     }
-    
 
     /**
      * This is used by the ReContact page since the page.  If the user doesn't want to be contacted,
