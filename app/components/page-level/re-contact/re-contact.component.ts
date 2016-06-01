@@ -6,7 +6,7 @@ import { LoadDomainOptionsSingleton } from "../../../vanilla-singletons/load-dom
 import { ReConConstants } from "./re-contact.constants";
 import { ValidationResult } from "../../../types/enums/validation-result.enum";
 import { UserInputSingleton } from "../../../vanilla-singletons/user-input.singleton";
-import { UserInput } from "../../../types/user-input";
+import { UserInput } from "../../../types/database-data/user-input";
 import { ValidationType } from "../../../types/enums/validation-type.enum";
 import { ReContactValidator } from "./re-contact.validator";
 import { Domain } from "../../../types/database-data/domain";
@@ -61,8 +61,7 @@ export class ReContactComponent implements OnInit {
     public validPhone: boolean = true;
     public validPhoneAlt1: boolean = true;
 
-    constructor( private _domainData: LoadDomainOptionsSingleton,
-                 private _validator:  ReContactValidator) {
+    constructor( private _domainData: LoadDomainOptionsSingleton) {
     }
 
     /**
@@ -89,21 +88,25 @@ export class ReContactComponent implements OnInit {
                 this.navigationSingleton.show_validation = true;
             }
 
-            var sre_dona_id:number;
-            switch (this.svyType) {
-                case ReConConstants.SURVEY_TYPE_PARENT:
-                    sre_dona_id = ncapData.parent_sre_dona_id;
-                    break;
-                case ReConConstants.SURVEY_TYPE_LEGAL:
-                    sre_dona_id = ncapData.legalrep_sre_dona_id;
-                    break;
-                case ReConConstants.SURVEY_TYPE_SELF:
-                    sre_dona_id = ncapData.selfreport_sre_dona_id;
-                    break;
-                default:
-                    sre_dona_id = ncapData.parent_sre_dona_id;
-                    break;
-            }
+            var sre_dona_id:number = 22;
+            // switch (this.svyType) {
+            //     case ReConConstants.SURVEY_TYPE_PARENT:
+            //         //sre_dona_id = ncapData.parent_sre_dona_id;  // the id is not private...
+            //         sre_dona_id = 22;
+            //         break;
+            //     case ReConConstants.SURVEY_TYPE_LEGAL:
+            //         //sre_dona_id = ncapData.legalrep_sre_dona_id;
+            //         sre_dona_id = 22;
+            //         break;
+            //     case ReConConstants.SURVEY_TYPE_SELF:
+            //         //sre_dona_id = ncapData.selfreport_sre_dona_id;
+            //         sre_dona_id = 22;
+            //         break;
+            //     default:
+            //         //sre_dona_id = ncapData.parent_sre_dona_id;
+            //         sre_dona_id = 22;
+            //         break;
+            // }
             //This needs to be generalized later.  This assumes there's only one set of domain in the question dictionary.
             if (sre_dona_id !== null && ncapData.tracking_key === ReConConstants.TRACKING_KEY_RECONTACT ) {
                 //just want a subset of the domain; other domains in the data will not be used at this time.
