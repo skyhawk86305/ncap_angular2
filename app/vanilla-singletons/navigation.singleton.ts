@@ -6,6 +6,7 @@ import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.single
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
 import { PageQuestion } from '../../app/types/database-data/page-question';
 import { Page } from '../../app/types/database-data/page';
+import { PageType } from '../../app/types//enums/page-type.enum';
 
 export class NavigationSingleton {
 
@@ -47,6 +48,12 @@ export class NavigationSingleton {
             if (curQuestion.sre_foca_id === FormatCategory.PreQ_Intro || curQuestion.sre_foca_id === FormatCategory.Section_Title) {
                 atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
             }
+        }
+
+        // Always Display any Residental Block Page
+        let curPageType: PageType = SeedDataSingleton.instanceOf().getPagebyPageId(pageId).page_type;
+        if ([PageType.residentialBlockPart1, PageType.residentialBlockPart2, PageType.residentialBlockPart3].indexOf(curPageType) > -1) {
+            atLeastOneVisibleQuestion = true;
         }
 
         return { questions: questions, pageVisible: atLeastOneVisibleQuestion, renderButtons: pageId > 2 };

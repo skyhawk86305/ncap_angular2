@@ -40,6 +40,11 @@ export class SeedDataSingleton {
         return result;
     }
 
+    getPagebyPageId(pageId: number): Page {
+        let result = surveyPageDict[1].find((i) => i.page_id === pageId);
+        return result;
+    }
+
     getAllPages(): Page[] {
         let result = surveyPageDict[1];
         return result;
