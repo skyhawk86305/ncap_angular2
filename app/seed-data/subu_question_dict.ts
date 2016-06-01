@@ -100,7 +100,7 @@ export var subuQuestionDict: SubuQuestions = {
         new SubuQuestion(16,'13400',13700,3,'PH',null,null,null,5,15,1,13400,'Sleep dysfunction (such as problems going to sleep or staying asleep, or sleeping too much)','-- TBD --','-- TBD --',30,30,30,'sleep_dysfunction',null,null,null,null,null,'sleep_dysfunction' ) ,
         new SubuQuestion(16,'13400',13800,4,'PH',null,null,null,5,15,1,13400,'Motor impairment (such as repetitive behaviors, motor delay, gait abnormality, incoordination)','-- TBD --','-- TBD --',30,30,30,'motor_impairment',null,null,null,null,null,'motor_impairment' ) ,
         new SubuQuestion(16,'13400',13900,5,'PH',null,null,null,5,15,1,13400,'Gastrointestinal issues (such as chronic diarrhea, constipation, nausea, vomiting, acid reflux)','-- TBD --','-- TBD --',30,30,30,'gastrointestinal_issues',null,null,null,null,null,'gastrointestinal_issues' ) ,
-        new SubuQuestion(16,'13400',14000,6,'PH',null,null,null,5,12,0,13400,'Other','-- TBD --','-- TBD --',null,null,null,'other_observed_issues','(Please indicate)',null,null,null,null,null ) 
+        new SubuQuestion(16,'13400',14000,6,'PH',null,null,null,5,14,0,13400,'Other','-- TBD --','-- TBD --',null,null,null,'other_observed_issues','(Please indicate)',null,null,null,null,null ) 
     ],
     14250: [
         new SubuQuestion(17,'14250',14255,1,'EN',35,35,35,16,6,0,14250,null,'<!--Placeholder for other work-->','<!--Placeholder for other work-->',null,null,null,'proband_employ_other','(Please indicate)',null,null,null,null,null ) 
