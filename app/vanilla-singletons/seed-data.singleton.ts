@@ -35,8 +35,8 @@ export class SeedDataSingleton {
         return result;
     }
 
-    getPage(pageNumber: number): Page {
-        let result = surveyPageDict[1].find((i) => i.page_number === pageNumber);
+    getPageByIndex(index: number): Page {
+        let result = surveyPageDict[1][index];
         return result;
     }
 

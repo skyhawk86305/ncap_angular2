@@ -28,7 +28,7 @@ export class NavigationSingleton {
     }
 
     getPageToRender(): Page {
-        let result = SeedDataSingleton.instanceOf().getPage(this._currentPageNumber);
+        let result = SeedDataSingleton.instanceOf().getPageByIndex(this._currentPageNumber - 1);
 
         return result;
     }
