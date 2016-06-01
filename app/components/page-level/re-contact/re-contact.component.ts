@@ -120,7 +120,28 @@ export class ReContactComponent implements OnInit {
                 this.questionsToValidate.push(ncapData);
             }
         }
+        this.initData();
         this.navigationSingleton.show_validation = false;
+
+    }
+
+    /**
+     * Initialize data with what the user had previously entered.  The phone fields were reset because of the
+     *  phone mask.
+     */
+    initData() {
+        let prvPhone = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_MAIN);
+        if (prvPhone) {
+            this.prevUserInputPhone = prvPhone.storedValue;
+        } else {
+            this.prevUserInputPhone = "";
+        }
+        let prvPhoneAlt1 = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_ALT1);
+        if (prvPhoneAlt1) {
+            this.prevUserInputPhoneAlt1 = prvPhoneAlt1.storedValue;
+        } else {
+            this.prevUserInputPhoneAlt1 = "";
+        }
     }
 
 
@@ -234,7 +255,7 @@ export class ReContactComponent implements OnInit {
             }
 
         }
-
+        this._syncToPreviouslyEnteredData();
         return retVal;
     }
 
@@ -280,36 +301,36 @@ export class ReContactComponent implements OnInit {
     private _syncToPreviouslyEnteredData() {
         // Is there previous entered User Input we need to sync to?
 
-        let previousUserInput:UserInput;
-        previousUserInput = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_RECONTACT);
-        if (previousUserInput) {
-            this.prevUserInputReContact = +previousUserInput.storedValue;
-            this.contactUser = +previousUserInput.storedValue;
+
+        let previousUserInputReContact = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_RECONTACT);
+        if (previousUserInputReContact) {
+            this.prevUserInputReContact = +previousUserInputReContact.storedValue;
+            this.contactUser = +previousUserInputReContact.storedValue;
 
         }
-        previousUserInput = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_FULL_NAME);
-        if (previousUserInput) {
-            this.prevUserInputFullName = previousUserInput.storedValue;
+        let previousUserInputFullName = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_FULL_NAME);
+        if (previousUserInputFullName) {
+            this.prevUserInputFullName = previousUserInputFullName.storedValue;
         }
-        previousUserInput = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_MAIN);
-        if (previousUserInput) {
-            this.prevUserInputPhone = previousUserInput.storedValue;
+        let previousUserInputPhone = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_MAIN);
+        if (previousUserInputPhone) {
+            this.prevUserInputPhone = previousUserInputPhone.storedValue;
         }
-        previousUserInput = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_MAIN_EXT);
-        if (previousUserInput) {
-            this.prevUserInputPhoneExt = previousUserInput.storedValue;
+        let previousUserInputMainExt = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_MAIN_EXT);
+        if (previousUserInputMainExt) {
+            this.prevUserInputPhoneExt = previousUserInputMainExt.storedValue;
         }
-        previousUserInput = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_ALT1);
-        if (previousUserInput) {
-            this.prevUserInputPhoneAlt1 = previousUserInput.storedValue;
+        let previousUserInputPhoneAlt1 = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_ALT1);
+        if (previousUserInputPhoneAlt1) {
+            this.prevUserInputPhoneAlt1 = previousUserInputPhoneAlt1.storedValue;
         }
-        previousUserInput = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_ALT1_EXT);
-        if (previousUserInput) {
-            this.prevUserInputPhoneAlt1Ext = previousUserInput.storedValue;
+        let previousUserInputAltExt = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_ALT1_EXT);
+        if (previousUserInputAltExt) {
+            this.prevUserInputPhoneAlt1Ext = previousUserInputAltExt.storedValue;
         }
-        previousUserInput = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_EMAIL);
-        if (previousUserInput) {
-            this.prevUserInputEmail = previousUserInput.storedValue;
+        let previousUserInputEmail = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_EMAIL);
+        if (previousUserInputEmail) {
+            this.prevUserInputEmail = previousUserInputEmail.storedValue;
         }
 
     }
