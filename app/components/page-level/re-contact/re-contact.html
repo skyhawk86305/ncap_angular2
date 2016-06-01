@@ -30,7 +30,7 @@
                     <label>
                         <input type="radio" value="{{reConDomains[0].stored_value}}"
                                name="{{reConQuestions[2].page_id}}"
-                               [checked]="prevUserInputReContact === reConDomains[0].stored_value"
+                               [checked]="prevUserInputReContact === 1"
                                (click)='clickReCon(reConQuestions[2].tracking_key, reConDomains[0].stored_value, ReConConstants.CONTACT_USER_NO_CONTACT)'>
                         {{reConDomains[0].displayed_value}}
                     </label>
@@ -39,7 +39,7 @@
                     <label>
                         <input type="radio" value="{{reConDomains[1].stored_value}}"
                                name="{{reConQuestions[2].page_id}}"
-                               [checked]='prevUserInputReContact === reConDomains[1].stored_value'
+                               [checked]='prevUserInputReContact === 2'
                                (click)='clickReCon(reConQuestions[2].tracking_key, reConDomains[1].stored_value, ReConConstants.CONTACT_USER)'>
 
                         {{reConDomains[1].displayed_value}}

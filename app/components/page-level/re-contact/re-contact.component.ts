@@ -130,18 +130,38 @@ export class ReContactComponent implements OnInit {
      *  phone mask.
      */
     initData() {
-        let prvPhone = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_MAIN);
-        if (prvPhone) {
-            this.prevUserInputPhone = prvPhone.storedValue;
-        } else {
-            this.prevUserInputPhone = "";
-        }
-        let prvPhoneAlt1 = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_ALT1);
-        if (prvPhoneAlt1) {
-            this.prevUserInputPhoneAlt1 = prvPhoneAlt1.storedValue;
-        } else {
-            this.prevUserInputPhoneAlt1 = "";
-        }
+        this._syncToPreviouslyEnteredData();
+        // let prvReContact = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_RECONTACT);
+        // if (prvReContact) {
+        //     this.prevUserInputReContact = +prvReContact.storedValue;
+        //     this.contactUser = +prvReContact.storedValue;
+        // } else {
+        //     this.prevUserInputReContact = ReConConstants.CONTACT_USER_NOT_SELECTED;
+        // }
+        // let prvName = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_FULL_NAME);
+        // if (prvName) {
+        //     this.prevUserInputFullName = prvName.storedValue;
+        // } else {
+        //     this.prevUserInputFullName = "";
+        // }
+        // let prvEmail = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_EMAIL);
+        // if (prvEmail) {
+        //     this.prevUserInputEmail = prvEmail.storedValue;
+        // } else {
+        //     this.prevUserInputEmail = "";
+        // }
+        // let prvPhone = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_MAIN);
+        // if (prvPhone) {
+        //     this.prevUserInputPhone = prvPhone.storedValue;
+        // } else {
+        //     this.prevUserInputPhone = "";
+        // }
+        // let prvPhoneAlt1 = UserInputSingleton.instanceOf().getUserInput(ReConConstants.TRACKING_KEY_PHONE_ALT1);
+        // if (prvPhoneAlt1) {
+        //     this.prevUserInputPhoneAlt1 = prvPhoneAlt1.storedValue;
+        // } else {
+        //     this.prevUserInputPhoneAlt1 = "";
+        // }
     }
 
 
@@ -167,7 +187,7 @@ export class ReContactComponent implements OnInit {
      *  Once the user select to 'Contact Me', then the input field validation occurs.
      */
     nextPage() {
-        this.recontactValidation = -1;
+        this.recontactValidation = ReConConstants.CONTACT_USER_NOT_SELECTED;
         //reset the data in case user made changes and clicks next again
         this.reConQuestions = this.reConSeedData;
         switch (this.contactUser) {
