@@ -1,4 +1,218 @@
-<BR>
-<div>Re-Contact - WIP</div>
+<div class="container">
+    <H3 *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">{{reConQuestions[0].txt_parent_lang1}}</H3>
+    <H3 *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">{{reConQuestions[0].txt_legalrep_lang1}}</H3>
+    <H3 *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">{{reConQuestions[0].txt_selfreport_lang1}}</H3>
 
-<navigation-buttons></navigation-buttons>
+    <div>
+        <div *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">{{reConQuestions[1].txt_parent_lang1}}</div>
+        <div *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">{{reConQuestions[1].txt_legalrep_lang1}}</div>
+        <div *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">{{reConQuestions[1].txt_selfreport_lang1}}</div>
+    </div>
+    <div></div>
+    <form role="form" class="form-horizontal">
+        <div class="form-group"></div>
+        <div class="control-group">
+            <div class="input-group">
+                <div>
+                    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
+                         [class.ncap-requested]="navigationSingleton.show_validation && reConSelection.validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.show_validation && reConSelection.validation_result===ValidationResult.required">
+                        <span *ngIf="navigationSingleton.diagMode">{{reConSelection.page_id}}.{{reConSelection.sre_sort_order}} - </span>
+                        <html-including-tooltips
+                                [htmlToRender]='reConSelection.question_text'></html-including-tooltips>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">{{reConQuestions[2].txt_parent_lang1}}</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">{{reConQuestions[2].txt_legalrep_lang1}}</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">{{reConQuestions[2].txt_selfreport_lang1}}</label>
+                    </div>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="{{reConDomains[0].stored_value}}"
+                               name="{{reConQuestions[2].page_id}}"
+                               [checked]="prevUserInputReContact === reConDomains[0].stored_value"
+                               (click)='clickReCon(reConQuestions[2].tracking_key, reConDomains[0].stored_value, ReConConstants.CONTACT_USER_NO_CONTACT)'>
+                        {{reConDomains[0].displayed_value}}
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" value="{{reConDomains[1].stored_value}}"
+                               name="{{reConQuestions[2].page_id}}"
+                               [checked]='prevUserInputReContact === reConDomains[1].stored_value'
+                               (click)='clickReCon(reConQuestions[2].tracking_key, reConDomains[1].stored_value, ReConConstants.CONTACT_USER)'>
+
+                        {{reConDomains[1].displayed_value}}
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group"></div>
+
+        <div [hidden]="contactUser !== ReConConstants.CONTACT_USER">
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <!-- Full Name-->
+                    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
+                         [class.ncap-requested]="navigationSingleton.show_validation && reConQuestions[3].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.show_validation && reConQuestions[3].validation_result===ValidationResult.required">
+                        <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[3].page_id}}.{{reConQuestions[3].sre_sort_order}} - </span>
+                        <html-including-tooltips
+                                [htmlToRender]='reConQuestions[3].question_text'></html-including-tooltips>
+
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">Full name</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">Full name</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">Full name</label>
+                    </div>
+                    <input type="text" class="form-control" #prevInput.fullname
+                           name="{{reConQuestions[3].tracking_key}}"
+                           placeholder="{{reConQuestions[3].def_disp_value}}"
+                           [(ngModel)]="prevUserInputFullName"
+                           (ngModelChange)="modelChange(reConQuestions[3].tracking_key, $event)">
+                    <div [hidden]="validName">Please provide a first and last name</div>
+
+                </div>
+
+                <div class="col-sm-6">
+                    <!-- Email Address-->
+                    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
+                         [class.ncap-requested]="navigationSingleton.show_validation && reConQuestions[20].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.show_validation && reConQuestions[20].validation_result===ValidationResult.required">
+                        <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[20].page_id}}.{{reConQuestions[20].sre_sort_order}} - </span>
+                        <html-including-tooltips
+                                [htmlToRender]='reConQuestions[20].question_text'></html-including-tooltips>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">{{reConQuestions[20].txt_parent_lang1}}</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">{{reConQuestions[20].txt_legalrep_lang1}}</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">{{reConQuestions[20].txt_selfreport_lang1}}</label>
+                    </div>
+                    <input type="email" class="form-control" ngControl="email" id="email"
+                           name="{{reConQuestions[20].tracking_key}}"
+                           placeholder="{{reConQuestions[20].def_disp_value}}"
+                           [(ngModel)]="prevUserInputEmail"
+                           (ngModelChange)="modelChange(reConQuestions[20].tracking_key, $event)"/>
+                    <div [hidden]="validEmail">Please enter a valid email address</div>
+                    <!--<control-messages control="email"></control-messages>-->
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <!-- Main Phone-->
+                    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
+                         [class.ncap-requested]="navigationSingleton.show_validation && reConQuestions[5].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.show_validation && reConQuestions[5].validation_result===ValidationResult.required">
+                        <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[5].page_id}}.{{reConQuestions[5].sre_sort_order}} - </span>
+                        <html-including-tooltips
+                                [htmlToRender]='reConQuestions[5].question_text'></html-including-tooltips>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">{{reConQuestions[5].txt_parent_lang1}}</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">{{reConQuestions[5].txt_legalrep_lang1}}</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">{{reConQuestions[5].txt_selfreport_lang1}}</label>
+                    </div>
+                    <input type="text" class="form-control" id="{{reConQuestions[5].tracking_key}}"
+                           name="{{reConQuestions[5].tracking_key}}" placeholder="{{reConQuestions[5].def_disp_value}}"
+                           [(ngModel)]="prevUserInputPhone"
+                           (ngModelChange)="modelChange(reConQuestions[5].tracking_key, $event)"
+                           mask-input="(***) ***-****" [modify]="prevUserInputPhone">
+
+                    <!--<input type="text" class="form-control" id="telephone" name="telephone" placeholder="123-456-7890"-->
+                           <!--[(ngModel)]="contactInfo.telephone" required #telephone="ngForm" mask-input="(***) ***-****" [modify]="contactInfo.telephone"/>-->
+                    <!---->
+                    <div [hidden]="validPhone">Please enter a valid phone number</div>
+                </div>
+
+                <div class="col-sm-6">
+                    <!-- Main Phone Ext-->
+                    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
+                         [class.ncap-requested]="navigationSingleton.show_validation && reConQuestions[6].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.show_validation && reConQuestions[6].validation_result===ValidationResult.required">
+                        <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[6].page_id}}.{{reConQuestions[6].sre_sort_order}} - </span>
+                        <html-including-tooltips
+                                [htmlToRender]='reConQuestions[6].question_text'></html-including-tooltips>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">Ext.</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">Ext.</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">Ext.</label>
+                    </div>
+                    <input type="text" class="form-control"
+                           name="{{reConQuestions[6].tracking_key}}" placeholder="{{reConQuestions[6].def_disp_value}}"
+                           [(ngModel)]="prevUserInputPhoneExt"
+                           (ngModelChange)="modelChange(reConQuestions[6].tracking_key, $event)">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <!-- Phone Alternate 1-->
+                    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
+                         [class.ncap-requested]="navigationSingleton.show_validation && reConQuestions[8].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.show_validation && reConQuestions[8].validation_result===ValidationResult.required">
+                        <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[8].page_id}}.{{reConQuestions[8].sre_sort_order}} - </span>
+                        <html-including-tooltips
+                                [htmlToRender]='reConQuestions[8].question_text'></html-including-tooltips>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">Alt phone number 1 (optional)</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">Alt phone number 1 (optional)</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">Alt phone number 1 (optional)</label>
+                    </div>
+                    <input type="text" class="form-control"
+                           name="{{reConQuestions[8].tracking_key}}" placeholder="{{reConQuestions[8].def_disp_value}}"
+                           [(ngModel)]="prevUserInputPhoneAlt1"
+                           (ngModelChange)="modelChange(reConQuestions[8].tracking_key, $event)"
+                           mask-input="(***) ***-****" [modify]="prevUserInputPhoneAlt1">
+                    <div [hidden]="validPhoneAlt1">Please enter a valid phone number</div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- Phone Alternate 1 Extension-->
+                    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
+                         [class.ncap-requested]="navigationSingleton.show_validation && reConQuestions[9].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.show_validation && reConQuestions[9].validation_result===ValidationResult.required">
+                        <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[9].page_id}}.{{reConQuestions[9].sre_sort_order}} - </span>
+                        <html-including-tooltips
+                                [htmlToRender]='reConQuestions[9].question_text'></html-including-tooltips>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_PARENT">Ext.</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_LEGAL">Ext.</label>
+                        <label *ngIf="svyType===ReConConstants.SURVEY_TYPE_SELF">Ext.</label>
+                    </div>
+                    <input type="text" class="form-control"
+                           name="{{reConQuestions[9].tracking_key}}" placeholder="{{reConQuestions[9].def_disp_value}}"
+                           [(ngModel)]="prevUserInputPhoneAlt1Ext"
+                           (ngModelChange)="modelChange(reConQuestions[9].tracking_key, $event)">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--<recontact-page-level-validation></recontact-page-level-validation>-->
+    <div *ngIf='navigationSingleton.show_validation' class="container ng-scope validation-messages"
+         [ngSwitch]=recontactValidation>
+        <div *ngSwitchWhen=ValidationResult.required class="ncap-required">
+            *Please answer the highlighted question(s) before proceeding to the next page. If you do not wish to answer, you may exit the survey by clicking Exit Survey.
+        </div>
+        <div *ngSwitchWhen=ValidationResult.requested class="ncap-requested ng-binding ng-hide">
+            *The highlighted question(s) have not been answered. Please answer these questions or click Next to go to the next page.
+        </div>
+    </div>
+    <!--Buttons-->
+    <div align="center" class="navigation-buttons ng-scope">
+
+        <button type="button" class="btn btn-warning btn-lg ng-isolate-scope" style="outline:none"
+                (click)="navigationSingleton.exit()" confirm-ok="OK - Exit Now" confirm-cancel="Return to Survey"
+                confirm-title="Exit Survey"
+                confirm="If you exit the survey now you will not be able to return and finish it later.  We will not keep any information you have entered so far.  Are you sure you want to exit?"
+                nga11y-modal-closer="">
+            <i class="fa fa-times"></i> Exit Survey
+        </button>
+
+        <button type="button" class="btn btn-primary btn-lg" style="outline:none" (click)="navigationSingleton.back()"
+                nga11y-modal-closer=""><i class="fa fa-arrow-circle-left"></i> Back
+        </button>
+
+        <button *ngIf="!hideNextButton" type="button"
+                nga11y-modal-closer=""
+                style="outline:none"
+                class="btn btn-primary btn-lg ng-binding" (click)="nextPage()">
+            <i class="fa fa-arrow-circle-right"
+               ng-class="{'fa-arrow-circle-right':vm.currPage!==vm.breakArr.length, 'fa-paper-plane-o':vm.currPage===vm.breakArr.length}"></i>
+            Next
+        </button>
+
+    </div>
+</div>
