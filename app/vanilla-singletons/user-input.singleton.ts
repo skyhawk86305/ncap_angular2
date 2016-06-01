@@ -13,7 +13,7 @@ export class UserInputSingleton {
         // Default values
         this.setUserInput('respondent_type', 'parent');
         this.setUserInput('asd_yes_no', '1');
-        this.setUserInput('proband_DOB', '2010-05-01'); //xyzzy5 - find the correct default and calculate
+        this.setUserInput('proband_DOB', '2010-05-01'); // plugh - find the correct default and calculate
         UserInputSingleton._instance = this;
     }
 

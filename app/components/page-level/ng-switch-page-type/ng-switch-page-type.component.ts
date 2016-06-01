@@ -57,7 +57,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     }
 
     private handleUrlParameters() {
-        // xyzzy Move all below to a Scenario service/ singleton
+        // plugh Move all below to a Scenario service/ singleton
 
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
