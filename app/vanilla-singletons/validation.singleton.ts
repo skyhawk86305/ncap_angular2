@@ -53,26 +53,21 @@ export class ValidationSingleton {
 
     public calculateAggregateValidationCSS(question: PageQuestion) {
         let aggregateResult: ValidationResult = this.validateQuestion(question);
-        let result = '';
+        let resultingCss = '';
 
         if (NavigationSingleton.instanceOf().show_validation) {
-            switch (aggregateResult) {
-                case ValidationResult.requested:
-                    result = 'ncap-requested';
-                    break;
-                case ValidationResult.required:
-                    result = 'ncap-required';
-                    break;
-                default:
-                    result = '';
-                    break;
-            }
+            resultingCss = this._translateValidationResultToCssClass(aggregateResult);
         }
-        return result;
+        return resultingCss;
     }
 
     public calculateSubuElementValidationCSS(curMatrixElement: SubuQuestion) {
         let validationResult = this._validateSubuElement(curMatrixElement);
+        let resultingCss = this._translateValidationResultToCssClass(validationResult);
+        return resultingCss;
+    }
+
+    private _translateValidationResultToCssClass(validationResult: ValidationResult) {
         let resultingCss = '';
 
         switch (validationResult) {
