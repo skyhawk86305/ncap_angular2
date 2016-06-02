@@ -67,10 +67,10 @@ export var pageQuestionDict: SeedDataPageQuestions = {
         new PageQuestion(10,3,4950,1,'PH',null,null,null,4,12,3,null,'Did the child have any of the following behaviors or symptoms during any stage of development?','As a child, did the individual have any of the following symptoms during any stage of development? Answer as appropriate for the age.','As a child, did you have any of the following symptoms during any stage of development? Answer as appropriate for the age.',31,31,31,null,null,null,null,null,null,null ) 
     ],
     11: [
-        new PageQuestion(11,1,6300,1,'PH',null,null,null,4,11,3,null,'Did the child:','Lose speech or language skills?','Lose speech or language skills?',33,33,33,null,null,null,null,null,null,null ) 
+        new PageQuestion(11,1,6300,1,'PH',null,null,null,4,11,3,null,'Did the child:','Did the individual:','Did you:',33,33,33,null,null,null,null,null,null,null ) 
     ],
     12: [
-        new PageQuestion(12,1,8000,0,'PH',null,null,null,4,1,1,null,'Does the child currently walk on their own?','How old was the individual when they first walked?','How old were you when you first walked?',33,33,33,'WalkByOneself',null,null,null,null,null,'WalkByOneself' ) ,
+        new PageQuestion(12,1,8000,0,'PH',null,null,null,4,1,1,null,'Does the child currently walk on their own?','Does the individual currently walk on their own?','Do you currently walk on your own?',33,33,33,'WalkByOneself',null,null,null,null,null,'WalkByOneself' ) ,
         new PageQuestion(12,2,8100,0,'PH',13,13,13,4,7,1,null,'How old was child when they first walked?','How old was the individual when they first walked?','How old were you when you first walked?',4,4,4,'WalkByOneselfAge','Please select',null,null,null,null,'WalkByOneselfAge' ) ,
         new PageQuestion(12,3,8200,0,'PH',37,37,37,4,1,1,null,'What best describes the child\'s current verbal skill?',null,null,26,26,26,'VerbalSkill',null,null,null,null,null,'VerbalSkill' ) ,
         new PageQuestion(12,4,8300,0,'PH',14,null,null,4,7,1,null,'At what age did the child say their first words?','At what age did the individual say their first words?','At what age did you say you first words?',1,49,50,'FirstWordsAge','Please select',null,null,null,null,'FirstWordsAge' ) ,
