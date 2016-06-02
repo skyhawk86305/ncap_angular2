@@ -25,7 +25,7 @@ export class ValidationSingleton {
         // Get all questions on page
         let questionsToValidate: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
         // Run validation on all questions
-        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()._validateQuestionArray(questionsToValidate);
+        let aggregateResult: ValidationResult = this._validateQuestionArray(questionsToValidate);
 
         return aggregateResult;
     }
@@ -55,7 +55,7 @@ export class ValidationSingleton {
         let aggregateResult: ValidationResult = this.validateQuestion(question);
         let resultingCss = '';
 
-        if (NavigationSingleton.instanceOf().show_validation) {
+        if (NavigationSingleton.instanceOf().showValidation) {
             resultingCss = this._translateValidationResultToCssClass(aggregateResult);
         }
         return resultingCss;

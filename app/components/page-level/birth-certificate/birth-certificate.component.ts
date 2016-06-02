@@ -137,7 +137,7 @@ export class BirthCertificateComponent implements OnInit {
     if (previousUserInput) {
       return false;
     } else{
-      if (this.navigationSingleton.show_validation && (+q.bypass_enum_code === ValidationResult.requested)){
+      if (this.navigationSingleton.showValidationStatusForEachPage && (+q.bypass_enum_code === ValidationResult.requested)){
         return true;
       } else {
         return false;
@@ -161,7 +161,7 @@ export class BirthCertificateComponent implements OnInit {
 
   // validatePage(){
   //   console.log('validatePage called')
-  //   console.log(this.navigationSingleton.show_validation)
+  //   console.log(this.navigationSingleton.showValidation)
   //   // console.log(this._trackingKeyArr)
   //   for (let q of this._trackingKeyArr) {
   //     let previousUserInput: UserInput = this.getUserInput(q.tracking_key);

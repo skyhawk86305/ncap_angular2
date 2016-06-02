@@ -12,7 +12,7 @@ export class NavigationSingleton {
 
     private static _instance: NavigationSingleton = new NavigationSingleton();
 
-    public show_validation: boolean;
+    public showValidationStatusForEachPage: Array<boolean>;
     public diagMode = false; // Is the app in Diagnostic Mode?
     public shownRequestedValidationOnPages: number[] = new Array<number>(); // Pages already shown Requested Validation 
 
@@ -24,7 +24,20 @@ export class NavigationSingleton {
     }
 
     constructor() {
+        let totalPages = SeedDataSingleton.instanceOf().totalPages;
+        this.showValidationStatusForEachPage = new Array<boolean>(totalPages);
         NavigationSingleton._instance = this;
+    }
+
+    get showValidation(): boolean {
+        let showValidationForCurrentPage = this.showValidationStatusForEachPage[this._currentPageIndex];
+        showValidationForCurrentPage = !!showValidationForCurrentPage; // Undefine should be false;
+
+        return showValidationForCurrentPage;
+    }
+
+    set showValidation(value: boolean) {
+        this.showValidationStatusForEachPage[this._currentPageIndex] = value;
     }
 
     get currentPageId(): number {
@@ -93,21 +106,20 @@ export class NavigationSingleton {
 
         // If validation should be shown update show_validation property in the questions
         if (aggregateResult !== ValidationResult.ok) {
-            this.show_validation = true;
+            this.showValidation = true;
         }
 
         // If validation was ok, then go to the next page
         if (aggregateResult === ValidationResult.ok) {
             this._currentPageIndex++;
-            this.show_validation = false;
 
             // Verify page is has at least one visible Question            
-            let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+            let questionsToRender = this.getQuestionsToRender();
             let avoidInfinteLoopCount = 0; // avoid an infinite loop
             while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
                 console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
                 this._currentPageIndex++;
-                questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+                questionsToRender = this.getQuestionsToRender();
             }
 
             this.notifyObservers();
@@ -126,7 +138,7 @@ export class NavigationSingleton {
         while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
             console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
             this._currentPageIndex--;
-            questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+            questionsToRender = this.getQuestionsToRender();
         }
 
         this.notifyObservers();
@@ -138,15 +150,14 @@ export class NavigationSingleton {
      */
     nextWithNoValidation() {
         this._currentPageIndex++;
-        this.show_validation = false;
 
         // Verify page is has at least one visible Question            
-        let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+        let questionsToRender = this.getQuestionsToRender();
         let avoidInfinteLoopCount = 0; // avoid an infinite loop
         while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
             console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
             this._currentPageIndex++;
-            questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+            questionsToRender = this.getQuestionsToRender();
         }
 
         this.notifyObservers();
