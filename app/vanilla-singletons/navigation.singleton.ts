@@ -6,7 +6,6 @@ import { ValidationResult } from  '../../app/types/enums/validation-result.enum'
 import { SeedDataSingleton } from '../../app/vanilla-singletons/seed-data.singleton';
 import { ValidationSingleton } from '../../app/vanilla-singletons/validation.singleton';
 import { PageQuestion } from '../../app/types/database-data/page-question';
-import { Page } from '../../app/types/database-data/page';
 import { PageType } from '../../app/types//enums/page-type.enum';
 
 export class NavigationSingleton {
@@ -80,38 +79,6 @@ export class NavigationSingleton {
         return percentage;
     }
 
-    get PageToRender(): Page {
-        let result = SeedDataSingleton.instanceOf().getPageByIndex(this._currentPageIndex);
-
-        return result;
-    }
-
-    getQuestionsToRender(): { questions: PageQuestion[], pageVisible: boolean, renderButtons: boolean } {
-        // Find questions for current page
-        let pageId = this.currentPageId;
-        let questions: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
-
-        let atLeastOneVisibleQuestion = false;
-
-        for (let curQuestion of questions) {
-            if (curQuestion.sre_anca_id !== AnswerCategory.No_Answer) {
-                atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
-            }
-            // Always show the page if it has a visible PreQ_Intro or Section_Title
-            if (curQuestion.sre_foca_id === FormatCategory.PreQ_Intro || curQuestion.sre_foca_id === FormatCategory.Section_Title) {
-                atLeastOneVisibleQuestion = atLeastOneVisibleQuestion || curQuestion.visible;
-            }
-        }
-
-        // Always Display any Residental Block Page
-        let curPageType: PageType = SeedDataSingleton.instanceOf().getPagebyPageId(pageId).page_type;
-        if ([PageType.residentialBlockPart1, PageType.residentialBlockPart2, PageType.residentialBlockPart3].indexOf(curPageType) > -1) {
-            atLeastOneVisibleQuestion = true;
-        }
-
-        return { questions: questions, pageVisible: atLeastOneVisibleQuestion, renderButtons: pageId > 2 };
-    }
-
     // Navigation
     next() {
         let aggregateResult: ValidationResult;
@@ -149,12 +116,12 @@ export class NavigationSingleton {
             this._currentPageIndex++;
 
             // Verify page is has at least one visible Question            
-            let questionsToRender = this.getQuestionsToRender();
+            let questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.currentPageId);
             let avoidInfinteLoopCount = 0; // avoid an infinite loop
             while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
                 console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
                 this._currentPageIndex++;
-                questionsToRender = this.getQuestionsToRender();
+                questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.currentPageId);
             }
 
             this._notifyObserversOfNavigation();
@@ -170,14 +137,14 @@ export class NavigationSingleton {
         this.showPageLevelValidationMessage = false; // Never show page level validation message if we just moved back
 
         // Verify page is has at leat one visible Question            
-        let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
+        let questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.currentPageId);
         let avoidInfinteLoopCount = 0;
         while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
             console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
             this._currentPageIndex--;
             this.showValidation = true; // Always show validation when moving back to a page
             this.showPageLevelValidationMessage = false; // Never show page level validation message if we just moved back
-            questionsToRender = this.getQuestionsToRender();
+            questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.currentPageId);
         }
 
         this._notifyObserversOfNavigation();
@@ -191,17 +158,16 @@ export class NavigationSingleton {
         this._currentPageIndex++;
 
         // Verify page is has at least one visible Question            
-        let questionsToRender = this.getQuestionsToRender();
+        let questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.currentPageId);
         let avoidInfinteLoopCount = 0; // avoid an infinite loop
         while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
             console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
             this._currentPageIndex++;
-            questionsToRender = this.getQuestionsToRender();
+            questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.currentPageId);
         }
 
         this._notifyObserversOfNavigation();
     }
-
 
     setPageId(pageId: number) {
         let pageIndex = SeedDataSingleton.instanceOf().getPageIndexFromPageId(pageId);
