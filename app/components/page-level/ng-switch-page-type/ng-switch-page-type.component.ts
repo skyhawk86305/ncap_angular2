@@ -62,18 +62,18 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId) {
-            NavigationSingleton.instanceOf().setPageNumber(requestedPageId);
+            NavigationSingleton.instanceOf().setPageId(requestedPageId);
         }
 
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId === 1) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO1);
-            NavigationSingleton.instanceOf().setPageNumber(15);
+            NavigationSingleton.instanceOf().setPageId(15);
         }
         if (scenarioId === 2) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO2);
-            NavigationSingleton.instanceOf().setPageNumber(17);
+            NavigationSingleton.instanceOf().setPageId(17);
         }
 
         if (this._routeParams.get('diag')) {
