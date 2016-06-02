@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.singleton';
 import { Page } from '../../../../app/types/database-data/page';
 import { PageType } from '../../../types/enums/page-type.enum';
 import { HomeComponent } from '../home/home.component';
@@ -34,6 +35,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     public pageId: number;
     public PageType = PageType;
     protected navigationSingleton = NavigationSingleton.instanceOf();
+    protected seedDataSingleton = SeedDataSingleton.instanceOf();
 
     constructor(
         private _routeParams: RouteParams

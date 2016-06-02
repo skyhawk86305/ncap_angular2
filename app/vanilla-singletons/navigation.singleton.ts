@@ -25,6 +25,10 @@ export class NavigationSingleton {
         return pageId;
     }
 
+    get currentPageNumber(): number {
+        return this._currentPageIndex + 1;
+    }
+
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
     }
@@ -41,7 +45,7 @@ export class NavigationSingleton {
 
     getQuestionsToRender(): { questions: PageQuestion[], pageVisible: boolean, renderButtons: boolean } {
         // Find questions for current page
-        let pageId = NavigationSingleton.instanceOf().getCurrentPageNumber();
+        let pageId = this.currentPageId;
         let questions: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
 
         let atLeastOneVisibleQuestion = false;
@@ -72,10 +76,10 @@ export class NavigationSingleton {
         // Requested Validation message is only shown once per page, max three times on the survey 
         if (aggregateResult === ValidationResult.requested) {
             if (this.shownRequestedValidationOnPages.length >= 3 ||
-                this.shownRequestedValidationOnPages.indexOf(this.getCurrentPageNumber()) > -1) {
+                this.shownRequestedValidationOnPages.indexOf(this.currentPageId) > -1) {
                 aggregateResult = ValidationResult.ok;
             } else {
-                this.shownRequestedValidationOnPages.push(this.getCurrentPageNumber());
+                this.shownRequestedValidationOnPages.push(this.currentPageId);
             }
         }
 
@@ -143,10 +147,6 @@ export class NavigationSingleton {
     requestPageControlRevalidate() {
         // plugh - This may not be efficient + it validatin might be called several times
         ValidationSingleton.instanceOf().validatePage(this.currentPageId);
-    }
-
-    getCurrentPageNumber() {
-        return this._currentPageIndex;
     }
 
     setPageId(pageId: number) {
