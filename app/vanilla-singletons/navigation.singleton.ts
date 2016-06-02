@@ -1,4 +1,5 @@
 import { IObservable } from '../../app/other-logic/i-observable';
+import { ICustomValidator} from '../../app/other-logic/i-custom-validator';
 import { AnswerCategory } from '../../app/types/enums/answer-category.enum';
 import { FormatCategory } from '../../app/types/enums/format-category.enum';
 import { ValidationResult } from  '../../app/types/enums/validation-result.enum';
@@ -18,6 +19,7 @@ export class NavigationSingleton {
 
     private _currentPageIndex: number = 0;
     private _observers: Array<IObservable> = new Array<IObservable>();
+    private _customPageValidator: Array<ICustomValidator>;
 
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
@@ -26,6 +28,7 @@ export class NavigationSingleton {
     constructor() {
         let totalPages = SeedDataSingleton.instanceOf().totalPages;
         this.showValidationStatusForEachPage = new Array<boolean>(totalPages);
+        this._customPageValidator = new Array<ICustomValidator>();
         NavigationSingleton._instance = this;
     }
 
@@ -92,21 +95,32 @@ export class NavigationSingleton {
 
     // Navigation
     next() {
-        let aggregateResult = ValidationSingleton.instanceOf().validatePage(this.currentPageId);
+        let aggregateResult: ValidationResult;
 
-        // Requested Validation message is only shown once per page, max three times on the survey 
-        if (aggregateResult === ValidationResult.requested) {
-            if (this.shownRequestedValidationOnPages.length >= 3 ||
-                this.shownRequestedValidationOnPages.indexOf(this.currentPageId) > -1) {
-                aggregateResult = ValidationResult.ok;
-            } else {
-                this.shownRequestedValidationOnPages.push(this.currentPageId);
-            }
+        // Is there a custom validator to call?
+        if (this._customPageValidator[this.currentPageNumber]) {
+            let customValidationResult = this._customPageValidator[this.currentPageNumber].customValidate();
+            aggregateResult = customValidationResult ? ValidationResult.ok : ValidationResult.required;
         }
 
-        // If validation should be shown update show_validation property in the questions
-        if (aggregateResult !== ValidationResult.ok) {
-            this.showValidation = true;
+        // Regular Validation
+        if (!this._customPageValidator[this.currentPageNumber]) {
+            aggregateResult = ValidationSingleton.instanceOf().validatePage(this.currentPageId);
+
+            // Requested Validation message is only shown once per page, max three times on the survey 
+            if (aggregateResult === ValidationResult.requested) {
+                if (this.shownRequestedValidationOnPages.length >= 3 ||
+                    this.shownRequestedValidationOnPages.indexOf(this.currentPageId) > -1) {
+                    aggregateResult = ValidationResult.ok;
+                } else {
+                    this.shownRequestedValidationOnPages.push(this.currentPageId);
+                }
+            }
+
+            // If validation should be shown update show_validation property in the questions
+            if (aggregateResult !== ValidationResult.ok) {
+                this.showValidation = true;
+            }
         }
 
         // If validation was ok, then go to the next page
@@ -180,10 +194,17 @@ export class NavigationSingleton {
 
     // Loop through all registered observers, notifying each one
     notifyObservers() {
+        console.log('Number of observers: ' + this._observers.length);
         for (let curObserver of this._observers) {
             if (curObserver) {
                 curObserver.oberservedDataChanged();
             }
         }
     }
+
+    // Observer registration. Components register here to be notified of changes
+    registerAsCustomValidator(validator: ICustomValidator) {
+        this._customPageValidator[this.currentPageNumber] = validator;
+    };
+
 }
