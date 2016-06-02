@@ -13,13 +13,15 @@ export class NavigationSingleton {
 
     private static _instance: NavigationSingleton = new NavigationSingleton();
 
-    public showValidationStatusForEachPage: Array<boolean>;
-    public diagMode = false; // Is the app in Diagnostic Mode?
+    public showValidationStatusOnPageNumber: Array<boolean>;
     public shownRequestedValidationOnPages: number[] = new Array<number>(); // Pages already shown Requested Validation 
+    public showPageLevelValidationMessage = false;
+    public diagMode = false; // Is the app in Diagnostic Mode?
 
     private _currentPageIndex: number = 0;
+
     private _observers: Array<IObservable> = new Array<IObservable>();
-    private _customPageValidator: Array<ICustomValidator>;
+    private _customPageValidators: Array<ICustomValidator>;
 
     public static instanceOf(): NavigationSingleton {
         return NavigationSingleton._instance;
@@ -27,20 +29,20 @@ export class NavigationSingleton {
 
     constructor() {
         let totalPages = SeedDataSingleton.instanceOf().totalPages;
-        this.showValidationStatusForEachPage = new Array<boolean>(totalPages);
-        this._customPageValidator = new Array<ICustomValidator>();
+        this.showValidationStatusOnPageNumber = new Array<boolean>(totalPages);
+        this._customPageValidators = new Array<ICustomValidator>();
         NavigationSingleton._instance = this;
     }
 
     get showValidation(): boolean {
-        let showValidationForCurrentPage = this.showValidationStatusForEachPage[this._currentPageIndex];
+        let showValidationForCurrentPage = this.showValidationStatusOnPageNumber[this._currentPageIndex];
         showValidationForCurrentPage = !!showValidationForCurrentPage; // Undefine should be false;
 
         return showValidationForCurrentPage;
     }
 
     set showValidation(value: boolean) {
-        this.showValidationStatusForEachPage[this._currentPageIndex] = value;
+        this.showValidationStatusOnPageNumber[this._currentPageIndex] = value;
     }
 
     get currentPageId(): number {
@@ -98,22 +100,24 @@ export class NavigationSingleton {
         let aggregateResult: ValidationResult;
 
         // Is there a custom validator to call?
-        if (this._customPageValidator[this.currentPageNumber]) {
-            let customValidationResult = this._customPageValidator[this.currentPageNumber].customValidate();
+        if (this._customPageValidators[this.currentPageNumber]) {
+            let customValidationResult = this._customPageValidators[this.currentPageNumber].customValidate();
             aggregateResult = customValidationResult ? ValidationResult.ok : ValidationResult.required;
         }
 
         // Regular Validation
-        if (!this._customPageValidator[this.currentPageNumber]) {
+        if (!this._customPageValidators[this.currentPageNumber]) {
             aggregateResult = ValidationSingleton.instanceOf().validatePage(this.currentPageId);
 
             // Requested Validation message is only shown once per page, max three times on the survey 
             if (aggregateResult === ValidationResult.requested) {
                 if (this.shownRequestedValidationOnPages.length >= 3 ||
                     this.shownRequestedValidationOnPages.indexOf(this.currentPageId) > -1) {
+                    this.showPageLevelValidationMessage = false;
                     aggregateResult = ValidationResult.ok;
                 } else {
                     this.shownRequestedValidationOnPages.push(this.currentPageId);
+                    this.showPageLevelValidationMessage = true;
                 }
             }
 
@@ -145,6 +149,8 @@ export class NavigationSingleton {
 
     back() {
         this._currentPageIndex--;
+        this.showValidation = true; // Always show validation when moving back to a page
+        this.showPageLevelValidationMessage = false; // Never show page level validation message if we just moved back
 
         // Verify page is has at leat one visible Question            
         let questionsToRender = NavigationSingleton.instanceOf().getQuestionsToRender();
@@ -152,6 +158,8 @@ export class NavigationSingleton {
         while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
             console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
             this._currentPageIndex--;
+            this.showValidation = true; // Always show validation when moving back to a page
+            this.showPageLevelValidationMessage = false; // Never show page level validation message if we just moved back
             questionsToRender = this.getQuestionsToRender();
         }
 
@@ -204,7 +212,7 @@ export class NavigationSingleton {
 
     // Observer registration. Components register here to be notified of changes
     registerAsCustomValidator(validator: ICustomValidator) {
-        this._customPageValidator[this.currentPageNumber] = validator;
+        this._customPageValidators[this.currentPageNumber] = validator;
     };
 
 }
