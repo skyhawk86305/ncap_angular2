@@ -1,6 +1,6 @@
 <!-- Question text -->
 <div>
-    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="navigationSingleton.showValidation && question.validation_result===ValidationResult.requested" [class.ncap-required]="navigationSingleton.showValidation && question.validation_result===ValidationResult.required">
+    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="navigationSingleton.ShowValidation && question.validation_result===ValidationResult.requested" [class.ncap-required]="navigationSingleton.ShowValidation && question.validation_result===ValidationResult.required">
         <span *ngIf="navigationSingleton.diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
         <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>

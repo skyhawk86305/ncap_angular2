@@ -84,8 +84,8 @@ export class ReContactComponent implements OnInit {
             //This sets up the first validation to check if the user selects the 'Contact Me' option.
             if (ncapData.tracking_key === ReConConstants.TRACKING_KEY_RECONTACT) {
                 this.reConSelection = ncapData;
-                //this.reConSelection.showValidation = true;
-                this.navigationSingleton.showValidation = true;
+                //this.reConSelection.ShowValidation = true;
+                this.navigationSingleton.ShowValidation = true;
             }
 
             var sre_dona_id:number = 22;
@@ -121,7 +121,7 @@ export class ReContactComponent implements OnInit {
             }
         }
         this.initData();
-        this.navigationSingleton.showValidation = false;
+        this.navigationSingleton.ShowValidation = false;
 
     }
 
@@ -177,7 +177,7 @@ export class ReContactComponent implements OnInit {
             //remove data from input fields in case the user had previously entered data.
             this.removeContactData();
         } else if (this.contactUser === ReConConstants.CONTACT_USER) {
-            this.navigationSingleton.showValidation = false;
+            this.navigationSingleton.ShowValidation = false;
         }
     }
 
@@ -192,7 +192,7 @@ export class ReContactComponent implements OnInit {
         this.reConQuestions = this.reConSeedData;
         switch (this.contactUser) {
             case ReConConstants.CONTACT_USER_NOT_SELECTED:
-                this.navigationSingleton.showValidation = true;
+                this.navigationSingleton.ShowValidation = true;
                 this.reConSelection.validation_result = ValidationResult.required;
                 this.recontactValidation = ValidationResult.required;
                 break;
@@ -286,8 +286,8 @@ export class ReContactComponent implements OnInit {
      */
     setValidationData(questionToValidate:PageQuestion) {
         var sortOrder:number = questionToValidate.sre_sort_order;
-        //this.reConQuestions[sortOrder - 1].showValidation = true;
-        this.navigationSingleton.showValidation = true;
+        //this.reConQuestions[sortOrder - 1].ShowValidation = true;
+        this.navigationSingleton.ShowValidation = true;
         if (questionToValidate.bypass_enum_code === ValidationType.requested) {
             this.reConQuestions[sortOrder - 1].validation_result = ValidationResult.requested;
         } else if (questionToValidate.bypass_enum_code === ValidationType.required) {

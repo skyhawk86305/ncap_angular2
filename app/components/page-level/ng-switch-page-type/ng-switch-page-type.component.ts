@@ -54,7 +54,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     }
 
     public oberservedDataChanged() {
-        this.pageId = this.navigationSingleton.currentPageId;
+        this.pageId = this.navigationSingleton.CurrentPageId;
         this.pageData = this.seedDataSingleton.getPageByPageId(this.pageId);
     }
 
@@ -64,18 +64,18 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId) {
-            NavigationSingleton.instanceOf().setPageId(requestedPageId);
+            NavigationSingleton.instanceOf().PageId = requestedPageId;
         }
 
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId === 1) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO1);
-            NavigationSingleton.instanceOf().setPageId(15);
+            NavigationSingleton.instanceOf().PageId = 15;
         }
         if (scenarioId === 2) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO2);
-            NavigationSingleton.instanceOf().setPageId(17);
+            NavigationSingleton.instanceOf().PageId = 17;
         }
 
         if (this._routeParams.get('diag')) {

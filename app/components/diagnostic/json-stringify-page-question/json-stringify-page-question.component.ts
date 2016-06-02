@@ -8,7 +8,7 @@ import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.
     templateUrl: 'app/components/diagnostic/json-stringify-page-question/json-stringify-page-question.html'
 })
 export class JsonStringifyPageQuestionComponent {
-    pageId: number = NavigationSingleton.instanceOf().currentPageId;
+    pageId: number = NavigationSingleton.instanceOf().CurrentPageId;
     questionNumber: number = 1;
     json: string;
 

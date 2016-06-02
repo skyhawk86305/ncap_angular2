@@ -55,7 +55,7 @@ export class ValidationSingleton {
         let aggregateResult: ValidationResult = this.validateQuestion(question);
         let resultingCss = '';
 
-        if (NavigationSingleton.instanceOf().showValidation) {
+        if (NavigationSingleton.instanceOf().ShowValidation) {
             resultingCss = this._translateValidationResultToCssClass(aggregateResult);
         }
         return resultingCss;

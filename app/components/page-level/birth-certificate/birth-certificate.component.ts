@@ -161,7 +161,7 @@ export class BirthCertificateComponent implements OnInit {
 
   // validatePage(){
   //   console.log('validatePage called')
-  //   console.log(this.navigationSingleton.showValidation)
+  //   console.log(this.navigationSingleton.ShowValidation)
   //   // console.log(this._trackingKeyArr)
   //   for (let q of this._trackingKeyArr) {
   //     let previousUserInput: UserInput = this.getUserInput(q.tracking_key);

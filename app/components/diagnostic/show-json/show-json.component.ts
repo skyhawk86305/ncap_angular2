@@ -14,6 +14,6 @@ export class ShowJsonComponent implements OnInit {
 
     ngOnInit() {
         this.data = UserInputSingleton.instanceOf().getAllUserInput();
-        this.currentPageId = NavigationSingleton.instanceOf().currentPageId;
+        this.currentPageId = NavigationSingleton.instanceOf().CurrentPageId;
     }
 }
