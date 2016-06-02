@@ -19,6 +19,14 @@ export class NavigationSingleton {
     private _currentPageIndex: number = 0;
     private _observers: Array<IObservable> = new Array<IObservable>();
 
+    public static instanceOf(): NavigationSingleton {
+        return NavigationSingleton._instance;
+    }
+
+    constructor() {
+        NavigationSingleton._instance = this;
+    }
+
     get currentPageId(): number {
         let pageId = SeedDataSingleton.instanceOf().getPageIdFromIndex(this._currentPageIndex);
 
@@ -29,12 +37,12 @@ export class NavigationSingleton {
         return this._currentPageIndex + 1;
     }
 
-    public static instanceOf(): NavigationSingleton {
-        return NavigationSingleton._instance;
-    }
+    get percentageComplete(): number {
+        let totalPages = SeedDataSingleton.instanceOf().totalPages;
+        let percentage: number = (this.currentPageNumber / totalPages) * 100;
+        percentage = Math.round(percentage);
 
-    constructor() {
-        NavigationSingleton._instance = this;
+        return percentage;
     }
 
     getPageToRender(): Page {
@@ -152,14 +160,6 @@ export class NavigationSingleton {
     setPageId(pageId: number) {
         let pageIndex = SeedDataSingleton.instanceOf().getPageIndexFromPageId(pageId);
         this._currentPageIndex = pageIndex;
-    }
-
-    getPercentageComplete() {
-        let totalPages = SeedDataSingleton.instanceOf().totalPages;
-        let percentage: number = (this._currentPageIndex / totalPages) * 100;
-        percentage = Math.round(percentage);
-
-        return percentage;
     }
 
     // Observer registration. Components register here to be notified of changes

@@ -1,7 +1,7 @@
 <!-- Progress Bar -->
 <div *ngIf="navigationSingleton.currentPageId > 2" class="progress ng-isolate-scope container ng-scope">
-  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="navigationSingleton.getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + navigationSingleton.getPercentageComplete() + '%;'">
-    {{ navigationSingleton.getPercentageComplete() }}%
+  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="navigationSingleton.percentageComplete" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + navigationSingleton.percentageComplete + '%;'">
+    {{ navigationSingleton.percentageComplete }}%
   </div>({{ navigationSingleton.currentPageNumber }}/{{ seedDataSingleton.totalPages }}, pageId: {{ navigationSingleton.currentPageId }})
 </div>
 <div [ngSwitch]=PageType[pageData.page_type]>
