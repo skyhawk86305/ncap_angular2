@@ -310,12 +310,12 @@ export class ReContactComponent implements OnInit {
         this._syncToPreviouslyEnteredData();
 
         // Ask Page Control to re-validate for everything on the page
-        this.navigationSingleton.requestPageControlRevalidate();
+        this.navigationSingleton.validateEntirePage();
     }
 
     modelChange(trackingKey:string, value:string) {
         UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
-        this.navigationSingleton.requestPageControlRevalidate();
+        this.navigationSingleton.validateEntirePage();
     }
 
     private _syncToPreviouslyEnteredData() {

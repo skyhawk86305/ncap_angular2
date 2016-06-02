@@ -20,7 +20,7 @@ export class NavigationSingleton {
 
     private _currentPageIndex: number = 0;
 
-    private _observers: Array<IObservable> = new Array<IObservable>();
+    private _observersOfNavigation: Array<IObservable> = new Array<IObservable>();
     private _customPageValidators: Array<ICustomValidator>;
 
     public static instanceOf(): NavigationSingleton {
@@ -28,11 +28,28 @@ export class NavigationSingleton {
     }
 
     constructor() {
+        // Initialize
         let totalPages = SeedDataSingleton.instanceOf().totalPages;
         this.showValidationStatusOnPageNumber = new Array<boolean>(totalPages);
         this._customPageValidators = new Array<ICustomValidator>();
+
         NavigationSingleton._instance = this;
     }
+
+    public validateEntirePage() {
+        // plugh - This may not be efficient + validation might be called several times
+        ValidationSingleton.instanceOf().validatePage(this.currentPageId);
+    }
+
+    // Observer registration. Components register here to be notified of changes
+    public registerAsObserverOfNavigation(observer: IObservable) {
+        this._observersOfNavigation.push(observer);
+    };
+
+    // Custom Validator Registration. This will override regular validation AT THE PAGE LEVEL
+    public registerAsCustomValidator(validator: ICustomValidator) {
+        this._customPageValidators[this.currentPageNumber] = validator;
+    };
 
     get showValidation(): boolean {
         let showValidationForCurrentPage = this.showValidationStatusOnPageNumber[this._currentPageIndex];
@@ -63,7 +80,7 @@ export class NavigationSingleton {
         return percentage;
     }
 
-    getPageToRender(): Page {
+    get PageToRender(): Page {
         let result = SeedDataSingleton.instanceOf().getPageByIndex(this._currentPageIndex);
 
         return result;
@@ -140,7 +157,7 @@ export class NavigationSingleton {
                 questionsToRender = this.getQuestionsToRender();
             }
 
-            this.notifyObservers();
+            this._notifyObserversOfNavigation();
         } else {
             console.log('Calculated aggregate validation is: ValidationResult.' + ValidationResult[aggregateResult]);
         }
@@ -163,14 +180,14 @@ export class NavigationSingleton {
             questionsToRender = this.getQuestionsToRender();
         }
 
-        this.notifyObservers();
+        this._notifyObserversOfNavigation();
     }
 
     /**
      * This is used by the ReContact page since the page.  If the user doesn't want to be contacted,
      *  transition to the next page without any validation.
      */
-    nextWithNoValidation() {
+    public nextWithNoValidation() {
         this._currentPageIndex++;
 
         // Verify page is has at least one visible Question            
@@ -182,37 +199,24 @@ export class NavigationSingleton {
             questionsToRender = this.getQuestionsToRender();
         }
 
-        this.notifyObservers();
+        this._notifyObserversOfNavigation();
     }
 
-    requestPageControlRevalidate() {
-        // plugh - This may not be efficient + it validatin might be called several times
-        ValidationSingleton.instanceOf().validatePage(this.currentPageId);
-    }
 
     setPageId(pageId: number) {
         let pageIndex = SeedDataSingleton.instanceOf().getPageIndexFromPageId(pageId);
         this._currentPageIndex = pageIndex;
     }
 
-    // Observer registration. Components register here to be notified of changes
-    registerAsObserver(observer: IObservable) {
-        this._observers.push(observer);
-    };
-
     // Loop through all registered observers, notifying each one
-    notifyObservers() {
-        console.log('Number of observers: ' + this._observers.length);
-        for (let curObserver of this._observers) {
+    private _notifyObserversOfNavigation() {
+        console.log('Number of observers: ' + this._observersOfNavigation.length);
+        for (let curObserver of this._observersOfNavigation) {
             if (curObserver) {
                 curObserver.oberservedDataChanged();
             }
         }
     }
 
-    // Observer registration. Components register here to be notified of changes
-    registerAsCustomValidator(validator: ICustomValidator) {
-        this._customPageValidators[this.currentPageNumber] = validator;
-    };
 
 }

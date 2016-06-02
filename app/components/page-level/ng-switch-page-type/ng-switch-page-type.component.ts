@@ -45,7 +45,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     ngOnInit() {
         this.handleUrlParameters();
         if (!this.pageInput) {
-            NavigationSingleton.instanceOf().registerAsObserver(this);
+            NavigationSingleton.instanceOf().registerAsObserverOfNavigation(this);
             this.oberservedDataChanged();
         } else {
             this.pageData = this.pageInput;
@@ -54,7 +54,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     }
 
     public oberservedDataChanged() {
-        this.pageData = NavigationSingleton.instanceOf().getPageToRender();
+        this.pageData = NavigationSingleton.instanceOf().PageToRender;
         this.pageId = this.pageData.page_id;
     }
 
