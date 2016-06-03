@@ -119,7 +119,14 @@ export class NavigationSingleton {
                 questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.CurrentPageId);
             }
 
+            // Since next just moved us to a new page, don't show the page level validation but do show the questoin level valiation if it has been show before 
+            this.DisplayValidationAtPageLevel = false;
+            if (this._pagesThatHaveDisplayedRequestedValidationMessage.indexOf(this.CurrentPageId) > -1) {
+                this.DisplayValidationAtQuestionLevel = true;
+            }
+
             this._notifyObserversOfNavigation();
+
         } else {
             console.log('Calculated aggregate validation is: ValidationResult.' + ValidationResult[aggregateResult]);
         }
@@ -128,21 +135,20 @@ export class NavigationSingleton {
 
     public back() {
         this._currentPageIndex--;
-        this.DisplayValidationAtQuestionLevel = true; // Always show validation when moving back to a page
-        this.DisplayValidationAtPageLevel = false; // Never show page level validation message if we just moved back
 
-        // this.ShowQuestionLevelValidation = true;
-        // this.ShowPageLevelValidation = true;
-
-        // Verify page is has at leat one visible Question            
+        // Verify page is has at least one visible Question            
         let questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.CurrentPageId);
         let avoidInfinteLoopCount = 0;
         while (avoidInfinteLoopCount++ < 10 && !questionsToRender.pageVisible) {
             console.log('Skipping page index ' + this._currentPageIndex + ' because there are no visible questions');
             this._currentPageIndex--;
-            this.DisplayValidationAtQuestionLevel = true; // Always show validation when moving back to a page
-            this.DisplayValidationAtPageLevel = false; // Never show page level validation message if we just moved back
             questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.CurrentPageId);
+        }
+
+        this.DisplayValidationAtPageLevel = false; // Never show page level validation message if we just moved back
+        this.DisplayValidationAtQuestionLevel = true; // Always show validation when moving back to a page
+        if (this._pagesThatHaveDisplayedRequestedValidationMessage.indexOf(this.CurrentPageId) === -1) {
+            this._pagesThatHaveDisplayedRequestedValidationMessage.push(this.CurrentPageId);
         }
 
         this._notifyObserversOfNavigation();
