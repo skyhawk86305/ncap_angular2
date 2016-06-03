@@ -87,6 +87,9 @@ export class MatrixRowComponent implements OnInit {
         case AnswerCategory.RadioButtons_in_Matrix_DropDownLastCol:
           this.previouslySelectedRadioButton = +previousUserInput.storedValue;
           break;
+        case AnswerCategory.RadioButtons:
+          this.previouslySelectedRadioButton = +previousUserInput.storedValue;
+          break;
         default:
           let message = 'Not yet supported :' + AnswerCategory[this.subuElement.sre_anca_id];
           console.log(message);
