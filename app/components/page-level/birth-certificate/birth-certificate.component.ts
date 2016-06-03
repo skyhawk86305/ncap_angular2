@@ -137,7 +137,7 @@ export class BirthCertificateComponent implements OnInit {
     if (previousUserInput) {
       return false;
     } else{
-      if (this.navigationSingleton.showValidationStatusOnPageNumber && (+q.bypass_enum_code === ValidationResult.requested)){
+      if (this.navigationSingleton.DisplayValidationAtPageLevel && (+q.bypass_enum_code === ValidationResult.requested)){
         return true;
       } else {
         return false;

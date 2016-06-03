@@ -15,8 +15,8 @@
             <div class="input-group">
                 <div>
                     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
-                         [class.ncap-requested]="navigationSingleton.ShowValidation && reConSelection.validation_result===ValidationResult.requested"
-                         [class.ncap-required]="navigationSingleton.ShowValidation && reConSelection.validation_result===ValidationResult.required">
+                         [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && reConSelection.validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && reConSelection.validation_result===ValidationResult.required">
                         <span *ngIf="navigationSingleton.diagMode">{{reConSelection.page_id}}.{{reConSelection.sre_sort_order}} - </span>
                         <html-including-tooltips
                                 [htmlToRender]='reConSelection.question_text'></html-including-tooltips>
@@ -56,8 +56,8 @@
                 <div class="col-sm-6">
                     <!-- Full Name-->
                     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
-                         [class.ncap-requested]="navigationSingleton.ShowValidation && reConQuestions[3].validation_result===ValidationResult.requested"
-                         [class.ncap-required]="navigationSingleton.ShowValidation && reConQuestions[3].validation_result===ValidationResult.required">
+                         [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[3].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[3].validation_result===ValidationResult.required">
                         <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[3].page_id}}.{{reConQuestions[3].sre_sort_order}} - </span>
                         <html-including-tooltips
                                 [htmlToRender]='reConQuestions[3].question_text'></html-including-tooltips>
@@ -78,8 +78,8 @@
                 <div class="col-sm-6">
                     <!-- Email Address-->
                     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
-                         [class.ncap-requested]="navigationSingleton.ShowValidation && reConQuestions[20].validation_result===ValidationResult.requested"
-                         [class.ncap-required]="navigationSingleton.ShowValidation && reConQuestions[20].validation_result===ValidationResult.required">
+                         [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[20].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[20].validation_result===ValidationResult.required">
                         <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[20].page_id}}.{{reConQuestions[20].sre_sort_order}} - </span>
                         <html-including-tooltips
                                 [htmlToRender]='reConQuestions[20].question_text'></html-including-tooltips>
@@ -100,8 +100,8 @@
                 <div class="col-sm-6">
                     <!-- Main Phone-->
                     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
-                         [class.ncap-requested]="navigationSingleton.ShowValidation && reConQuestions[5].validation_result===ValidationResult.requested"
-                         [class.ncap-required]="navigationSingleton.ShowValidation && reConQuestions[5].validation_result===ValidationResult.required">
+                         [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[5].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[5].validation_result===ValidationResult.required">
                         <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[5].page_id}}.{{reConQuestions[5].sre_sort_order}} - </span>
                         <html-including-tooltips
                                 [htmlToRender]='reConQuestions[5].question_text'></html-including-tooltips>
@@ -124,8 +124,8 @@
                 <div class="col-sm-6">
                     <!-- Main Phone Ext-->
                     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
-                         [class.ncap-requested]="navigationSingleton.ShowValidation && reConQuestions[6].validation_result===ValidationResult.requested"
-                         [class.ncap-required]="navigationSingleton.ShowValidation && reConQuestions[6].validation_result===ValidationResult.required">
+                         [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[6].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[6].validation_result===ValidationResult.required">
                         <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[6].page_id}}.{{reConQuestions[6].sre_sort_order}} - </span>
                         <html-including-tooltips
                                 [htmlToRender]='reConQuestions[6].question_text'></html-including-tooltips>
@@ -143,8 +143,8 @@
                 <div class="col-sm-6">
                     <!-- Phone Alternate 1-->
                     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
-                         [class.ncap-requested]="navigationSingleton.ShowValidation && reConQuestions[8].validation_result===ValidationResult.requested"
-                         [class.ncap-required]="navigationSingleton.ShowValidation && reConQuestions[8].validation_result===ValidationResult.required">
+                         [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[8].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[8].validation_result===ValidationResult.required">
                         <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[8].page_id}}.{{reConQuestions[8].sre_sort_order}} - </span>
                         <html-including-tooltips
                                 [htmlToRender]='reConQuestions[8].question_text'></html-including-tooltips>
@@ -162,8 +162,8 @@
                 <div class="col-sm-6">
                     <!-- Phone Alternate 1 Extension-->
                     <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope"
-                         [class.ncap-requested]="navigationSingleton.ShowValidation && reConQuestions[9].validation_result===ValidationResult.requested"
-                         [class.ncap-required]="navigationSingleton.ShowValidation && reConQuestions[9].validation_result===ValidationResult.required">
+                         [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[9].validation_result===ValidationResult.requested"
+                         [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && reConQuestions[9].validation_result===ValidationResult.required">
                         <span *ngIf="navigationSingleton.diagMode">{{reConQuestions[9].page_id}}.{{reConQuestions[9].sre_sort_order}} - </span>
                         <html-including-tooltips
                                 [htmlToRender]='reConQuestions[9].question_text'></html-including-tooltips>
@@ -181,7 +181,7 @@
     </form>
 
     <!--<recontact-page-level-validation></recontact-page-level-validation>-->
-    <div *ngIf='navigationSingleton.ShowValidation' class="container ng-scope validation-messages"
+    <div *ngIf='navigationSingleton.DisplayValidationAtQuestionLevel' class="container ng-scope validation-messages"
          [ngSwitch]=recontactValidation>
         <div *ngSwitchWhen=ValidationResult.required class="ncap-required">
             *Please answer the highlighted question(s) before proceeding to the next page. If you do not wish to answer, you may exit the survey by clicking Exit Survey.

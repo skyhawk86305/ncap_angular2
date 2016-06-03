@@ -1,5 +1,5 @@
-{{navigationSingleton.showPageLevelValidationMessage}} - {{validationSingleton.validatePage(pageId)}}
-<div *ngIf='navigationSingleton.showPageLevelValidationMessage' class="container ng-scope validation-messages" [ngSwitch]=validationSingleton.validatePage(pageId)>
+{{navigationSingleton.DisplayValidationAtPageLevel}} - {{validationSingleton.validatePage(pageId)}}
+<div *ngIf='navigationSingleton.DisplayValidationAtPageLevel' class="container ng-scope validation-messages" [ngSwitch]=validationSingleton.validatePage(pageId)>
   <div *ngSwitchWhen=ValidationResult.required class="ncap-required">
     *Please answer the highlighted question(s) before proceeding to the next page. If you do not wish to answer, you may exit the survey by clicking Exit Survey.
   </div>
