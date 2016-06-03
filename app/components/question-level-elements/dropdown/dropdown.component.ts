@@ -30,7 +30,7 @@ export class DropdownComponent implements OnInit {
     this._syncToPreviouslyEnteredData();
 
     // Ask Page Control to re-validate for everything on the page
-    NavigationSingleton.instanceOf().requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().validateEntirePage();
   }
 
   private _getDomainOptions(id: number, addPleaseSelect: boolean): Domain[] {

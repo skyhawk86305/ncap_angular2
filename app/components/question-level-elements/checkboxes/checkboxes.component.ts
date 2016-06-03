@@ -50,7 +50,7 @@ export class CheckboxesComponent implements OnInit {
     this._loadUserInput();
 
     // Ask Page Control to re-validate for everything on the page
-    NavigationSingleton.instanceOf().requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().validateEntirePage();
   }
 
   // Called from html
@@ -68,7 +68,7 @@ export class CheckboxesComponent implements OnInit {
     this._loadUserInput();
 
     // Ask Page Control to re-validate for everything on the page
-    NavigationSingleton.instanceOf().requestPageControlRevalidate();
+    NavigationSingleton.instanceOf().validateEntirePage();
   }
 
   private _loadUserInput() {

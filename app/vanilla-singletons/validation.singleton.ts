@@ -25,7 +25,7 @@ export class ValidationSingleton {
         // Get all questions on page
         let questionsToValidate: PageQuestion[] = SeedDataSingleton.instanceOf().getQuestionsForPage(pageId);
         // Run validation on all questions
-        let aggregateResult: ValidationResult = ValidationSingleton.instanceOf()._validateQuestionArray(questionsToValidate);
+        let aggregateResult: ValidationResult = this._validateQuestionArray(questionsToValidate);
 
         return aggregateResult;
     }
@@ -41,7 +41,7 @@ export class ValidationSingleton {
 
         // If not a matrix does this questions need validating?
         if (!isMatrix && result === undefined) {
-            result = this.validateNonMatrixQuestion(question);
+            result = this._validateNonMatrixQuestion(question);
         }
 
         if (isMatrix) {
@@ -53,26 +53,21 @@ export class ValidationSingleton {
 
     public calculateAggregateValidationCSS(question: PageQuestion) {
         let aggregateResult: ValidationResult = this.validateQuestion(question);
-        let result = '';
+        let resultingCss = '';
 
-        if (NavigationSingleton.instanceOf().show_validation) {
-            switch (aggregateResult) {
-                case ValidationResult.requested:
-                    result = 'ncap-requested';
-                    break;
-                case ValidationResult.required:
-                    result = 'ncap-required';
-                    break;
-                default:
-                    result = '';
-                    break;
-            }
+        if (NavigationSingleton.instanceOf().DisplayValidationAtPageLevel) {
+            resultingCss = this._translateValidationResultToCssClass(aggregateResult);
         }
-        return result;
+        return resultingCss;
     }
 
     public calculateSubuElementValidationCSS(curMatrixElement: SubuQuestion) {
         let validationResult = this._validateSubuElement(curMatrixElement);
+        let resultingCss = this._translateValidationResultToCssClass(validationResult);
+        return resultingCss;
+    }
+
+    private _translateValidationResultToCssClass(validationResult: ValidationResult) {
         let resultingCss = '';
 
         switch (validationResult) {
@@ -143,7 +138,7 @@ export class ValidationSingleton {
         return aggregateResult;
     }
 
-    private validateNonMatrixQuestion(question: PageQuestion): ValidationResult {
+    private _validateNonMatrixQuestion(question: PageQuestion): ValidationResult {
         let result: ValidationResult;
 
         if (question.bypass_enum_code === ValidationType.optional || question.bypass_enum_code === ValidationType.notApplicable) {

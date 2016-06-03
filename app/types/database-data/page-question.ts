@@ -78,7 +78,7 @@ export class PageQuestion {
     }
 
     get page(): Page {
-        let result = SeedDataSingleton.instanceOf().getPage(this.page_id);
+        let result = SeedDataSingleton.instanceOf().getPageByPageId(this.page_id);
         return result;
     }
 

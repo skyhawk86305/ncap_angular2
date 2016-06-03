@@ -1,5 +1,5 @@
 <div>
-    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="navigationSingleton.show_validation && question.validation_result===ValidationResult.requested" [class.ncap-required]="navigationSingleton.show_validation && question.validation_result===ValidationResult.required">
+    <div style="font-size: 16px;font-style: normal; font-weight: bold" class="ng-scope" [class.ncap-requested]="navigationSingleton.DisplayValidationAtQuestionLevel && question.validation_result===ValidationResult.requested" [class.ncap-required]="navigationSingleton.DisplayValidationAtQuestionLevel && question.validation_result===ValidationResult.required">
         <span *ngIf="navigationSingleton.diagMode">{{question.page_id}}.{{question.sre_sort_order}} - </span>
         <html-including-tooltips [htmlToRender]='question.question_text'></html-including-tooltips>
     </div>

@@ -1,10 +1,9 @@
 <!-- Progress Bar -->
-<div *ngIf="navigationSingleton.getCurrentPageNumber() > 2" class="progress ng-isolate-scope container ng-scope">
-  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="navigationSingleton.getPercentageComplete()" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + navigationSingleton.getPercentageComplete() + '%;'">
-    {{ navigationSingleton.getPercentageComplete() }}% (pg {{ navigationSingleton.getCurrentPageNumber() }})
-  </div>
+<div *ngIf="navigationSingleton.CurrentPageId > 2" class="progress ng-isolate-scope container ng-scope">
+  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="navigationSingleton.PercentageComplete" aria-valuemin="0" aria-valuemax="100" [attr.style]="'width: ' + navigationSingleton.PercentageComplete + '%;'">
+    {{ navigationSingleton.PercentageComplete }}%
+  </div>({{ navigationSingleton.CurrentPageNumber }}/{{ seedDataSingleton.totalPages }}, pageId: {{ navigationSingleton.CurrentPageId }})
 </div>
-
 <div [ngSwitch]=PageType[pageData.page_type]>
   <span *ngSwitchWhen="'normal'">                       <question-container [pageId]="pageData.page_id"></question-container></span>
   <span *ngSwitchWhen="'consent'">                      <consent></consent></span>

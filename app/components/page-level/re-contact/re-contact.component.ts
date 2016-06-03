@@ -14,11 +14,11 @@ import { NavigationButtonsComponent } from "../navigation-buttons/navigation-but
 import {PhoneMaskDirective} from "./phone-mask.directive";
 
 @Component({
-    selector:       're-contact',
-    templateUrl:    'app/components/page-level/re-contact/re-contact.html',
-    providers:      [ SeedDataSingleton, LoadDomainOptionsSingleton, ReConConstants,
-                        ValidationResult, ValidationType, ReContactValidator ],
-    directives:     [ PhoneMaskDirective ]
+    selector: 're-contact',
+    templateUrl: 'app/components/page-level/re-contact/re-contact.html',
+    providers: [SeedDataSingleton, LoadDomainOptionsSingleton, ReConConstants,
+        ValidationResult, ValidationType, ReContactValidator],
+    directives: [PhoneMaskDirective]
 })
 
 /**
@@ -44,7 +44,7 @@ export class ReContactComponent implements OnInit {
     public ValidationResult = ValidationResult; // Permit view to use the enumeration type
     @Input() recontactValidation: number = -1;
     public UserInputSingleton = UserInputSingleton;
-    
+
     public validationType = ValidationType;
     public ReConConstants = ReConConstants;
 
@@ -61,7 +61,7 @@ export class ReContactComponent implements OnInit {
     public validPhone: boolean = true;
     public validPhoneAlt1: boolean = true;
 
-    constructor( private _domainData: LoadDomainOptionsSingleton) {
+    constructor(private _domainData: LoadDomainOptionsSingleton) {
     }
 
     /**
@@ -70,7 +70,7 @@ export class ReContactComponent implements OnInit {
     ngOnInit() {
 
         //Determines which survey path the user has selected.
-        let svyPathItem:UserInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
+        let svyPathItem: UserInput = UserInputSingleton.instanceOf().getUserInput('respondent_type');
         this.svyType = svyPathItem.storedValue;
 
         //Get the ReContact questions.
@@ -84,11 +84,12 @@ export class ReContactComponent implements OnInit {
             //This sets up the first validation to check if the user selects the 'Contact Me' option.
             if (ncapData.tracking_key === ReConConstants.TRACKING_KEY_RECONTACT) {
                 this.reConSelection = ncapData;
-                //this.reConSelection.show_validation = true;
-                this.navigationSingleton.show_validation = true;
+                //this.reConSelection.ShowValidation = true;
+                this.navigationSingleton.DisplayValidationAtPageLevel = true;
+                this.navigationSingleton.DisplayValidationAtQuestionLevel = true;
             }
 
-            var sre_dona_id:number = 22;
+            var sre_dona_id: number = 22;
             // switch (this.svyType) {
             //     case ReConConstants.SURVEY_TYPE_PARENT:
             //         //sre_dona_id = ncapData.parent_sre_dona_id;  // the id is not private...
@@ -108,21 +109,21 @@ export class ReContactComponent implements OnInit {
             //         break;
             // }
             //This needs to be generalized later.  This assumes there's only one set of domain in the question dictionary.
-            if (sre_dona_id !== null && ncapData.tracking_key === ReConConstants.TRACKING_KEY_RECONTACT ) {
+            if (sre_dona_id !== null && ncapData.tracking_key === ReConConstants.TRACKING_KEY_RECONTACT) {
                 //just want a subset of the domain; other domains in the data will not be used at this time.
                 this.reConDomains = this._domainData.getDomainOptions(sre_dona_id);
             }
 
             //Get Validation
-            var valType:ValidationType = ncapData.bypass_enum_code;
+            var valType: ValidationType = ncapData.bypass_enum_code;
             if (valType === this.validationType.required || valType === this.validationType.requested ||
-                    ncapData.tracking_key === ReConConstants.TRACKING_KEY_PHONE_ALT1) {
+                ncapData.tracking_key === ReConConstants.TRACKING_KEY_PHONE_ALT1) {
                 this.questionsToValidate.push(ncapData);
             }
         }
         this.initData();
-        this.navigationSingleton.show_validation = false;
-
+        this.navigationSingleton.DisplayValidationAtPageLevel = false;
+        this.navigationSingleton.DisplayValidationAtQuestionLevel = false;
     }
 
     /**
@@ -171,13 +172,15 @@ export class ReContactComponent implements OnInit {
      *           true - show - contact
      * @param value
      */
-    setContactUser(value:number) {
+    setContactUser(value: number) {
         this.contactUser = value;
         if (this.contactUser === ReConConstants.CONTACT_USER_NO_CONTACT) {
             //remove data from input fields in case the user had previously entered data.
             this.removeContactData();
         } else if (this.contactUser === ReConConstants.CONTACT_USER) {
-            this.navigationSingleton.show_validation = false;
+
+            this.navigationSingleton.DisplayValidationAtPageLevel = false;
+            this.navigationSingleton.DisplayValidationAtQuestionLevel = false;
         }
     }
 
@@ -192,7 +195,8 @@ export class ReContactComponent implements OnInit {
         this.reConQuestions = this.reConSeedData;
         switch (this.contactUser) {
             case ReConConstants.CONTACT_USER_NOT_SELECTED:
-                this.navigationSingleton.show_validation = true;
+                this.navigationSingleton.DisplayValidationAtPageLevel = true;
+                this.navigationSingleton.DisplayValidationAtQuestionLevel = true;
                 this.reConSelection.validation_result = ValidationResult.required;
                 this.recontactValidation = ValidationResult.required;
                 break;
@@ -204,7 +208,7 @@ export class ReContactComponent implements OnInit {
                 this.recontactValidation = -1;
                 break;
             case ReConConstants.CONTACT_USER:
-                let hasError:boolean = this.validateData();
+                let hasError: boolean = this.validateData();
                 if (!hasError) {
                     this.navigationSingleton.next();
                 }
@@ -217,14 +221,14 @@ export class ReContactComponent implements OnInit {
      *
      * @returns {boolean} Returns true if error found: false if no error found
      */
-    validateData():boolean {
-        let retVal:boolean = false; //no error
+    validateData(): boolean {
+        let retVal: boolean = false; //no error
         for (var questionToValidate of this.questionsToValidate) {
-            var trackingKey:string = questionToValidate.tracking_key;
-            var userInput:UserInput = UserInputSingleton.instanceOf().getUserInput(trackingKey);
+            var trackingKey: string = questionToValidate.tracking_key;
+            var userInput: UserInput = UserInputSingleton.instanceOf().getUserInput(trackingKey);
 
             if (typeof userInput !== 'undefined') {
-                var userResponse:string = userInput.storedValue;
+                var userResponse: string = userInput.storedValue;
                 if (userResponse === null && userResponse === 'undefined') {
                     retVal = true;
                     this.setValidationData(questionToValidate);
@@ -262,7 +266,7 @@ export class ReContactComponent implements OnInit {
                             }
                             break;
                     }
-                    
+
 
                 }
             } else {
@@ -284,10 +288,11 @@ export class ReContactComponent implements OnInit {
      *
      * @param questionToValidate    Current question that is being validated
      */
-    setValidationData(questionToValidate:PageQuestion) {
-        var sortOrder:number = questionToValidate.sre_sort_order;
-        //this.reConQuestions[sortOrder - 1].show_validation = true;
-        this.navigationSingleton.show_validation = true;
+    setValidationData(questionToValidate: PageQuestion) {
+        var sortOrder: number = questionToValidate.sre_sort_order;
+        //this.reConQuestions[sortOrder - 1].ShowValidation = true;
+        this.navigationSingleton.DisplayValidationAtPageLevel = true;
+        this.navigationSingleton.DisplayValidationAtQuestionLevel = true;
         if (questionToValidate.bypass_enum_code === ValidationType.requested) {
             this.reConQuestions[sortOrder - 1].validation_result = ValidationResult.requested;
         } else if (questionToValidate.bypass_enum_code === ValidationType.required) {
@@ -303,19 +308,19 @@ export class ReContactComponent implements OnInit {
      * @param id
      * @param contactUser : Values:  0 - Do not contact; 1 - Contact
      */
-    clickReCon(trackingKey:string, id:number, contactUser:number) {
+    clickReCon(trackingKey: string, id: number, contactUser: number) {
         //console.log('Clicked ' + trackingKey + ' with id ' + id);
         this.setContactUser(contactUser);
         UserInputSingleton.instanceOf().setUserInput(trackingKey, id.toString());
         this._syncToPreviouslyEnteredData();
 
         // Ask Page Control to re-validate for everything on the page
-        this.navigationSingleton.requestPageControlRevalidate();
+        this.navigationSingleton.validateEntirePage();
     }
 
-    modelChange(trackingKey:string, value:string) {
+    modelChange(trackingKey: string, value: string) {
         UserInputSingleton.instanceOf().setUserInput(trackingKey, value);
-        this.navigationSingleton.requestPageControlRevalidate();
+        this.navigationSingleton.validateEntirePage();
     }
 
     private _syncToPreviouslyEnteredData() {

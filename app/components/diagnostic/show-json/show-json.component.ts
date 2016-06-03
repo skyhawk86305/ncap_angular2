@@ -9,11 +9,11 @@ import { UserInput } from  '../../../../app/types/database-data/user-input';
 })
 export class ShowJsonComponent implements OnInit {
     protected navigationSingleton = NavigationSingleton.instanceOf();
-    currentPage: number;
+    currentPageId: number;
     data: UserInput[];
 
     ngOnInit() {
         this.data = UserInputSingleton.instanceOf().getAllUserInput();
-        this.currentPage = NavigationSingleton.instanceOf().getCurrentPageNumber();
+        this.currentPageId = NavigationSingleton.instanceOf().CurrentPageId;
     }
 }

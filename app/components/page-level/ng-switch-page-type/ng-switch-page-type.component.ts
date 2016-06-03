@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from 'angular2/core';
 import { RouteParams } from 'angular2/router';
 import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigation.singleton';
 import { UserInputSingleton } from '../../../../app/vanilla-singletons/user-input.singleton';
+import { SeedDataSingleton } from '../../../../app/vanilla-singletons/seed-data.singleton';
 import { Page } from '../../../../app/types/database-data/page';
 import { PageType } from '../../../types/enums/page-type.enum';
 import { HomeComponent } from '../home/home.component';
@@ -34,6 +35,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     public pageId: number;
     public PageType = PageType;
     protected navigationSingleton = NavigationSingleton.instanceOf();
+    protected seedDataSingleton = SeedDataSingleton.instanceOf();
 
     constructor(
         private _routeParams: RouteParams
@@ -43,7 +45,7 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     ngOnInit() {
         this.handleUrlParameters();
         if (!this.pageInput) {
-            NavigationSingleton.instanceOf().registerAsObserver(this);
+            NavigationSingleton.instanceOf().registerAsObserverOfNavigation(this);
             this.oberservedDataChanged();
         } else {
             this.pageData = this.pageInput;
@@ -52,8 +54,8 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
     }
 
     public oberservedDataChanged() {
-        this.pageData = NavigationSingleton.instanceOf().getPageToRender();
-        this.pageId = this.pageData.page_id;
+        this.pageId = this.navigationSingleton.CurrentPageId;
+        this.pageData = this.seedDataSingleton.getPageByPageId(this.pageId);
     }
 
     private handleUrlParameters() {
@@ -62,18 +64,18 @@ export class NgSwitchPageTypeComponent implements OnInit, IObservable {
         // Is a pageID in the URL?
         let requestedPageId = +this._routeParams.get('pageId');
         if (requestedPageId) {
-            NavigationSingleton.instanceOf().setPageNumber(requestedPageId);
+            NavigationSingleton.instanceOf().PageId = requestedPageId;
         }
 
         // Is a scenarioID in the URL?
         let scenarioId = +this._routeParams.get('scenarioId');
         if (scenarioId === 1) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO1);
-            NavigationSingleton.instanceOf().setPageNumber(15);
+            NavigationSingleton.instanceOf().PageId = 15;
         }
         if (scenarioId === 2) {
             UserInputSingleton.instanceOf().defaultUserInput(USERINPUT_SCENARIO2);
-            NavigationSingleton.instanceOf().setPageNumber(17);
+            NavigationSingleton.instanceOf().PageId = 17;
         }
 
         if (this._routeParams.get('diag')) {
