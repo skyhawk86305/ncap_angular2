@@ -145,6 +145,7 @@ export class NavigationSingleton {
             questionsToRender = SeedDataSingleton.instanceOf().getQuestionsToDisplayByPageId(this.CurrentPageId);
         }
 
+        ValidationSingleton.instanceOf().validatePage(this.CurrentPageId);
         this.DisplayValidationAtPageLevel = false; // Never show page level validation message if we just moved back
         this.DisplayValidationAtQuestionLevel = true; // Always show validation when moving back to a page
         if (this._pagesThatHaveDisplayedRequestedValidationMessage.indexOf(this.CurrentPageId) === -1) {
