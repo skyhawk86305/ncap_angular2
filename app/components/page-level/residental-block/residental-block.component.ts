@@ -3,11 +3,11 @@ import { NavigationSingleton } from '../../../../app/vanilla-singletons/navigati
 import { NavigationButtonsComponent } from '../navigation-buttons/navigation-buttons.component';
 
 @Component({
-  selector: 'residental-block',
-  templateUrl: 'app/components/page-level/residental-block/residental-block.html',
+  selector: 'residential-block',
+  templateUrl: 'app/components/page-level/residential-block/residential-block.html',
   directives: [NavigationButtonsComponent]
 })
-export class ResidentalBlockComponent {
+export class ResidentialBlockComponent {
 
   @Input() pageId: number;
   protected navigationSingleton = NavigationSingleton.instanceOf();
