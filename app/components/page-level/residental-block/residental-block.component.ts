@@ -8,11 +8,8 @@ import { NavigationButtonsComponent } from '../navigation-buttons/navigation-but
   templateUrl: 'app/components/page-level/residential-block/residential-block.html',
   directives: [NavigationButtonsComponent]
 })
-<<<<<<< HEAD
-export class ResidentialBlockComponent {
-=======
+
 export class ResidentalBlockComponent implements OnInit, ICustomValidator {
->>>>>>> 11d940c06541a6e6cdd28cb3cf572f0003ee0447
 
   @Input() pageId: number;
   protected navigationSingleton = NavigationSingleton.instanceOf();

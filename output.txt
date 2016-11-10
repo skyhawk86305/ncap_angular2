@@ -1,0 +1,2 @@
+./app/components/page-level/ng-switch-page-type/ng-switch-page-type.component.ts:import { ResidentalBlockComponent } from '../residental-block/residental-block.component';
+./app/components/page-level/residental-block/residental-block.component.ts:    console.log('In residental block. Page Id: ' + this.pageId);
